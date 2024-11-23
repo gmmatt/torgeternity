@@ -10,6 +10,7 @@ import { applyStymiedState } from './torgchecks.js';
 import { applyVulnerableState } from './torgchecks.js';
 import { TestUpdate } from './test-update.js';
 import { checkForDiscon } from './torgchecks.js';
+import { rollDefeatTest } from './torgchecks.js';
 
 /**
  *
@@ -32,6 +33,7 @@ export function addChatListeners(html) {
   html.on('click', 'a.backlash1', applyBacklash1);
   html.on('click', 'a.backlash2', applyBacklash2);
   html.on('click', 'a.backlash3', applyBacklash3);
+  html.on('click', 'div.defeat', defeatTest /*console.log('Yeah')*/);
 }
 
 async function parentDeleteByTime(oldMsg) {
@@ -487,4 +489,10 @@ async function applyBacklash3(event) {
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
   await backlash3(targetuuid);
+}
+
+async function defeatTest(event) {
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const uuid = event.currentTarget.dataset.defeatedactoruuid;
+  await rollDefeatTest(uuid);
 }

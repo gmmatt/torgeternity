@@ -1127,43 +1127,48 @@ export async function applyDamages(damageObject, targetuuid) {
   ); // find(tok=> tok.actor.id === targetuuid);
   // checking if user has target
   if (targetToken) {
-    if (targetToken.actor.type !== 'vehicle') {
-      // computing new values
-      const newShock = targetToken.actor.system.shock.value + damageObject.shocks;
-      const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
-      // updating the target token's  actor
-      await targetToken.actor.update({
-        'system.shock.value': newShock,
-        'system.wounds.value': newWound,
-      });
-      // too many wounds => apply defeat ? Ko ?
-      if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
-          await targetToken.toggleEffect(eff, { active: true, overlay: true });
-        }
-      }
-      // too many shocks, apply KO if not dead
-      if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+    if (targetToken.actor.isOwner) {
+      if (targetToken.actor.type !== 'vehicle') {
+        // computing new values
+        const newShock = targetToken.actor.system.shock.value + damageObject.shocks;
+        const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
+        // updating the target token's  actor
+        await targetToken.actor.update({
+          'system.shock.value': Math.min(newShock, targetToken.actor.system.shock.max),
+          'system.wounds.value': Math.min(newWound, targetToken.actor.system.wounds.max),
+        });
+        // too many wounds => apply defeat ? Ko ?
+        if (newWound > targetToken.actor.system.wounds.max) {
+          //SK test for defeat
+          if (targetToken.actor.type === 'stormknight') await displayDefeatTest(targetuuid);
+
           if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+            const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
             await targetToken.toggleEffect(eff, { active: true, overlay: true });
           }
         }
-      }
-    } else {
-      // computing new values
-      const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
-      // updating the target token's  actor
-      await targetToken.actor.update({
-        'system.wounds.value': newWound,
-      });
-      // too many wounds => apply defeat ? Ko ?
-      if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
-          await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        // too many shocks, apply KO if not dead
+        if (newShock > targetToken.actor.system.shock.max) {
+          if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+            if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+              const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+              await targetToken.toggleEffect(eff, { active: true, overlay: true });
+            }
+          }
+        }
+      } else {
+        // computing new values for vehicle
+        const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
+        // updating the target token's  actor
+        await targetToken.actor.update({
+          'system.wounds.value': newWound,
+        });
+        // too many wounds => apply defeat ? Ko ?
+        if (newWound > targetToken.actor.system.wounds.max) {
+          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+            const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
+            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+          }
         }
       }
     }
@@ -1953,4 +1958,95 @@ async function oneDN(test) {
     default:
       test.DN = 10;
   }
+}
+
+async function displayDefeatTest(uuid) {
+  const actor = fromUuidSync(uuid).actor;
+
+  //add information in message html
+  const defeatMessage = {
+    speaker: ChatMessage.getSpeaker(),
+    content: `<br><div class="defeat" style="{{backlashLabel}}" data-defeatedActorUuid=${actor.uuid}>Make a defeat test for<br> ${actor.name} ?</div>`,
+  };
+
+  await ChatMessage.create(defeatMessage);
+}
+
+export async function rollDefeatTest(defeatedSK) {
+  let actor = fromUuidSync(defeatedSK);
+  console.log(actor.system.attributes.strength.value);
+
+  //find strength or spirit
+  let attributeValue = Math.min(
+    actor.system.attributes.strength.value,
+    actor.system.attributes.spirit.value
+  );
+
+  const test = {
+    testType: 'attribute',
+    actor: defeatedSK,
+    actorPic: actor.img,
+    actorName: actor.name,
+    actorType: actor.type,
+    isAttack: false,
+    skillValue: attributeValue,
+    isFav: true,
+    unskilledUse: true,
+    DNDescriptor: 'standard',
+    targets: '',
+    applySize: false,
+    attackOptions: false,
+    rollTotal: 0,
+    chatNote: '',
+    bdDamageLabelStyle: 'display:none',
+    bdDamageSum: 0,
+    hasModifiers: false,
+    woundModifier: 0,
+    stymiedModifier: 0,
+    sizeModifier: 0,
+    vulnerableModifier: 0,
+    sizeModifierAll: [],
+    vulnerableModifierAll: [],
+    targetAll: [[]],
+    targetsAllID: [],
+    targetsAllUUID: [],
+    disfavored: false,
+    previousBonus: false,
+    bonus: 0,
+    bdStyle: 'display:none',
+    isOther1: false,
+    isOther2: false,
+    isOther3: false,
+    applyDebuffLabel: 'display:none',
+    applyDamLabel: 'display:none',
+    backlashLabel: 'display:none',
+    ammoLabel: 'display:none',
+    target: [],
+    chatTitle: 'Defeat Test',
+    DN: 10,
+    unskilledLabel: 'display:none',
+    diceroll: null,
+    unskilledTest: false,
+    diceList: [],
+    bonusPlusLabel: 'display:none',
+    displayModifiers: true,
+    modifiers: 0,
+    modifierText: '',
+    modifierLabel: 'display:',
+    cardsPlayed: 0,
+    rollResult: 0,
+    outcome: '',
+    actionTotalContent: '',
+    modifierPlusLabel: 'display:none',
+    resultText: '',
+    resultTextColor:
+      'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
+    damageLabel: 'display: none',
+    damageSubLabel: 'display:none',
+    disconnectLabel: 'display:none',
+    cardsPlayedLabel: 'display:none',
+    notesLabel: 'display:none',
+  };
+  await renderSkillChat(test);
+  console.log(test);
 }
