@@ -36,6 +36,7 @@
     {{/if}}
   {{/each}}
   </ol>
+  {{#if (gt sumRacePerks 0)}}
   <div class="list-section-heading">{{localize "torgeternity.sheetLabels.racialPerks"}}</div>
   <ol class="item-list">
   {{#each perk as |item id|}}
@@ -68,7 +69,8 @@
     {{/if}}
   {{/each}}
 </ol>
-
+{{/if}}
+{{#if (gt sumCustomSkills 0)}}
 <div class="list-section-heading">{{localize "torgeternity.sheetLabels.customSkills"}}</div>
 <ol class="item-list">
   {{#each customSkill as |item id|}}
@@ -99,3 +101,4 @@
     </li>
   {{/each}}
 </ol>
+{{/if}}

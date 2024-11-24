@@ -891,7 +891,9 @@
         "chooseCosm": "Wählen Sie einen Cosm deiner Herkunft:",
         "chooseRace": "Droppe ein Volksitem oder...",
         "Human": "Mach diesen Charakter zu einem Menschen",
-        "chosenRace": "Du hast folgendes Volk gewählt:"
+        "chosenRace": "Du hast folgendes Volk gewählt:",
+        "choosePerks": "Wähle 2 Vorzüge",
+        "racePerks": "Dein Volk gewährt dir die folgenden Vorzüge:"
       }
     },
     "sizes": {

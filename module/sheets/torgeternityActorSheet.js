@@ -114,6 +114,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
         (item) => item.type === 'perk' && (item.system.category !== 'racial' ?? false)
       );
 
+    data.sumRacePerks = data.items.filter(
+      (item) => item.type === 'perk' && (item.system.category === 'racial' ?? false)
+    ).length;
+
+    data.sumCustomSkills = data.items.filter((item) => item.type === 'customSkill').length;
+
     data.spell = data.items.filter(function (item) {
       return item.type == 'spell';
     });

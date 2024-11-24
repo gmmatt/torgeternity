@@ -307,8 +307,22 @@
                 {{/each}}
             </ol>
         {{else}}
-        <p>Choose 2 perks</p>
+        <p>{{localize "torgeternity.sheetLabels.characterCreation.choosePerks"}}</p>
         {{/if}}
+    {{#if (gt sumRacePerks 0)}}
+        <h2>{{localize "torgeternity.sheetLabels.characterCreation.racePerks"}}</h2>
+        <ol>
+            {{#each perk as |item|}}
+                {{#if (eq item.system.category "racial")}}
+                    <li class="item" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" data-tooltip="{{item.name}}">
+                        <p>{{item.name}}</p>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ol>
+    {{/if}}
+
     </div>
     <!--#endregion-->
     <hr>
