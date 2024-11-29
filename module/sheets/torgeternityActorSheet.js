@@ -108,18 +108,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
       return item.type == 'perk';
     });
 
-    data.onlyRacePerks =
-      data.items.some((item) => item.type === 'race') &&
-      !data.items.some(
-        (item) => item.type === 'perk' && (item.system.category !== 'racial' ?? false)
-      );
-
-    data.sumRacePerks = data.items.filter(
-      (item) => item.type === 'perk' && (item.system.category === 'racial' ?? false)
-    ).length;
-
-    data.sumCustomSkills = data.items.filter((item) => item.type === 'customSkill').length;
-
     data.spell = data.items.filter(function (item) {
       return item.type == 'spell';
     });
@@ -154,6 +142,32 @@ export default class TorgeternityActorSheet extends ActorSheet {
       return item.type == 'ammunition';
     });
 
+    if (this.newChar) {
+      data.onlyRacePerks =
+        data.items.some((item) => item.type === 'race') &&
+        !data.items.some(
+          (item) => item.type === 'perk' && (item.system.category !== 'racial' ?? false)
+        );
+
+      data.sumRacePerks = data.items.filter(
+        (item) => item.type === 'perk' && (item.system.category === 'racial' ?? false)
+      ).length;
+
+      data.sumCustomSkills = data.items.filter((item) => item.type === 'customSkill').length;
+
+      data.sumPrices = this._sumOfAllItems();
+
+      data.hasWealthy = data.items
+        .filter((item) => item.type === 'perk')
+        .find(
+          (item) =>
+            item.name === game.i18n.localize('torgeternity.sheetLabels.characterCreation.wealthy')
+        )
+        ? true
+        : false;
+
+      data.balance = (data.hasWealthy ? 10000 : 1000) - this._sumOfAllItems();
+    }
     for (const type of [
       'meleeweapons',
       'customAttack',
@@ -229,6 +243,20 @@ export default class TorgeternityActorSheet extends ActorSheet {
     data.newChar = this.newChar;
 
     return data;
+  }
+
+  _sumOfAllItems() {
+    let sum = 0;
+    for (const item of this.actor.items) {
+      if (!item.system.price) continue;
+
+      if (isNaN(parseInt(item.system.price))) {
+        continue;
+      } else {
+        sum += parseInt(item.system.price);
+      }
+    }
+    return sum;
   }
 
   // Skills are not Foundry "items" with IDs, so the skill data is not automatically

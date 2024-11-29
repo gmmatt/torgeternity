@@ -893,7 +893,8 @@
         "Human": "Mach diesen Charakter zu einem Menschen",
         "chosenRace": "Du hast folgendes Volk gewählt:",
         "choosePerks": "Wähle 2 Vorzüge",
-        "racePerks": "Dein Volk gewährt dir die folgenden Vorzüge:"
+        "racePerks": "Dein Volk gewährt dir die folgenden Vorzüge:",
+        "wealthy": "Wohlhabend"
       }
     },
     "sizes": {
