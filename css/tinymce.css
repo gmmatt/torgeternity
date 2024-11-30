@@ -203,10 +203,10 @@ h1 {
   
   /*...................................................................*/
   /*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
-  @font-face {
+  /*@font-face {
     font-family: "gunplay";
     src: url("../fonts/gunplay_rg.ttf") format("ttf");
-  }
+  }*/
   
   .directive1 {
     background-image: url(../images/parchment1.webp);
