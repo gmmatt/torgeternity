@@ -1139,3 +1139,7 @@ Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
 
   options.splice(0, 0, ...newOptions);
 });
+
+Hooks.on('preUpdateDocument', async (document, changed) => {
+  console.log(document, changed);
+});

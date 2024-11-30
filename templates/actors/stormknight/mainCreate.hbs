@@ -278,6 +278,8 @@
             {{/if}} 
             {{/each}} 
         </ul>
+        <p>{{localize "torgeternity.sheetLabels.characterCreation.sumAdds" x=sumAdds}}</p>
+
     </div>
     <!--#endregion-->
     <hr>
@@ -328,7 +330,7 @@
     <hr>
     <!--#region Purchase-->
     <div class="characterCreation purchases">
-        you do have a balance of: {{balance}}
+        {{localize "torgeternity.sheetLabels.characterCreation.balance" d=balance}}
         
     </div>
     <!--#endregion-->

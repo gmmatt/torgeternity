@@ -892,9 +892,11 @@
         "chooseRace": "Droppe ein Volksitem oder...",
         "Human": "Mach diesen Charakter zu einem Menschen",
         "chosenRace": "Du hast folgendes Volk gewählt:",
+        "sumAdds": "Du hast {x} Punkte in die Fertigkeiten investiert.",
         "choosePerks": "Wähle 2 Vorzüge",
         "racePerks": "Dein Volk gewährt dir die folgenden Vorzüge:",
-        "wealthy": "Wohlhabend"
+        "wealthy": "Wohlhabend",
+        "balance": "Du kannst noch {d}$ ausgeben."
       }
     },
     "sizes": {

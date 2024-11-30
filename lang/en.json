@@ -891,10 +891,12 @@
         "chooseCosm": "Choose a cosm of your herritage:",
         "chooseRace": "Drop a race item or...",
         "Human": "Make this character a human",
+        "sumAdds": "You have allocated {x} points in adds.",
         "chosenRace": "You have chosen the following race:",
         "choosePerks": "Choose 2 perks",
         "racePerks": "Your race grants you the following perks:",
-        "wealthy": "Wealthy"
+        "wealthy": "Wealthy",
+        "balance": "You have a balance of {d}$"
       }
     },
     "sizes": {

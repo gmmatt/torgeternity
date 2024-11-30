@@ -143,6 +143,15 @@ export default class TorgeternityActorSheet extends ActorSheet {
     });
 
     if (this.newChar) {
+      /*data.sumAdds = game.i18n.format('torgeternity.sheetLabels.characterCreation.sumAdds', {
+        x: Object.values(this.actor.system.skills).reduce((sum, skill) => sum + skill.adds, 0),
+      });*/
+
+      data.sumAdds = Object.values(this.actor.system.skills).reduce(
+        (sum, skill) => sum + skill.adds,
+        0
+      );
+
       data.onlyRacePerks =
         data.items.some((item) => item.type === 'race') &&
         !data.items.some(
@@ -166,7 +175,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
         ? true
         : false;
 
-      data.balance = (data.hasWealthy ? 10000 : 1000) - this._sumOfAllItems();
+      data.balance = ((data.hasWealthy ? 10000 : 1000) - this._sumOfAllItems()).toLocaleString();
     }
     for (const type of [
       'meleeweapons',
