@@ -50,11 +50,9 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    */
   get template() {
-    if (this.actor.type === 'stormknight' && this.newChar) {
-      return 'systems/torgeternity/templates/actors/stormknight/mainCreate.hbs';
-    } else {
-      return `systems/torgeternity/templates/actors/${this.actor.type}/main.hbs`; // modified path => one folder per type
-    }
+    return this.actor.type === 'stormknight' && this.newChar
+      ? 'systems/torgeternity/templates/actors/stormknight/mainCreate.hbs'
+      : `systems/torgeternity/templates/actors/${this.actor.type}/main.hbs`;
   }
 
   get newChar() {
@@ -143,10 +141,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
     });
 
     if (this.newChar) {
-      /*data.sumAdds = game.i18n.format('torgeternity.sheetLabels.characterCreation.sumAdds', {
-        x: Object.values(this.actor.system.skills).reduce((sum, skill) => sum + skill.adds, 0),
-      });*/
-
       data.sumAdds = Object.values(this.actor.system.skills).reduce(
         (sum, skill) => sum + skill.adds,
         0
@@ -227,10 +221,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
           async: true,
         });
     }
-
-    /* if (this.actor.system.editstate === undefined) {
-            this.actor.system.editstate = "none";
-        }; */
 
     data.effects = prepareActiveEffectCategories(this.document.effects);
 
