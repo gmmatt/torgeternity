@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.12.3.8
+
+- Correction on CSS Splotches in journals
+
 ## v.12.3.7
 
 - Correcting splotches
