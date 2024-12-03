@@ -644,6 +644,7 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
   background-position: center;
   width: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-left: 25%;
@@ -675,7 +676,7 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
   background-image: url(../images/splotch_tharkold.webp);
 }
 
-.splotch p {
+.sheet.journal-entry .journal-entry-page .splotch p {
   font-size: 1rem !important;
   color: white;
   font-family: Alaska !important;
@@ -747,8 +748,8 @@ div.directive1 {
   padding: 3rem;
 }
 
-div.directive1 :is(p, h3, h4) {
-  font-family: "gunplay" !important;
+.sheet.journal-entry .journal-entry-page div.directive1 :is(p, h3, h4) {
+  font-family: "gunplay";
   transform: rotate(-3deg);
   text-indent: 0px;
 }
@@ -764,8 +765,8 @@ div.directive2 {
   padding: 3rem;
 }
 
-div.directive2 :is(p, h3, h4) {
-  font-family: "gunplay" !important;
+.sheet.journal-entry .journal-entry-page div.directive2 :is(p, h3, h4) {
+  font-family: "gunplay";
   transform: rotate(2deg);
   text-indent: 0px;
 }
