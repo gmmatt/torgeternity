@@ -1124,6 +1124,14 @@
         "buttonTitle": "MacroHub",
         "title":"Répertoire Macro Torg Eternity"
       }
-    }    
+    },
+    "defeatDialog":{
+      "title": "Une blessure réduit un attribut",
+      "question": "Choix de l'attribut",
+      "confirm": "Confirmez le choix",
+      "injury": "Blessure !",
+      "injuryTooltip": "Vous souffrez d'une blessure sévère, réduction d'un attribut",
+      "message": "Jet de défaite pour  "
+    }
   }
 }

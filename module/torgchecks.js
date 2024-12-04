@@ -1968,7 +1968,7 @@ async function displayDefeatTest(uuid) {
   //add information in message html
   const defeatMessage = {
     speaker: ChatMessage.getSpeaker(),
-    content: `<br><div class="defeat" style="{{backlashLabel}}" data-defeatedActorUuid=${actor.uuid}>Make a defeat test for<br> ${actor.name} ?</div>`,
+    content: `<br><div class="defeat" style="{{backlashLabel}}" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.message')}${actor.name} ??</div>`,
   };
 
   await ChatMessage.create(defeatMessage);
@@ -2071,7 +2071,7 @@ export async function skInjury(targetuuid) {
           <option value="strength">${game.i18n.localize('torgeternity.attributes.strength')}</option>
         </select>`,
     ok: {
-      label: game.i18n.localize('torgeternity.defeatDialog.execute'), // 'Submit Effect',
+      label: game.i18n.localize('torgeternity.defeatDialog.confirm'), // 'Submit Effect',
       callback: (event, button, dialog) => [
         button.form.elements.injury.value,
       ],
