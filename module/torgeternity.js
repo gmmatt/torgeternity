@@ -945,18 +945,16 @@ Hooks.on('renderActorSheet', (app, html, data) => {
   alphabSort(html, data);
   // Change backgroundimage depending on actor.type and actor cosm
   const windowContent = html.find('.window-content')[0] ?? html[0].parentElement;
-  if (
+  windowContent.style.borderStyle = 'solid';
+  windowContent.style.borderWidth = '10px';
+
+  windowContent.style.borderImage = `url("systems/torgeternity/images/cosmBackgrounds/${
     data.actor.type !== 'stormknight' ||
     data.actor.system.other.cosm === 'none' ||
     data.actor.system.other.cosm === 'other'
-  ) {
-    windowContent.style.backgroundImage = 'url("systems/torgeternity/images/bg-sheet.webp")';
-    windowContent.style.backgroundRepeat = 'unset';
-  } else {
-    windowContent.style.borderStyle = 'solid';
-    windowContent.style.borderWidth = '10px';
-    windowContent.style.borderImage = `url("systems/torgeternity/images/cosmBackgrounds/${data.actor.system.other.cosm}.webp") 26% 38% 28% 39% fill / auto / 0px stretch`;
-  }
+      ? 'background-neutral'
+      : data.actor.system.other.cosm
+  }.webp") 26% 38% 28% 39% fill / auto / 0px stretch`;
 });
 
 Hooks.on('updateActor', (actor, change, options, userId) => {
