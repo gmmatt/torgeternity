@@ -216,6 +216,119 @@ export async function torgMigration() {
       }
     }
 
+    if (foundry.utils.isNewerVersion('12.4.0', migrationVersion)) {
+      const oldKey = [
+        'armor-icon.jpg',
+        'armor.webp',
+        'axe-icon.jpg',
+        'meleeweapon.webp',
+        'bite-icon.jpg',
+        'specialability-rollable.webp',
+        'cyberware-icon.jpg',
+        'implant.webp',
+        'darkvision-icon.jpg',
+        'edeinos-icon.jpg',
+        'elf-icon.jpg',
+        'explosion-icon.jpg',
+        'heavyweapon.webp',
+        'firearm-icon.jpg',
+        'firearm.webp',
+        'fist-icon.jpg',
+        'gear-icon.jpg',
+        'gear.webp',
+        'melee-weapon-icon.jpg',
+        'miracles-icon.jpg',
+        'miracle.webp',
+        'missile-weapon-icon.jpg',
+        'missileweapon.webp',
+        'reality-icon.jpg',
+        'perk.webp',
+        'potion-icon.jpg',
+        'prowess-icon.jpg',
+        'nine-empire.jpg',
+        'nine-empire.webp',
+        'savagery-icon.jpg',
+        'torgeternity-icon.png',
+        'specialability.webp',
+        'spell-icon.jpg',
+        'spell.webp',
+        'waiting.png',
+        'dark-2.png',
+        'dark-4.png',
+        'dark-6.png',
+        'drama-card-breakdown.jpg',
+      ];
+
+      const newKey = [
+        'armor-icon.webp',
+        'armor-icon.webp',
+        'axe-icon.webp',
+        'axe-icon.webp',
+        'bite-icon.webp',
+        'bite-icon.webp',
+        'cyberware-icon.webp',
+        'cyberware-icon.webp',
+        'darkvision-icon.webp',
+        'edeinos-icon.webp',
+        'elf-icon.webp',
+        'explosion-icon.webp',
+        'explosion-icon.webp',
+        'firearm-icon.webp',
+        'firearm-icon.webp',
+        'fist-icon.webp',
+        'gear-icon.webp',
+        'gear-icon.webp',
+        'melee-weapon-icon.webp',
+        'miracles-icon.webp',
+        'miracles-icon.webp',
+        'missile-weapon-icon.webp',
+        'missile-weapon-icon.webp',
+        'reality-icon.webp',
+        'reality-icon.webp',
+        'potion-icon.webp',
+        'prowess-icon.webp',
+        'nile-empire.webp',
+        'nile-empire.webp',
+        'savagery-icon.webp',
+        'torgeternity-icon.webp',
+        'torgeternity-icon.webp',
+        'spell-icon.webp',
+        'spell-icon.webp',
+        'waiting.webp',
+        'dark-2.webp',
+        'dark-4.webp',
+        'dark-6.webp',
+        'drama-card-breakdown.webp',
+      ];
+
+      for (const actor of game.actors) {
+        for (const item of actor.items) {
+          let newImg;
+          for (let i = 0; i < oldKey.length - 1; i++) {
+            if (item.img.includes(oldKey[i])) {
+              newImg = item.img.replace(oldKey[i], newKey[i]);
+              await item.update({ img: newImg });
+              console.log(
+                `Replaced image from item: ${item.name} in actor ${actor.name}. Old image key: ${oldKey[i]}, new image key: ${newKey[i]}`
+              );
+            }
+          }
+        }
+      }
+
+      for (const item of game.items) {
+        let newImg;
+        for (let i = 0; i < oldKey.length - 1; i++) {
+          if (item.img.includes(oldKey[i])) {
+            newImg = item.img.replace(oldKey[i], newKey[i]);
+            await item.update({ img: newImg });
+            console.log(
+              `Replaced image from item: ${item.name}. Old image key: ${oldKey[i]}, new image key: ${newKey[i]}`
+            );
+          }      
+      }
+    }
+
     /**
    ***********************************************************
     New migrations go here.
