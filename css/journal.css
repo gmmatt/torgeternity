@@ -644,6 +644,7 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
   background-position: center;
   width: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-left: 25%;
@@ -675,7 +676,7 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
   background-image: url(../images/splotch_tharkold.webp);
 }
 
-.splotch p {
+.sheet.journal-entry .journal-entry-page .splotch p {
   font-size: 1rem !important;
   color: white;
   font-family: Alaska !important;
