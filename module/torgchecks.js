@@ -19,6 +19,7 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
+  test.injuryLabel = test?.injuryLabel ?? 'display:none';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
@@ -520,6 +521,7 @@ export async function renderSkillChat(test) {
           'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
       test.soakWounds = 'all';
+      test.injuryLabel = `display:none`
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
@@ -1973,11 +1975,10 @@ async function displayDefeatTest(uuid) {
 }
 
 export async function rollDefeatTest(defeatedSK) {
-  let actor = fromUuidSync(defeatedSK);
-  console.log(actor.system.attributes.strength.value);
+  const actor = fromUuidSync(defeatedSK);
 
-  //find strength or spirit
-  let attributeValue = Math.min(
+  //  find strength or spirit
+  const attributeValue = Math.min(
     actor.system.attributes.strength.value,
     actor.system.attributes.spirit.value
   );
@@ -2020,6 +2021,7 @@ export async function rollDefeatTest(defeatedSK) {
     applyDebuffLabel: 'display:none',
     applyDamLabel: 'display:none',
     backlashLabel: 'display:none',
+    injuryLabel: 'display:inline',
     ammoLabel: 'display:none',
     target: [],
     chatTitle: 'Defeat Test',
@@ -2048,5 +2050,36 @@ export async function rollDefeatTest(defeatedSK) {
     notesLabel: 'display:none',
   };
   await renderSkillChat(test);
-  console.log(test);
+}
+
+/**
+ * if defeat test result is not outstanding, ask for which attributes to reduce
+ * @param targetuuid
+ */
+export async function skInjury(targetuuid) {
+  const actor = await fromUuid(targetuuid);
+  const attr = await foundry.applications.api.DialogV2.prompt({
+    window: { title: `${game.i18n.localize('torgeternity.defeatDialog.title')}` },
+    content: `
+        <label>${game.i18n.localize('torgeternity.defeatDialog.question')}
+        </label>
+        <select name='injury' class='input-box'>
+          <option value="charisma">${game.i18n.localize('torgeternity.attributes.charisma')}</option>
+          <option value="dexterity">${game.i18n.localize('torgeternity.attributes.dexterity')}</option>
+          <option value="mind">${game.i18n.localize('torgeternity.attributes.mind')}</option>
+          <option value="spirit">${game.i18n.localize('torgeternity.attributes.spirit')}</option>
+          <option value="strength">${game.i18n.localize('torgeternity.attributes.strength')}</option>
+        </select>`,
+    ok: {
+      label: game.i18n.localize('torgeternity.defeatDialog.execute'), // 'Submit Effect',
+      callback: (event, button, dialog) => [
+        button.form.elements.injury.value,
+      ],
+    },
+  });
+  const injuredAttribute = actor.system.attributes[attr];
+  if (injuredAttribute.value<6){
+    console.log("too small");
+    skInjury(targetuuid);
+  }
 }

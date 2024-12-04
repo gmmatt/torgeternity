@@ -11,6 +11,7 @@ import { applyVulnerableState } from './torgchecks.js';
 import { TestUpdate } from './test-update.js';
 import { checkForDiscon } from './torgchecks.js';
 import { rollDefeatTest } from './torgchecks.js';
+import { skInjury } from './torgchecks.js';
 
 /**
  *
@@ -33,7 +34,8 @@ export function addChatListeners(html) {
   html.on('click', 'a.backlash1', applyBacklash1);
   html.on('click', 'a.backlash2', applyBacklash2);
   html.on('click', 'a.backlash3', applyBacklash3);
-  html.on('click', 'div.defeat', defeatTest /*console.log('Yeah')*/);
+  html.on('click', 'div.defeat', defeatTest);
+  html.on('click', 'a.injury', applyInjury);
 }
 
 async function parentDeleteByTime(oldMsg) {
@@ -491,8 +493,23 @@ async function applyBacklash3(event) {
   await backlash3(targetuuid);
 }
 
+/**
+ * call rollDfeatTest on targetuuid
+ * @param event
+ */
 async function defeatTest(event) {
+  // const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const targetuuid = event.currentTarget.dataset.defeatedactoruuid;
+  await rollDefeatTest(targetuuid);
+}
+
+/**
+ * call backlash3 on targetuuid
+ * @param event
+ */
+async function applyInjury(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
-  const uuid = event.currentTarget.dataset.defeatedactoruuid;
-  await rollDefeatTest(uuid);
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await skInjury(targetuuid);
 }

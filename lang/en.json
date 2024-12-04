@@ -1125,6 +1125,9 @@
         "buttonTitle": "MacroHub",
         "title":"The Torg Eternity Macro Hub"
       }
+    },
+    "defeatDialog":{
+      "title": "Injury decrease an attribute"
     }
   }
 }
