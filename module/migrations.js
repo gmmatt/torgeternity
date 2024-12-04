@@ -325,7 +325,8 @@ export async function torgMigration() {
             console.log(
               `Replaced image from item: ${item.name}. Old image key: ${oldKey[i]}, new image key: ${newKey[i]}`
             );
-          }      
+          }
+        }
       }
     }
 
