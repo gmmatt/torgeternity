@@ -1963,25 +1963,29 @@ async function oneDN(test) {
 }
 
 async function displayDefeatTest(uuid) {
+  let spiritStyle = 'display:inline', strengthStyle = 'display:inline';
   const actor = fromUuidSync(uuid).actor;
+  if (actor.system.attributes.strength.value<actor.system.attributes.spirit.value) spiritStyle = 'pointer-events:none;color:gray';
+  if (actor.system.attributes.strength.value>actor.system.attributes.spirit.value) strengthStyle = 'pointer-events:none;color:gray';
+
+  const ownPerks = actor.items.filter((i) => i.type === "perk");
+  if (ownPerks.find((i) => i.name.toLowerCase() === 'brute')) strengthStyle = 'display:inline';
+  
+  if (ownPerks.find((i) => i.name.toLowerCase() === 'strong-willed')) spiritStyle = 'display:inline';
 
   //add information in message html
   const defeatMessage = {
     speaker: ChatMessage.getSpeaker(),
-    content: `<br><div class="defeat" style="{{backlashLabel}}" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.message')}${actor.name} ??</div>`,
+    content: `<br><div style="{{backlashLabel}}">${game.i18n.localize('torgeternity.defeatDialog.message')}${actor.name} ??</div><br>
+    <p class="applyButtons"><a style=${spiritStyle} class="defeat" data-attribute="spirit" data-defeatedActorUuid=${actor.uuid}>With Spirit</a> <a style=${strengthStyle} class="defeat" data-attribute="strength" data-defeatedActorUuid=${actor.uuid}>With Strength</a></p>`,
   };
 
   await ChatMessage.create(defeatMessage);
 }
 
-export async function rollDefeatTest(defeatedSK) {
-  const actor = fromUuidSync(defeatedSK);
+export async function rollDefeatTest(defeatedSK, attribute) {
 
-  //  find strength or spirit
-  const attributeValue = Math.min(
-    actor.system.attributes.strength.value,
-    actor.system.attributes.spirit.value
-  );
+  const actor = await fromUuidSync(defeatedSK);
 
   const test = {
     testType: 'attribute',
@@ -1990,8 +1994,8 @@ export async function rollDefeatTest(defeatedSK) {
     actorName: actor.name,
     actorType: actor.type,
     isAttack: false,
-    skillValue: attributeValue,
-    isFav: true,
+    skillValue: actor.system.attributes[attribute].value,
+    isFav: actor.system.attributes[attribute].isFav,
     unskilledUse: true,
     DNDescriptor: 'standard',
     targets: '',
@@ -2024,7 +2028,7 @@ export async function rollDefeatTest(defeatedSK) {
     injuryLabel: 'display:inline',
     ammoLabel: 'display:none',
     target: [],
-    chatTitle: 'Defeat Test',
+    chatTitle: 'Defeat Test: ' + `${game.i18n.localize('torgeternity.attributes.' + attribute)}`,
     DN: 10,
     unskilledLabel: 'display:none',
     diceroll: null,
@@ -2041,8 +2045,8 @@ export async function rollDefeatTest(defeatedSK) {
     actionTotalContent: '',
     modifierPlusLabel: 'display:none',
     resultText: '',
-    resultTextColor:
-      'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
+    //resultTextColor:
+    //  'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
     damageLabel: 'display: none',
     damageSubLabel: 'display:none',
     disconnectLabel: 'display:none',

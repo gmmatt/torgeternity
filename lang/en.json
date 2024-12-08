@@ -1128,7 +1128,7 @@
     },
     "defeatDialog":{
       "title": "Injury decrease an attribute",
-      "question": "Choose the attribute injured",
+      "question": "Choose the injured attribute",
       "confirm": "Confirm choice",
       "injury": "Injury !",
       "injuryTooltip": "You suffer a severe injury, choose the weakened attribute",

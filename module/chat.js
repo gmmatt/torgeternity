@@ -34,7 +34,7 @@ export function addChatListeners(html) {
   html.on('click', 'a.backlash1', applyBacklash1);
   html.on('click', 'a.backlash2', applyBacklash2);
   html.on('click', 'a.backlash3', applyBacklash3);
-  html.on('click', 'div.defeat', defeatTest);
+  html.on('click', 'a.defeat', defeatTest);
   html.on('click', 'a.injury', applyInjury);
 }
 
@@ -500,7 +500,8 @@ async function applyBacklash3(event) {
 async function defeatTest(event) {
   // const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const targetuuid = event.currentTarget.dataset.defeatedactoruuid;
-  await rollDefeatTest(targetuuid);
+  const attribute = event.currentTarget.dataset.attribute;
+  await rollDefeatTest(targetuuid, attribute);
 }
 
 /**
