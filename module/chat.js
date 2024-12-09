@@ -505,7 +505,7 @@ async function defeatTest(event) {
 }
 
 /**
- * call backlash3 on targetuuid
+ * call skInjury on targetuuid
  * @param event
  */
 async function applyInjury(event) {

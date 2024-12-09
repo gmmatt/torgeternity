@@ -1962,27 +1962,41 @@ async function oneDN(test) {
   }
 }
 
+/**
+ * chat message to propose the attribute to use for defeat test, default is lower from spirit and strength
+ * search for relevant perks that could add options
+ * @param uuid (uuid of the defeated actor)
+ */
 async function displayDefeatTest(uuid) {
   let spiritStyle = 'display:inline', strengthStyle = 'display:inline';
   const actor = fromUuidSync(uuid).actor;
-  if (actor.system.attributes.strength.value<actor.system.attributes.spirit.value) spiritStyle = 'pointer-events:none;color:gray';
-  if (actor.system.attributes.strength.value>actor.system.attributes.spirit.value) strengthStyle = 'pointer-events:none;color:gray';
+  if (actor.system.attributes.strength.value < actor.system.attributes.spirit.value) spiritStyle = 'pointer-events:none;color:gray';
+  if (actor.system.attributes.strength.value > actor.system.attributes.spirit.value) strengthStyle = 'pointer-events:none;color:gray';
 
   const ownPerks = actor.items.filter((i) => i.type === "perk");
   if (ownPerks.find((i) => i.name.toLowerCase() === 'brute')) strengthStyle = 'display:inline';
-  
-  if (ownPerks.find((i) => i.name.toLowerCase() === 'strong-willed')) spiritStyle = 'display:inline';
+
+  if (ownPerks.find((i) => i.name.toLowerCase().includes('willed'))) spiritStyle = 'display:inline';
 
   //add information in message html
   const defeatMessage = {
     speaker: ChatMessage.getSpeaker(),
-    content: `<br><div style="{{backlashLabel}}">${game.i18n.localize('torgeternity.defeatDialog.message')}${actor.name} ??</div><br>
-    <p class="applyButtons"><a style=${spiritStyle} class="defeat" data-attribute="spirit" data-defeatedActorUuid=${actor.uuid}>With Spirit</a> <a style=${strengthStyle} class="defeat" data-attribute="strength" data-defeatedActorUuid=${actor.uuid}>With Strength</a></p>`,
+    content: `<div style="{{backlashLabel}}">${game.i18n.localize('torgeternity.defeatDialog.message')}${actor.name} ??</div>
+    <br>
+    <p class="applyButtons">
+      <a style=${spiritStyle} class="defeat" data-attribute="spirit" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.withSpirit')}</a>
+      <a style=${strengthStyle} class="defeat" data-attribute="strength" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.withStrength')}</a>
+    </p>`,
   };
 
   await ChatMessage.create(defeatMessage);
 }
 
+/**
+ * roll a defeat test using the attribute specified, and send to chat
+ * @param defeatedSK (uuid of the defeated actor)
+ * @param attribute (strength or spirit)
+ */
 export async function rollDefeatTest(defeatedSK, attribute) {
 
   const actor = await fromUuidSync(defeatedSK);
@@ -2028,7 +2042,7 @@ export async function rollDefeatTest(defeatedSK, attribute) {
     injuryLabel: 'display:inline',
     ammoLabel: 'display:none',
     target: [],
-    chatTitle: 'Defeat Test: ' + `${game.i18n.localize('torgeternity.attributes.' + attribute)}`,
+    chatTitle: `${game.i18n.localize('torgeternity.defeatDialog.chatTitle')}` + `${game.i18n.localize('torgeternity.attributes.' + attribute)}`,
     DN: 10,
     unskilledLabel: 'display:none',
     diceroll: null,
@@ -2082,7 +2096,7 @@ export async function skInjury(targetuuid) {
     },
   });
   const injuredAttribute = actor.system.attributes[attr];
-  if (injuredAttribute.value<6){
+  if (injuredAttribute.value < 6) {
     console.log("too small");
     skInjury(targetuuid);
   }
