@@ -862,6 +862,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   // Trigger the skill roll
   // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in TorgeternityActorSheet
   // This code needs to be centrally located!!!
+  console.log(skill)
   const test = {
     testType: isAttributeTest ? 'attribute' : 'skill',
     actor: actor.uuid,
@@ -963,18 +964,14 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
   }
 });
 
-// link StormKnight Prototype Token to the actor
-Hooks.on('preCreateActor', (actor, data, options, userId) => {
-  if (data.type === 'stormknight' && !data.hasOwnProperty('prototypeToken')) {
-    actor.updateSource({ 'prototypeToken.actorLink': true });
+// change the generic threat token to match the cosm's one if it's set in the scene
+Hooks.on('preCreateToken',async (...args) => {
+  if (args[0].texture.src.includes('generic-threat')) {
+    const cosm = canvas.scene.getFlag('torgeternity','cosm');
+    if(['coreEarth','livingLand','nileEmpire','aysle','cyberpapacy','tharkold','panPacifica','orrorsh'].includes(cosm))
+      args[0].updateSource({'texture.src':"systems/torgeternity/images/characters/threat-" + cosm + ".Token.webp"})
   }
-  if (data.type === 'vehicle' && actor.img.includes('mystery-man')) {
-    actor.updateSource({
-      'prototypeToken.texture.src': 'systems/torgeternity/images/characters/vehicle-land-Token.webp',
-      img: 'systems/torgeternity/images/characters/vehicle-land.webp',
-    });
-  }
-});
+})
 
 // by default creating a  hand for each stormknight
 Hooks.on('createActor', async (actor, options, userId) => {
