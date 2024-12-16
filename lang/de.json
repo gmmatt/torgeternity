@@ -1127,7 +1127,7 @@
       }
     },
     "defeatDialog": {
-      "title": "Injury decrease an attribute",
+      "title": "Injury decreases an attribute",
       "question": "Choose the attribute injured",
       "confirm": "Confirm choice",
       "injury": "Injury !",

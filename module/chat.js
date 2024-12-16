@@ -501,7 +501,8 @@ async function defeatTest(event) {
   // const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const targetuuid = event.currentTarget.dataset.defeatedactoruuid;
   const attribute = event.currentTarget.dataset.attribute;
-  await rollDefeatTest(targetuuid, attribute);
+  const bonus = event.currentTarget.dataset.bonus;
+  await rollDefeatTest(targetuuid, attribute, bonus);
 }
 
 /**
@@ -512,5 +513,22 @@ async function applyInjury(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
-  await skInjury(targetuuid);
+  const reducedAttribute = await skInjury(targetuuid);
+  const test = parentMessage.getFlag('torgeternity', 'test');
+  if ((test.rollResult-test.DN)<0){
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker(),
+      content: game.i18n.localize('torgeternity.defeatTest.death'),
+    });
+  } else if ((test.rollResult-test.DN)<5){
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker(),
+      content: game.i18n.localize('torgeternity.defeatTest.permanent'),
+    });
+  } else {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker(),
+      content: game.i18n.localize('torgeternity.defeatTest.temporary'),
+    });
+  };
 }

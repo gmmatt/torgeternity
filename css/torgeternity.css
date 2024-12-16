@@ -4563,8 +4563,9 @@ form.actor-sheet.threat img.profile-img {
 .application .window-content input[type="password"],
 .application .window-content input[type="date"],
 .application .window-content input[type="time"] .editor,
-.application .window-content input[type="checkbox"] {
-  background-color: rgba(255, 255, 255, 0.39);
+.application .window-content input[type="checkbox"],
+.application .window-content select {
+  background-color: rgba(255, 255, 255, 0.795);
   /*color:white;*/
 }
 

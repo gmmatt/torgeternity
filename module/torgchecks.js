@@ -19,7 +19,6 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
-  test.injuryLabel = test?.injuryLabel ?? 'display:none';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
@@ -102,6 +101,9 @@ export async function renderSkillChat(test) {
         case 'custom':
           test.chatTitle = test.skillName;
           break;
+        case 'defeat':
+          test.chatTitle = game.i18n.localize('torgeternity.chatText.defeat');
+          break;
         default:
           test.chatTitle =
             test.skillName + ' ' + game.i18n.localize('torgeternity.chatText.test') + ' ';
@@ -131,6 +133,7 @@ export async function renderSkillChat(test) {
       (test.testType != 'attribute') &
       (test.testType != 'activeDefense') &
       (test.testType != 'activeDefenseUpdate') &
+      (test.testType != 'defeat') &
       (test.customSkill != 'true')
     ) {
       if (
@@ -512,6 +515,10 @@ export async function renderSkillChat(test) {
           'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
       test.soakWounds = 0;
+      if (test.testType === 'defeat') {
+        test.injuryLabel = `display:none`;
+        test.deathLabel = `display:inline`;
+      }
     } else if (testDifference > 9) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
       if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
@@ -521,7 +528,10 @@ export async function renderSkillChat(test) {
           'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
       test.soakWounds = 'all';
-      test.injuryLabel = `display:none`
+      if (test.testType === 'defeat') {
+        test.injuryLabel = `display:none`;
+        test.deathLabel = `display:none`;
+      }
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
@@ -531,6 +541,10 @@ export async function renderSkillChat(test) {
           'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
       test.soakWounds = 2;
+      if (test.testType === 'defeat') {
+        test.injuryLabel = `display:inline`;
+        test.deathLabel = `display:none`;
+      }
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
       if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
@@ -540,6 +554,10 @@ export async function renderSkillChat(test) {
           'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
       test.soakWounds = 1;
+      if (test.testType === 'defeat') {
+        test.injuryLabel = `display:inline`;
+        test.deathLabel = `display:none`;
+      }
     }
 
     // Turn on + sign for modifiers?
@@ -1964,19 +1982,24 @@ async function oneDN(test) {
 
 /**
  * chat message to propose the attribute to use for defeat test, default is lower from spirit and strength
- * search for relevant perks that could add options
+ * search for relevant perks that could add options, allow both roll, but grays the 
  * @param uuid (uuid of the defeated actor)
  */
 async function displayDefeatTest(uuid) {
   let spiritStyle = 'display:inline', strengthStyle = 'display:inline';
   const actor = fromUuidSync(uuid).actor;
-  if (actor.system.attributes.strength.value < actor.system.attributes.spirit.value) spiritStyle = 'pointer-events:none;color:gray';
-  if (actor.system.attributes.strength.value > actor.system.attributes.spirit.value) strengthStyle = 'pointer-events:none;color:gray';
+  if (actor.system.attributes.strength.value < actor.system.attributes.spirit.value) spiritStyle = 'color:gray';
+  if (actor.system.attributes.strength.value > actor.system.attributes.spirit.value) strengthStyle = 'color:gray';
+//pointer-events:none;
 
+  // search perks that could change the attribute
   const ownPerks = actor.items.filter((i) => i.type === "perk");
   if (ownPerks.find((i) => i.name.toLowerCase() === 'brute')) strengthStyle = 'display:inline';
-
   if (ownPerks.find((i) => i.name.toLowerCase().includes('willed'))) spiritStyle = 'display:inline';
+  
+  // search perk that could add bonus
+  let bonus=0;
+  if (true) bonus=1;
 
   //add information in message html
   const defeatMessage = {
@@ -1984,8 +2007,8 @@ async function displayDefeatTest(uuid) {
     content: `<div style="{{backlashLabel}}">${game.i18n.localize('torgeternity.defeatDialog.message')}${actor.name} ??</div>
     <br>
     <p class="applyButtons">
-      <a style=${spiritStyle} class="defeat" data-attribute="spirit" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.withSpirit')}</a>
-      <a style=${strengthStyle} class="defeat" data-attribute="strength" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.withStrength')}</a>
+      <a style=${spiritStyle} class="defeat" data-bonus=${bonus} data-attribute="spirit" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.withSpirit')}</a>
+      <a style=${strengthStyle} class="defeat" data-bonus=${bonus} data-attribute="strength" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.withStrength')}</a>
     </p>`,
   };
 
@@ -1997,12 +2020,12 @@ async function displayDefeatTest(uuid) {
  * @param defeatedSK (uuid of the defeated actor)
  * @param attribute (strength or spirit)
  */
-export async function rollDefeatTest(defeatedSK, attribute) {
+export async function rollDefeatTest(defeatedSK, attribute, bonus) {
 
   const actor = await fromUuidSync(defeatedSK);
 
   const test = {
-    testType: 'attribute',
+    testType: 'defeat',
     actor: defeatedSK,
     actorPic: actor.img,
     actorName: actor.name,
@@ -2019,7 +2042,7 @@ export async function rollDefeatTest(defeatedSK, attribute) {
     chatNote: '',
     bdDamageLabelStyle: 'display:none',
     bdDamageSum: 0,
-    hasModifiers: false,
+    hasModifiers: true,
     woundModifier: 0,
     stymiedModifier: 0,
     sizeModifier: 0,
@@ -2033,13 +2056,15 @@ export async function rollDefeatTest(defeatedSK, attribute) {
     previousBonus: false,
     bonus: 0,
     bdStyle: 'display:none',
-    isOther1: false,
+    isOther1: true,
+    other1Modifier: bonus,
     isOther2: false,
     isOther3: false,
     applyDebuffLabel: 'display:none',
     applyDamLabel: 'display:none',
     backlashLabel: 'display:none',
     injuryLabel: 'display:inline',
+    deathLabel: 'display:inline',
     ammoLabel: 'display:none',
     target: [],
     chatTitle: `${game.i18n.localize('torgeternity.defeatDialog.chatTitle')}` + `${game.i18n.localize('torgeternity.attributes.' + attribute)}`,
@@ -2052,7 +2077,7 @@ export async function rollDefeatTest(defeatedSK, attribute) {
     displayModifiers: true,
     modifiers: 0,
     modifierText: '',
-    modifierLabel: 'display:',
+    modifierLabel: 'display:inline',
     cardsPlayed: 0,
     rollResult: 0,
     outcome: '',
@@ -2075,18 +2100,22 @@ export async function rollDefeatTest(defeatedSK, attribute) {
  * @param targetuuid
  */
 export async function skInjury(targetuuid) {
-  const actor = await fromUuid(targetuuid);
+  const actor = await fromUuidSync(targetuuid);
+  const att = actor.system.attributes;
+  let options = '';
+  for (const [at, value] of Object.entries(att)){
+    if (value.value > 5){
+      const attr = 'torgeternity.attributes.'+at
+      options += `<option value='${at}'>${game.i18n.localize(attr)}</option>`;
+    }
+  };
   const attr = await foundry.applications.api.DialogV2.prompt({
     window: { title: `${game.i18n.localize('torgeternity.defeatDialog.title')}` },
     content: `
         <label>${game.i18n.localize('torgeternity.defeatDialog.question')}
         </label>
-        <select name='injury' class='input-box'>
-          <option value="charisma">${game.i18n.localize('torgeternity.attributes.charisma')}</option>
-          <option value="dexterity">${game.i18n.localize('torgeternity.attributes.dexterity')}</option>
-          <option value="mind">${game.i18n.localize('torgeternity.attributes.mind')}</option>
-          <option value="spirit">${game.i18n.localize('torgeternity.attributes.spirit')}</option>
-          <option value="strength">${game.i18n.localize('torgeternity.attributes.strength')}</option>
+        <select name='injury'>
+        ${options}
         </select>`,
     ok: {
       label: game.i18n.localize('torgeternity.defeatDialog.confirm'), // 'Submit Effect',
@@ -2095,9 +2124,11 @@ export async function skInjury(targetuuid) {
       ],
     },
   });
-  const injuredAttribute = actor.system.attributes[attr];
-  if (injuredAttribute.value < 6) {
-    console.log("too small");
-    skInjury(targetuuid);
-  }
+  return attr;
 }
+/*
+          <option value="charisma">${game.i18n.localize('torgeternity.attributes.charisma')}</option>
+          <option value="dexterity">${game.i18n.localize('torgeternity.attributes.dexterity')}</option>
+          <option value="mind">${game.i18n.localize('torgeternity.attributes.mind')}</option>
+          <option value="spirit">${game.i18n.localize('torgeternity.attributes.spirit')}</option>
+          <option value="strength">${game.i18n.localize('torgeternity.attributes.strength')}</option>*/
