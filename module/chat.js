@@ -507,28 +507,52 @@ async function defeatTest(event) {
 
 /**
  * call skInjury on targetuuid
+ * depending of outcome:
+ * failure -> Death message
+ * standard success -> ask for an attribute to permanently reduce (actor update)
+ * good success -> ask for an attribute temporary reduced (active effect)
  * @param event
  */
 async function applyInjury(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
-  const reducedAttribute = await skInjury(targetuuid);
   const test = parentMessage.getFlag('torgeternity', 'test');
+  const targetuuid = test.actor;
+  const myActor = await fromUuid(targetuuid);
   if ((test.rollResult-test.DN)<0){
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker(),
-      content: game.i18n.localize('torgeternity.defeatTest.death'),
+      content: `${game.i18n.localize('torgeternity.defeatDialog.death')}`,
     });
   } else if ((test.rollResult-test.DN)<5){
+    const reducedAttribute = await skInjury(targetuuid);
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker(),
-      content: game.i18n.localize('torgeternity.defeatTest.permanent'),
+      content: `${game.i18n.format('torgeternity.defeatDialog.permanent', { a: game.i18n.localize('torgeternity.attributes.' + reducedAttribute)})}`,
     });
+    const newVal = myActor.system.attributes[reducedAttribute].base-1;
+    await myActor.update({[`system.attributes.${reducedAttribute}.base`]: newVal});
   } else {
+    const reducedAttribute = await skInjury(targetuuid);
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker(),
-      content: game.i18n.localize('torgeternity.defeatTest.temporary'),
+      content: `${game.i18n.format('torgeternity.defeatDialog.temporary', { a: game.i18n.localize('torgeternity.attributes.'+reducedAttribute)})}`,
     });
+    const injuryEffect = {
+      name: 'Injury',
+      icon: 'systems/torgeternity/images/tokens/wound.webp',
+      origin: myActor.uuid,
+      changes: [
+        {
+          key: 'system.attributes.' + reducedAttribute + '.value',
+          value: -1,
+          priority: 20,
+          mode: 2,
+        },
+      ],
+      disabled: false,
+    };
+    await myActor.createEmbeddedDocuments('ActiveEffect', [injuryEffect])
+    ;
   };
 }

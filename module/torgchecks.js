@@ -2092,7 +2092,7 @@ export async function rollDefeatTest(defeatedSK, attribute, bonus) {
     cardsPlayedLabel: 'display:none',
     notesLabel: 'display:none',
   };
-  await renderSkillChat(test);
+  new TestDialog(test);
 }
 
 /**
@@ -2126,9 +2126,3 @@ export async function skInjury(targetuuid) {
   });
   return attr;
 }
-/*
-          <option value="charisma">${game.i18n.localize('torgeternity.attributes.charisma')}</option>
-          <option value="dexterity">${game.i18n.localize('torgeternity.attributes.dexterity')}</option>
-          <option value="mind">${game.i18n.localize('torgeternity.attributes.mind')}</option>
-          <option value="spirit">${game.i18n.localize('torgeternity.attributes.spirit')}</option>
-          <option value="strength">${game.i18n.localize('torgeternity.attributes.strength')}</option>*/

@@ -1136,7 +1136,12 @@
       "message": "Make a defeat test for ",
       "withSpirit": "With Spirit",
       "withStrength": "With Strength",
-      "chatTitle": "Defeat Test: "
+      "chatTitle": "Defeat Test: ",
+      "fatalInjury": "Death !",
+      "fatalTooltip": "Without a better success, you're going to die.",
+      "temporary": "You suffer a temporary injury. {a} is reduced by an effect (minus 1).",
+      "permanent":"You suffer a permanent injury. You loose one point of \"{a}\".",
+      "death": "Fatal injury ! You're about to die, you can make a last action before your sacrifice."
     }
   }
 }
