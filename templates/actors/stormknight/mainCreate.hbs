@@ -328,8 +328,7 @@
     <hr>
     <!--#region Purchase-->
     <div class="characterCreation purchases gear">
-        <h1>Purchases</h1>
-        <p>{{localize "torgeternity.sheetLabels.characterCreation.balance" d=balance}}</p>
+        <h1>{{localize "torgeternity.sheetLabels.purchases"}}</h1>        
         {{#if (gt gear.length 0)}}
             <h3>{{localize "torgeternity.sheetLabels.gear"}}</h3>
             <ol class="item-list">
@@ -790,8 +789,8 @@
                         {{/each}}
                     </ol>
                 {{/if}}
-
         {{/if}}
+        <p>{{localize "torgeternity.sheetLabels.characterCreation.balance" d=balance}}</p>
     </div>
     <!--#endregion-->
 </form>
