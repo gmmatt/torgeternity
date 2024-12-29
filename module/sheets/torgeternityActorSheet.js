@@ -247,13 +247,13 @@ export default class TorgeternityActorSheet extends ActorSheet {
   _sumOfAllItems() {
     let sum = 0;
     for (const item of this.actor.items) {
-      if (!item.system.price) continue;
-
-      if (isNaN(parseInt(item.system.price))) {
+      if (
+        !item.system.price ||
+        item.getFlag('torgeternity', 'freeItem') ||
+        isNaN(parseInt(item.system.price))
+      )
         continue;
-      } else {
-        sum += parseInt(item.system.price);
-      }
+      sum += parseInt(item.system.price);
     }
     return sum;
   }
@@ -534,6 +534,18 @@ export default class TorgeternityActorSheet extends ActorSheet {
         img: 'systems/torgeternity/images/icons/human-icon.webp',
       });
       await this.actor.createEmbeddedDocuments('Item', [humanRace]);
+    });
+
+    html.find('.checkboxFreeItem').click(async (ev) => {
+      const itemID = ev.currentTarget.closest('.item').getAttribute('data-item-id');
+      const item = this.actor.items.get(itemID);
+
+      if (ev.currentTarget.checked) {
+        await item.setFlag('torgeternity', 'freeItem', true);
+      } else {
+        await item.unsetFlag('torgeternity', 'freeItem');
+      }
+      console.log(item);
     });
   }
 

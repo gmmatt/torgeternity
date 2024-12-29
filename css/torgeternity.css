@@ -2998,9 +2998,19 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-control,
 .window-content .actor-sheet .gear ol li .item-controls a.item-control,
-.window-content .actor-sheet .powers ol li .item-controls a.item-control {
+.window-content .actor-sheet .powers ol li .item-controls a.item-control,
+.window-content .actor-sheet ol li .item-controls .freeItemBoxDiv {
   float: right;
   margin-right: 10px;
+  margin: 3px 10px 0 0;
+}
+
+.window-content .actor-sheet ol li .item-controls .freeItemBoxDiv {
+  margin: unset;
+  display:flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-equip.item-equipped,
