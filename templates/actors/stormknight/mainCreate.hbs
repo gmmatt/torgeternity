@@ -27,10 +27,8 @@
     </header>
     <hr>
     <div class="characterCreation attributes">
-        <div class="attributes header">
-            <h2>{{localize "torgeternity.sheetLabels.attributes"}}</h2>
-        </div>
-
+        <h1>{{localize "torgeternity.sheetLabels.attributes"}}</h1>
+        
         <ul class="attribut-list">
             <li class="attribut-block"> <!--Charisma-->
                 <p>{{localize "torgeternity.attributes.charisma"}}</p>
@@ -199,7 +197,7 @@
     <hr>
     <!--#region Skills-->
     <div class="characterCreation skills">
-        <h2>{{localize "torgeternity.sheetLabels.skills"}}</h2>
+        <h1>{{localize "torgeternity.sheetLabels.skills"}}</h1>
         
         {{#*inline "skillRow" content name attrTypes}}
             <li>
@@ -285,7 +283,7 @@
     <hr>
     <!--#region Perks-->
     <div class="characterCreation perks">
-        <h2>{{localize "torgeternity.sheetLabels.perks"}}</h2>
+        <h1>{{localize "torgeternity.sheetLabels.perks"}}</h1>
         {{#if (and (not onlyRacePerks) perk.length)}}
             <ol>
                 {{#each perk as |item id|}}
@@ -330,9 +328,10 @@
     <hr>
     <!--#region Purchase-->
     <div class="characterCreation purchases gear">
+        <h1>Purchases</h1>
         <p>{{localize "torgeternity.sheetLabels.characterCreation.balance" d=balance}}</p>
         {{#if (gt gear.length 0)}}
-            <h2>{{localize "torgeternity.sheetLabels.gear"}}</h2>
+            <h3>{{localize "torgeternity.sheetLabels.gear"}}</h3>
             <ol class="item-list">
                 {{#each gear as |item id|}}
                 <li class="item" data-item-id="{{item._id}}">
@@ -350,7 +349,8 @@
                                 <i class="fas fa-trash"></i>
                             </a>
                             <div class="freeItemBoxDiv">
-                                <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
                                 <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
                             </div>
                         </div>
@@ -377,9 +377,9 @@
         {{/if}}                    
 
         {{#if (or (gt meleeweapons.length 0) (gt customAttack.length 0) (gt missileweapon.length 0) (gt firearm.length 0) (gt heavyweapon.length 0))}}
-            <h1>{{localize "torgeternity.sheetLabels.weapons"}}</h1>
+            <h2>{{localize "torgeternity.sheetLabels.weapons"}}</h2>
             {{#if (gt meleeweapons.length 0)}}
-                <h2>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h2>
+                <h3>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h3>
                 <ol class="item-list">
                     {{#each meleeweapons as |item id|}}
                         <li class="item" data-item-id="{{item._id}}">
@@ -395,12 +395,13 @@
                                     </a>
                                     <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                                         <i class="fas fa-trash"></i>
-                                    </a>
+                                    </a> 
                                     <div class="freeItemBoxDiv">
-                                        <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                        <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                        <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
                                         <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
                                     </div>
-                                </div>
+                                </div>                               
                             </div>
                             <div class="item-detail">
                                 <div class="item-dropdown-description">
@@ -422,6 +423,374 @@
                     {{/each}}
                 </ol>
             {{/if}}
+            {{#if (gt missileweapon.length 0)}}
+                <h3>{{localize "torgeternity.sheetLabels.missileWeapons"}}</h3>
+                <ol class="item-list">
+                    {{#each missileweapon as |item id|}}
+                        <li class="item" data-item-id="{{item._id}}">
+                            <div class="item-row flexrow">
+                                <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                <a class="item-name">{{item.name}}</a>
+                                <div class="item-controls">
+                                    <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                        <i class="fas fa-comment"></i>
+                                    </a>
+                                    <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                        <i class="fas fa-trash"></i>
+                                    </a> 
+                                    <div class="freeItemBoxDiv">
+                                        <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                        <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                        <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="item-detail">
+                                <div class="item-dropdown-description">
+                                    {{{item.description}}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{item.system.price}}
+                                    ({{item.system.value}})
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize 'torgeternity.gear.tl'}}
+                                    {{item.system.techlevel}}
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            {{/if}}
+            {{#if (gt firearm.length 0)}}
+                <h3>{{localize "torgeternity.sheetLabels.firearms"}}</h3>
+                <ol class="item-list">
+                    {{#each firearm as |item id|}}
+                        <li class="item" data-item-id="{{item._id}}">
+                            <div class="item-row flexrow">
+                                <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                <a class="item-name">{{item.name}}</a>
+                                <div class="item-controls">
+                                    <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                        <i class="fas fa-comment"></i>
+                                    </a>
+                                    <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                        <i class="fas fa-trash"></i>
+                                    </a> 
+                                    <div class="freeItemBoxDiv">
+                                        <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                        <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                        <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="item-detail">
+                                <div class="item-dropdown-description">
+                                    {{{item.description}}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{item.system.price}}
+                                    ({{item.system.value}})
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize 'torgeternity.gear.tl'}}
+                                    {{item.system.techlevel}}
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            {{/if}}
+            {{#if (gt heavyweapon.length 0)}}
+                <h3>{{localize "torgeternity.sheetLabels.firearms"}}</h3>
+                <ol class="item-list">
+                    {{#each heavyweapon as |item id|}}
+                        <li class="item" data-item-id="{{item._id}}">
+                            <div class="item-row flexrow">
+                                <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                <a class="item-name">{{item.name}}</a>
+                                <div class="item-controls">
+                                    <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                        <i class="fas fa-comment"></i>
+                                    </a>
+                                    <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                        <i class="fas fa-trash"></i>
+                                    </a> 
+                                    <div class="freeItemBoxDiv">
+                                        <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                        <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                        <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="item-detail">
+                                <div class="item-dropdown-description">
+                                    {{{item.description}}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{item.system.price}}
+                                    ({{item.system.value}})
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize 'torgeternity.gear.tl'}}
+                                    {{item.system.techlevel}}
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            {{/if}}
+        {{/if}}
+
+        {{#if (or (gt armor.length 0) (gt shield.length 0))}}
+            <h2>{{localize "torgeternity.sheetLabels.armorAndShields"}}</h2>
+            {{#if (gt armor.length 0)}}
+                <ol class="item-list">
+                    {{#each armor as |item id|}}
+                        <li class="item" data-item-id="{{item._id}}">
+                            <div class="item-row flexrow">
+                                <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                <a class="item-name">{{item.name}}</a>
+                                <div class="item-controls">
+                                    <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                        <i class="fas fa-comment"></i>
+                                    </a>
+                                    <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                        <i class="fas fa-trash"></i>
+                                    </a> 
+                                    <div class="freeItemBoxDiv">
+                                        <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                        <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                        <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="item-detail">
+                                <div class="item-dropdown-description">
+                                    {{{item.description}}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{item.system.price}}
+                                    ({{item.system.value}})
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize 'torgeternity.gear.tl'}}
+                                    {{item.system.techlevel}}
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            {{/if}}
+            {{#if (gt shield.length 0)}}
+                <ol class="item-list">
+                    {{#each shield as |item id|}}
+                        <li class="item" data-item-id="{{item._id}}">
+                            <div class="item-row flexrow">
+                                <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                <a class="item-name">{{item.name}}</a>
+                                <div class="item-controls">
+                                    <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                        <i class="fas fa-comment"></i>
+                                    </a>
+                                    <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                        <i class="fas fa-trash"></i>
+                                    </a> 
+                                    <div class="freeItemBoxDiv">
+                                        <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                        <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                        <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="item-detail">
+                                <div class="item-dropdown-description">
+                                    {{{item.description}}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{item.system.price}}
+                                    ({{item.system.value}})
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{localize 'torgeternity.gear.tl'}}
+                                    {{item.system.techlevel}}
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            {{/if}}
+        {{/if}}
+
+        {{#if (or (gt cyberware.length 0) (gt occultech.length 0) (gt vehicle.length))}}
+            <h2>{{localize "torgeternity.sheetLabels.otherGear"}}</h2>
+                {{#if (gt vehicle.length 0)}}                
+                    <h3>{{localize "torgeternity.sheetLabels.vehicles"}}</h3>
+                    <ol class="item-list">
+                        {{#each vehicle as |item id|}}
+                            <li class="item" data-item-id="{{item._id}}">
+                                <div class="item-row flexrow">
+                                    <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                    <a class="item-name">{{item.name}}</a>
+                                    <div class="item-controls">
+                                        <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                            <i class="fas fa-comment"></i>
+                                        </a>
+                                        <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                            <i class="fas fa-trash"></i>
+                                        </a> 
+                                        <div class="freeItemBoxDiv">
+                                            <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                            <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                            <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                        </div>
+                                    </div>                               
+                                </div>
+                                <div class="item-detail">
+                                    <div class="item-dropdown-description">
+                                        {{{item.description}}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{item.system.price}}
+                                        ({{item.system.value}})
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize 'torgeternity.gear.tl'}}
+                                        {{item.system.techlevel}}
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ol>
+                {{/if}}
+                {{#if (gt cyberware.length 0)}}
+                    <h3>{{localize "torgeternity.sheetLabels.cyberware"}}</h3>
+                    <ol class="item-list">
+                        {{#each cyberware as |item id|}}
+                            <li class="item" data-item-id="{{item._id}}">
+                                <div class="item-row flexrow">
+                                    <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                    <a class="item-name">{{item.name}}</a>
+                                    <div class="item-controls">
+                                        <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                            <i class="fas fa-comment"></i>
+                                        </a>
+                                        <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                            <i class="fas fa-trash"></i>
+                                        </a> 
+                                        <div class="freeItemBoxDiv">
+                                            <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                            <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                            <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                        </div>
+                                    </div>                               
+                                </div>
+                                <div class="item-detail">
+                                    <div class="item-dropdown-description">
+                                        {{{item.description}}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{item.system.price}}
+                                        ({{item.system.value}})
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize 'torgeternity.gear.tl'}}
+                                        {{item.system.techlevel}}
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ol>
+                {{/if}}
+
+                {{#if (gt occultech.length 0)}}
+                    <h3>{{localize "torgeternity.sheetLabels.occultech"}}</h3>
+                    <ol class="item-list">
+                        {{#each occultech as |item id|}}
+                            <li class="item" data-item-id="{{item._id}}">
+                                <div class="item-row flexrow">
+                                    <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+                                    <a class="item-name">{{item.name}}</a>
+                                    <div class="item-controls">
+                                        <a class="item-control item-tochat" data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                            <i class="fas fa-comment"></i>
+                                        </a>
+                                        <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                            <i class="fas fa-trash"></i>
+                                        </a> 
+                                        <div class="freeItemBoxDiv">
+                                            <label>{{localize "torgeternity.gear.price"}}: {{item.system.price}} $</label>                                
+                                            <input name="freeItemBox" class="checkboxFreeItem" type="checkbox" data-tooltip="{{localize "torgeternity.sheetLabels.freeItemTooltip"}}" data-dtype="Boolean" {{checked item.flags.torgeternity.freeItem}}>
+                                            <label for="freeItemBox">{{localize "torgeternity.sheetLabels.freeItem"}}</label>
+                                        </div>
+                                    </div>                               
+                                </div>
+                                <div class="item-detail">
+                                    <div class="item-dropdown-description">
+                                        {{{item.description}}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{item.system.price}}
+                                        ({{item.system.value}})
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize 'torgeternity.gear.tl'}}
+                                        {{item.system.techlevel}}
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ol>
+                {{/if}}
+
         {{/if}}
     </div>
     <!--#endregion-->

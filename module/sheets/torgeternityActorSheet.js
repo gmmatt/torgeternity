@@ -96,6 +96,18 @@ export default class TorgeternityActorSheet extends ActorSheet {
     data.implant = data.items.filter(function (item) {
       return item.type == 'implant';
     });
+    data.cyberware = data.items.filter(function (item) {
+      return (
+        item.type === 'implant' &&
+        item.system.implantType === game.i18n.localize('torgeternity.perkTypes.cyberware')
+      );
+    });
+    data.occultech = data.items.filter(function (item) {
+      return (
+        item.type === 'implant' &&
+        item.system.implantType === game.i18n.localize('torgeternity.perkTypes.occultech')
+      );
+    });
     data.heavyweapon = data.items.filter(function (item) {
       return item.type == 'heavyweapon';
     });

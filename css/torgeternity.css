@@ -3011,7 +3011,22 @@ form.actor-sheet header input[name="name"] {
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  margin: 3px 10px 0 0;
 }
+
+.window-content .actor-sheet.characterCreation h1 {
+  background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  border: none;
+  margin: 1rem 0px 0.7rem 0px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 30px;
+  text-align: center;
+}
+
 
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-equip.item-equipped,
 .window-content .actor-sheet .gear ol li .item-controls a.item-equip.item-equipped,
