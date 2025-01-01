@@ -181,7 +181,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
         ? true
         : false;
 
-      data.balance = ((data.hasWealthy ? 10000 : 1000) - this._sumOfAllItems()).toLocaleString();
+      data.balance = ((data.hasWealthy ? 10000 : 1000) - data.sumPrices).toLocaleString();
     }
     for (const type of [
       'meleeweapons',
