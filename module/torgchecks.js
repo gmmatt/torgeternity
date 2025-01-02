@@ -1981,8 +1981,9 @@ async function oneDN(test) {
 }
 
 /**
- * chat message to propose the attribute to use for defeat test, default is lower from spirit and strength
- * search for relevant perks that could add options, allow both roll, but grays the 
+ * chat message to propose the attribute to use for defeat test, default is lowest from spirit and strength
+ * search for relevant perks that could add options, allows both roll, but grays the irrelevant
+ * 'relevant perks' are not searched-localized at this moment, EN only
  * @param uuid (uuid of the defeated actor)
  */
 async function displayDefeatTest(uuid) {
@@ -1990,16 +1991,17 @@ async function displayDefeatTest(uuid) {
   const actor = fromUuidSync(uuid).actor;
   if (actor.system.attributes.strength.value < actor.system.attributes.spirit.value) spiritStyle = 'color:gray';
   if (actor.system.attributes.strength.value > actor.system.attributes.spirit.value) strengthStyle = 'color:gray';
-//pointer-events:none;
+  //pointer-events:none;
 
   // search perks that could change the attribute
   const ownPerks = actor.items.filter((i) => i.type === "perk");
-  if (ownPerks.find((i) => i.name.toLowerCase() === 'brute')) strengthStyle = 'display:inline';
-  if (ownPerks.find((i) => i.name.toLowerCase().includes('willed'))) spiritStyle = 'display:inline';
-  
-  // search perk that could add bonus
-  let bonus=0;
-  if (true) bonus=1;
+  if (ownPerks.find((i) => i.name.toLowerCase() === 'brute')) strengthStyle = 'display:inline'; // Brute => Strength is always available
+  if (ownPerks.find((i) => i.name.toLowerCase().includes('willed'))) spiritStyle = 'display:inline'; // Strong-willed => Spirit is always available
+
+  // search perks that could add bonus
+  // "Survivor, ignore wounds penalty for defeat test"
+  let bonus = 0;
+  if (ownPerks.find((i) => i.name.toLowerCase() === 'survivor')) bonus = 3; // 
 
   //add information in message html
   const defeatMessage = {
@@ -2103,9 +2105,9 @@ export async function skInjury(targetuuid) {
   const actor = await fromUuidSync(targetuuid);
   const att = actor.system.attributes;
   let options = '';
-  for (const [at, value] of Object.entries(att)){
-    if (value.value > 5){
-      const attr = 'torgeternity.attributes.'+at
+  for (const [at, value] of Object.entries(att)) {
+    if (value.value > 5) {
+      const attr = 'torgeternity.attributes.' + at
       options += `<option value='${at}'>${game.i18n.localize(attr)}</option>`;
     }
   };
