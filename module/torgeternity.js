@@ -966,7 +966,7 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
 
 // change the generic threat token to match the cosm's one if it's set in the scene
 Hooks.on('preCreateToken',async (...args) => {
-  if (args[0].texture.src.includes('generic-threat')) {
+  if (args[0].texture.src.includes('threat-generic')) {
     const cosm = canvas.scene.getFlag('torgeternity','cosm');
     if(['coreEarth','livingLand','nileEmpire','aysle','cyberpapacy','tharkold','panPacifica','orrorsh'].includes(cosm))
       args[0].updateSource({'texture.src':"systems/torgeternity/images/characters/threat-" + cosm + ".Token.webp"})
