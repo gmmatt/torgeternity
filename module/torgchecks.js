@@ -19,6 +19,8 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
+  test.injuryLabel = `display:none`;
+  test.deathLabel = `display:none`;
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
@@ -503,6 +505,7 @@ export async function renderSkillChat(test) {
       ' ' +
       game.i18n.localize(dnLabel);
     if (testDifference < 0) {
+      test.bdStyle = "display:none"
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
       // test.outcomeColor = "color: red"
       if (test.testType === 'power') {
@@ -2065,8 +2068,8 @@ export async function rollDefeatTest(defeatedSK, attribute, bonus) {
     applyDebuffLabel: 'display:none',
     applyDamLabel: 'display:none',
     backlashLabel: 'display:none',
-    injuryLabel: 'display:inline',
-    deathLabel: 'display:inline',
+    injuryLabel: 'display:none',
+    deathLabel: 'display:none',
     ammoLabel: 'display:none',
     target: [],
     chatTitle: `${game.i18n.localize('torgeternity.defeatDialog.chatTitle')}` + `${game.i18n.localize('torgeternity.attributes.' + attribute)}`,

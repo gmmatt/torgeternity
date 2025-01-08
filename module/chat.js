@@ -498,8 +498,14 @@ async function applyBacklash3(event) {
  * @param event
  */
 async function defeatTest(event) {
-  // const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = event.currentTarget.dataset.defeatedactoruuid;
+  if (!game.user.isGM) {
+    if (!(parentMessage.author.id === game.user.id) && !(((await fromUuid(targetuuid))._id) === game.user.character.getActiveTokens()[0].document.actorId)) {
+    return;
+    };
+  }
   const attribute = event.currentTarget.dataset.attribute;
   const bonus = event.currentTarget.dataset.bonus;
   await rollDefeatTest(targetuuid, attribute, bonus);
@@ -519,6 +525,11 @@ async function applyInjury(event) {
   const test = parentMessage.getFlag('torgeternity', 'test');
   const targetuuid = test.actor;
   const myActor = await fromUuid(targetuuid);
+  if (!game.user.isGM) {
+    if (!(parentMessage.author.id === game.user.id) && !((myActor._id) === game.user.character.getActiveTokens()[0].document.actorId)) {
+    return;
+    };
+  }
   if ((test.rollResult-test.DN)<0){
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker(),
