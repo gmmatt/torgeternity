@@ -338,8 +338,9 @@ export default class TorgeternityActor extends Actor {
         //actorLink: true,
         disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
         displayName: 40,
-        appendNumber: true,
-        prependAdjective: true,
+        // Core parameters
+        // appendNumber: true,
+        // prependAdjective: true,
         lockRotation: true,
         rotation: 0,
         texture: {
