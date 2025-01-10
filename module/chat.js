@@ -501,11 +501,9 @@ async function defeatTest(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = event.currentTarget.dataset.defeatedactoruuid;
-  if (!game.user.isGM) {
-    if (!(parentMessage.author.id === game.user.id) && !(((await fromUuid(targetuuid))._id) === game.user.character.getActiveTokens()[0].document.actorId)) {
+  const { OWNER } = CONST.DOCUMENT_OWNERSHIP_LEVELS;
+  if (!(await fromUuid(targetuuid)).testUserPermission(game.user, OWNER))
     return;
-    };
-  }
   const attribute = event.currentTarget.dataset.attribute;
   const bonus = event.currentTarget.dataset.bonus;
   await rollDefeatTest(targetuuid, attribute, bonus);

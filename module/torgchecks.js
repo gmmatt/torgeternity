@@ -534,6 +534,7 @@ export async function renderSkillChat(test) {
       if (test.testType === 'defeat') {
         test.injuryLabel = `display:none`;
         test.deathLabel = `display:none`;
+        test.bdStyle = "display:none"
       }
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
@@ -547,6 +548,7 @@ export async function renderSkillChat(test) {
       if (test.testType === 'defeat') {
         test.injuryLabel = `display:inline`;
         test.deathLabel = `display:none`;
+        test.bdStyle = "display:none"
       }
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
@@ -560,6 +562,7 @@ export async function renderSkillChat(test) {
       if (test.testType === 'defeat') {
         test.injuryLabel = `display:inline`;
         test.deathLabel = `display:none`;
+        test.bdStyle = "display:none"
       }
     }
 
@@ -908,6 +911,7 @@ export async function renderSkillChat(test) {
         (test.bdStyle = 'display:none');
     } else if (test.testType === 'attack') {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
+      test.bdStyle = "display:"
     } else if (test.testType === 'power') {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
       if (test.isAttack === true) {
