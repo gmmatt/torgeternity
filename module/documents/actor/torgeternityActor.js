@@ -362,7 +362,7 @@ export default class TorgeternityActor extends Actor {
         sight: {
           enabled: true
         },
-        actorLink: true,
+        //actorLink: true,
         disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL,
         displayName: 30,
         lockRotation: true,
