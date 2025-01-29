@@ -1133,7 +1133,7 @@
       "confirm": "Confirm choice",
       "injury": "Injury !",
       "injuryTooltip": "You suffer a severe injury, choose the weakened attribute",
-      "message": "Make a defeat test for ",
+      "message": "Make a defeat test for {a} ?",
       "withSpirit": "With Spirit",
       "withStrength": "With Strength",
       "chatTitle": "Defeat Test: ",

@@ -1990,7 +1990,8 @@ async function oneDN(test) {
 /**
  * chat message to propose the attribute to use for defeat test, default is lowest from spirit and strength
  * search for relevant perks that could add options, allows both roll, but grays the irrelevant
- * 'relevant perks' are not searched-localized at this moment, EN only
+ * 'relevant perks' are not easy to tags, each user can create them (ouside of officials compendium)
+ * so search mode is testing multiple possibility
  * @param uuid (uuid of the defeated actor)
  */
 async function displayDefeatTest(uuid) {
@@ -2002,18 +2003,21 @@ async function displayDefeatTest(uuid) {
 
   // search perks that could change the attribute
   const ownPerks = actor.items.filter((i) => i.type === "perk");
-  if (ownPerks.find((i) => i.name.toLowerCase() === 'brute')) strengthStyle = 'display:inline'; // Brute => Strength is always available
-  if (ownPerks.find((i) => i.name.toLowerCase().includes('willed'))) spiritStyle = 'display:inline'; // Strong-willed => Spirit is always available
-
+  // EN, FR, DE
+  if (ownPerks.find((i) => ['brute', 'brute', 'rauhbein'].includes(i.name.toLowerCase()))) strengthStyle = 'display:inline'; // Brute => Strength is always available
+  // EN,EN,EN,FR,FR,DE
+  if (ownPerks.find((i) => ['strong-willed', 'strongwilled', 'strong willed', 'obstiné', 'obstine', 'starker wille'].includes(i.name.toLowerCase()))) spiritStyle = 'display:inline'; // Strong-willed => Spirit is always available
+  
   // search perks that could add bonus
   // "Survivor, ignore wounds penalty for defeat test"
   let bonus = 0;
-  if (ownPerks.find((i) => i.name.toLowerCase() === 'survivor')) bonus = 3; // 
+  // EN, FR, DE
+  if (ownPerks.find((i) => ['survivor', 'survivant', 'überlebenskünstler'].includes(i.name.toLowerCase()))) bonus = 3;
 
   //add information in message html
   const defeatMessage = {
     speaker: ChatMessage.getSpeaker(),
-    content: `<div style="{{backlashLabel}}">${game.i18n.localize('torgeternity.defeatDialog.message')}${actor.name} ??</div>
+    content: `<div style="{{backlashLabel}}">${game.i18n.format('torgeternity.defeatDialog.message', {a: actor.name})}</div>
     <br>
     <p class="applyButtons">
       <a style=${spiritStyle} class="defeat" data-bonus=${bonus} data-attribute="spirit" data-defeatedActorUuid=${actor.uuid}>${game.i18n.localize('torgeternity.defeatDialog.withSpirit')}</a>

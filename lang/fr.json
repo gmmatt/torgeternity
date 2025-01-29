@@ -1132,7 +1132,7 @@
       "confirm": "Confirmez le choix",
       "injury": "Blessure !",
       "injuryTooltip": "Vous souffrez d'une blessure sévère, réduction d'un attribut",
-      "message": "Jet de défaite pour  ",
+      "message": "Jet de défaite pour {a} ?",
       "withSpirit": "Avec Esprit",
       "withStrength": "Avec Force",
       "chatTitle": "Test de Défaite: ",
