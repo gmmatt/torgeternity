@@ -862,7 +862,6 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   // Trigger the skill roll
   // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in TorgeternityActorSheet
   // This code needs to be centrally located!!!
-  console.log(skill)
   const test = {
     testType: isAttributeTest ? 'attribute' : 'skill',
     actor: actor.uuid,
