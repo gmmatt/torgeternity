@@ -307,4 +307,80 @@ export default class TorgeternityActor extends Actor {
     }
     return handOwnership;
   }
+
+  async _preCreate(data, options, user) {
+    super._preCreate(data, options, user);
+    const prototypeToken = {};
+    if (data.type === 'stormknight' && !foundry.utils.hasProperty(data, 'prototypeToken')) {
+      Object.assign(prototypeToken, {
+        sight: {
+          enabled: true
+        },
+        actorLink: true,
+        disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY, // HOSTILE -1, NEUTRAL 0, FRIENDLY 1, SECRET -2
+        displayName: 30, // NONE 0, CONTROL 10, OWNER-HOVER 20, HOVER 30, OWNER 40, ALWAYS 50
+        lockRotation: true,
+        rotation: 0,
+        displayBars: 40,
+        bar1: {
+          attribute: 'wounds'
+        },
+        bar2: {
+          attribute: 'shock'
+        },
+      });
+      await this.updateSource({ prototypeToken });
+    } else if (data.type === 'threat' && !foundry.utils.hasProperty(data, 'prototypeToken')) {
+      Object.assign(prototypeToken, {
+        sight: {
+          enabled: true
+        },
+        //actorLink: true,
+        disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
+        displayName: 40,
+        // Core parameters
+        // appendNumber: true,
+        // prependAdjective: true,
+        lockRotation: true,
+        rotation: 0,
+        texture: {
+          src: 'systems/torgeternity/images/characters/threat-generic.Token.webp',
+          rotation: 0,
+        },
+        displayBars: 30,
+        bar1: {
+          attribute: 'wounds'
+        },
+        bar2: {
+          attribute: 'shock'
+        },
+      });
+      await this.updateSource({ prototypeToken });
+      await this.updateSource({ img: 'systems/torgeternity/images/characters/threat.webp' });
+    } else if (!foundry.utils.hasProperty(data, 'prototypeToken')) {
+      Object.assign(prototypeToken, {
+        sight: {
+          enabled: true
+        },
+        //actorLink: true,
+        disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL,
+        displayName: 30,
+        lockRotation: true,
+        rotation: 0,
+        texture: {
+          src: 'systems/torgeternity/images/characters/vehicle-land-Token.webp',
+          rotation: 0,
+        },
+        displayBars: 30,
+        bar1: {
+          attribute: 'wounds'
+        },
+        bar2: {
+          attribute: ''
+        },
+      });
+      await this.updateSource({ prototypeToken });
+      await this.updateSource({ img: 'systems/torgeternity/images/characters/vehicle-land.webp' });
+    }
+  }
 }
