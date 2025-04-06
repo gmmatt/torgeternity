@@ -967,6 +967,7 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
 Hooks.on('preCreateToken', async (...args) => {
   if (args[0].texture.src.includes('threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
+    if (!cosm) return;
     if (
       [
         'coreEarth',
