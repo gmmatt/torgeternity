@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.12.3.9
+
+- Squished a bug (call stack exception) that occured in Chrome
+
 ## v.12.3.8
 
 - Correction on CSS Splotches in journals
