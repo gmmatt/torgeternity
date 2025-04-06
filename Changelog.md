@@ -11,6 +11,11 @@
 - Implants now do have a secondary axiom as well [#487](https://github.com/gmmatt/torgeternity/issues/487)
 - Item price-values are now completely automatically calculated [#486](https://github.com/gmmatt/torgeternity/issues/486)
 
+## v.12.3.9
+
+- Squished a bug (call stack exception) that occured in Chrome
+- Correction of Skill Macro use with custom difficulty
+
 ## v.12.3.8
 
 - Correction on CSS Splotches in journals

@@ -15,6 +15,7 @@ import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
 import torgeternitySceneConfig from './torgeternitySceneConfig.js';
 import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
+import * as torgChecks from './torgchecks.js';
 import { modifyTokenBars } from './tokenBars.js';
 import { registerHelpers } from './handlebarHelpers.js';
 import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
@@ -808,7 +809,12 @@ function rollItemMacro(itemName) {
  * @param {boolean} isInteractionAttack
  * @returns {Promise}
  */
-function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
+function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescriptor) {
+  if (DNDescriptor && torgChecks.validDNDescriptor(DNDescriptor) === false) {
+    ui.notifications.error('The DN-Descriptor is wrong. Exiting the macro.');
+    return;
+  }
+
   const speaker = ChatMessage.getSpeaker();
   let actor = null;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
@@ -876,7 +882,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     isFav: skill.isFav,
     targets: Array.from(game.user.targets),
     applySize: false,
-    DNDescriptor: 'standard',
+    DNDescriptor: DNDescriptor ?? 'standard',
     attackOptions: false,
     rollTotal: 0,
     unskilledUse: skill.unskilledUse,
@@ -899,7 +905,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
 
     // Exit if no target or get target data
     let dnDescriptor;
-    if (Array.from(game.user.targets).length > 0) {
+    if (Array.from(game.user.targets).length > 0 && !DNDescriptor) {
       switch (skillName) {
         case 'intimidation':
           dnDescriptor = 'targetIntimidation';
@@ -919,7 +925,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     } else {
       dnDescriptor = 'standard';
     }
-    test.DNDescriptor = dnDescriptor;
+    test.DNDescriptor = dnDescriptor ?? DNDescriptor;
     test.unskilledUse = true;
   }
 
@@ -975,17 +981,26 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
   }
 });
 
-// link StormKnight Prototype Token to the actor
-Hooks.on('preCreateActor', (actor, data, options, userId) => {
-  if (data.type === 'stormknight' && !data.hasOwnProperty('prototypeToken')) {
-    actor.updateSource({ 'prototypeToken.actorLink': true });
-  }
-  if (data.type === 'vehicle' && actor.img.includes('mystery-man')) {
-    actor.updateSource({
-      'prototypeToken.texture.src':
-        'systems/torgeternity/images/characters/vehicle-land-Token.webp',
-      img: 'systems/torgeternity/images/characters/vehicle-land.webp',
-    });
+// change the generic threat token to match the cosm's one if it's set in the scene
+Hooks.on('preCreateToken', async (...args) => {
+  if (args[0].texture.src.includes('threat')) {
+    const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
+    if (!cosm) return;
+    if (
+      [
+        'coreEarth',
+        'livingLand',
+        'nileEmpire',
+        'aysle',
+        'cyberpapacy',
+        'tharkold',
+        'panPacifica',
+        'orrorsh',
+      ].includes(cosm)
+    )
+      args[0].updateSource({
+        'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp',
+      });
   }
 });
 

@@ -1954,3 +1954,47 @@ async function oneDN(test) {
       test.DN = 10;
   }
 }
+
+/**
+ * Simple method to evaluate the spelling (of general existance) of a DN-Descriptor
+ * @param {string} DNDescriptor
+ * @returns true if existant
+ */
+export function validDNDescriptor(DNDescriptor) {
+  return [
+    'veryEasy',
+    'easy',
+    'standard',
+    'challenging',
+    'hard',
+    'veryHard',
+    'heroic',
+    'nearImpossible',
+    'targetCharisma',
+    'targetDexterity',
+    'targetMind',
+    'targetSpirit',
+    'targetStrength',
+    'targetAlteration',
+    'targetConjuration',
+    'targetDivination',
+    'targetDodge',
+    'targetFaith',
+    'targetFind',
+    'targetIntimidation',
+    'targetKinesis',
+    'targetManeuver',
+    'targetPrecognition',
+    'targetStealth',
+    'targetTaunt',
+    'targetTrick',
+    'targetUnarmedCombat',
+    'targetWillpower',
+    'targetWillpowerMind',
+    'targetLandVehicles',
+    'targetAirVehicles',
+    'targetWaterVehicles',
+    'highestSpeed',
+    'targetVehicleDefense',
+  ].includes(DNDescriptor);
+}
