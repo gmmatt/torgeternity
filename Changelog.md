@@ -3,6 +3,7 @@
 ## v.12.3.9
 
 - Squished a bug (call stack exception) that occured in Chrome
+- Correction of Skill Macro use with custom difficulty
 
 ## v.12.3.8
 
