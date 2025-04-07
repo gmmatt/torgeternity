@@ -1988,6 +1988,50 @@ async function oneDN(test) {
 }
 
 /**
+ * Simple method to evaluate the spelling (of general existance) of a DN-Descriptor
+ * @param {string} DNDescriptor
+ * @returns true if existant
+ */
+export function validDNDescriptor(DNDescriptor) {
+  return [
+    'veryEasy',
+    'easy',
+    'standard',
+    'challenging',
+    'hard',
+    'veryHard',
+    'heroic',
+    'nearImpossible',
+    'targetCharisma',
+    'targetDexterity',
+    'targetMind',
+    'targetSpirit',
+    'targetStrength',
+    'targetAlteration',
+    'targetConjuration',
+    'targetDivination',
+    'targetDodge',
+    'targetFaith',
+    'targetFind',
+    'targetIntimidation',
+    'targetKinesis',
+    'targetManeuver',
+    'targetPrecognition',
+    'targetStealth',
+    'targetTaunt',
+    'targetTrick',
+    'targetUnarmedCombat',
+    'targetWillpower',
+    'targetWillpowerMind',
+    'targetLandVehicles',
+    'targetAirVehicles',
+    'targetWaterVehicles',
+    'highestSpeed',
+    'targetVehicleDefense',
+  ].includes(DNDescriptor);
+}
+
+/**
  * chat message to propose the attribute to use for defeat test, default is lowest from spirit and strength
  * search for relevant perks that could add options, allows both roll, but grays the irrelevant
  * 'relevant perks' are not easy to tags, each user can create them (ouside of officials compendium)
