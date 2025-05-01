@@ -215,10 +215,10 @@ Hooks.on('ready', async function () {
   );
 
   // ----rendering welcome message
-  if (game.settings.get('torgeternity', 'welcomeMessage') == true) {
+  if (game.settings.get('torgeternity', 'welcomeMessage') === true) {
     const d = new Dialog(
       {
-        title: 'Welcome to the Official Torg Eternity System for Foundry VTT!',
+        title: 'Welcome to the Torg Eternity System for Foundry VTT!',
         content: torgeternity.welcomeMessage,
         buttons: {
           one: {
@@ -233,9 +233,9 @@ Hooks.on('ready', async function () {
         },
       },
       {
-        left: 100,
-        top: 100,
-        resizable: true,
+	top: 150,
+	left: 100,
+        width: 675,
       }
     );
     d.render(true);
@@ -266,8 +266,8 @@ Hooks.on('ready', async function () {
         },
       },
       {
-        top: 860,
-        left: 100,
+        top: 100,
+        left: 235,
       }
     );
     d.render(true);
