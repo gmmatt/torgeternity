@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## v.12.4.0
+## v.13.1.0
 
 - Now option to surpress chat notifications on card shuffle.
 - Miracles now have the skill "Faith" selected on creation.
@@ -9,6 +9,8 @@
 - Giving an option to ignore ammo mechanics [#490](https://github.com/gmmatt/torgeternity/issues/490)
 - Implants now do have a secondary axiom as well [#487](https://github.com/gmmatt/torgeternity/issues/487)
 - Item price-values are now completely automatically calculated [#486](https://github.com/gmmatt/torgeternity/issues/486)
+- Nice new possiblity token images [#495](https://github.com/gmmatt/torgeternity/issues/495)
+- Shiny new Welcome Messages [#496](https://github.com/gmmatt/torgeternity/issues/496)
 
 ## v.12.3.9
 
