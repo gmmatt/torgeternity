@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class PartySheet extends PlayerList {
+export default class PartySheet extends Players {
   /**
    *
    */

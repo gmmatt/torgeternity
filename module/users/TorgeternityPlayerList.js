@@ -3,7 +3,7 @@ import PartySheetActive from './partySheetActive.js';
 /**
  *
  */
-export default class TorgeternityPlayerList extends PlayerList {
+export default class TorgeternityPlayerList extends Players {
   /**
    *
    */
