@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.13.0.0
+
+- Bringing the system up and running for Foundry V13 (sorry, no more changes!)
+
 ## v.12.3.9
 
 - Squished a bug (call stack exception) that occured in Chrome
