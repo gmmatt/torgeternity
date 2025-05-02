@@ -16,22 +16,22 @@ import { checkForDiscon } from './torgchecks.js';
  * @param html
  */
 export function addChatListeners(html) {
-  html.on('click', 'a.roll-fav', onFavored);
-  html.on('click', 'a.roll-possibility', onPossibility);
-  html.on('click', 'a.roll-up', onUp);
-  html.on('click', 'a.roll-hero', onHero);
-  html.on('click', 'a.roll-drama', onDrama);
-  html.on('click', 'a.add-plus3', onPlus3);
-  html.on('click', 'a.add-bd', onBd);
-  html.on('click', 'a.modifier-label', onModifier);
-  html.on('click', 'a.applyDam', applyDam);
-  html.on('contextmenu', 'a.applyDam', adjustDam);
-  html.on('click', 'a.soakDam', soakDam);
-  html.on('click', 'a.applyStymied', applyStym);
-  html.on('click', 'a.applyVulnerable', applyVul);
-  html.on('click', 'a.backlash1', applyBacklash1);
-  html.on('click', 'a.backlash2', applyBacklash2);
-  html.on('click', 'a.backlash3', applyBacklash3);
+  $(html).on('click', 'a.roll-fav', onFavored);
+  $(html).on('click', 'a.roll-possibility', onPossibility);
+  $(html).on('click', 'a.roll-up', onUp);
+  $(html).on('click', 'a.roll-hero', onHero);
+  $(html).on('click', 'a.roll-drama', onDrama);
+  $(html).on('click', 'a.add-plus3', onPlus3);
+  $(html).on('click', 'a.add-bd', onBd);
+  $(html).on('click', 'a.modifier-label', onModifier);
+  $(html).on('click', 'a.applyDam', applyDam);
+  $(html).on('contextmenu', 'a.applyDam', adjustDam);
+  $(html).on('click', 'a.soakDam', soakDam);
+  $(html).on('click', 'a.applyStymied', applyStym);
+  $(html).on('click', 'a.applyVulnerable', applyVul);
+  $(html).on('click', 'a.backlash1', applyBacklash1);
+  $(html).on('click', 'a.backlash2', applyBacklash2);
+  $(html).on('click', 'a.backlash3', applyBacklash3);
 }
 
 async function parentDeleteByTime(oldMsg) {
