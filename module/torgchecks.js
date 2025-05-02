@@ -973,7 +973,7 @@ export async function renderSkillChat(test) {
   }
 
   if (game.settings.get('torgeternity', 'unTarget')) {
-    await game.user.updateTokenTargets();
+    await game.user._onUpdateTokenTargets();
     await game.user.broadcastActivity({ targets: [] });
   }
   try {
