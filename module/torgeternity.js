@@ -76,10 +76,15 @@ Hooks.once('init', async function () {
 
   // ----scenes
   // CONFIG.Scene.sheetClass = torgeternitySceneConfig;
-  DocumentSheetConfig.registerSheet(Scene, 'torgeternity', torgeternitySceneConfig, {
-    label: 'Torg Eternity Scene Config',
-    makeDefault: true,
-  });
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(
+    Scene,
+    'torgeternity',
+    torgeternitySceneConfig,
+    {
+      label: 'Torg Eternity Scene Config',
+      makeDefault: true,
+    }
+  );
   CONFIG.ui.nav = torgeternityNav;
 
   // ---custom user class
@@ -128,37 +133,47 @@ Hooks.once('init', async function () {
   // all settings after config
   registerTorgSettings();
   // ---register items and actors
-  Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('torgeternity', TorgeternityItemSheet, {
+  foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Items.registerSheet('torgeternity', TorgeternityItemSheet, {
     makeDefault: true,
   });
 
-  Actors.unregisterSheet('core', ItemSheet);
-  Actors.registerSheet('torgeternity', TorgeternityActorSheet, {
+  foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Actors.registerSheet('torgeternity', TorgeternityActorSheet, {
     makeDefault: true,
   });
 
   // ---register cards
-  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
-    label: 'Torg Player Hand',
-    types: ['hand'],
-    makeDefault: true,
-  });
-  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(
+    Cards,
+    'core',
+    torgeternityPlayerHand,
+    {
+      label: 'Torg Player Hand',
+      types: ['hand'],
+      makeDefault: true,
+    }
+  );
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
     label: 'Torg Pile',
     types: ['pile'],
     makeDefault: true,
   });
-  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
     label: 'Torg Deck',
     types: ['deck'],
     makeDefault: true,
   });
-  DocumentSheetConfig.registerSheet(Card, 'core', torgeternityCardConfig, {
-    label: 'Torg Eternity Card Configuration',
-    types: ['destiny', 'drama', 'cosm'],
-    makeDefault: true,
-  });
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(
+    Card,
+    'core',
+    torgeternityCardConfig,
+    {
+      label: 'Torg Eternity Card Configuration',
+      types: ['destiny', 'drama', 'cosm'],
+      makeDefault: true,
+    }
+  );
 
   // ----------preloading handlebars templates
   preloadTemplates();
@@ -210,7 +225,7 @@ Hooks.on('ready', async function () {
   let lang = game.settings.get('core', 'language');
   torgeternity.supportedLanguages.indexOf(lang) == -1 ? (lang = 'en') : (lang = lang);
 
-  torgeternity.welcomeMessage = await renderTemplate(
+  torgeternity.welcomeMessage = await foundry.applications.handlebars.renderTemplate(
     `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
   );
 

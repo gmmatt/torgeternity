@@ -32,7 +32,10 @@ class ChatMessageTorg extends ChatMessage {
           `torgeternity.skills.${templateData.system?.skill}`
         );
 
-      const renderedTemplate = await renderTemplate(template, templateData);
+      const renderedTemplate = await foundry.applications.handlebars.renderTemplate(
+        template,
+        templateData
+      );
       const enrichedHTML = await TextEditor.enrichHTML(renderedTemplate);
       html.querySelector('.message-content').innerHTML = enrichedHTML;
     }

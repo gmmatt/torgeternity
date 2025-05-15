@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityDeck extends CardsPile {
+export default class torgeternityDeck extends Cards {
   /**
    *
    * @returns {object} The default options for the torgeternityDeck class.
@@ -142,14 +142,17 @@ export default class torgeternityDeck extends CardsPile {
     if (!cards.length) return ui.notifications.warn('CARDS.PassWarnNoTargets', { localize: true });
 
     // Construct the dialog HTML
-    const html = await renderTemplate('templates/cards/dialog-pass.html', {
-      cards: cards,
-      modes: {
-        [CONST.CARD_DRAW_MODES.TOP]: 'CARDS.DrawModeTop',
-        [CONST.CARD_DRAW_MODES.BOTTOM]: 'CARDS.DrawModeBottom',
-        [CONST.CARD_DRAW_MODES.RANDOM]: 'CARDS.DrawModeRandom',
-      },
-    });
+    const html = await foundry.applications.handlebars.renderTemplate(
+      'templates/cards/dialog-pass.html',
+      {
+        cards: cards,
+        modes: {
+          [CONST.CARD_DRAW_MODES.TOP]: 'CARDS.DrawModeTop',
+          [CONST.CARD_DRAW_MODES.BOTTOM]: 'CARDS.DrawModeBottom',
+          [CONST.CARD_DRAW_MODES.RANDOM]: 'CARDS.DrawModeRandom',
+        },
+      }
+    );
 
     // Display the prompt
     return Dialog.prompt({

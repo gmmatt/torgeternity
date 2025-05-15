@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityPlayerHand extends CardsHand {
+export default class torgeternityPlayerHand extends Cards {
   /**
    *
    */
@@ -245,9 +245,12 @@ export default class torgeternityPlayerHand extends CardsHand {
       });
 
     // Construct the dialog HTML
-    const html = await renderTemplate('systems/torgeternity/templates/cards/playerPassDialog.hbs', {
-      cards: cards,
-    });
+    const html = await foundry.applications.handlebars.renderTemplate(
+      'systems/torgeternity/templates/cards/playerPassDialog.hbs',
+      {
+        cards: cards,
+      }
+    );
 
     // Display the prompt
     return Dialog.prompt({
@@ -283,7 +286,7 @@ export default class torgeternityPlayerHand extends CardsHand {
   async drawCosmDialog() {
     const data = {};
     data.decks = game.settings.get('torgeternity', 'deckSetting');
-    const html = await renderTemplate(
+    const html = await foundry.applications.handlebars.renderTemplate(
       'systems/torgeternity/templates/cards/drawCosmDialog.hbs',
       data
     );

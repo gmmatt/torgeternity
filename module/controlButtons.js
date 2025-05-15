@@ -8,7 +8,10 @@ export default function initTorgControlButtons() {
   /**
    *
    */
-  CONFIG.Canvas.layers.torgeternity = { layerClass: ControlsLayer, group: 'primary' };
+  CONFIG.Canvas.layers.torgeternity = {
+    layerClass: foundry.canvas.layers.ControlsLayer,
+    group: 'primary',
+  };
 
   Hooks.on('getSceneControlButtons', (btns) => {
     const menu = [
@@ -59,12 +62,21 @@ export default function initTorgControlButtons() {
       );
     }
 
+    btns['TORG'] = {
+      // TODO: Look at the properties, this doesn't work anymore anyhow!
+      name: 'TORG',
+      title: 'TORG',
+      icon: 'torg',
+      layer: 'torgeternity',
+      tools: menu,
+    };
+    /*
     btns.push({
       name: 'TORG',
       title: 'TORG',
       icon: 'torg',
       layer: 'torgeternity',
       tools: menu,
-    });
+    });*/
   });
 }

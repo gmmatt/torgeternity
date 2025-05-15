@@ -640,7 +640,7 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
           actorName: this.actor.name,
         };
 
-        const templatePromise = renderTemplate(
+        const templatePromise = foundry.applications.handlebars.renderTemplate(
           './systems/torgeternity/templates/partials/skill-error-card.hbs',
           templateData
         );
@@ -1334,7 +1334,7 @@ export function checkUnskilled(skillValue, skillName, actor) {
       actorName: actor.name,
     };
 
-    const templatePromise = renderTemplate(
+    const templatePromise = foundry.applications.handlebars.renderTemplate(
       './systems/torgeternity/templates/partials/skill-error-card.hbs',
       templateData
     );

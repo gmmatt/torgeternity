@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityCardConfig extends CardConfig {
+export default class torgeternityCardConfig extends foundry.applications.sheets.CardConfig {
   /** @inheritdoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
