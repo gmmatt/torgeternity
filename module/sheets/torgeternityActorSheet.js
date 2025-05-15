@@ -9,7 +9,7 @@ import { ChatMessageTorg } from '../documents/chat/document.js';
 /**
  *
  */
-export default class TorgeternityActorSheet extends ActorSheet {
+export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSheet {
   /**
    *
    * @param {...any} args

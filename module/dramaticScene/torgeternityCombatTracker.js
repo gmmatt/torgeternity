@@ -1,7 +1,8 @@
 /**
  *
  */
-export default class torgeternityCombatTracker extends CombatTracker {
+export default class torgeternityCombatTracker extends foundry.applications.sidebar.tabs
+  .CombatTracker {
   /**
    *
    */

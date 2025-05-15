@@ -227,7 +227,7 @@
       FilePicker.format = (val) => val;
     });
 
-    class DirPicker extends FilePicker {
+    class DirPicker extends foundry.applications.apps.FilePicker.implementation {
       constructor(options) {
         super(options);
 
@@ -324,7 +324,7 @@
     });
   }
 
-  class ExtendedSettingsConfig extends SettingsConfig {
+  class ExtendedSettingsConfig extends foundry.applications.settings.SettingsConfig {
     static get settingsExtenderVersion() {
       return SETTINGS_EXTENDER_VERSION;
     }

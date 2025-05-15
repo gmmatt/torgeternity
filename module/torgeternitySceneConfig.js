@@ -3,7 +3,7 @@ import { torgeternity } from './config.js';
 /**
  *
  */
-export default class torgeternitySceneConfig extends SceneConfig {
+export default class torgeternitySceneConfig extends foundry.applications.sheets.SceneConfig {
   getData(options = {}) {
     const context = super.getData(options);
 

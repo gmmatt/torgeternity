@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class TorgeternityNav extends SceneNavigation {
+export default class TorgeternityNav extends foundry.applications.ui.SceneNavigation {
   /**
    *
    */

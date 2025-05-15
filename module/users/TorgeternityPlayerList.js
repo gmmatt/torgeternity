@@ -3,7 +3,7 @@ import PartySheetActive from './partySheetActive.js';
 /**
  *
  */
-export default class TorgeternityPlayerList extends Players {
+export default class TorgeternityPlayerList extends foundry.applications.ui.Players {
   /**
    *
    */

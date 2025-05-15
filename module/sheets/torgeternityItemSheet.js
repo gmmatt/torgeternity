@@ -3,7 +3,7 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.
 /**
  *
  */
-export default class TorgeternityItemSheet extends ItemSheet {
+export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemSheet {
   /**
    *
    * @param {...any} args
