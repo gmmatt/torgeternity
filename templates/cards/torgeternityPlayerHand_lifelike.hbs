@@ -2,7 +2,7 @@
 	<span class="handdesign">
 		{{localize 'torgeternity.dialogPrompts.lifelike'}}
 		<input name="flags.torgeternity.lifelike" class="toggle" type="checkbox" id="lifelike" {{checked
-			data.flags.torgeternity.lifelike}}>
+			this.flags.torgeternity.lifelike}}>
 
 	</span>
 	<div class="flexrow">
@@ -63,7 +63,7 @@
 						<h5 class="verticalRot">
 							{{localize "torgeternity.dialogPrompts.cardPooled"}}
 						</h5>
-						<input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle"
+						<input name="this.flags.torgeternity.pooled" class="toggle" data-action="poolToggle"
 							type="checkbox" id="pooled" {{checked card.flags.torgeternity.pooled}}>
 					</span>
 				</div>

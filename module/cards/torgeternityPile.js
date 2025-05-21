@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityPile extends Cards {
+export default class torgeternityPile extends CardsConfig {
   /**
    *
    * @returns {object} The default options for the torgeternityPile class.

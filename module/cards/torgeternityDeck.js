@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityDeck extends Cards {
+export default class torgeternityDeck extends CardsConfig {
   /**
    *
    * @returns {object} The default options for the torgeternityDeck class.
