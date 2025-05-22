@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityDeck extends CardsConfig {
+export default class torgeternityDeck extends foundry.applications.sheets.CardDeckConfig {
   /**
    *
    * @returns {object} The default options for the torgeternityDeck class.

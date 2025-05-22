@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityPlayerHand extends CardsConfig {
+export default class torgeternityPlayerHand extends foundry.applications.sheets.CardDeckConfig {
   /** @inheritDoc */
   static DEFAULT_OPTIONS = {
     actions: {
