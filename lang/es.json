@@ -233,7 +233,8 @@
         "content": "<p>¿Necesitas ayuda? ¿Quieres informar de un error? Aquí tienes algunos enlaces que te pueden servir.</p>",
         "publisher": "<p>Editor</p>",
         "reference": "<p>Referencia</p>",
-        "title": "Enlaces"
+        "title": "Enlaces",
+        "name": "Enlaces externos"
       },
       "hideForeignCompendium": {
         "content": "Oculta los compendios oficiales que no están en su idioma.",

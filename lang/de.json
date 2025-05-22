@@ -233,7 +233,8 @@
         "content": "<p>Du brauchst Hilfe? Möchtest einen Fehler melden? Hier sind ein paar nützliche Links</p>",
         "publisher": "<p>Herausgeber</p>",
         "reference": "<p>Referenz</p>",
-        "title": "Links"
+        "title": "Links",
+        "name": "Externe Links"
       },
       "hideForeignCompendium": {
         "content": "Dieses System umfasst sowohl englisch- als auch deutschsprachige Kompendien. Möchtest du fremdsprachige Kompendien ausblenden?",

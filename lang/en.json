@@ -233,7 +233,8 @@
         "content": "<p>Need help? Want to report a bug? Here are a few usefull links.</p>",
         "publisher": "<p>Publisher</p>",
         "reference": "<p>Reference</p>",
-        "title": "Links"
+        "title": "Links",
+        "name": "External links"
       },
       "hideForeignCompendium": {
         "content": "This system includes both English and German language compendiums. Do you want to hide foreign language compendiums?",

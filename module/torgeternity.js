@@ -317,7 +317,7 @@ Hooks.on('ready', async function () {
 
   // -------define a dialog for external links
 
-  const dialData = {
+  /* const dialData = {
     title: game.i18n.localize('torgeternity.dialogWindow.externalLinks.title'),
     content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
     buttons: {
@@ -390,7 +390,7 @@ Hooks.on('ready', async function () {
   logo.title = 'external links';
   logo.addEventListener('click', function () {
     externalLinks.render(true);
-  });
+  });*/
 
   /*
   //-----applying players card ui:

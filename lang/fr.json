@@ -233,7 +233,8 @@
         "content": "<p>Besoin d'aide ? Vous voulez signaler un bug ? Voici quelques liens utiles.</p>",
         "publisher": "<p>Éditeur</p>",
         "reference": "<p>Références (site en anglais)</p>",
-        "title": "Liens"
+        "title": "Liens",
+        "name": "Liens externes"
       },
       "hideForeignCompendium": {
         "content": "Ce système comprend des compendiums en anglais et en allemand. Voulez-vous masquer les compendiums en langue étrangère ? ",
