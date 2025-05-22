@@ -160,29 +160,40 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
       'vehicleAddOn',
     ]) {
       for (const item of data[type]) {
-        item.description = await TextEditor.enrichHTML(item.system.description, {
-          async: true,
-        });
+        item.description = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+          item.system.description,
+          {
+            async: true,
+          }
+        );
       }
     }
 
     // Enrich Text Editors
     switch (this.object.type) {
       case 'stormknight':
-        data.enrichedBackground = await TextEditor.enrichHTML(
-          this.object.system.details.background,
-          { async: true }
-        );
+        data.enrichedBackground =
+          await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+            this.object.system.details.background,
+            { async: true }
+          );
         break;
       case 'threat':
-        data.enrichedDetails = await TextEditor.enrichHTML(this.object.system.details.description, {
-          async: true,
-        });
+        data.enrichedDetails = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+          this.object.system.details.description,
+          {
+            async: true,
+          }
+        );
         break;
       case 'vehicle':
-        data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
-          async: true,
-        });
+        data.enrichedDescription =
+          await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+            this.object.system.description,
+            {
+              async: true,
+            }
+          );
     }
 
     /* if (this.actor.system.editstate === undefined) {
@@ -481,7 +492,7 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
       await super._onDrop(event);
       return;
     }
-    const data = TextEditor.getDragEventData(event);
+    const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
     if (dropedObject instanceof TorgeternityItem && dropedObject.type === 'race') {
       const raceItem = this.actor.items.find((i) => i.type === 'race');

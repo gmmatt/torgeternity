@@ -1123,7 +1123,7 @@ Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
           title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
             a: actor.name,
           }),
-          content: await TextEditor.enrichHTML(description),
+          content: await foundry.applications.ux.TextEditor.implementation.enrichHTML(description),
           buttons: {
             ok: {
               label: game.i18n.localize('torgeternity.dialogWindow.buttons.ok'),

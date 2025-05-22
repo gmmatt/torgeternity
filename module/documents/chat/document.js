@@ -36,7 +36,9 @@ class ChatMessageTorg extends ChatMessage {
         template,
         templateData
       );
-      const enrichedHTML = await TextEditor.enrichHTML(renderedTemplate);
+      const enrichedHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+        renderedTemplate
+      );
       html.querySelector('.message-content').innerHTML = enrichedHTML;
     }
     return $html;

@@ -106,7 +106,7 @@ export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemShee
 
   /** @inheritdoc */
   async _onDrop(event) {
-    const data = TextEditor.getDragEventData(event);
+    const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
 
     if (dropedObject.type === 'perk' && this.item.type === 'race')
@@ -255,10 +255,16 @@ export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemShee
 
     data.config = CONFIG.torgeternity;
 
-    data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true });
-    data.prerequisites = await TextEditor.enrichHTML(this.object.system.prerequisites, {
-      async: true,
-    });
+    data.description = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.description,
+      { async: true }
+    );
+    data.prerequisites = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.prerequisites,
+      {
+        async: true,
+      }
+    );
 
     data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
 
