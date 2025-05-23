@@ -953,8 +953,10 @@ export async function renderSkillChat(test) {
     const messageDataIterated = {
       ...chatData,
       flags: {
-        torgeternity: { test, currentTarget },
-        template: './systems/torgeternity/templates/partials/skill-card.hbs',
+        torgeternity: {
+          test, currentTarget,
+          template: './systems/torgeternity/templates/partials/skill-card.hbs'
+        },
       },
     };
 
