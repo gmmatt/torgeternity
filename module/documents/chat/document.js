@@ -10,9 +10,11 @@ class ChatMessageTorg extends ChatMessage {
   async getHTML() {
     const $html = await super.getHTML();
     const html = $html[0];
-    if (this.flags?.template && (this.flags?.data || this.flags?.torgeternity?.test)) {
-      const template = this.flags.template;
-      const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
+    const gotTemplate = this.getFlag('torgeternity', 'template');
+    const gotData = this.getFlag('torgeternity', 'test');
+    if (gotTemplate && (this.flags?.data || gotData)) {
+      const template = gotTemplate;
+      const templateData = gotData ?? this.flags.data;
 
       if (
         templateData.system?.dnType?.length &&
@@ -32,6 +34,7 @@ class ChatMessageTorg extends ChatMessage {
           `torgeternity.skills.${templateData.system?.skill}`
         );
 
+      //fixed parameters
       const renderedTemplate = await foundry.applications.handlebars.renderTemplate(
         template,
         templateData

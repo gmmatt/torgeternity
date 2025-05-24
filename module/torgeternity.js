@@ -1148,7 +1148,7 @@ Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
 });
 
 Hooks.on('preCreateChatMessage', async (...args) => {
-  const htmlcontent = await foundry.applications.handlebars.renderTemplate(args[0].getFlag('torgeternity', 'template'), args[0].getFlag('torgeternity', 'test'));
-  await args[0].updateSource({ content: htmlcontent });
+  //const htmlcontent = await foundry.applications.handlebars.renderTemplate(args[0].getFlag('torgeternity', 'template'), args[0].getFlag('torgeternity', 'test'));
+  //await args[0].updateSource({ content: htmlcontent });
 }
 );
