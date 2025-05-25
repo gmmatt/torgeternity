@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityPile extends foundry.applications.sheets.CardDeckConfig {
+export default class torgeternityPile extends foundry.applications.sheets.CardPileConfig {
   /**
    *
    * @returns {object} The default options for the torgeternityPile class.
