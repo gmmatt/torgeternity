@@ -1105,6 +1105,7 @@ nav#controls ol .torgHand:before {
   margin: 0 0 5px;
   /*border-bottom: 1px solid #2c6d6d;
   box-shadow: 0 0 10px #227878;*/
+  padding: 5px;
 }
 
 #sidebar #sidebar-tabs > .item.active {
@@ -1126,9 +1127,9 @@ nav#controls ol .torgHand:before {
   color: black;
 }
 
-#hotbar {
+/*#hotbar {
   width: 630px;
-}
+}*/
 
 #hotbar .bar-controls {
   flex: 0 0 55px;
