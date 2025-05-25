@@ -144,6 +144,7 @@ li.card.pooled {
 .areaTitles {
   text-align: center;
   border-bottom: 3px solid #2c7dc3;
+  margin-top: 0;
 }
 
 #handedCards + .sheet-footer {
