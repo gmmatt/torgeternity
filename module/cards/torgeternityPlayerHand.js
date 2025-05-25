@@ -1,9 +1,9 @@
 /**
  *
  */
-export default class torgeternityPlayerHand extends foundry.applications.sheets.CardDeckConfig {
+export default class torgeternityPlayerHand extends foundry.applications.sheets.CardHandConfig {
   /** @inheritDoc */
-  static DEFAULT_OPTIONS = {
+  DEFAULT_OPTIONS = {
     actions: {
       drawDestiny: torgeternityPlayerHand.#onDrawDialogDestiny,
       drawCosm: torgeternityPlayerHand.#onDrawDialogCosm,
@@ -39,7 +39,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   }*/
 
   // do not work correctly, always take the false, I believe flag is not correctly saved ?
-  static PARTS = {
+  PARTS = {
     cards: {
       template: this.document?.getFlag('torgeternity', 'lifelike')
         ? 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs'
@@ -84,11 +84,8 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     const destinyDeck = game.cards.get(
       game.settings.get('torgeternity', 'deckSetting').destinyDeck
     );
-    console.log(destinyDeck);
     if (destinyDeck.availableCards.length) {
-      // const [firstCardKey] = destinyDeck.availableCards[0]; // need to grab a card to get toMessage access
       const card = destinyDeck.availableCards[0]; // .get(firstCardKey);
-      console.log(card);
       card.toMessage({
         content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
           destinyDeck.img
@@ -100,8 +97,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       });
     }
     await this.document.draw(destinyDeck, 1, { face: 1 });
-    // await this.submit({ operation: { render: false } });
-    // await this.document.drawDialog();
   }
 
   /**
@@ -187,8 +182,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    */
   async _prepareContext(options) {
     const data = await super._prepareContext(options);
-    console.log(data);
-
     for (const card of data?.document.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
     }
@@ -202,7 +195,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    * @param options
    */
   async _onRender(context, options) {
-    console.log(this.document?.getFlag('torgeternity', 'lifelike'));
     const html = this.element.querySelector('.window-content');
     if (this.document.getFlag('torgeternity', 'lifelike')) {
       this.rotateCards(html);
@@ -348,9 +340,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   rotateCards(html) {
     const cardsAreas = $(html).find('.cards');
     const area1 = cardsAreas[0];
-    console.log(area1);
     const area2 = cardsAreas[1];
-    console.log(area2);
     // for (const area of cardsAreas) {
     for (let i = 0; i < area1.children.length; i++) {
       const card1 = area1.children[i];
@@ -360,7 +350,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
 
     for (let i = 0; i < area2.children.length; i++) {
       const card2 = area2.children[i];
-      console.log(card2);
       card2.style.transform = `rotateZ(${-(area2.children.length - i - 1) * 5}deg) translateX(${
         -(area2.children.length - i - 1) * 20
       }px)`;

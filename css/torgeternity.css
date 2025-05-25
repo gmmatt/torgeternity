@@ -842,6 +842,10 @@ a:hover,
   cursor: pointer;
 }
 
+span > i > .fa-add:hover, .fa-plus:hover {
+cursor: pointer;
+}
+
 .app,
 .window-app {
   border-radius: 5px;
