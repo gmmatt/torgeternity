@@ -5,11 +5,9 @@ import { torgeternity } from '../../config.js';
  * renders the chatMessage from data every time the HTML is rendered
  */
 class ChatMessageTorg extends ChatMessage {
-  template = '';
-
-  async getHTML() {
-    const $html = await super.getHTML();
-    const html = $html[0];
+  async renderHTML() {
+    // const $html = await super.renderHTML();
+    const html = await super.renderHTML();
     const gotTemplate = this.getFlag('torgeternity', 'template');
     const gotData = this.getFlag('torgeternity', 'test');
     if (gotTemplate && (this.flags?.data || gotData)) {
@@ -34,7 +32,7 @@ class ChatMessageTorg extends ChatMessage {
           `torgeternity.skills.${templateData.system?.skill}`
         );
 
-      //fixed parameters
+      // fixed parameters
       const renderedTemplate = await foundry.applications.handlebars.renderTemplate(
         template,
         templateData
@@ -44,7 +42,7 @@ class ChatMessageTorg extends ChatMessage {
       );
       html.querySelector('.message-content').innerHTML = enrichedHTML;
     }
-    return $html;
+    return html;
   }
 }
 

@@ -954,8 +954,9 @@ export async function renderSkillChat(test) {
       ...chatData,
       flags: {
         torgeternity: {
-          test, currentTarget,
-          template: './systems/torgeternity/templates/partials/skill-card.hbs'
+          test,
+          currentTarget,
+          template: './systems/torgeternity/templates/partials/skill-card.hbs',
         },
       },
     };
