@@ -55,7 +55,7 @@
         {{numberInput data.face name="face" min=0 step=1}}
         <button
           type="button"
-          class="face-control"
+          class="torgeternity face-control"
           data-tooltip="{{localize 'CARD.FaceAdd'}}"
           data-action="addFace"
         >
@@ -71,7 +71,7 @@
           <input type="text" name="faces.{{i}}.name" value="{{face.name}}" />
           <button
             type="button"
-            class="face-control"
+            class="torgeternity face-control"
             data-tooltip="{{localize 'CARD.FaceDelete'}}"
             data-action="deleteFace"
           >
@@ -125,7 +125,7 @@
   <!-- Sheet Footer -->
   <footer class="sheet-footer flexrow">
     {{#if owner}}
-    <button class="submit" type="submit">
+    <button class="torgeternity submit" type="submit">
       <i class="fas fa-save"></i>
       {{localize "CARD.Save"}}
     </button>

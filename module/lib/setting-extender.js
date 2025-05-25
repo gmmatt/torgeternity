@@ -214,7 +214,7 @@
         const target = $input.attr('name');
         const type = $input.data('dtype').substring(base.length).toLowerCase();
         const $filePickerButton = $(
-          `<button type=button class=file-picker data-tooltip="Browse Files" tabindex=-1>` +
+          `<button class="torgeternity" type=button class=file-picker data-tooltip="Browse Files" tabindex=-1>` +
             `<i class="fas fa-file-import fa-fw"></i></button>`
         );
         $filePickerButton.attr('data-type', type);
@@ -240,7 +240,7 @@
         $html.find('.dir').each((idx, li) => {
           const $li = $(li);
           $li.css('padding-left', 0);
-          const $selectButton = $('<button type=button>Select</button>');
+          const $selectButton = $('<button class="torgeternity" type=button>Select</button>');
           $selectButton.css('width', 'auto');
           $selectButton.css('margin-left', '0');
           this._addOnClick($selectButton, $li.data('path'));
@@ -249,7 +249,9 @@
 
         $html.find('.note').text('No subdirectories.');
 
-        const $selectCurrent = $('<button type=button>Select current directory</button>');
+        const $selectCurrent = $(
+          '<button class="torgeternity" type=button>Select current directory</button>'
+        );
         this._addOnClick($selectCurrent, $html.find('[name=target]').val());
         $html.append($selectCurrent);
       }

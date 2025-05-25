@@ -115,7 +115,7 @@
       <label>{{localize "SCENES.InitialView"}}</label>
       <div class="form-fields torgeternityFormFields">
         <button
-          class="capture-position"
+          class="torgeternity capture-position"
           type="button"
           data-tooltip="{{ localize 'SCENES.InitialViewButton' }}"
         >
@@ -145,7 +145,7 @@
       <div class="form-fields torgeternityFormFields">
         <button
           type="button"
-          class="grid-config"
+          class="torgeternity grid-config"
           data-tooltip="{{ localize 'SCENES.GridConfigTool' }}"
         >
           <i class="fas fa-ruler-combined"></i>
@@ -178,7 +178,7 @@
         {{numberInput data.width name="width"}}
         <button
           type="button"
-          class="dimension-link"
+          class="torgeternity dimension-link"
           data-tooltip="{{ localize 'SCENES.DimensionLinked' }}"
         >
           <i class="fas fa-link-simple"></i>
@@ -374,11 +374,11 @@
 
   <!-- Form Submission -->
   <footer class="sheet-footer">
-    <button type="reset" class="{{#unless isEnvironment}}hidden{{/unless}}">
+    <button type="reset" class="torgeternity {{#unless isEnvironment}}hidden{{/unless}}">
       <i class="fas fa-undo"></i>
       {{ localize 'SCENES.ENVIRONMENT.ResetEnvironment' }}
     </button>
-    <button type="submit">
+    <button class="torgeternity" type="submit">
       <i class="far fa-save"></i>
       {{ localize 'SETTINGS.Save' }}
     </button>

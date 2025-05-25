@@ -827,9 +827,9 @@ textarea {
   font-size: 13px;
 }
 
-button {
+.torgeternity button {
   font-family: "Palatino Linotype";
-}
+}*/
 
 button:hover,
 button:focus {
@@ -1670,12 +1670,12 @@ german tent cards images
   color: #f6f6f6;
 }
 
-#players::after {
+/*#players::after {
   background: url(../images/separatorRound.webp);
   width: 230px;
   height: 35px;
   content: "";
-}
+}*/
 
 #player-config label {
   color: lightblue;
