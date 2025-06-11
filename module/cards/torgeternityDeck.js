@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgeternityDeck extends CardsPile {
+export default class torgeternityDeck extends foundry.documents.Cards {  // type="deck"
   /**
    *
    * @returns {object} The default options for the torgeternityDeck class.
@@ -10,6 +10,7 @@ export default class torgeternityDeck extends CardsPile {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['torgeternity', 'sheet', 'cardsDeck'],
       width: 600,
+      type: "deck"
     });
   }
 
@@ -51,11 +52,9 @@ export default class torgeternityDeck extends CardsPile {
         card.setFlag('torgeternity', 'pooled', false);
         card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
         card.toMessage({
-          content: `<div class="card-draw flexrow"><img class="card-face" src="${
-            card.img
-          }"/><h4 class="card-name">${game.i18n.localize('torgeternity.chatText.playsCard')} ${
-            card.data.name
-          }</h4>
+          content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img
+            }"/><h4 class="card-name">${game.i18n.localize('torgeternity.chatText.playsCard')} ${card.data.name
+            }</h4>
             </div>`,
           rollMode: game.user.isGM ? 'selfroll' : game.settings.get('core', 'rollMode'),
         });
@@ -74,11 +73,9 @@ export default class torgeternityDeck extends CardsPile {
         card.setFlag('torgeternity', 'pooled', false);
         card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
         card.toMessage({
-          content: `<div class="card-draw flexrow"><img class="card-face" src="${
-            card.img
-          }"/><h4 class="card-name">${game.i18n.localize('torgeternity.chatText.discardsCard')} ${
-            card.data.name
-          }</h4></div>`,
+          content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img
+            }"/><h4 class="card-name">${game.i18n.localize('torgeternity.chatText.discardsCard')} ${card.data.name
+            }</h4></div>`,
           rollMode: game.user.isGM ? 'selfroll' : game.settings.get('core', 'rollMode'),
         });
         return;
@@ -90,13 +87,11 @@ export default class torgeternityDeck extends CardsPile {
           const [firstCardKey] = destinyDeck.data.cards.keys(); // need to grab a card to get toMessage access
           const card = destinyDeck.data.cards.get(firstCardKey);
           card.toMessage({
-            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
-              destinyDeck.data.img
-            }"/><span><img src="${
-              destinyDeck.data.img
-            }"></span></span><h4 class="card-name">${game.i18n.localize(
-              'torgeternity.chatText.drawsCard'
-            )} ${destinyDeck.data.name}.</h4></div>`,
+            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.data.img
+              }"/><span><img src="${destinyDeck.data.img
+              }"></span></span><h4 class="card-name">${game.i18n.localize(
+                'torgeternity.chatText.drawsCard'
+              )} ${destinyDeck.data.name}.</h4></div>`,
             rollMode: game.user.isGM ? 'selfroll' : game.settings.get('core', 'rollMode'),
           });
         }
@@ -144,7 +139,7 @@ export default class torgeternityDeck extends CardsPile {
     if (!cards.length) return ui.notifications.warn('CARDS.PassWarnNoTargets', { localize: true });
 
     // Construct the dialog HTML
-    const html = await renderTemplate('templates/cards/dialog-pass.html', {
+    const html = await foundry.applications.handlebars.renderTemplate('templates/cards/dialog-pass.html', {
       cards: cards,
       modes: {
         [CONST.CARD_DRAW_MODES.TOP]: 'CARDS.DrawModeTop',

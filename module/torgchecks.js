@@ -14,7 +14,7 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try {
     game.dice3d.messageHookDisabled = true;
-  } catch (e) {}
+  } catch (e) { }
 
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
@@ -963,8 +963,11 @@ export async function renderSkillChat(test) {
     const messageDataIterated = {
       ...chatData,
       flags: {
-        torgeternity: { test, currentTarget },
-        template: './systems/torgeternity/templates/partials/skill-card.hbs',
+        torgeternity: {
+          test,
+          currentTarget,
+          template: 'systems/torgeternity/templates/partials/skill-card.hbs',
+        },
       },
     };
 
@@ -972,23 +975,23 @@ export async function renderSkillChat(test) {
     if (i === 0) {
       try {
         await game.dice3d.showForRoll(test.diceroll, game.user, true);
-      } catch (e) {}
+      } catch (e) { }
     }
     try {
       game.dice3d.showForRoll(iteratedRoll);
       iteratedRoll = undefined;
-    } catch (e) {}
+    } catch (e) { }
 
     messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
 
   if (game.settings.get('torgeternity', 'unTarget')) {
-    await game.user.updateTokenTargets();
+    if (game.canvas) await game.user._onUpdateTokenTargets();
     await game.user.broadcastActivity({ targets: [] });
   }
   try {
     game.dice3d.messageHookDisabled = false;
-  } catch (e) {}
+  } catch (e) { }
 
   return messages;
 }

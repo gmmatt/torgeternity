@@ -226,7 +226,9 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE[this.type],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE[this.type],
+        }
       },
     };
 
@@ -247,12 +249,12 @@ export default class TorgeternityItem extends Item {
       diceroll === 1
         ? -10
         : diceroll <= 8
-        ? Math.ceil(diceroll / 2 - 5) * 2
-        : diceroll <= 14
-        ? Math.ceil(diceroll / 2 - 6)
-        : diceroll <= 20
-        ? diceroll - 13
-        : 7 + Math.ceil((diceroll - 20) / 5);
+          ? Math.ceil(diceroll / 2 - 5) * 2
+          : diceroll <= 14
+            ? Math.ceil(diceroll / 2 - 6)
+            : diceroll <= 20
+              ? diceroll - 13
+              : 7 + Math.ceil((diceroll - 20) / 5);
 
     const messageContent =
       diceroll > 4
@@ -287,7 +289,9 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE['attack'],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE['attack'],
+        }
       },
     };
 
@@ -326,12 +330,12 @@ export default class TorgeternityItem extends Item {
       diceroll === 1
         ? -10
         : diceroll <= 8
-        ? Math.ceil(diceroll / 2 - 5) * 2
-        : diceroll <= 14
-        ? Math.ceil(diceroll / 2 - 6)
-        : diceroll <= 20
-        ? diceroll - 13
-        : 7 + Math.ceil((diceroll - 20) / 5);
+          ? Math.ceil(diceroll / 2 - 5) * 2
+          : diceroll <= 14
+            ? Math.ceil(diceroll / 2 - 6)
+            : diceroll <= 20
+              ? diceroll - 13
+              : 7 + Math.ceil((diceroll - 20) / 5);
 
     const messageContent =
       diceroll > 4
@@ -361,7 +365,9 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE['power'],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE['power'],
+        }
       },
     };
 

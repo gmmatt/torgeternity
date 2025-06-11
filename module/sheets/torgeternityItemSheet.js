@@ -3,7 +3,7 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.
 /**
  *
  */
-export default class TorgeternityItemSheet extends ItemSheet {
+export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemSheet {
   /**
    *
    * @param {...any} args
@@ -106,7 +106,7 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
   /** @inheritdoc */
   async _onDrop(event) {
-    const data = TextEditor.getDragEventData(event);
+    const data = foundry.applications.ux.TextEditor.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
 
     if (dropedObject.type === 'perk' && this.item.type === 'race')
@@ -255,8 +255,8 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
     data.config = CONFIG.torgeternity;
 
-    data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true });
-    data.prerequisites = await TextEditor.enrichHTML(this.object.system.prerequisites, {
+    data.description = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.description, { async: true });
+    data.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.prerequisites, {
       async: true,
     });
 
@@ -264,7 +264,7 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
     data.displaySecondaryAxiomValue =
       !this.document.system?.secondaryAxiom ||
-      this.document.system?.secondaryAxiom.selected === 'none'
+        this.document.system?.secondaryAxiom.selected === 'none'
         ? false
         : true;
 

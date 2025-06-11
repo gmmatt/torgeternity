@@ -32,10 +32,12 @@
 
 /*Defining colors as variables, using it in an animation-keyframe*/
 :root {
-  --table2nd: #f6e9d7; /*standard-backgroundcolor for tables in every 2nd row, others are transparent*/
+  --table2nd: #f6e9d7;
+  /*standard-backgroundcolor for tables in every 2nd row, others are transparent*/
   --torgblue: rgb(65, 90, 155);
   --torgred: rgb(150, 0, 0);
-  --sidebar-width: 380px; /*formally this was defined in #sidebar{width:380px}, but we need to alter the foundry style.css variable to affect on things like the new "to bottom" Button*/
+  --sidebar-width: 380px;
+  /*formally this was defined in #sidebar{width:380px}, but we need to alter the foundry style.css variable to affect on things like the new "to bottom" Button*/
 }
 
 @keyframes colorchange {
@@ -149,22 +151,23 @@ div.actor ::-webkit-scrollbar {
 a.entity-link.broken,
 a.content-link.broken,
 a.inline-roll.broken {
-	 color: black !important;
-	 text-decoration: inherit;
-	 cursor: text;
-   background: none;
-   border: none;
-   padding:0;
+  color: black !important;
+  text-decoration: inherit;
+  cursor: text;
+  background: none;
+  border: none;
+  padding: 0;
   text-shadow: none;
 }
+
 a.entity-link.broken:hover,
 a.content-link.broken:hover,
 a.inline-roll.broken:hover {
-	 text-shadow: none;
+  text-shadow: none;
 }
 
 .fa-unlink:before {
-  display:none;
+  display: none;
 }
 
 /*                                      */
@@ -247,7 +250,7 @@ form.actor-sheet header.sheet-header-vehicle {
   align-items: baseline;
 }
 
-.window-content .actor-sheet header.vehicle-stats div > p {
+.window-content .actor-sheet header.vehicle-stats div>p {
   margin-right: 1rem;
 }
 
@@ -451,6 +454,16 @@ form.actor-sheet header.sheet-header-vehicle {
   /*color:white;*/
 }
 
+.window-app .window-content .threat-sheet input[type="text"],
+.window-app .window-content .threat-sheet input[type="number"],
+.window-app .window-content .threat-sheet input[type="password"],
+.window-app .window-content .threat-sheet input[type="date"],
+.window-app .window-content .threat-sheet input[type="time"] .editor {
+  background-color: rgba(255, 255, 255, 0.39);
+  color: black;
+}
+
+
 .window-app .window-content input::-moz-placeholder,
 .window-app .window-content input:-ms-input-placeholder,
 .window-app .window-content input::placeholder {
@@ -565,7 +578,7 @@ form.actor-sheet header.sheet-header-vehicle {
   font-size: 14px;
 }
 
-.prosemirror .editor-container .editor-content p + p {
+.prosemirror .editor-container .editor-content p+p {
   text-indent: 0.75rem;
 }
 
@@ -697,6 +710,7 @@ form.actor-sheet header.sheet-header-vehicle {
     background-size: cover;
     */
 }
+
 .prosemirror.menu-dialog form {
   background-color: var(--torgblue);
   background-image: url(../images/lightning_bar.webp);
@@ -708,7 +722,7 @@ form.actor-sheet header.sheet-header-vehicle {
   background-color: rgba(0, 0, 0, 0.68);
 }
 
-form .form-group .form-fields.torgeternityFormFields > * {
+form .form-group .form-fields.torgeternityFormFields>* {
   background-color: rgba(128, 128, 128, 0.301);
   color: white;
 }
@@ -827,7 +841,7 @@ textarea {
   font-size: 13px;
 }
 
-button {
+footer button {
   font-family: "Palatino Linotype";
 }
 
@@ -983,7 +997,7 @@ form input {
   opacity: 0.7;
 }
 
-i.torg {
+button[data-control="TORG"] {
   width: 56px;
   height: 30px;
   background-image: url(../images/te-logo.webp);
@@ -1107,7 +1121,7 @@ nav#controls ol .torgHand:before {
   box-shadow: 0 0 10px #227878;
 }
 
-#sidebar #sidebar-tabs > .item.active {
+#sidebar #sidebar-tabs>.item.active {
   color: #fff;
   border: 1px solid #154949;
   border-bottom: none;
@@ -1753,13 +1767,13 @@ nav#controls,
   margin: 0 5px;
 }
 
-#combat-round .encounters.flexrow > * {
+#combat-round .encounters.flexrow>* {
   flex: unset;
 }
 
-#combat-round .encounters.flexrow > h3 {
+#combat-round .encounters.flexrow>h3 {
   border-bottom: none;
-  margin:unset;
+  margin: unset;
 }
 
 #combat ol li.combatant.active {
@@ -2016,10 +2030,10 @@ p.skill-chat-title.skilled {
 
 .dice-roll-torg {
   display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 .chat-message .skill-roll-damage-label {
@@ -2064,23 +2078,23 @@ p.skill-chat-title.skilled {
 }
 
 .chat-message .generalHeader {
-  border:none;
-  background-color:transparent;
-  display:flex;
-  flex-direction: row;  
-  align-items: center;  
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
 .chat-message .generalHeader img {
-  width:50px;
-  height:50px;
-  border:none;
+  width: 50px;
+  height: 50px;
+  border: none;
   aspect-ratio: 1/1;
 }
 
-.chat-message .generalHeader span{
-  display: inline-block;  
+.chat-message .generalHeader span {
+  display: inline-block;
   font-size: large;
   flex: 1;
   text-align: center;
@@ -2306,11 +2320,11 @@ form.actor-sheet header input[name="name"] {
   background-size: contain;
 }
 
-.window-content .actor-sheet .sksheet.header.totalbox > * {
+.window-content .actor-sheet .sksheet.header.totalbox>* {
   position: relative;
 }
 
-.window-content .actor-sheet .sksheet.header.totalbox > h2 {
+.window-content .actor-sheet .sksheet.header.totalbox>h2 {
   margin: unset;
   margin-top: 0.5rem;
   font-size: 14px;
@@ -2680,7 +2694,7 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .sheet-header .raceSpan {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
@@ -2689,7 +2703,7 @@ form.actor-sheet header input[name="name"] {
   color: black;
   font-family: "Alaska";
   font-size: 13px;
-  line-height: 14px;  
+  line-height: 14px;
   grid-column: 1/3;
 }
 
@@ -2774,12 +2788,12 @@ form.actor-sheet header input[name="name"] {
   grid-template-rows: 2;
 }
 
-.window-content .actor-sheet .attributes.header h2{
+.window-content .actor-sheet .attributes.header h2 {
   grid-column: 2/3;
   grid-row: 1/2;
 }
 
-.window-content .actor-sheet .attributes.header h5{
+.window-content .actor-sheet .attributes.header h5 {
   grid-column: 1/4;
   grid-row: 2/3;
   margin: 0.25rem 0;
@@ -2787,14 +2801,14 @@ form.actor-sheet header input[name="name"] {
   color: var(--torgred);
 }
 
-.window-content .actor-sheet .attributes.header a{
+.window-content .actor-sheet .attributes.header a {
   grid-column: 3/4;
   grid-row: 1/2;
-  align-self: center; 
+  align-self: center;
   padding-left: 0.5rem;
 }
 
-.window-content .actor-sheet .attributes.header a > i{
+.window-content .actor-sheet .attributes.header a>i {
   justify-content: left;
   align-items: baseline;
 }
@@ -3373,7 +3387,7 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item-dropdown-extras,
-.item-sheet ol.race.perks-list > .item.block  > .item-detail > .item-dropdown-description .item-dropdown-extras {
+.item-sheet ol.race.perks-list>.item.block>.item-detail>.item-dropdown-description .item-dropdown-extras {
   font-style: italic;
   border: 1px solid grey;
   text-align: center;
@@ -3470,7 +3484,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-size: 0.9em;
 }
 
-.item-sheet > .sheet-header img {
+.item-sheet>.sheet-header img {
   border: none;
 }
 
@@ -3520,7 +3534,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .raceDescriptionHeadline {
   text-align: center;
   color: black;
-  border:none;
+  border: none;
   font-weight: bold;
 }
 
@@ -3534,20 +3548,20 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin-bottom: 1rem;
 }
 
-.item .window-content form.item-sheet .raceAttributes > h1 {
+.item .window-content form.item-sheet .raceAttributes>h1 {
   grid-row: 1/2;
   grid-column: 1/6;
   color: black;
-  border:none;
+  border: none;
   font-weight: bold;
 }
 
-.item .window-content form.item-sheet .raceAttributes > label {
+.item .window-content form.item-sheet .raceAttributes>label {
   grid-row: 2/3;
-  color:black;
+  color: black;
 }
 
-.item .window-content form.item-sheet .raceAttributes > input {
+.item .window-content form.item-sheet .raceAttributes>input {
   grid-row: 3/4;
   border: none;
   text-align: center;
@@ -3559,7 +3573,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   color: black;
 }
 
-.item .window-content form.item-sheet .raceAttributes + hr {
+.item .window-content form.item-sheet .raceAttributes+hr {
   background-image: url(../images/separator.webp);
   /* background-position-y: -8px; */
   background-repeat: no-repeat;
@@ -3579,46 +3593,45 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin: 15px;
   justify-content: center;
   align-items: center;
-  column-gap: 15px;  
+  column-gap: 15px;
 }
 
-.item .window-content form.item-sheet .raceSpecs > label {
+.item .window-content form.item-sheet .raceSpecs>label {
   font-family: Palatino;
   font-size: 2em;
   font-weight: bold;
 }
 
 .item .window-content form.item-sheet .raceHardcode {
-  min-height:200px;
+  min-height: 200px;
   margin-top: 10px;
 }
 
 .item .window-content form.item-sheet .asside {
   grid-row: 1/4;
   grid-column: 1/2;
-  text-align: center;   
+  text-align: center;
 }
 
 .item .window-content form.item-sheet .asside.armor {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: repeat(2,minmax(10px,1fr));  
+  grid-template-columns: repeat(2, minmax(10px, 1fr));
 }
 
-.item .window-content form.item-sheet .asside.armor > * {
-  margin:unset;
+.item .window-content form.item-sheet .asside.armor>* {
+  margin: unset;
 }
 
 .item .window-content form.item-sheet .asside .perks.generalContradiction {
-  display:flex; 
-  flex-direction:row; 
-  align-items:center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 7px 0;
 }
 
-.item .window-content form.item-sheet .asside input[type="number"]
- {
+.item .window-content form.item-sheet .asside input[type="number"] {
   border: none;
   text-align: center;
   width: 40px;
@@ -3650,7 +3663,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .editor {
   /*width: 400px;*/
   min-height: 400px;
-    border: 15px solid transparent;
+  border: 15px solid transparent;
   border-image: url('../images/frameWithoutFilling.svg') 30 / 2rem;
 }
 
@@ -3660,8 +3673,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding-left: 10px
 }
 
-.window-content .dialog-content .charInfoOutput > h3 {
-  border: none;  
+.window-content .dialog-content .charInfoOutput>h3 {
+  border: none;
 }
 
 .item .window-content form.item-sheet nav.tabs {
@@ -3735,8 +3748,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 5px 5px;
 }
 
-.item .window-content form.item-sheet .item-description-textarea[name="prerequisites"] > div {
-  min-height: 150px;  
+.item .window-content form.item-sheet .item-description-textarea[name="prerequisites"]>div {
+  min-height: 150px;
 }
 
 .item .window-content form.item-sheet .effects .item-list {
@@ -3816,18 +3829,18 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   overflow-y: scroll;
 }
 
-.item .window-content form fieldset.ammofield legend{
+.item .window-content form fieldset.ammofield legend {
   font-family: 'Alaska';
   font-size: 14px;
 }
 
-.item .window-content form fieldset.ammofield ul{
+.item .window-content form fieldset.ammofield ul {
   font: 13px 'Signika';
   list-style-type: none;
   padding: 0;
 }
 
-.item .window-content form fieldset.ammofield ul > li{
+.item .window-content form fieldset.ammofield ul>li {
   border-bottom: #000 thin solid;
   margin-bottom: 3px;
   display: grid;
@@ -3857,55 +3870,56 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-size: 13px;
 }
 
-.test-dialog{
+.test-dialog {
   display: flex;
   flex-direction: column;
   max-width: 530px;
   min-width: 530px;
 }
 
-.test-dialog > div {
+.test-dialog>div {
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
 }
 
-.test-dialog > div > fieldset {
+.test-dialog>div>fieldset {
   flex-grow: 1;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
- 
+
 }
-.test-dialog > div > fieldset > label {
+
+.test-dialog>div>fieldset>label {
   font-family: "Palatino";
 }
 
-.test-dialog > div > fieldset > span {
-  display:flex;
+.test-dialog>div>fieldset>span {
+  display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
   width: 100%;
 }
 
-.test-dialog > div > fieldset > span > input[type="checkbox"] ~ label[for] {
+.test-dialog>div>fieldset>span>input[type="checkbox"]~label[for] {
   align-self: center;
 }
 
-.test-dialog > div > fieldset > span > input[type="radio"] ~ label[for] {
+.test-dialog>div>fieldset>span>input[type="radio"]~label[for] {
   align-self: baseline;
 }
 
-.test-dialog > div > fieldset > span > input[type="number"] {
+.test-dialog>div>fieldset>span>input[type="number"] {
   width: 3em;
 }
 
-.test-dialog > div > fieldset > span > * {
+.test-dialog>div>fieldset>span>* {
   justify-content: left;
 }
 
-.test-dialog > div > fieldset > hr {
+.test-dialog>div>fieldset>hr {
   border: 1px solid var(--color-border-light-tertiary);
   width: 100%;
 }
@@ -3917,7 +3931,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   row-gap: 2px;
 }
 
-.test-dialog .otherModifiers > label{
+.test-dialog .otherModifiers>label {
   justify-self: center;
   font-family: 'Alaska';
 }
@@ -3996,7 +4010,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .pool-tooltip span img {
-  float: left;  
+  float: left;
 }
 
 .pool-tooltip:hover span {
@@ -4130,7 +4144,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding:unset;
+  padding: unset;
 }
 
 .item-sheet ol.race.perks-list li {
@@ -4149,45 +4163,43 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
   overflow: auto;
   padding: 0px 0px 5px 0px;
-  font-size:20px;
+  font-size: 20px;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-row.flexrow {
+.item-sheet ol.race.perks-list>.item.block>.item-row.flexrow {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   justify-content: space-evenly;
   align-items: center;
-  column-gap:1rem;
+  column-gap: 1rem;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-row.flexrow > img{
+.item-sheet ol.race.perks-list>.item.block>.item-row.flexrow>img {
   max-width: 60px;
   max-height: 60px;
-  border:none;
+  border: none;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-row.flexrow > .item-controls {
+.item-sheet ol.race.perks-list>.item.block>.item-row.flexrow>.item-controls {
   justify-self: end;
 }
 
 .item-sheet ol.race.perks-list .item.block .item-detail {
-  display:none;
-  max-height:300px;
+  display: none;
+  max-height: 300px;
 }
 
-.item-sheet ol.race.perks-list .item.block .item-detail > * {
+.item-sheet ol.race.perks-list .item.block .item-detail>* {
   overflow: auto;
   position: relative;
-  z-index: 1000;  
+  z-index: 1000;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-detail > .item-dropdown-description {
-  font-size:14px;
+.item-sheet ol.race.perks-list>.item.block>.item-detail>.item-dropdown-description {
+  font-size: 14px;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-detail > .item-dropdown-description .item-dropdown-extras{
-
-}
+.item-sheet ol.race.perks-list>.item.block>.item-detail>.item-dropdown-description .item-dropdown-extras {}
 
 .enhancement-check {
   flex: 10%;
@@ -4266,7 +4278,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-#gm-screen > div {
+#gm-screen>div {
   width: 33%;
   height: 100%;
   background-size: 300% 100%;
@@ -4274,7 +4286,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-#gm-screen > #left-panel {
+#gm-screen>#left-panel {
   position: absolute;
   left: 0%;
   top: 0%;
@@ -4282,7 +4294,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   transform-origin: 100% 0% 0;
 }
 
-#gm-screen > #center-panel {
+#gm-screen>#center-panel {
   position: absolute;
   left: 33%;
   top: 0%;
@@ -4291,7 +4303,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   z-index: -1;
 }
 
-#gm-screen > #right-panel {
+#gm-screen>#right-panel {
   position: absolute;
   left: 66%;
   top: 0%;
@@ -4304,11 +4316,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   top: 105%;
 }
 
-#gm-screen.hidden > #left-panel {
+#gm-screen.hidden>#left-panel {
   transform: rotateY(90deg);
 }
 
-#gm-screen.hidden > #right-panel {
+#gm-screen.hidden>#right-panel {
   transform: rotateY(-90deg);
 }
 
@@ -4359,6 +4371,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .window-content .actor-sheet .threat-sidebar {
   width: 150px;
 }
+
 .window-content .actor-sheet .threat-sidebar .threat-avatar img {
   border: groove;
   border-width: 10px;
@@ -4390,10 +4403,10 @@ form.actor-sheet img.profile-img {
   aspect-ratio: 1/1;
 }
 
-@-moz-document url-prefix() { 
+@-moz-document url-prefix() {
   form.actor-sheet img.profile-img {
-  height: 120px;
-  width: 120px;
+    height: 120px;
+    width: 120px;
   }
 }
 
@@ -4419,7 +4432,7 @@ form.actor-sheet.threat img.profile-img {
   border: none;
   margin: 5px 5px 5px 5px;
   height: 20px;
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -4437,7 +4450,8 @@ form.actor-sheet.threat img.profile-img {
   text-align: center;
 }
 
-.window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-right, .sidebar-statline-right > * {
+.window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-right,
+.sidebar-statline-right>* {
   padding: 1px 3px;
 }
 
@@ -4459,7 +4473,8 @@ form.actor-sheet.threat img.profile-img {
 
 .window-content .actor-sheet .threat-sheet .section-bar {
   border: 1px black solid;
-  background-color: var(--torgblue);/*(28, 28, 179);*/
+  background-color: var(--torgblue);
+  /*(28, 28, 179);*/
   color: white;
   height: 15px;
   width: 100%;
@@ -4469,20 +4484,21 @@ form.actor-sheet.threat img.profile-img {
   font-weight: bold;
 }
 
-.window-content .actor-sheet .threat-sheet .section-bar.attributes{
+.window-content .actor-sheet .threat-sheet .section-bar.attributes {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: nowrap;
 }
-.window-content .actor-sheet .threat-sheet .section-bar.attributes > *{
+
+.window-content .actor-sheet .threat-sheet .section-bar.attributes>* {
   padding-left: 0.5rem;
 }
 
-.window-content .actor-sheet .threat-sheet .section-bar.attributes > h5 {
+.window-content .actor-sheet .threat-sheet .section-bar.attributes>h5 {
   display: flex;
   margin: 0;
-  font: inherit; 
+  font: inherit;
 }
 
 .window-content .actor-sheet .threat-sheet .threat-section-attributes {
@@ -4526,18 +4542,18 @@ form.actor-sheet.threat img.profile-img {
   row-gap: 5px;
 }
 
-.window-content .macroHubComplete .macroHubSpan{
+.window-content .macroHubComplete .macroHubSpan {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.window-content .macroHubComplete .macroHubSpan > img{
+.window-content .macroHubComplete .macroHubSpan>img {
   width: 50px;
   height: 50px;
 }
 
-.window-content .macroHubComplete .macroHubSpan > h2{
+.window-content .macroHubComplete .macroHubSpan>h2 {
   border: none;
   padding: 0 0 0 10px;
   margin: 0;

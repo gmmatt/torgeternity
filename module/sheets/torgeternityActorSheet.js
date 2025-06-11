@@ -9,7 +9,7 @@ import { ChatMessageTorg } from '../documents/chat/document.js';
 /**
  *
  */
-export default class TorgeternityActorSheet extends ActorSheet {
+export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSheet {
   /**
    *
    * @param {...any} args
@@ -160,7 +160,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       'vehicleAddOn',
     ]) {
       for (const item of data[type]) {
-        item.description = await TextEditor.enrichHTML(item.system.description, {
+        item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description, {
           async: true,
         });
       }
@@ -169,18 +169,18 @@ export default class TorgeternityActorSheet extends ActorSheet {
     // Enrich Text Editors
     switch (this.object.type) {
       case 'stormknight':
-        data.enrichedBackground = await TextEditor.enrichHTML(
+        data.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(
           this.object.system.details.background,
           { async: true }
         );
         break;
       case 'threat':
-        data.enrichedDetails = await TextEditor.enrichHTML(this.object.system.details.description, {
+        data.enrichedDetails = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.details.description, {
           async: true,
         });
         break;
       case 'vehicle':
-        data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
+        data.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.description, {
           async: true,
         });
     }
@@ -483,7 +483,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       await super._onDrop(event);
       return;
     }
-    const data = TextEditor.getDragEventData(event);
+    const data = foundry.applications.ux.TextEditor.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
     if (dropedObject instanceof TorgeternityItem && dropedObject.type === 'race') {
       const raceItem = this.actor.items.find((i) => i.type === 'race');
@@ -642,7 +642,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
           actorName: this.actor.name,
         };
 
-        const templatePromise = renderTemplate(
+        const templatePromise = foundry.applications.handlebars.renderTemplate(
           './systems/torgeternity/templates/partials/skill-error-card.hbs',
           templateData
         );
@@ -1057,7 +1057,9 @@ export default class TorgeternityActorSheet extends ActorSheet {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: item,
-        template: TorgeternityItem.CHAT_TEMPLATE[item.type],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE[item.type],
+        }
       },
     };
 
@@ -1336,7 +1338,7 @@ export function checkUnskilled(skillValue, skillName, actor) {
       actorName: actor.name,
     };
 
-    const templatePromise = renderTemplate(
+    const templatePromise = foundry.applications.handlebars.renderTemplate(
       './systems/torgeternity/templates/partials/skill-error-card.hbs',
       templateData
     );

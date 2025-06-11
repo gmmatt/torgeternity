@@ -215,7 +215,7 @@
         const type = $input.data('dtype').substring(base.length).toLowerCase();
         const $filePickerButton = $(
           `<button type=button class=file-picker data-tooltip="Browse Files" tabindex=-1>` +
-            `<i class="fas fa-file-import fa-fw"></i></button>`
+          `<i class="fas fa-file-import fa-fw"></i></button>`
         );
         $filePickerButton.attr('data-type', type);
         $filePickerButton.attr('data-target', target);
@@ -227,7 +227,7 @@
       FilePicker.format = (val) => val;
     });
 
-    class DirPicker extends FilePicker {
+    class DirPicker extends foundry.applications.apps.FilePicker {
       constructor(options) {
         super(options);
 
@@ -275,7 +275,7 @@
         const $input = $(input);
         const $browseButton = $(
           `<button type=button data-tooltip="Browse Directories" tabindex=-1>` +
-            `<i class="fas fa-file-import fa-fw"></i></button>`
+          `<i class="fas fa-file-import fa-fw"></i></button>`
         );
         $browseButton.css('flex', '0 0 24px');
         $browseButton.css('line-height', '24px');
@@ -324,7 +324,7 @@
     });
   }
 
-  class ExtendedSettingsConfig extends SettingsConfig {
+  class ExtendedSettingsConfig extends foundry.applications.settings.SettingsConfig {
     static get settingsExtenderVersion() {
       return SETTINGS_EXTENDER_VERSION;
     }
@@ -338,17 +338,17 @@
     getData() {
       const data = super.getData();
       /* Appears to be incompatible with Foundry v 0.9
-			const modules = Compatibility.getSettingsConfigModules(data);
-			modules.flatMap(m => m.settings).forEach(setting => {
-				const key = setting.module + '.' + setting.key;
-				const type = Compatibility.getGameSettting(key).type;
-				if (typeof type === 'function') {
-					setting.type = type.name;
-				} else {
-					setting.type = 'unknown'
-				}
-			});
-			*/
+      const modules = Compatibility.getSettingsConfigModules(data);
+      modules.flatMap(m => m.settings).forEach(setting => {
+        const key = setting.module + '.' + setting.key;
+        const type = Compatibility.getGameSettting(key).type;
+        if (typeof type === 'function') {
+          setting.type = type.name;
+        } else {
+          setting.type = 'unknown'
+        }
+      });
+      */
       return data;
     }
 

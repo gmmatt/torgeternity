@@ -13,16 +13,33 @@
       "name": "Algor",
       "discord": "algor84",
       "flags": {}
+    },
+    {
+      "name": "Farling",
+      "url": "https://github.com/farling42",
+      "email": "foundryvtt@amusingtime.uk",
+      "discord": "farling",
+      "ko-fi": "farling",
+      "patreon": "amusingtime",
+      "twitter": "@shambles42"
     }
   ],
-  "version": "12.4.0",
+  "version": "13.0.0",
   "compatibility": {
-    "minimum": "12",
-    "verified": "12.331"
+    "minimum": 13,
+    "verified": 13.345
   },
-  "esmodules": ["module/torgeternity.js"],
-  "scripts": ["module/lib/setting-extender.js"],
-  "styles": ["css/torgeternity.css", "css/journal.css", "css/cards.css"],
+  "esmodules": [
+    "module/torgeternity.js"
+  ],
+  "scripts": [
+    "module/lib/setting-extender.js"
+  ],
+  "styles": [
+    "css/torgeternity.css",
+    "css/journal.css",
+    "css/cards.css"
+  ],
   "background": "systems/torgeternity/images/splash_new.webp",
   "packs": [
     {
@@ -193,7 +210,12 @@
           "sorting": "m",
           "color": "#960000",
           "folders": [],
-          "packs": ["basic-rules", "handouts", "core-card-set", "archetypes"]
+          "packs": [
+            "basic-rules",
+            "handouts",
+            "core-card-set",
+            "archetypes"
+          ]
         },
         {
           "name": "Deutsch",
@@ -212,14 +234,21 @@
           "sorting": "m",
           "color": "#960000",
           "folders": [],
-          "packs": ["basic-rules-fr", "core-card-set-fr", "archetypes-fr"]
+          "packs": [
+            "basic-rules-fr",
+            "core-card-set-fr",
+            "archetypes-fr"
+          ]
         },
         {
           "name": "Language-neutral",
           "sorting": "m",
           "color": "#960000",
           "folders": [],
-          "packs": ["macros", "core-scenes"]
+          "packs": [
+            "macros",
+            "core-scenes"
+          ]
         }
       ]
     }
@@ -253,13 +282,19 @@
   "documentTypes": {
     "Actor": {
       "stormknight": {
-        "htmlFields": ["details.background"]
+        "htmlFields": [
+          "details.background"
+        ]
       },
       "threat": {
-        "htmlFields": ["details.description"]
+        "htmlFields": [
+          "details.description"
+        ]
       },
       "vehicle": {
-        "htmlFields": ["description"]
+        "htmlFields": [
+          "description"
+        ]
       }
     },
     "Card": {
@@ -268,28 +303,116 @@
       "drama": {}
     },
     "Item": {
-      "ammunition": {"htmlFields": ["description"]},
-      "armor": { "htmlFields": ["description"] },
-      "customAttack": { "htmlFields": ["description"] },
-      "customSkill": { "htmlFields": ["description"] },
-      "enhancement": { "htmlFields": ["description"] },
-      "eternityshard": { "htmlFields": ["description"] },
-      "firearm": { "htmlFields": ["description"] },
-      "gear": { "htmlFields": ["description"] },
-      "heavyweapon": { "htmlFields": ["description"] },
-      "implant": { "htmlFields": ["description"] },
-      "meleeweapon": { "htmlFields": ["description"] },
-      "miracle": { "htmlFields": ["description"] },
-      "missileweapon": { "htmlFields": ["description"] },
-      "perk": { "htmlFields": ["description"] },
-      "psionicpower": { "htmlFields": ["description"] },
-      "race": {"htmlFields": ["description"]},
-      "shield": { "htmlFields": ["description"] },
-      "specialability": { "htmlFields": ["description"] },
-      "specialability-rollable": { "htmlFields": ["description"] },
-      "spell": { "htmlFields": ["description"] },
-      "vehicle": { "htmlFields": ["description"] },
-      "vehicleAddOn": { "htmlFields": ["description"] }      
+      "ammunition": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "armor": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "customAttack": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "customSkill": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "enhancement": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "eternityshard": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "firearm": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "gear": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "heavyweapon": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "implant": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "meleeweapon": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "miracle": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "missileweapon": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "perk": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "psionicpower": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "race": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "shield": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "specialability": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "specialability-rollable": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "spell": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "vehicle": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "vehicleAddOn": {
+        "htmlFields": [
+          "description"
+        ]
+      }
     }
   },
   "socket": true,

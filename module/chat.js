@@ -16,22 +16,27 @@ import { checkForDiscon } from './torgchecks.js';
  * @param html
  */
 export function addChatListeners(html) {
-  html.on('click', 'a.roll-fav', onFavored);
-  html.on('click', 'a.roll-possibility', onPossibility);
-  html.on('click', 'a.roll-up', onUp);
-  html.on('click', 'a.roll-hero', onHero);
-  html.on('click', 'a.roll-drama', onDrama);
-  html.on('click', 'a.add-plus3', onPlus3);
-  html.on('click', 'a.add-bd', onBd);
-  html.on('click', 'a.modifier-label', onModifier);
-  html.on('click', 'a.applyDam', applyDam);
-  html.on('contextmenu', 'a.applyDam', adjustDam);
-  html.on('click', 'a.soakDam', soakDam);
-  html.on('click', 'a.applyStymied', applyStym);
-  html.on('click', 'a.applyVulnerable', applyVul);
-  html.on('click', 'a.backlash1', applyBacklash1);
-  html.on('click', 'a.backlash2', applyBacklash2);
-  html.on('click', 'a.backlash3', applyBacklash3);
+  function set(event, query, func) {
+    html.querySelectorAll(query).forEach(e =>
+      e.addEventListener(event, func));
+  }
+  // all actions, which need to be in the SkillCard (torg-check.js)
+  set('click', 'a.roll-fav', onFavored);
+  set('click', 'a.roll-possibility', onPossibility);
+  set('click', 'a.roll-up', onUp);
+  set('click', 'a.roll-hero', onHero);
+  set('click', 'a.roll-drama', onDrama);
+  set('click', 'a.add-plus3', onPlus3);
+  set('click', 'a.add-bd', onBd);
+  set('click', 'a.modifier-label', onModifier);
+  set('click', 'a.applyDam', applyDam);
+  set('contextmenu', 'a.applyDam', adjustDam);
+  set('click', 'a.soakDam', soakDam);
+  set('click', 'a.applyStymied', applyStym);
+  set('click', 'a.applyVulnerable', applyVul);
+  set('click', 'a.backlash1', applyBacklash1);
+  set('click', 'a.backlash2', applyBacklash2);
+  set('click', 'a.backlash3', applyBacklash3);
 }
 
 async function parentDeleteByTime(oldMsg) {
@@ -411,12 +416,12 @@ async function adjustDam(event) {
   const content = `<p>${game.i18n.localize('torgeternity.sheetLabels.modifyDamage')}</p> <hr>
     <form>
     <div class="form-group"><label for="nw">${game.i18n.localize(
-      'torgeternity.sheetLabels.modifyWounds'
-    )}</label>
+    'torgeternity.sheetLabels.modifyWounds'
+  )}</label>
     <div class="form-fields torgeternityFormFields"><input type="number" id="nw" value=${oldWounds}></input></div></div>
     <div class="form-group"><label for="ns">${game.i18n.localize(
-      'torgeternity.sheetLabels.modifyShocks'
-    )}</label>
+    'torgeternity.sheetLabels.modifyShocks'
+  )}</label>
     <div class="form-fields torgeternityFormFields"><input type="number" id="ns" value=${oldShocks}></input></div></div>
     </form>`;
   await new Dialog({
