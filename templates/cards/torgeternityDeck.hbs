@@ -49,7 +49,7 @@
         data-action="toggleSort">
         <i class="fas fa-sort fa-fw"></i>
       </a>
-      <h4 class="card-name">{{localize "CARD.Name"}}</h4>
+      <strong class="card-name">{{localize "CARD.FIELDS.face.label"}}</strong>
       <span class="card-type">{{localize "CARDS.FIELDS.type.label"}}</span>
       <span class="card-drawn">{{localize "CARD.FIELDS.drawn.label"}}</span>
       <div class="card-controls">
@@ -58,7 +58,7 @@
       </div>
     </header>
     {{cards}}
-    <ol class="cards">
+    <ol class="cards scrollable">
       {{#each document.cards as |card|}}
         <li class="card flexrow" data-card-id="{{card.id}}">
           <div class="card-faces flexcol">
@@ -71,7 +71,7 @@
             <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
             <span><img src="{{card.img}}"></span>
           </span>
-          <h4 class="card-name">{{card.name}}</h4>
+          <strong class="card-name">{{card.name}}</strong>
           <span class="card-type">{{card.typeLoc}}</span>
           <div class="card-drawn">
             <input type="checkbox" class="card-value" {{checked card.drawn}} disabled>
@@ -85,7 +85,7 @@
         </li>
       {{else}}
         <li>
-          <p class="hint">{{localize "CARDS.NoCards"}}</p>
+          <p class="notes">{{localize "CARDS.NoCards"}}</p>
         </li>
       {{/each}}
     </ol>

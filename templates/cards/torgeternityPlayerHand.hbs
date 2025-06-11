@@ -1,101 +1,83 @@
-<form class="{{cssClass}}" autocomplete="off">
-  <header class="sheet-header flexrow">
-    <h1 class="name">
-      <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}" />
-    </h1>
-    <span class="handdesign">
-      {{localize 'torgeternity.dialogPrompts.lifelike'}}
-      <input name="flags.torgeternity.lifelike" class="toggle" type="checkbox" id="lifelike" {{checked
-        data.flags.torgeternity.lifelike}}>
-    </span>
+<header class="sheet-header flexrow">
+  <h1 class="name">
+    <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}" />
+  </h1>
+  <span class="handdesign">
+    {{localize 'torgeternity.dialogPrompts.lifelike'}}
+    <input name="flags.torgeternity.lifelike" class="toggle" type="checkbox" id="lifelike" {{checked
+      data.flags.torgeternity.lifelike}}>
+  </span>
+</header>
+
+<div>
+  <header class="cards-header flexrow">
+    <span class="card-faces">{{localize "CARD.FIELDS.face.label"}}</span>
+    <a class="card-control sort-mode" data-tooltip="{{localize 'CARDS.ACTIONS.ToggleSortMode'}}"
+      data-action="toggleSort">
+      <i class="fas fa-sort fa-fw"></i>
+    </a>
+    <strong class="card-name">{{localize "CARD.FIELDS.face.label"}}</strong>
+    <span class="card-type">{{localize "CARDS.FIELDS.type.label"}}</span>
+    <strong class="card-pooled">{{localize "torgeternity.dialogPrompts.cardPooled"}}</strong>
+    <div class="torg-card-controls">
+      Actions
+    </div>
   </header>
-
-  <div>
-    <header class="cards-header flexrow">
-      <span class="card-faces">{{localize "CARD.FIELDS.face.label"}}</span>
-      <a class="card-control sort-mode" data-tooltip="{{localize 'CARDS.ACTIONS.ToggleSortMode'}}"
-        data-action="toggleSort">
-        <i class="fas fa-sort fa-fw"></i>
-      </a>
-      <h4 class="card-name">{{localize "CARD.Name"}}</h4>
-      <span class="card-type">{{localize "CARDS.FIELDS.type.label"}}</span>
-      <h4 class="card-pooled">{{localize "torgeternity.dialogPrompts.cardPooled"}}</h4>
-      <div class="torg-card-controls">
-        Actions
-      </div>
-    </header>
-    <ol class="cards">
-      {{#each cards as |card|}}
-        <li class="card flexrow" data-card-id="{{card.id}}">
-          <div class="card-faces flexcol">
-            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="nextFace"
-              {{#unless
-              card.hasNextFace}} disabled {{/unless}}>
-              <i class="fas fa-caret-up"></i>
-            </a>
-            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="prevFace"
-              {{#unless
-              card.hasPreviousFace}} disabled {{/unless}}>
-              <i class="fas fa-caret-down"></i>
-            </a>
-          </div>
-          <span class="card-tooltip" href="">
-            <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
-            <span><img src="{{card.img}}"></span>
+  <ol class="cards">
+    {{#each cards as |card|}}
+      <li class="card flexrow" data-card-id="{{card.id}}" data-cards>
+        <div class="card-faces flexcol">
+          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="nextFace"
+            {{#unless
+            card.hasNextFace}} disabled {{/unless}}>
+            <i class="fas fa-caret-up"></i>
+          </a>
+          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="prevFace"
+            {{#unless
+            card.hasPreviousFace}} disabled {{/unless}}>
+            <i class="fas fa-caret-down"></i>
+          </a>
+        </div>
+        <span class="card-tooltip" href="">
+          <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+          <span><img src="{{card.img}}"></span>
+        </span>
+        <strong class="card-name">{{card.name}}</strong>
+        <!-- {{#if card.showFace}} -->
+        <span class="card-type">{{card.typeLoc}}</span>
+        {{#if (eq card.type "destiny")}}
+          <span class="card-pooled">
+            <input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle" type="checkbox"
+              id="pooled" {{checked card.flags.torgeternity.pooled}}>
           </span>
-          <h4 class="card-name">{{card.name}}</h4>
-          <!-- {{#if card.showFace}} -->
-          <span class="card-type">{{card.typeLoc}}</span>
-          {{#if (eq card.type "destiny")}}
-            <span class="card-pooled">
-              <input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle" type="checkbox"
-                id="pooled" {{checked card.flags.torgeternity.pooled}}>
-            </span>
-          {{else}}
-            <span class="card-pooled"></span>
-          {{/if}}
-          <div class="torg-card-controls">
-            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}"
-              data-action="play">
-              <i class="fas fa-play-circle" style="color:white"></i>
-            </a>
-            <!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
-            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
-              data-action="display">
-              <i class="fas fa-broadcast-tower" style="color:white"></i>
-            </a>
-            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
-              data-action="pass">
-              <i class="fas fa-share-square" style="color:white"></i>
-            </a>
-            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
-              data-action="discard">
-              <i class="fas fa-inbox" style="color:white"></i>
-            </a>
-          </div>
-          <!-- {{/if}} -->
-        </li>
-      {{else}}
-        <li>
-          <p class="hint">{{localize "CARDS.NoCards"}}</p>
-        </li>
-      {{/each}}
-    </ol>
-  </div>
-
-  <!-- Sheet Footer -->
-  <footer class="sheet-footer flexrow">
-    {{#if owner}}
-      <button class="card-control" type="button" data-action="drawDestiny">
-        <i class="fas fa-plus"></i>
-        {{localize "torgeternity.dialogPrompts.drawDestiny"}}
-      </button>
-      <button class="card-control" type="button" data-action="drawCosm">
-        <i class="fas fa-plus"></i>
-        {{localize "torgeternity.dialogPrompts.drawCosm"}}
-      </button>
-
-    {{/if}}
-  </footer>
-
-</form>
+        {{else}}
+          <span class="card-pooled"></span>
+        {{/if}}
+        <div class="torg-card-controls">
+          <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}"
+            data-action="play">
+            <i class="fas fa-play-circle" style="color:white"></i>
+          </a>
+          <!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
+          <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
+            data-action="display">
+            <i class="fas fa-broadcast-tower" style="color:white"></i>
+          </a>
+          <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
+            data-action="pass">
+            <i class="fas fa-share-square" style="color:white"></i>
+          </a>
+          <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
+            data-action="discard">
+            <i class="fas fa-inbox" style="color:white"></i>
+          </a>
+        </div>
+        <!-- {{/if}} -->
+      </li>
+    {{else}}
+      <li>
+        <p class="notes">{{localize "CARDS.NoCards"}}</p>
+      </li>
+    {{/each}}
+  </ol>
+</div>

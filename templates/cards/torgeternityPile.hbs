@@ -9,7 +9,7 @@
     <header class="cards-header flexrow">
       <span class="card-faces">{{localize 'CARD.FIELDS.face.label'}}</span>
       <span class="sort-mode"></span>
-      <h4 class="card-name">{{localize 'CARD.Name'}}</h4>
+      <h4 class="card-name">{{localize 'CARD.FIELDS.face.label'}}</h4>
       <span class="card-type">{{localize 'CARDS.FIELDS.type.label'}}</span>
     </header>
     <ol class="cards">
@@ -39,7 +39,7 @@
         </li>
       {{else}}
         <li>
-          <p class="hint">{{localize "CARDS.NoCards"}}</p>
+          <p class="notes">{{localize "CARDS.NoCards"}}</p>
         </li>
       {{/each}}
     </ol>
