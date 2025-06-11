@@ -59,19 +59,19 @@ export default class torgeternityCardConfig extends foundry.applications.sheets.
     // Handle the control action
     switch (button.dataset.action) {
       case 'addFace':
-        faces = this.object.faces.map((f) => f.object).concat([{}]);
-        return this.object.update({ faces });
+        faces = this.document.faces.map((f) => f.object).concat([{}]);
+        return this.document.update({ faces });
       case 'deleteFace':
         return Dialog.confirm({
-          title: game.i18n.localize('CARD.FaceDelete'),
+          title: game.i18n.localize('CARD.FIELDS.face.labelDelete'),
           content: `<h4>${game.i18n.localize('AreYouSure')}</h4><p>${game.i18n.localize(
-            'CARD.FaceDeleteWarning'
+            'CARD.FIELDS.face.labelDeleteWarning'
           )}</p>`,
           yes: () => {
             const i = Number(face.dataset.face);
-            faces = foundry.utils.deepClone(this.object.faces);
+            faces = foundry.utils.deepClone(this.document.faces);
             faces.splice(i, 1);
-            return this.object.update({ faces });
+            return this.document.update({ faces });
           },
         });
     }

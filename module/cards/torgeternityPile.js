@@ -25,13 +25,11 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
    * @inheritdoc
    */
   async _prepareContext(options) {
-    const data = await super._prepareContext(options);
-
-    for (const card of data?.document.cards) {
+    const context = await super._prepareContext(options);
+    for (const card of context?.document.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
     }
-
-    return data;
+    return context;
   }
 
   /**
@@ -42,7 +40,7 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
     // Shamelessly stolen from core software
     const button = event.currentTarget;
     const li = button.closest('.card');
-    const card = li ? this.object.cards.get(li.dataset.cardId) : null;
+    const card = li ? this.document.cards.get(li.dataset.cardId) : null;
     const cls = getDocumentClass('Card');
 
     // Save any pending change to the form
@@ -94,28 +92,28 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
               )} ${destinyDeck.name}.</h4></div>`,
           });
         }
-        return this.object.draw(destinyDeck);
+        return this.document.draw(destinyDeck);
       case 'drawCosm':
         this.drawCosmDialog();
         return;
       case 'create':
-        return cls.createDialog({}, { parent: this.object, pack: this.object.pack });
+        return cls.createDialog({}, { parent: this.document, pack: this.document.pack });
       case 'edit':
         return card.sheet.render(true);
       case 'delete':
         return card.deleteDialog();
       case 'deal':
-        return this.object.dealDialog();
+        return this.document.dealDialog();
       case 'draw':
-        return this.object.drawDialog();
+        return this.document.drawDialog();
       case 'pass':
-        return this.object.passDialog();
+        return this.document.passDialog();
       case 'reset':
         this._sortStandard = true;
-        return this.object.recall();
+        return this.document.recall();
       case 'shuffle':
         this._sortStandard = false;
-        return this.object.shuffle();
+        return this.document.shuffle();
       case 'toggleSort':
         this._sortStandard = !this._sortStandard;
         return this.render();
@@ -124,8 +122,8 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
       case 'prevFace':
         return card.update({ face: card.face === 0 ? null : card.face - 1 });
       case 'return':
-        for (let i = 0; i < this.object.cards.size; i++) {
-          this.object.cards.contents[i].recall();
+        for (let i = 0; i < this.document.cards.size; i++) {
+          this.document.cards.contents[i].recall();
         }
     }
   }

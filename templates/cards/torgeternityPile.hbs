@@ -7,20 +7,22 @@
 
   <div>
     <header class="cards-header flexrow">
-      <span class="card-faces">{{localize "CARD.Face"}}</span>
+      <span class="card-faces">{{localize 'CARD.FIELDS.face.label'}}</span>
       <span class="sort-mode"></span>
-      <h4 class="card-name">{{localize "CARD.Name"}}</h4>
-      <span class="card-type">{{localize "CARD.Type"}}</span>
+      <h4 class="card-name">{{localize 'CARD.Name'}}</h4>
+      <span class="card-type">{{localize 'CARDS.FIELDS.type.label'}}</span>
     </header>
     <ol class="cards">
-      {{#each document.cards as |card|}}
+      {{#each cards as |card|}}
         <li class="card flexrow" data-card-id="{{card.id}}">
           <div class="card-faces flexcol">
-            <a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="nextFace"
+              {{#unless
               card.hasNextFace}} disabled {{/unless}}>
               <i class="fas fa-caret-up"></i>
             </a>
-            <a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="prevFace"
+              {{#unless
               card.hasPreviousFace}} disabled {{/unless}}>
               <i class="fas fa-caret-down"></i>
             </a>
@@ -31,6 +33,7 @@
           </span>
           <h4 class="card-name">{{card.name}}</h4>
           {{#if card.showFace}}
+            <!--<span class="card-type">{{card.typeLoc}}</span>-->
             <span class="card-type">{{card.typeLoc}}</span>
           {{/if}}
         </li>

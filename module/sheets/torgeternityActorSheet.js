@@ -17,7 +17,7 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
   constructor(...args) {
     super(...args);
 
-    if (this.object.type === 'threat') {
+    if (this.document.type === 'threat') {
       this.options.width = this.position.width = 690;
       this.options.height = this.position.height = 645;
     }
@@ -167,20 +167,20 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
     }
 
     // Enrich Text Editors
-    switch (this.object.type) {
+    switch (this.document.type) {
       case 'stormknight':
         data.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(
-          this.object.system.details.background,
+          this.document.system.details.background,
           { async: true }
         );
         break;
       case 'threat':
-        data.enrichedDetails = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.details.description, {
+        data.enrichedDetails = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.description, {
           async: true,
         });
         break;
       case 'vehicle':
-        data.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.description, {
+        data.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description, {
           async: true,
         });
     }
@@ -294,7 +294,7 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
         a.addEventListener('dragstart', handler, false);
       });
       // listeners for items on front page of threat sheet
-      if (this.object.type === 'threat') {
+      if (this.document.type === 'threat') {
         handler = (ev) => this._onDragStart(ev);
         html.find('a.item').each((i, a) => {
           // Add draggable attribute and dragstart listener.
@@ -479,7 +479,7 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
 
   /** @inheritdoc */
   async _onDrop(event) {
-    if (this.object.type !== 'stormknight') {
+    if (this.document.type !== 'stormknight') {
       await super._onDrop(event);
       return;
     }
@@ -562,12 +562,12 @@ export default class TorgeternityActorSheet extends foundry.appv1.sheets.ActorSh
    * @param event
    */
   async onOpenHand(event) {
-    const characterHand = this.object.getDefaultHand();
+    const characterHand = this.document.getDefaultHand();
     // if default hand => render it
     if (characterHand) {
       characterHand.sheet.render(true);
     } else {
-      await this.object.createDefaultHand();
+      await this.document.createDefaultHand();
       characterHand.sheet.render(true);
     }
   }

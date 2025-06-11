@@ -8,15 +8,15 @@
 
   <!-- Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="main">
-    <a class="item" data-tab="details">
+    <a data-action="tab" class="item" data-tab="details">
       <i class="fas fa-cogs"></i>
       {{localize "CARD.HeaderDetails"}}
     </a>
-    <a class="item" data-tab="faces">
+    <a data-action="tab" class="item" data-tab="faces">
       <i class="fas fa-id-badge"></i>
       {{localize "CARD.HeaderFaces"}}
     </a>
-    <a class="item" data-tab="back">
+    <a data-action="tab" class="item" data-tab="back">
       <i class="fas fa-id-badge"></i>
       {{localize "CARD.HeaderBack"}}
     </a>
@@ -49,15 +49,15 @@
   </div>
 
   <!-- Faces Tab -->
-  <div class="tab" data-tab="faces">
+  <div class="tab active" data-tab="faces">
     <div class="form-group">
-      <label>{{localize "CARD.Face"}}</label>
+      <label>{{localize "CARD.FIELDS.face.label"}}</label>
       <div class="form-fields torgeternityFormFields">
         {{numberInput data.face name="face" min=0 step=1}}
         <button
           type="button"
           class="face-control"
-          data-tooltip=ooltip="{{localize 'CARD.FaceAdd'}}"
+          data-tooltip="{{localize 'CARD.FIELDS.face.labelAdd'}}"
           data-action="addFace">
           <i class="fas fa-plus fa-fw"></i>
         </button>
@@ -66,26 +66,26 @@
     {{#each data.faces as |face i|}}
       <div class="face" data-face="{{i}}">
         <div class="form-group">
-          <label>{{localize "CARD.FaceName"}}</label>
+          <label>{{localize "CARD.FIELDS.face.labelName"}}</label>
           <div class="form-fields torgeternityFormFields">
             <input type="text" name="faces.{{i}}.name" value="{{face.name}}" />
             <button
               type="button"
               class="face-control"
-              data-tooltip=ooltip="{{localize 'CARD.FaceDelete'}}"
+              data-tooltip="{{localize 'CARD.FIELDS.face.labelDelete'}}"
               data-action="deleteFace">
               <i class="fas fa-trash fa-fw"></i>
             </button>
           </div>
         </div>
         <div class="form-group">
-          <label>{{localize "CARD.FaceImage"}}</label>
+          <label>{{localize "CARD.FIELDS.face.labelImage"}}</label>
           <div class="form-fields torgeternityFormFields">
             <file-picker name="faces.{{i}}.img" type="image" value="{{face.img}}"></file-picker>
           </div>
         </div>
         <div class="form-group">
-          <label>{{localize "CARD.FaceText"}}</label>
+          <label>{{localize "CARD.FIELDS.face.labelText"}}</label>
           <div class="form-fields torgeternityFormFields">
             <textarea name="faces.{{i}}.text">{{face.text}}</textarea>
           </div>

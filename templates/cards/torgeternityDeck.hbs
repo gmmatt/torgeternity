@@ -7,15 +7,17 @@
   </header>
 
   <!-- Tab Navigation -->
-  <nav class="sheet-tabs tabs" data-group="main">
-    <a class="item" data-tab="details"><i class="fas fa-cogs"></i> {{localize "CARDS.HeaderDetails"}}</a>
-    <a class="item" data-tab="cards"><i class="fas fa-id-badge"></i> {{localize "CARDS.HeaderCards"}}</a>
+  <nav class="sheet-tabs tabs">
+    <a data-action="tab" class="item" data-group="primary" data-tab="details"><i class="fas fa-cogs"></i>
+      <span>{{localize "CARDS.HeaderDetails"}}</span></a>
+    <a data-action="tab" class="item" data-group="primary" data-tab="cards"><i class="fas fa-id-badge"></i>
+      <span>{{localize "CARDS.HeaderCards"}}</span></a>
   </nav>
 
   <!-- Details Tab -->
-  <div class="tab" data-tab="details">
+  <section class="tab item" data-group="primary" data-tab="details">
     <div class="form-group">
-      <label>{{ localize "CARDS.Image" }}</label>
+      <label>{{ localize "CARDS.FIELDS.img.label" }}</label>
       <div class="form-fields torgeternityFormFields">
         <file-picker name="img" type="image" value="{{data.img}}"></file-picker>
       </div>
@@ -37,20 +39,21 @@
         {{numberInput data.rotation name="rotation" step=1 min=0 max=360}}
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Cards Tab -->
-  <div class="tab" data-tab="cards">
+  <section class="tab item active" data-group="primary" data-tab="cards">
     <header class="cards-header flexrow">
-      <span class="card-faces">{{localize "CARD.Face"}}</span>
-      <a class="card-control sort-mode" data-tooltip="{{localize " CARDS.SortMode"}}" data-action="toggleSort">
+      <span class="card-faces">{{localize "CARD.FIELDS.face.label"}}</span>
+      <a class="card-control sort-mode" data-tooltip="{{localize 'CARDS.ACTIONS.ToggleSortMode'}}"
+        data-action="toggleSort">
         <i class="fas fa-sort fa-fw"></i>
       </a>
       <h4 class="card-name">{{localize "CARD.Name"}}</h4>
-      <span class="card-type">{{localize "CARD.Type"}}</span>
-      <span class="card-drawn">{{localize "CARD.Drawn"}}</span>
+      <span class="card-type">{{localize "CARDS.FIELDS.type.label"}}</span>
+      <span class="card-drawn">{{localize "CARD.FIELDS.drawn.label"}}</span>
       <div class="card-controls">
-        <a class="card-control" data-tooltip="{{localize 'CARD.Create'}}" data-action="create"><i
+        <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.Create'}}" data-action="create"><i
             class="fas fa-plus"></i> {{localize "Add"}}</a>
       </div>
     </header>
@@ -59,10 +62,10 @@
       {{#each document.cards as |card|}}
         <li class="card flexrow" data-card-id="{{card.id}}">
           <div class="card-faces flexcol">
-            <a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
-              card.hasNextFace}}disabled{{/unless}}><i class="fas fa-caret-up"></i></a>
-            <a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless
-              card.hasPreviousFace}}disabled{{/unless}}><i class="fas fa-caret-down"></i></a>
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="nextFace"
+              {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i></a>
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="prevFace"
+              {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i></a>
           </div>
           <span class="card-tooltip" href="">
             <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
@@ -74,10 +77,10 @@
             <input type="checkbox" class="card-value" {{checked card.drawn}} disabled>
           </div>
           <div class="card-controls">
-            <a class="card-control" data-tooltip="{{localize 'CARD.Edit'}}" data-action="edit"><i
-                class="fas fa-edit"></i></a>
-            <a class="card-control" data-tooltip="{{localize 'CARD.Delete'}}" data-action="delete"><i
-                class="fas fa-trash"></i></a>
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.Edit'}}" data-action="edit"><i
+                class="fa-solid fa-pen-to-square"></i></a>
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.Delete'}}" data-action="delete"><i
+                class="fa-solid fa-trash"></i></a>
           </div>
         </li>
       {{else}}
@@ -86,7 +89,7 @@
         </li>
       {{/each}}
     </ol>
-  </div>
+  </section>
 
   <!-- Sheet Footer -->
   <footer class="sheet-footer flexrow">

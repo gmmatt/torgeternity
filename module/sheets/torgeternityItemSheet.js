@@ -11,7 +11,7 @@ export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemShee
   constructor(...args) {
     super(...args);
 
-    switch (this.object.type) {
+    switch (this.document.type) {
       case 'firearm':
         this.options.height = this.position.height = 710;
         break;
@@ -165,25 +165,25 @@ export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemShee
     });
 
     html.find('.add-enhancement').click((ev) => {
-      const currentShown = this.object.system.pulpPowers.enhancementNumber;
+      const currentShown = this.document.system.pulpPowers.enhancementNumber;
       const newShown = currentShown < 15 ? currentShown + 1 : currentShown;
       this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
     });
 
     html.find('.remove-enhancement').click((ev) => {
-      const currentShown = this.object.system.pulpPowers.enhancementNumber;
+      const currentShown = this.document.system.pulpPowers.enhancementNumber;
       const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
       this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
     });
 
     html.find('.add-limitation').click((ev) => {
-      const currentShown = this.object.system.pulpPowers.limitationNumber;
+      const currentShown = this.document.system.pulpPowers.limitationNumber;
       const newShown = currentShown < 10 ? currentShown + 1 : currentShown;
       this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
     });
 
     html.find('.remove-limitation').click((ev) => {
-      const currentShown = this.object.system.pulpPowers.limitationNumber;
+      const currentShown = this.document.system.pulpPowers.limitationNumber;
       const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
       this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
     });
@@ -255,8 +255,8 @@ export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemShee
 
     data.config = CONFIG.torgeternity;
 
-    data.description = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.description, { async: true });
-    data.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.object.system.prerequisites, {
+    data.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description, { async: true });
+    data.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites, {
       async: true,
     });
 

@@ -20,6 +20,11 @@ export default class torgeternityDeck extends foundry.applications.sheets.CardDe
     }
   }
 
+  // See https://github.com/foundryvtt/foundryvtt/issues/12999
+  // Error when adding to an empty deck (such as when drawing a card for Combat!),
+  // PATCH:     let maxSort = to.cards.contents.size ? Math.max(...to.cards.contents.map(c => c.sort || 0)) : 0;
+
+
   /**
    *
    * @inheritdoc
@@ -27,6 +32,9 @@ export default class torgeternityDeck extends foundry.applications.sheets.CardDe
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     //context.document.cards.sort((a, b) => a.sort - b.sort);
+    for (const card of context?.document.cards) {
+      card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
+    }
     return context;
   }
 
@@ -38,7 +46,7 @@ export default class torgeternityDeck extends foundry.applications.sheets.CardDe
     // Shamelessly stolen from core software
     const button = event.currentTarget;
     const li = button.closest('.card');
-    const card = li ? this.object.cards.get(li.dataset.cardId) : null;
+    const card = li ? this.document.cards.get(li.dataset.cardId) : null;
     const cls = getDocumentClass('Card');
 
     // Save any pending change to the form
@@ -93,28 +101,28 @@ export default class torgeternityDeck extends foundry.applications.sheets.CardDe
             rollMode: game.user.isGM ? 'selfroll' : game.settings.get('core', 'rollMode'),
           });
         }
-        return this.object.draw(destinyDeck);
+        return this.document.draw(destinyDeck);
       case 'drawCosm':
         this.drawCosmDialog();
         return;
       case 'create':
-        return cls.createDialog({}, { parent: this.object, pack: this.object.pack });
+        return cls.createDialog({}, { parent: this.document, pack: this.document.pack });
       case 'edit':
         return card.sheet.render(true);
       case 'delete':
         return card.deleteDialog();
       case 'deal':
-        return this.object.dealDialog();
+        return this.document.dealDialog();
       case 'draw':
-        return this.object.drawDialog();
+        return this.document.drawDialog();
       case 'pass':
-        return this.object.passDialog();
+        return this.document.passDialog();
       case 'reset':
         this._sortStandard = true;
-        return this.object.recall();
+        return this.document.recall();
       case 'shuffle':
         this._sortStandard = false;
-        return this.object.shuffle({
+        return this.document.shuffle({
           chatNotification: !game.settings.get('torgeternity', 'shuffleMessageSurpress'),
         });
       case 'toggleSort':

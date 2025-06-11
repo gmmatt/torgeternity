@@ -7,6 +7,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     type: "hand",
     window: {
       contentClasses: ['torgeternity', 'sheet', 'cardsHand', 'cards-config'],
+      resizable: false
     },
     position: {
       top: 150,
@@ -14,13 +15,16 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       //top: parseInt(canvas.screenDimensions[1]) - game.settings.get('torgeternity', 'playerHandBottom') ? 350 : 150,
       //left: game.settings.get('torgeternity', 'playerHandBottom') ? (parseInt(canvas.screenDimensions[0]) - 1250) : "auto",
       width: 800,
-      height: "auto",
-      resizable: false
+      height: "auto"
+    },
+    actions: {
+      focusCard: torgeternityPlayerHand.focusCard,
+      //lifelike: torgeternityPlayerHand.submit
     }
   }
 
   static PARTS = {
-    //template: (this.object.getFlag('torgeternity', 'lifelike') ? 'systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs' : 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs'
+    //template: (this.document.getFlag('torgeternity', 'lifelike') ? 'systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs' : 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs'
     cards: {
       template: 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs'
     }
@@ -31,13 +35,11 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    * @inheritdoc
    */
   async _prepareContext(options) {
-    data = await super._prepareContext(options);
-
-    for (const card of data?.cards) {
+    const context = await super._prepareContext(options);
+    for (const card of context?.document.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
     }
-
-    return data;
+    return context;
   }
 
   /**
@@ -46,11 +48,10 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    */
   async _onRender(context, options) {
     let html = this.element;
-    if (this.object.getFlag('torgeternity', 'lifelike')) {
+    if (this.document.getFlag('torgeternity', 'lifelike')) {
       this.rotateCards(html);
-      html.find('.card img').click(this.focusCard.bind(this));
     }
-    html.find('#lifelike').click(this.submit.bind(this));
+    //html.find('#lifelike').click(this.submit.bind(this));
     super._onRender(context, options);
   }
 
@@ -62,7 +63,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     // Shamelessly stolen from core software
     const button = event.currentTarget;
     const li = button.closest('.card');
-    const card = li ? this.object.cards.get(li.dataset.cardId) : null;
+    const card = li ? this.document.cards.get(li.dataset.cardId) : null;
     const cls = getDocumentClass('Card');
 
     // Save any pending change to the form
@@ -137,7 +138,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
               )} ${destinyDeck.name}.</h4></div>`,
           });
         }
-        return this.object.draw(destinyDeck, 1, { face: 1 });
+        return this.document.draw(destinyDeck, 1, { face: 1 });
       case 'drawCosm':
         this.drawCosmDialog();
         return;
@@ -146,23 +147,23 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         // await game.combats.apps[0].viewed.resetAll();
         return;
       case 'create':
-        return cls.createDialog({}, { parent: this.object, pack: this.object.pack });
+        return cls.createDialog({}, { parent: this.object, pack: this.document.pack });
       case 'edit':
         return card.sheet.render(true);
       case 'delete':
         return card.deleteDialog();
       case 'deal':
-        return this.object.dealDialog();
+        return this.document.dealDialog();
       case 'draw':
-        return this.object.drawDialog();
+        return this.document.drawDialog();
       case 'pass':
-        return this.object.passDialog();
+        return this.document.passDialog();
       case 'reset':
         this._sortStandard = true;
-        return this.object.recall();
+        return this.document.recall();
       case 'shuffle':
         this._sortStandard = false;
-        return this.object.shuffle();
+        return this.document.shuffle();
       case 'toggleSort':
         this._sortStandard = !this._sortStandard;
         return this.render();
@@ -180,7 +181,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   async _onChangeInput(event) {
     const input = event.currentTarget;
     const li = input.closest('.card');
-    const card = li ? this.object.cards.get(li.dataset.cardId) : null;
+    const card = li ? this.document.cards.get(li.dataset.cardId) : null;
 
     // Save any pending change
     await this._onSubmit(event, { preventClose: true, preventRender: true });
@@ -290,7 +291,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
               )} ${cosmDeck.name}.</h4></div>`,
           });
         }
-        return this.object.draw(cosmDeck, 1, { face: 1 }).catch((err) => {
+        return this.document.draw(cosmDeck, 1, { face: 1 }).catch((err) => {
           ui.notifications.error(err.message);
           return this;
         });
@@ -316,7 +317,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    *
    * @param ev
    */
-  focusCard(ev) {
+  static focusCard(ev) {
     const card = ev.currentTarget.closest('li.card');
     card.classList.toggle('focusedCard');
     if (card.classList.contains('focusedCard')) {
