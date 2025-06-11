@@ -1,35 +1,33 @@
 /**
  *
  */
-export default class torgeternityPile extends foundry.documents.Cards { // type = "pile"
-  /**
-   *
-   * @returns {object} The default options for the torgeternityPile class.
-   */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['torgeternity', 'sheet', 'cardsPile', 'cards-config'],
+export default class torgeternityPile extends foundry.applications.sheets.CardPileConfig { // type = "pile"
+
+  static DEFAULT_OPTIONS = {
+    type: "pile",
+    window: {
+      contentClasses: ['torgeternity', 'sheet', 'cardsPile', 'cards-config'],
+    },
+    position: {
       width: 400,
-      type: "pile"
-    });
+      height: "auto"
+    }
   }
 
-  /**
-   *
-   * @returns {string} The template path for the torgeternityPile class.
-   */
-  get template() {
-    return 'systems/torgeternity/templates/cards/torgeternityPile.hbs';
+  static PARTS = {
+    cards: {
+      template: 'systems/torgeternity/templates/cards/torgeternityPile.hbs'
+    }
   }
 
   /**
    *
    * @inheritdoc
    */
-  async getData(data) {
-    data = await super.getData();
+  async _prepareContext(options) {
+    const data = await super._prepareContext(options);
 
-    for (const card of data?.cards) {
+    for (const card of data?.document.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
     }
 

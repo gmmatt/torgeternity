@@ -5,12 +5,34 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   /**
    *
    */
-  get template() {
-    return 'systems/torgeternity/templates/sidebar/combat-tracker.html';
+
+  static PARTS = {
+    header: {
+      template: "systems/torgeternity/templates/sidebar/combat-tracker-header.hbs"
+    },
+    tracker: {
+      template: 'systems/torgeternity/templates/sidebar/combat-tracker.hbs'
+    },
+    footer: {
+      template: "systems/torgeternity/templates/sidebar/combat-tracker-footer.hbs"
+    }
   }
 
-  async getData(options) {
-    const data = await super.getData(options);
+  static DEFAULT_OPTIONS = {
+    actions: {
+      'init-up': torgeternityCombatTracker._onInitUp,
+      'init-down': torgeternityCombatTracker._onInitDown,
+      'heros-first': torgeternityCombatTracker._sortHeroesFirst,
+      'vilains-first': torgeternityCombatTracker._sortVilainsFirst,
+      'has-played': torgeternityCombatTracker._hasPlayed,
+      'dsr-counter': torgeternityCombatTracker._dsrCounter,
+      'player-dsr-counter': torgeternityCombatTracker._playerDsrCounter,
+      'combat-finish.center': torgeternityCombatTracker._hasFinished,
+    }
+  }
+
+  async _prepareContext(options) {
+    const data = await super._prepareContext(options);
     data.hasTurn = this.viewed?.combatants?.some((c) => {
       const returnValue = !c.turnTaken && c.isOwner && !!data.round;
       return returnValue;
@@ -22,18 +44,14 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    *
    * @param html
    */
-  async activateListeners(html) {
-    super.activateListeners(html);
-    html.find('input.combatant-init').change(this._onUpdateInit.bind(this));
-    html.find('a.init-up').click(this._onInitUp.bind(this));
-    html.find('a.init-down').click(this._onInitDown.bind(this));
-    html.find('a.heros-first').click(this._sortHeroesFirst.bind(this));
-    html.find('a.vilains-first').click(this._sortVilainsFirst.bind(this));
-    html.find('a.has-played').click(this._hasPlayed.bind(this));
-    html.find('a.dsr-counter').click(this._dsrCounter.bind(this));
-    html.find('a.player-dsr-counter').click(this._playerDsrCounter.bind(this));
-    html.find('a.combat-finish.center').click(this._hasFinished.bind(this));
-    // html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
+  async _onRender(context, options) {
+    const html = this.element;
+    super._onRender(html);
+    function set(field, event, func) {
+      html.querySelectorAll(field).forEach(e => e.addEventListener(event, func))
+    }
+    set('input.combatant-init', 'change', this._onUpdateInit.bind(this));
+
     for (const element of document.querySelectorAll('.pool-tooltip')) {
       await element.addEventListener('mouseenter', this._notOutOfBounds);
     }
@@ -61,17 +79,17 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    *
    * @param ev
    */
-  _toggleCheck(ev) {
-    ev.currentTarget.classList.toggle('fas');
-    ev.currentTarget.classList.toggle('far');
-    ev.currentTarget.classList.toggle('playedOK');
+  static _toggleCheck(ev) {
+    ev.srcElement.classList.toggle('fas');
+    ev.srcElement.classList.toggle('far');
+    ev.srcElement.classList.toggle('playedOK');
   }
 
   /**
    *
    * @param ev
    */
-  async _hasFinished(ev) {
+  static async _hasFinished(ev) {
     await this.viewed?.combatants
       .find((c) => c.actorId === game.user.character.id)
       .setFlag('world', 'turnTaken', true);
@@ -81,8 +99,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    *
    * @param ev
    */
-  async _hasPlayed(ev) {
-    const combatantId = ev.currentTarget.closest('[data-combatant-id]').dataset.combatantId;
+  static async _hasPlayed(ev) {
+    const combatantId = ev.srcElement.closest('[data-combatant-id]').dataset.combatantId;
     const combatant = this.viewed?.combatants.get(combatantId);
     if (!combatant.isOwner) return;
     const turnTaken = combatant.getFlag('world', 'turnTaken');
@@ -94,7 +112,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    * @param ev
    */
   async _onUpdateInit(ev) {
-    const input = ev.currentTarget;
+    const input = ev.srcElement;
     const li = input.closest('.combatant');
     const c = this.viewed?.combatants.get(li.dataset.combatantId);
     await this.viewed?.combatant.update({
@@ -109,8 +127,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    *
    * @param ev
    */
-  async _onInitUp(ev) {
-    const btn = ev.currentTarget;
+  static async _onInitUp(ev) {
+    const btn = ev.srcElement;
     const li = btn.closest('.combatant');
     const c = this.viewed?.combatants.get(li.dataset.combatantId); // hope this works!
     await this.viewed?.combatant.update({
@@ -123,8 +141,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    *
    * @param ev
    */
-  async _onInitDown(ev) {
-    const btn = ev.currentTarget;
+  static async _onInitDown(ev) {
+    const btn = ev.srcElement;
     const li = btn.closest('li.combatant');
     const c = this.viewed?.combatants.get(li.dataset.combatantId); // hope this works!
     await this.viewed?.combatant.update({
@@ -137,7 +155,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   /**
    *
    */
-  async _sortVilainsFirst() {
+  static async _sortVilainsFirst() {
     await this.viewed?.resetAll();
     let combatantArray = null;
     let i = 0;
@@ -160,7 +178,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   /**
    *
    */
-  async _sortHeroesFirst() {
+  static async _sortHeroesFirst() {
     await this.viewed?.resetAll();
     let combatantArray = null;
     let i = 0;
@@ -185,7 +203,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    *
    * @param ev
    */
-  async _dsrCounter(ev) {
+  static async _dsrCounter(ev) {
     const currentStep = this.viewed?.getFlag('torgeternity', 'dsrStage');
 
     switch (currentStep) {
@@ -214,8 +232,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    *
    * @param ev
    */
-  async _playerDsrCounter(ev) {
-    const btn = ev.currentTarget;
+  static async _playerDsrCounter(ev) {
+    const btn = ev.srcElement;
     const li = btn.closest('li.combatant');
     const c = this.viewed?.combatants.get(li.dataset.combatantId);
 

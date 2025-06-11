@@ -1,49 +1,37 @@
 /**
  *
  */
-export default class torgeternityPlayerHand extends foundry.documents.Cards { // type="hand"
-  /**
-   *
-   */
-  static get defaultOptions() {
-    let windowTop;
-    let windowLeft;
-    if (game.settings.get('torgeternity', 'playerHandBottom') === true) {
-      windowTop = parseInt(canvas.screenDimensions[1] - 350);
-      windowLeft = parseInt(canvas.screenDimensions[0] - 1250);
-    } else {
-      windowTop = 150;
-      windowLeft = '';
-    }
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['torgeternity', 'sheet', 'cardsHand', 'cards-config'],
+export default class torgeternityPlayerHand extends foundry.applications.sheets.CardHandConfig { // type="hand"
+
+  static DEFAULT_OPTIONS = {
+    type: "hand",
+    window: {
+      contentClasses: ['torgeternity', 'sheet', 'cardsHand', 'cards-config'],
+    },
+    position: {
+      top: 150,
+      left: "auto",
+      //top: parseInt(canvas.screenDimensions[1]) - game.settings.get('torgeternity', 'playerHandBottom') ? 350 : 150,
+      //left: game.settings.get('torgeternity', 'playerHandBottom') ? (parseInt(canvas.screenDimensions[0]) - 1250) : "auto",
       width: 800,
-      top: windowTop,
-      left: windowLeft,
-      resizable: false,
-      type: "hand"
-    });
+      height: "auto",
+      resizable: false
+    }
   }
 
-  /**
-   *
-   */
-  get template() {
-    let path;
-    if (this.object.getFlag('torgeternity', 'lifelike')) {
-      path = 'systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs';
-    } else {
-      path = 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs';
+  static PARTS = {
+    //template: (this.object.getFlag('torgeternity', 'lifelike') ? 'systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs' : 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs'
+    cards: {
+      template: 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs'
     }
-    return path;
   }
 
   /**
    *
    * @inheritdoc
    */
-  async getData(data) {
-    data = await super.getData();
+  async _prepareContext(options) {
+    data = await super._prepareContext(options);
 
     for (const card of data?.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
@@ -56,13 +44,14 @@ export default class torgeternityPlayerHand extends foundry.documents.Cards { //
    *
    * @param html
    */
-  async activateListeners(html) {
+  async _onRender(context, options) {
+    let html = this.element;
     if (this.object.getFlag('torgeternity', 'lifelike')) {
       this.rotateCards(html);
       html.find('.card img').click(this.focusCard.bind(this));
     }
     html.find('#lifelike').click(this.submit.bind(this));
-    super.activateListeners(html);
+    super._onRender(context, options);
   }
 
   /**

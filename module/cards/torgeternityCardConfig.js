@@ -2,33 +2,38 @@
  *
  */
 export default class torgeternityCardConfig extends foundry.applications.sheets.CardConfig {
-  /** @inheritdoc */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['torgeternity', 'sheet', 'card-config'],
+
+  static DEFAULT_OPTIONS = {
+    window: {
+      contentClasses: ['torgeternity', 'sheet', 'card-config'],
+    },
+    position: {
       width: 480,
       height: 'auto',
-      tabs: [{ navSelector: '.tabs', contentSelector: 'form', initial: 'details' }],
-      sheetConfig: true,
-    });
+    },
+    tabs: [{ navSelector: '.tabs', contentSelector: 'form', initial: 'details' }],
+    sheetConfig: true,
+    types: CONFIG.Card.typeLabels,
+    actions: {
+      "face-control": torgeternityCardConfig._onFaceControl
+    }
   }
 
-  /** @inheritdoc */
-  getData(options) {
-    return foundry.utils.mergeObject(super.getData(options), {
-      types: CONFIG.Card.typeLabels,
-    });
+  static PARTS = {
+    destiny: {
+      template: 'systems/torgeternity/templates/cards/torgeternityDestiny.hbs'
+    },
+    cosm: {
+      template: 'systems/torgeternity/templates/cards/torgeternityCosm.hbs'
+    },
+    drama: {
+      template: 'systems/torgeternity/templates/cards/torgeternityDrama.hbs'
+    }
   }
 
   /* -------------------------------------------- */
   /* 	Event Listeners and Handlers								*/
   /* -------------------------------------------- */
-
-  /** @inheritdoc */
-  activateListeners(html) {
-    super.activateListeners(html);
-    html.find('.face-control').click(this._onFaceControl.bind(this));
-  }
 
   /* -------------------------------------------- */
 
@@ -39,23 +44,12 @@ export default class torgeternityCardConfig extends foundry.applications.sheets.
     return submitData;
   }
 
-  /** @inheritdoc */
-  get template() {
-    if (this.object.type === 'destiny') {
-      return 'systems/torgeternity/templates/cards/torgeternityDestiny.hbs';
-    } else if (this.object.type === 'cosm') {
-      return 'systems/torgeternity/templates/cards/torgeternityCosm.hbs';
-    } else {
-      return 'systems/torgeternity/templates/cards/torgeternityDrama.hbs';
-    }
-  }
-
   /**
    *
    * @param {Event} event The event object.
    */
-  async _onFaceControl(event) {
-    const button = event.currentTarget;
+  static async _onFaceControl(event) {
+    const button = event.srcElement;
     const face = button.closest('.face');
     let faces = [];
 

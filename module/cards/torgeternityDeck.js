@@ -1,34 +1,32 @@
 /**
  *
  */
-export default class torgeternityDeck extends foundry.documents.Cards {  // type="deck"
-  /**
-   *
-   * @returns {object} The default options for the torgeternityDeck class.
-   */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['torgeternity', 'sheet', 'cardsDeck'],
+export default class torgeternityDeck extends foundry.applications.sheets.CardDeckConfig {  // type="deck"
+
+  static DEFAULT_OPTIONS = {
+    type: "deck",
+    position: {
       width: 600,
-      type: "deck"
-    });
+      height: "auto"
+    },
+    window: {
+      contentClasses: ['torgeternity', 'sheet', 'cardsDeck']
+    }
   }
 
-  /**
-   *
-   * @returns {string} The template path for the torgeternityDeck class.
-   */
-  get template() {
-    return 'systems/torgeternity/templates/cards/torgeternityDeck.hbs';
+  static PARTS = {
+    details: {
+      template: 'systems/torgeternity/templates/cards/torgeternityDeck.hbs'
+    }
   }
 
   /**
    *
    * @inheritdoc
    */
-  async getData() {
-    const context = await super.getData();
-    context.cards.sort((a, b) => a.sort - b.sort);
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    //context.document.cards.sort((a, b) => a.sort - b.sort);
     return context;
   }
 

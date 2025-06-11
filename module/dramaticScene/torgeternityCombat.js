@@ -35,7 +35,7 @@ export default class TorgCombat extends Combat {
 
       this.updateEmbeddedDocuments(
         'Combatant',
-        this.combatants.map((c) => ({ 'flags.world.turnTaken': false })),
+        this.combatants.map((c) => ({ _id: c.id, 'flags.world.turnTaken': false })),
         { updateAll: true }
       );
     }

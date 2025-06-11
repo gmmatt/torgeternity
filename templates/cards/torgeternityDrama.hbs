@@ -1,6 +1,6 @@
 <form class="{{cssClass}}" autocomplete="off">
   <header class="sheet-header flexrow">
-    <img class="card-face" src="{{document.img}}" data-tooltip=ooltip="{{data.name}}" />
+    <img class="card-face" src="{{document.img}}" data-tooltip="{{data.name}}" />
     <h1 class="name">
       <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}" />
     </h1>
@@ -26,7 +26,8 @@
   <div class="tab" data-tab="details">
     <div class="form-group">
       <label>{{localize "torgeternity.sheetLabels.number"}}</label>
-      <div class="form-fields torgeternityFormFields">{{numberInput data.system.number name="system.number" step=1}}</div>
+      <div class="form-fields torgeternityFormFields">{{numberInput data.system.number name="system.number" step=1}}
+      </div>
     </div>
 
     <div class="form-group">
@@ -57,41 +58,39 @@
           type="button"
           class="face-control"
           data-tooltip=ooltip="{{localize 'CARD.FaceAdd'}}"
-          data-action="addFace"
-        >
+          data-action="addFace">
           <i class="fas fa-plus fa-fw"></i>
         </button>
       </div>
     </div>
     {{#each data.faces as |face i|}}
-    <div class="face" data-face="{{i}}">
-      <div class="form-group">
-        <label>{{localize "CARD.FaceName"}}</label>
-        <div class="form-fields torgeternityFormFields">
-          <input type="text" name="faces.{{i}}.name" value="{{face.name}}" />
-          <button
-            type="button"
-            class="face-control"
-            data-tooltip=ooltip="{{localize 'CARD.FaceDelete'}}"
-            data-action="deleteFace"
-          >
-            <i class="fas fa-trash fa-fw"></i>
-          </button>
+      <div class="face" data-face="{{i}}">
+        <div class="form-group">
+          <label>{{localize "CARD.FaceName"}}</label>
+          <div class="form-fields torgeternityFormFields">
+            <input type="text" name="faces.{{i}}.name" value="{{face.name}}" />
+            <button
+              type="button"
+              class="face-control"
+              data-tooltip=ooltip="{{localize 'CARD.FaceDelete'}}"
+              data-action="deleteFace">
+              <i class="fas fa-trash fa-fw"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "CARD.FaceImage"}}</label>
+          <div class="form-fields torgeternityFormFields">
+            <file-picker name="faces.{{i}}.img" type="image" value="{{face.img}}"></file-picker>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "CARD.FaceText"}}</label>
+          <div class="form-fields torgeternityFormFields">
+            <textarea name="faces.{{i}}.text">{{face.text}}</textarea>
+          </div>
         </div>
       </div>
-      <div class="form-group">
-        <label>{{localize "CARD.FaceImage"}}</label>
-        <div class="form-fields torgeternityFormFields">
-          <file-picker name="faces.{{i}}.img" type="image" value="{{face.img}}"></file-picker>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>{{localize "CARD.FaceText"}}</label>
-        <div class="form-fields torgeternityFormFields">
-          <textarea name="faces.{{i}}.text">{{face.text}}</textarea>
-        </div>
-      </div>
-    </div>
     {{/each}}
   </div>
 
@@ -104,8 +103,7 @@
           type="text"
           name="back.name"
           placeholder="{{localize 'CARD.BackName'}}"
-          value="{{data.back.name}}"
-        />
+          value="{{data.back.name}}" />
       </div>
     </div>
 
@@ -125,10 +123,10 @@
   <!-- Sheet Footer -->
   <footer class="sheet-footer flexrow">
     {{#if owner}}
-    <button class="submit" type="submit">
-      <i class="fas fa-save"></i>
-      {{localize "CARD.Save"}}
-    </button>
+      <button class="submit" type="submit">
+        <i class="fas fa-save"></i>
+        {{localize "CARD.Save"}}
+      </button>
     {{/if}}
   </footer>
 </form>

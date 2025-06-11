@@ -1,60 +1,63 @@
 <form class="{{cssClass}}" autocomplete="off">
-	<header class="sheet-header flexrow">
-		<h1 class="name">
-			<input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}"/>
-		</h1>
-	</header>
+  <header class="sheet-header flexrow">
+    <h1 class="name">
+      <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}" />
+    </h1>
+  </header>
 
-	<div>
-		<header class="cards-header flexrow">
-			<span class="card-faces">{{localize "CARD.Face"}}</span>
-			<span class="sort-mode"></span>
-			<h4 class="card-name">{{localize "CARD.Name"}}</h4>
-			<span class="card-type">{{localize "CARD.Type"}}</span>
-		</header>
-		<ol class="cards">
-			{{#each cards as |card|}}
-				<li class="card flexrow" data-card-id="{{card.id}}">
-					<div class="card-faces flexcol">
-						<a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless card.hasNextFace}} disabled {{/unless}}>
-							<i class="fas fa-caret-up"></i>
-						</a>
-						<a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}} disabled {{/unless}}>
-							<i class="fas fa-caret-down"></i>
-						</a>
-					</div>
-					<span class="card-tooltip" href="">
-						<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
-						<span><img src="{{card.img}}"></span>
-					</span>
-					<h4 class="card-name">{{card.name}}</h4>
-					{{#if card.showFace}}
-						<span class="card-type">{{card.typeLoc}}</span>
-					{{/if}}
-				</li>
-			{{else}}
-				<li>
-					<p class="hint">{{localize "CARDS.NoCards"}}</p>
-				</li>
-			{{/each}}
-		</ol>
-	</div>
+  <div>
+    <header class="cards-header flexrow">
+      <span class="card-faces">{{localize "CARD.Face"}}</span>
+      <span class="sort-mode"></span>
+      <h4 class="card-name">{{localize "CARD.Name"}}</h4>
+      <span class="card-type">{{localize "CARD.Type"}}</span>
+    </header>
+    <ol class="cards">
+      {{#each document.cards as |card|}}
+        <li class="card flexrow" data-card-id="{{card.id}}">
+          <div class="card-faces flexcol">
+            <a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
+              card.hasNextFace}} disabled {{/unless}}>
+              <i class="fas fa-caret-up"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless
+              card.hasPreviousFace}} disabled {{/unless}}>
+              <i class="fas fa-caret-down"></i>
+            </a>
+          </div>
+          <span class="card-tooltip" href="">
+            <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+            <span><img src="{{card.img}}"></span>
+          </span>
+          <h4 class="card-name">{{card.name}}</h4>
+          {{#if card.showFace}}
+            <span class="card-type">{{card.typeLoc}}</span>
+          {{/if}}
+        </li>
+      {{else}}
+        <li>
+          <p class="hint">{{localize "CARDS.NoCards"}}</p>
+        </li>
+      {{/each}}
+    </ol>
+  </div>
 
-	<!-- Sheet Footer -->
-	<footer class="sheet-footer flexrow">
-		{{#if owner}}
-			<button class="card-control" type="button" data-action="shuffle">
-				<i class="fas fa-random"></i>
-				{{localize "CARDS.Shuffle"}}
-			</button>
-			<button class="card-control" type="button" data-action="pass">
-				<i class="fas fa-share-square"></i>
-				{{localize "CARDS.Pass"}}
-			</button>
-			<button class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.return'}}" data-action="return">
-				<i class="fas fa-recycle"></i>
-				{{localize "torgeternity.sheetLabels.return"}}
-			</button>
-		{{/if}}
-	</footer>
+  <!-- Sheet Footer -->
+  <footer class="sheet-footer flexrow">
+    {{#if owner}}
+      <button class="card-control" type="button" data-action="shuffle">
+        <i class="fas fa-random"></i>
+        {{localize "CARDS.Shuffle"}}
+      </button>
+      <button class="card-control" type="button" data-action="pass">
+        <i class="fas fa-share-square"></i>
+        {{localize "CARDS.Pass"}}
+      </button>
+      <button class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.return'}}"
+        data-action="return">
+        <i class="fas fa-recycle"></i>
+        {{localize "torgeternity.sheetLabels.return"}}
+      </button>
+    {{/if}}
+  </footer>
 </form>
