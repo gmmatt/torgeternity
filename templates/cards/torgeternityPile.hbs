@@ -1,66 +1,41 @@
-<form class="{{cssClass}}" autocomplete="off">
-  <header class="sheet-header flexrow">
-    <h1 class="name">
-      <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}" />
-    </h1>
+<header class="sheet-header flexrow">
+  {{formInput fields.name value=source.name placeholder=fields.name.label aria=(object label=fields.name.label)}}
+</header>
+
+<div>
+  <header class="cards-header flexrow">
+    <span class="card-faces">{{localize 'CARD.FIELDS.face.label'}}</span>
+    <span class="sort-mode"></span>
+    <h4 class="card-name">{{localize 'CARD.FIELDS.face.label'}}</h4>
+    <span class="card-type">{{localize 'CARDS.FIELDS.type.label'}}</span>
   </header>
-
-  <div>
-    <header class="cards-header flexrow">
-      <span class="card-faces">{{localize 'CARD.FIELDS.face.label'}}</span>
-      <span class="sort-mode"></span>
-      <h4 class="card-name">{{localize 'CARD.FIELDS.face.label'}}</h4>
-      <span class="card-type">{{localize 'CARDS.FIELDS.type.label'}}</span>
-    </header>
-    <ol class="cards">
-      {{#each cards as |card|}}
-        <li class="card flexrow" data-card-id="{{card.id}}">
-          <div class="card-faces flexcol">
-            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="nextFace"
-              {{#unless
-              card.hasNextFace}} disabled {{/unless}}>
-              <i class="fas fa-caret-up"></i>
-            </a>
-            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="prevFace"
-              {{#unless
-              card.hasPreviousFace}} disabled {{/unless}}>
-              <i class="fas fa-caret-down"></i>
-            </a>
-          </div>
-          <span class="card-tooltip" href="">
-            <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
-            <span><img src="{{card.img}}"></span>
-          </span>
-          <h4 class="card-name">{{card.name}}</h4>
-          {{#if card.showFace}}
-            <!--<span class="card-type">{{card.typeLoc}}</span>-->
-            <span class="card-type">{{card.typeLoc}}</span>
-          {{/if}}
-        </li>
-      {{else}}
-        <li>
-          <p class="notes">{{localize "CARDS.NoCards"}}</p>
-        </li>
-      {{/each}}
-    </ol>
-  </div>
-
-  <!-- Sheet Footer -->
-  <footer class="sheet-footer flexrow">
-    {{#if owner}}
-      <button class="card-control" type="button" data-action="shuffle">
-        <i class="fas fa-random"></i>
-        {{localize "CARDS.Shuffle"}}
-      </button>
-      <button class="card-control" type="button" data-action="pass">
-        <i class="fas fa-share-square"></i>
-        {{localize "CARDS.Pass"}}
-      </button>
-      <button class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.return'}}"
-        data-action="return">
-        <i class="fas fa-recycle"></i>
-        {{localize "torgeternity.sheetLabels.return"}}
-      </button>
-    {{/if}}
-  </footer>
-</form>
+  <ol class="cards">
+    {{#each cards as |card|}}
+      <li class="card flexrow" data-card-id="{{card.id}}">
+        <div class="card-faces flexcol">
+          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
+            data-control="nextFace"
+            {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i>
+          </a>
+          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="controlCard"
+            data-control="prevFace"
+            {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i>
+          </a>
+        </div>
+        <span class="card-tooltip" href="">
+          <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+          <span><img src="{{card.img}}"></span>
+        </span>
+        <h4 class="card-name">{{card.name}}</h4>
+        {{#if card.showFace}}
+          <!--<span class="card-type">{{card.typeLoc}}</span>-->
+          <span class="card-type">{{card.typeLoc}}</span>
+        {{/if}}
+      </li>
+    {{else}}
+      <li>
+        <p class="notes">{{localize "CARDS.NoCards"}}</p>
+      </li>
+    {{/each}}
+  </ol>
+</div>

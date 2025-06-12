@@ -18,25 +18,10 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       height: "auto"
     },
     actions: {
+      controlCard: torgeternityPlayerHand.onControlCard,
       focusCard: torgeternityPlayerHand.focusCard,
-      drawCosm: torgeternityPlayerHand.drawCosm,
-      drawDestiny: torgeternityPlayerHand.drawDestiny,
-      play: torgeternityPlayerHand.playCard,
-      display: torgeternityPlayerHand.displayCard,
-      pass: torgeternityPlayerHand.passCard,
-      create: torgeternityPlayerHand.createCard,
-      edit: torgeternityPlayerHand.editCard,
-      delete: torgeternityPlayerHand.deleteCard,
-      deal: torgeternityPlayerHand.dealCard,
-      draw: torgeternityPlayerHand.drawCard,
-      pass: torgeternityPlayerHand.passCard,
-      reset: torgeternityPlayerHand.resetCard,
-      shuffle: torgeternityPlayerHand.shuffleCard,
-      toggleSort: torgeternityPlayerHand.toggleSort,
-      nextFace: torgeternityPlayerHand.nextFace,
-      prevFace: torgeternityPlayerHand.prevFace,
-      view: torgeternityPlayerHand.viewCard,
-      discard: torgeternityPlayerHand.discardCard,
+      drawCosm: torgeternityPlayerHand.onDrawCosm,
+      drawDestiny: torgeternityPlayerHand.onDrawDestiny,
       //lifelike: torgeternityPlayerHand.submit
     }
   }
@@ -87,138 +72,104 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    *
    * @param event
    */
-  async getCard(event) {
-    // Shamelessly stolen from core software
-    const button = event.target;
-    const li = button.closest('.card');
-    const card = li ? this.document.cards.get(li.dataset.cardId) : null;
-    const cls = getDocumentClass('Card');
+  static async onControlCard(_event, button) {
+    const li = button.closest("li[data-card-id]");
+    const stack = this.document;
+    const card = stack.cards.get(li?.dataset.cardId);
 
     // Save any pending change to the form
-    //await this._onSubmit(event, { preventClose: true, preventRender: true });
+    await this.submit({ operation: { render: false } });
 
-    return card;
-  }
-
-
-  static async passCard(event) {
-    const card = await this.getCard(event);
-    await this.playerPassDialog(card);
-  }
-  static async createCard(event) {
-    const card = await this.getCard(event);
-    return cls.createDialog({}, { parent: this.object, pack: this.document.pack });
-  }
-  static async editCard(event) {
-    const card = await this.getCard(event);
-    return card.sheet.render(true);
-  }
-  static async deleteCard(event) {
-    const card = await this.getCard(event);
-    return card.deleteDialog();
-  }
-  static async dealCard(event) {
-    const card = await this.getCard(event);
-    return this.document.dealDialog();
-  }
-  static async drawCard(event) {
-    const card = await this.getCard(event);
-    return this.document.drawDialog();
-  }
-  static async passCard(event) {
-    const card = await this.getCard(event);
-    return this.document.passDialog();
-  }
-  static async resetCard(event) {
-    const card = await this.getCard(event);
-    this._sortStandard = true;
-    return this.document.recall();
-  }
-  static async shuffleCard(event) {
-    const card = await this.getCard(event);
-    this._sortStandard = false;
-    return this.document.shuffle();
-  }
-  static async toggleSort(event) {
-    const card = await this.getCard(event);
-    his._sortStandard = !this._sortStandard;
-    return this.render();
-  }
-  static async nextFace(event) {
-    const card = await this.getCard(event);
-    return card.update({ face: card.face === null ? 0 : card.face + 1 });
-  }
-  static async prevFace(event) {
-    const card = await this.getCard(event);
-    return card.update({ face: card.face === 0 ? null : card.face - 1 });
-  }
-
-  static async displayCard(event) {
-    const card = await this.getCard(event);
-    const x = new ImagePopout(card.img, { title: card.name }).render(true, {
-      width: 425,
-      height: 650,
-    });
-    x.shareImage();
-  }
-
-  static async viewCard(event) {
-    const card = await this.getCard(event);
-    new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
-  }
-
-  static async discardCard(event) {
-    const card = await this.getCard(event);
-    await card.setFlag('torgeternity', 'pooled', false);
-    if (card.type == 'destiny') {
-      await card.pass(
-        game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
-      );
-    } else {
-      await card.pass(
-        game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
-      );
-    }
-    card.toMessage({
-      content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-        }"/><span><img src="${card.img
-        }"></span></span><span class="card-name">${game.i18n.localize(
-          'torgeternity.chatText.discardsCard'
-        )} ${card.name}</span>
+    // Handle the control action
+    switch (button.dataset.control) {
+      case 'pass':
+        await this.playerPassDialog(card);
+        return;
+      case 'create':
+        return getDocumentClass('Card').createDialog({}, { parent: this.object, pack: this.document.pack });
+      case 'edit':
+        return card.sheet.render(true);
+      case 'delete':
+        return card.deleteDialog();
+      case 'deal':
+        return this.document.dealDialog();
+      case 'draw':
+        return this.document.drawDialog();
+      case 'pass':
+        return this.document.passDialog();
+      case 'reset':
+        this._sortStandard = true;
+        return this.document.recall();
+      case 'shuffle':
+        this._sortStandard = false;
+        return this.document.shuffle();
+      case 'toggleSort':
+        this._sortStandard = !this._sortStandard;
+        return this.render();
+      case 'nextFace':
+        return card.update({ face: card.face === null ? 0 : card.face + 1 });
+      case 'prevFace':
+        return card.update({ face: card.face === 0 ? null : card.face - 1 });
+      case 'display':
+        const image1 = new foundry.applications.apps.ImagePopout({ src: card.img, window: { title: card.name } });
+        image1.render(true, {
+          width: 425,
+          height: 650,
+        });
+        image1.shareImage();
+        return;
+      case 'view':
+        const image2 = new foundry.applications.apps.ImagePopout({ src: card.img, window: { title: card.name } });
+        image2.render(true, { width: 425, height: 650 });
+        return;
+      case 'discard':
+        await card.setFlag('torgeternity', 'pooled', false);
+        if (card.type == 'destiny') {
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
+          );
+        } else {
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
+          );
+        }
+        card.toMessage({
+          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
+            }"/><span><img src="${card.img
+            }"></span></span><span class="card-name">${game.i18n.localize(
+              'torgeternity.chatText.discardsCard'
+            )} ${card.name}</span>
               </div>`,
-    });
-  }
-
-  static async playCard(event) {
-    const card = await this.getCard(event);
-    await card.setFlag('torgeternity', 'pooled', false);
-    if (card.type == 'destiny') {
-      await card.pass(
-        game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
-      );
-    } else {
-      await card.pass(
-        game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
-      );
-    }
-    card.toMessage({
-      content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-        }"/><span><img src="${card.img
-        }"></span></span><span class="card-name">${game.i18n.localize(
-          'torgeternity.chatText.playsCard'
-        )} ${card.name}</span>
+        });
+        return;
+      case 'play':
+        await card.setFlag('torgeternity', 'pooled', false);
+        if (card.type == 'destiny') {
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
+          );
+        } else {
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
+          );
+        }
+        card.toMessage({
+          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
+            }"/><span><img src="${card.img
+            }"></span></span><span class="card-name">${game.i18n.localize(
+              'torgeternity.chatText.playsCard'
+            )} ${card.name}</span>
             </div>`,
-    });
+        });
+        return;
+    }
   }
 
-  static async drawCosm(event) {
-    const card = await this.getCard(event);
+  static onDrawCosm() {
     this.drawCosmDialog();
-    return;
   }
 
-  static async drawDestiny(event) {
-    const card = await this.getCard(event);
+  static onDrawDestiny() {
     const destinyDeck = game.cards.get(
       game.settings.get('torgeternity', 'deckSetting').destinyDeck
     );
@@ -302,7 +253,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       content: html,
       callback: (html) => {
         const form = html.querySelector('form.cards-dialog');
-        const fd = new FormDataExtended(form).object;
+        const fd = new foundry.applications.ux.FormDataExtended(form).object;
         const to = game.cards.get(fd.to);
         const toName = to.name;
         card.toMessage({
@@ -339,7 +290,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       content: html,
       callback: (html) => {
         const form = html[0].querySelector('form.cosm-dialog');
-        const fd = new FormDataExtended(form).object;
+        const fd = new foundry.applications.ux.FormDataExtended(form).object;
         const cosmDeck = game.cards.get(fd.from);
         if (cosmDeck.cards.size) {
           const [firstCardKey] = cosmDeck.cards.keys(); // need to grab a card to get toMessage access

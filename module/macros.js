@@ -118,12 +118,12 @@ export class TorgeternityMacros {
     const windowContent = `
             <form style="margin-bottom: 1rem; display:grid; grid-template-rows: repeat(2,auto); grid-template-columns: repeat(2,auto); align-items: center; gap:6px;">
                 <label for="inputValue">${game.i18n.localize(
-                  'torgeternity.macros.reviveMacroWindowLabel1'
-                )}</label>
+      'torgeternity.macros.reviveMacroWindowLabel1'
+    )}</label>
                 <input type="number" min="1" step="1" name="inputValue" id="inputValue">
                 <input style="grid-row: 2/3;grid-column: 2/3;" type="checkbox" name="wholeRevive"> <label for="wholeRevive" style="grid-row: 2/3; grid-column: 1/2">${game.i18n.localize(
-                  'torgeternity.macros.reviveMacroWholeRevive'
-                )}
+      'torgeternity.macros.reviveMacroWholeRevive'
+    )}
             </form>
         `;
 
@@ -149,7 +149,7 @@ export class TorgeternityMacros {
       const tokens = canvas.tokens.controlled;
 
       const formElement = html[0].querySelector('form');
-      const formData = await new FormDataExtended(formElement);
+      const formData = await new foundry.applications.ux.FormDataExtended(formElement);
       const bolWholeRevive = formData.object.wholeRevive;
       const reviveAmount = parseInt(formData.object.inputValue);
 
@@ -196,9 +196,8 @@ export class TorgeternityMacros {
         if (token.actor.statuses.find((d) => d === 'unconscious')) {
           const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
           token.toggleEffect(eff, { active: false, overlay: false });
-          chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${
-            token.actor.name
-          }`;
+          chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${token.actor.name
+            }`;
         }
         chatOutput += '</li>';
       }
@@ -218,8 +217,8 @@ export class TorgeternityMacros {
     const windowContent = `
             <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap: 9px;align-items:center">
                 <label for="inputValue">${game.i18n.localize(
-                  'torgeternity.macros.bonusDieMacroContent'
-                )}</label>
+      'torgeternity.macros.bonusDieMacroContent'
+    )}</label>
                 <input style="width:25%;" type="number" min="1" step="1" name="inputValue" id="inputValue">
             </form>
         `;
@@ -244,7 +243,7 @@ export class TorgeternityMacros {
   async _rollItBDs(html) {
     try {
       const formElement = html[0].querySelector('form');
-      const formData = new FormDataExtended(formElement);
+      const formData = new foundry.applications.ux.FormDataExtended(formElement);
       const diceAmount = parseInt(formData.object.inputValue);
 
       if (isNaN(diceAmount)) {
@@ -276,15 +275,12 @@ export class TorgeternityMacros {
       for (const token of targetedTokens) {
         const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.defenses.toughness);
         if (tokenDamage.shocks > 0) {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${
-            token.document.name
-          } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${
-            tokenDamage.label
-          }.</li>`;
+          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
+            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label
+            }.</li>`;
         } else {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${
-            token.document.name
-          } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage')}.</li>`;
+          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
+            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage')}.</li>`;
         }
       }
       chatOutput += '</ul>';
@@ -388,13 +384,11 @@ export class TorgeternityMacros {
         const card = dram.cards.find((i) => i.sort === ind + j + 1);
         ChatMessage.create({
           whisper: targets,
-          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
-            card.img
-          }"/><span><img src="${
-            card.img
-          }"></span></span><span class="card-name"> ${game.i18n.localize(
-            'torgeternity.dialogWindow.showingDramaCards.show'
-          )} ${card.name}</span>
+          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
+            }"/><span><img src="${card.img
+            }"></span></span><span class="card-name"> ${game.i18n.localize(
+              'torgeternity.dialogWindow.showingDramaCards.show'
+            )} ${card.name}</span>
                     </div>`,
         });
       }
@@ -934,22 +928,22 @@ export class TorgeternityMacros {
       window: { title: 'Periculum' },
       content: `
           <label>${game.i18n.localize(
-            'torgeternity.macros.periculumSourceName'
-          )}<br><input placeholder=${game.i18n.localize(
+        'torgeternity.macros.periculumSourceName'
+      )}<br><input placeholder=${game.i18n.localize(
         'torgeternity.macros.periculumSourcePlaceHolder'
       )} style="color:black" name="source" type="string" value="${source}"></label>
           <label>${game.i18n.localize(
-            'torgeternity.macros.periculumDamageValue'
-          )}<input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
+        'torgeternity.macros.periculumDamageValue'
+      )}<input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
           <label>${game.i18n.localize(
-            'torgeternity.macros.periculumBds'
-          )}<input name="plusBD" type="number" value=${bds} style="width:35px"></label>
+        'torgeternity.macros.periculumBds'
+      )}<input name="plusBD" type="number" value=${bds} style="width:35px"></label>
           <label>${game.i18n.localize(
-            'torgeternity.macros.periculumArmor'
-          )}<input name="armor" type="checkbox" ${armored}></label>
+        'torgeternity.macros.periculumArmor'
+      )}<input name="armor" type="checkbox" ${armored}></label>
           <label>${game.i18n.localize(
-            'torgeternity.macros.periculumAp'
-          )}<input name="ap" type="number" style="width:35px" value=${ap}></label>
+        'torgeternity.macros.periculumAp'
+      )}<input name="ap" type="number" style="width:35px" value=${ap}></label>
           `,
       ok: {
         label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), // 'Submit Effect',

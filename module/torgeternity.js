@@ -233,8 +233,8 @@ Hooks.on('ready', async function () {
         },
       },
       {
-	top: 150,
-	left: 100,
+        top: 150,
+        left: 100,
         width: 675,
       }
     );
@@ -449,11 +449,12 @@ Hooks.on('getMonarchHandComponents', (hand, components) => {
     icon: 'fas fa-broadcast-tower',
     color: '#FFFFFF',
     onclick: (event, card) => {
-      const x = new ImagePopout(card.img, { title: card.name }).render(true, {
+      const image = new foundry.applications.apps.ImagePopout({ src: card.img }, { title: card.name });
+      image.render(true, {
         width: 425,
         height: 650,
       });
-      x.shareImage();
+      image.shareImage();
     },
   });
   components.controls.push({

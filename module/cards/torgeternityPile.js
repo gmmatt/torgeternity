@@ -11,13 +11,21 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
     position: {
       width: 400,
       height: "auto"
+    },
+    actions: {
+      controlCard: torgeternityPile.onControlCard,
+      reset: torgeternityPile.onReset,
+      shuffle: torgeternityPile.onShuffle,
     }
   }
 
   static PARTS = {
     cards: {
-      template: 'systems/torgeternity/templates/cards/torgeternityPile.hbs'
-    }
+      template: 'systems/torgeternity/templates/cards/torgeternityPile.hbs',
+      root: true,
+      scrollable: ["ol[data-cards]"]
+    },
+    footer: { template: "templates/generic/form-footer.hbs" }
   }
 
   /**
@@ -32,22 +40,33 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
     return context;
   }
 
+  _prepareButtons() {
+    /* if owner */
+    if (this.document.isOwner)
+      return [
+        { type: 'button', icon: 'fas fa-random', label: 'CARDS.ACTIONS.Shuffle', cssClass: "card-control", action: "shuffle" },
+        { type: 'button', icon: 'fas fa-share-square', label: 'CARDS.ACTIONS.Pass', cssClass: "card-control", action: "pass" },
+        { type: 'button', icon: 'fas fa-recycle', label: 'torgeternity.sheetLabels.return', cssClass: "card-control", action: "return", tooltip: 'torgeternity.dialogPrompts.return' },
+      ]
+    else
+      return [];
+  }
+
   /**
    *
    * @param {Event} event The event object.
    */
-  async _onCardControl(event) {
-    // Shamelessly stolen from core software
-    const button = event.currentTarget;
-    const li = button.closest('.card');
-    const card = li ? this.document.cards.get(li.dataset.cardId) : null;
-    const cls = getDocumentClass('Card');
+
+  static async onControlCard(_event, button) {
+    const li = button.closest("li[data-card-id]");
+    const stack = this.document;
+    const card = stack.cards.get(li?.dataset.cardId);
 
     // Save any pending change to the form
-    await this._onSubmit(event, { preventClose: true, preventRender: true });
+    await this.submit({ operation: { render: false } });
 
     // Handle the control action
-    switch (button.dataset.action) {
+    switch (button.dataset.control) {
       case 'play':
         card.setFlag('torgeternity', 'pooled', false);
         card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
@@ -59,14 +78,15 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
         });
         return;
       case 'view':
-        new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
+        new foundry.applications.apps.ImagePopout({ src: card.img }, { title: card.name }).render(true, { width: 425, height: 650 });
         return;
       case 'display':
-        const x = new ImagePopout(card.img, { title: card.name }).render(true, {
+        const image = new foundry.applications.apps.ImagePopout({ src: card.img }, { title: card.name });
+        image.render(true, {
           width: 425,
           height: 650,
         });
-        x.shareImage();
+        image.shareImage();
         return;
       case 'discard':
         card.setFlag('torgeternity', 'pooled', false);
@@ -108,12 +128,6 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
         return this.document.drawDialog();
       case 'pass':
         return this.document.passDialog();
-      case 'reset':
-        this._sortStandard = true;
-        return this.document.recall();
-      case 'shuffle':
-        this._sortStandard = false;
-        return this.document.shuffle();
       case 'toggleSort':
         this._sortStandard = !this._sortStandard;
         return this.render();
@@ -126,6 +140,16 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
           this.document.cards.contents[i].recall();
         }
     }
+  }
+
+  static onReset() {
+    this._sortStandard = true;
+    return this.document.recall();
+  }
+  static async onShuffle(event) {
+    const card = await this.getCard(event);
+    this._sortStandard = false;
+    return this.document.shuffle();
   }
 
   /**
@@ -154,7 +178,7 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
       content: html,
       callback: (html) => {
         const form = html.querySelector('form.cards-dialog');
-        const fd = new FormDataExtended(form).object;
+        const fd = new foundry.applications.ux.FormDataExtended(form).object;
         const to = game.cards.get(fd.to);
         const options = { how: fd.how, updateData: fd.down ? { face: null } : {} };
         return this.deal([to], fd.number, options).catch((err) => {
