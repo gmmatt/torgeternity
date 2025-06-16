@@ -30,8 +30,7 @@ export class TorgeternityMacros {
             case 'veryStymied':
             case 'vulnerable':
             case 'veryVulnerable':
-              const ef = CONFIG.statusEffects.find((e) => e.id === effect);
-              await token.toggleEffect(ef, { active: false });
+              await token.actor.toggleStatusEffect(effect, { active: false });
               chatOutput += `<li>${game.i18n.localize(
                 'torgeternity.macros.clearStatusEffectsliftetFrom'
               )} ${token.actor.name} ${game.i18n.localize(
@@ -96,10 +95,9 @@ export class TorgeternityMacros {
       )}`;
       if (
         parseInt(token.actor.system.shock.value) >= parseInt(token.actor.system.shock.max) &&
-        !token.actor.statuses.find((d) => d === 'unconscious')
+        !token.document.hasStatusEffect('unconscious')
       ) {
-        const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-        token.toggleEffect(eff, { active: true, overlay: true });
+        token.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
         chatOutput += `<br><strong>${token.document.name}${game.i18n.localize(
           'torgeternity.macros.fatigueMacroCharKO'
         )}</strong>`;
@@ -193,9 +191,8 @@ export class TorgeternityMacros {
           )}${reviveAmount}`;
         }
 
-        if (token.actor.statuses.find((d) => d === 'unconscious')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-          token.toggleEffect(eff, { active: false, overlay: false });
+        if (token.document.hasStatusEffect('unconscious')) {
+          token.actor.toggleStatusEffect('unconscious', { active: false, overlay: false });
           chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${token.actor.name
             }`;
         }
@@ -421,20 +418,14 @@ export class TorgeternityMacros {
   async reconnection() {
     const _token = canvas.tokens.controlled[0];
     const _actor = _token?.actor;
-    const eff = CONFIG.statusEffects.find((e) => e.id === 'disconnected');
 
     if (!_actor) {
       ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoTokensSelected'));
       return;
     }
     const realitySkill = _actor.system.skills.reality;
-    let _status;
 
-    for (const ef of _actor.statuses) {
-      _status = ef === 'disconnected' ? eff : false;
-    }
-
-    if (!_status) {
+    if (!_token.document.hasStatusEffect('disconnected')) {
       ui.notifications.error(game.i18n.localize('torgeternity.macros.bonusDieMacroNoDiscon'));
       return;
     }
@@ -496,8 +487,8 @@ export class TorgeternityMacros {
     switch (dialog.flags.torgeternity.test.resultText) {
       case game.i18n.localize('torgeternity.chatText.check.result.standartSuccess'):
       case game.i18n.localize('torgeternity.chatText.check.result.goodSuccess'):
-      case game.i18n.localize('torgeternity.chatText.check.result.standartSuccess'):
-        await _token.toggleEffect(eff, { active: false, overlay: false });
+      case game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess'):
+        await _actor.toggleStatusEffect('disconnected', { active: false, overlay: false });
         ui.notifications.info(
           `${game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet')}</p>`
         );

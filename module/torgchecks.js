@@ -389,25 +389,26 @@ export async function renderSkillChat(test) {
         test.actor.includes(tok.document.actor.uuid)
       );
       if (!!ownToken & (i === 0)) {
-        if (!ownToken.actor.statuses.find((d) => d === 'veryVulnerable')) {
-          if (ownToken.actor.statuses.find((d) => d === 'vulnerable')) {
+        if (!ownToken.document.hasStatusEffect('veryVulnerable')) {
+          if (ownToken.document.hasStatusEffect('vulnerable')) {
             // take away vulnerable effect
-            const ef = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
-            await ownToken.toggleEffect(ef, { active: false });
+            await ownToken.actor.toggleStatusEffect('vulnerable', { active: false });
           }
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
-          eff.origin = test.actor;
-          eff.duration = { rounds: 2, turns: 2 };
-          await ownToken.toggleEffect(eff, { active: true });
+          const effect = await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: true });
+          effect.update({
+            origin: test.actor,
+            duration: { rounds: 2, turns: 2 }
+          })
         } else if (
           ownToken.actor.appliedEffects.find((d) => d.statuses.find((e) => e === 'veryVulnerable'))
             .duration.turns != 2
         ) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
-          await ownToken.toggleEffect(eff, { active: false });
-          eff.origin = test.actor;
-          eff.duration = { rounds: 2, turns: 2 };
-          await ownToken.toggleEffect(eff, { active: true });
+          await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: false });
+          const effect = await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: true });
+          effect.update({
+            origin: test.actor,
+            duration: { rounds: 2, turns: 2 }
+          })
         }
       }
     }
@@ -1003,12 +1004,8 @@ export async function renderSkillChat(test) {
  */
 
 export function checkForDiscon(actor) {
-  for (const ef of actor.statuses) {
-    if (ef === 'disconnected') {
-      return true;
-    }
-  }
-  return false;
+  // just like TokenDocument.hasStatusEffect
+  return actor?.statuses.has('disconnected') ?? false;
 }
 
 /**
@@ -1141,17 +1138,15 @@ export async function applyDamages(damageObject, targetuuid) {
       });
       // too many wounds => apply defeat ? Ko ?
       if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
-          await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('dead')) {
+          await targetToken.actor.toggleStatusEffect('dead', { active: true, overlay: true });
         }
       }
       // too many shocks, apply KO if not dead
       if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
-          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('unconscious')) {
+          if (!targetToken.document.hasStatusEffect('dead')) {
+            await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
           }
         }
       }
@@ -1164,9 +1159,8 @@ export async function applyDamages(damageObject, targetuuid) {
       });
       // too many wounds => apply defeat ? Ko ?
       if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
-          await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('dead')) {
+          await targetToken.actor.toggleStatusEffect('dead', { active: true, overlay: true });
         }
       }
     }
@@ -1195,10 +1189,9 @@ export async function backlash1(targetuuid) {
       });
       // too many shocks, apply KO if not dead
       if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
-          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('unconscious')) {
+          if (!targetToken.document.hasStatusEffect('dead')) {
+            await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
           }
         }
       }
@@ -1225,13 +1218,10 @@ export async function backlash2(targetuuid) {
         'system.shock.value': newShock,
       });
       // too many shocks, apply KO if not dead
-      if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
-          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-            await targetToken.toggleEffect(eff, { active: true, overlay: true });
-          }
-        }
+      if (newShock > targetToken.actor.system.shock.max &&
+        !targetToken.document.hasStatusEffect('unconscious') &&
+        !targetToken.document.hasStatusEffect('dead')) {
+        await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
       }
     }
   } else {
@@ -1247,21 +1237,17 @@ export async function backlash3(targetuuid) {
     targetuuid.includes(tok.document.actorId)
   );
   // apply Stymied, or veryStymied
-  let eff;
-  let oldEff;
-  if (targetToken.actor.statuses.find((d) => d === 'veryStymied')) {
-  } else if (targetToken.actor.statuses.find((d) => d === 'stymied')) {
-    oldEff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
-  } else {
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  if (targetToken.document.hasStatusEffect('stymied')) {
+    await targetToken.actor.toggleStatusEffect('stymied', { active: false });
   }
-  if (eff) {
-    eff.origin = targetuuid;
-    eff.duration = { rounds: 1, turns: 1 };
-    await targetToken.toggleEffect(eff, { active: true });
+
+  if (!targetToken.document.hasStatusEffect('veryStymied')) {
+    let eff = await targetToken.actor.toggleStatusEffect('veryStymied', { active: true });
+    eff.update({
+      origin: targetuuid,
+      duration: { rounds: 1, turns: 1 }
+    })
   }
-  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 //
 /**
@@ -1313,20 +1299,22 @@ export async function applyStymiedState(targetuuid, sourceuuid) {
   );
   // apply Stymied, or veryStymied
   let eff;
-  let oldEff;
-  if (targetToken.actor.statuses.find((d) => d === 'veryStymied')) {
-  } else if (targetToken.actor.statuses.find((d) => d === 'stymied')) {
-    oldEff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  if (targetToken.document.hasStatusEffect('veryStymied')) {
+    //
+  } else if (targetToken.document.hasStatusEffect('stymied')) {
+    await targetToken.actor.toggleStatusEffect('stymied', { active: false });
+    eff = 'veryStymied';
   } else {
-    eff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
+    eff = 'stymied';
   }
+
   if (eff) {
-    eff.origin = sourceuuid;
-    eff.duration = { rounds: 1, turns: 1 };
-    await targetToken.toggleEffect(eff, { active: true });
+    const effect = await targetToken.actor.toggleStatusEffect(eff, { active: true });
+    effect.update({
+      origin: sourceuuid,
+      duration: { rounds: 1, turns: 1 }
+    })
   }
-  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
 /**
@@ -1339,20 +1327,21 @@ export async function applyVulnerableState(targetuuid, sourceuuid) {
   );
   // apply Vulnerable, or veryVulnerable
   let eff;
-  let oldEff;
-  if (targetToken.actor.statuses.find((d) => d === 'veryVulnerable')) {
-  } else if (targetToken.actor.statuses.find((d) => d === 'vulnerable')) {
-    oldEff = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
+  if (targetToken.document.hasStatusEffect('veryVulnerable')) {
+    //
+  } else if (targetToken.document.hasStatusEffect('vulnerable')) {
+    await targetToken.actor.toggleStatusEffect('vulnerable', { active: false });
+    eff = 'veryVulnerable';
   } else {
-    eff = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
+    eff = 'vulnerable';
   }
   if (eff) {
-    eff.origin = sourceuuid;
-    eff.duration = { rounds: 1, turns: 1 };
-    await targetToken.toggleEffect(eff, { active: true });
+    const effect = await targetToken.actor.toggleStatusEffect(eff, { active: true });
+    effect.update({
+      origin: sourceuuid,
+      duration: { rounds: 1, turns: 1 }
+    })
   }
-  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
 /**
