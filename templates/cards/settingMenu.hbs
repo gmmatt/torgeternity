@@ -1,7 +1,7 @@
 <form>
   <div class="flexrow">
     <div>
-      <h2>{{localize "CARDS.TypeDeck"}} {{localize "torgeternity.cardTypes.destiny"}}</h2>
+      <h2>{{localize "TYPES.Cards.deck"}} {{localize "torgeternity.cardTypes.destiny"}}</h2>
 
       <div class="form-group">
         <select name="destinyDeck" class="selectDeck">
@@ -15,7 +15,7 @@
         </select>
       </div>
 
-      <h2>{{localize "CARDS.TypeDeck"}} {{localize "torgeternity.cardTypes.drama"}}</h2>
+      <h2>{{localize "TYPES.Cards.deck"}} {{localize "torgeternity.cardTypes.drama"}}</h2>
       <div class="form-group">
         <select name="dramaDeck" class="selectDeck">
           {{selectOptions decks selected=object.dramaDeck sort=true}}
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div>
-      <h2>{{localize "CARDS.TypeDeck"}} {{localize "torgeternity.cardTypes.cosm"}}</h2>
+      <h2>{{localize "TYPES.Cards.deck"}} {{localize "torgeternity.cardTypes.cosm"}}</h2>
 
       <div class="form-group">
         <label>{{localize "torgeternity.cardTypes.discardPile"}}</label>
@@ -97,17 +97,16 @@
       <h2>{{localize "torgeternity.sheetLabels.stormknight"}}</h2>
       <div class="stormknight-list">
         {{#each stormknights as |stormknight index|}} {{#if stormknight.isOwner}}
-        <div class="formFields flexrow">
-          <label>{{stormknight.name}}</label>
-          <select
-            data-actor-id="{{stormknight.id}}"
-            data-type="String"
-            class="selectDeck formFields stormknightHand"
-          >
-            {{selectOptions ../hands selected=(lookup @root/stormknights stormknight.id sort=true)}}
-          </select>
-        </div>
-        {{/if}} {{/each}}
+            <div class="formFields flexrow">
+              <label>{{stormknight.name}}</label>
+              <select
+                data-actor-id="{{stormknight.id}}"
+                data-type="String"
+                class="selectDeck formFields stormknightHand">
+                {{selectOptions ../hands selected=(lookup @root/stormknights stormknight.id sort=true)}}
+              </select>
+            </div>
+          {{/if}} {{/each}}
       </div>
     </div>
   </div>

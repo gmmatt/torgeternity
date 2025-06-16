@@ -367,15 +367,17 @@ Hooks.on('ready', async function () {
     };
   }
   const externalLinks = new Dialog(dialData, dialOption);
-  // ----logo image
-  const logo = document.querySelector('button[data-control="TORG"]')
-  logo.style.position = 'absolute';
-  logo.setAttribute('src', '/systems/torgeternity/images/vttLogo.webp');
-  // ----open links when click on logo
-  logo.title = 'external links';
-  logo.addEventListener('click', function () {
-    externalLinks.render(true);
-  });
+  /*
+    // ----MAIN logo image
+    const logo = document.querySelector('button#logo')
+    logo.style.position = 'absolute';
+    logo.setAttribute('src', '/systems/torgeternity/images/vttLogo.webp');
+    // ----open links when click on logo
+    logo.title = 'external links';
+    logo.addEventListener('click', function () {
+      externalLinks.render(true);
+    });
+  */
 
   /*
   //-----applying players card ui:

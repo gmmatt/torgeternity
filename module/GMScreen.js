@@ -1,40 +1,40 @@
 /**
  *
  */
-export default class GMScreen extends Application {
-  /**
-   *
-   */
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.template = 'systems/torgeternity/templates/gmscreen/screen.html';
-    options.width = '1300';
-    options.height = '500';
-    options.id = 'GMScreen';
-    options.title = game.i18n.localize('torgeternity.gmScreen.title');
-    options.resizable = true;
-    options.top = 10;
-    return options;
+export default class GMScreen extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2) {
+
+  static DEFAULT_OPTIONS = {
+    id: 'gmscreen',
+    position: {
+      top: 10,
+      width: 1300,
+      height: 500,
+    },
+    window: {
+      resizable: true,
+    },
+    actions: {
+      clickPanel: GMScreen.#clickPanel,
+    }
+  };
+
+  static PARTS = {
+    gmscreen: { template: 'systems/torgeternity/templates/gmscreen/screen.html' },
+  };
+
+  get title() {
+    return game.i18n.localize('torgeternity.gmScreen.title');
   }
 
-  /**
-   *
-   * @param html
-   */
-  activateListeners(html) {
-    super.activateListeners(html);
-
-    html.find('.screen-panel').click(this.clickPanel.bind(this));
-  }
   /**
    *
    * @param evt
    */
-  clickPanel(evt) {
+  static #clickPanel(evt) {
     let cl;
 
-    const GMScreen = this.element.find('#gm-screen')[0];
-    switch (evt.currentTarget.id) {
+    const GMScreen = this.element.querySelectorAll('#gm-screen')[0];
+    switch (evt.target.id) {
       case 'right-panel':
         cl = 'focus-right';
 
@@ -53,8 +53,8 @@ export default class GMScreen extends Application {
   /**
    *
    */
-  getData() {
-    const data = super.getData();
+  async _prepareContext(options) {
+    const data = await super._prepareContext(options);
     const path = game.settings.get('torgeternity', 'gmScreen');
     let lang = game.settings.get('core', 'language');
 
@@ -74,9 +74,11 @@ export default class GMScreen extends Application {
    *
    */
   toggleRender() {
-    if (this.rendered) {
-      if (this._minimized) return this.maximize();
-      else return this.close();
-    } else return this.render(true);
+    if (!this.rendered)
+      return this.render(true);
+    else if (this._minimized)
+      return this.maximize();
+    else
+      return this.close();
   }
 }

@@ -997,8 +997,8 @@ form input {
   opacity: 0.7;
 }
 
-button[data-control="TORG"] {
-  width: 56px;
+button[data-control="torg"] {
+  /*width: 56px; - Need to fix the button's alignment */
   height: 30px;
   background-image: url(../images/te-logo.webp);
   background-size: 100%;
