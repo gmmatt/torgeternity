@@ -1201,7 +1201,7 @@ nav#controls ol .torgHand:before {
   box-shadow: 0 0 10px #004777 inset;
 }
 
-#navigation #nav-toggle {
+#scene-navigation #nav-toggle {
   flex: 0 0 50px;
   height: 50px;
   background: url(../images/resizerRound.webp);
@@ -1214,8 +1214,8 @@ nav#controls ol .torgHand:before {
   font-size: 30px;
 }
 
-#navigation div.cosm-card,
-#navigation div.cosm-card.cosm2 {
+#scene-navigation div.cosm-card,
+#scene-navigation div.cosm-card.cosm2 {
   position: fixed;
   top: -50%;
   left: 30%;
@@ -1227,7 +1227,7 @@ nav#controls ol .torgHand:before {
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-#navigation div.cosm-icone:hover div.cosm-card {
+#scene-navigation div.cosm-icone:hover div.cosm-card {
   top: 0%;
   width: 600px;
   height: 400px;
@@ -1237,15 +1237,15 @@ nav#controls ol .torgHand:before {
   z-index: +1;
 }
 
-#navigation div.cosm-icone.dominant2ndCosm .cosm-card {
+#scene-navigation div.cosm-icone.dominant2ndCosm .cosm-card {
   filter: grayscale(1);
 }
 
-#navigation div.cosm-icone:hover div.fr.cosm-card {
+#scene-navigation div.cosm-icone:hover div.fr.cosm-card {
   transform: scale(1);
 }
 
-#navigation div.cosm-icone:hover div.de.cosm-card {
+#scene-navigation div.cosm-icone:hover div.de.cosm-card {
   transform: scale(1, 0.85);
 }
 
@@ -1255,47 +1255,47 @@ Base english tent cards images
 -------------------------------
 --------------------------*/
 
-#navigation .cosm-card.coreEarth {
+#scene-navigation .cosm-card.coreEarth {
   background: url(../images/cosm-cards/coreEarth.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.livingLand {
+#scene-navigation .cosm-card.livingLand {
   background: url(../images/cosm-cards/livingLand.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.nileEmpire {
+#scene-navigation .cosm-card.nileEmpire {
   background: url(../images/cosm-cards/nileEmpire.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.aysle {
+#scene-navigation .cosm-card.aysle {
   background: url(../images/cosm-cards/aysle.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.cyberpapacy {
+#scene-navigation .cosm-card.cyberpapacy {
   background: url(../images/cosm-cards/cyberpapacy.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.panPacifica {
+#scene-navigation .cosm-card.panPacifica {
   background: url(../images/cosm-cards/panPacifica.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.panPacificaY1 {
+#scene-navigation .cosm-card.panPacificaY1 {
   background: url(../images/cosm-cards/panPpacifica_Year1.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.orrorsh {
+#scene-navigation .cosm-card.orrorsh {
   background: url(../images/cosm-cards/orrorsh.webp);
   background-size: 100% 100%;
 }
 
-#navigation .cosm-card.tharkold {
+#scene-navigation .cosm-card.tharkold {
   background: url(../images/cosm-cards/tharkold.webp);
   background-size: 100% 100%;
 }
@@ -1306,42 +1306,42 @@ french tent cards images
 -------------------------------
 --------------------------*/
 
-#navigation .fr.cosm-card.coreEarth {
+#scene-navigation .fr.cosm-card.coreEarth {
   background: url(../images/cosm-cards/fr/coreEarth.webp);
   background-size: 100% 100%;
 }
 
-#navigation .fr.cosm-card.livingLand {
+#scene-navigation .fr.cosm-card.livingLand {
   background: url(../images/cosm-cards/fr/livingLand.webp);
   background-size: 100% 100%;
 }
 
-#navigation .fr.cosm-card.nileEmpire {
+#scene-navigation .fr.cosm-card.nileEmpire {
   background: url(../images/cosm-cards/fr/nileEmpire.webp);
   background-size: 100% 100%;
 }
 
-#navigation .fr.cosm-card.aysle {
+#scene-navigation .fr.cosm-card.aysle {
   background: url(../images/cosm-cards/fr/aysle.webp);
   background-size: 100% 100%;
 }
 
-#navigation .fr.cosm-card.cyberpapacy {
+#scene-navigation .fr.cosm-card.cyberpapacy {
   background: url(../images/cosm-cards/fr/cyberpapacy.webp);
   background-size: 100% 100%;
 }
 
-#navigation .fr.cosm-card.panPacifica {
+#scene-navigation .fr.cosm-card.panPacifica {
   background: url(../images/cosm-cards/fr/panPacifica.webp);
   background-size: 100% 100%;
 }
 
-#navigation .fr.cosm-card.orrorsh {
+#scene-navigation .fr.cosm-card.orrorsh {
   background: url(../images/cosm-cards/fr/orrorsh.webp);
   background-size: 100% 100%;
 }
 
-#navigation .fr.cosm-card.tharkold {
+#scene-navigation .fr.cosm-card.tharkold {
   background: url(../images/cosm-cards/fr/tharkold.webp);
   background-size: 100% 100%;
 }
@@ -1352,42 +1352,42 @@ spanish tent cards images
 -------------------------------
 --------------------------*/
 
-#navigation .es.cosm-card.coreEarth {
+#scene-navigation .es.cosm-card.coreEarth {
   background: url(../images/cosm-cards/es/coreEarth.webp);
   background-size: 100% 100%;
 }
 
-#navigation .es.cosm-card.livingLand {
+#scene-navigation .es.cosm-card.livingLand {
   background: url(../images/cosm-cards/es/livingLand.webp);
   background-size: 100% 100%;
 }
 
-#navigation .es.cosm-card.nileEmpire {
+#scene-navigation .es.cosm-card.nileEmpire {
   background: url(../images/cosm-cards/es/nileEmpire.webp);
   background-size: 100% 100%;
 }
 
-#navigation .es.cosm-card.aysle {
+#scene-navigation .es.cosm-card.aysle {
   background: url(../images/cosm-cards/es/aysle.webp);
   background-size: 100% 100%;
 }
 
-#navigation .es.cosm-card.cyberpapacy {
+#scene-navigation .es.cosm-card.cyberpapacy {
   background: url(../images/cosm-cards/es/cyberpapacy.webp);
   background-size: 100% 100%;
 }
 
-#navigation .es.cosm-card.panPacifica {
+#scene-navigation .es.cosm-card.panPacifica {
   background: url(../images/cosm-cards/es/panPacifica.webp);
   background-size: 100% 100%;
 }
 
-#navigation .es.cosm-card.orrorsh {
+#scene-navigation .es.cosm-card.orrorsh {
   background: url(../images/cosm-cards/es/orrorsh.webp);
   background-size: 100% 100%;
 }
 
-#navigation .es.cosm-card.tharkold {
+#scene-navigation .es.cosm-card.tharkold {
   background: url(../images/cosm-cards/es/tharkold.webp);
   background-size: 100% 100%;
 }
@@ -1398,107 +1398,107 @@ german tent cards images
 -------------------------------
 --------------------------*/
 
-#navigation .de.cosm-card.coreEarth {
+#scene-navigation .de.cosm-card.coreEarth {
   background: url(../images/deutsch/cosm-tabletents/ZentralErde.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.livingLand {
+#scene-navigation .de.cosm-card.livingLand {
   background: url(../images/deutsch/cosm-tabletents/LebendesLand.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.nileEmpire {
+#scene-navigation .de.cosm-card.nileEmpire {
   background: url(../images/deutsch/cosm-tabletents/Nil-Imperium.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.aysle {
+#scene-navigation .de.cosm-card.aysle {
   background: url(../images/deutsch/cosm-tabletents/Aysle.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.cyberpapacy {
+#scene-navigation .de.cosm-card.cyberpapacy {
   background: url(../images/deutsch/cosm-tabletents/Cyberpontifikat.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.panPacifica {
+#scene-navigation .de.cosm-card.panPacifica {
   background: url(../images/deutsch/cosm-tabletents/Pan-Pacifica.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.panPacificaY1 {
+#scene-navigation .de.cosm-card.panPacificaY1 {
   background: url(../images/deutsch/cosm-tabletents/Pan-Pacifica-Jahrr1.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.orrorsh {
+#scene-navigation .de.cosm-card.orrorsh {
   background: url(../images/deutsch/cosm-tabletents/Orrorsh.webp);
   background-size: 100% 100%;
 }
 
-#navigation .de.cosm-card.tharkold {
+#scene-navigation .de.cosm-card.tharkold {
   background: url(../images/deutsch/cosm-tabletents/Tharkold.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name {
+#scene-navigation a.scene-name {
   font-family: "Alaska";
   text-transform: uppercase;
   border: none;
   margin-left: 10px;
 }
 
-#navigation a.scene-name .cosm-icone {
+#scene-navigation li.scene .cosm-icone {
   min-width: 28px;
   min-height: 28px;
   display: inline-block;
   position: relative;
 }
 
-#navigation a.scene-name .cosm-icone.coreEarth {
+#scene-navigation li.scene .cosm-icone.coreEarth {
   background: url(../images/cosm-icons/coreEarth.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cosm-icone.livingLand {
+#scene-navigation li.scene .cosm-icone.livingLand {
   background: url(../images/cosm-icons/livingLand.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cosm-icone.nileEmpire {
+#scene-navigation li.scene .cosm-icone.nileEmpire {
   background: url(../images/cosm-icons/nileEmpire.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cosm-icone.aysle {
+#scene-navigation li.scene .cosm-icone.aysle {
   background: url(../images/cosm-icons/aysle.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cosm-icone.cyberpapacy {
+#scene-navigation li.scene .cosm-icone.cyberpapacy {
   background: url(../images/cosm-icons/cyberpapacy.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cosm-icone.tharkold {
+#scene-navigation li.scene .cosm-icone.tharkold {
   background: url(../images/cosm-icons/tharkold.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cosm-icone.panPacifica {
+#scene-navigation li.scene .cosm-icone.panPacifica {
   background: url(../images/cosm-icons/panPacifica.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cosm-icone.orrorsh {
+#scene-navigation li.scene .cosm-icone.orrorsh {
   background: url(../images/cosm-icons/orrorsh.webp);
   background-size: 100% 100%;
 }
 
-#navigation #scene-list .scene,
-#navigation #scene-list .scene.context {
+#scene-navigation #scene-list .scene,
+#scene-navigation #scene-list .scene.context {
   text-align: justify;
   background: url(../images/scene.webp);
   background-size: 100% 100%;
@@ -1515,21 +1515,21 @@ german tent cards images
   text-shadow: 0px 0px 3px black;
 }
 
-#navigation #scene-list .scene.gm {
+#scene-navigation #scene-list .scene.gm {
   background: url(../images/scene-gm.webp);
   background-size: 100% 100%;
   border: none;
   box-shadow: none;
 }
 
-#navigation #scene-list .scene.active {
+#scene-navigation #scene-list .scene.active {
   background: url(../images/scene-active.webp);
   background-size: 100% 100%;
   border: none;
   box-shadow: none;
 }
 
-#navigation #scene-list .scene.view {
+#scene-navigation #scene-list .scene.view {
   background: url(../images/scene-view.webp);
   background-size: 100% 100%;
   border: none;
@@ -1698,7 +1698,7 @@ german tent cards images
 
 nav#controls,
 #logo,
-#navigation,
+#scene-navigation,
 #sidebar,
 #hotbar,
 #players {

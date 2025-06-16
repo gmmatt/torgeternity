@@ -2,20 +2,22 @@
  *
  */
 export default class TorgeternityNav extends foundry.applications.ui.SceneNavigation {
-  /**
-   *
-   */
-  getData() {
-    const context = super.getData();
-    context.lang = game.settings.get('core', 'language');
-    context.scenes = context.scenes.map((s) => ({ ...s, flags: game.scenes.get(s.id).flags }));
-    context.y1pp = game.settings.get('torgeternity', 'y1pp');
-    return context;
+
+  static PARTS = {
+    scenes: {
+      root: true,
+      template: "systems/torgeternity/templates/scenes/nav.hbs"
+    },
   }
   /**
    *
    */
-  get template() {
-    return 'systems/torgeternity/templates/scenes/nav.hbs';
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    context.lang = game.settings.get('core', 'language');
+    context.scenes.active = context.scenes.active.map((s) => ({ ...s, flags: game.scenes.get(s.id).flags }));
+    context.scenes.inactive = context.scenes.inactive.map((s) => ({ ...s, flags: game.scenes.get(s.id).flags }));
+    context.y1pp = game.settings.get('torgeternity', 'y1pp');
+    return context;
   }
 }
