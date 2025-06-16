@@ -27,21 +27,21 @@
   <div class="tab" data-tab="cosm">
     <div class="form-group cosm-primary">
       <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
-        {{selectOptions cosmTypes selected=data.flags.torgeternity.cosm localize=true sort=true}}
+        {{selectOptions cosmTypes selected=source.flags.torgeternity.cosm localize=true sort=true}}
       </select>
 
       <select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
-        {{selectOptions zones selected=data.flags.torgeternity.zone localize=true sort=true}}
+        {{selectOptions zones selected=source.flags.torgeternity.zone localize=true sort=true}}
       </select>
     </div>
 
-    {{#if this.data.flags.torgeternity.displayCosm2}}
-    <div class="form-group cosm-secondary">
-      <label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
-      <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
-        {{selectOptions cosmTypes selected=data.flags.torgeternity.cosm2 localize=true sort=true}}
-      </select>
-    </div>
+    {{#if this.source.flags.torgeternity.displayCosm2}}
+      <div class="form-group cosm-secondary">
+        <label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
+        <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
+          {{selectOptions cosmTypes selected=source.flags.torgeternity.cosm2 localize=true sort=true}}
+        </select>
+      </div>
     {{/if}}
   </div>
   <!-- Basic Tab -->
@@ -81,8 +81,7 @@
         <file-picker
           name="background.src"
           type="imagevideo"
-          value="{{data.background.src}}"
-        ></file-picker>
+          value="{{data.background.src}}"></file-picker>
       </div>
       <p class="notes">{{localize "SCENES.BackgroundImageHint"}}</p>
     </div>
@@ -117,8 +116,7 @@
         <button
           class="capture-position"
           type="button"
-          data-tooltip="{{ localize 'SCENES.InitialViewButton' }}"
-        >
+          data-tooltip="{{ localize 'SCENES.InitialViewButton' }}">
           <i class="fas fa-crop-alt fa-fw"></i>
         </button>
         <label>X</label>
@@ -131,8 +129,7 @@
           name="initial.scale"
           placeholder="1"
           value="{{data.initial.scale}}"
-          step="any"
-        />
+          step="any" />
       </div>
       <p class="notes">{{localize "SCENES.InitialViewHint"}}</p>
     </div>
@@ -146,8 +143,7 @@
         <button
           type="button"
           class="grid-config"
-          data-tooltip="{{ localize 'SCENES.GridConfigTool' }}"
-        >
+          data-tooltip="{{ localize 'SCENES.GridConfigTool' }}">
           <i class="fas fa-ruler-combined"></i>
         </button>
         <select name="grid.type" data-dtype="Number">
@@ -179,8 +175,7 @@
         <button
           type="button"
           class="dimension-link"
-          data-tooltip="{{ localize 'SCENES.DimensionLinked' }}"
-        >
+          data-tooltip="{{ localize 'SCENES.DimensionLinked' }}">
           <i class="fas fa-link-simple"></i>
         </button>
         <label>{{localize "Height"}}</label>
@@ -197,8 +192,7 @@
           value="{{data.padding}}"
           min="0"
           max="0.5"
-          step="0.05"
-        ></range-picker>
+          step="0.05"></range-picker>
       </div>
       <p class="notes">{{localize "SCENES.PaddingHint"}}</p>
     </div>
@@ -225,8 +219,8 @@
         <label class="grid-label">{{localize "SCENES.GridDistance"}}</label>
         {{numberInput data.grid.distance name="grid.distance" placeholder=1}}
         <label class="grid-label">{{localize "SCENES.GridUnits"}}</label>
-        <input type="text" name="grid.units" placeholder="{{localize "None"}}"
-        value="{{data.grid.units}}"/>
+        <input type="text" name="grid.units" placeholder="{{localize " None"}}"
+          value="{{data.grid.units}}" />
       </div>
     </div>
 
@@ -261,8 +255,7 @@
           value="{{data.grid.alpha}}"
           min="0"
           max="1"
-          step="0.05"
-        ></range-picker>
+          step="0.05"></range-picker>
       </div>
     </div>
   </div>
@@ -287,8 +280,7 @@
         <file-picker
           name="fog.overlay"
           type="imagevideo"
-          value="{{data.fog.overlay}}"
-        ></file-picker>
+          value="{{data.fog.overlay}}"></file-picker>
       </div>
       <p class="notes">{{localize "SCENES.FogOverlayHint"}}</p>
     </div>
@@ -298,8 +290,7 @@
       <div class="form-fields torgeternityFormFields">
         <color-picker
           name="fog.colors.unexplored"
-          value="{{data.fog.colors.unexplored}}"
-        ></color-picker>
+          value="{{data.fog.colors.unexplored}}"></color-picker>
       </div>
       <p class="notes">{{localize "SCENES.FogUnexploredColorHint"}}</p>
     </div>
@@ -309,8 +300,7 @@
       <div class="form-fields torgeternityFormFields">
         <color-picker
           name="fog.colors.explored"
-          value="{{data.fog.colors.explored}}"
-        ></color-picker>
+          value="{{data.fog.colors.explored}}"></color-picker>
       </div>
       <p class="notes">{{localize "SCENES.FogExploredColorHint"}}</p>
     </div>
@@ -322,8 +312,7 @@
         type="checkbox"
         name="environment.globalLight.enabled"
         {{checked
-        data.environment.globalLight.enabled}}
-      />
+        data.environment.globalLight.enabled}} />
       <p class="notes">{{localize "SCENES.GlobalIllumHint"}}</p>
     </div>
 
@@ -335,8 +324,7 @@
           value="{{data.environment.globalLight.darkness.max}}"
           min="0"
           max="1"
-          step="0.05"
-        ></range-picker>
+          step="0.05"></range-picker>
       </div>
       <p class="notes">{{localize "SCENES.GlobalLightThresholdHint"}}</p>
     </div>
@@ -351,8 +339,7 @@
           max="1"
           step="0.05"
           {{disabled
-          data.environment.darknessLock}}
-        ></range-picker>
+          data.environment.darknessLock}}></range-picker>
       </div>
       <p class="notes">{{localize "SCENES.DarknessHint"}}</p>
     </div>
@@ -363,8 +350,7 @@
         type="checkbox"
         name="environment.darknessLock"
         {{checked
-        data.environment.darknessLock}}
-      />
+        data.environment.darknessLock}} />
       <p class="notes">{{localize "SCENES.ENVIRONMENT.DarknessLockHint"}}</p>
     </div>
   </div>

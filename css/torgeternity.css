@@ -268,10 +268,10 @@ form.actor-sheet header.sheet-header-vehicle {
   width: 200px;
 }
 
-.window-app .window-content .actor-sheet button.chase-roll,
-.window-app .window-content .actor-sheet button.stunt-roll,
-.window-app .window-content .actor-sheet button.collision-roll,
-.window-app .window-content .actor-sheet button.base-roll {
+.application .window-content .actor-sheet button.chase-roll,
+.application .window-content .actor-sheet button.stunt-roll,
+.application .window-content .actor-sheet button.collision-roll,
+.application .window-content .actor-sheet button.base-roll {
   border: 1px;
   border-radius: 4px;
   text-align: center;
@@ -430,92 +430,92 @@ form.actor-sheet header.sheet-header-vehicle {
   text-align: center;
 }
 
-.window-app .window-content {
+.application .window-content {
   font-family: Alaska;
   background-image: url(../images/thunder.webp);
   background-size: cover;
   color: white;
 }
 
-.window-app .window-content .form-header {
+.application .window-content .form-header {
   color: white;
 }
 
-.window-app .window-content div.form-group input {
+.application .window-content div.form-group input {
   color: white;
 }
 
-.window-app .window-content input[type="text"],
-.window-app .window-content input[type="number"],
-.window-app .window-content input[type="password"],
-.window-app .window-content input[type="date"],
-.window-app .window-content input[type="time"] .editor {
+.application .window-content input[type="text"],
+.application .window-content input[type="number"],
+.application .window-content input[type="password"],
+.application .window-content input[type="date"],
+.application .window-content input[type="time"] .editor {
   background-color: rgba(255, 255, 255, 0.39);
   /*color:white;*/
 }
 
-.window-app .window-content .threat-sheet input[type="text"],
-.window-app .window-content .threat-sheet input[type="number"],
-.window-app .window-content .threat-sheet input[type="password"],
-.window-app .window-content .threat-sheet input[type="date"],
-.window-app .window-content .threat-sheet input[type="time"] .editor {
+.application .window-content .threat-sheet input[type="text"],
+.application .window-content .threat-sheet input[type="number"],
+.application .window-content .threat-sheet input[type="password"],
+.application .window-content .threat-sheet input[type="date"],
+.application .window-content .threat-sheet input[type="time"] .editor {
   background-color: rgba(255, 255, 255, 0.39);
   color: black;
 }
 
 
-.window-app .window-content input::-moz-placeholder,
-.window-app .window-content input:-ms-input-placeholder,
-.window-app .window-content input::placeholder {
+.application .window-content input::-moz-placeholder,
+.application .window-content input:-ms-input-placeholder,
+.application .window-content input::placeholder {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.window-app .window-content .rollable:hover,
-.window-app .window-content .rollable:focus {
+.application .window-content .rollable:hover,
+.application .window-content .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px white;
   cursor: pointer;
 }
 
-.window-app .window-content form .notes,
-.window-app .window-content form .hint {
+.application .window-content .notes,
+.application .window-content .hint {
   color: #b1afaf;
   font-family: Palatino;
   font-size: 14px;
 }
 
-.window-app .window-content form button,
-.window-app .window-content form select {
+.application .window-content button,
+.application .window-content select {
   color: rgb(233, 233, 233);
   cursor: pointer;
 }
 
-.window-app.actor .window-content form select {
+.application.actor .window-content select {
   color: black;
 }
 
-.window-app .window-content form button[disabled] {
+.application .window-content button[disabled] {
   color: gray;
   border: 1px solid red;
   cursor: not-allowed;
 }
 
-.window-app .window-content form select option {
+.application .window-content select option {
   color: white;
 }
 
-.window-app .window-content form select option.disabled {
+.application .window-content select option.disabled {
   color: rgb(156, 100, 100);
   background-color: rgb(83, 77, 77);
 }
 
-.window-app .window-content form select.doubled {
+.application .window-content select.doubled {
   background-color: rgb(238, 148, 148);
   color: black;
   border: 1px solid red;
 }
 
-.window-app .window-content form button:hover {
+.application .window-content button:hover {
   box-shadow: 0px 0px 5px #4970fa;
 }
 
@@ -735,11 +735,11 @@ form .form-group .form-fields.torgeternityFormFields>* {
 
 /*End of editing Prosemirror Editor*/
 /*------------------------------------------*/
-.window-app.image-popout .form-group.title {
+.application.image-popout .form-group.title {
   margin-top: 1%;
 }
 
-.window-app.image-popout .form-group.title input {
+.application.image-popout .form-group.title input {
   height: 32px;
   text-align: center;
   margin-top: 0%;
@@ -857,7 +857,7 @@ a:hover,
 }
 
 .app,
-.window-app {
+.application {
   border-radius: 5px;
   box-shadow: 0 0 15px #122529;
   padding-bottom: 0.5em;
@@ -866,22 +866,22 @@ a:hover,
 }
 
 .app a.entity-link,
-.window-app a.entity-link {
+.application a.entity-link {
   color: black;
 }
 
 .app input[type="text"]::-moz-placeholder,
 .app input[type="number"]::-moz-placeholder,
-.window-app input[type="text"]::-moz-placeholder,
-.window-app input[type="number"]::-moz-placeholder,
+.application input[type="text"]::-moz-placeholder,
+.application input[type="number"]::-moz-placeholder,
 .app input[type="text"]:-ms-input-placeholder,
 .app input[type="number"]:-ms-input-placeholder,
-.window-app input[type="text"]:-ms-input-placeholder,
-.window-app input[type="number"]:-ms-input-placeholder,
+.application input[type="text"]:-ms-input-placeholder,
+.application input[type="number"]:-ms-input-placeholder,
 .app input[type="text"]::placeholder,
 .app input[type="number"]::placeholder,
-.window-app input[type="text"]::placeholder,
-.window-app input[type="number"]::placeholder {
+.application input[type="text"]::placeholder,
+.application input[type="number"]::placeholder {
   /*color: rgba(0, 0, 0, 0.472);*/
   color: rgba(245, 245, 245, 0.9);
   background-color: transparent;
@@ -896,22 +896,22 @@ a:hover,
 }
 
 .app option,
-.window-app option {
+.application option {
   background: grey;
 }
 
 .app optgroup,
-.window-app optgroup {
+.application optgroup {
   background: #444242;
 }
 
 .app textarea,
-.window-app textarea {
+.application textarea {
   color: black;
 }
 
 .app div.form-group,
-.window-app div.form-group {
+.application div.form-group {
   margin: 10px;
   padding-bottom: 5px;
   border-bottom: 2px solid #777777;
@@ -930,7 +930,7 @@ form input {
   color: black;
 }
 
-.window-app .window-resizable-handle {
+.application .window-resizable-handle {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -947,11 +947,11 @@ form input {
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-.window-app .window-resizable-handle:hover {
+.application .window-resizable-handle:hover {
   z-index: +1;
 }
 
-.window-app .window-resizable-handle i.fas {
+.application .window-resizable-handle i.fas {
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   transform: rotate(45deg);
   top: 25%;
@@ -961,7 +961,7 @@ form input {
   text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
 }
 
-.window-app .window-resizable-handle i.fas:hover {
+.application .window-resizable-handle i.fas:hover {
   transform: rotate(45deg) scaleX(1.6);
   color: #ffffff;
   -webkit-text-fill-color: white;
@@ -970,11 +970,11 @@ form input {
   -webkit-text-stroke-color: black;
 }
 
-.window-app .window-resizable-handle:active {
+.application .window-resizable-handle:active {
   box-shadow: 0px 0px 30px blue;
 }
 
-.window-app .window-header {
+.application .window-header {
   background: url(../images/tab-header.webp);
   background-size: 100% 100%;
   font-family: Alaska;
@@ -3822,25 +3822,25 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 5px;
 }
 
-.item .window-content form fieldset.ammofield {
+.item .window-content fieldset.ammofield {
   border: 15px solid transparent;
   border-image: url('../images/frameWithoutFilling.svg') 30 / 5rem;
   max-height: 150px;
   overflow-y: scroll;
 }
 
-.item .window-content form fieldset.ammofield legend {
+.item .window-content fieldset.ammofield legend {
   font-family: 'Alaska';
   font-size: 14px;
 }
 
-.item .window-content form fieldset.ammofield ul {
+.item .window-content fieldset.ammofield ul {
   font: 13px 'Signika';
   list-style-type: none;
   padding: 0;
 }
 
-.item .window-content form fieldset.ammofield ul>li {
+.item .window-content fieldset.ammofield ul>li {
   border-bottom: #000 thin solid;
   margin-bottom: 3px;
   display: grid;
@@ -3850,7 +3850,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   align-items: baseline;
 }
 
-.app.window-app.torgeternity.sheet.item {
+.app.application.torgeternity.sheet.item {
   height: auto !important;
 }
 
@@ -4584,7 +4584,7 @@ form.actor-sheet.threat img.profile-img {
   /*color:white;*/
 }
 
-.application .window-content form button {
+.application .window-content button {
   color: rgb(233, 233, 233);
   cursor: pointer;
 }

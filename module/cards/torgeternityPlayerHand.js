@@ -5,29 +5,23 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
 
   static DEFAULT_OPTIONS = {
     type: "hand",
+    classes: ['torgeternity', 'sheet', 'cardsHand', 'cards-config'],
     window: {
-      contentClasses: ['torgeternity', 'sheet', 'cardsHand', 'cards-config'],
       resizable: false
     },
     position: {
-      top: 150,
-      left: "auto",
-      //top: parseInt(canvas.screenDimensions[1]) - game.settings.get('torgeternity', 'playerHandBottom') ? 350 : 150,
-      //left: game.settings.get('torgeternity', 'playerHandBottom') ? (parseInt(canvas.screenDimensions[0]) - 1250) : "auto",
-      width: 800,
-      height: "auto"
+      width: 800
     },
     actions: {
-      controlCard: torgeternityPlayerHand.onControlCard,
-      focusCard: torgeternityPlayerHand.focusCard,
-      drawCosm: torgeternityPlayerHand.onDrawCosm,
-      drawDestiny: torgeternityPlayerHand.onDrawDestiny,
-      //lifelike: torgeternityPlayerHand.submit
+      controlCard: torgeternityPlayerHand.#onControlCard,
+      focusCard: torgeternityPlayerHand.#onFocusCard,
+      drawCosm: torgeternityPlayerHand.#onDrawCosm,
+      drawDestiny: torgeternityPlayerHand.#onDrawDestiny,
+      lifelike: torgeternityPlayerHand.#onLifelike
     }
   }
 
   static PARTS = {
-    //template: (this.document.getFlag('torgeternity', 'lifelike') ? 'systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs' : 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs'
     cards: {
       template: 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs',
       root: true,
@@ -55,14 +49,26 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     ]
   }
 
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options);
+    if (options.isFirstRender) {
+      // Don't set position if the window is already open
+      if (game.settings.get('torgeternity', 'playerHandBottom')) {
+        options.position.top = parseInt(canvas.screenDimensions[1]) - 350;
+        options.position.left = parseInt(canvas.screenDimensions[0]) - 1250;
+      } else {
+        options.position.top = 150;
+        //options.position.left = "auto";
+      }
+    }
+  }
   /**
    *
    * @param html
    */
   async _onRender(context, options) {
-    let html = this.element;
     if (this.document.getFlag('torgeternity', 'lifelike')) {
-      this.rotateCards(html);
+      this.rotateCards(this.element);
     }
     //html.find('#lifelike').click(this.submit.bind(this));
     super._onRender(context, options);
@@ -72,7 +78,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    *
    * @param event
    */
-  static async onControlCard(_event, button) {
+  static async #onControlCard(_event, button) {
     const li = button.closest("li[data-card-id]");
     const stack = this.document;
     const card = stack.cards.get(li?.dataset.cardId);
@@ -112,10 +118,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         return card.update({ face: card.face === 0 ? null : card.face - 1 });
       case 'display':
         const image1 = new foundry.applications.apps.ImagePopout({ src: card.img, window: { title: card.name } });
-        image1.render(true, {
-          width: 425,
-          height: 650,
-        });
+        image1.render(true, { width: 425, height: 650 });
         image1.shareImage();
         return;
       case 'view':
@@ -165,11 +168,11 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     }
   }
 
-  static onDrawCosm() {
+  static #onDrawCosm() {
     this.drawCosmDialog();
   }
 
-  static onDrawDestiny() {
+  static #onDrawDestiny() {
     const destinyDeck = game.cards.get(
       game.settings.get('torgeternity', 'deckSetting').destinyDeck
     );
@@ -187,32 +190,31 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     return this.document.draw(destinyDeck, 1, { face: 1 });
   }
   /**
+ *
+ * @param event
+ */
+  static async #onLifelike(event, button) {
+    console.log({ event, button })
+    const isChecked = button.checked;
+    await this.document.setFlag('torgeternity', 'lifelike', isChecked);
+    return this.render({ force: true });
+  }
+  /**
    *
    * @param event
    */
-  async _onChangeInput(event) {
-    const input = event.currentTarget;
+  async _onChangeForm(formConfig, event) {
+    const input = event.target;
     const li = input.closest('.card');
     const card = li ? this.document.cards.get(li.dataset.cardId) : null;
 
     // Save any pending change
-    await this._onSubmit(event, { preventClose: true, preventRender: true });
+    await this.submit({ operation: { render: false } });
 
     // Handle the control action
     switch (input.dataset.action) {
       case 'poolToggle':
-        if (card.getFlag('torgeternity', 'pooled') === true) {
-          await card.setFlag('torgeternity', 'pooled', false);
-          // await game.combats.apps[0].viewed.resetAll();
-        } else {
-          await card.setFlag('torgeternity', 'pooled', true);
-          // await game.combats.apps[0].viewed.resetAll();
-        }
-        /* if (input.checked === true) {
-                  await card.setFlag("torgeternity","pooled", true)
-                } else  {
-                  await card.setFlag("torgeternity","pooled", false)
-                } */
+        await card.setFlag('torgeternity', 'pooled', !card.getFlag('torgeternity', 'pooled'));
         return;
     }
   }
@@ -315,7 +317,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    * @param html
    */
   rotateCards(html) {
-    const cardsAreas = html.find('.cards');
+    const cardsAreas = html.querySelectorAll('.cards');
     for (const area of cardsAreas) {
       for (let i = 0; i < area.children.length; i++) {
         const card = area.children[i];
@@ -329,8 +331,8 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    *
    * @param ev
    */
-  static focusCard(ev) {
-    const card = ev.currentTarget.closest('li.card');
+  static #onFocusCard(ev) {
+    const card = ev.target.closest('li.card');
     card.classList.toggle('focusedCard');
     if (card.classList.contains('focusedCard')) {
       card.setAttribute('data-rot', card.style.transform);

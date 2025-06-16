@@ -2,9 +2,11 @@
   0% {
     box-shadow: 0px 0px 3px green;
   }
+
   50% {
     box-shadow: 0px -0px 15px rgb(148, 255, 184);
   }
+
   100% {
     box-shadow: 0px 0px 3px green;
   }
@@ -15,6 +17,7 @@
     position: absolute;
     transform-origin: 50% 150% 0;
   }
+
   to {
     transform: scale(2);
     top: -300px;
@@ -26,7 +29,11 @@
   }
 }
 
-.app.torgeternity.cardsHand .window-content {
+form.application.torgeternity.hand {
+  overflow: visible;
+}
+
+.application.torgeternity.hand .window-content {
   overflow: visible;
   background-position: center;
 }
@@ -40,6 +47,10 @@
   right: 0%;
   top: 0;
   width: 100%;
+}
+
+div.torg-card-controls.flexcol>* {
+  flex: 1;
 }
 
 #handedCards h2 {
@@ -97,7 +108,7 @@
 
 #handedCards li.card div.torg-card-controls {
   opacity: 0;
-  color: white;
+  /*color: white;*/
   background-color: #2c7dc3;
   justify-content: space-around;
   border-radius: 15% 0% 0% 15%;
@@ -111,7 +122,7 @@
   display: flex;
 }
 
-#handedCards li.card div.torg-card-controls > * {
+#handedCards li.card div.torg-card-controls>* {
   height: 0;
 }
 
@@ -146,7 +157,7 @@ li.card.pooled {
   border-bottom: 3px solid #2c7dc3;
 }
 
-#handedCards + .sheet-footer {
+#handedCards+.sheet-footer {
   border: 2px solid green;
   top: -30%;
 }

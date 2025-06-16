@@ -4,9 +4,7 @@
 export default class torgeternityCardConfig extends foundry.applications.sheets.CardConfig {
 
   static DEFAULT_OPTIONS = {
-    window: {
-      contentClasses: ['torgeternity', 'sheet', 'card-config'],
-    },
+    classes: ['torgeternity'],
     position: {
       width: 480,
       height: 'auto',
@@ -54,7 +52,7 @@ export default class torgeternityCardConfig extends foundry.applications.sheets.
     let faces = [];
 
     // Save any pending change to the form
-    await this._onSubmit(event, { preventClose: true, preventRender: true });
+    await this.submit({ operation: { render: false } });
 
     // Handle the control action
     switch (button.dataset.action) {
