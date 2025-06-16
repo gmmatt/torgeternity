@@ -4268,6 +4268,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   width: 96%;
 }
 
+#gmscreen.application {
+  overflow: visible;
+}
+
 #gm-screen {
   position: absolute;
   width: 120%;
