@@ -4268,7 +4268,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   width: 96%;
 }
 
-#gmscreen.application {
+#gmscreen.application:has(#left-panel) {
   overflow: visible;
 }
 
