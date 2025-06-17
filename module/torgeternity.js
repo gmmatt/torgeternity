@@ -300,85 +300,6 @@ Hooks.on('ready', async function () {
   // img.style.content = `url(${path})`
   // })
 
-  // -------define a dialog for external links
-
-  const dialData = {
-    title: game.i18n.localize('torgeternity.dialogWindow.externalLinks.title'),
-    content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
-    buttons: {
-      one: {
-        icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
-        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.reference'),
-        callback: () => {
-          new FrameViewer('http://torg-gamereference.com/index.php', {
-            title: 'torg game reference',
-            top: 200,
-            left: 200,
-            width: 520,
-            height: 520,
-            resizable: true,
-          }).render(true);
-        },
-      },
-      two: {
-        icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
-        label: '<p>Discord</p>',
-        callback: () => {
-          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openDiscord'));
-          window.open('https://discord.gg/foundryvtt', '_blank');
-        },
-      },
-
-      three: {
-        icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
-        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.bug'),
-        callback: () => {
-          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openIssue'));
-          window.open('https://github.com/gmmatt/torgeternity/issues/new', '_blank');
-        },
-      },
-      four: {
-        icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
-        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.publisher'),
-        callback: () => {
-          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openUlisses'));
-          window.open('https://ulisses-us.com', '_blank');
-        },
-      },
-    },
-  };
-  const dialOption = {
-    width: 'auto',
-    height: 250,
-    left: 100,
-    top: 20,
-  };
-  // adding french links (shamelessly)
-  if (game.settings.get('core', 'language') == 'fr') {
-    dialData.buttons.five = {
-      icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo BBE" style="filter:grayscale(1);max-height:3em">',
-      label: '<p>Distr. français</p>',
-      callback: () => {
-        ui.notifications.info(
-          'votre navigateur va ouvrir le site de BlackBook Editions dans un nouvel onglet  '
-        );
-        window.open('https://www.black-book-editions.fr/catalogue.php?id=668', '_blank');
-      },
-    };
-  }
-  const externalLinks = new Dialog(dialData, dialOption);
-  /*
-    // ----MAIN logo image
-    const logo = document.querySelector('button#logo')
-    logo.style.position = 'absolute';
-    logo.setAttribute('src', '/systems/torgeternity/images/vttLogo.webp');
-    // ----open links when click on logo
-    logo.title = 'external links';
-    logo.addEventListener('click', function () {
-      externalLinks.render(true);
-    });
-  */
-
   /*
   //-----applying players card ui:
   if (game.user.role == false || game.user.role != 4) {
@@ -397,6 +318,99 @@ Hooks.on('ready', async function () {
   };
 */
 });
+
+let externalLinks;
+
+Hooks.on("renderSettings", async (app, html) => {
+  const systemRow = html.querySelectorAll("section.info .system")?.[0];
+  if (!systemRow) {
+    console.warn('No system button available for links');
+    return;
+  }
+  let button = document.createElement("button");
+  button.type = "button";
+  button.style.height = "auto";
+  button.dataset.action = "showTorgLinks";
+
+  const icon = document.createElement("img");
+  icon.setAttribute('src', '/systems/torgeternity/images/te-logo.webp');
+  icon.inert = true;
+  button.append(icon);
+  systemRow.insertAdjacentElement("afterend", button);
+
+  button.addEventListener('click', () => {
+    // Create dialog if not done yet
+    if (!externalLinks) {
+      const dialData = {
+        title: game.i18n.localize('torgeternity.dialogWindow.externalLinks.title'),
+        content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
+        buttons: {
+          one: {
+            icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
+            label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.reference'),
+            callback: () => {
+              new FrameViewer('http://torg-gamereference.com/index.php', {
+                title: 'torg game reference',
+                top: 200,
+                left: 200,
+                width: 520,
+                height: 520,
+                resizable: true,
+              }).render(true);
+            },
+          },
+          two: {
+            icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
+            label: '<p>Discord</p>',
+            callback: () => {
+              ui.notifications.info(game.i18n.localize('torgeternity.notifications.openDiscord'));
+              window.open('https://discord.gg/foundryvtt', '_blank');
+            },
+          },
+
+          three: {
+            icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
+            label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.bug'),
+            callback: () => {
+              ui.notifications.info(game.i18n.localize('torgeternity.notifications.openIssue'));
+              window.open('https://github.com/gmmatt/torgeternity/issues/new', '_blank');
+            },
+          },
+          four: {
+            icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
+            label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.publisher'),
+            callback: () => {
+              ui.notifications.info(game.i18n.localize('torgeternity.notifications.openUlisses'));
+              window.open('https://ulisses-us.com', '_blank');
+            },
+          },
+        },
+      };
+      const dialOption = {
+        width: 'auto',
+        height: 250,
+        left: 100,
+        top: 20,
+      };
+      // adding french links (shamelessly)
+      if (game.settings.get('core', 'language') == 'fr') {
+        dialData.buttons.five = {
+          icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo BBE" style="filter:grayscale(1);max-height:3em">',
+          label: '<p>Distr. français</p>',
+          callback: () => {
+            ui.notifications.info(
+              'votre navigateur va ouvrir le site de BlackBook Editions dans un nouvel onglet  '
+            );
+            window.open('https://www.black-book-editions.fr/catalogue.php?id=668', '_blank');
+          },
+        };
+      }
+      externalLinks = new Dialog(dialData, dialOption);
+    }
+
+    externalLinks.render(true)
+  })
+})
 
 // moved out of the setup hook, because it had no need to be in there
 Hooks.on('hotbarDrop', (bar, data, slot) => {
