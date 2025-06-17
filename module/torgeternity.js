@@ -189,6 +189,15 @@ Hooks.once('diceSoNiceReady', (dice3d) => {
 
 // -------------once everything ready
 Hooks.on('ready', async function () {
+
+  // Force DARK application colour scheme
+  const uiconfig = game.settings.get('core', 'uiConfig');
+  if (uiconfig.colorScheme.applications !== 'dark') {
+    ui.notifications.warn('TORG system works best when the Applications theme is set to DARK');
+    //uiconfig.colorScheme.applications = 'dark';
+    //game.settings.set('core', 'uiConfig', uiconfig);
+  }
+
   // migration script
   if (game.user.isGM) torgMigration();
 
