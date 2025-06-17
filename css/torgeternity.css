@@ -4050,11 +4050,17 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin: 0px 8px 8px 0;
 }
 
+ol.chat-log {
+  anchor-name: --chat;
+}
+
 .card-chat-tooltip:hover span {
   display: block;
-  position: absolute;
+  position: fixed;
+  position-anchor: --chat;
   top: 100px;
-  right: 100px;
+  left: anchor(left);
+  right: 50px;
   z-index: 0;
   max-width: 320px;
   min-height: 128px;
