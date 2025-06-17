@@ -43,7 +43,8 @@ form.application.torgeternity.hand {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   right: 0%;
   top: 0;
   width: 100%;

@@ -430,7 +430,8 @@ form.actor-sheet header.sheet-header-vehicle {
   text-align: center;
 }
 
-.application .window-content {
+form.application.torgeternity,
+div.application.torgeternity {
   font-family: Alaska;
   background-image: url(../images/thunder.webp);
   background-size: cover;
@@ -449,7 +450,8 @@ form.actor-sheet header.sheet-header-vehicle {
 .application .window-content input[type="number"],
 .application .window-content input[type="password"],
 .application .window-content input[type="date"],
-.application .window-content input[type="time"] .editor {
+.application .window-content input[type="time"] .editor,
+.application .window-content input[type="checkbox"] {
   background-color: rgba(255, 255, 255, 0.39);
   /*color:white;*/
 }
@@ -4561,48 +4563,4 @@ form.actor-sheet.threat img.profile-img {
   border: none;
   padding: 0 0 0 10px;
   margin: 0;
-}
-
-.application .window-content {
-  font-family: Alaska;
-  background-image: url(../images/thunder.webp);
-  background-size: cover;
-  color: white;
-}
-
-.application .window-content .form-header {
-  color: white;
-}
-
-.application .window-content div.form-group input {
-  color: white;
-}
-
-.application .window-content input[type="text"],
-.application .window-content input[type="number"],
-.application .window-content input[type="password"],
-.application .window-content input[type="date"],
-.application .window-content input[type="time"] .editor,
-.application .window-content input[type="checkbox"] {
-  background-color: rgba(255, 255, 255, 0.39);
-  /*color:white;*/
-}
-
-.application .window-content button {
-  color: rgb(233, 233, 233);
-  cursor: pointer;
-}
-
-.application .window-header {
-  background: url(../images/tab-header.webp);
-  background-size: 100% 100%;
-  font-family: Alaska;
-  font-weight: bold;
-  color: white;
-  transform: scaleX(1.06);
-  padding-left: 5%;
-  padding-right: 5%;
-  border: none;
-  box-shadow: 0px 15px 30px #00000061;
-  z-index: 100;
 }

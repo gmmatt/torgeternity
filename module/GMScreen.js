@@ -5,6 +5,7 @@ export default class GMScreen extends foundry.applications.api.HandlebarsApplica
 
   static DEFAULT_OPTIONS = {
     id: 'gmscreen',
+    classes: ['torgeternity'],
     position: {
       top: 10,
       width: 1300,

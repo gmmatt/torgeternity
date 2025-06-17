@@ -2,28 +2,10 @@
   {{localize 'torgeternity.dialogPrompts.lifelike'}}
   <input name="flags.torgeternity.lifelike" class="toggle" type="checkbox" id="lifelike" {{checked
     source.flags.torgeternity.lifelike}} data-action="lifelike">
-
 </span>
-<div class="flexrow">
-  <h2 class="areaTitles">
-    {{localize 'torgeternity.cardTypes.destiny'}}
-    <span class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.drawDestiny'}}"
-      data-action="drawDestiny">
-      <i class="fas fa-plus"></i>
-    </span>
-  </h2>
 
-  <h2 class="areaTitles">
-    {{localize 'torgeternity.cardTypes.cosm'}}
-    <span class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.drawCosm'}}"
-      data-action="drawCosm">
-      <i class="fas fa-plus"></i>
-    </span>
-  </h2>
-</div>
+
 <div id="handedCards">
-
-
   <ol class="cards destinyCards">
     {{#each cards as |card|}}
       {{#if (eq card.type "destiny")}}
