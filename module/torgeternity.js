@@ -341,61 +341,72 @@ Hooks.on("renderSettings", async (app, html) => {
   button.addEventListener('click', () => {
     // Create dialog if not done yet
     if (!externalLinks) {
-      const dialData = {
-        title: game.i18n.localize('torgeternity.dialogWindow.externalLinks.title'),
+      const dialogOptions = {
+        window: {
+          title: 'torgeternity.dialogWindow.externalLinks.title',
+        },
+        position: {
+          width: 'auto',
+          height: 250,
+          left: 100,
+          top: 20,
+        },
         content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
-        buttons: {
-          one: {
-            icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
-            label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.reference'),
+        buttons: [
+          {
+            action: 'reference',
+            icon: 'fa-solid fa-expand-arrows-alt',
+            label: 'torgeternity.dialogWindow.externalLinks.reference',
             callback: () => {
-              new FrameViewer('http://torg-gamereference.com/index.php', {
-                title: 'torg game reference',
-                top: 200,
-                left: 200,
-                width: 520,
-                height: 520,
-                resizable: true,
-              }).render(true);
+              new foundry.applications.sidebar.apps.FrameViewer({  // will be removed in Foundry V15
+                url: 'http://torg-gamereference.com/index.php',
+                window: {
+                  title: 'torg game reference',
+                  resizable: true,
+                },
+                position: {
+                  top: 200,
+                  left: 200,
+                  width: 520,
+                  height: 520,
+                }
+              }).render({ force: true });
             },
           },
-          two: {
-            icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
-            label: '<p>Discord</p>',
+          {
+            action: 'discord',
+            icon: 'fab fa-discord',
+            label: 'Discord',
             callback: () => {
               ui.notifications.info(game.i18n.localize('torgeternity.notifications.openDiscord'));
               window.open('https://discord.gg/foundryvtt', '_blank');
             },
           },
-
-          three: {
-            icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
-            label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.bug'),
+          {
+            action: 'bug',
+            icon: 'fa-solid fa-bug',
+            label: 'torgeternity.dialogWindow.externalLinks.bug',
             callback: () => {
               ui.notifications.info(game.i18n.localize('torgeternity.notifications.openIssue'));
               window.open('https://github.com/gmmatt/torgeternity/issues/new', '_blank');
             },
           },
-          four: {
-            icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
-            label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.publisher'),
+          {
+            action: 'publisher',
+            icon: 'systems/torgeternity/images/ulissesLogo.webp', // not FA so ignored
+            label: 'torgeternity.dialogWindow.externalLinks.publisher',
             callback: () => {
               ui.notifications.info(game.i18n.localize('torgeternity.notifications.openUlisses'));
               window.open('https://ulisses-us.com', '_blank');
             },
           },
-        },
+        ],
       };
-      const dialOption = {
-        width: 'auto',
-        height: 250,
-        left: 100,
-        top: 20,
-      };
+
       // adding french links (shamelessly)
-      if (game.settings.get('core', 'language') == 'fr') {
-        dialData.buttons.five = {
-          icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo BBE" style="filter:grayscale(1);max-height:3em">',
+      if (game.settings.get('core', 'language') === 'fr') {
+        dialogOptions.buttons.push({
+          icon: 'systems/torgeternity/images/BBE_logo.webp', // not FA so ignored
           label: '<p>Distr. français</p>',
           callback: () => {
             ui.notifications.info(
@@ -403,12 +414,12 @@ Hooks.on("renderSettings", async (app, html) => {
             );
             window.open('https://www.black-book-editions.fr/catalogue.php?id=668', '_blank');
           },
-        };
+        });
       }
-      externalLinks = new Dialog(dialData, dialOption);
+      externalLinks = new foundry.applications.api.DialogV2(dialogOptions);
     }
 
-    externalLinks.render(true)
+    externalLinks.render({ force: true })
   })
 })
 

@@ -26,11 +26,11 @@
       "spirit": "Esprit",
       "strength": "Force"
     },
-    "axioms": {      
+    "axioms": {
       "magic": "Magie",
       "social": "Social",
       "spirit": "Spirituel",
-      "tech": "Tech"      
+      "tech": "Tech"
     },
     "cardTypes": {
       "activeDrama": "Carte Action active",
@@ -154,7 +154,7 @@
     },
     "contextMenu": {
       "characterInfo": {
-        "contextMenuTitle":"Show character information",
+        "contextMenuTitle": "Show character information",
         "windowTitle": "Notes and Backgrounds from {a}",
         "createChatCard": "Create chat card"
       }
@@ -229,10 +229,10 @@
     },
     "dialogWindow": {
       "externalLinks": {
-        "bug": "<p>Bug?</p>",
+        "bug": "Bug?",
         "content": "<p>Besoin d'aide ? Vous voulez signaler un bug ? Voici quelques liens utiles.</p>",
-        "publisher": "<p>Éditeur</p>",
-        "reference": "<p>Références (site en anglais)</p>",
+        "publisher": "Éditeur",
+        "reference": "Références (site en anglais)",
         "title": "Liens"
       },
       "hideForeignCompendium": {
@@ -244,8 +244,8 @@
         "title": "Confirmer la suppression"
       },
       "raceDeletion": {
-        "content":"Êtes-vous sûr de vouloir supprimer ceci ? Cela sera effacé de votre fiche de manière permanente et ainsi que tous les Atouts associés.",
-        "title":"Confirmer la suppression"
+        "content": "Êtes-vous sûr de vouloir supprimer ceci ? Cela sera effacé de votre fiche de manière permanente et ainsi que tous les Atouts associés.",
+        "title": "Confirmer la suppression"
       },
       "realityCheck": {
         "title": "Reconnection?",
@@ -266,26 +266,26 @@
       "showingDramaCards": {
         "nbCards": "Choix des cartes",
         "nbCardsValue": "Nombre de cartes à montrer au(x) joueur(s)",
-        "recipient":"Destinataire(s) du message privé",
-        "whisper":"Nombre de cartes",
-        "apply":"Appliquer",
-        "show":"Carte(s) suivante(s)"
+        "recipient": "Destinataire(s) du message privé",
+        "whisper": "Nombre de cartes",
+        "apply": "Appliquer",
+        "show": "Carte(s) suivante(s)"
       },
       "cardRetour": {
-        "cardBack":"Restitution d'une carte jouée",
-        "cardOwner":"A qui rendre la carte ?"        
+        "cardBack": "Restitution d'une carte jouée",
+        "cardOwner": "A qui rendre la carte ?"
       },
       "buffMacro": {
-        "choice":"Votre choix",
-        "choose":"Quel attribut souhaitez vous modifier ?",
+        "choice": "Votre choix",
+        "choose": "Quel attribut souhaitez vous modifier ?",
         "allAttributes": "Tous les attributs",
-        "defenses":"Défenses",
-        "physicalDefenses":"Défenses physiques",
-        "cancelEffects":"Annuler les effets",
-        "bonusTitle":"Saisie de la valeur du bonus/malus",
-        "value":"Choisissez la valeur de la modification",
-        "timeLabel":"Choix de la durée",
-        "time":"Saisissez la durée en round(s)"
+        "defenses": "Défenses",
+        "physicalDefenses": "Défenses physiques",
+        "cancelEffects": "Annuler les effets",
+        "bonusTitle": "Saisie de la valeur du bonus/malus",
+        "value": "Choisissez la valeur de la modification",
+        "timeLabel": "Choix de la durée",
+        "time": "Saisissez la durée en round(s)"
       },
       "raceDiminishAttribute": {
         "maintext": "L'attribut {attribute} est plus grand que le maximum de population. Doit-on définir l'attribut sur le maximum de population?",
@@ -472,7 +472,7 @@
       "raceExistent": "Vous avez déjà choisi votre race.",
       "notAPerkItem": "Vous avez tenté d'attribuer un avantage de la catégorie {a} à cette race, mais il doit appartenir à la catégorie raciale. L'action a été annulée.",
       "addedRacePerkToActor": "Ajouté {perkName}-perk à l'acteur.",
-      "reachedMaximumAttr" : "Tu as atteint le maximum d'attributs que ton peuple a défini. Une augmentation supplémentaire n'est pas possible.",
+      "reachedMaximumAttr": "Tu as atteint le maximum d'attributs que ton peuple a défini. Une augmentation supplémentaire n'est pas possible.",
       "clipEmpty": "Ces munitions sont vides et ne peuvent pas être utilisées pour recharger."
     },
     "packs": {
@@ -746,7 +746,7 @@
       "goodResult": "Résultat supérieur",
       "gunner": "Artilleur",
       "hardcode": "Hardcode",
-      "heavyBurst": "Nourrie (+6)",      
+      "heavyBurst": "Nourrie (+6)",
       "heavyWeapons": "Armes lourdes",
       "implant": "Implant",
       "implants": "Implants",
@@ -1114,16 +1114,16 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Aucun modificateur de zone",
       "reconnectMacroZoneModifierNotDetected": "Un modificateur de zone n'a pas pu être détecté car la scène active n'a aucune zone configurée. Modifiez le modificateur dans le résultat.",
       "reconnectMacroStatusLiftet": "Statut non lié levé après un test de réalité réussi.",
-      "periculumSourceName":"Origine des dégats",
-      "periculumSourcePlaceHolder":"Description ?",
-      "periculumDamageValue":"Valeurs de dommages ",
-      "periculumBds":"BDs additionnels ",
-      "periculumArmor":"Appliquer l'armure ?",
-      "periculumAp":"Valeur d'AP ",
+      "periculumSourceName": "Origine des dégats",
+      "periculumSourcePlaceHolder": "Description ?",
+      "periculumDamageValue": "Valeurs de dommages ",
+      "periculumBds": "BDs additionnels ",
+      "periculumArmor": "Appliquer l'armure ?",
+      "periculumAp": "Valeur d'AP ",
       "macroHub": {
         "buttonTitle": "MacroHub",
-        "title":"Répertoire Macro Torg Eternity"
+        "title": "Répertoire Macro Torg Eternity"
       }
-    }    
+    }
   }
 }
