@@ -61,7 +61,7 @@
       {{#if (eq card.type "cosm")}}
 
         <li class="card flexrow" data-card-id="{{card.id}}">
-          <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+          <img class="card-face" src="{{card.img}}" data-action="focusCard" alt="{{card.name}}" height="48">
           <div class="torg-card-controls controls flexcol">
             <div class="card-faces flexrow">
               <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
