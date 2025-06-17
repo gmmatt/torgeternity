@@ -5,7 +5,7 @@
  */
 export function hideCompendium(defaultLang, tabDirectory) {
   if (tabDirectory.tabName == 'compendium') {
-    const comps = tabDirectory.element[0].getElementsByClassName('directory-item');
+    const comps = tabDirectory.element.querySelectorAll('.directory-item');
     let hiddingKeys = [];
 
     switch (defaultLang) {
