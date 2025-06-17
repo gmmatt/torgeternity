@@ -1,41 +1,56 @@
 /**
  *
  */
-export default class DeckSettingMenu extends FormApplication {
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
+
+export default class DeckSettingMenu extends HandlebarsApplicationMixin(ApplicationV2) {
+
+  static DEFAULT_OPTIONS = {
+    classes: ['torgeternity'],
+    id: 'deckSetting',
+    tag: "form",
+    window: {
+      contentClasses: ["standard-form"],
+      title: 'torgeternity.settingMenu.deckSetting.name',
+    },
+    form: {
+      handler: DeckSettingMenu.#onSubmit,
+      closeOnSubmit: true,
+      // editable: true,
+    },
+    position: {
+      top: 300,
+      left: 500,
+    },
+    actions: {
+      createCards: DeckSettingMenu.#onCreateCards
+    }
+  }
+
+  static PARTS = {
+    form: { template: '/systems/torgeternity/templates/cards/settingMenu.hbs' },
+    footer: { template: "templates/generic/form-footer.hbs" },
+  }
+
   /**
    *
    * @param {object} settings - The settings object.
    */
   constructor(settings) {
     super();
-    this.settings = game.settings.get('torgeternity', 'deckSetting');
     this.doubledValues = [];
-  }
-  /**
-   *
-   * @returns {object} The default options for the setting menu.
-   */
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.template = '/systems/torgeternity/templates/cards/settingMenu.hbs';
-    options.top = 300;
-    options.title = game.i18n.localize('torgeternity.settingMenu.deckSetting.name');
-    options.left = 500;
-    options.submitOnChange = true;
-    options.editable = true;
-    return options;
   }
 
   /**
    *
-   * @returns {object} The data for the setting menu sheet.
+   * @inheritDoc
    */
-  getData() {
+  async _prepareContext(options) {
     const data = {
       isGM: game.user.isGM,
       deckList: game.cards.contents,
       object: game.settings.get('torgeternity', 'deckSetting'),
-      stormknights: game.actors.filter((act) => act.type == 'stormknight'),
+      stormknights: game.actors.filter((act) => act.type === 'stormknight'),
       piles: game.cards
         .filter((c) => c.type === 'pile')
         .reduce((acc, pile) => {
@@ -54,97 +69,106 @@ export default class DeckSettingMenu extends FormApplication {
           acc[pile.id] = pile.name;
           return acc;
         }, {}),
+      buttons: [
+        { type: "button", action: "createCards", icon: "fa-solid fa-plus", label: "DOCUMENT.Cards" },
+        { type: "submit", action: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" },
+        { type: "button", action: "close", icon: "fa-solid fa-ban", label: "Cancel" },
+      ]
     };
     for (const sk of data.stormknights) {
       data.stormknights[sk.id] = sk.getDefaultHand().id;
     }
-    return foundry.utils.mergeObject(super.getData(), data);
+    return foundry.utils.mergeObject(await super._prepareContext(options), data);
   }
 
   /**
    *
-   * @param {HTMLElement} html the html element of the setting menu sheet.
+   * @inheritDoc
    */
-  async activateListeners(html) {
+  async _onRender(context, options) {
     // checking if doubled values
-    this.checkDoubled();
-    // changing default deck
-    html.find('.selectDeck').change(this.onChangeDeck.bind(this, html));
-    // assigning user rights for stormknights owners
-    html.find('select.stormknightHand').change(this.onChangeHand.bind(this, html));
-    // creating new cards decks or piles or hand
-    html.find('button.createCards').click(this.onCreateCards.bind(this));
+    this.#checkDoubled();
 
     // adding hook on for refreshing the display while a card stack is created
     // avoid having to re-open the menu to have new card stack available in selects
     Hooks.on('createCards', (card, options, id) => {
       if (this.rendered) {
-        this.render(true);
+        this.render({ force: true });
       }
     });
   }
+  /**
+   * 
+   * @inheritDoc
+   */
+  _onChangeForm(formConfig, event) {
+    const elem = event.target;
+    const html = this.element;
+    if (elem.nodeName !== 'SELECT') return;
+    if (elem.classList.contains("selectDeck"))
+      this.#onChangeDeck(html, event);
+    else if (elem.classList.contains("stormknightHand"))
+      this.#onChangeHand(html, event);
+  }
+
   /**
    *
    * @param {Event} event The event object.
    * @param {object} formData The form data compiled by foundry.
    */
-  _updateObject(event, formData) {
-    const data = foundry.utils.expandObject(formData);
+  static #onSubmit(event, form, formData) {
+    const data = foundry.utils.expandObject(formData.object);
     game.settings.set('torgeternity', 'deckSetting', data);
   }
   /**
    *
    * @param {Event} event The event object.
    */
-  onCreateCards(event) {
+  static #onCreateCards(event) {
     event.preventDefault();
     Cards.createDialog();
   }
+
   /**
    *
    * @param {HTMLElement} html The html element of the setting menu sheet.
    * @param {Event} event The event object.
    */
-  onChangeDeck(html, event) {
+  #onChangeDeck(html, event) {
     // getting selected value
 
     // checking if other select/options have same value
-    this.checkDoubled();
+    this.#checkDoubled();
+
     // checking if other select are not doubled anymore
-    for (const select of html.find('select')) {
-      if (this.doubledValues.indexOf(select.options[select.selectedIndex].value) == -1) {
+    for (const select of html.querySelectorAll('select')) {
+      if (this.doubledValues.indexOf(select.value) === -1) {
         select.classList.remove('doubled');
       }
     }
 
     // allowing submit if no doubled value
-    if (this.element.find('.doubled').length > 0) {
-      this.element.find('button[type="submit"]')[0].disabled = true;
-    } else {
-      this.element.find('button[type="submit"]')[0].disabled = false;
-    }
+    this.element.querySelectorAll('button[type="submit"]')[0].disabled = (this.element.querySelectorAll('.doubled').length > 0);
   }
   /**
    *
    * @param {HTMLElement} html The html element of the setting menu sheet.
    * @param {Event} event The event object.
    */
-  onChangeHand(html, event) {
-    const actorId = event.currentTarget.dataset.actorId;
-    const handId = event.currentTarget.options[event.currentTarget.selectedIndex].value;
+  #onChangeHand(html, event) {
+    const actorId = event.target.dataset.actorId;
+    const handId = event.target.value;
 
     const actor = game.actors.get(actorId);
     const hand = game.cards.get(handId);
     const oldHand = actor.getDefaultHand();
 
-    const invalidSelection = html[0]
-      .querySelectorAll(`select:not([data-actor-id="${actorId}"])`)
-      .values()
-      .some((element) =>
-        [handId, oldHand.id].includes(element.options[element.selectedIndex].value)
-      );
-
-    if (invalidSelection || handId === oldHand.id) {
+    for (const elem of html.querySelectorAll(`select:not([data-actor-id="${actorId}"])`)) {
+      if ([handId, oldHand.id].includes(elem.value)) {
+        return;
+      }
+    }
+    if (oldHand && handId === oldHand.id) {
       return;
     }
 
@@ -154,18 +178,18 @@ export default class DeckSettingMenu extends FormApplication {
       ownership: actorsPerm,
       flags: { torgeternity: { defaultHand: actor.id } },
     });
-    oldHand.setFlag('torgeternity', 'defaultHand', null);
+    if (oldHand) oldHand.setFlag('torgeternity', 'defaultHand', null);
   }
   /**
    *
    */
-  checkDoubled() {
+  #checkDoubled() {
     const selectedValues = [];
 
-    for (const select of this.element.find('select')) {
+    for (const select of this.element.querySelectorAll('select')) {
       const value = select.options[select.selectedIndex].value;
       selectedValues.push(value);
-      const valueCount = selectedValues.filter((val) => val == value).length;
+      const valueCount = selectedValues.filter((val) => val === value).length;
 
       if (valueCount > 1) {
         this.doubledValues.push(value);
@@ -175,7 +199,7 @@ export default class DeckSettingMenu extends FormApplication {
         }
       }
     }
-    for (const select of this.element.find('select')) {
+    for (const select of this.element.querySelectorAll('select')) {
       const value = select.options[select.selectedIndex].value;
       if (this.doubledValues.indexOf(value) > -1) {
         select.classList.add('doubled');

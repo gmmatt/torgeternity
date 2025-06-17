@@ -466,28 +466,28 @@ div.application.torgeternity {
 }
 
 
-.application .window-content input::-moz-placeholder,
-.application .window-content input:-ms-input-placeholder,
-.application .window-content input::placeholder {
+.application.torgeternity .window-content input::-moz-placeholder,
+.application.torgeternity .window-content input:-ms-input-placeholder,
+.application.torgeternity .window-content input::placeholder {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.application .window-content .rollable:hover,
-.application .window-content .rollable:focus {
+.application.torgeternity .window-content .rollable:hover,
+.application.torgeternity .window-content .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px white;
   cursor: pointer;
 }
 
-.application .window-content .notes,
-.application .window-content .hint {
+.application.torgeternity .window-content .notes,
+.application.torgeternity .window-content .hint {
   color: #b1afaf;
   font-family: Palatino;
   font-size: 14px;
 }
 
-.application .window-content button,
-.application .window-content select {
+.application.torgeternity .window-content button,
+.application.torgeternity .window-content select {
   color: rgb(233, 233, 233);
   cursor: pointer;
 }
@@ -511,7 +511,7 @@ div.application.torgeternity {
   background-color: rgb(83, 77, 77);
 }
 
-.application .window-content select.doubled {
+.application.torgeternity .window-content select.doubled {
   background-color: rgb(238, 148, 148);
   color: black;
   border: 1px solid red;
