@@ -1,7 +1,9 @@
 /**
  *
  */
-export default class GMScreen extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2) {
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
+
+export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
     id: 'gmscreen',
