@@ -4057,10 +4057,9 @@ ol.chat-log {
 .card-chat-tooltip:hover span {
   display: block;
   position: fixed;
-  position-anchor: --chat;
   top: 100px;
-  left: anchor(left);
-  right: 50px;
+  width: calc(var(--sidebar-width) - 25px);
+  right: 25px;
   z-index: 0;
   max-width: 320px;
   min-height: 128px;
