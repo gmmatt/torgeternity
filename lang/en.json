@@ -159,6 +159,9 @@
         "createChatCard": "Create chat card"
       }
     },
+    "core": {
+      "forceDarkModeHint": "TORG only works with Applications set to Dark mode"
+    },
     "cosmDecks": {
       "aysle": "Aysle Cosm Deck",
       "coreEarth": "Core Earth Cosm Deck",
