@@ -4,7 +4,7 @@ import { torgeternity } from '../../config.js';
 /**
  *
  */
-export default class TorgeternityItem extends Item {
+export default class TorgeternityItem extends foundry.documents.Item {
   // TODO: Chatcardtemplate for ammunitions & race
   static CHAT_TEMPLATE = {
     perk: 'systems/torgeternity/templates/partials/perk-card.hbs',

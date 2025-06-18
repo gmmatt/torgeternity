@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class TorgeternityActor extends Actor {
+export default class TorgeternityActor extends foundry.documents.Actor {
   /* -------------------------------------------- */
   /*  Getters                                     */
   /* -------------------------------------------- */
@@ -95,10 +95,10 @@ export default class TorgeternityActor extends Actor {
       darkness: this.statuses.has('pitchBlack')
         ? -6
         : this.statuses.has('dark')
-        ? -4
-        : this.statuses.has('dim')
-        ? -2
-        : 0,
+          ? -4
+          : this.statuses.has('dim')
+            ? -2
+            : 0,
     };
 
     // Skillsets
