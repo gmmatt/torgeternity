@@ -1,15 +1,18 @@
 <p class="item-data-label">
-    {{localize "torgeternity.sheetLabels.clearance"}} : {{localize (concat "torgeternity.clearances." actor.system.details.clearance)}}
+  {{localize "torgeternity.sheetLabels.clearance"}} :
+  {{localize (concat "torgeternity.clearances." document.system.details.clearance)}}
 </p>
 
 <p class='attribut-block'>
-    <span class="main-label">{{localize "torgeternity.sheetLabels.unspent"}}</span>
-    <input class="roundBack" name="system.xp.unspent" type="number" value="{{actor.system.xp.unspent}}" data=dtype="Number"
-        {{#if disableXP}} disabled data-tooltip="{{localize 'torgeternity.sheetLabels.xpOnlyGM'}}" {{/if}} />
+  <span class="main-label">{{localize "torgeternity.sheetLabels.unspent"}}</span>
+  <input class="roundBack" name="system.xp.unspent" type="number" value="{{document.system.xp.unspent}}"
+    data=dtype="Number"
+    {{#if disableXP}} disabled data-tooltip="{{localize 'torgeternity.sheetLabels.xpOnlyGM'}}" {{/if}} />
 </p>
 
 <p class='attribut-block'>
-    <span class="main-label">{{localize "torgeternity.sheetLabels.xp"}}</span>
-    <input name="system.xp.earned" class="roundBack" type="number" value="{{actor.system.xp.earned}}" data=dtype="Number"
-        {{#if disableXP}} disabled data-tooltip="{{localize 'torgeternity.sheetLabels.xpOnlyGM'}}" {{/if}} />
+  <span class="main-label">{{localize "torgeternity.sheetLabels.xp"}}</span>
+  <input name="system.xp.earned" class="roundBack" type="number" value="{{document.system.xp.earned}}"
+    data=dtype="Number"
+    {{#if disableXP}} disabled data-tooltip="{{localize 'torgeternity.sheetLabels.xpOnlyGM'}}" {{/if}} />
 </p>

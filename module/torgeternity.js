@@ -187,6 +187,7 @@ Hooks.once('diceSoNiceReady', (dice3d) => {
   registerDiceSoNice(dice3d);
 });
 
+/*
 Hooks.on("renderUIConfig", (config, html, context, options) => {
   let select = html.querySelector('[name="core.uiConfig.colorScheme.applications');
   if (select) {
@@ -195,10 +196,12 @@ Hooks.on("renderUIConfig", (config, html, context, options) => {
     if (hint) hint.innerText = game.i18n.localize("torgeternity.core.forceDarkModeHint");
   }
 })
+  */
 
 // -------------once everything ready
 Hooks.on('ready', async function () {
 
+  /*
   // Force DARK application colour scheme
   const uiconfig = game.settings.get('core', 'uiConfig');
   if (uiconfig.colorScheme.applications !== 'dark') {
@@ -206,6 +209,7 @@ Hooks.on('ready', async function () {
     uiconfig.colorScheme.applications = 'dark';
     game.settings.set('core', 'uiConfig', uiconfig);
   }
+    */
 
   // migration script
   if (game.user.isGM) torgMigration();
