@@ -3,81 +3,111 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.
 /**
  *
  */
-export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemSheet {
+export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
+
+  static DEFAULT_OPTIONS = {
+    classes: ['torgeternity', 'sheet', 'app', 'item', 'item-sheet'],
+    window: {
+      resizable: true,
+    },
+    position: {
+      width: 530,
+      height: 580,
+    },
+    tabs: [
+      {
+        navSelector: '.sheet-tabs',
+        contentSelector: '.sheet-body',
+        initial: 'stats',
+      },
+    ],
+    actions: {
+      effectControl: TorgeternityItemSheet.#onEffectControl,
+      convertRsa: TorgeternityItemSheet.#onConvertRsa,
+      addEnhancement: TorgeternityItemSheet.#onAddEnhancement,
+      removeEnhancement: TorgeternityItemSheet.#onRemoveEnhancement,
+      addLimitation: TorgeternityItemSheet.#onAddLimitation,
+      removeLimitation: TorgeternityItemSheet.#onRemoveLimitation,
+      reloadWeapon: TorgeternityItemSheet.#onReloadWeapon,
+      selectSecondaryAxiom: TorgeternityItemSheet.#onSelectSecondaryAxiom,
+      itemName: TorgeternityItemSheet.#onItemName,
+      itemDelete: TorgeternityItemSheet.#onItemDelete,
+    },
+    dragDrop: [
+      {
+        dragSelector: '.item-list .item', // '[data-drag]',
+        dropSelector: null,
+      },
+    ],
+    //scrollY: ['.stats', '.effects', '.background'],
+  }
+
+  static PARTS = {
+    header: { template: 'systems/torgeternity/templates/sheets/item-header.hbs' },
+    tabs: { template: 'templates/generic/tab-navigation.hbs' },
+    effects: { template: 'systems/torgeternity/templates/parts/active-effects.hbs' },
+
+    actionCard: { template: `systems/torgeternity/templates/sheets/actionCard-sheet.html` },
+    ammunition: { template: `systems/torgeternity/templates/sheets/ammunition-sheet.html` },
+    armor: { template: `systems/torgeternity/templates/sheets/armor-sheet.html` },
+    cosmCard: { template: `systems/torgeternity/templates/sheets/cosmCard-sheet.html` },
+    customAttack: { template: `systems/torgeternity/templates/sheets/customAttack-sheet.html` },
+    customSkill: { template: `systems/torgeternity/templates/sheets/customSkill-sheet.html` },
+    destinyCard: { template: `systems/torgeternity/templates/sheets/destinyCard-sheet.html` },
+    enhancement: { template: `systems/torgeternity/templates/sheets/enhancement-sheet.html` },
+    eternityshard: { template: `systems/torgeternity/templates/sheets/eternityshard-sheet.html` },
+    firearm: { template: `systems/torgeternity/templates/sheets/firearm-sheet.html` },
+    gear: { template: `systems/torgeternity/templates/sheets/gear-sheet.html` },
+    heavyweapon: { template: `systems/torgeternity/templates/sheets/heavyweapon-sheet.html` },
+    implant: { template: `systems/torgeternity/templates/sheets/implant-sheet.html` },
+    meleeweapon: { template: `systems/torgeternity/templates/sheets/meleeweapon-sheet.html` },
+    miracle: { template: `systems/torgeternity/templates/sheets/miracle-sheet.html` },
+    missileweapon: { template: `systems/torgeternity/templates/sheets/missileweapon-sheet.html` },
+    perk: { template: `systems/torgeternity/templates/sheets/perk-sheet.html` },
+    perkEnhancements: { template: `systems/torgeternity/templates/sheets/perk-enhancements-sheet.html` },
+    perkLimitations: { template: `systems/torgeternity/templates/sheets/perk-limitations-sheet.html` },
+    psionicpower: { template: `systems/torgeternity/templates/sheets/psionicpower-sheet.html` },
+    race: { template: `systems/torgeternity/templates/sheets/race-sheet.html` },
+    racePerks: { template: `systems/torgeternity/templates/sheets/race-perks-sheet.html` }, // TODO
+    shield: { template: `systems/torgeternity/templates/sheets/shield-sheet.html` },
+    ["specialability-rollable"]: { template: `systems/torgeternity/templates/sheets/specialability-rollable-sheet.html` },
+    specialability: { template: `systems/torgeternity/templates/sheets/specialability-sheet.html` },
+    spell: { template: `systems/torgeternity/templates/sheets/spell-sheet.html` },
+    vehicleHeader: { template: `systems/torgeternity/templates/sheets/vehicle-header-sheet.html` },
+    vehicle: { template: `systems/torgeternity/templates/sheets/vehicle-sheet.html` },
+    vehicleAddOn: { template: `systems/torgeternity/templates/sheets/vehicleAddOn-sheet.html` },
+
+    powers: { template: `systems/torgeternity/templates/parts/active-effects.hbs` }
+  };
+
   /**
    *
    * @param {...any} args
    */
-  constructor(...args) {
-    super(...args);
-
-    switch (this.document.type) {
-      case 'firearm':
-        this.options.height = this.position.height = 710;
-        break;
-      case 'heavyweapon':
-        this.options.height = this.position.height = 730;
-        break;
-      case 'meleeweapon':
-        this.options.height = this.position.height = 675;
-        break;
-      case 'missileweapon':
-        this.options.height = this.position.height = 710;
-        break;
-      case 'miracle':
-      case 'psionicpower':
-      case 'spell':
-        this.options.height = this.position.height = 780;
-        break;
-      case 'specialability':
-        this.options.width = this.position.width = 435;
-        this.options.height = this.position.height = 550;
-        break;
-      case 'specialability-rollable':
-        this.options.height = this.position.height = 625;
-        break;
-      case 'vehicle':
-        this.options.height = this.position.height = 630;
-        break;
-      case 'implant':
-      case 'armor':
-      case 'shield':
-        this.options.height = this.position.height = 615;
-        break;
-      case 'customAttack':
-        this.options.height = this.position.height = 675;
-        break;
-      case 'vehicleAddOn':
-        this.options.height = this.position.height = 620;
-        this.options.width = this.position.width = 465;
-        break;
-      default:
-        this.options.height = this.position.height = 560;
-    }
+  constructor(options = {}) {
+    super(options);
+    this.#dragDrop = this.#createDragDropHandlers();
   }
 
   /**
-   *
+   * Create drag-and-drop workflow handlers for this Application
+   * @returns {DragDrop[]}     An array of DragDrop handlers
+   * @private
    */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      width: 530,
-      height: 580,
-      classes: ['torgeternity', 'sheet', 'item'],
-      tabs: [
-        {
-          navSelector: '.sheet-tabs',
-          contentSelector: '.sheet-body',
-          initial: 'stats',
-        },
-      ],
-      dragDrop: [
-        {
-          dragSelector: '.item-list .item',
-          dropSelector: null,
-        },
-      ],
-      scrollY: ['.stats', '.effects', '.background'],
+  #dragDrop;
+
+  #createDragDropHandlers() {
+    return this.options.dragDrop.map((d) => {
+      d.permissions = {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this),
+      };
+      d.callbacks = {
+        dragstart: this._onDragStart.bind(this),
+        dragover: this._onDragOver.bind(this),
+        drop: this._onDrop.bind(this),
+      };
+      return new foundry.applications.ux.DragDrop.implementation(d);
     });
   }
 
@@ -100,7 +130,7 @@ export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemShee
     console.log(event);
   }
 
-  _onDrag(event) {
+  _onDragOver(event) {
     console.log(event);
   }
 
@@ -148,129 +178,230 @@ export default class TorgeternityItemSheet extends foundry.appv1.sheets.ItemShee
    *
    * @param html
    */
-  activateListeners(html) {
-    super.activateListeners(html);
-    html.find('.effect-control').click((ev) => {
-      if (this.item.isOwned)
-        return ui.notifications.warn(
-          game.i18n.localize('torgeternity.notifications.noActiveEffectInOwnedItem')
-        );
-      onManageActiveEffect(ev, this.item);
-    });
-
-    html.find('.convert-rsa').click((ev) => {
-      this.item.update({
-        type: 'specialability-rollable',
-      });
-    });
-
-    html.find('.add-enhancement').click((ev) => {
-      const currentShown = this.document.system.pulpPowers.enhancementNumber;
-      const newShown = currentShown < 15 ? currentShown + 1 : currentShown;
-      this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
-    });
-
-    html.find('.remove-enhancement').click((ev) => {
-      const currentShown = this.document.system.pulpPowers.enhancementNumber;
-      const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
-      this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
-    });
-
-    html.find('.add-limitation').click((ev) => {
-      const currentShown = this.document.system.pulpPowers.limitationNumber;
-      const newShown = currentShown < 10 ? currentShown + 1 : currentShown;
-      this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
-    });
-
-    html.find('.remove-limitation').click((ev) => {
-      const currentShown = this.document.system.pulpPowers.limitationNumber;
-      const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
-      this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
-    });
-
-    html.find('.reload-weapon').click(async (ev) => {
-      const button = ev.currentTarget.closest('[data-item-id]');
-      const usedAmmo = this?.actor.items.get(button.dataset.itemId);
-
-      await reloadAmmo(this.actor, this.object, usedAmmo, this);
-      this.render(true);
-    });
-
-    html.find('.selectSecondaryAxiom').click((ev) => {
-      ev.currentTarget.value === 'none' &&
-        this.item.update({ 'system.secondaryAxiom.value': null });
-    });
-
-    html.find('.item-name').click((ev) => {
-      const section = ev.currentTarget.closest('.item');
-      const detail = $(section).find('.item-detail').get(0);
-
-      if (!detail) return;
-      detail.style.display =
-        detail.style.display === 'none' || !detail.style.display
-          ? (detail.style.display = 'block')
-          : (detail.style.display = 'none');
-    });
-
-    html.find('.item-control.item-delete').click((ev) => {
-      if (this.item.type === 'race') {
-        const inheritedType = $(ev.currentTarget.closest('.item')).attr('data-inheritedType');
-        const id = $(ev.currentTarget.closest('.item')).attr('data-item-id');
-        const raceItem = this.item;
-        const allThingsOfRaceItem =
-          inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
-
-        if (!allThingsOfRaceItem) return; // just for safety
-
-        for (const thing of allThingsOfRaceItem) {
-          if (thing.system.transferenceID === id) {
-            allThingsOfRaceItem.delete(thing);
-            break;
-          }
-        }
-        if (inheritedType === 'perk') {
-          raceItem.update({ 'system.perksData': Array.from(allThingsOfRaceItem) });
-        } else {
-          raceItem.update({ 'system.customAttackData': Array.from(allThingsOfRaceItem) });
-        }
-      }
-    });
+  _onRender(context, options) {
+    super._onRender(context, options);
+    this.#dragDrop.forEach((d) => d.bind(this.element));
   }
 
   /**
-   *
+   * Actions
+   * @param {} event 
+   * @param {*} target 
    */
-  get template() {
-    return `systems/torgeternity/templates/sheets/${this.item.type}-sheet.html`;
+  static #onEffectControl(event, target) {
+    if (this.item.isOwned)
+      return ui.notifications.warn(
+        game.i18n.localize('torgeternity.notifications.noActiveEffectInOwnedItem')
+      );
+    onManageActiveEffect(ev, this.item);
   }
 
+  static #onConvertRsa(event, target) {
+    this.item.update({
+      type: 'specialability-rollable',
+    });
+  }
+
+  static #onAddEnhancement(event, target) {
+    const currentShown = this.document.system.pulpPowers.enhancementNumber;
+    const newShown = currentShown < 15 ? currentShown + 1 : currentShown;
+    this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
+  }
+
+
+  static #onRemoveEnhancement(event, target) {
+    const currentShown = this.document.system.pulpPowers.enhancementNumber;
+    const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
+    this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
+  }
+
+  static #onAddLimitation(event, target) {
+    const currentShown = this.document.system.pulpPowers.limitationNumber;
+    const newShown = currentShown < 10 ? currentShown + 1 : currentShown;
+    this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
+  }
+
+  static #onRemoveLimitation(event, target) {
+    const currentShown = this.document.system.pulpPowers.limitationNumber;
+    const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
+    this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
+  }
+
+  static async #onReloadWeapon(event, target) {
+    const button = event.currentTarget.closest('[data-item-id]');
+    const usedAmmo = this?.actor.items.get(button.dataset.itemId);
+
+    await reloadAmmo(this.actor, this.object, usedAmmo, this);
+    this.render(true);
+  }
+
+  static #onSelectSecondaryAxiom(event, target) {
+    event.currentTarget.value === 'none' &&
+      this.item.update({ 'system.secondaryAxiom.value': null });
+  }
+
+  static #onItemName(event, target) {
+    const section = event.currentTarget.closest('.item');
+    const detail = $(section).find('.item-detail').get(0);
+
+    if (!detail) return;
+    detail.style.display =
+      detail.style.display === 'none' || !detail.style.display
+        ? (detail.style.display = 'block')
+        : (detail.style.display = 'none');
+  }
+
+  static #onItemDelete(event, target) {
+    if (this.item.type === 'race') {
+      const inheritedType = $(event.currentTarget.closest('.item')).attr('data-inheritedType');
+      const id = $(event.currentTarget.closest('.item')).attr('data-item-id');
+      const raceItem = this.item;
+      const allThingsOfRaceItem =
+        inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
+
+      if (!allThingsOfRaceItem) return; // just for safety
+
+      for (const thing of allThingsOfRaceItem) {
+        if (thing.system.transferenceID === id) {
+          allThingsOfRaceItem.delete(thing);
+          break;
+        }
+      }
+      if (inheritedType === 'perk') {
+        raceItem.update({ 'system.perksData': Array.from(allThingsOfRaceItem) });
+      } else {
+        raceItem.update({ 'system.customAttackData': Array.from(allThingsOfRaceItem) });
+      }
+    }
+  }
+
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options);
+
+    // Decide which tabs are required
+    switch (this.document.type) {
+      case 'perk':
+        options.parts = ['header', 'tabs', 'perk', 'perkEnhancements', 'perkLimitations', 'effects'];
+        break;
+      default:
+        options.parts = ['header', 'tabs', this.document.type, 'effects'];
+        break;
+    }
+
+    // On first render, set the height
+    if (options.isFirstRender) {
+      switch (this.document.type) {
+        case 'firearm':
+          options.position.height = 710;
+          break;
+        case 'heavyweapon':
+          options.position.height = 730;
+          break;
+        case 'meleeweapon':
+          options.position.height = 675;
+          break;
+        case 'missileweapon':
+          options.position.height = 710;
+          break;
+        case 'miracle':
+        case 'psionicpower':
+        case 'spell':
+          options.position.height = 780;
+          break;
+        case 'specialability':
+          options.position.width = 435;
+          options.position.height = 550;
+          break;
+        case 'specialability-rollable':
+          options.position.height = 625;
+          break;
+        case 'vehicle':
+          options.position.height = 630;
+          break;
+        case 'implant':
+        case 'armor':
+        case 'shield':
+          options.position.height = 615;
+          break;
+        case 'customAttack':
+          options.position.height = 675;
+          break;
+        case 'vehicleAddOn':
+          options.position.height = 620;
+          options.position.width = 465;
+          break;
+        case 'perk':
+          options.parts = ['header', 'tabs', 'perk', 'perkEnhancements', 'perkLimitations', 'effects'];
+          options.position.height = 560;
+
+        default:
+          options.position.height = 560;
+      }
+    }
+  }
+
+  _preparePartContext(partId, context) {
+    context.partId = `${this.id}-${partId}`;
+    if (partId === this.item.type)
+      context.tab = context.tabs.stats;   // so template can access tab.cssClass
+    else
+      context.tab = context.tabs[partId];   // so template can access tab.cssClass
+    return context;
+  }
   /**
    *
    * @param options
    */
-  async getData(options) {
-    const data = await super.getData(options);
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
 
-    data.effects = prepareActiveEffectCategories(this.document.effects);
+    context.effects = prepareActiveEffectCategories(this.document.effects);
+    context.item = context.document;
 
-    data.config = CONFIG.torgeternity;
+    context.config = CONFIG.torgeternity;
 
-    data.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description, { async: true });
-    data.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites, {
+    context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description, { async: true });
+    context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites, {
       async: true,
     });
 
-    data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
+    context.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
 
-    data.displaySecondaryAxiomValue =
+    context.displaySecondaryAxiomValue =
       !this.document.system?.secondaryAxiom ||
         this.document.system?.secondaryAxiom.selected === 'none'
         ? false
         : true;
 
-    data.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
+    context.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
 
-    return data;
+    // tabs?
+    if (!this.tabGroups.primary) this.tabGroups.primary = 'stats';
+    switch (this.item.type) {
+      case 'perk':
+        if (this.item.system.extendedNav)
+          context.tabs = {
+            stats: { group: "primary", id: "stats" },
+            enhancements: { group: "primary", id: "enhancements", label: 'torgeternity.sheetLabels.enhancements' },
+            limitations: { group: "primary", id: "limitations", label: 'torgeternity.sheetLabels.limitations' },
+            effects: { group: "primary", id: "effects" },
+          };
+        else
+          context.tabs = {
+            stats: { group: "primary", id: "stats" },
+            effects: { group: "primary", id: "effects" },
+          };
+        break;
+      default:
+        context.tabs = {
+          stats: { group: "primary", id: "stats" },
+          effects: { group: "primary", id: "effects" },
+        };
+        break;
+    }
+    context.tabs[this.tabGroups.primary].cssClass = 'active';
+
+    return context;
   }
 }
 

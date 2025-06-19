@@ -1,6 +1,6 @@
 <div class="skills">
   <h2 class="skill-edit-toggle" data-action="skillEditToggle"
-    data-tooltip="{{localize 'torgeternity.sheetLabels.toggleSkillDisplay'}}">
+    data-tooltip="torgeternity.sheetLabels.toggleSkillDisplay">
     <a>{{localize "torgeternity.sheetLabels.skills"}}</a>
   </h2>
   {{#*inline "skillRow" content name attrTypes}}
@@ -8,7 +8,7 @@
       <span>
         <a
           class="skill-roll" data-drag="true" data-action="skillRoll"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.skillRollHint'}}"
+          data-tooltip="torgeternity.sheetLabels.skillRollHint"
           data-testtype="skill"
           data-customskill="false"
           data-baseattribute="{{content.baseAttribute}}"
@@ -47,7 +47,7 @@
     </li>
   {{/inline}}
   {{#*inline "customSkillRow" content name}}
-    <li data-tooltip="{{localize 'torgeternity.sheetLabels.customSkill'}}">
+    <li data-tooltip="torgeternity.sheetLabels.customSkill">
       <span>
         <a
           class="skill-roll" data-drag="true" data-action="skillRoll"

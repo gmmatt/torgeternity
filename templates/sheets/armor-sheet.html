@@ -1,126 +1,97 @@
-<form class="{{cssClass}} item-sheet" autocomplete="off">
-  <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.armor"}}</span></h3>
+<section class="tab stats {{tab.cssClass}}" data-group="primary" data-tab="stats">
+  <div class="sheet-content">
+    <aside class="asside armor">
+      <label style="grid-column: 1/3" for="system.cosm" class="item-data-label">
+        {{localize "torgeternity.gear.cosm"}}
+      </label>
+      <select style="grid-column: 1/3" name="system.cosm" class="input-box">
+        {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
+      </select>
+      <label for="system.techlevel" class="item-data-label">
+        {{localize "torgeternity.gear.techlevel"}}
+      </label>
+      <input
+        name="system.techlevel"
+        type="number"
+        value="{{item.system.techlevel}}"
+        class="input-box" />
+      <label for="system.price" style="grid-column: 1/3" class="item-data-label">
+        {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
+      </label>
+      <input
+        name="system.price"
+        type="text"
+        value="{{item.system.price}}"
+        class="input-box-small" />
+      <input
+        name="system.value"
+        type="number"
+        value="{{item.system.value}}"
+        class="input-box-small" />
+      <label for="system.minStrength" class="item-data-label">
+        {{localize "torgeternity.gear.minStrength"}}
+      </label>
+      <input
+        name="system.minStrength"
+        type="number"
+        value="{{item.system.minStrength}}"
+        class="input-box-small" />
+      <label for="system.maxDex" class="item-data-label">
+        {{localize "torgeternity.gear.maxDex"}}
+      </label>
+      <input
+        name="system.maxDex"
+        type="number"
+        value="{{item.system.maxDex}}"
+        class="input-box" />
+      <label for="system.bonus" class="item-data-label">
+        {{localize "torgeternity.gear.bonus"}}
+      </label>
+      <input
+        name="system.bonus"
+        type="number"
+        value="{{item.system.bonus}}"
+        class="input-box" />
+      <label class="item-data-label" for="system.fatigue">
+        {{localize "torgeternity.sheetLabels.fatigue"}}
+      </label>
+      <input
+        name="system.fatigue"
+        type="number"
+        value="{{item.system.fatigue}}"
+        class="input-box" />
+      <p class="item-data-label" style="grid-column: 1/3">
+        {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
+      </p>
 
-  <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
-    <h1><input name="name" type="text" value="{{item.name}}" placeholder="armor Name" /></h1>
-  </header>
+      <select style="grid-column: 1/3" name="system.secondaryAxiom.selected" class="input-box selectSecondaryAxiom">
+        <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
+        {{selectOptions config.axioms selected=item.system.secondaryAxiom.selected localize=true}}
+      </select>
 
-  <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-  </nav>
+      {{#if displaySecondaryAxiomValue}}
+        <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
+        <input
+          name="system.secondaryAxiom.value"
+          type="number"
+          value="{{item.system.secondaryAxiom.value}}"
+          class="input-box" />
+      {{/if}}
 
-  <section class="sheet-body">
-    <div class="tab stats" data-group="primary" data-tab="stats">
-      <div class="sheet-content">
-        <aside class="asside armor">
-          <label style="grid-column: 1/3" for="system.cosm" class="item-data-label">
-            {{localize "torgeternity.gear.cosm"}}
-          </label>
-          <select style="grid-column: 1/3" name="system.cosm" class="input-box">
-            {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
-          </select>
-          <label for="system.techlevel" class="item-data-label">
-            {{localize "torgeternity.gear.techlevel"}}
-          </label>
-          <input
-            name="system.techlevel"
-            type="number"
-            value="{{item.system.techlevel}}"
-            class="input-box"
-          />
-          <label for="system.price" style="grid-column: 1/3" class="item-data-label">
-            {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
-          </label>
-          <input
-            name="system.price"
-            type="text"
-            value="{{item.system.price}}"
-            class="input-box-small"
-          />
-          <input
-            name="system.value"
-            type="number"
-            value="{{item.system.value}}"
-            class="input-box-small"
-          />
-          <label for="system.minStrength" class="item-data-label">
-            {{localize "torgeternity.gear.minStrength"}}
-          </label>
-          <input
-            name="system.minStrength"
-            type="number"
-            value="{{item.system.minStrength}}"
-            class="input-box-small"
-          />
-          <label for="system.maxDex" class="item-data-label">
-            {{localize "torgeternity.gear.maxDex"}}
-          </label>
-          <input
-            name="system.maxDex"
-            type="number"
-            value="{{item.system.maxDex}}"
-            class="input-box"
-          />
-          <label for="system.bonus" class="item-data-label">
-            {{localize "torgeternity.gear.bonus"}}
-          </label>
-          <input
-            name="system.bonus"
-            type="number"
-            value="{{item.system.bonus}}"
-            class="input-box"
-          />
-          <label class="item-data-label" for="system.fatigue">
-            {{localize "torgeternity.sheetLabels.fatigue"}}
-          </label>
-          <input
-            name="system.fatigue"
-            type="number"
-            value="{{item.system.fatigue}}"
-            class="input-box"
-          />
-          <p class="item-data-label" style="grid-column: 1/3" >
-            {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
-          </p>
-
-          <select style="grid-column: 1/3" name="system.secondaryAxiom.selected" class="input-box selectSecondaryAxiom">
-            <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
-            {{selectOptions config.axioms selected=item.system.secondaryAxiom.selected localize=true}}
-          </select>
-
-          {{#if displaySecondaryAxiomValue}}
-            <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
-            <input
-              name="system.secondaryAxiom.value"
-              type="number"
-              value="{{item.system.secondaryAxiom.value}}"
-              class="input-box"
-            />
-          {{/if}}
-
-        </aside>
-        <div class="main-content">
-          <p class="item-data-label">
-            {{localize "torgeternity.gear.notes"}}&nbsp;
-            <input
-              name="system.notes"
-              type="text"
-              value="{{item.system.notes}}"
-              class="input-box"
-            />
-          </p>
-          <div name="system.description" class="item-description-textarea">
-            {{editor description target="system.description" engine="prosemirror" button=true
+    </aside>
+    <div class="main-content">
+      <p class="item-data-label">
+        {{localize "torgeternity.gear.notes"}}&nbsp;
+        <input
+          name="system.notes"
+          type="text"
+          value="{{item.system.notes}}"
+          class="input-box" />
+      </p>
+      <div name="system.description" class="item-description-textarea">
+        {{editor description target="system.description" engine="prosemirror" button=true
             editable=editable}}
-          </div>
-        </div>
       </div>
     </div>
-
-    <div class="tab effects" data-group="primary" data-tab="effects">
-      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-    </div>
-  </section>
-</form>
+  </div>
+</section>

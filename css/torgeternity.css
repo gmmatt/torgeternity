@@ -409,25 +409,25 @@ form.actor-sheet header.sheet-header-vehicle {
 /* --------Heavy Weapon Sheet Footer-------- */
 /*                          */
 
-.item .window-content form.item-sheet .heavy-weapon-footer {
+form.item-sheet .window-content .heavy-weapon-footer {
   display: flex;
   grid-column: 2 / span 3;
   margin: auto;
   justify-content: space-around;
 }
 
-.item .window-content form.item-sheet .heavy-weapon-footer p {
+form.item-sheet .window-content .heavy-weapon-footer p {
   font-family: Alaska;
   font-size: 12px;
 }
 
-.item .window-content form.item-sheet .heavy-weapon-footer .heavy-weapon-gunners .gunner-input {
+form.item-sheet .window-content .heavy-weapon-footer .heavy-weapon-gunners .gunner-input {
   width: 125px;
   font-family: Signika;
   font-size: 13px;
 }
 
-.item .window-content form.item-sheet .heavy-weapon-footer .heavy-weapon-gunners .gunner-skill {
+form.item-sheet .window-content .heavy-weapon-footer .heavy-weapon-gunners .gunner-skill {
   width: 35px;
   font-family: Signika;
   font-size: 13px;
@@ -3505,7 +3505,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 0px;
 }
 
-.item .window-content form.item-sheet {
+form.item-sheet .window-content {
   padding: 10px;
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
@@ -3517,7 +3517,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   border: none;
 }
 
-.item .window-content form.item-sheet .item-type {
+form.item-sheet .window-content .item-type {
   background: url(../images/separatorRound.webp);
   position: absolute;
   transform: rotateZ(-90deg);
@@ -3529,7 +3529,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   border: none;
 }
 
-.item .window-content form.item-sheet .item-type span {
+form.item-sheet .window-content .item-type span {
   background: url(../images/type_back.webp);
   color: black;
   text-shadow: 0px 0px 2px black;
@@ -3537,11 +3537,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 3px 20px;
 }
 
-.item .window-content form.item-sheet header {
+form.item-sheet .window-content header {
   margin-top: 15px;
 }
 
-.item .window-content form.item-sheet header input[name="name"] {
+form.item-sheet .window-content header input[name="name"] {
   border: none;
   text-transform: uppercase;
   text-shadow: 0px -2px 10px #0e0909;
@@ -3551,7 +3551,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   color: black;
 }
 
-.item .window-content form.item-sheet .sheet-content {
+form.item-sheet .window-content .sheet-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -3560,14 +3560,14 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   column-gap: 0.5em;
 }
 
-.item .window-content form.item-sheet .raceDescriptionHeadline {
+form.item-sheet .window-content .raceDescriptionHeadline {
   text-align: center;
   color: black;
   border: none;
   font-weight: bold;
 }
 
-.item .window-content form.item-sheet .raceAttributes {
+form.item-sheet .window-content .raceAttributes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -3577,7 +3577,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin-bottom: 1rem;
 }
 
-.item .window-content form.item-sheet .raceAttributes>h1 {
+form.item-sheet .window-content .raceAttributes>h1 {
   grid-row: 1/2;
   grid-column: 1/6;
   color: black;
@@ -3585,12 +3585,12 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-weight: bold;
 }
 
-.item .window-content form.item-sheet .raceAttributes>label {
+form.item-sheet .window-content .raceAttributes>label {
   grid-row: 2/3;
   color: black;
 }
 
-.item .window-content form.item-sheet .raceAttributes>input {
+form.item-sheet .window-content .raceAttributes>input {
   grid-row: 3/4;
   border: none;
   text-align: center;
@@ -3602,7 +3602,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   color: black;
 }
 
-.item .window-content form.item-sheet .raceAttributes+hr {
+form.item-sheet .window-content .raceAttributes+hr {
   background-image: url(../images/separator.webp);
   /* background-position-y: -8px; */
   background-repeat: no-repeat;
@@ -3615,7 +3615,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin: -15px 10px -15px 0px;
 }
 
-.item .window-content form.item-sheet .raceSpecs {
+form.item-sheet .window-content .raceSpecs {
   color: black;
   display: flex;
   flex-direction: row;
@@ -3625,42 +3625,42 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   column-gap: 15px;
 }
 
-.item .window-content form.item-sheet .raceSpecs>label {
+form.item-sheet .window-content .raceSpecs>label {
   font-family: Palatino;
   font-size: 2em;
   font-weight: bold;
 }
 
-.item .window-content form.item-sheet .raceHardcode {
+form.item-sheet .window-content .raceHardcode {
   min-height: 200px;
   margin-top: 10px;
 }
 
-.item .window-content form.item-sheet .asside {
+form.item-sheet .window-content .asside {
   grid-row: 1/4;
   grid-column: 1/2;
   text-align: center;
 }
 
-.item .window-content form.item-sheet .asside.armor {
+form.item-sheet .window-content .asside.armor {
   display: grid;
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(2, minmax(10px, 1fr));
 }
 
-.item .window-content form.item-sheet .asside.armor>* {
+form.item-sheet .window-content .asside.armor>* {
   margin: unset;
 }
 
-.item .window-content form.item-sheet .asside .perks.generalContradiction {
+form.item-sheet .window-content .asside .perks.generalContradiction {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 7px 0;
 }
 
-.item .window-content form.item-sheet .asside input[type="number"] {
+form.item-sheet .window-content .asside input[type="number"] {
   border: none;
   text-align: center;
   width: 40px;
@@ -3672,24 +3672,24 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   grid-column: 2/3;
 }
 
-.item .window-content form.item-sheet .asside input[name="data.price"],
-.item .window-content form.item-sheet .asside input[name="data.tough"] {
+form.item-sheet .window-content .asside input[name="data.price"],
+form.item-sheet .window-content .asside input[name="data.tough"] {
   width: 50px;
   color: black;
 }
 
-.item .window-content form.item-sheet .asside select {
+form.item-sheet .window-content .asside select {
   color: black;
   text-align: center;
   max-width: 150px;
 }
 
-.item .window-content form.item-sheet .main-content {
+form.item-sheet .window-content .main-content {
   grid-row: 1/4;
   grid-column: 2/5;
 }
 
-.item .window-content form.item-sheet .editor {
+form.item-sheet .window-content .editor {
   /*width: 400px;*/
   min-height: 400px;
   border: 15px solid transparent;
@@ -3706,7 +3706,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   border: none;
 }
 
-.item .window-content form.item-sheet nav.tabs {
+form.item-sheet .window-content nav.tabs {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -3715,11 +3715,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   transform: rotateZ(90deg);
   font-family: Alaska;
   text-transform: capitalize;
-  right: -110px;
+  right: -100px;
   top: 115px;
 }
 
-.item .window-content form.item-sheet nav.tabs a {
+form.item-sheet .window-content nav.tabs a {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
@@ -3728,8 +3728,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 8px 1px;
 }
 
-.item .window-content form.item-sheet nav.tabs a:hover,
-.item .window-content form.item-sheet nav.tabs a:active {
+form.item-sheet .window-content nav.tabs a:hover,
+form.item-sheet .window-content nav.tabs a:active {
   text-transform: uppercase;
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   text-shadow: 0 0 10px #10813f;
@@ -3737,39 +3737,39 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   z-index: 0;
 }
 
-.item .window-content form.item-sheet nav.tabs a.active {
+form.item-sheet .window-content nav.tabs a.active {
   background-image: url(../images/active_tab_back.webp);
   text-transform: uppercase;
 }
 
-.item .window-content form.item-sheet select:hover,
-.item .window-content form.item-sheet select:focus,
-.item .window-content form.item-sheet input[type="text"]:hover,
-.item .window-content form.item-sheet input[type="number"]:hover,
-.item .window-content form.item-sheet input[type="text"]:focus,
-.item .window-content form.item-sheet input[type="number"]:focus {
+form.item-sheet .window-content select:hover,
+form.item-sheet .window-content select:focus,
+form.item-sheet .window-content input[type="text"]:hover,
+form.item-sheet .window-content input[type="number"]:hover,
+form.item-sheet .window-content input[type="text"]:focus,
+form.item-sheet .window-content input[type="number"]:focus {
   box-shadow: 0 0 10px #4f523c inset;
 }
 
-.item .window-content form.item-sheet input[type="text"]::-moz-placeholder,
-.item .window-content form.item-sheet input[type="number"]::-moz-placeholder,
-.item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder,
-.item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder,
-.item .window-content form.item-sheet input[type="text"]::placeholder,
-.item .window-content form.item-sheet input[type="number"]::placeholder {
+form.item-sheet .window-content input[type="text"]::-moz-placeholder,
+form.item-sheet .window-content input[type="number"]::-moz-placeholder,
+form.item-sheet .window-content input[type="text"]:-ms-input-placeholder,
+form.item-sheet .window-content input[type="number"]:-ms-input-placeholder,
+form.item-sheet .window-content input[type="text"]::placeholder,
+form.item-sheet .window-content input[type="number"]::placeholder {
   /*color: #161a1a;*/
   color: rgba(245, 245, 245, 0.9);
   background-color: transparent;
   text-shadow: 0px 0px 10px black;
 }
 
-.item .window-content form.item-sheet .item-data-label {
+form.item-sheet .window-content .item-data-label {
   text-align: center;
   font-family: "Alaska";
   font-size: 14px;
 }
 
-.item .window-content form.item-sheet .item-description-textarea {
+form.item-sheet .window-content .item-description-textarea {
   font-family: "Palatino Linotype";
   font-size: 14px;
   border-radius: 15px;
@@ -3777,19 +3777,19 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 5px 5px;
 }
 
-.item .window-content form.item-sheet .item-description-textarea[name="prerequisites"]>div {
+form.item-sheet .window-content .item-description-textarea[name="prerequisites"]>div {
   min-height: 150px;
 }
 
-.item .window-content form.item-sheet .effects .item-list {
+form.item-sheet .window-content .effects .item-list {
   padding: 0px;
 }
 
-.item .window-content form.item-sheet .effects .effects-list {
+form.item-sheet .window-content .effects .effects-list {
   padding: 0px;
 }
 
-.item .window-content form.item-sheet .effects .effects-heading {
+form.item-sheet .window-content .effects .effects-heading {
   color: white;
   background-color: black;
   margin: 2px 0;
@@ -3798,7 +3798,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-family: "Palatino Linotype";
 }
 
-.item .window-content form.item-sheet .effects .effects-item {
+form.item-sheet .window-content .effects .effects-item {
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
@@ -3807,7 +3807,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   color: black;
 }
 
-.item .window-content form.item-sheet .effects .effect-name {
+form.item-sheet .window-content .effects .effect-name {
   white-space: nowrap;
   overflow-x: hidden;
   text-align: left;
@@ -3816,14 +3816,14 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   width: 25%;
 }
 
-.item .window-content form.item-sheet .effects .effect-section-title {
+form.item-sheet .window-content .effects .effect-section-title {
   width: 25%;
   padding: 0px 0px 0px 10px;
 }
 
-.item .window-content form.item-sheet .effects .effect-source,
-.item .window-content form.item-sheet .effects .effect-duration,
-.item .window-content form.item-sheet .effects .effect-controls {
+form.item-sheet .window-content .effects .effect-source,
+form.item-sheet .window-content .effects .effect-duration,
+form.item-sheet .window-content .effects .effect-controls {
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
@@ -3832,12 +3832,12 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   width: 25%;
 }
 
-.item .window-content form.item-sheet .effects .effect-controls {
+form.item-sheet .window-content .effects .effect-controls {
   border: none;
   flex: 1;
 }
 
-.item .window-content form.item-sheet .effects .effect-item-image {
+form.item-sheet .window-content .effects .effect-item-image {
   flex: 0 0 30px;
   height: 30px;
   background-size: 30px;
@@ -3845,9 +3845,9 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin-right: 5px;
 }
 
-.item .window-content form.item-sheet .effects .effect-toggle,
-.item .window-content form.item-sheet .effects .effect-edit,
-.item .window-content form.item-sheet .effects .effect-delete {
+form.item-sheet .window-content .effects .effect-toggle,
+form.item-sheet .window-content .effects .effect-edit,
+form.item-sheet .window-content .effects .effect-delete {
   padding: 5px;
 }
 

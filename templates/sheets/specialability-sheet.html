@@ -1,33 +1,13 @@
-<form class="{{cssClass}} item-sheet specialability-sheet" autocomplete="off">
-  <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.specialability"}}</span></h3>
-
-  <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
-    <h1><input name="name" type="text" value="{{item.name}}" placeholder="special ability Name" /></h1>
-  </header>
-
-  <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-  </nav>
-
-  <section class="sheet-body">
-    <div class="tab stats" data-group="primary" data-tab="stats">
-      <div class="sheet-content">
-        <div class="main-content">
-          <div name="data.description" class="item-description-textarea">
-            {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
-          </div>
-        </div>
-      </div>
-
-      <div class="sheet-content">
-        <a class="convert-rsa" data-item-id="{{item.id}}">Convert to Rollable</a>
+<section class="tab stats {{tab.cssClass}}" data-group="primary" data-tab="stats">
+  <div class="sheet-content">
+    <div class="main-content">
+      <div name="data.description" class="item-description-textarea">
+        {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
       </div>
     </div>
+  </div>
 
-    <div class="tab effects" data-group="primary" data-tab="effects">
-      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-    </div>
-  </section>
-</form>
+  <div class="sheet-content">
+    <a class="convert-rsa" data-action="convertRsa" data-item-id="{{item.id}}">Convert to Rollable</a>
+  </div>
+</section>
