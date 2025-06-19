@@ -464,11 +464,11 @@ div.application.torgeternity {
   /*color:white;*/
 }
 
-.application .window-content .threat-sheet input[type="text"],
-.application .window-content .threat-sheet input[type="number"],
-.application .window-content .threat-sheet input[type="password"],
-.application .window-content .threat-sheet input[type="date"],
-.application .window-content .threat-sheet input[type="time"] .editor {
+.application.sheet.threat .threat-sheet .window-content input[type="text"],
+.application.sheet.threat .threat-sheet .window-content input[type="number"],
+.application.sheet.threat .threat-sheet .window-content input[type="password"],
+.application.sheet.threat .threat-sheet .window-content input[type="date"],
+.application.sheet.threat .threat-sheet .window-content input[type="time"] .editor {
   background-color: rgba(255, 255, 255, 0.39);
   color: black;
 }
@@ -4402,7 +4402,7 @@ ol.chat-log {
  Threat Sheet Update
 */
 
-.actor-sheet .window-content .threat-sheet {
+.actor-sheet.threat .window-content .threat-sheet {
   display: inline-flex;
 }
 

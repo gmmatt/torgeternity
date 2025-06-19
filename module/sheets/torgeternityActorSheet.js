@@ -19,11 +19,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       width: 773,
       height: 860,
     },
-    //tabs: [{ navSelector: '.sheet-tabs', contentSelector: '.sheet-body', initial: 'stats' }],
-    //scrollY: ['.stats', '.perks', '.gear', '.powers', 'effects', 'background'],
     dragDrop: [
       {
-        dragSelector: '[data-drag]', //'.item-list .item',
+        dragSelector: '.item-list .item', // '[data-drag]'
         dropSelector: null,
       },
     ],
@@ -62,8 +60,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static PARTS = {
-    //stormknight: { template: `systems/torgeternity/templates/actors/stormknight/main.hbs` },
     tabs: { template: 'templates/generic/tab-navigation.hbs' },
+
+    //stormknight: { template: `systems/torgeternity/templates/actors/stormknight/main.hbs` },
     skTitle: { template: "systems/torgeternity/templates/actors/stormknight/title.hbs" },
     skStats: { template: "systems/torgeternity/templates/actors/stormknight/stats-details.hbs" },
     skPerks: { template: "systems/torgeternity/templates/actors/stormknight/perks-details.hbs" },
@@ -72,10 +71,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs" },
     skBackground: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs" },
 
-    // threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs` }
     threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs` },
-
-    // vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs` }
     vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs` }
   }
 
@@ -86,28 +82,24 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   constructor(options = {}) {
     super(options);
 
-    if (this.document.type === 'threat') {
-      this.options.width = this.position.width = 690;
-      this.options.height = this.position.height = 645;
-    }
-
-    this._filters = {
-      effects: new Set(),
-    };
+    this._filters = { effects: new Set() };
     this.#dragDrop = this.#createDragDropHandlers();
   }
 
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    this.options.classes.push(this.actor.type);
+    options.parts = [this.actor.type];
+
     switch (this.actor.type) {
       case 'stormknight':
         options.parts = ['skTitle', 'tabs', 'skStats', 'skPerks', 'skGear', 'skPowers', 'effects', 'skBackground'];
         break;
       case 'vehicle':
-        options.parts = [this.actor.type];
         break;
       case 'threat':
-        options.parts = [this.actor.type];
+        options.width = 690;
+        options.height = 645;
         break;
     }
   }
@@ -184,7 +176,18 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         context.tabs[this.tabGroups.primary].cssClass = 'active';
         /*this.tabGroups[];*/
         break;
+
       case 'threat':
+        if (!this.tabGroups.primary) this.tabGroups.primary = 'stats';
+        context.tabs = {
+          statsActive: "",
+          perksActive: "",
+          gearsActive: "",
+          powersActive: "",
+          effectsActive: "",
+          backgroundActive: "",
+        }
+        context.tabs[`${this.tabGroups.primary}Active`] = "active";
         break;
       case 'vehicle':
         break;
