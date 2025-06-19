@@ -1,54 +1,32 @@
-<div class="{{cssClass}} item-sheet specialability-sheet" autocomplete="off">
-  <h3 class="item-type">
-    <span>{{localize "torgeternity.itemSheetDescriptions.specialability"}}</span>
-  </h3>
-
-  <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
-    <h1>
-      <input name="name" type="text" value="{{item.name}}" placeholder="spacial ability Name" />
-    </h1>
-  </header>
-
-  <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-    <a data-action="tab" data-group="primary" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-  </nav>
-
-  <section class="tab stats" data-group="primary" data-tab="stats">
-    <div class="sheet-content">
-      <div class="asside">
-        <p class="item-data-label">{{localize "torgeternity.powers.skill"}}</p>
-        <select name="system.attackWith" class="input-box">
-          {{selectOptions config.skills selected=item.system.attackWith localize=true sort=true}}
-        </select>
-        <p class="item-data-label">{{localize "torgeternity.powers.damage"}}</p>
+<section class="tab stats {{tab.cssClass}}" data-group="primary" data-tab="stats">
+  <div class="sheet-content">
+    <div class="asside">
+      <p class="item-data-label">{{localize "torgeternity.powers.skill"}}</p>
+      <select name="system.attackWith" class="input-box">
+        {{selectOptions config.skills selected=item.system.attackWith localize=true sort=true}}
+      </select>
+      <p class="item-data-label">{{localize "torgeternity.powers.damage"}}</p>
+      <input
+        name="system.damage"
+        type="number"
+        value="{{item.system.damage}}"
+        class="input-box" />
+      <p class="item-data-label">{{localize "torgeternity.powers.ap"}}</p>
+      <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
+    </div>
+    <div class="main-content">
+      <p class="item-data-label">
+        {{localize "torgeternity.gear.chatNote"}}
         <input
-          name="system.damage"
-          type="number"
-          value="{{item.system.damage}}"
+          name="system.chatNote"
+          type="text"
+          value="{{item.system.chatNote}}"
           class="input-box" />
-        <p class="item-data-label">{{localize "torgeternity.powers.ap"}}</p>
-        <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
-      </div>
-      <div class="main-content">
-        <p class="item-data-label">
-          {{localize "torgeternity.gear.chatNote"}}
-          <input
-            name="system.chatNote"
-            type="text"
-            value="{{item.system.chatNote}}"
-            class="input-box" />
-        </p>
-        <div name="system.description" class="item-description-textarea">
-          {{editor description target="system.description" engine="prosemirror" button=true
+      </p>
+      <div name="system.description" class="item-description-textarea">
+        {{editor description target="system.description" engine="prosemirror" button=true
             editable=editable}}
-        </div>
       </div>
     </div>
-  </section>
-
-  <section class="tab effects" data-group="primary" data-tab="effects">
-    {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-  </section>
-</div>
+  </div>
+</section>
