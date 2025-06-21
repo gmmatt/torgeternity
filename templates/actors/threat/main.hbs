@@ -38,34 +38,30 @@
         </span>
       </div>
 
-      <div class="tab threat-block-tab stats {{tabs.statsActive}}" data-group="primary" data-tab="stats">
+      <section class="tab threat-block-tab stats {{tabs.statsActive}}" data-group="primary" data-tab="stats">
         {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
-      </div>
+      </section>
 
-      <div class="tab perks perks-list {{tabs.perksActive}}" data-group="primary" data-tab="perks">
+      <section class="tab perks perks-list {{tabs.perksActive}}" data-group="primary" data-tab="perks">
         {{> "systems/torgeternity/templates/actors/threat/perks-details.hbs"}}
-      </div>
+      </section>
 
-      <div class="tab gear {{tabs.gearActive}}" data-group="primary" data-tab="gear">
+      <section class="tab gear {{tabs.gearActive}}" data-group="primary" data-tab="gear">
         {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
-      </div>
+      </section>
 
-      <div class="tab powers {{tabs.powersActive}}" data-group="primary" data-tab="powers">
+      <section class="tab powers {{tabs.powersActive}}" data-group="primary" data-tab="powers">
         {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
-      </div>
+      </section>
 
-      <div class="tab effects {{tabs.effectsActive}}" data-group="primary" data-tab="effects">
-        <div class="effects block">
-          {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-        </div>
-      </div>
+      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
 
-      <div class="tab background block {{tabs.backgroundActive}}" data-group="primary" data-tab="background">
+      <section class="tab background block {{tabs.backgroundActive}}" data-group="primary" data-tab="background">
         <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
         <div>
           {{editor enrichedDetails target="system.details.description" button=true editable=editable}}
         </div>
-      </div>
+      </section>
 
     </section>
   </div>

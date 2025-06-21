@@ -14,7 +14,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       resizable: true,
     },
     position: {
-      width: 530,
+      width: 550,
       height: 580,
     },
     form: {
@@ -283,6 +283,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    this.options.classes.push(this.item.type);
 
     // Decide which tabs are required
     switch (this.document.type) {
@@ -298,6 +299,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     if (options.isFirstRender) {
       switch (this.document.type) {
         case 'firearm':
+        case 'missileweapon':
           options.position.height = 710;
           break;
         case 'heavyweapon':
@@ -306,16 +308,13 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         case 'meleeweapon':
           options.position.height = 675;
           break;
-        case 'missileweapon':
-          options.position.height = 710;
-          break;
         case 'miracle':
         case 'psionicpower':
         case 'spell':
           options.position.height = 780;
           break;
         case 'specialability':
-          options.position.width = 435;
+          options.position.width = 455;
           options.position.height = 550;
           break;
         case 'specialability-rollable':
@@ -334,12 +333,9 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
           break;
         case 'vehicleAddOn':
           options.position.height = 620;
-          options.position.width = 465;
+          options.position.width = 485;
           break;
         case 'perk':
-          options.parts = ['header', 'tabs', 'perk', 'perkEnhancements', 'perkLimitations', 'effects'];
-          options.position.height = 560;
-
         default:
           options.position.height = 560;
       }
@@ -386,21 +382,21 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       case 'perk':
         if (this.item.system.extendedNav)
           context.tabs = {
-            stats: { group: "primary", id: "stats" },
-            enhancements: { group: "primary", id: "enhancements", label: 'torgeternity.sheetLabels.enhancements' },
+            stats: { group: "primary", id: "stats", label: 'torgeternity.sheetLabels.stats' },
+            enhancements: { group: "primary", id: "enhancements", label: 'torgeternity.sheetLabels.enhancements', style: "font-size:10px" },
             limitations: { group: "primary", id: "limitations", label: 'torgeternity.sheetLabels.limitations' },
-            effects: { group: "primary", id: "effects" },
+            effects: { group: "primary", id: "effects", label: 'torgeternity.sheetLabels.effects' },
           };
         else
           context.tabs = {
-            stats: { group: "primary", id: "stats" },
-            effects: { group: "primary", id: "effects" },
+            stats: { group: "primary", id: "stats", label: 'torgeternity.sheetLabels.stats' },
+            effects: { group: "primary", id: "effects", label: 'torgeternity.sheetLabels.effects' },
           };
         break;
       default:
         context.tabs = {
-          stats: { group: "primary", id: "stats" },
-          effects: { group: "primary", id: "effects" },
+          stats: { group: "primary", id: "stats", label: 'torgeternity.sheetLabels.stats' },
+          effects: { group: "primary", id: "effects", label: 'torgeternity.sheetLabels.effects' },
         };
         break;
     }

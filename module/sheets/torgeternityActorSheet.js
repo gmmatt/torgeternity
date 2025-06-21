@@ -14,9 +14,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   #dragDrop;
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'sheet', 'actor', 'actor-sheet', 'scrollable', 'standard-form'],
+    classes: ['torgeternity', 'sheet', 'actor', 'actor-sheet', 'standard-form'],
     position: {
-      width: 773,
+      width: 813,
       height: 860,
     },
     dragDrop: [
@@ -66,16 +66,35 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     tabs: { template: 'templates/generic/tab-navigation.hbs' },
 
     //stormknight: { template: `systems/torgeternity/templates/actors/stormknight/main.hbs` },
-    skTitle: { template: "systems/torgeternity/templates/actors/stormknight/title.hbs" },
-    skStats: { template: "systems/torgeternity/templates/actors/stormknight/stats-details.hbs", scrollable: [""] },
-    skPerks: { template: "systems/torgeternity/templates/actors/stormknight/perks-details.hbs", scrollable: [""] },
-    skGear: { template: "systems/torgeternity/templates/actors/stormknight/gear.hbs", scrollable: [""] },
-    skPowers: { template: "systems/torgeternity/templates/actors/stormknight/powers.hbs", scrollable: [""] },
+    title: { template: "systems/torgeternity/templates/actors/stormknight/title.hbs" },
+    stats: { template: "systems/torgeternity/templates/actors/stormknight/stats-details.hbs", scrollable: [""] },
+    perks: { template: "systems/torgeternity/templates/actors/stormknight/perks-details.hbs", scrollable: [""] },
+    gear: { template: "systems/torgeternity/templates/actors/stormknight/gear.hbs", scrollable: [""] },
+    powers: { template: "systems/torgeternity/templates/actors/stormknight/powers.hbs", scrollable: [""] },
     effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs", scrollable: [""] },
-    skBackground: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs", scrollable: [""] },
+    background: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs", scrollable: [""] },
 
     threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: [""] },
     vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs`, scrollable: [""] }
+  }
+
+  static TABS = {
+    primary: {
+      tabs: [
+        { id: 'stats', },
+        { id: 'perks', },
+        { id: 'gear', },
+        { id: 'powers', },
+        { id: 'effects', },
+        { id: 'background', },
+      ],
+      initial: "stats",
+      labelPrefix: 'torgeternity.sheetLabels'
+    }
+  }
+
+  tabGroups = {
+    primary: "stats"
   }
 
   /**
@@ -96,7 +115,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     switch (this.actor.type) {
       case 'stormknight':
-        options.parts = ['skTitle', 'tabs', 'skStats', 'skPerks', 'skGear', 'skPowers', 'effects', 'skBackground'];
+        options.parts = ['title', 'tabs', 'stats', 'perks', 'gear', 'powers', 'effects', 'background'];
         break;
       case 'vehicle':
         break;
@@ -143,26 +162,26 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     // set up TABS
     switch (this.actor.type) {
       case 'stormknight':
-        if (!this.tabGroups.primary) this.tabGroups.primary = 'skStats';
+        /*if (!this.tabGroups.primary) this.tabGroups.primary = 'stats';
         context.tabs = {
-          skStats: {
+          stats: {
             group: 'primary',
-            id: 'skStats',
+            id: 'stats',
             label: 'torgeternity.sheetLabels.stats'
           },
-          skPerks: {
+          perks: {
             group: 'primary',
-            id: 'skPerks',
+            id: 'perks',
             label: 'torgeternity.sheetLabels.perks'
           },
-          skGear: {
+          gear: {
             group: 'primary',
-            id: 'skGear',
+            id: 'gear',
             label: 'torgeternity.sheetLabels.gear'
           },
-          skPowers: {
+          powers: {
             group: 'primary',
-            id: 'skPowers',
+            id: 'powers',
             label: 'torgeternity.sheetLabels.powers'
           },
           effects: {
@@ -170,14 +189,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
             id: 'effects',
             label: 'torgeternity.sheetLabels.effects'
           },
-          skBackground: {
+          background: {
             group: 'primary',
-            id: 'skBackground',
+            id: 'background',
             label: 'torgeternity.sheetLabels.notes'
           },
         };
-        context.tabs[this.tabGroups.primary].cssClass = 'active';
-        /*this.tabGroups[];*/
+        context.tabs[this.tabGroups.primary].cssClass = 'active';*/
         break;
 
       case 'threat':
