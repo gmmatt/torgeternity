@@ -86,6 +86,7 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
    * @inheritDoc
    */
   async _onRender(context, options) {
+    await super._onRender(context, options);
     // checking if doubled values
     this.#checkDoubled();
 

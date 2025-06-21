@@ -45,8 +45,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    * @param html
    */
   async _onRender(context, options) {
+    await super._onRender(context, options);
     const html = this.element;
-    super._onRender(html);
     function set(field, event, func) {
       html.querySelectorAll(field).forEach(e => e.addEventListener(event, func))
     }

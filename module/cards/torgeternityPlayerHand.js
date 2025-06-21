@@ -71,7 +71,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       this.rotateCards(this.element);
     }
     //html.find('#lifelike').click(this.submit.bind(this));
-    super._onRender(context, options);
+    await super._onRender(context, options);
   }
 
   /**
