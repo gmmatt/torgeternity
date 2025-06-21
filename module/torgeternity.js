@@ -824,7 +824,7 @@ function rollItemMacro(itemName) {
         new TestDialog(test);
         /*
             // this will cause the power to be printed to the chat
-            return item.roll({ async: false });
+            return await item.roll();
             /* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
                         var powerData = item.system;
                         var skillData = item.actor.system.skills[powerData.skill];
@@ -847,7 +847,7 @@ function rollItemMacro(itemName) {
       break;
     default:
       // this will cause the item to be printed to the chat
-      return item.roll({ async: false });
+      return item.roll();
     // ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
   }
 }

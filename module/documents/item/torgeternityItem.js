@@ -240,7 +240,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
    */
   async weaponAttack() {
     // Roll those dice!
-    const dicerollint = new Roll('1d20x10x20').roll({ async: false });
+    const dicerollint = await new Roll('1d20x10x20').roll();
     dicerollint.toMessage();
     const diceroll = dicerollint.total;
 
@@ -303,7 +303,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
   // Commented that out because I don't think it's needed anymore but I don't know yet :D
   /* async bonus() {
-    const rollResult = new Roll('1d6x6max5').roll({ async: false });
+    const rollResult = await new Roll('1d6x6max5').roll();
 
     const chatData = {
       type: CONST.CHAT_MESSAGE_TYPES.ROLL,
@@ -322,7 +322,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
    */
   async power() {
     // Roll those dice!
-    const dicerollint = new Roll('1d20x10x20').roll({ async: false });
+    const dicerollint = await new Roll('1d20x10x20').roll();
     dicerollint.toMessage();
     const diceroll = dicerollint.total;
 

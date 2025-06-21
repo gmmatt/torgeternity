@@ -367,10 +367,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.config = CONFIG.torgeternity;
 
-    context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description, { async: true });
-    context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites, {
-      async: true,
-    });
+    context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description);
+    context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites);
 
     context.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
 
