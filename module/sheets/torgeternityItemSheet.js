@@ -186,6 +186,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   async _onRender(context, options) {
     await super._onRender(context, options);
     this.#dragDrop.forEach((d) => d.bind(this.element));
+    if (!context.editable) return;
   }
 
   /**

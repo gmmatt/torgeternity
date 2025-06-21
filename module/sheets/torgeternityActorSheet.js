@@ -364,7 +364,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     // Everything below here is only needed if the sheet is editable
-    if (!this.options.editable) return;
+    if (!context.editable) return;
 
     // compute adds from total for threats
     if (this.actor.type == 'threat') {
