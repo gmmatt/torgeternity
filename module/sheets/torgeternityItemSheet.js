@@ -3,16 +3,22 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.
 /**
  *
  */
-export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
+export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheet) {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'sheet', 'app', 'item', 'item-sheet'],
+    // TODO: 
+    // need 'app' to pick up styling of 'sheet-header'
+    // but that screws up the window's title
+    classes: ['torgeternity', 'sheet', 'item', 'item-sheet', 'standard-form'],
     window: {
       resizable: true,
     },
     position: {
       width: 530,
       height: 580,
+    },
+    form: {
+      submitOnChange: true
     },
     tabs: [
       {
@@ -39,45 +45,44 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         dropSelector: null,
       },
     ],
-    //scrollY: ['.stats', '.effects', '.background'],
   }
 
   static PARTS = {
     header: { template: 'systems/torgeternity/templates/sheets/item-header.hbs' },
     tabs: { template: 'templates/generic/tab-navigation.hbs' },
-    effects: { template: 'systems/torgeternity/templates/parts/active-effects.hbs' },
+    effects: { template: 'systems/torgeternity/templates/parts/active-effects.hbs', scrollable: [""] },
 
-    actionCard: { template: `systems/torgeternity/templates/sheets/actionCard-sheet.html` },
-    ammunition: { template: `systems/torgeternity/templates/sheets/ammunition-sheet.html` },
-    armor: { template: `systems/torgeternity/templates/sheets/armor-sheet.html` },
-    cosmCard: { template: `systems/torgeternity/templates/sheets/cosmCard-sheet.html` },
-    customAttack: { template: `systems/torgeternity/templates/sheets/customAttack-sheet.html` },
-    customSkill: { template: `systems/torgeternity/templates/sheets/customSkill-sheet.html` },
-    destinyCard: { template: `systems/torgeternity/templates/sheets/destinyCard-sheet.html` },
-    enhancement: { template: `systems/torgeternity/templates/sheets/enhancement-sheet.html` },
-    eternityshard: { template: `systems/torgeternity/templates/sheets/eternityshard-sheet.html` },
-    firearm: { template: `systems/torgeternity/templates/sheets/firearm-sheet.html` },
-    gear: { template: `systems/torgeternity/templates/sheets/gear-sheet.html` },
-    heavyweapon: { template: `systems/torgeternity/templates/sheets/heavyweapon-sheet.html` },
-    implant: { template: `systems/torgeternity/templates/sheets/implant-sheet.html` },
-    meleeweapon: { template: `systems/torgeternity/templates/sheets/meleeweapon-sheet.html` },
-    miracle: { template: `systems/torgeternity/templates/sheets/miracle-sheet.html` },
-    missileweapon: { template: `systems/torgeternity/templates/sheets/missileweapon-sheet.html` },
-    perk: { template: `systems/torgeternity/templates/sheets/perk-sheet.html` },
-    perkEnhancements: { template: `systems/torgeternity/templates/sheets/perk-enhancements-sheet.html` },
-    perkLimitations: { template: `systems/torgeternity/templates/sheets/perk-limitations-sheet.html` },
-    psionicpower: { template: `systems/torgeternity/templates/sheets/psionicpower-sheet.html` },
-    race: { template: `systems/torgeternity/templates/sheets/race-sheet.html` },
-    racePerks: { template: `systems/torgeternity/templates/sheets/race-perks-sheet.html` }, // TODO
-    shield: { template: `systems/torgeternity/templates/sheets/shield-sheet.html` },
-    ["specialability-rollable"]: { template: `systems/torgeternity/templates/sheets/specialability-rollable-sheet.html` },
-    specialability: { template: `systems/torgeternity/templates/sheets/specialability-sheet.html` },
-    spell: { template: `systems/torgeternity/templates/sheets/spell-sheet.html` },
-    vehicleHeader: { template: `systems/torgeternity/templates/sheets/vehicle-header-sheet.html` },
-    vehicle: { template: `systems/torgeternity/templates/sheets/vehicle-sheet.html` },
-    vehicleAddOn: { template: `systems/torgeternity/templates/sheets/vehicleAddOn-sheet.html` },
+    actionCard: { template: `systems/torgeternity/templates/sheets/actionCard-sheet.html`, scrollable: [""] },
+    ammunition: { template: `systems/torgeternity/templates/sheets/ammunition-sheet.html`, scrollable: [""] },
+    armor: { template: `systems/torgeternity/templates/sheets/armor-sheet.html`, scrollable: [""] },
+    cosmCard: { template: `systems/torgeternity/templates/sheets/cosmCard-sheet.html`, scrollable: [""] },
+    customAttack: { template: `systems/torgeternity/templates/sheets/customAttack-sheet.html`, scrollable: [""] },
+    customSkill: { template: `systems/torgeternity/templates/sheets/customSkill-sheet.html`, scrollable: [""] },
+    destinyCard: { template: `systems/torgeternity/templates/sheets/destinyCard-sheet.html`, scrollable: [""] },
+    enhancement: { template: `systems/torgeternity/templates/sheets/enhancement-sheet.html`, scrollable: [""] },
+    eternityshard: { template: `systems/torgeternity/templates/sheets/eternityshard-sheet.html`, scrollable: [""] },
+    firearm: { template: `systems/torgeternity/templates/sheets/firearm-sheet.html`, scrollable: [""] },
+    gear: { template: `systems/torgeternity/templates/sheets/gear-sheet.html`, scrollable: [""] },
+    heavyweapon: { template: `systems/torgeternity/templates/sheets/heavyweapon-sheet.html`, scrollable: [""] },
+    implant: { template: `systems/torgeternity/templates/sheets/implant-sheet.html`, scrollable: [""] },
+    meleeweapon: { template: `systems/torgeternity/templates/sheets/meleeweapon-sheet.html`, scrollable: [""] },
+    miracle: { template: `systems/torgeternity/templates/sheets/miracle-sheet.html`, scrollable: [""] },
+    missileweapon: { template: `systems/torgeternity/templates/sheets/missileweapon-sheet.html`, scrollable: [""] },
+    perk: { template: `systems/torgeternity/templates/sheets/perk-sheet.html`, scrollable: [""] },
+    perkEnhancements: { template: `systems/torgeternity/templates/sheets/perk-enhancements-sheet.html`, scrollable: [""] },
+    perkLimitations: { template: `systems/torgeternity/templates/sheets/perk-limitations-sheet.html`, scrollable: [""] },
+    psionicpower: { template: `systems/torgeternity/templates/sheets/psionicpower-sheet.html`, scrollable: [""] },
+    race: { template: `systems/torgeternity/templates/sheets/race-sheet.html`, scrollable: [""] },
+    racePerks: { template: `systems/torgeternity/templates/sheets/race-perks-sheet.html`, scrollable: [""] }, // TODO
+    shield: { template: `systems/torgeternity/templates/sheets/shield-sheet.html`, scrollable: [""] },
+    ["specialability-rollable"]: { template: `systems/torgeternity/templates/sheets/specialability-rollable-sheet.html`, scrollable: [""] },
+    specialability: { template: `systems/torgeternity/templates/sheets/specialability-sheet.html`, scrollable: [""] },
+    spell: { template: `systems/torgeternity/templates/sheets/spell-sheet.html`, scrollable: [""] },
+    vehicleHeader: { template: `systems/torgeternity/templates/sheets/vehicle-header-sheet.html`, scrollable: [""] },
+    vehicle: { template: `systems/torgeternity/templates/sheets/vehicle-sheet.html`, scrollable: [""] },
+    vehicleAddOn: { template: `systems/torgeternity/templates/sheets/vehicleAddOn-sheet.html`, scrollable: [""] },
 
-    powers: { template: `systems/torgeternity/templates/parts/active-effects.hbs` }
+    powers: { template: `systems/torgeternity/templates/parts/active-effects.hbs`, scrollable: [""] }
   };
 
   /**
@@ -178,8 +183,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
    *
    * @param html
    */
-  _onRender(context, options) {
-    super._onRender(context, options);
+  async _onRender(context, options) {
+    await super._onRender(context, options);
     this.#dragDrop.forEach((d) => d.bind(this.element));
   }
 
@@ -231,7 +236,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     const button = event.currentTarget.closest('[data-item-id]');
     const usedAmmo = this?.actor.items.get(button.dataset.itemId);
 
-    await reloadAmmo(this.actor, this.object, usedAmmo, this);
+    await reloadAmmo(this.actor, this.item, usedAmmo, this);
     this.render(true);
   }
 
@@ -357,6 +362,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.effects = prepareActiveEffectCategories(this.document.effects);
     context.item = context.document;
+    context.typeLabel = CONFIG.Item.typeLabels[context.document.type];
 
     context.config = CONFIG.torgeternity;
 
