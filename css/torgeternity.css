@@ -203,13 +203,13 @@ a.inline-roll.broken:hover {
   padding: 15% 10% 10% 10%;
 }
 
-.actor-sheet .window-content .vehicle-description .list-section-heading {
+.actor-sheet.vehicle .window-content .vehicle-description .list-section-heading {
   grid-column: 1/9;
   grid-row: 1/2;
   align-items: center;
 }
 
-.sheet .vehicle-description .editor-content {
+.actor-sheet.vehicle .vehicle-description .editor-content {
   height: 90%;
   overflow-y: auto;
   word-break: break-word;
@@ -223,18 +223,18 @@ a.inline-roll.broken:hover {
   display: block !important;
 }
 
-form.actor-sheet header.sheet-header-vehicle {
+form.actor-sheet.vehicle header.sheet-header-vehicle {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   flex-wrap: nowrap;
 }
 
-.actor-sheet .window-content .vehicle-header-image {
+.actor-sheet.vehicle .window-content .vehicle-header-image {
   flex-grow: 1;
 }
 
-.actor-sheet .window-content .vehicle-header-name {
+.actor-sheet.vehicle .window-content .vehicle-header-name {
   align-self: center;
   flex-grow: 5;
 }
@@ -454,6 +454,7 @@ div.application.torgeternity {
   color: white;
 }
 
+.application .window-content select,
 .application .window-content input[type="text"],
 .application .window-content input[type="number"],
 .application .window-content input[type="password"],
@@ -461,6 +462,8 @@ div.application.torgeternity {
 .application .window-content input[type="time"] .editor,
 .application .window-content input[type="checkbox"] {
   background-color: rgba(255, 255, 255, 0.39);
+  padding-left: 3px;
+  padding-right: 3px;
   /*color:white;*/
 }
 
@@ -2161,6 +2164,17 @@ p.skill-chat-title.skilled {
   /*font-size: 12px;*/
 }
 
+form.actor-sheet {
+  /* TODO: but window title scrolls */
+  display: block;
+  overflow-y: auto;
+}
+
+form.actor-sheet ul {
+  margin-bottom: 6.5px;
+  margin-top: 6.5px;
+}
+
 form.actor-sheet .actor-type {
   background: url(../images/separatorRound.webp);
   position: absolute;
@@ -2270,7 +2284,7 @@ form.actor-sheet header input[name="name"] {
   align-items: center;
 }
 
-.actor-sheet .window-content .tab[data-tab].active {
+.actor-sheet .window-content .tab.active[data-tab] {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(6, minmax(100px, min-content));
@@ -2281,7 +2295,7 @@ form.actor-sheet header input[name="name"] {
   height: 100%;
 }
 
-.actor-sheet .window-content .tab[data-tab="vehicleGear"].active {
+.actor-sheet .window-content .tab.active[data-tab="vehicleGear"] {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -3196,6 +3210,14 @@ form.actor-sheet header input[name="name"] {
   color: black;
 }
 
+.actor-sheet .window-content .defense h2 {
+  line-height: 0.4em;
+}
+
+.actor-sheet .window-content .defense p {
+  margin: 0.5em 0;
+}
+
 .actor-sheet .window-content .defense {
   line-height: 0.4em;
   padding-top: 10px;
@@ -3328,6 +3350,10 @@ form.actor-sheet.threat td input {
 
 form.actor-sheet.threat .threat-edit input[type="text"] {
   width: 100px;
+}
+
+form.actor-sheet section.window-content {
+  overflow-y: auto;
 }
 
 form.actor-sheet.threat .sheet-header {
@@ -3513,8 +3539,43 @@ form.item-sheet .window-content {
   font-size: 0.9em;
 }
 
+body.game .item-sheet header.sheet-header {
+  display: flex;
+  align-items: center;
+}
+
+body.game .item-sheet header.sheet-header img {
+  flex: 0 0 64px;
+  height: 64px;
+  margin-right: 6px;
+}
+
+body.game .item-sheet header.sheet-header h1 {
+  flex: 1;
+  margin: 0;
+  border-bottom: none;
+}
+
+body.game .item-sheet header.sheet-header h1 input {
+  height: 48px;
+  line-height: 48px;
+  margin: 8px 2%;
+  width: 96%;
+}
+
 .item-sheet>.sheet-header img {
   border: none;
+}
+
+.item-sheet header.sheet-header {
+  display: flex;
+  align-items: center;
+}
+
+.item-sheet header.sheet-header img {
+  flex: 0 0 64px;
+  height: 64px;
+  margin-right: 6px;
 }
 
 form.item-sheet .window-content .item-type {
@@ -3715,7 +3776,7 @@ form.item-sheet .window-content nav.tabs {
   transform: rotateZ(90deg);
   font-family: Alaska;
   text-transform: capitalize;
-  right: -100px;
+  right: -110px;
   top: 115px;
 }
 
@@ -3879,7 +3940,7 @@ form.item-sheet .window-content .effects .effect-delete {
   align-items: baseline;
 }
 
-.app.application.torgeternity.sheet.item {
+.application.torgeternity.sheet.item {
   height: auto !important;
 }
 

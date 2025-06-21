@@ -90,8 +90,8 @@
   box-shadow: 0px 5px 10px #009fff63 inset;
 }
 
-.application.torgeternity .window-content button,
-.application.torgeternity .window-content select,
+.journal-sheet.torgeternity .window-content button,
+.journal-sheet.torgeternity .window-content select,
 .journal-sheet .directory .action-buttons button {
   text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
   background-image: url(../images/lightning_bar.webp);
