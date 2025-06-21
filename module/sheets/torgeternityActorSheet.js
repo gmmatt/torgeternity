@@ -14,7 +14,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   #dragDrop;
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'sheet', 'actor', 'actor-sheet', 'scrollable'],
+    classes: ['torgeternity', 'sheet', 'actor', 'actor-sheet', 'scrollable', 'standard-form'],
     position: {
       width: 773,
       height: 860,
@@ -25,6 +25,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         dropSelector: null,
       },
     ],
+    form: {
+      submitOnChange: true
+    },
     actions: {
       skillList: TorgeternityActorSheet.#onSkillList,
       skillRoll: TorgeternityActorSheet.#onSkillRoll,
@@ -64,15 +67,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     //stormknight: { template: `systems/torgeternity/templates/actors/stormknight/main.hbs` },
     skTitle: { template: "systems/torgeternity/templates/actors/stormknight/title.hbs" },
-    skStats: { template: "systems/torgeternity/templates/actors/stormknight/stats-details.hbs" },
-    skPerks: { template: "systems/torgeternity/templates/actors/stormknight/perks-details.hbs" },
-    skGear: { template: "systems/torgeternity/templates/actors/stormknight/gear.hbs" },
-    skPowers: { template: "systems/torgeternity/templates/actors/stormknight/powers.hbs" },
-    effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs" },
-    skBackground: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs" },
+    skStats: { template: "systems/torgeternity/templates/actors/stormknight/stats-details.hbs", scrollable: [""] },
+    skPerks: { template: "systems/torgeternity/templates/actors/stormknight/perks-details.hbs", scrollable: [""] },
+    skGear: { template: "systems/torgeternity/templates/actors/stormknight/gear.hbs", scrollable: [""] },
+    skPowers: { template: "systems/torgeternity/templates/actors/stormknight/powers.hbs", scrollable: [""] },
+    effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs", scrollable: [""] },
+    skBackground: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs", scrollable: [""] },
 
-    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs` },
-    vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs` }
+    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: [""] },
+    vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs`, scrollable: [""] }
   }
 
   /**
@@ -347,15 +350,16 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    *
    * @param html
    */
-  _onRender(context, options) {
+  async _onRender(context, options) {
+    await super._onRender(context, options);
     let html = this.element;
 
     // localizing hardcoded possibility potential value
     if (this.actor.isOwner) {
       html.querySelectorAll('.attributeValueField').forEach(elem =>
         elem.addEventListener('change', event => {
-          const concernedAttribute = event.target.dataset.baseattributeinput;
-          this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: parseInt(event.target.value) });
+          const concernedAttribute = target.dataset.baseattributeinput;
+          this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: parseInt(target.value) });
         }));
     }
 
@@ -469,11 +473,11 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onCosmPoss(event, target) {
-    const actor = this.object;
-    const windo = Object.values(ui.windows).find(
+    const actor = this.actor;
+    const window = Object.values(ui.windows).find(
       (w) => w.title === game.i18n.localize('torgeternity.sheetLabels.possibilityByCosm')
     );
-    if (!windo) {
+    if (!window) {
       PossibilityByCosm.create(actor);
     }
   }
@@ -483,7 +487,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onSkillList(event, target) {
-    const skillName = event.target.dataset.name;
+    const skillName = target.dataset.name;
     const isThreatSkill = this.actor.system.skills[skillName]?.isThreatSkill;
     const update = { [`system.skills.${skillName}.isThreatSkill`]: !isThreatSkill };
     if (isThreatSkill) {
@@ -497,12 +501,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onSkillRoll(event, target) {
-    const skillName = event.target.dataset.name;
-    const attributeName = event.target.dataset.baseattribute;
-    const isAttributeTest = event.target.dataset.testtype === 'attribute';
-    const skillValue = event.target.dataset.value;
+    const skillName = target.dataset.name;
+    const attributeName = target.dataset.baseattribute;
+    const isAttributeTest = target.dataset.testtype === 'attribute';
+    const skillValue = target.dataset.value;
     let isFav;
-    if (event.target.dataset.isfav === 'true') {
+    if (target.dataset.isfav === 'true') {
       isFav = true;
     } else {
       isFav = false;
@@ -548,8 +552,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     const test = {
-      testType: event.target.dataset.testtype,
-      customSkill: event.target.dataset.customskill,
+      testType: target.dataset.testtype,
+      customSkill: target.dataset.customskill,
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,
@@ -580,17 +584,17 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onSkillElementRoll(event, target) {
-    const skillName = event.target.dataset.name;
-    const attributeName = event.target.dataset.baseattribute;
-    const isUnskilledTest = event.target.dataset.unskilleduse === '0';
+    const skillName = target.dataset.name;
+    const attributeName = target.dataset.baseattribute;
+    const isUnskilledTest = target.dataset.unskilleduse === '0';
     const skillValue =
-      event.target.dataset.value === 'NaN'
+      target.dataset.value === 'NaN'
         ? isUnskilledTest
           ? '-'
           : this.actor.system.attributes[attributeName].value
-        : event.target.dataset.value;
+        : target.dataset.value;
     let isFav;
-    if (event.target.dataset.isfav === 'true') {
+    if (target.dataset.isfav === 'true') {
       isFav = true;
     } else {
       isFav = false;
@@ -602,8 +606,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     const test = {
-      testType: event.target.dataset.testtype,
-      customSkill: event.target.dataset.customskill,
+      testType: target.dataset.testtype,
+      customSkill: target.dataset.customskill,
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,
@@ -647,15 +651,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: 'vehicle',
       isAttack: false,
       skillName: 'Vehicle Chase',
-      skillValue: event.target.dataset.skillValue,
+      skillValue: target.dataset.skillValue,
       targets: Array.from(game.user.targets),
       applySize: false,
       DNDescriptor: 'highestSpeed',
       attackOptions: false,
       rollTotal: 0,
       chatNote: '',
-      vehicleSpeed: event.target.dataset.speed,
-      maneuverModifier: event.target.dataset.maneuver,
+      vehicleSpeed: target.dataset.speed,
+      maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
     };
@@ -677,15 +681,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: 'vehicle',
       isAttack: false,
       skillName: 'Vehicle Operation',
-      skillValue: event.target.dataset.skillValue,
+      skillValue: target.dataset.skillValue,
       targets: Array.from(game.user.targets),
       applySize: false,
       DNDescriptor: 'standard',
       attackOptions: false,
       rollTotal: 0,
       chatNote: '',
-      vehicleSpeed: event.target.dataset.speed,
-      maneuverModifier: event.target.dataset.maneuver,
+      vehicleSpeed: target.dataset.speed,
+      maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
     };
@@ -715,15 +719,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: 'vehicle',
       isAttack: false,
       skillName: 'Vehicle Stunt',
-      skillValue: event.target.dataset.skillValue,
+      skillValue: target.dataset.skillValue,
       targets: Array.from(game.user.targets),
       applySize: false,
       DNDescriptor: dnDescriptor,
       attackOptions: false,
       rollTotal: 0,
       chatNote: '',
-      vehicleSpeed: event.target.dataset.speed,
-      maneuverModifier: event.target.dataset.maneuver,
+      vehicleSpeed: target.dataset.speed,
+      maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
     };
@@ -737,7 +741,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static #onInteractionAttack(event, target) {
     let dnDescriptor = 'standard';
-    const attackType = event.target.dataset.attackType;
+    const attackType = target.dataset.attackType;
     if (Array.from(game.user.targets).length > 0) {
       switch (attackType) {
         case 'intimidation':
@@ -766,13 +770,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorName: this.actor.name,
       actorType: this.actor.type,
       isAttack: false,
-      interactionAttackType: event.target.dataset.attackType,
-      skillName: event.target.dataset.name,
+      interactionAttackType: target.dataset.attackType,
+      skillName: target.dataset.name,
       skillBaseAttribute: game.i18n.localize(
-        'torgeternity.skills.' + event.target.dataset.baseAttribute
+        'torgeternity.skills.' + target.dataset.baseAttribute
       ),
-      skillAdds: event.target.dataset.adds,
-      skillValue: event.target.dataset.skillValue,
+      skillAdds: target.dataset.adds,
+      skillValue: target.dataset.skillValue,
       isFav: this.actor.system.skills[attackType].isFav,
       unskilledUse: true,
       darknessModifier: 0,
@@ -815,9 +819,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       dnDescriptor = 'standard';
     }
 
-    const skillValue = isNaN(event.target.dataset.skillValue)
+    const skillValue = isNaN(target.dataset.skillValue)
       ? this.actor.system.attributes.dexterity.value
-      : event.target.dataset.skillValue;
+      : target.dataset.skillValue;
 
     const test = {
       testType: 'attack',
@@ -832,7 +836,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillValue: skillValue,
       isFav: this.actor.system.skills.unarmedCombat.isFav,
       unskilledUse: true,
-      damage: parseInt(event.target.dataset.damage),
+      damage: parseInt(target.dataset.damage),
       weaponAP: 0,
       applyArmor: true,
       darknessModifier: 0,
@@ -942,7 +946,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onItemChat(event, target) {
-    const itemID = event.target.closest('.item').dataset.itemId;
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     const chatData = {
       user: game.user._id,
@@ -963,7 +967,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onAttackRoll(event, target) {
-    const itemID = event.target.closest('.item').dataset.itemId;
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     let attributes;
     const weaponData = item.system;
@@ -993,7 +997,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (checkUnskilled(skillValue, attackWith, this.actor)) return;
 
     let dnDescriptor = 'standard';
-    const attackType = event.target.dataset.attackType;
+    const attackType = target.dataset.attackType;
     let adjustedDamage = 0;
 
     if (Array.from(game.user.targets).length > 0) {
@@ -1086,7 +1090,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   /* I've commented that out because it shouldn't be needed anymore but I don't know yet :D
    static #onBonusRoll(event, target) {
-    const itemID = event.target.closest('.item').dataset.itemId;
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
 
     item.bonus();
@@ -1097,7 +1101,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onPowerRoll(event, target) {
-    const itemID = event.target.closest('.item').dataset.itemId;
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     const powerData = item.system;
     const skillName = powerData.skill;
@@ -1138,7 +1142,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       isFav: skillData.isFav,
       skillName: skillName,
       skillBaseAttribute: game.i18n.localize(
-        'torgeternity.skills.' + event.target.dataset.baseAttribute
+        'torgeternity.skills.' + target.dataset.baseAttribute
       ),
       skillAdds: skillData.adds,
       skillValue: Math.max(
@@ -1201,7 +1205,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onItemEquip(event, target) {
-    const itemID = event.target.closest('.item').dataset.itemId;
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     TorgeternityItem.toggleEquipState(item, this.actor);
   }
@@ -1211,7 +1215,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static #onApplyFatigue(event, target) {
-    const newShock = this.actor.system.shock.value + parseInt(event.target.dataset.fatigue);
+    const newShock = this.actor.system.shock.value + parseInt(target.dataset.fatigue);
     this.actor.update({ 'system.shock.value': newShock });
   }
 
@@ -1223,21 +1227,21 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     );
   }
   static #onIncreaseAttribute(event, target) {
-    const concernedAttribute = event.target.dataset.concernedattribute;
+    const concernedAttribute = target.dataset.concernedattribute;
     const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
     this.actor.update({
       [`system.attributes.${concernedAttribute}.base`]: attributeToChange + 1,
     });
   }
   static #onDecreaseAttribute(event, target) {
-    const concernedAttribute = event.target.dataset.concernedattribute;
+    const concernedAttribute = target.dataset.concernedattribute;
     const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
     this.actor.update({
       [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1,
     });
   }
   static #onItemEdit(event, target) {
-    const li = event.target.closest('.item');
+    const li = target.closest('.item');
     const item = this.actor.items.get(li.dataset.itemId);
     item.sheet.render(true);
   }
@@ -1260,7 +1264,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       default: 'yes',
       close: () => {
         if (applyChanges) {
-          const li = event.target.closest('.item');
+          const li = target.closest('.item');
           this.actor.deleteEmbeddedDocuments('Item', [li.dataset.itemId]);
           li.slideUp(200, () => this.render(false));
         }
@@ -1268,13 +1272,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }).render(true);
   }
   static #reloadWeapon(event, target) {
-    const button = event.target.closest('[data-item-id]');
+    const button = target.closest('[data-item-id]');
     const weapon = this.actor.items.get(button.dataset.itemId);
 
     reloadAmmo(this.actor, weapon);
   }
   static #onitemName(event, target) {
-    const section = event.target.closest('.item');
+    const section = target.closest('.item');
     const detail = $(section).find('.item-detail');
     const content = detail.get(0);
     if (content != undefined && content.style.maxHeight) {
