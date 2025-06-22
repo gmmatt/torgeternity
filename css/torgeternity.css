@@ -3795,7 +3795,7 @@ p.skill-chat-title.skilled {
 }
 
 .sheet.item.perk .window-content nav.tabs a[data-tab="enhancements"] {
-  font-size: 10px;
+  font-size: smaller;
 }
 
 .sheet.item .window-content nav.tabs a {
