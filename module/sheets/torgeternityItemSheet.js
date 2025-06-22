@@ -9,7 +9,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     // TODO: 
     // need 'app' to pick up styling of 'sheet-header'
     // but that screws up the window's title
-    classes: ['torgeternity', 'sheet', 'item', 'item-sheet', 'standard-form'],
+    classes: ['torgeternity', 'sheet', 'item', 'standard-form'],
     window: {
       resizable: true,
     },
@@ -66,18 +66,18 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     heavyweapon: { template: `systems/torgeternity/templates/sheets/heavyweapon-sheet.html`, scrollable: [""] },
     implant: { template: `systems/torgeternity/templates/sheets/implant-sheet.html`, scrollable: [""] },
     meleeweapon: { template: `systems/torgeternity/templates/sheets/meleeweapon-sheet.html`, scrollable: [""] },
-    miracle: { template: `systems/torgeternity/templates/sheets/miracle-sheet.html`, scrollable: [""] },
+    miracle: { template: `systems/torgeternity/templates/partials/powers-sheet.hbs`, scrollable: [""] },
     missileweapon: { template: `systems/torgeternity/templates/sheets/missileweapon-sheet.html`, scrollable: [""] },
     perk: { template: `systems/torgeternity/templates/sheets/perk-sheet.html`, scrollable: [""] },
     perkEnhancements: { template: `systems/torgeternity/templates/sheets/perk-enhancements-sheet.html`, scrollable: [""] },
     perkLimitations: { template: `systems/torgeternity/templates/sheets/perk-limitations-sheet.html`, scrollable: [""] },
-    psionicpower: { template: `systems/torgeternity/templates/sheets/psionicpower-sheet.html`, scrollable: [""] },
+    psionicpower: { template: `systems/torgeternity/templates/partials/powers-sheet.hbs`, scrollable: [""] },
     race: { template: `systems/torgeternity/templates/sheets/race-sheet.html`, scrollable: [""] },
     racePerks: { template: `systems/torgeternity/templates/sheets/race-perks-sheet.html`, scrollable: [""] }, // TODO
     shield: { template: `systems/torgeternity/templates/sheets/shield-sheet.html`, scrollable: [""] },
     ["specialability-rollable"]: { template: `systems/torgeternity/templates/sheets/specialability-rollable-sheet.html`, scrollable: [""] },
     specialability: { template: `systems/torgeternity/templates/sheets/specialability-sheet.html`, scrollable: [""] },
-    spell: { template: `systems/torgeternity/templates/sheets/spell-sheet.html`, scrollable: [""] },
+    spell: { template: `systems/torgeternity/templates/partials/powers-sheet.hbs`, scrollable: [""] },
     vehicleHeader: { template: `systems/torgeternity/templates/sheets/vehicle-header-sheet.html`, scrollable: [""] },
     vehicle: { template: `systems/torgeternity/templates/sheets/vehicle-sheet.html`, scrollable: [""] },
     vehicleAddOn: { template: `systems/torgeternity/templates/sheets/vehicleAddOn-sheet.html`, scrollable: [""] },
