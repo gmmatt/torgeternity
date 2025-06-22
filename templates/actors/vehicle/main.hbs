@@ -54,98 +54,102 @@
     <div class="tab stats {{tabs.stats.cssClass}}" data-group="primary" data-tab="stats">
       <div>
         <table class="groove-borders">
-          <tr>
-            <th>
-              <a class="attribut-block">{{localize "torgeternity.gear.techlevel"}}</a>
-            </th>
-            <th>
-              <a class="attribut-block">{{localize "torgeternity.gear.topspeed"}}</a>
-            </th>
-            <th>
-              <a class="attribut-block">{{localize "torgeternity.gear.passengers"}}</a>
-            </th>
-            <th>
-              <a class="attribut-block">{{localize "torgeternity.gear.mr"}}</a>
-            </th>
-            <th>
-              <a class="attribut-block">{{localize "torgeternity.gear.toughness"}}</a>
-            </th>
-            <th>
-              <a class="attribut-block">{{localize "torgeternity.gear.armor"}}</a>
-            </th>
-            <th>
-              <a class="attribut-block"></a>
-            </th>
-            <th>
-              <a class="attribut-block">{{localize "torgeternity.gear.price"}}</a>
-            </th>
-          </tr>
-          <tr>
-            <td class="vehicle-stat">
-              <input
-                name="system.axioms.tech"
-                type="number"
-                value="{{document.system.axioms.tech}}"
-                data-dtype="Number" />
-            </td>
-            <td class="vehicle-stat">
-              <input
-                name="system.topSpeed.kph"
-                type="number"
-                value="{{document.system.topSpeed.kph}}"
-                data-dtype="Number" />
-              ( {{document.system.topSpeed.value}} ) {{#if (eq document.system.topSpeed.penalty "-2")}}
-                {{localize "torgeternity.speeds.fast"}} {{/if}} {{#if (eq
+          <thead>
+            <tr>
+              <th>
+                <a class="attribut-block">{{localize "torgeternity.gear.techlevel"}}</a>
+              </th>
+              <th>
+                <a class="attribut-block">{{localize "torgeternity.gear.topspeed"}}</a>
+              </th>
+              <th>
+                <a class="attribut-block">{{localize "torgeternity.gear.passengers"}}</a>
+              </th>
+              <th>
+                <a class="attribut-block">{{localize "torgeternity.gear.mr"}}</a>
+              </th>
+              <th>
+                <a class="attribut-block">{{localize "torgeternity.gear.toughness"}}</a>
+              </th>
+              <th>
+                <a class="attribut-block">{{localize "torgeternity.gear.armor"}}</a>
+              </th>
+              <th>
+                <a class="attribut-block"></a>
+              </th>
+              <th>
+                <a class="attribut-block">{{localize "torgeternity.gear.price"}}</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="vehicle-stat">
+                <input
+                  name="system.axioms.tech"
+                  type="number"
+                  value="{{document.system.axioms.tech}}"
+                  data-dtype="Number" />
+              </td>
+              <td class="vehicle-stat">
+                <input
+                  name="system.topSpeed.kph"
+                  type="number"
+                  value="{{document.system.topSpeed.kph}}"
+                  data-dtype="Number" />
+                ( {{document.system.topSpeed.value}} ) {{#if (eq document.system.topSpeed.penalty "-2")}}
+                  {{localize "torgeternity.speeds.fast"}} {{/if}} {{#if (eq
               document.system.topSpeed.penalty "-4")}} {{localize "torgeternity.speeds.veryFast"}}
-              {{/if}} {{#if (eq document.system.topSpeed.penalty "-6")}} {{localize
+                {{/if}} {{#if (eq document.system.topSpeed.penalty "-6")}} {{localize
               "torgeternity.speeds.ultraFast"}} {{/if}}
-            </td>
-            <td class="vehicle-stat">
-              <input
-                name="system.passengers"
-                type="number"
-                value="{{document.system.passengers}}"
-                data-dtype="Number" />
-            </td>
-            <td class="vehicle-stat">
-              <input
-                name="system.maneuver"
-                type="number"
-                value="{{document.system.maneuver}}"
-                data-dtype="Number" />
-            </td>
-            <td class="vehicle-stat">
-              <input
-                name="system.toughness"
-                type="number"
-                value="{{document.system.toughness}}"
-                data-dtype="Number"
-                data-tooltip="{{document.defenses.toughness}}" />
-            </td>
-            <td class="vehicle-stat">
-              <input
-                name="system.armor"
-                type="number"
-                value="{{document.system.armor}}"
-                data-dtype="Number"
-                data-tooltip="{{document.defenses.armor}}" />
-            </td>
-            <td class="vehicle-stat">
-              <span>{{document.defenses.toughness}}&lpar;{{document.defenses.armor}}&rpar;</span>
-            </td>
-            <td class="vehicle-stat">
-              <input
-                name="system.price.dollars"
-                type="number"
-                value="{{document.system.price.dollars}}"
-                data-dtype="Number" />
-              <select name="system.price.magnitude" class="input-box">
-                {{selectOptions config.magnitudes selected=document.system.price.magnitude sort=true
+              </td>
+              <td class="vehicle-stat">
+                <input
+                  name="system.passengers"
+                  type="number"
+                  value="{{document.system.passengers}}"
+                  data-dtype="Number" />
+              </td>
+              <td class="vehicle-stat">
+                <input
+                  name="system.maneuver"
+                  type="number"
+                  value="{{document.system.maneuver}}"
+                  data-dtype="Number" />
+              </td>
+              <td class="vehicle-stat">
+                <input
+                  name="system.toughness"
+                  type="number"
+                  value="{{document.system.toughness}}"
+                  data-dtype="Number"
+                  data-tooltip="{{document.defenses.toughness}}" />
+              </td>
+              <td class="vehicle-stat">
+                <input
+                  name="system.armor"
+                  type="number"
+                  value="{{document.system.armor}}"
+                  data-dtype="Number"
+                  data-tooltip="{{document.defenses.armor}}" />
+              </td>
+              <td class="vehicle-stat">
+                <span>{{document.defenses.toughness}}&lpar;{{document.defenses.armor}}&rpar;</span>
+              </td>
+              <td class="vehicle-stat">
+                <input
+                  name="system.price.dollars"
+                  type="number"
+                  value="{{document.system.price.dollars}}"
+                  data-dtype="Number" />
+                <select name="system.price.magnitude" class="input-box">
+                  {{selectOptions config.magnitudes selected=document.system.price.magnitude sort=true
                 localize=true}}
-              </select>
-              ( {{document.system.price.value}} )
-            </td>
-          </tr>
+                </select>
+                ( {{document.system.price.value}} )
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <h2>{{localize "torgeternity.sheetLabels.operator"}}</h2>
