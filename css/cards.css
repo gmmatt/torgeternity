@@ -169,9 +169,14 @@ li.card.pooled {
   bottom: 0;
 }
 
-span.handdesign {
+form.hand span.handdesign {
   left: 40%;
   position: absolute;
   top: 0px;
   z-index: 300;
+}
+
+form.hand span.handdesign input.toggle {
+  font-size: 12px;
+  line-height: normal;
 }
