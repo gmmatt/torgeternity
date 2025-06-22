@@ -4,7 +4,7 @@
 export default class torgeternityCardConfig extends foundry.applications.sheets.CardConfig {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity'],
+    classes: ['torgeternity', 'standard-form'],
     position: {
       width: 480,
       height: 'auto',

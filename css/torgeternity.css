@@ -527,9 +527,14 @@ div.application.torgeternity.standard-form {
 .application .window-content input[type="time"] .editor,
 .application .window-content input[type="checkbox"] {
   background-color: rgba(255, 255, 255, 0.39);
-  padding-left: 3px;
-  padding-right: 3px;
+  /*padding-left: 3px;
+  padding-right: 3px;*/
   /*color:white;*/
+}
+
+.torgeternity {
+  --color-text-emphatic: white;
+  --color-form-label: white;
 }
 
 .sheet.threat .threat-sheet input[type="text"],
@@ -825,6 +830,9 @@ form .form-group .form-fields.torgeternityFormFields>* {
 
 textarea {
   background-color: rgba(90, 157, 163, 0.493);
+  /* Some values from V12 */
+  width: 100%;
+  padding: 5px;
 }
 
 textarea:focus,
@@ -890,7 +898,7 @@ textarea:hover {
   }
 }
 
-body {
+.application {
   font-family: Alaska;
   font-size: 12px;
 }
@@ -907,14 +915,14 @@ body * ::-webkit-scrollbar-thumb {
   border: 1px solid #2e2e2e94;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="password"],
-input[type="date"],
-input[type="time"],
-select,
-option,
-textarea {
+.torgeternity input[type="text"],
+.torgeternity input[type="number"],
+.torgeternity input[type="password"],
+.torgeternity input[type="date"],
+.torgeternity input[type="time"],
+.torgeternity select,
+.torgeternity option,
+.torgeternity textarea {
   font-family: "Signika";
   font-size: 13px;
 }
@@ -2352,11 +2360,17 @@ p.skill-chat-title.skilled {
   align-items: center;
 }
 
-.sheet.actor .window-content .tab.active[data-tab="stats"] {
+.sheet.actor .window-content .tab[data-tab="stats"].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(6, minmax(100px, min-content));
   grid-gap: 0px 5px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sheet.actor .window-content .tab[data-tab].active {
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -3365,7 +3379,7 @@ p.skill-chat-title.skilled {
   vertical-align: top;
 }
 
-.sheet.actor.threat .tab[data-tab].active {
+.sheet.actor.threat .tab[data-tab="stats"].active {
   display: block;
 }
 
@@ -3533,7 +3547,7 @@ p.skill-chat-title.skilled {
 }
 
 .sheet.item .window-content {
-  /*padding: 10px;*/
+  padding: 10px;
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   font-family: Palatino;
@@ -4182,6 +4196,10 @@ ol.chat-log {
   color: black !important;
 }
 
+form.deckSetting div.flexrow {
+  align-items: normal;
+}
+
 .actor-icon {
   width: 50px;
   aspect-ratio: 1/1;
@@ -4624,6 +4642,11 @@ ol.chat-log {
   font-weight: bold;
 }
 
+.sheet.actor .threat-sheet section.sheet-body {
+  height: 100%;
+  width: 100%;
+}
+
 .sheet.actor .threat-sheet .sheet-body h1 {
   margin-bottom: 0px;
 }
@@ -4674,4 +4697,28 @@ ol.chat-log {
   border: none;
   padding: 0 0 0 10px;
   margin: 0;
+}
+
+.torgeternity {
+  --font-h2: Alaska;
+  --font-h2-size: 1.5em;
+  --color-underline-header: #782e22;
+  --input-height: 1.5em;
+}
+
+/* V13 overrides */
+.torgeternity select {
+  /*height: calc(var(--form-field-height) + 1px);*/
+  height: 27px;
+  padding: 0 3px;
+  /*extra*/
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 3px;
+  text-overflow: ellipsis;
+}
+
+.torgeternity h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-underline-header);
 }

@@ -6,8 +6,7 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
-    id: 'gmscreen',
-    classes: ['torgeternity'],
+    classes: ['torgeternity', 'standard-form', 'gmscreen'],
     position: {
       top: 10,
       width: 1300,

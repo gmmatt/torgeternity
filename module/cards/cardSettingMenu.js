@@ -6,11 +6,9 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 export default class DeckSettingMenu extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity'],
-    id: 'deckSetting',
+    classes: ['torgeternity', 'standard-form', 'deckSetting'],
     tag: "form",
     window: {
-      contentClasses: ["standard-form"],
       title: 'torgeternity.settingMenu.deckSetting.name',
     },
     form: {
@@ -28,7 +26,7 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
   }
 
   static PARTS = {
-    form: { template: '/systems/torgeternity/templates/cards/settingMenu.hbs' },
+    form: { template: '/systems/torgeternity/templates/cards/settingMenu.hbs', scrollable: [""] },
     footer: { template: "templates/generic/form-footer.hbs" },
   }
 
