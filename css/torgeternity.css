@@ -3789,8 +3789,9 @@ p.skill-chat-title.skilled {
 }
 
 .sheet.item.perk .window-content nav.tabs {
-  right: -190px;
-  top: 250px;
+  /* Perks have two extra tabs */
+  right: -210px;
+  top: 220px;
 }
 
 .sheet.item.perk .window-content nav.tabs a[data-tab="enhancements"] {
