@@ -205,8 +205,8 @@ form.actor-sheet .window-content {
   row-gap: normal;
 }
 
-.actor-sheet .window-content nav.tabs.vehicle {
-  right: -209px;
+.actor-sheet.vehicle .window-content nav.tabs {
+  right: -190px;
   top: 210px;
 }
 
@@ -237,7 +237,7 @@ form.actor-sheet .window-content {
   text-transform: uppercase;
 }
 
-.actor-sheet .window-content .vehicle-description .editor {
+.actor-sheet .window-content .background .editor {
   grid-column: 1/9;
   grid-row: 1/9;
   background: url(../images/bckg-hex.webp);
@@ -248,23 +248,23 @@ form.actor-sheet .window-content {
   padding: 15% 10% 10% 10%;
 }
 
-.actor-sheet.vehicle .window-content .vehicle-description .list-section-heading {
+.actor-sheet.vehicle .window-content .background .list-section-heading {
   grid-column: 1/9;
   grid-row: 1/2;
   align-items: center;
 }
 
-.actor-sheet.vehicle .vehicle-description .editor-content {
+.actor-sheet.vehicle .background .editor-content {
   height: 90%;
   overflow-y: auto;
   word-break: break-word;
 }
 
-.vehicle-tab[data-tab] {
+.actor-sheet.vehicle div[data-tab] {
   display: none;
 }
 
-.vehicle-tab[data-tab].active {
+.actor-sheet.vehicle div[data-tab].active {
   display: block !important;
 }
 

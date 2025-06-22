@@ -3,11 +3,12 @@
     <span>{{localize "torgeternity.sheetLabels.vehicle"}}</span>
   </h3>
 
-  <nav class="sheet-tabs tabs vehicle" data-group="primary">
-    <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a class="item" data-tab="vehicleGear">{{localize "torgeternity.sheetLabels.gear"}}</a>
-    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-    <a class="item" data-tab="description">{{localize "torgeternity.sheetLabels.description"}}</a>
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a data-action="tab" data-group="primary" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
+    <a data-action="tab" data-group="primary" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
+    <a data-action="tab" data-group="primary" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+    <a data-action="tab" data-group="primary"
+      data-tab="background">{{localize "torgeternity.sheetLabels.description"}}</a>
   </nav>
 
   <header class="sheet-header-vehicle">
@@ -50,7 +51,7 @@
   </header>
 
   <section class="sheet-body">
-    <div class="tab vehicle-tab" data-group="primary" data-tab="stats">
+    <div class="tab stats {{tabs.stats.cssClass}}" data-group="primary" data-tab="stats">
       <div>
         <table class="groove-borders">
           <tr>
@@ -280,7 +281,7 @@
       </div>
     </div>
 
-    <div class="tab gear" data-group="primary" data-tab="vehicleGear">
+    <div class="tab gear {{tabs.gear.cssClass}}" data-group="primary" data-tab="gear">
       {{#if heavyweapon}}
         <h2>{{localize "torgeternity.sheetLabels.heavyWeapons"}}/{{localize "torgeternity.sheetLabels.explosives"}}</h2>
         <ol class="item-list">
@@ -433,13 +434,13 @@
       {{/if}}
     </div>
 
-    <div class="tab effects" data-group="primary" data-tab="effects">
+    <div class="tab effects {{tabs.effects.cssClass}}" data-group="primary" data-tab="effects">
       <div class="effects block">
         {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
       </div>
     </div>
 
-    <div class="tab vehicle-description" data-group="primary" data-tab="description">
+    <div class="tab background {{tabs.background.cssClass}}" data-group="primary" data-tab="background">
       <h1 class="list-section-heading" style="color: white">
         {{localize "torgeternity.sheetLabels.description"}}
       </h1>

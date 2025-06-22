@@ -111,15 +111,16 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     this.options.classes.push(this.actor.type);
-    options.parts = [this.actor.type];
 
     switch (this.actor.type) {
       case 'stormknight':
         options.parts = ['title', 'tabs', 'stats', 'perks', 'gear', 'powers', 'effects', 'background'];
         break;
       case 'vehicle':
+        options.parts = [this.actor.type];
         break;
       case 'threat':
+        options.parts = [this.actor.type];
         options.width = 690;
         options.height = 645;
         break;
@@ -158,61 +159,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
-
-    // set up TABS
-    switch (this.actor.type) {
-      case 'stormknight':
-        /*if (!this.tabGroups.primary) this.tabGroups.primary = 'stats';
-        context.tabs = {
-          stats: {
-            group: 'primary',
-            id: 'stats',
-            label: 'torgeternity.sheetLabels.stats'
-          },
-          perks: {
-            group: 'primary',
-            id: 'perks',
-            label: 'torgeternity.sheetLabels.perks'
-          },
-          gear: {
-            group: 'primary',
-            id: 'gear',
-            label: 'torgeternity.sheetLabels.gear'
-          },
-          powers: {
-            group: 'primary',
-            id: 'powers',
-            label: 'torgeternity.sheetLabels.powers'
-          },
-          effects: {
-            group: 'primary',
-            id: 'effects',
-            label: 'torgeternity.sheetLabels.effects'
-          },
-          background: {
-            group: 'primary',
-            id: 'background',
-            label: 'torgeternity.sheetLabels.notes'
-          },
-        };
-        context.tabs[this.tabGroups.primary].cssClass = 'active';*/
-        break;
-
-      case 'threat':
-        if (!this.tabGroups.primary) this.tabGroups.primary = 'stats';
-        context.tabs = {
-          statsActive: "",
-          perksActive: "",
-          gearsActive: "",
-          powersActive: "",
-          effectsActive: "",
-          backgroundActive: "",
-        }
-        context.tabs[`${this.tabGroups.primary}Active`] = "active";
-        break;
-      case 'vehicle':
-        break;
-    }
 
     context.meleeweapons = context.source.items.filter(item => item.type === 'meleeweapon');
     context.customAttack = context.source.items.filter(item => item.type === 'customAttack');
