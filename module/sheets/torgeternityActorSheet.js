@@ -165,6 +165,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
+    context.systemFields = context.document.system.schema.fields;
     context.items = Array.from(context.document.items);
     context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
@@ -1187,7 +1188,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static #onManageActiveEffect(event, target) {
-    onManageActiveEffect(event, this.document);
+    onManageActiveEffect(event, target, this.document);
   }
 
   static #onApplyFatigue(event, target) {

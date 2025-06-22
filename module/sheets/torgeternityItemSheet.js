@@ -199,7 +199,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       return ui.notifications.warn(
         game.i18n.localize('torgeternity.notifications.noActiveEffectInOwnedItem')
       );
-    onManageActiveEffect(ev, this.item);
+    onManageActiveEffect(event, target, this.document);
   }
 
   static #onConvertRsa(event, target) {
@@ -356,6 +356,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
+
+    context.systemFields = context.document.system.schema.fields;
 
     context.effects = prepareActiveEffectCategories(this.document.effects);
     context.item = context.document;
