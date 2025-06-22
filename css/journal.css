@@ -102,7 +102,7 @@
 }
 
 /*Fixing stylebleed*/
-.item .window-content form.item-sheet .asside select {
+.item .window-content form.item.sheet .asside select {
   text-shadow: none;
   background: none;
 }
