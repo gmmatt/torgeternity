@@ -16,7 +16,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static DEFAULT_OPTIONS = {
     classes: ['torgeternity', 'sheet', 'actor', 'standard-form'],
     position: {
-      width: 813,
+      width: 773,
       height: 860,
     },
     dragDrop: [
@@ -27,6 +27,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     ],
     form: {
       submitOnChange: true
+    },
+    window: {
+      resizable: true,
     },
     actions: {
       skillList: TorgeternityActorSheet.#onSkillList,
@@ -121,8 +124,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         break;
       case 'threat':
         options.parts = [this.actor.type];
-        options.width = 690;
-        options.height = 645;
+        if (options.isFirstRender) {
+          options.position.width = 690;
+          options.position.height = 645;
+        }
         break;
     }
   }

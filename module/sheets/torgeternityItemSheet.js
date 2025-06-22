@@ -14,7 +14,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       resizable: true,
     },
     position: {
-      width: 550,
+      width: 530,
       height: 580,
     },
     form: {
@@ -314,7 +314,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
           options.position.height = 780;
           break;
         case 'specialability':
-          options.position.width = 455;
+          options.position.width = 435;
           options.position.height = 550;
           break;
         case 'specialability-rollable':
@@ -333,7 +333,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
           break;
         case 'vehicleAddOn':
           options.position.height = 620;
-          options.position.width = 485;
+          options.position.width = 465;
           break;
         case 'perk':
         default:

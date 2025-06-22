@@ -50,7 +50,7 @@
   }
 }
 
-div.actor ::-webkit-scrollbar {
+form.actor ::-webkit-scrollbar {
   background: transparent none;
 }
 
@@ -170,13 +170,11 @@ a.inline-roll.broken:hover {
   display: none;
 }
 
-/* Common Actor/Item Sheet entries */
-.sheet.actor .window-content,
-.sheet.item .window-content {
-  margin-left: 10px;
-  margin-right: 20px;
+form.sheet.actor,
+form.sheet.item {
+  /* Tabs either side of sheet */
+  overflow: visible;
 }
-
 
 /*                                      */
 /* --------Actor/Vehicles Sheet-------- */
@@ -196,8 +194,8 @@ a.inline-roll.broken:hover {
   font-family: Alaska;
   font-size: 13px;
   text-transform: capitalize;
-  right: -289px;
-  top: 315px;
+  right: -310px;
+  top: 310px;
   /*color: black;*/
   /* The following override Foundry V13 changes */
   line-height: 14px;
@@ -208,7 +206,7 @@ a.inline-roll.broken:hover {
 }
 
 .sheet.actor.vehicle .window-content nav.tabs {
-  right: -190px;
+  right: -209px;
   top: 210px;
 }
 
@@ -487,6 +485,12 @@ div.application.torgeternity {
   background-image: url(../images/thunder.webp);
   background-size: cover;
   color: white;
+}
+
+form.application.torgeternity.standard-form,
+div.application.torgeternity.standard-form {
+  column-gap: normal;
+
 }
 
 .application .window-content {
@@ -920,7 +924,7 @@ a:hover,
 .application {
   border-radius: 5px;
   box-shadow: 0 0 15px #122529;
-  padding-bottom: 0.5em;
+  /*padding-bottom: 0.5em;*/
   color: #707070;
   z-index: 30;
 }
@@ -990,13 +994,13 @@ a:hover,
   color: black;
 }
 
-.application .window-resizable-handle {
+.application .window-resize-handle {
   width: 30px;
   height: 30px;
   position: absolute;
   bottom: -10px;
   right: -10px;
-  background: url(../images/resizerRound.webp);
+  background-image: url(../images/resizerRound.webp);
   background-size: 115% 115%;
   background-position: center;
   padding: 2px;
@@ -2209,6 +2213,9 @@ p.skill-chat-title.skilled {
   background-size: cover;
   /*font-family: Palatino;*/
   /*font-size: 12px;*/
+  overflow-y: auto;
+  min-height: 95%;
+  max-height: 95%;
 }
 
 .sheet.actor {
@@ -2226,7 +2233,7 @@ p.skill-chat-title.skilled {
   background: url(../images/separatorRound.webp);
   position: absolute;
   transform: rotateZ(-90deg);
-  left: -140px;
+  left: -150px;
   top: 180px;
   width: 300px;
   text-align: right;
@@ -2364,11 +2371,12 @@ p.skill-chat-title.skilled {
   border-image-slice: 50;
   box-shadow: 2px 2px 15px #9e9686;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  overflow: auto;
+  /*overflow: auto;*/
   padding: 0px;
 }
 
-.sheet.actor .window-content div.block:hover {
+.sheet.actor .window-content div.block:hover,
+.sheet.actor .window-content section.block:hover {
   box-shadow: 2px 2px 15px black;
 }
 
@@ -3123,7 +3131,7 @@ p.skill-chat-title.skilled {
   grid-row: 4/9;
 }
 
-.sheet.actor .window-content .effects {
+.sheet.actor .window-content .effects-list {
   grid-column: 1/9;
   grid-row: 1/5;
 }
@@ -3360,10 +3368,6 @@ p.skill-chat-title.skilled {
   width: 100px;
 }
 
-.sheet.actor section.window-content {
-  overflow-y: auto;
-}
-
 .sheet.actor.threat .sheet-header {
   flex-direction: row;
 }
@@ -3540,31 +3544,33 @@ p.skill-chat-title.skilled {
 }
 
 .sheet.item .window-content {
-  padding: 10px;
+  /*padding: 10px;*/
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   font-family: Palatino;
   font-size: 0.9em;
+  overflow-y: auto;
+  max-height: 95%;
 }
 
-body.game .sheet.item header.sheet-header {
+.sheet.item header.sheet-header {
   display: flex;
   align-items: center;
 }
 
-body.game .sheet.item header.sheet-header img {
+.sheet.item header.sheet-header img {
   flex: 0 0 64px;
   height: 64px;
   margin-right: 6px;
 }
 
-body.game .sheet.item header.sheet-header h1 {
+.sheet.item header.sheet-header h1 {
   flex: 1;
   margin: 0;
   border-bottom: none;
 }
 
-body.game .sheet.item header.sheet-header h1 input {
+.sheet.item header.sheet-header h1 input {
   height: 48px;
   line-height: 48px;
   margin: 8px 2%;
@@ -3590,7 +3596,7 @@ body.game .sheet.item header.sheet-header h1 input {
   background: url(../images/separatorRound.webp);
   position: absolute;
   transform: rotateZ(-90deg);
-  left: -140px;
+  left: -150px;
   top: 180px;
   width: 300px;
   text-align: right;
@@ -3786,7 +3792,7 @@ body.game .sheet.item header.sheet-header h1 input {
   transform: rotateZ(90deg);
   font-family: Alaska;
   text-transform: capitalize;
-  right: -90px;
+  right: -110px;
   top: 115px;
   justify-content: space-around;
   line-height: 14px;
@@ -3858,6 +3864,7 @@ body.game .sheet.item header.sheet-header h1 input {
   border-radius: 15px;
   resize: none;
   padding: 5px 5px;
+  width: 100%;
 }
 
 .sheet.item .window-content .item-description-textarea[name="prerequisites"]>div {
