@@ -21,7 +21,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     },
     dragDrop: [
       {
-        dragSelector: '.item-list .item', // '[data-drag]'
+        dragSelector: '[drag-drop="true"],.item-list .item',
         dropSelector: null,
       },
     ],
@@ -165,30 +165,33 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
-    context.meleeweapons = context.source.items.filter(item => item.type === 'meleeweapon');
-    context.customAttack = context.source.items.filter(item => item.type === 'customAttack');
-    context.customSkill = context.source.items.filter(item => item.type === 'customSkill');
-    context.gear = context.source.items.filter(item => item.type === 'gear');
-    context.eternityshard = context.source.items.filter(item => item.type === 'eternityshard');
-    context.armor = context.source.items.filter(item => item.type === 'armor');
-    context.shield = context.source.items.filter(item => item.type === 'shield');
-    context.missileweapon = context.source.items.filter(item => item.type === 'missileweapon');
-    context.firearm = context.source.items.filter(item => item.type === 'firearm');
-    context.implant = context.source.items.filter(item => item.type === 'implant');
-    context.heavyweapon = context.source.items.filter(item => item.type === 'heavyweapon');
-    context.vehicle = context.source.items.filter(item => item.type === 'vehicle');
-    context.perk = context.source.items.filter(item => item.type === 'perk');
-    context.spell = context.source.items.filter(item => item.type === 'spell');
-    context.miracle = context.source.items.filter(item => item.type === 'miracle');
-    context.psionicpower = context.source.items.filter(item => item.type === 'psionicpower');
-    context.specialability = context.source.items.filter(item => item.type === 'specialability');
-    context.specialabilityRollable = context.source.items.filter(item => item.type === 'specialability-rollable');
-    context.enhancement = context.source.items.filter(item => item.type === 'enhancement');
-    context.dramaCard = context.source.items.filter(item => item.type === 'dramaCard');
-    context.destinyCard = context.source.items.filter(item => item.type === 'destinyCard');
-    context.cosmCard = context.source.items.filter(item => item.type === 'cosmCard');
-    context.vehicleAddOn = context.source.items.filter(item => item.type === 'vehicleAddOn');
-    context.ammunitions = context.source.items.filter(item => item.type === 'ammunition');
+    context.items = Array.from(context.document.items);
+    context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
+    context.meleeweapons = context.items.filter(item => item.type === 'meleeweapon');
+    context.customAttack = context.items.filter(item => item.type === 'customAttack');
+    context.customSkill = context.items.filter(item => item.type === 'customSkill');
+    context.gear = context.items.filter(item => item.type === 'gear');
+    context.eternityshard = context.items.filter(item => item.type === 'eternityshard');
+    context.armor = context.items.filter(item => item.type === 'armor');
+    context.shield = context.items.filter(item => item.type === 'shield');
+    context.missileweapon = context.items.filter(item => item.type === 'missileweapon');
+    context.firearm = context.items.filter(item => item.type === 'firearm');
+    context.implant = context.items.filter(item => item.type === 'implant');
+    context.heavyweapon = context.items.filter(item => item.type === 'heavyweapon');
+    context.vehicle = context.items.filter(item => item.type === 'vehicle');
+    context.perk = context.items.filter(item => item.type === 'perk');
+    context.spell = context.items.filter(item => item.type === 'spell');
+    context.miracle = context.items.filter(item => item.type === 'miracle');
+    context.psionicpower = context.items.filter(item => item.type === 'psionicpower');
+    context.specialability = context.items.filter(item => item.type === 'specialability');
+    context.specialabilityRollable = context.items.filter(item => item.type === 'specialability-rollable');
+    context.enhancement = context.items.filter(item => item.type === 'enhancement');
+    context.dramaCard = context.items.filter(item => item.type === 'dramaCard');
+    context.destinyCard = context.items.filter(item => item.type === 'destinyCard');
+    context.cosmCard = context.items.filter(item => item.type === 'cosmCard');
+    context.vehicleAddOn = context.items.filter(item => item.type === 'vehicleAddOn');
+    context.ammunitions = context.items.filter(item => item.type === 'ammunition');
 
     for (const type of [
       'meleeweapons',
@@ -255,13 +258,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     return context;
   }
 
-  _onDragStart(evt) {
-    if (evt.classList.contains('skill-roll'))
-      this._skillAttrDragStart(evt) // a.skill-roll
-    else if (evt.classList.contains('interaction-attack'))
+  _onDragStart(event) {
+    if (event.target.classList.contains('skill-roll'))
+      this._skillAttrDragStart(event) // a.skill-roll
+    else if (event.target.classList.contains('interaction-attack'))
       this._interactionDragStart // a.interaction-attack
     else
-      super._onDragStart(evt) // a.item-name, threat: a.item
+      super._onDragStart(event) // a.item-name, threat: a.item
   }
 
   // Skills are not Foundry "items" with IDs, so the skill data is not automatically
@@ -270,33 +273,33 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   //    retrievable when the skill is dropped on the macro bar.
   /**
    *
-   * @param evt
+   * @param event
    */
-  _skillAttrDragStart(evt) {
+  _skillAttrDragStart(event) {
     const skillAttrData = {
-      type: evt.target.attributes['data-testtype'].value,
+      type: event.target.attributes['data-testtype'].value,
       data: {
-        name: evt.target.attributes['data-name'].value,
-        attribute: evt.target.attributes['data-baseattribute'].value,
-        adds: evt.target.attributes['data-adds'].value,
-        value: evt.target.attributes['data-value'].value,
-        unskilledUse: evt.target.attributes['data-unskilleduse'].value,
+        name: event.target.attributes['data-name'].value,
+        attribute: event.target.attributes['data-baseattribute'].value,
+        adds: event.target.attributes['data-adds'].value,
+        value: event.target.attributes['data-value'].value,
+        unskilledUse: event.target.attributes['data-unskilleduse'].value,
         attackType: '',
         targets: Array.from(game.user.targets),
         DNDescriptor: 'standard',
         rollTotal: 0,
       },
     };
-    evt.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
+    event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
   }
 
   // See _skillAttrDragStart above.
   /**
    *
-   * @param evt
+   * @param event
    */
-  _interactionDragStart(evt) {
-    const skillNameKey = evt.target.attributes['data-name'].value;
+  _interactionDragStart(event) {
+    const skillNameKey = event.target.attributes['data-name'].value;
     const skill = this.actor.system.skills[skillNameKey];
     const value = skill.value
       ? skill.value
@@ -309,10 +312,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         adds: skill.adds,
         value: value,
         unskilledUse: skill.unskilledUse,
-        attackType: evt.target.attributes['data-attack-type'].value,
+        attackType: event.target.attributes['data-attack-type'].value,
       },
     };
-    evt.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
+    event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
   }
 
   /**
@@ -322,6 +325,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _onRender(context, options) {
     await super._onRender(context, options);
     let html = this.element;
+
+    // Configure drag/drop
+    this.#dragDrop.forEach((d) => d.bind(this.element));
 
     // localizing hardcoded possibility potential value
     if (this.actor.isOwner) {
@@ -392,8 +398,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
       if (dropedObject.system.darkvision)
         await this.actor.update({ 'prototypeToken.sight.visionMode': 'darkvision' });
+    } else {
+      await super._onDrop(event);
     }
-    await super._onDrop(event);
   }
 
   /**
@@ -1215,30 +1222,23 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     item.sheet.render(true);
   }
   static #onItemDelete(event, target) {
-    let applyChanges = false;
-    new Dialog({
-      title: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.title'),
+    return foundry.applications.api.DialogV2.confirm({
+      window: { title: 'torgeternity.dialogWindow.itemDeletion.title' },
       content: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.content'),
-      buttons: {
-        yes: {
-          icon: '<i class="fas fa-check"></i>',
-          label: game.i18n.localize('torgeternity.yesNo.true'),
-          callback: () => (applyChanges = true),
-        },
-        no: {
-          icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize('torgeternity.yesNo.false'),
-        },
-      },
-      default: 'yes',
-      close: () => {
-        if (applyChanges) {
+      yes: {
+        icon: 'fa-solid fa-check',
+        label: 'torgeternity.yesNo.true',
+        default: true,
+        callback: () => {
           const li = target.closest('.item');
-          this.actor.deleteEmbeddedDocuments('Item', [li.dataset.itemId]);
-          li.slideUp(200, () => this.render(false));
+          this.actor.deleteEmbeddedDocuments('Item', [li.dataset.itemId])
         }
       },
-    }).render(true);
+      no: {
+        icon: 'fa-solid fa-times',
+        label: 'torgeternity.yesNo.false',
+      },
+    });
   }
   static #reloadWeapon(event, target) {
     const button = target.closest('[data-item-id]');

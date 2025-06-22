@@ -41,7 +41,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     },
     dragDrop: [
       {
-        dragSelector: '.item-list .item', // '[data-drag]',
+        dragSelector: '[drag-drop="true"],.item-list .item',
         dropSelector: null,
       },
     ],
