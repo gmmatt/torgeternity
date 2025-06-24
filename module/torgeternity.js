@@ -1,6 +1,6 @@
 'use strict';
 import { torgeternity } from './config.js';
-import TorgeternityChatLog from './chat.js';
+import TorgeternityChatLog from './torgeternityChatLog.js';
 import TorgeternityItem from './documents/item/torgeternityItem.js';
 import TorgeternityActor from './documents/actor/torgeternityActor.js';
 import TorgeternityItemSheet from './sheets/torgeternityItemSheet.js';
