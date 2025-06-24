@@ -1,23 +1,34 @@
 import { ChatMessageTorg } from './documents/chat/document.js';
 import * as torgchecks from './torgchecks.js';
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
 /**
  *
  */
-export class TestDialog extends FormApplication {
+export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   testMessage;
 
-  /**
-   *
-   */
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.template = 'systems/torgeternity/templates/test-dialog.hbs';
-    options.width = 'auto';
-    options.height = 'auto';
-    options.title = 'Skill Test';
-    options.resizeable = false;
-    return options;
+  static DEFAULT_OPTIONS = {
+    tag: 'form',
+    classes: ['torgeternity', 'application', 'standard-form', 'test-dialog'],
+    window: {
+      title: 'Skill Test',
+      resizable: false,
+    },
+    /*position: {
+      width: 'auto',
+      height: 'auto',
+    },*/
+    form: {
+      handler: TestDialog.#onRoll,
+      submitOnChange: false,
+      closeOnSubmit: true,
+    }
+  }
+
+  static PARTS = {
+    body: { template: 'systems/torgeternity/templates/test-dialog.hbs' },
+    footer: { template: "templates/generic/form-footer.hbs" },
   }
 
   /**
@@ -46,58 +57,57 @@ export class TestDialog extends FormApplication {
   /**
    *
    */
-  getData() {
-    const data = super.getData();
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
 
-    data.test = this.test;
-
-    data.config = CONFIG.torgeternity;
+    context.test = this.test;
+    context.config = CONFIG.torgeternity;
 
     // Set Modifiers from Actor Wounds and Status Effects
     const myActor = this.test.actor.includes('Token')
       ? fromUuidSync(this.test.actor)
       : fromUuidSync(this.test.actor);
-    data.test.hasModifiers = false;
+    context.test.hasModifiers = false;
 
     if (parseInt(myActor.system.wounds.value) <= 3) {
       // The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
-      data.test.woundModifier = parseInt(-myActor.system.wounds.value);
+      context.test.woundModifier = parseInt(-myActor.system.wounds.value);
     } else if (
       myActor.system.wounds.value == null ||
       isNaN(parseInt(myActor.system.wounds.value))
     ) {
       // currentWounds could be empty or a char/string. Users... You know?!
-      data.test.woundModifier = 0;
+      context.test.woundModifier = 0;
     } else {
-      data.test.woundModifier = -3;
+      context.test.woundModifier = -3;
     }
 
-    data.test.stymiedModifier = myActor.statusModifiers.stymied;
-    data.test.darknessModifier = myActor.statusModifiers.darkness;
-    data.test.sizeModifier = 0;
-    data.test.vulnerableModifier = 0;
-    data.test.sizeModifierAll = [];
-    data.test.vulnerableModifierAll = [];
-    data.test.targetAll = [];
-    data.test.targetsAllID = [];
+    context.test.stymiedModifier = myActor.statusModifiers.stymied;
+    context.test.darknessModifier = myActor.statusModifiers.darkness;
+    context.test.sizeModifier = 0;
+    context.test.vulnerableModifier = 0;
+    context.test.sizeModifierAll = [];
+    context.test.vulnerableModifierAll = [];
+    context.test.targetAll = [];
+    context.test.targetsAllID = [];
 
     // Set Modifiers for Vehicles
     if (this.test.testType === 'chase') {
       if (this.test.vehicleSpeed < 11) {
-        data.test.speedModifier = 0;
+        context.test.speedModifier = 0;
       } else if (this.test.vehicleSpeed < 15) {
-        data.test.speedModifier = 2;
+        context.test.speedModifier = 2;
       } else if (this.test.vehicleSpeed < 17) {
-        data.test.speedModifier = 4;
+        context.test.speedModifier = 4;
       } else {
-        data.test.speedModifier = 6;
+        context.test.speedModifier = 6;
       }
       // maneuverModifier already set in TorgeternityActorSheet
     } else if (this.test.testType === 'stunt' || this.test.testType === 'vehicleBase') {
       // Do Nothing - this leaves maneuverModifier in place
     } else {
-      data.test.speedModifier = 0;
-      data.test.maneuverModifier = 0;
+      context.test.speedModifier = 0;
+      context.test.maneuverModifier = 0;
     }
 
     //
@@ -106,21 +116,21 @@ export class TestDialog extends FormApplication {
     //
     const allID = [];
     const allUUID = [];
-    data.test.targetPresent = data.test.targets.length > 0 ? true : false;
-    if ((data.test.targets.length > 0) & (data.test.testType !== 'soak')) {
+    context.test.targetPresent = context.test.targets.length > 0 ? true : false;
+    if ((context.test.targets.length > 0) & (context.test.testType !== 'soak')) {
       // Identify the first target
       // var target = Array.from(data.test.targets)[0].actor;
-      data.test.targets.forEach((t) => {
+      context.test.targets.forEach((t) => {
         allID.push(t.actor.id);
         allUUID.push(t.document.uuid);
       });
-      data.test.targetsAllID = allID;
-      data.test.targetsAllUUID = allUUID;
-      data.test.targets.forEach((t) => {
+      context.test.targetsAllID = allID;
+      context.test.targetsAllUUID = allUUID;
+      context.test.targets.forEach((t) => {
         const target = t.actor;
         // Set vehicle defense if needed
         if (target.type === 'vehicle') {
-          data.test.targetAll.push({
+          context.test.targetAll.push({
             present: true,
             type: 'vehicle',
             id: target.id,
@@ -141,7 +151,7 @@ export class TestDialog extends FormApplication {
             armor: target.defenses.armor,
           });
         } else {
-          data.test.targetAll.push({
+          context.test.targetAll.push({
             present: true,
             type: target.type,
             id: target.id,
@@ -162,61 +172,62 @@ export class TestDialog extends FormApplication {
               trick: target.defenses.trick.value,
             },
           });
-          data.test.vulnerableModifierAll.push(target.statusModifiers.vulnerable);
+          context.test.vulnerableModifierAll.push(target.statusModifiers.vulnerable);
         }
         if (this.test.applySize == true) {
           const sizeBonus = target.system.details.sizeBonus;
           switch (sizeBonus) {
             case 'normal':
-              data.test.sizeModifier = 0;
+              context.test.sizeModifier = 0;
               break;
             case 'tiny':
-              data.test.sizeModifier = -6;
+              context.test.sizeModifier = -6;
               break;
             case 'verySmall':
-              data.test.sizeModifier = -4;
+              context.test.sizeModifier = -4;
               break;
             case 'small':
-              data.test.sizeModifier = -2;
+              context.test.sizeModifier = -2;
               break;
             case 'large':
-              data.test.sizeModifier = 2;
+              context.test.sizeModifier = 2;
               break;
             case 'veryLarge':
-              data.test.sizeModifier = 4;
+              context.test.sizeModifier = 4;
               break;
             default:
-              data.test.sizeModifier = 0;
+              context.test.sizeModifier = 0;
           }
-          data.test.sizeModifierAll.push(data.test.sizeModifier);
+          context.test.sizeModifierAll.push(context.test.sizeModifier);
         }
       });
     }
 
-    data.test.hasModifiers =
-      data.test?.woundModifier != 0 ||
-      data.test?.stymiedModifier != 0 ||
-      data.test?.darknessModifier != 0 ||
-      data.test?.sizeModifier != 0 ||
-      data.test?.vulnerableModifier != 0 ||
-      data.test?.speedModifier != 0 ||
-      data.test?.maneuverModifier != 0
+    context.test.hasModifiers =
+      context.test?.woundModifier != 0 ||
+        context.test?.stymiedModifier != 0 ||
+        context.test?.darknessModifier != 0 ||
+        context.test?.sizeModifier != 0 ||
+        context.test?.vulnerableModifier != 0 ||
+        context.test?.speedModifier != 0 ||
+        context.test?.maneuverModifier != 0
         ? true
         : false;
 
-    return data;
+    context.buttons = [
+      { type: 'submit', icon: 'fas fa-dice-d20', label: 'torgeternity.sheetLabels.roll' }
+    ]
+    return context;
   }
 
   /**
    *
    * @param html
    */
-  activateListeners(html) {
-    html.find('.test-dialog-rollbutton').click(this._onRoll.bind(this));
+  async _onRender(context, options) {
+    await super._onRender(context, options);
 
-    const bonusText = html[0].querySelector('#bonus-text');
-
-    bonusText.addEventListener('change', (event) => {
+    this.element.querySelector('#bonus-text')?.addEventListener('change', (event) => {
       if (isNaN(parseInt(event.currentTarget.value))) {
         const rdb = $(event.currentTarget).parent().find('#roll');
         const rdbNo = $(event.currentTarget).parent().find('#previous-bonus');
@@ -233,8 +244,10 @@ export class TestDialog extends FormApplication {
         }
       }
     });
+  }
 
-    super.activateListeners(html);
+  _onChangeForm(formConfig, event) {
+    console.log('_onChangeForm', { formConfig, event })
   }
 
   /**
@@ -242,7 +255,7 @@ export class TestDialog extends FormApplication {
    * @param event
    * @param html
    */
-  async _onRoll(event, html) {
+  static async #onRoll(event, form, formData) {
     // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
     this.test.DNDescriptor =
       this.test.testType === 'activeDefense'

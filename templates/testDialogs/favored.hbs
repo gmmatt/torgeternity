@@ -1,22 +1,23 @@
 <fieldset>
-    <legend>{{localize "torgeternity.skillDialogs.favoredanddisfavored"}}</legend>
-    <input 
-    type="checkbox" 
-    class="attack-dialog-checkbox" 
-    id="favored" 
-    data-tooltip="{{localize "torgeternity.skillDialogs.favoredTip"}}" 
-    name="favored" 
-    {{#if test.isFav }}checked{{/if}} 
+  <legend>{{localize "torgeternity.skillDialogs.favoredanddisfavored"}}</legend>
+  <input
+    type="checkbox"
+    data-dtype="Boolean"
+    class="attack-dialog-checkbox"
+    id="favored"
+    data-tooltip="{{localize " torgeternity.skillDialogs.favoredTip"}}"
+    name="favored"
+    {{#if test.isFav }}checked{{/if}}
     value="true">
 
-    <label for="favored">{{localize "torgeternity.skillDialogs.favored"}}</label>
-    <input
+  <label for="favored">{{localize "torgeternity.skillDialogs.favored"}}</label>
+  <input
     type="checkbox"
+    data-dtype="Boolean"
     class="attack-dialog-checkbox"
     id="disfavored"
     data-tooltip="{{localize 'torgeternity.skillDialogs.disfavoredTip'}}"
     name="disfavored"
-    value="false"
-  />
+    value="false" />
   <label for="disfavored">{{localize "torgeternity.skillDialogs.disfavored"}}</label>
 </fieldset>

@@ -170,8 +170,8 @@ a.inline-roll.broken:hover {
   display: none;
 }
 
-form.sheet.actor,
-form.sheet.item {
+form.torgeternity,
+form.torgeternity {
   /* Tabs either side of sheet */
   overflow: visible;
   row-gap: normal;
@@ -527,6 +527,7 @@ div.application.torgeternity.standard-form {
 .application .window-content input[type="time"] .editor,
 .application .window-content input[type="checkbox"] {
   background-color: rgba(255, 255, 255, 0.39);
+  --checkbox-background-color: white;
   /*padding-left: 3px;
   padding-right: 3px;*/
   /*color:white;*/
@@ -925,6 +926,7 @@ body * ::-webkit-scrollbar-thumb {
 .torgeternity textarea {
   font-family: "Signika";
   font-size: 13px;
+  width: auto;
 }
 
 footer button {
@@ -3993,32 +3995,31 @@ p.skill-chat-title.skilled {
   font-size: 13px;
 }
 
-.test-dialog {
+.standard-form.torgeternity .test-dialog {
   display: flex;
   flex-direction: column;
   max-width: 530px;
   min-width: 530px;
 }
 
-.test-dialog>div {
+.standard-form.torgeternity .test-dialog>div {
   display: flex;
   flex-direction: row;
 }
 
-.test-dialog>div>fieldset {
+.standard-form.torgeternity .test-dialog>div>fieldset {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
-
 }
 
-.test-dialog>div>fieldset>label {
+.standard-form.torgeternity .test-dialog>div>fieldset>label {
   font-family: "Palatino";
 }
 
-.test-dialog>div>fieldset>span {
+.standard-form.torgeternity .test-dialog>div>fieldset>span {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -4026,40 +4027,40 @@ p.skill-chat-title.skilled {
   width: 100%;
 }
 
-.test-dialog>div>fieldset>span>input[type="checkbox"]~label[for] {
+.standard-form.torgeternity .test-dialog>div>fieldset>span>input[type="checkbox"]~label[for] {
   align-self: center;
 }
 
-.test-dialog>div>fieldset>span>input[type="radio"]~label[for] {
+.standard-form.torgeternity .test-dialog>div>fieldset>span>input[type="radio"]~label[for] {
   align-self: baseline;
 }
 
-.test-dialog>div>fieldset>span>input[type="number"] {
+.standard-form.torgeternity .test-dialog>div>fieldset>span>input[type="number"] {
   width: 3em;
 }
 
-.test-dialog>div>fieldset>span>* {
+.standard-form.torgeternity .test-dialog>div>fieldset>span>* {
   justify-content: left;
 }
 
-.test-dialog>div>fieldset>hr {
+.standard-form.torgeternity .test-dialog>div>fieldset>hr {
   border: 1px solid var(--color-border-light-tertiary);
   width: 100%;
 }
 
-.test-dialog .otherModifiers {
+.standard-form.torgeternity .test-dialog .otherModifiers {
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: repeat(4 1fr);
   row-gap: 2px;
 }
 
-.test-dialog .otherModifiers>label {
+.standard-form.torgeternity .test-dialog .otherModifiers>label {
   justify-self: center;
   font-family: 'Alaska';
 }
 
-.test-dialog-rollbutton {
+form.test-dialog footer button {
   margin-top: 1rem;
   text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
   background-image: url(../images/lightning_bar.webp);
@@ -4074,6 +4075,16 @@ p.skill-chat-title.skilled {
   font-family: Palatino;
   font-size: 13px;
   max-width: 100%;
+}
+
+.skill-check-options input[type="radio"]::before {
+  line-height: normal;
+  font-size: 13px;
+}
+
+.skill-check-options input[type="radio"]::after {
+  line-height: normal;
+  font-size: 13px;
 }
 
 .torg-cards-action-icons fas-fa:before {
@@ -4703,7 +4714,8 @@ form.deckSetting div.flexrow {
   --font-h2: Alaska;
   --font-h2-size: 1.5em;
   --color-underline-header: #782e22;
-  --input-height: 1.5em;
+  --input-height: 26px;
+  --checkbox-background-color: white;
 }
 
 /* V13 overrides */
@@ -4721,4 +4733,31 @@ form.deckSetting div.flexrow {
 .torgeternity h2 {
   font-size: 1.5em;
   border-bottom: 1px solid var(--color-underline-header);
+}
+
+.standard-form.torgeternity fieldset {
+  padding: 4.2px 9px 7.5px 9px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: normal;
+  border-color: var(--color-fieldset-border);
+  border-radius: 0px;
+  line-height: normal;
+}
+
+.standard-form.torgeternity fieldset hr {
+  margin: 6px 0;
+}
+
+.standard-form.torgeternity fieldset legend {
+  font-size: var(--font-size-12);
+  font-weight: 400;
+}
+
+.torgeternity button {
+  margin: 0 1px;
+  border: 1px solid var(--color-border-light-primary);
+  border-radius: 3px;
+  line-height: 28px;
 }
