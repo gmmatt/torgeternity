@@ -574,7 +574,7 @@ div.application.torgeternity.standard-form {
   cursor: pointer;
 }
 
-.application.actor .window-content select {
+.application.torgeternity.actor .window-content select {
   color: black;
 }
 
@@ -4716,14 +4716,13 @@ form.deckSetting div.flexrow {
   --color-underline-header: #782e22;
   --input-height: 26px;
   --checkbox-background-color: white;
+  --color-border-light-tertiary: #7a7971;
 }
 
 /* V13 overrides */
 .torgeternity select {
-  /*height: calc(var(--form-field-height) + 1px);*/
   height: 27px;
   padding: 0 3px;
-  /*extra*/
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid var(--color-border-light-tertiary);
   border-radius: 3px;
