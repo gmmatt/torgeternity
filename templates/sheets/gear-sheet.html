@@ -44,6 +44,7 @@
 
     </div>
     <div class="main-content">
+      {{formInput systemFields.description value=document.system.description editable=false}}
       <div name="system.description" class="item-description-textarea">
         {{editor description target="system.description" engine="prosemirror" button=true
             editable=editable}}
