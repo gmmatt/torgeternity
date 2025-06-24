@@ -48,45 +48,27 @@ export default class torgeternitySceneConfig extends foundry.applications.sheets
     return result;
   }
 
-  _onChangeForm(context, event) {
-    console.log("_onChangeForm", { context, event })
-    if (event.target.classList.contains("cosm"))
-      this.#onChangeCosm(event);
-    else if (event.target.classList.contains("zone-type"))
-      this.#onChangeZone(event);
-    else if (event.target.classList.contains("cosm-secondary"))
-      this.#onChangeCosm2(event);
-  }
+  _onChangeForm(formConfig, event) {
+    super._onChangeForm(formConfig, event);
 
-  /**
-   *
-   * @param ev
-   */
-  #onChangeCosm(ev) {
-    this.document.setFlag('torgeternity', 'cosm', ev.target.value);
-  }
-  /**
-   *
-   * @param ev
-   */
-  #onChangeCosm2(ev) {
-    this.document.setFlag('torgeternity', 'cosm2', ev.target.value);
-  }
-  /**
-   *
-   * @param ev
-   */
-  #onChangeZone(ev) {
-    const zone = ev.target.value;
-    // Quicker than three calls to this.document.setFlag
-    this.document.update({
-      flags: {
-        torgeternity: {
-          zone: zone,
-          displayCosm2: (zone === 'mixed' || zone === 'dominant'),
-          isMixed: (zone === 'mixed')
+    switch (event.target.dataset.field) {
+      case "cosm":
+        this.document.setFlag('torgeternity', 'cosm', event.target.value);
+        break;
+      case "cosm2":
+        this.document.setFlag('torgeternity', 'cosm2', event.target.value);
+        break;
+      case "zone":
+        {
+          const zone = event.target.value;
+          // More efficient than three calls to this.document.setFlag
+          this.document.update({
+            "flags.torgeternity.zone": zone,
+            "flags.torgeternity.displayCosm2": (zone === 'mixed' || zone === 'dominant'),
+            "flags.torgeternity.isMixed": (zone === 'mixed')
+          })
         }
-      }
-    })
+        break;
+    }
   }
 }

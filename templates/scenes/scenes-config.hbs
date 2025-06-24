@@ -1,10 +1,10 @@
 <div class="tab{{#if tab.active}} active{{/if}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
   <div class="form-group cosm-primary">
-    <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
+    <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String" data-field="cosm">
       {{selectOptions cosmTypes selected=source.flags.torgeternity.cosm localize=true sort=true}}
     </select>
 
-    <select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
+    <select name="flags.torgeternity.zone" class="zone-type" data-dtype="String" data-field="zone">
       {{selectOptions zones selected=source.flags.torgeternity.zone localize=true sort=true}}
     </select>
   </div>
@@ -12,7 +12,7 @@
   {{#if source.flags.torgeternity.displayCosm2}}
     <div class="form-group cosm-secondary">
       <label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
-      <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
+      <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String" data-field="cosm2">
         {{selectOptions cosmTypes selected=source.flags.torgeternity.cosm2 localize=true sort=true}}
       </select>
     </div>
