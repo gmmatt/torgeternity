@@ -1,5 +1,4 @@
 import { torgeternity } from '../../config.js';
-import { addChatListeners } from '../../chat.js';
 
 /**
  * ChatMessage Implementation for Torg Eternity
@@ -35,7 +34,6 @@ class ChatMessageTorg extends ChatMessage {
       const renderedTemplate = await foundry.applications.handlebars.renderTemplate(template, templateData);
       const enrichedHTML = await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate);
       html.querySelector('.message-content').innerHTML = enrichedHTML;
-      addChatListeners(html);
     }
     return html;
   }

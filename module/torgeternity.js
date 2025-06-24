@@ -1,6 +1,6 @@
 'use strict';
 import { torgeternity } from './config.js';
-import * as Chat from './chat.js';
+import TorgeternityChatLog from './chat.js';
 import TorgeternityItem from './documents/item/torgeternityItem.js';
 import TorgeternityActor from './documents/actor/torgeternityActor.js';
 import TorgeternityItemSheet from './sheets/torgeternityItemSheet.js';
@@ -85,6 +85,7 @@ Hooks.once('init', async function () {
   // ---custom user class
   // Player list disabled for now
   CONFIG.ui.players = TorgeternityPlayerList;
+  CONFIG.ui.chat = TorgeternityChatLog;
 
   // ---cards
   CONFIG.Cards.documentClass = torgeternityCards;
@@ -1083,11 +1084,6 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
 Hooks.on('deleteActor', async (actor, data1, data2) => {
   if (!game.user.isGM || actor.type != 'stormknight') return;
   actor.getDefaultHand()?.delete();
-});
-
-Hooks.on('renderChatLog', (app, html, data) => {
-  // ----chat messages listeners
-  Chat.addChatListeners(html);
 });
 
 Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
