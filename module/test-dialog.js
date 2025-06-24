@@ -256,67 +256,45 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    * @param html
    */
   static async #onRoll(event, form, formData) {
+    const fields = formData.object;
+
     // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
     this.test.DNDescriptor =
       this.test.testType === 'activeDefense'
         ? 'standard'
-        : document.getElementById('difficulty').value;
+        : fields.DNDescriptor;
 
     // Check for disfavored and flag if needed
-    this.test.disfavored = document.getElementById('disfavored').checked;
+    this.test.disfavored = fields.disfavored;
 
     // Check for favored and flag if needed
-    this.test.isFav = document.getElementById('favored').checked;
+    this.test.isFav = fields.favored;
 
     // Add bonus, if needed
-    this.test.previousBonus = document.getElementById('previous-bonus').checked;
-    this.test.bonus = document.getElementById('previous-bonus').checked
-      ? document.getElementById('bonus-text').value
-      : null;
+    this.test.previousBonus = fields.prevBonus;
+    this.test.bonus = this.test.previousBonus ? fields.bonusText : null;
 
     // Add movement modifier
-    this.test.movementModifier = document.getElementById('running-radio').checked ? -2 : 0;
+    this.test.movementModifier = fields.movement;
 
     // Add multi-action modifier
-    this.test.multiModifier =
-      [
-        ['multi1-radio', 0],
-        ['multi2-radio', -2],
-        ['multi3-radio', -4],
-      ].find(([id]) => document.getElementById(id).checked)?.[1] ?? -6;
+    this.test.multiModifier = fields.multiAction;
 
     // Add multi-target modifier
-    this.test.targetsModifier =
-      [
-        ['targets1-radio', 0],
-        ['targets2-radio', -2],
-        ['targets3-radio', -4],
-        ['targets4-radio', -6],
-        ['targets5-radio', -8],
-      ].find(([id]) => document.getElementById(id).checked)?.[1] ?? -10;
+    this.test.targetsModifier = fields.multiTarget;
 
     //
     // Add attack and target options if needed
     //
     if (this.test.attackOptions) {
       // Add Called Shot Modifier
-      this.test.calledShotModifier = [
-        ['called-shot-none', 0],
-        ['called-shot-2', -2],
-        ['called-shot-4', -4],
-        ['called-shot-6', -6],
-      ].find(([id]) => document.getElementById(id).checked)?.[1];
+      this.test.calledShotModifier = fields.calledShot;
 
       // Add Vital Hit Modifier
-      this.test.vitalAreaDamageModifier = document.getElementById('vital-area').checked ? 4 : 0;
+      this.test.vitalAreaDamageModifier = fields.vitalArea ?? 0;
 
       // Add Burst Modifier
-      this.test.burstModifier = [
-        ['burst-none', 0],
-        ['burst-short', 2],
-        ['burst-long', 4],
-        ['burst-heavy', 6],
-      ].find(([id]) => document.getElementById(id).checked)?.[1];
+      this.test.burstModifier = fields.burst;
 
       if (
         this.test.item?.weaponWithAmmo &&
@@ -328,50 +306,38 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       }
 
       // Add All-Out Attack
-      this.test.allOutModifier = document.getElementById('all-out').checked ? 4 : 0;
+      this.test.allOutModifier = fields.allOut;
 
       // Add Amied Shot
-      this.test.aimedModifier = document.getElementById('aimed').checked ? 4 : 0;
+      this.test.aimedModifier = fields.aimed ?? 0;
 
       // Add Blind Fire
-      this.test.blindFireModifier = document.getElementById('blind-fire').checked ? -6 : 0;
+      this.test.blindFireModifier = fields.blindFire ?? 0;
 
       // Add Trademark Weapon
-      this.test.trademark = document.getElementById('trademark-weapon').checked;
+      this.test.trademark = fields.trademarkWeapon;
 
       // Add Concealment Modifier
-      this.test.concealmentModifier = [
-        ['concealment-none', 0],
-        ['concealment-2', -2],
-        ['concealment-4', -4],
-        ['concealment-6', -6],
-      ].find(([id]) => document.getElementById(id))?.[1];
+      this.test.concealmentModifier = fields.concealment;
 
       // Add Cover Modifier
-      this.test.coverModifier =
-        document.getElementById('cover').value != 0 ? document.getElementById('cover').value : 0;
+      this.test.coverModifier = fields.cover;
 
       // Add additional damage and BDs in promise. Null if not applicable
-      this.test.additionalDamage =
-        !isNaN(parseInt(document.getElementById('additional-damage')?.value)) &&
-        parseInt(document.getElementById('additional-damage').value);
+      this.test.additionalDamage = fields.additionalDamage ?? 0;
 
-      this.test.addBDs =
-        parseInt(document.getElementById('additionalBDSelect').value) > 0 &&
-        parseInt(document.getElementById('additionalBDSelect').value);
+      this.test.addBDs = fields.additionalBDSelect ?? 0;
     }
 
     // Add other modifiers 1-3
     for (let i = 1; i <= 3; i++) {
-      const modifier = document.getElementById(`other${i}-modifier-text`).value;
+      const modifier = fields[`otherEffect${i}`];
       const isActive = modifier != 0;
 
       this.test[`isOther${i}`] = isActive;
 
       if (isActive) {
-        this.test[`other${i}Description`] = document.getElementById(
-          `other${i}-description-text`
-        ).value;
+        this.test[`other${i}Description`] = fields[`otherDescription${i}`];
         this.test[`other${i}Modifier`] = modifier;
       }
     }

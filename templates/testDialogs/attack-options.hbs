@@ -2,27 +2,31 @@
   <legend for="attackOptionsField">{{localize "torgeternity.sheetLabels.attackOptions"}}</legend>
   <span class="skill-check-options">
     {{localize "torgeternity.sheetLabels.calledShot"}}:
-    <input type="radio" id="called-shot-none" name="calledShot" value="0" checked />
+    <input type="radio" data-dtype="Number" id="called-shot-none" name="calledShot" value="0" checked />
     <label for="called-shot-none">{{localize "torgeternity.sheetLabels.none"}}</label>
-    <input type="radio" id="called-shot-2" name="calledShot" value="-2" />
+    <input type="radio" data-dtype="Number" id="called-shot-2" name="calledShot" value="-2" />
     <label for="called-shot-1">-2</label>
-    <input type="radio" id="called-shot-4" name="calledShot" value="-4" />
+    <input type="radio" data-dtype="Number" id="called-shot-4" name="calledShot" value="-4" />
     <label for="called-shot-4">-4</label>
-    <input type="radio" id="called-shot-6" name="calledShot" value="-6" />
+    <input type="radio" data-dtype="Number" id="called-shot-6" name="calledShot" value="-6" />
     <label for="called-shot-6">-6</label>
-    <input type="checkbox" id="vital-area" data-tooltip="{{localize "torgeternity.sheetLabels.vitalAreaTooltip"}}" name="vitalArea" value="4" />
+    <input type="checkbox" data-dtype="Number" id="vital-area"
+      data-tooltip='torgeternity.sheetLabels.vitalAreaTooltip' name="vitalArea" value="4" />
     <label for="called-shot-damage">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br />
   </span>
   <hr>
   <span class="skill-check-options">
     {{localize "torgeternity.sheetLabels.burst"}}:
-    <input type="radio" id="burst-none" name="burst" value="0" checked />
+    <input type="radio" data-dtype="Number" id="burst-none" name="burst" value="0" checked />
     <label for="burst-none">{{localize "torgeternity.sheetLabels.none"}}</label>
-    <input type="radio" id="burst-short" name="burst" data-tooltip="{{localize "torgeternity.sheetLabels.burstTooltip"}}" value="2" />
+    <input type="radio" data-dtype="Number" id="burst-short" name="burst"
+      data-tooltip="torgeternity.sheetLabels.burstTooltip" value="2" />
     <label for="burst-short">{{localize "torgeternity.sheetLabels.shortBurst"}}</label>
-    <input type="radio" id="burst-long" name="burst" data-tooltip="{{localize "torgeternity.sheetLabels.burstTooltip"}}" value="4" />
+    <input type="radio" data-dtype="Number" id="burst-long" name="burst"
+      data-tooltip="torgeternity.sheetLabels.burstTooltip" value="4" />
     <label for="burst-long">{{localize "torgeternity.sheetLabels.longBurst"}}</label>
-    <input type="radio" id="burst-heavy" name="burst" data-tooltip="{{localize "torgeternity.sheetLabels.burstTooltip"}}" value="6" />
+    <input type="radio" data-dtype="Number" id="burst-heavy" name="burst"
+      data-tooltip="torgeternity.sheetLabels.burstTooltip" value="6" />
     <label for="burst-heavy">{{localize "torgeternity.sheetLabels.heavyBurst"}}</label><br />
   </span>
   <hr>
@@ -30,33 +34,37 @@
     <input
       type="checkbox"
       id="all-out"
-      name="all-out"
-      data-tooltip="{{localize "torgeternity.sheetLabels.allOutTooltip"}}"
-      value="4"
-    />
+      name="allOut" data-dtype="Boolean"
+      data-tooltip="torgeternity.sheetLabels.allOutTooltip"
+      value="4" />
     <label for="all-out">{{localize "torgeternity.sheetLabels.allOut"}}</label>
-    <input type="checkbox" id="aimed" name="aimed" data-tooltip="{{localize "torgeternity.sheetLabels.aimedTooltip"}}" value="4" />
+    <input type="checkbox" data-dtype="Number" id="aimed" name="aimed"
+      data-tooltip="torgeternity.sheetLabels.aimedTooltip"
+      value="4" />
     <label for="aimed">{{localize "torgeternity.sheetLabels.aimed"}}</label>
-    <input type="checkbox" id="blind-fire" data-tooltip="{{localize "torgeternity.sheetLabels.blindFireTooltip"}}" value="-6" />
+    <input type="checkbox" data-dtype="Number" id="blind-fire" name="blindFire" ,
+      data-tooltip="torgeternity.sheetLabels.blindFireTooltip"
+      value="-6" />
     <label for="blind-fire">{{localize "torgeternity.sheetLabels.blindFire"}}</label>
     <input
-      type="checkbox"
+      type="checkbox" data-dtype="Boolean"
       id="trademark-weapon"
-      data-tooltip={{localize "torgeternity.sheetLabels.trademarkHint"}}
-      value="trademark"
-    />
+      name="trademarkWeapon"
+      data-tooltip="torgeternity.sheetLabels.trademarkHint"
+      value="trademark" />
     <label for="blind-fire">{{localize "torgeternity.sheetLabels.trademark"}}</label>
-  </span>  
+  </span>
   <hr>
   <span class="skill-check-options">
     <input
       type="number"
       id="additional-damage"
-      placeholder="0"
-    >
+      name="additionalDamage"
+      data-dtype="Number"
+      placeholder="0">
     <label for="additional-damage">{{localize "torgeternity.sheetLabels.additionalDamage"}}</label>
-    
-    <select id="additionalBDSelect">
+
+    <select id="additionalBDSelect" data-dtype="Number" name="additionalBDSelect">
       <option value="0">0</option>
       <option value="1">1</option>
       <option value="2">2</option>
