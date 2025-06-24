@@ -242,10 +242,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     });
   }
 
-  _onChangeForm(formConfig, event) {
-    console.log('_onChangeForm', { formConfig, event })
-  }
-
   /**
    *
    * @param event
