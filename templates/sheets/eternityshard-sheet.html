@@ -38,7 +38,8 @@
     <div class="main-content">
 
       <div name="system.description" class="item-description-textarea">
-        {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
+        <prose-mirror toggled name="system.description" {{disabled (not editable)}}
+          value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
       </div>
     </div>
   </div>
