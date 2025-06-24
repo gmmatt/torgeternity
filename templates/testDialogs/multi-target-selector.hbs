@@ -2,27 +2,23 @@
   <legend>{{localize "torgeternity.sheetLabels.multiTargetPenalty"}}</legend>
   <span class="skill-check-options">
     {{localize "torgeternity.sheetLabels.targets"}}:
-    <input type="radio" data-dtype="Number" id="targets1-radio" name="multiTarget" value="0" checked />
+    <input type="radio" data-dtype="Number" id="targets1-radio" name="multiTarget" value="0"
+      checked />
     <label for="1">1</label>
-    <input type="radio" data-dtype="Number" id="targets2-radio" name="multiTarget" value="-2" {{#if (eq
-      test.targets.length "2" )}} checked
-      {{/if}} />
+    <input type="radio" data-dtype="Number" id="targets2-radio" name="multiTarget" value="-2"
+      {{checked (eq test.targets.length 2 )}} />
     <label for="2">2 (-2)</label>
-    <input type="radio" data-dtype="Number" id="targets3-radio" name="multiTarget" value="-4" {{#if (eq
-      test.targets.length "3" )}} checked
-      {{/if}} />
+    <input type="radio" data-dtype="Number" id="targets3-radio" name="multiTarget" value="-4"
+      {{checked (eq test.targets.length 3 )}} />
     <label for="3">3 (-4)</label>
-    <input type="radio" data-dtype="Number" id="targets4-radio" name="multiTarget" value="-6" {{#if (eq
-      test.targets.length "4" )}} checked
-      {{/if}} />
+    <input type="radio" data-dtype="Number" id="targets4-radio" name="multiTarget" value="-6"
+      {{checked (eq test.targets.length 4 )}} />
     <label for="4">4 (-6)</label>
-    <input type="radio" data-dtype="Number" id="targets5-radio" name="multiTarget" value="-8" {{#if (eq
-      test.targets.length "5" )}} checked
-      {{/if}} />
+    <input type="radio" data-dtype="Number" id="targets5-radio" name="multiTarget" value="-8"
+      {{checked (eq test.targets.length 5 )}} />
     <label for="4">5 (-8)</label>
-    <input type="radio" data-dtype="Number" id="targets6-radio" name="multiTarget" value="-10" {{#if (eq
-      test.targets.length "6" )}} checked
-      {{/if}} />
+    <input type="radio" data-dtype="Number" id="targets6-radio" name="multiTarget" value="-10"
+      {{checked (eq test.targets.length 6 )}} />
     <label for="4">6 (-10)</label>
   </span>
 </fieldset>

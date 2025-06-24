@@ -33,15 +33,14 @@
       </span>
       <input class="skill-line" placeholder="-" value="{{content.value}}" disabled />
       <span>
-        <a class="toggleFav {{#if content.isFav}}checked{{/if}}">
+        <a class="toggleFav {{checked content.isFav}}">
           <i class="far fa-star"></i>
         </a>
         <input
           class="favCheck"
           type="checkbox"
           name="system.skills.{{name}}.isFav"
-          {{checked
-          content.isFav}}
+          {{checked content.isFav}}
           data-dtype="Boolean" />
       </span>
     </li>
@@ -68,7 +67,7 @@
       <span class="skillAdd">{{content.system.adds}}</span>
       <span class="skill-line">{{content.system.value}}</span>
       <span>
-        <a class="toggleFav {{#if content.system.isFav}}checked{{/if}}">
+        <a class="toggleFav {{checked content.system.isFav}}">
           <i class="far fa-star"></i>
         </a>
         <input
