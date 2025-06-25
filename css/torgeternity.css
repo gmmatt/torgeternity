@@ -494,7 +494,8 @@ form.sheet.torgeternity table td select {
 }
 
 form.application.torgeternity,
-div.application.torgeternity {
+div.application.torgeternity,
+dialog.application {
   font-family: Alaska;
   background-image: url(../images/thunder.webp);
   background-size: cover;
@@ -901,6 +902,10 @@ textarea:hover {
 
 .application {
   font-family: Alaska;
+  font-size: 12px;
+}
+
+.dialog .dialog-content {
   font-size: 12px;
 }
 
@@ -4769,9 +4774,23 @@ form.deckSetting div.flexrow {
   font-weight: 400;
 }
 
-.torgeternity button {
+.torgeternity button,
+dialog footer button {
   margin: 0 1px;
   border: 1px solid var(--color-border-light-primary);
   border-radius: 3px;
   line-height: 28px;
+}
+
+div.charInfoOutput h3 {
+  font-size: 1.25em;
+  border-bottom: 1px solid var(--color-underline-header);
+  margin: 0 0 0.5rem;
+  padding: 0;
+  font-weight: normal;
+  color: white;
+}
+
+dialog.charInfoOutput section.window-content {
+  overflow-y: auto;
 }

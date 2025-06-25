@@ -1140,14 +1140,13 @@ async function deleteActiveDefense(...args) {
   }
 }
 
-Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
-  const newOptions = [];
+Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 
-  newOptions.push({
+  menuItems.unshift({
     name: 'torgeternity.contextMenu.characterInfo.contextMenuTitle',
     icon: '<i class="fa-regular fa-circle-info"></i>',
     callback: async (li) => {
-      const actor = game.actors.get(li.data('documentId'));
+      const actor = actorDir.collection.get(li.dataset.entryId);
 
       const description =
         '<div class="charInfoOutput">' + actor.system.details.background ??
@@ -1155,31 +1154,35 @@ Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
         actor.system.description ??
         '' + '</div>';
 
-      new Dialog(
-        {
+      foundry.applications.api.DialogV2.wait({
+        classes: ['torgeternity', 'charInfoOutput'],
+        window: {
           title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
             a: actor.name,
           }),
-          content: await foundry.applications.ux.TextEditor.enrichHTML(description),
-          buttons: {
-            ok: {
-              label: game.i18n.localize('torgeternity.dialogWindow.buttons.ok'),
-              callback: () => { },
-            },
-            showPlayers: {
-              label: game.i18n.localize('torgeternity.dialogPrompts.showToPlayers'),
-              callback: (html) => {
-                ChatMessage.create({
-                  content: html[0].querySelector('.charInfoOutput').outerHTML,
-                });
-              },
+          contentClasses: ["scrollable"],
+        },
+        position: {
+          width: 800
+        },
+        content: await foundry.applications.ux.TextEditor.enrichHTML(description),
+        buttons: [
+          {
+            action: 'close',
+            label: 'torgeternity.dialogWindow.buttons.ok',
+            callback: () => { },
+          },
+          {
+            action: 'showAllPlayers',
+            label: 'torgeternity.dialogPrompts.showToPlayers',
+            callback: (event, button, dialog) => {
+              ChatMessage.create({
+                content: dialog.element.querySelector('.charInfoOutput').outerHTML,
+              });
             },
           },
-        },
-        { width: 800 }
-      ).render(true);
+        ]
+      });
     },
   });
-
-  options.splice(0, 0, ...newOptions);
 });
