@@ -1,166 +1,120 @@
 import PartySheet from './partySheet.js';
-import PartySheetActive from './partySheetActive.js';
 /**
  *
  */
 export default class TorgeternityPlayerList extends foundry.applications.ui.Players {
-    /**
-     *
-     */
-    get template() {
-        return 'systems/torgeternity/templates/playerList/playerList.hbs';
-    }
-    /**
-     *
-     */
-    async getData() {
-        const data = super.getData();
-        data.self = game.user;
-        const GM = game.users.find((user) => user.isGM);
-        data.GMpossibilities = GM.getFlag('torgeternity', 'GMpossibilities');
-        for (const user of data.users) {
-            if (user.character) {
-                const userActor = await game.actors.get(user.character);
-                user.characterPossibilities = parseInt(userActor.system.other.possibilities);
-            } else {
-                user.characterPossibilities = 0;
-            }
-        }
-        return data;
-    }
-    /**
-     *
-     * @param html
-     */
-    activateListeners(html) {
-        super.activateListeners(html);
-        html.find('.players-popout').click(this.renderPopout.bind(this));
-        html.find('em.possAdd').click(this.addPossibility.bind(this));
-        html.find('em.possMinus').click(this.minusPossibility.bind(this));
-        html.find('i.possReset').click(this.resetPossibilities.bind(this));
-    }
 
-    /**
-     *
-     */
-    createPopout() {
-        const party = new PartySheet();
-
-        return party;
+  static DEFAULT_OPTIONS = {
+    actions: {
+      partySheet: TorgeternityPlayerList.#onPartySheet,
+      possAdd: TorgeternityPlayerList.#onAaddPossibility,
+      possMinus: TorgeternityPlayerList.#onMinusPossibility,
+      possReset: TorgeternityPlayerList.#onResetPossibilities
     }
-
-    /**
-     *
-     */
-    createPopoutActive() {
-        const party = new PartySheetActive();
-
-        return party;
+  }
+  static PARTS = {
+    players: {
+      root: true,
+      // override core "templates/ui/players.hbs"
+      template: 'systems/torgeternity/templates/playerList/playerList.hbs'
     }
-    /**
-     *
-     */
-    async renderPopout() {
-        const all = await Dialog.confirm({
-            title: `${game.i18n.localize('torgeternity.partySheet.openParty')}`,
-            content: `${game.i18n.localize('torgeternity.partySheet.chooseParty')}`,
-        });
-        if (all) {
-            this.createPopout().render(true);
-        } else {
-            this.createPopoutActive().render(true);
-        }
+  }
+  /**
+   *
+   */
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    context.self = game.user;
+    const gmuser = game.users.find((user) => user.isGM);
+    context.GMpossibilities = gmuser.getFlag('torgeternity', 'GMpossibilities');
+    context.users = [...context.active, ...context.inactive];
+    for (const user of context.users) {
+      const userdoc = game.users.get(user.id);
+      user.character = userdoc.character;
+      user.isGM = userdoc.isGM;
+      user.characterPossibilities = parseInt(user.character?.system.other.possibilities ?? 0);
     }
+    return context;
+  }
+  /**
+   *
+   */
+  static async #onPartySheet() {
+    foundry.applications.api.DialogV2.confirm({
+      classes: ['torgeternity'],
+      window: {
+        title: 'torgeternity.partySheet.openParty',
+      },
+      content: `${game.i18n.localize('torgeternity.partySheet.chooseParty')}`,
+      yes: {
+        callback: () => (new PartySheet({ activeActors: false })).render(true),
+      },
+      no: {
+        callback: () => (new PartySheet({ activeActors: true })).render(true),
+      }
+    });
+  }
+  /**
+   *
+   * @param event
+   */
+  static async #onAaddPossibility(event, target) {
+    if (target.dataset.targetId === 'GMpossibilities') {
+      const gmuser = game.users.activeGM;
+      const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') + 1;
+      gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
+    } else {
+      const targetActor = game.actors.get(target.dataset.targetId);
+      return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) + 1, });
+    }
+  }
+  /**
+   *
+   * @param event
+   */
+  static async #onMinusPossibility(event, target) {
+    if (target.dataset.targetId === 'GMpossibilities') {
+      const gmuser = game.users.activeGM;
+      const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') - 1;
+      gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
+    } else {
+      const targetActor = game.actors.get(target.dataset.targetId);
+      return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) - 1, });
+    }
+  }
 
-    /**
-     *
-     * @param ev
-     */
-    async addPossibility(ev) {
-        if (ev.currentTarget.dataset.targetId === 'GMpossibilities') {
-            const GM = game.users.find((user) => user.isGM);
-            const newVal = GM.getFlag('torgeternity', 'GMpossibilities') + 1;
-            GM.setFlag('torgeternity', 'GMpossibilities', newVal);
-            ui.players.render(true);
-        } else {
-            const targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
-            await targetActor.update({
-                _id: targetActor._id,
-                system: {
-                    other: {
-                        possibilities: parseInt(targetActor.system.other.possibilities) + 1,
-                    },
-                },
-            });
-        }
-    }
-    /**
-     *
-     * @param ev
-     */
-    async minusPossibility(ev) {
-        if (ev.currentTarget.dataset.targetId === 'GMpossibilities') {
-            const GM = game.users.find((user) => user.isGM);
-            const newVal = GM.getFlag('torgeternity', 'GMpossibilities') - 1;
-            GM.setFlag('torgeternity', 'GMpossibilities', newVal);
-            ui.players.render(true);
-        } else {
-            const targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
-            await targetActor.update({
-                _id: targetActor._id,
-                system: {
-                    other: {
-                        possibilities: parseInt(targetActor.system.other.possibilities) - 1,
-                    },
-                },
-            });
-        }
-    }
-
-    /**
-     *
-     * @param ev
-     */
-    resetPossibilities(ev) {
-        const possibilitiesDial = new Dialog({
-            title: `${game.i18n.localize('torgeternity.possibilitiesReset.name')}`,
-            content: `
-        
-        <div>
-        <span>
-        ${game.i18n.localize('torgeternity.possibilitiesReset.hint')}
-        
+  /**
+   *
+   * @param event
+   */
+  static #onResetPossibilities() {
+    foundry.applications.api.DialogV2.wait({
+      window: {
+        title: 'torgeternity.possibilitiesReset.name',
+      },
+      content: `<div><span>${game.i18n.localize('torgeternity.possibilitiesReset.hint')}
             <input id="possibilitiesValue" value="3" type="number"/>
-            </span> 
-        </div>
-      `,
-            buttons: {
-                one: {
-                    icon: '<i class="fas fa-check"></i>',
-                    label: `${game.i18n.localize('torgeternity.submit.apply')}`,
-                    callback: (html) => {
-                        game.users.forEach((user) => {
-                            if (user.character) {
-                                const target = game.actors.get(user.character.id);
-                                const newVal = parseInt(document.getElementById('possibilitiesValue').value);
-                                target.update({
-                                    id: target.id,
-                                    system: {
-                                        other: {
-                                            possibilities: newVal,
-                                        },
-                                    },
-                                });
-                            }
-                        });
-                    },
-                },
-                two: {
-                    icon: '<i class="fas fa-ban"></i>',
-                    label: `${game.i18n.localize('torgeternity.submit.cancel')}`,
-                },
-            },
-        });
-        possibilitiesDial.render(true);
-    }
+            </span></div>`,
+      buttons: [
+        {
+          action: 'submit',
+          icon: 'fas fa-check',
+          label: 'torgeternity.submit.apply',
+          callback: (event, target, dialog) => {
+            const newVal = parseInt(dialog.element.querySelector('[id=possibilitiesValue]').value);
+            game.users.forEach((user) => {
+              if (user.character) {
+                user.character.update({ "system.other.possibilities": newVal });
+              }
+            });
+          },
+        },
+        {
+          action: 'cancel',
+          icon: 'fas fa-ban',
+          label: 'torgeternity.submit.cancel',
+        },
+      ],
+    });
+  }
 }

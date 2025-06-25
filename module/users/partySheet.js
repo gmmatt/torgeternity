@@ -2,66 +2,82 @@
  *
  */
 export default class PartySheet extends foundry.applications.ui.Players {
-    /**
-     *
-     */
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(super.defaultOptions, {
-            id: 'party-sheet',
-            template: 'systems/torgeternity/templates/playerList/partySheet.hbs',
-            popOut: true,
-            resizable: true,
-        });
-    }
 
-    /**
-     *
-     */
-    getData() {
-        const data = super.getData();
-        data.users = game.users;
-        for (const user of data.users) {
-            if (user.role >= 4 || !user.character) continue;
+  static DEFAULT_OPTIONS = {
+    id: 'party-sheet',
+    tag: "div",
+    classes: ["torgeternity"],   // "faded-ui" removed by _initializeApplicationOptions
+    window: {
+      resizable: true,
+      frame: true,
+      positioned: true,
+    },
+    actions: {
+      clickItem: PartySheet.#onClickItem,
+      clickActor: PartySheet.#onClickActor,
+    }
+  }
+  static PARTS = {
+    body: { template: 'systems/torgeternity/templates/playerList/partySheet.hbs' },
+  }
 
-            for (const attribute of Object.keys(user.character.system.attributes)) {
-                user.character.system.attributes[attribute].localizedAttribute = game.i18n.localize(
-                    `torgeternity.attributes.${attribute}`
-                );
-            }
 
-            for (const skill of Object.keys(user.character.system.skills)) {
-                user.character.system.skills[skill].localizedSkill = game.i18n.localize(
-                    `torgeternity.skills.${skill}`
-                );
-            }
-        }
-        return data;
+  /**
+   *
+   */
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    context.users = this.options.activeActors ?
+      game.users.filter(user => !user.isGM && user.active) :
+      game.users.filter(user => !user.isGM);
+
+    for (const user of context.users) {
+      if (user.role === CONST.USER_ROLES.GAMEMASTER || !user.character) continue;
+
+      for (const attribute of Object.keys(user.character.system.attributes)) {
+        user.character.system.attributes[attribute].localizedAttribute =
+          game.i18n.localize(`torgeternity.attributes.${attribute}`);
+      }
+
+      for (const skill of Object.keys(user.character.system.skills)) {
+        user.character.system.skills[skill].localizedSkill =
+          game.i18n.localize(`torgeternity.skills.${skill}`);
+      }
     }
-    /**
-     *
-     * @param html
-     */
-    activateListeners(html) {
-        super.activateListeners(html);
-        html.find('a.item-link').click(this._clickItem.bind(this));
-        html.find('h3.actorName').click(this._clickActor.bind(this));
-    }
-    /**
-     *
-     * @param ev
-     */
-    _clickItem(ev) {
-        const itemId = ev.currentTarget.getAttribute('data-itemID');
-        const actorId = ev.currentTarget.getAttribute('data-actorID');
-        const item = game.actors.get(actorId).items.get(itemId);
-        item.sheet.render(true);
-    }
-    /**
-     *
-     * @param ev
-     */
-    _clickActor(ev) {
-        const actorId = ev.currentTarget.getAttribute('data-actorID');
-        game.actors.get(actorId).sheet.render(true);
-    }
+    return context;
+  }
+
+  /**
+   * Remove flex-ui class (to prevent fading)
+   * @param {*} options 
+   * @returns 
+   */
+  _initializeApplicationOptions(options) {
+    const appOptions = super._initializeApplicationOptions(options);
+    appOptions.classes = appOptions.classes.filter(cl => cl !== 'faded-ui');
+    return appOptions;
+  }
+
+  async _onRender(context, options) {
+    super._onRender(context, options);
+    console.log(context);
+  }
+  /**
+   *
+   * @param ev
+   */
+  static #onClickItem(event, target) {
+    const itemId = target.getAttribute('data-itemID');
+    const actorId = target.getAttribute('data-actorID');
+    const item = game.actors.get(actorId).items.get(itemId);
+    item.sheet.render(true);
+  }
+  /**
+   *
+   * @param ev
+   */
+  static #onClickActor(event, target) {
+    const actorId = target.getAttribute('data-actorID');
+    game.actors.get(actorId).sheet.render(true);
+  }
 }

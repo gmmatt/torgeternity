@@ -1641,7 +1641,7 @@ german tent cards images
   line-height: 25px;
 }
 
-#players {
+#players #players-active {
   background-image: url(../images/thunder.webp);
   background-position: center;
   bottom: 0px;
@@ -1660,7 +1660,6 @@ german tent cards images
   color: white;
   font-size: larger;
   position: relative;
-  top: -25px;
   z-index: +1;
   left: 15px;
 }
@@ -1668,7 +1667,6 @@ german tent cards images
 #players .possReset {
   position: relative;
   left: 40%;
-  top: -25px;
 }
 
 #players h3 {
@@ -1699,6 +1697,7 @@ german tent cards images
   line-height: 25px;
   padding: 1px 8px;
   position: relative;
+  color: white;
 }
 
 #players ol li.player span.possibilities {
@@ -1715,7 +1714,9 @@ german tent cards images
   border: 1px solid white;
   border-radius: 50%;
   text-align: center;
+  color: white;
 }
+
 
 #players ol li.player span.possibilities .possAdd,
 #players ol li.player span.possibilities .possMinus {
@@ -1886,23 +1887,30 @@ nav#controls,
 #party-sheet h2,
 #party-sheet h3,
 #party-sheet h4 {
+  font-family: Alaska;
   text-align: center;
+  color: white;
+  margin: 0px 0px 8px 0px;
 }
 
 #party-sheet h2 {
   border-bottom: 2px solid #419c9c;
+  font-size: 18px;
 }
 
 #party-sheet h3 {
   border-bottom: 2px solid #215050;
+  font-size: 15px;
 }
 
 #party-sheet h4 {
   text-decoration: underline;
+  font-size: 12px;
 }
 
 #party-sheet .flexrow {
   margin: 4px;
+  align-items: normal;
 }
 
 #party-sheet .flexrow div {
@@ -4782,7 +4790,8 @@ dialog footer button {
   line-height: 28px;
 }
 
-div.charInfoOutput h3 {
+div.charInfoOutput h3,
+dialog.torgeternity h3 {
   font-size: 1.25em;
   border-bottom: 1px solid var(--color-underline-header);
   margin: 0 0 0.5rem;
