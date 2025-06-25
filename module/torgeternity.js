@@ -721,7 +721,7 @@ function rollItemMacro(itemName) {
             adjustedDamage = parseInt(weaponDamage);
         }
 
-        const mTest = {
+        new TestDialog({
           testType: 'attack',
           type: 'attack',
           actor: actor.uuid,
@@ -754,11 +754,10 @@ function rollItemMacro(itemName) {
           movementModifier: 0,
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        };
-
-        new TestDialog(mTest);
+        });
       }
       break;
+
     case 'psionicpower':
     case 'miracle':
     case 'spell':
@@ -786,7 +785,7 @@ function rollItemMacro(itemName) {
           dnDescriptor = 'standard';
         }
 
-        const test = {
+        new TestDialog({
           testType: 'power',
           actor: actor.uuid,
           actorPic: actor.img,
@@ -815,9 +814,7 @@ function rollItemMacro(itemName) {
           chatNote: '',
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        };
-
-        new TestDialog(test);
+        });
         /*
             // this will cause the power to be printed to the chat
             return await item.roll();

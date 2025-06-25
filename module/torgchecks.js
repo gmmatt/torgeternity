@@ -1264,7 +1264,7 @@ export async function soakDamages(soaker) {
     return;
   }
 
-  const test = {
+  new TestDialog({
     testType: 'soak',
     actor: soaker.uuid,
     actorPic: soaker.img,
@@ -1283,9 +1283,7 @@ export async function soakDamages(soaker) {
     attackOptions: false,
     chatNote: '',
     rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
-  };
-
-  new TestDialog(test);
+  });
   // do reality roll
 }
 

@@ -526,7 +526,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       }
     }
 
-    const test = {
+    new TestDialog({
       testType: target.dataset.testtype,
       customSkill: target.dataset.customskill,
       actor: this.actor.uuid,
@@ -548,9 +548,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   // Adapted from above, with event targetting in edit skills list
@@ -580,7 +578,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       return;
     }
 
-    const test = {
+    new TestDialog({
       testType: target.dataset.testtype,
       customSkill: target.dataset.customskill,
       actor: this.actor.uuid,
@@ -602,9 +600,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
@@ -617,7 +613,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       return;
     }
 
-    const test = {
+    new TestDialog({
       testType: 'chase',
       customSkill: 'false',
       actor: this.actor.uuid,
@@ -637,9 +633,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
@@ -647,7 +641,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onBaseRoll(event, target) {
-    const test = {
+    new TestDialog({
       testType: 'vehicleBase',
       customSkill: 'false',
       actor: this.actor.uuid,
@@ -667,9 +661,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
@@ -685,7 +677,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         dnDescriptor = 'targetVehicleDefense';
       }
     }
-    const test = {
+    new TestDialog({
       testType: 'stunt',
       customSkill: 'false',
       actor: this.actor.uuid,
@@ -705,9 +697,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
@@ -738,7 +728,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       dnDescriptor = 'standard';
     }
 
-    const test = {
+    new TestDialog({
       testType: 'interactionAttack',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
@@ -765,9 +755,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
@@ -798,7 +786,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       ? this.actor.system.attributes.dexterity.value
       : target.dataset.skillValue;
 
-    const test = {
+    new TestDialog({
       testType: 'attack',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
@@ -825,9 +813,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
       amountBD: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
@@ -847,7 +833,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static #onActiveDefenseRoll(event, target) {
     const dnDescriptor = 'standard';
 
-    const test = {
+    new TestDialog({
       testType: 'activeDefense',
       activelyDefending: false,
       actor: this.actor.uuid,
@@ -875,9 +861,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       sizeModifierAll: [0],
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
@@ -1030,7 +1014,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         adjustedDamage = parseInt(weaponDamage);
     }
 
-    const test = {
+    new TestDialog({
       testType: 'attack',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
@@ -1058,9 +1042,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
       item: item,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /* I've commented that out because it shouldn't be needed anymore but I don't know yet :D
@@ -1104,7 +1086,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     if (checkUnskilled(skillData.value, skillName, this.actor)) return;
 
-    const test = {
+    new TestDialog({
       testType: 'power',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
@@ -1140,9 +1122,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       bdDamageLabelStyle: 'display:none',
       amountBD: 0,
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
