@@ -24,12 +24,6 @@ export default class MacroHub extends HandlebarsApplicationMixin(ApplicationV2) 
     hub: { template: 'systems/torgeternity/templates/macrohub/hub.html' }
   }
 
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.position = 'center';
-    return options;
-  }
-
   /**
    * _prepareContext extension
    * @returns context
