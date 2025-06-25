@@ -33,41 +33,10 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
   }
 
-  /**
-   *
-   * @param html
-   */
-  /*
-  export function addChatListeners(html) {
-    function set(event, query, func) {
-      html.querySelectorAll(query).forEach(e =>
-        e.addEventListener(event, func));
-    }
-    // all actions, which need to be in the SkillCard (torg-check.js)
-    set('click', 'a.roll-fav', onFavored);
-    set('click', 'a.roll-possibility', onPossibility);
-    set('click', 'a.roll-up', onUp);
-    set('click', 'a.roll-hero', onHero);
-    set('click', 'a.roll-drama', onDrama);
-    set('click', 'a.add-plus3', onPlus3);
-    set('click', 'a.add-bd', onBd);
-    set('click', 'a.modifier-label', onModifier);
-    set('click', 'a.applyDam', applyDam);
-    set('contextmenu', 'a.applyDam', adjustDam);
-    set('click', 'a.soakDam', soakDam);
-    set('click', 'a.applyStymied', applyStym);
-    set('click', 'a.applyVulnerable', applyVul);
-    set('click', 'a.backlash1', applyBacklash1);
-    set('click', 'a.backlash2', applyBacklash2);
-    set('click', 'a.backlash3', applyBacklash3);
-  }
-  */
-
-  async _onRender(context, options) {
-    await super._onRender(context, options);
-
-    this.element.querySelectorAll('a.applyDam').forEach(e =>
-      e.addEventListener('contextmenu', TorgeternityChatLog.#adjustDam.bind(this)));
+  static async renderMessage(message, options) {
+    const result = await super.renderMessage(message, options);
+    result.querySelector('a.applyDam')?.addEventListener('contextmenu', TorgeternityChatLog.#adjustDam);
+    return result;
   }
 
   parentDeleteByTime(oldMsg) {
@@ -452,27 +421,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const dama = test.damage;
     const toug = test.targetAdjustedToughness;
     const newDamages = torgDamage(dama, toug);
-    const oldWounds = newDamages.wounds;
-    const oldShocks = newDamages.shocks;
-    let newWounds;
-    let newShocks;
 
     const fields = foundry.applications.fields;
-    const woundInput = fields.createNumberInput({
-      name: 'nw',
-      value: oldWounds,
-    });
     const woundsGroup = fields.createFormGroup({
-      input: woundInput,
-      label: game.i18n.localize('torgeternity.sheetLabels.modifyWounds')
+      label: game.i18n.localize('torgeternity.sheetLabels.modifyWounds'),
+      input: fields.createNumberInput({ name: 'nw', value: newDamages.wounds }),
     });
-    const shockInput = fields.createNumberInput({
-      name: 'ns',
-      value: oldShocks
-    })
+
     const shockGroup = fields.createFormGroup({
-      input: shockInput,
-      label: game.i18n.localize('torgeternity.sheetLabels.modifyShocks')
+      label: game.i18n.localize('torgeternity.sheetLabels.modifyShocks'),
+      input: fields.createNumberInput({ name: 'ns', value: newDamages.shocks }),
     })
 
     const content = `<p>${game.i18n.localize('torgeternity.sheetLabels.modifyDamage')}</p> <hr>
