@@ -456,36 +456,47 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const oldShocks = newDamages.shocks;
     let newWounds;
     let newShocks;
+
+    const fields = foundry.applications.fields;
+    const woundInput = fields.createNumberInput({
+      name: 'nw',
+      value: oldWounds,
+    });
+    const woundsGroup = fields.createFormGroup({
+      input: woundInput,
+      label: game.i18n.localize('torgeternity.sheetLabels.modifyWounds')
+    });
+    const shockInput = fields.createNumberInput({
+      name: 'ns',
+      value: oldShocks
+    })
+    const shockGroup = fields.createFormGroup({
+      input: shockInput,
+      label: game.i18n.localize('torgeternity.sheetLabels.modifyShocks')
+    })
+
     const content = `<p>${game.i18n.localize('torgeternity.sheetLabels.modifyDamage')}</p> <hr>
-    <form>
-    <div class="form-group"><label for="nw">${game.i18n.localize(
-      'torgeternity.sheetLabels.modifyWounds'
-    )}</label>
-    <div class="form-fields torgeternityFormFields"><input type="number" id="nw" value=${oldWounds}></input></div></div>
-    <div class="form-group"><label for="ns">${game.i18n.localize(
-      'torgeternity.sheetLabels.modifyShocks'
-    )}</label>
-    <div class="form-fields torgeternityFormFields"><input type="number" id="ns" value=${oldShocks}></input></div></div>
-    </form>`;
-    new Dialog({
+    ${woundsGroup.outerHTML}${shockGroup.outerHTML}`;
+
+    foundry.applications.api.DialogV2.wait({
+      window: {
+        title: game.i18n.localize('torgeternity.sheetLabels.chooseDamage'),
+      },
       content,
-      title: game.i18n.localize('torgeternity.sheetLabels.chooseDamage'),
-      buttons: {
-        go: {
-          icon: `<i class="fas fa-check"></i>`,
-          label: game.i18n.localize('torgeternity.submit.apply'),
-          callback: async (html) => {
-            newWounds = Number(html[0].querySelector('input[id=nw]').value);
-            newShocks = Number(html[0].querySelector('input[id=ns]').value);
-            // do calculation here to get x and y, then do following function:
-            newDamages.wounds = newWounds;
-            newDamages.shocks = newShocks;
+      buttons: [
+        {
+          action: 'go',
+          icon: 'fas fa-check',
+          label: 'torgeternity.submit.apply',
+          callback: async (event, button, dialog) => {
+            newDamages.wounds = Number(dialog.element.querySelector('input[name=nw]').value);
+            newDamages.shocks = Number(dialog.element.querySelector('input[name=ns]').value);
             applyDamages(newDamages, targetuuid);
           },
         },
-      },
+      ],
       default: 'go',
-    }).render(true);
+    });
   }
 
   static async #applyStym(event, target) {

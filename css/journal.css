@@ -92,7 +92,8 @@
 
 .application.torgeternity .window-content button,
 .application.torgeternity .window-content select,
-.journal-sheet .directory .action-buttons button {
+.journal-sheet .directory .action-buttons button,
+dialog footer button {
   text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
   background-image: url(../images/lightning_bar.webp);
   background-repeat: no-repeat;

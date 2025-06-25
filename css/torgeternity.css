@@ -4794,3 +4794,21 @@ div.charInfoOutput h3 {
 dialog.charInfoOutput section.window-content {
   overflow-y: auto;
 }
+
+.standard-form .form-group>label,
+.standard-form .form-group>span.label {
+  color: white;
+}
+
+.standard-form {
+  row-gap: normal;
+  column-gap: normal;
+}
+
+body {
+  line-height: normal;
+}
+
+hr {
+  margin: 6px 0px 6px 0px;
+}
