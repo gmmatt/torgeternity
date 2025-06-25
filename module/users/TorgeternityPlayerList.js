@@ -40,18 +40,22 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
    *
    */
   static async #onPartySheet() {
-    foundry.applications.api.DialogV2.confirm({
+    foundry.applications.api.DialogV2.wait({
       classes: ['torgeternity'],
-      window: {
-        title: 'torgeternity.partySheet.openParty',
-      },
+      window: { title: 'torgeternity.partySheet.openParty' },
       content: `${game.i18n.localize('torgeternity.partySheet.chooseParty')}`,
-      yes: {
-        callback: () => (new PartySheet({ activeActors: false })).render(true),
-      },
-      no: {
-        callback: () => (new PartySheet({ activeActors: true })).render(true),
-      }
+      buttons: [
+        {
+          action: "all",
+          label: "torgeternity.partySheet.allPlayers",
+          callback: () => PartySheet.showAllParty()
+        },
+        {
+          action: 'active',
+          label: "torgeternity.partySheet.activePlayers",
+          callback: () => PartySheet.showActiveParty()
+        }
+      ]
     });
   }
   /**

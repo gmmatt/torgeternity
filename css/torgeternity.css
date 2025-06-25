@@ -1206,6 +1206,10 @@ nav#controls ol .torgHand:before {
   overflow-y: auto;
 }
 
+.flexrow .scrollable {
+  flex: 1
+}
+
 #sidebar #sidebar-tabs {
   flex: 0 0 32px;
   box-sizing: border-box;

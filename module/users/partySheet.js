@@ -1,12 +1,17 @@
 /**
- *
+ * @class PartySheet
+ * 
+ * Shows a table of players which includes their assigned character.
+ * 
+ * The constructors accepts `{activePlayers: true}` to restrict the list of players to only
+ * those which are currently online.
  */
 export default class PartySheet extends foundry.applications.ui.Players {
 
   static DEFAULT_OPTIONS = {
     id: 'party-sheet',
-    tag: "div",
-    classes: ["torgeternity"],   // "faded-ui" removed by _initializeApplicationOptions
+    tag: "form",
+    classes: ['torgeternity', 'standard-form'],   // "faded-ui" removed by _initializeApplicationOptions
     window: {
       resizable: true,
       frame: true,
@@ -18,7 +23,7 @@ export default class PartySheet extends foundry.applications.ui.Players {
     }
   }
   static PARTS = {
-    body: { template: 'systems/torgeternity/templates/playerList/partySheet.hbs' },
+    body: { template: 'systems/torgeternity/templates/playerList/partySheet.hbs', scrollable: [""] },
   }
 
 
@@ -79,5 +84,21 @@ export default class PartySheet extends foundry.applications.ui.Players {
   static #onClickActor(event, target) {
     const actorId = target.getAttribute('data-actorID');
     game.actors.get(actorId).sheet.render(true);
+  }
+
+  /**
+   * Display a window showing all actors.
+   */
+  static showAllParty() {
+    const dialog = new PartySheet({ activeActors: false });
+    dialog.render(true);
+  }
+
+  /**
+   * Display a window showing only active Actors.
+   */
+  static showActiveParty() {
+    const dialog = new PartySheet({ activeActors: false });
+    dialog.render(true);
   }
 }

@@ -484,9 +484,11 @@
       "decks": "torgeternity.core-card-set"
     },
     "partySheet": {
-      "chooseParty": "<h3>If you choose YES, it will open with all characters.<br>If you choose NO, it'll open only active characters.</h3>",
+      "chooseParty": "<h3>Choose whether you want to see ALL players, or only the ACTIVE players</h3>",
       "noCharacter": "This user doesn't own any actor",
-      "openParty": "Choose the party sheet"
+      "openParty": "Choose the party sheet",
+      "allPlayers": "All Players",
+      "activePlayers": "Active Players"
     },
     "perks": {
       "category": "Category",

@@ -31,8 +31,8 @@ export default class MacroHub extends HandlebarsApplicationMixin(ApplicationV2) 
   }
 
   /**
-   * getData extension
-   * @returns data
+   * _prepareContext extension
+   * @returns context
    */
   async _prepareContext(options) {
     const data = await super._prepareContext(options);
