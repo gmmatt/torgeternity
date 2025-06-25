@@ -378,9 +378,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
         const proceed = await foundry.applications.api.DialogV2.confirm({
           window: {
-            title: await game.i18n.localize(
-              'torgeternity.dialogWindow.raceDiminishAttribute.title'
-            ),
+            title: 'torgeternity.dialogWindow.raceDiminishAttribute.title'
           },
           content: await game.i18n.format(
             'torgeternity.dialogWindow.raceDiminishAttribute.maintext',

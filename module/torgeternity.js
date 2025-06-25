@@ -243,29 +243,26 @@ Hooks.on('ready', async function () {
 
   // ----rendering welcome message
   if (game.settings.get('torgeternity', 'welcomeMessage') === true) {
-    const d = new Dialog(
-      {
+    foundry.applications.api.DialogV2.confirm({
+      window: {
         title: 'Welcome to the Torg Eternity System for Foundry VTT!',
-        content: torgeternity.welcomeMessage,
-        buttons: {
-          one: {
-            icon: '<i class="fas fa-check"></i>',
-            label: `${game.i18n.localize('torgeternity.submit.OK')}`,
-          },
-          two: {
-            icon: '<i class="fas fa-ban"></i>',
-            label: `${game.i18n.localize('torgeternity.submit.dontShow')}`,
-            callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
-          },
-        },
       },
-      {
+      content: torgeternity.welcomeMessage,
+      yes: {
+        icon: 'fas fa-check',
+        label: 'torgeternity.submit.OK',
+      },
+      no: {
+        icon: 'fas fa-ban',
+        label: 'torgeternity.submit.dontShow',
+        callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
+      },
+      position: {
         top: 150,
         left: 100,
         width: 675,
       }
-    );
-    d.render(true);
+    });
   }
 
   // ------Ask about hiding nonlocal compendium
@@ -273,31 +270,29 @@ Hooks.on('ready', async function () {
     game.settings.get('torgeternity', 'welcomeMessage') == true &&
     !game.settings.get('torgeternity', 'hideForeignCompendium')
   ) {
-    const d = new Dialog(
-      {
-        title: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.title'),
-        content: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.content'),
-        buttons: {
-          one: {
-            icon: `<i class="fas fa-check"></i>`,
-            label: game.i18n.localize('torgeternity.yesNo.true'),
-            callback: async () => {
-              await game.settings.set('torgeternity', 'hideForeignCompendium', true);
-              window.location.reload();
-            },
-          },
-          two: {
-            icon: '<i class="fas fa-ban"></i>',
-            label: game.i18n.localize('torgeternity.yesNo.false'),
-          },
+    foundry.applications.api.DialogV2.confirm({
+      window: {
+        title: 'torgeternity.dialogWindow.hideForeignCompendium.title',
+      },
+      content: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.content'),
+      yes: {
+        icon: 'fas fa-check',
+        label: 'torgeternity.yesNo.true',
+        callback: async () => {
+          await game.settings.set('torgeternity', 'hideForeignCompendium', true);
+          window.location.reload();
         },
       },
+      no: {
+        icon: 'fas fa-ban',
+        label: 'torgeternity.yesNo.false',
+      },
+      position:
       {
         top: 100,
         left: 235,
       }
-    );
-    d.render(true);
+    });
   }
 
   // ----setup cards if needed
