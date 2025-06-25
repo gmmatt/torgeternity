@@ -5,8 +5,9 @@
     <input
       type="radio"
       id="roll"
-      name="prevbonus"
-      value="0"
+      data-dtype="Boolean"
+      name="prevBonus"
+      value=false
       checked />
     <label
       for="roll">{{localize "torgeternity.sheetLabels.roll"}}</label>
@@ -15,8 +16,8 @@
       data-dtype="Boolean"
       id="previous-bonus"
       data-tooltip="{{localize " torgeternity.sheetLabels.inputExistingRdbTitle"}}"
-      name="prevbonus"
-      value="1" />
+      name="prevBonus"
+      value=true />
     <label for="input">{{localize "torgeternity.sheetLabels.inputExisting"}}</label>
     <input
       type="number"
