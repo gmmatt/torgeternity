@@ -2389,10 +2389,6 @@ p.skill-chat-title.skilled {
   grid-gap: 0px 5px;
 }
 
-.sheet.actor.threat .window-content .tab[data-tab="background"].active {
-  display: block;
-}
-
 .sheet.actor .window-content .tab[data-tab].active {
   width: 100%;
   height: 100%;
@@ -3485,12 +3481,12 @@ p.skill-chat-title.skilled {
 }
 
 .sheet.actor.threat .tab[data-tab].active .editor {
-  width: 400px;
-  height: 400px;
   background: url(../images/bckg-hex.webp);
   background-size: 110% 110%;
   padding: 20px;
   background-position: center;
+  margin-top: 10%;
+
 }
 
 .compact .window-content {

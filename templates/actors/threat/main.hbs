@@ -58,10 +58,8 @@
       <section class="tab background block {{tabs.background.cssClass}}" data-group="primary" data-tab="background">
         <div class="tabbody">
           <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
-          <div>
-            <prose-mirror toggled name="system.details.description" {{disabled (not editable)}}
-              value="{{ document.system.details.description }}">{{{ enrichedDetails }}}</prose-mirror>
-          </div>
+          <prose-mirror toggled name="system.details.description" {{disabled (not editable)}}
+            value="{{ document.system.details.description }}">{{{ enrichedDetails }}}</prose-mirror>
         </div>
       </section>
 
