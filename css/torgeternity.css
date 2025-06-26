@@ -4783,5 +4783,9 @@ hr {
 ul,
 ol {
   margin: 0.5em 0;
-  padding: 0 0 0 1.5em;
+}
+
+ul.plain,
+ol.plain {
+  margin: 0;
 }
