@@ -455,13 +455,13 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
 
       dialogContent += '</form></div>';
 
-      await DialogV2.wait({
-        title: game.i18n.localize('torgeternity.dialogWindow.chooseAmmo.windowTitle'),
+      await DialogV2.confirm({
+        window: { title: game.i18n.localize('torgeternity.dialogWindow.chooseAmmo.windowTitle') },
         content: dialogContent,
         yes: {
           label: `${game.i18n.localize('torgeternity.submit.OK')}`,
           default: true,
-          callback: (html) => {
+          callback: (event, button, dialog) => {
             const rdbElements = html[0].getElementsByTagName('input');
             for (const rdb of rdbElements) {
               if (rdb.checked) {
@@ -473,9 +473,6 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
         },
         no: {
           label: `${game.i18n.localize('torgeternity.submit.cancel')}`,
-          callback: () => {
-            return;
-          },
         },
       });
     }

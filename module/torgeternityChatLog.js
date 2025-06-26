@@ -437,9 +437,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     ${woundsGroup.outerHTML}${shockGroup.outerHTML}`;
 
     DialogV2.wait({
-      window: {
-        title: game.i18n.localize('torgeternity.sheetLabels.chooseDamage'),
-      },
+      window: { title: game.i18n.localize('torgeternity.sheetLabels.chooseDamage'), },
       content,
       buttons: [
         {

@@ -44,7 +44,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
    */
   static async #onPartySheet() {
     DialogV2.wait({
-      classes: ['torgeternity'],
+      classes: ['torgeternity', 'standard-form'],
       window: { title: 'torgeternity.partySheet.openParty' },
       content: `${game.i18n.localize('torgeternity.partySheet.chooseParty')}`,
       buttons: [
