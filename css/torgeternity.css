@@ -4007,19 +4007,19 @@ p.skill-chat-title.skilled {
   font-size: 13px;
 }
 
-.standard-form.torgeternity .test-dialog {
+.torgeternity .standard-form .test-dialog {
   display: flex;
   flex-direction: column;
   max-width: 530px;
   min-width: 530px;
 }
 
-.standard-form.torgeternity .test-dialog>div {
+.torgeternity .standard-form .test-dialog>div {
   display: flex;
   flex-direction: row;
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset {
+.torgeternity .standard-form .test-dialog>div>fieldset {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
@@ -4027,11 +4027,11 @@ p.skill-chat-title.skilled {
   align-items: center;
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset>label {
+.torgeternity .standard-form .test-dialog>div>fieldset>label {
   font-family: "Palatino";
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset>span {
+.torgeternity .standard-form .test-dialog>div>fieldset>span {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -4039,35 +4039,35 @@ p.skill-chat-title.skilled {
   width: 100%;
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset>span>input[type="checkbox"]~label[for] {
+.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="checkbox"]~label[for] {
   align-self: center;
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset>span>input[type="radio"]~label[for] {
+.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="radio"]~label[for] {
   align-self: baseline;
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset>span>input[type="number"] {
+.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="number"] {
   width: 3em;
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset>span>* {
+.torgeternity .standard-form .test-dialog>div>fieldset>span>* {
   justify-content: left;
 }
 
-.standard-form.torgeternity .test-dialog>div>fieldset>hr {
+.torgeternity .standard-form .test-dialog>div>fieldset>hr {
   border: 1px solid var(--color-border-light-tertiary);
   width: 100%;
 }
 
-.standard-form.torgeternity .test-dialog .otherModifiers {
+.torgeternity .standard-form .test-dialog .otherModifiers {
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: repeat(4 1fr);
   row-gap: 2px;
 }
 
-.standard-form.torgeternity .test-dialog .otherModifiers>label {
+.torgeternity .standard-form .test-dialog .otherModifiers>label {
   justify-self: center;
   font-family: 'Alaska';
 }
@@ -4744,7 +4744,7 @@ form.deckSetting div.flexrow {
   border-bottom: 1px solid var(--color-underline-header);
 }
 
-.standard-form.torgeternity fieldset {
+.torgeternity .standard-form fieldset {
   padding: 4.2px 9px 7.5px 9px;
   display: flex;
   flex-direction: row;
@@ -4755,11 +4755,11 @@ form.deckSetting div.flexrow {
   line-height: normal;
 }
 
-.standard-form.torgeternity fieldset hr {
+.torgeternity .standard-form fieldset hr {
   margin: 6px 0;
 }
 
-.standard-form.torgeternity fieldset legend {
+.torgeternity .standard-form fieldset legend {
   font-size: var(--font-size-12);
   font-weight: 400;
 }

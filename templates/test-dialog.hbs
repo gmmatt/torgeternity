@@ -1,35 +1,23 @@
 <div class="test-dialog">
   <div>
-    {{#if test.isActiveDefenseRoll}}{{else}}
+    {{#unless test.isActiveDefenseRoll}}
       {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
-    {{/if}}
+    {{/unless}}
     {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}
   </div>
   <div>
     {{> "systems/torgeternity/templates/testDialogs/favored.hbs"}}
     {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
   </div>
-  <div>
-    {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}}
-  </div>
-  <div>
-    {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}}
-  </div>
+  <div> {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}} </div>
+  <div> {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}} </div>
   {{#if test.attackOptions}}
-    <div>
-      {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}}
-    </div>
-    <div>
-      {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}}
-    </div>
+    <div> {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}} </div>
+    <div> {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}} </div>
   {{/if}}
-  <div>
-    {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}}
-  </div>
+  <div> {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}} </div>
 
   {{#if test.hasModifiers}}
-    <div>
-      {{> "systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs"}}
-    </div>
+    <div> {{> "systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs"}} </div>
   {{/if}}
 </div>

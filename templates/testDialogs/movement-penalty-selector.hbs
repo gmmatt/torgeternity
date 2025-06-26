@@ -1,9 +1,11 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.movementPenalty"}}</legend>
   <span class="skill-check-options">
-    <input type="radio" data-dtype="Number" class="walking-radio" name="movement" value="0" checked />
+    <input type="radio" data-dtype="Number" id="walking" class="walking-radio" name="movementModifier" value="0"
+      {{checked (eq test.movementModifier 0)}} />
     <label for="walking">{{localize "torgeternity.sheetLabels.walking"}}</label>
-    <input type="radio" data-dtype="Number" id="running-radio" class="running-radio" name="movement" value="-2" />
+    <input type="radio" data-dtype="Number" id="running" class="running-radio" name="movementModifier" value="-2"
+      {{checked (eq test.movementModifier -2)}} />
     <label for="running">{{localize "torgeternity.sheetLabels.running"}}</label>
   </span>
 </fieldset>

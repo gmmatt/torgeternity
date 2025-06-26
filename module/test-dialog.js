@@ -251,6 +251,8 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   static async #onRoll(event, form, formData) {
     const fields = formData.object;
 
+    // foundry.utils.mergeObject(this.test, fields, { inplace: true });
+
     // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
     this.test.DNDescriptor =
       this.test.testType === 'activeDefense'
@@ -261,33 +263,33 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     this.test.disfavored = fields.disfavored;
 
     // Check for favored and flag if needed
-    this.test.isFav = fields.favored;
+    this.test.isFav = fields.isFav;
 
     // Add bonus, if needed
-    this.test.previousBonus = fields.prevBonus;
-    this.test.bonus = this.test.previousBonus ? fields.bonusText : null;
+    this.test.previousBonus = fields.previousBonus;
+    this.test.bonus = this.test.previousBonus ? fields.bonus : null;
 
     // Add movement modifier
-    this.test.movementModifier = fields.movement;
+    this.test.movementModifier = fields.movementModifier;
 
     // Add multi-action modifier
-    this.test.multiModifier = fields.multiAction;
+    this.test.multiModifier = fields.multiModifier;
 
     // Add multi-target modifier
-    this.test.targetsModifier = fields.multiTarget;
+    this.test.targetsModifier = fields.targetsModifier;
 
     //
     // Add attack and target options if needed
     //
     if (this.test.attackOptions) {
       // Add Called Shot Modifier
-      this.test.calledShotModifier = fields.calledShot;
+      this.test.calledShotModifier = fields.calledShotModifier;
 
       // Add Vital Hit Modifier
-      this.test.vitalAreaDamageModifier = fields.vitalArea ?? 0;
+      this.test.vitalAreaDamageModifier = fields.vitalAreaDamageModifier ?? 0;
 
       // Add Burst Modifier
-      this.test.burstModifier = fields.burst;
+      this.test.burstModifier = fields.burstModifier;
 
       if (
         this.test.item?.weaponWithAmmo &&
@@ -299,38 +301,38 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       }
 
       // Add All-Out Attack
-      this.test.allOutModifier = fields.allOut;
+      this.test.allOutModifier = fields.allOutModifier;
 
       // Add Amied Shot
-      this.test.aimedModifier = fields.aimed ?? 0;
+      this.test.aimedModifier = fields.aimedModifier ?? 0;
 
       // Add Blind Fire
-      this.test.blindFireModifier = fields.blindFire ?? 0;
+      this.test.blindFireModifier = fields.blindFireModifier ?? 0;
 
       // Add Trademark Weapon
-      this.test.trademark = fields.trademarkWeapon;
+      this.test.trademark = fields.trademark;
 
       // Add Concealment Modifier
-      this.test.concealmentModifier = fields.concealment;
+      this.test.concealmentModifier = fields.concealmentModifier;
 
       // Add Cover Modifier
-      this.test.coverModifier = fields.cover;
+      this.test.coverModifier = fields.coverModifier;
 
       // Add additional damage and BDs in promise. Null if not applicable
       this.test.additionalDamage = fields.additionalDamage ?? 0;
 
-      this.test.addBDs = fields.additionalBDSelect ?? 0;
+      this.test.addBDs = fields.addBDs ?? 0;
     }
 
     // Add other modifiers 1-3
     for (let i = 1; i <= 3; i++) {
-      const modifier = fields[`otherEffect${i}`];
+      const modifier = fields[`other${i}Modifier`];
       const isActive = modifier != 0;
 
       this.test[`isOther${i}`] = isActive;
 
       if (isActive) {
-        this.test[`other${i}Description`] = fields[`otherDescription${i}`];
+        this.test[`other${i}Description`] = fields[`other${i}Description`];
         this.test[`other${i}Modifier`] = modifier;
       }
     }

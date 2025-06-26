@@ -6,4 +6,4 @@
 
 ## Other Changes
 
-- Get TestUpdate and TestDialog to populate the dialog with the current values
+- Make player list collapsible (to hide inactive players)
