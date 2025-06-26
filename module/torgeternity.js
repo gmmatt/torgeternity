@@ -1143,11 +1143,8 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
     callback: async (li) => {
       const actor = actorDir.collection.get(li.dataset.entryId);
 
-      const description =
-        '<div class="charInfoOutput">' + actor.system.details.background ??
-        actor.system.details.description ??
-        actor.system.description ??
-        '' + '</div>';
+      let description = actor.system.details.background ?? actor.system.details.description ?? actor.system.description ?? '';
+      description = `<div class="charInfoOutput">${description}</div>`;
 
       DialogV2.wait({
         classes: ['torgeternity', 'charInfoOutput'],
