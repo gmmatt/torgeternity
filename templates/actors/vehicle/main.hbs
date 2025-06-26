@@ -1,7 +1,5 @@
 <div>
-  <h3 class="actor-type">
-    <span>{{localize "torgeternity.sheetLabels.vehicle"}}</span>
-  </h3>
+  <h3 class="actor-type"> <span>{{localize "torgeternity.sheetLabels.vehicle"}}</span> </h3>
 
   <nav class="sheet-tabs tabs" data-group="primary">
     <a data-action="tab" data-group="primary" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
@@ -50,45 +48,26 @@
     </div>
   </header>
 
-  <section class="sheet-body">
-    <div class="tab stats {{tabs.stats.cssClass}}" data-group="primary" data-tab="stats">
+  <section class="sheet-body sheet-content ">
+    <section class=" tab stats {{tabs.stats.cssClass}}" data-group="primary" data-tab="stats">
       <div>
         <table class="groove-borders">
           <thead>
             <tr>
-              <th>
-                <a class="attribut-block">{{localize "torgeternity.gear.techlevel"}}</a>
-              </th>
-              <th>
-                <a class="attribut-block">{{localize "torgeternity.gear.topspeed"}}</a>
-              </th>
-              <th>
-                <a class="attribut-block">{{localize "torgeternity.gear.passengers"}}</a>
-              </th>
-              <th>
-                <a class="attribut-block">{{localize "torgeternity.gear.mr"}}</a>
-              </th>
-              <th>
-                <a class="attribut-block">{{localize "torgeternity.gear.toughness"}}</a>
-              </th>
-              <th>
-                <a class="attribut-block">{{localize "torgeternity.gear.armor"}}</a>
-              </th>
-              <th>
-                <a class="attribut-block"></a>
-              </th>
-              <th>
-                <a class="attribut-block">{{localize "torgeternity.gear.price"}}</a>
-              </th>
+              <th> <a class="attribut-block">{{localize "torgeternity.gear.techlevel"}}</a> </th>
+              <th> <a class="attribut-block">{{localize "torgeternity.gear.topspeed"}}</a> </th>
+              <th> <a class="attribut-block">{{localize "torgeternity.gear.passengers"}}</a> </th>
+              <th> <a class="attribut-block">{{localize "torgeternity.gear.mr"}}</a> </th>
+              <th> <a class="attribut-block">{{localize "torgeternity.gear.toughness"}}</a> </th>
+              <th> <a class="attribut-block">{{localize "torgeternity.gear.armor"}}</a> </th>
+              <th> <a class="attribut-block"></a> </th>
+              <th> <a class="attribut-block">{{localize "torgeternity.gear.price"}}</a> </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="vehicle-stat">
-                <input
-                  name="system.axioms.tech"
-                  type="number"
-                  value="{{document.system.axioms.tech}}"
+                <input name="system.axioms.tech" type="number" value="{{document.system.axioms.tech}}"
                   data-dtype="Number" />
               </td>
               <td class="vehicle-stat">
@@ -104,43 +83,25 @@
               "torgeternity.speeds.ultraFast"}} {{/if}}
               </td>
               <td class="vehicle-stat">
-                <input
-                  name="system.passengers"
-                  type="number"
-                  value="{{document.system.passengers}}"
+                <input name="system.passengers" type="number" value="{{document.system.passengers}}"
                   data-dtype="Number" />
               </td>
               <td class="vehicle-stat">
-                <input
-                  name="system.maneuver"
-                  type="number"
-                  value="{{document.system.maneuver}}"
-                  data-dtype="Number" />
+                <input name="system.maneuver" type="number" value="{{document.system.maneuver}}" data-dtype="Number" />
               </td>
               <td class="vehicle-stat">
-                <input
-                  name="system.toughness"
-                  type="number"
-                  value="{{document.system.toughness}}"
-                  data-dtype="Number"
+                <input name="system.toughness" type="number" value="{{document.system.toughness}}" data-dtype="Number"
                   data-tooltip="{{document.defenses.toughness}}" />
               </td>
               <td class="vehicle-stat">
-                <input
-                  name="system.armor"
-                  type="number"
-                  value="{{document.system.armor}}"
-                  data-dtype="Number"
+                <input name="system.armor" type="number" value="{{document.system.armor}}" data-dtype="Number"
                   data-tooltip="{{document.defenses.armor}}" />
               </td>
               <td class="vehicle-stat">
                 <span>{{document.defenses.toughness}}&lpar;{{document.defenses.armor}}&rpar;</span>
               </td>
               <td class="vehicle-stat">
-                <input
-                  name="system.price.dollars"
-                  type="number"
-                  value="{{document.system.price.dollars}}"
+                <input name="system.price.dollars" type="number" value="{{document.system.price.dollars}}"
                   data-dtype="Number" />
                 <select name="system.price.magnitude" class="input-box">
                   {{selectOptions config.magnitudes selected=document.system.price.magnitude sort=true
@@ -157,19 +118,12 @@
         <tr>
           <th>
             {{localize "torgeternity.sheetLabels.name"}}
-            <input
-              name="system.operator.name"
-              class="long-text"
-              type="text"
-              value="{{document.system.operator.name}}"
+            <input name="system.operator.name" class="long-text" type="text" value="{{document.system.operator.name}}"
               data-dtype="text" />
           </th>
           <th>
             {{localize "torgeternity.sheetLabels.skill"}}
-            <input
-              name="system.operator.skillValue"
-              type="number"
-              value="{{document.system.operator.skillValue}}"
+            <input name="system.operator.skillValue" type="number" value="{{document.system.operator.skillValue}}"
               data-dtype="Number" />
           </th>
           <th>{{localize "torgeternity.sheetLabels.defense"}} {{document.system.defense}}</th>
@@ -283,9 +237,9 @@
           </li>
         {{/each}}
       </div>
-    </div>
+    </section>
 
-    <div class="tab gear {{tabs.gear.cssClass}}" data-group="primary" data-tab="gear">
+    <section class="tab gear {{tabs.gear.cssClass}}" data-group="primary" data-tab="gear">
       {{#if heavyweapon}}
         <h2>{{localize "torgeternity.sheetLabels.heavyWeapons"}}/{{localize "torgeternity.sheetLabels.explosives"}}</h2>
         <ol class="item-list">
@@ -436,16 +390,18 @@
           {{/each}}
         </ol>
       {{/if}}
-    </div>
+    </section>
 
     {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
 
-    <div class="tab background {{tabs.background.cssClass}}" data-group="primary" data-tab="background">
-      <h1 class="list-section-heading" style="color: white">
-        {{localize "torgeternity.sheetLabels.description"}}
-      </h1>
-      <prose-mirror toggled name="system.description" {{disabled (not editable)}}
-        value="{{ document.system.description }}">{{{ enrichedDescription }}}</prose-mirror>
-    </div>
+    <section class="tab background block {{tabs.background.cssClass}}" data-group="primary" data-tab="background">
+      <div class="tabbody">
+        <h1 class="list-section-heading" style="color: white">
+          {{localize "torgeternity.sheetLabels.description"}}
+        </h1>
+        <prose-mirror toggled name="system.description" {{disabled (not editable)}}
+          value="{{ document.system.description }}">{{{ enrichedDescription }}}</prose-mirror>
+      </div>
+    </section>
   </section>
 </div>
