@@ -343,7 +343,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (parentMessage.author.id !== game.user.id && !game.user.isGM) {
       return;
     }
-    const updateDialog = new TestUpdate(tesparentMessage.getFlag('torgeternity', 'test'));
+    const updateDialog = new TestUpdate(parentMessage.getFlag('torgeternity', 'test'));
     updateDialog.render(true);
   }
 
