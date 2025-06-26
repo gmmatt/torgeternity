@@ -1651,6 +1651,7 @@ german tent cards images
   line-height: 25px;
 }
 
+#players #players-inactive,
 #players #players-active {
   background-image: url(../images/thunder.webp);
   background-position: center;
@@ -1662,7 +1663,7 @@ german tent cards images
   min-width: 200px;
   min-height: 20px;
   box-shadow: none;
-  padding: 0% 0% 0% 0%;
+  padding: 10px 0 0 0;
   color: white;
 }
 
@@ -1672,6 +1673,10 @@ german tent cards images
   position: relative;
   z-index: +1;
   left: 15px;
+}
+
+#players button#players-expand {
+  color: white;
 }
 
 #players .possReset {

@@ -1,19 +1,9 @@
-<p></p>>
-
-<div id="players-active" class="flexcol">
-
-  {{#if self.isGM}}
-    <p class=" flexrow">
-      <i class="players-popout far fa-window-restore" data-action="partySheet"
-        data-tooltip="torgeternity.iconeTitles.openParty"></i>
-      <i class="fas fa-bolt possReset" data-action="possReset"
-        data-tooltip="torgeternity.iconeTitles.resetPossibilities"></i>
-    </p>
-  {{/if}}
+<div id="players-inactive" class="flexcol">
 
   <ol class="players-list plain flexcol" data-tooltip-direction="RIGHT">
-    {{#each users as |player|}}
-      <li class="player flexrow {{player.cssClass}}" data-user-id="{{player.id}}" data-tooltip-text="{{player.tooltip}}"
+    {{#each inactive as |player|}}
+      <li class="player flexrow {{player.cssClass}}"
+        data-user-id="{{player.id}}" data-tooltip-text="{{player.tooltip}}"
         style="--player-color:{{player.color}}; --player-border:{{player.border}}">
         <span class="player-name ellipsis">{{player.name}}</span>
 
@@ -21,12 +11,9 @@
           data-tooltip="{{#if player.isGM}}torgeternity.iconeTitles.GMPoss{{else}}torgeternity.iconeTitles.SKPoss{{/if}}">
 
           <em class="possValue">
-            {{#if this.isGM}}
-              {{../GMpossibilities}}
+            {{#if player.isGM}} {{../GMpossibilities}}
             {{else}}
-              {{#if player.character}}
-                {{player.characterPossibilities}}
-              {{/if}}
+              {{#if player.character}} {{player.characterPossibilities}} {{/if}}
             {{/if}}
           </em>
           {{#if ../self.isGM}}
@@ -42,17 +29,59 @@
         {{/if}}
       </li>
     {{/each}}
-
-    <div id="performance-stats" class="flexrow">
-      <div id="latency">
-        <label>{{localize "PLAYERS.LATENCY"}}</label>
-        <span class="average">--</span>
-      </div>
-      <div id="fps">
-        <label>{{localize "PLAYERS.FPS"}}</label>
-        <span class="average">--</span>
-      </div>
-      <button id="players-expand" type="button" class="icon fa-solid fa-caret-up" data-action="expand"></button>
-    </div>
   </ol>
+</div>
+
+<div id="players-active" class="flexcol">
+
+  <ol class="players-list plain flexcol" data-tooltip-direction="RIGHT">
+    {{#each active as |player|}}
+      <li class="player flexrow {{player.cssClass}} {{#if player.inactive}}inactivePlayer{{/if}}"
+        data-user-id="{{player.id}}" data-tooltip-text="{{player.tooltip}}"
+        style="--player-color:{{player.color}}; --player-border:{{player.border}}">
+        <span class="player-name ellipsis">{{player.name}}</span>
+
+        <span class="possibilities"
+          data-tooltip="{{#if player.isGM}}torgeternity.iconeTitles.GMPoss{{else}}torgeternity.iconeTitles.SKPoss{{/if}}">
+
+          <em class="possValue">
+            {{#if player.isGM}} {{../GMpossibilities}} {{else}}
+              {{#if player.character}} {{player.characterPossibilities}} {{/if}}
+            {{/if}}
+          </em>
+          {{#if ../self.isGM}}
+            <em class="possAdd" data-action="possAdd"
+              data-target-id="{{#if player.isGM}}GMpossibilities{{else}}{{player.character.id}}{{/if}}">
+              <i class="fas fa-plus-circle"></i>
+            </em>
+            <em class="possMinus" data-action="possMinus"
+              data-target-id="{{#if player.isGM}}GMpossibilities{{else}}{{player.character.id}}{{/if}}">
+              <i class="fas fa-minus-circle"></i>
+            </em>
+        </span>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ol>
+
+  {{#if self.isGM}}
+    <p class=" flexrow">
+      <i class="players-popout far fa-window-restore" data-action="partySheet"
+        data-tooltip="torgeternity.iconeTitles.openParty"></i>
+      <i class="fas fa-bolt possReset" data-action="possReset"
+        data-tooltip="torgeternity.iconeTitles.resetPossibilities"></i>
+    </p>
+  {{/if}}
+
+  <div id="performance-stats" class="flexrow">
+    <div id="latency">
+      <label>{{localize "PLAYERS.LATENCY"}}</label>
+      <span class="average">--</span>
+    </div>
+    <div id="fps">
+      <label>{{localize "PLAYERS.FPS"}}</label>
+      <span class="average">--</span>
+    </div>
+    <button id="players-expand" type="button" class="icon fa-solid fa-caret-up" data-action="expand"></button>
+  </div>
 </div>
