@@ -1227,15 +1227,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
   static #onitemName(event, target) {
     const section = target.closest('.item');
-    const detail = $(section).find('.item-detail');
-    const content = detail.get(0);
-    if (content != undefined && content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      if (content) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    }
+    const detail = section.querySelector('.item-detail');
+    if (!detail) return;
+    detail.style.maxHeight = detail.style.maxHeight ? null : (detail.scrollHeight + 'px');
   }
 
   static async #onDeleteRaceButton(event, target) {

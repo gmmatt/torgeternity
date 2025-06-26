@@ -29,11 +29,8 @@
   }
 }
 
-form.application.torgeternity.hand {
-  overflow: visible;
-}
-
 .application.torgeternity.hand .window-content {
+  /* Cards flow outside the window in Enhanced Display */
   overflow: visible;
   background-position: center;
 }
@@ -67,7 +64,6 @@ div.torg-card-controls.flexcol>* {
   height: 200px;
   width: 138px;
   position: relative;
-  overflow: visible;
 }
 
 #handedCards .destinyCards li.card,

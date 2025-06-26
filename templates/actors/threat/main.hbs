@@ -1,5 +1,4 @@
 <div>
-
   <!-- type -->
   <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.threat"}}</span></h3>
   <!-- header -->
@@ -18,7 +17,7 @@
       {{> "systems/torgeternity/templates/actors/threat/sidebar.hbs"}}
     </div>
 
-    <section class="sheet-body sheet-content">
+    <section class="sheet-body sheet-content scrollable">
       <h1><input name="name" type="text" value="{{document.name}}" placeholder="Threat Name" /></h1><br>
       <div class="sub-header">
         <span class="threat-edit">
@@ -57,10 +56,12 @@
       {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
 
       <section class="tab background block {{tabs.background.cssClass}}" data-group="primary" data-tab="background">
-        <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
-        <div>
-          <prose-mirror toggled name="system.details.description" {{disabled (not editable)}}
-            value="{{ document.system.details.description }}">{{{ enrichedDetails }}}</prose-mirror>
+        <div class="tabbody">
+          <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
+          <div>
+            <prose-mirror toggled name="system.details.description" {{disabled (not editable)}}
+              value="{{ document.system.details.description }}">{{{ enrichedDetails }}}</prose-mirror>
+          </div>
         </div>
       </section>
 

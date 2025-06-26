@@ -250,13 +250,11 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   static #onItemName(event, target) {
     const section = event.currentTarget.closest('.item');
-    const detail = $(section).find('.item-detail').get(0);
-
+    const detail = section.querySelector('.item-detail');
     if (!detail) return;
     detail.style.display =
       detail.style.display === 'none' || !detail.style.display
-        ? (detail.style.display = 'block')
-        : (detail.style.display = 'none');
+        ? 'block' : 'none';
   }
 
   static #onItemDelete(event, target) {

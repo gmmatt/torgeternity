@@ -170,11 +170,18 @@ a.inline-roll.broken:hover {
   display: none;
 }
 
-form.torgeternity,
 form.torgeternity {
   /* Tabs either side of sheet */
   overflow: visible;
   row-gap: normal;
+}
+
+.scrollable {
+  margin-right: 0px;
+}
+
+.window-content.scrollable {
+  overflow-y: auto;
 }
 
 form.sheet.torgeternity table thead {
@@ -270,7 +277,7 @@ form.sheet.torgeternity table td select {
 
 .sheet.actor.vehicle .background .editor-content {
   height: 90%;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
   word-break: break-word;
 }
 
@@ -508,6 +515,11 @@ div.application.torgeternity.standard-form {
 
 }
 
+/*.actor .window-content {
+  height: 100%;
+  width: 100%;
+}*/
+
 .application .window-content {
   padding: 8px;
 }
@@ -687,7 +699,6 @@ div.application.torgeternity.standard-form {
   background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  overflow: hidden;
   border: none;
   margin: 1rem 0px 0.7rem 0px;
   color: white;
@@ -1199,11 +1210,6 @@ nav#controls ol .torgHand:before {
   background-size: 100% 100%;
   height: 100%;
   border: none;
-}
-
-.tab[data-tab].active.flexrow,
-.tab[data-tab].active.flexcol {
-  overflow-y: auto;
 }
 
 .flexrow .scrollable {
@@ -1771,7 +1777,6 @@ german tent cards images
 #players ol li.player .player-name {
   text-shadow: 0px 3px 10px #8181cc;
   color: white;
-  overflow: hidden;
   white-space: unset;
   word-break: unset;
 }
@@ -2252,26 +2257,10 @@ p.skill-chat-title.skilled {
 .torgeternity.actor .window-content {
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
-  /*font-family: Palatino;*/
-  /*font-size: 12px;*/
-  overflow-y: auto;
-  min-height: 95%;
-  max-height: 95%;
-}
-
-.torgeternity.actor .window-content .background prose-mirror.inactive {
-  overflow: visible;
 }
 
 .torgeternity.actor .window-content .background .editor-content {
   position: relative;
-  overflow: visible;
-}
-
-.sheet.actor {
-  /* TODO: but window title scrolls */
-  display: block;
-  /*overflow-y: auto;*/
 }
 
 .sheet.actor ul {
@@ -2388,24 +2377,18 @@ p.skill-chat-title.skilled {
   align-items: center;
 }
 
-.sheet.actor .window-content .tab[data-tab="stats"].active,
-.sheet.actor .window-content .tab[data-tab="background"].active {
+.sheet.actor .window-content .tab.active .tabbody {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(6, minmax(100px, min-content));
   grid-gap: 0px 5px;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
 }
 
 .sheet.actor.threat .window-content .tab[data-tab="background"].active {
   display: block;
 }
 
-
 .sheet.actor .window-content .tab[data-tab].active {
-  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -2416,7 +2399,6 @@ p.skill-chat-title.skilled {
   border-image-slice: 50;
   box-shadow: 2px 2px 15px #9e9686;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  /*overflow: auto;*/
   padding: 0px;
 }
 
@@ -2917,7 +2899,6 @@ p.skill-chat-title.skilled {
 .sheet.actor .window-content .skills {
   grid-column: 1/5;
   grid-row: 3 / span 7;
-  overflow: inherit;
   max-height: 100%;
 }
 
@@ -3088,7 +3069,7 @@ p.skill-chat-title.skilled {
 .sheet.actor .window-content .perks-details ol li .item-detail,
 .sheet.actor .window-content .gear ol li .item-detail,
 .sheet.actor .window-content .powers ol li .item-detail {
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
   z-index: 1000;
   max-height: 0px;
@@ -3586,7 +3567,6 @@ p.skill-chat-title.skilled {
   background-size: cover;
   font-family: Palatino;
   font-size: 0.9em;
-  overflow-y: auto;
   max-height: 95%;
 }
 
@@ -3983,7 +3963,7 @@ p.skill-chat-title.skilled {
   border: 15px solid transparent;
   border-image: url('../images/frameWithoutFilling.svg') 30 / 5rem;
   max-height: 150px;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
 }
 
 .item .window-content fieldset.ammofield legend {
@@ -4158,7 +4138,6 @@ form.test-dialog footer button {
   border: 1px solid black;
   margin-top: 5px;
   margin-left: 5px;
-  overflow: hidden;
   padding: 8px;
 }
 
@@ -4335,7 +4314,7 @@ form.deckSetting div.flexrow {
   border-image-slice: 50;
   box-shadow: 2px 2px 15px #9e9686;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  overflow: auto;
+  /*overflow: auto;*/
   padding: 0px 0px 5px 0px;
   font-size: 20px;
 }
@@ -4372,8 +4351,6 @@ form.deckSetting div.flexrow {
 .sheet.item ol.race.perks-list>.item.block>.item-detail>.item-dropdown-description {
   font-size: 14px;
 }
-
-.sheet.item ol.race.perks-list>.item.block>.item-detail>.item-dropdown-description .item-dropdown-extras {}
 
 .enhancement-check {
   flex: 10%;
@@ -4440,10 +4417,6 @@ form.deckSetting div.flexrow {
   line-height: 48px;
   margin: 8px 2%;
   width: 96%;
-}
-
-#gmscreen.application:has(#left-panel) {
-  overflow: visible;
 }
 
 #gm-screen {
@@ -4544,6 +4517,11 @@ form.deckSetting div.flexrow {
 
 .sheet.actor.threat .threat-sheet {
   display: inline-flex;
+  width: 100%;
+}
+
+.sheet.actor.threat .sheet-body {
+  padding-right: 0px;
 }
 
 .sheet.actor .window-content .threat-sidebar {
@@ -4802,10 +4780,6 @@ dialog.torgeternity h3 {
   padding: 0;
   font-weight: normal;
   color: white;
-}
-
-dialog.charInfoOutput section.window-content {
-  overflow-y: auto;
 }
 
 .standard-form .form-group>label,
