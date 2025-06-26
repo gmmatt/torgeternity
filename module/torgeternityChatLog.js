@@ -11,6 +11,8 @@ import { applyVulnerableState } from './torgchecks.js';
 import { TestUpdate } from './test-update.js';
 import { checkForDiscon } from './torgchecks.js';
 
+const { DialogV2 } = foundry.applications.api;
+
 export default class TorgeternityChatLog extends foundry.applications.sidebar.tabs.ChatLog {
 
   static DEFAULT_OPTIONS = {
@@ -100,16 +102,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     // 1=> pop up warning, confirm "spend last poss?"
     if (possPool === 1) {
-      const confirm = await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.sheetLabels.lastPoss'),
+      const confirm = await DialogV2.confirm({
+        window: { title: game.i18n.localize('torgeternity.sheetLabels.lastPoss') },
         content: game.i18n.localize('torgeternity.sheetLabels.lastPossMess'),
       });
       if (!confirm) return;
       test.chatNote += game.i18n.localize('torgeternity.sheetLabels.lastSpent');
     } // GM can grant an on the fly possibilty if he does the roll
     else if ((possPool === 0) & game.user.isGM) {
-      const confirm = await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.sheetLabels.noPoss'),
+      const confirm = await DialogV2.confirm({
+        window: { title: game.i18n.localize('torgeternity.sheetLabels.noPoss') },
         content: game.i18n.localize('torgeternity.sheetLabels.noPossFree'),
       });
       if (!confirm) return;
@@ -338,13 +340,11 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     event.preventDefault();
     const parentMessageId = target.closest('.chat-message').dataset.messageId;
     const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    if (parentMessage.author.id !== game.user.id && !game.user.isGM) {
       return;
     }
-    const test = parentMessage.getFlag('torgeternity', 'test');
-
-    const testDialog = new TestUpdate(test);
-    testDialog.render(true);
+    const updateDialog = new TestUpdate(tesparentMessage.getFlag('torgeternity', 'test'));
+    updateDialog.render(true);
   }
 
   static async #applyDam(event, target) {
@@ -390,15 +390,15 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     // 1=> pop up warning, confirm "spend last poss?"
     if (possPool === 1) {
-      const confirm = await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.sheetLabels.lastPoss'),
+      const confirm = await DialogV2.confirm({
+        window: { title: game.i18n.localize('torgeternity.sheetLabels.lastPoss') },
         content: game.i18n.localize('torgeternity.sheetLabels.lastPossMess'),
       });
       if (!confirm) return;
     } // GM can grant an on the fly possibilty if he does the roll
     else if ((possPool === 0) & game.user.isGM) {
-      const confirm = await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.sheetLabels.noPoss'),
+      const confirm = await DialogV2.confirm({
+        window: { title: game.i18n.localize('torgeternity.sheetLabels.noPoss') },
         content: game.i18n.localize('torgeternity.sheetLabels.noPossFree'),
       });
       if (!confirm) return;
@@ -436,7 +436,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const content = `<p>${game.i18n.localize('torgeternity.sheetLabels.modifyDamage')}</p> <hr>
     ${woundsGroup.outerHTML}${shockGroup.outerHTML}`;
 
-    foundry.applications.api.DialogV2.wait({
+    DialogV2.wait({
       window: {
         title: game.i18n.localize('torgeternity.sheetLabels.chooseDamage'),
       },

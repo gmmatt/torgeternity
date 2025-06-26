@@ -1,4 +1,7 @@
 import PartySheet from './partySheet.js';
+
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
@@ -40,7 +43,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
    *
    */
   static async #onPartySheet() {
-    foundry.applications.api.DialogV2.wait({
+    DialogV2.wait({
       classes: ['torgeternity'],
       window: { title: 'torgeternity.partySheet.openParty' },
       content: `${game.i18n.localize('torgeternity.partySheet.chooseParty')}`,
@@ -92,7 +95,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
    * @param event
    */
   static #onResetPossibilities() {
-    foundry.applications.api.DialogV2.wait({
+    DialogV2.wait({
       window: {
         title: 'torgeternity.possibilitiesReset.name',
       },

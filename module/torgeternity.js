@@ -43,6 +43,8 @@ import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import MacroHub from './MacroHub.js';
 
+const { DialogV2 } = foundry.applications.api;
+
 Hooks.once('init', async function () {
   console.log('torgeternity | Initializing Torg Eternity System');
   // CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
@@ -243,10 +245,8 @@ Hooks.on('ready', async function () {
 
   // ----rendering welcome message
   if (game.settings.get('torgeternity', 'welcomeMessage') === true) {
-    foundry.applications.api.DialogV2.confirm({
-      window: {
-        title: 'Welcome to the Torg Eternity System for Foundry VTT!',
-      },
+    DialogV2.confirm({
+      window: { title: 'Welcome to the Torg Eternity System for Foundry VTT!', },
       content: torgeternity.welcomeMessage,
       yes: {
         icon: 'fas fa-check',
@@ -270,10 +270,8 @@ Hooks.on('ready', async function () {
     game.settings.get('torgeternity', 'welcomeMessage') == true &&
     !game.settings.get('torgeternity', 'hideForeignCompendium')
   ) {
-    foundry.applications.api.DialogV2.confirm({
-      window: {
-        title: 'torgeternity.dialogWindow.hideForeignCompendium.title',
-      },
+    DialogV2.confirm({
+      window: { title: 'torgeternity.dialogWindow.hideForeignCompendium.title', },
       content: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.content'),
       yes: {
         icon: 'fas fa-check',
@@ -438,7 +436,7 @@ Hooks.on("renderSettings", async (app, html) => {
           },
         });
       }
-      externalLinks = new foundry.applications.api.DialogV2(dialogOptions);
+      externalLinks = new DialogV2(dialogOptions);
     }
 
     externalLinks.render({ force: true })
@@ -1151,7 +1149,7 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
         actor.system.description ??
         '' + '</div>';
 
-      foundry.applications.api.DialogV2.wait({
+      DialogV2.wait({
         classes: ['torgeternity', 'charInfoOutput'],
         window: {
           title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {

@@ -1,4 +1,5 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
+const { DialogV2 } = foundry.applications.api;
 
 /**
  *
@@ -454,30 +455,28 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
 
       dialogContent += '</form></div>';
 
-      await Dialog.wait({
+      await DialogV2.wait({
         title: game.i18n.localize('torgeternity.dialogWindow.chooseAmmo.windowTitle'),
         content: dialogContent,
-        buttons: {
-          ok: {
-            label: `${game.i18n.localize('torgeternity.submit.OK')}`,
-            callback: (html) => {
-              const rdbElements = html[0].getElementsByTagName('input');
-              for (const rdb of rdbElements) {
-                if (rdb.checked) {
-                  usedAmmo = actor.items.get(rdb.dataset.chosenId);
-                  return;
-                }
+        yes: {
+          label: `${game.i18n.localize('torgeternity.submit.OK')}`,
+          default: true,
+          callback: (html) => {
+            const rdbElements = html[0].getElementsByTagName('input');
+            for (const rdb of rdbElements) {
+              if (rdb.checked) {
+                usedAmmo = actor.items.get(rdb.dataset.chosenId);
+                return;
               }
-            },
-          },
-          abort: {
-            label: `${game.i18n.localize('torgeternity.submit.cancel')}`,
-            callback: () => {
-              return;
-            },
+            }
           },
         },
-        default: 'ok',
+        no: {
+          label: `${game.i18n.localize('torgeternity.submit.cancel')}`,
+          callback: () => {
+            return;
+          },
+        },
       });
     }
   }

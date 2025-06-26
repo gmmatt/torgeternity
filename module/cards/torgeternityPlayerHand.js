@@ -1,3 +1,5 @@
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
@@ -249,29 +251,29 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     });
 
     // Display the prompt
-    return Dialog.prompt({
-      title: game.i18n.localize('torgeternity.dialogPrompts.playerPassTitle'),
-      label: game.i18n.localize('torgeternity.dialogPrompts.playerPassLabel'),
+    return DialogV2.prompt({
+      window: { title: game.i18n.localize('torgeternity.dialogPrompts.playerPassTitle') },
       content: html,
-      callback: (html) => {
-        const form = html.querySelector('form.cards-dialog');
-        const fd = new foundry.applications.ux.FormDataExtended(form).object;
-        const to = game.cards.get(fd.to);
-        const toName = to.name;
-        card.toMessage({
-          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-            }"/><span><img src="${card.img}"></span></span><h4 class="card-name">${game.i18n.localize(
-              'torgeternity.chatText.passesCard1'
-            )} ${card.name} ${game.i18n.localize(
-              'torgeternity.chatText.passesCard2'
-            )} ${toName}.</h4></div>`,
-        });
-        return card.pass(to).catch((err) => {
-          ui.notifications.error(err.message);
-          return this;
-        });
+      ok: {
+        label: game.i18n.localize('torgeternity.dialogPrompts.playerPassLabel'),
+        callback: async (event, button, dialog) => {
+          const form = dialog.element.querySelector('form');
+          const fd = new foundry.applications.ux.FormDataExtended(form).object;
+          const to = game.cards.get(fd.to);
+          const toName = to.name;
+          card.toMessage({
+            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" 
+            src="${card.img}"/><span><img src="${card.img}"></span></span><h4 class="card-name">
+              ${game.i18n.localize('torgeternity.chatText.passesCard1')} 
+              ${card.name} ${game.i18n.localize('torgeternity.chatText.passesCard2')}
+               ${toName}.</h4></div>`,
+          });
+          return card.pass(to).catch((err) => {
+            ui.notifications.error(err.message);
+            return this;
+          });
+        },
       },
-      options: { jQuery: false },
     });
   }
 
@@ -286,29 +288,31 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       data
     );
 
-    return Dialog.prompt({
-      title: game.i18n.localize('torgeternity.dialogPrompts.cosmDialogTitle'),
-      label: game.i18n.localize('torgeternity.dialogPrompts.cosmDeckDialogLabel'),
+    return DialogV2.prompt({
+      window: { title: game.i18n.localize('torgeternity.dialogPrompts.cosmDialogTitle') },
       content: html,
-      callback: (html) => {
-        const form = html[0].querySelector('form.cosm-dialog');
-        const fd = new foundry.applications.ux.FormDataExtended(form).object;
-        const cosmDeck = game.cards.get(fd.from);
-        if (cosmDeck.cards.size) {
-          const [firstCardKey] = cosmDeck.cards.keys(); // need to grab a card to get toMessage access
-          const card = cosmDeck.cards.get(firstCardKey);
-          card.toMessage({
-            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${cosmDeck.img
-              }"/><span><img src="${cosmDeck.img
-              }"></span></span><h4 class="card-name">${game.i18n.localize(
-                'torgeternity.chatText.drawsCard'
-              )} ${cosmDeck.name}.</h4></div>`,
+      ok: {
+        label: game.i18n.localize('torgeternity.dialogPrompts.cosmDeckDialogLabel'),
+        callback: (event, button, dialog) => {
+          const form = dialog.element.querySelector('form');
+          const fd = new foundry.applications.ux.FormDataExtended(form).object;
+          const cosmDeck = game.cards.get(fd.from);
+          if (cosmDeck.cards.size) {
+            const [firstCardKey] = cosmDeck.cards.keys(); // need to grab a card to get toMessage access
+            const card = cosmDeck.cards.get(firstCardKey);
+            card.toMessage({
+              content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${cosmDeck.img
+                }"/><span><img src="${cosmDeck.img
+                }"></span></span><h4 class="card-name">${game.i18n.localize(
+                  'torgeternity.chatText.drawsCard'
+                )} ${cosmDeck.name}.</h4></div>`,
+            });
+          }
+          return this.document.draw(cosmDeck, 1, { face: 1 }).catch((err) => {
+            ui.notifications.error(err.message);
+            return this;
           });
-        }
-        return this.document.draw(cosmDeck, 1, { face: 1 }).catch((err) => {
-          ui.notifications.error(err.message);
-          return this;
-        });
+        },
       },
     });
   }

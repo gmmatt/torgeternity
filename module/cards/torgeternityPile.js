@@ -1,3 +1,5 @@
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
@@ -170,21 +172,22 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
     });
 
     // Display the prompt
-    return Dialog.prompt({
-      title: game.i18n.localize('CARDS.PassTitle'),
-      label: game.i18n.localize('CARDS.Pass'),
+    return DialogV2.prompt({
+      window: { title: game.i18n.localize('CARDS.PassTitle') },
       content: html,
-      callback: (html) => {
-        const form = html.querySelector('form.cards-dialog');
-        const fd = new foundry.applications.ux.FormDataExtended(form).object;
-        const to = game.cards.get(fd.to);
-        const options = { how: fd.how, updateData: fd.down ? { face: null } : {} };
-        return this.deal([to], fd.number, options).catch((err) => {
-          ui.notifications.error(err.message);
-          return this;
-        });
-      },
-      options: { jQuery: false },
+      ok: {
+        label: game.i18n.localize('CARDS.Pass'),
+        callback: (event, button, dialog) => {
+          const form = dialog.element.querySelector('form');
+          const fd = new foundry.applications.ux.FormDataExtended(form).object;
+          const to = game.cards.get(fd.to);
+          const options = { how: fd.how, updateData: fd.down ? { face: null } : {} };
+          return this.deal([to], fd.number, options).catch((err) => {
+            ui.notifications.error(err.message);
+            return this;
+          });
+        },
+      }
     });
   }
 }

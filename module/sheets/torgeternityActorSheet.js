@@ -6,6 +6,8 @@ import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
 import { ChatMessageTorg } from '../documents/chat/document.js';
 
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
@@ -376,15 +378,11 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       for (const [key, value] of Object.entries(dropedObject.system.attributeMaximum)) {
         if (this.actor.system.attributes[key].base <= value) continue;
 
-        const proceed = await foundry.applications.api.DialogV2.confirm({
-          window: {
-            title: 'torgeternity.dialogWindow.raceDiminishAttribute.title'
-          },
+        const proceed = await DialogV2.confirm({
+          window: { title: 'torgeternity.dialogWindow.raceDiminishAttribute.title' },
           content: await game.i18n.format(
             'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
-            {
-              attribute: await game.i18n.localize('torgeternity.attributes.' + key),
-            }
+            { attribute: await game.i18n.localize('torgeternity.attributes.' + key), }
           ),
           rejectClose: false,
           modal: true,
@@ -494,8 +492,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
     if (skillName === 'reality' && torgchecks.checkForDiscon(this.actor)) {
-      const d = await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title'),
+      const d = await DialogV2.confirm({
+        window: { title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title') },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
       });
       if (d === false) {
@@ -1201,7 +1199,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     item.sheet.render(true);
   }
   static #onItemDelete(event, target) {
-    return foundry.applications.api.DialogV2.confirm({
+    return DialogV2.confirm({
       window: { title: 'torgeternity.dialogWindow.itemDeletion.title' },
       content: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.content'),
       yes: {
@@ -1244,8 +1242,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
       return;
     }
-    await Dialog.confirm({
-      title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title'),
+    await DialogV2.confirm({
+      window: { title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title') },
       content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
       yes: async () => {
         await this.actor.deleteEmbeddedDocuments('Item', [

@@ -1,3 +1,5 @@
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
@@ -60,11 +62,10 @@ export default class torgeternityCardConfig extends foundry.applications.sheets.
         faces = this.document.faces.map((f) => f.object).concat([{}]);
         return this.document.update({ faces });
       case 'deleteFace':
-        return Dialog.confirm({
-          title: game.i18n.localize('CARD.FIELDS.face.labelDelete'),
-          content: `<h4>${game.i18n.localize('AreYouSure')}</h4><p>${game.i18n.localize(
-            'CARD.FIELDS.face.labelDeleteWarning'
-          )}</p>`,
+        return DialogV2.confirm({
+          window: { title: game.i18n.localize('CARD.FIELDS.face.labelDelete') },
+          content: `<h4>${game.i18n.localize('AreYouSure')}</h4>
+          <p>${game.i18n.localize('CARD.FIELDS.face.labelDeleteWarning')}</p>`,
           yes: () => {
             const i = Number(face.dataset.face);
             faces = foundry.utils.deepClone(this.document.faces);

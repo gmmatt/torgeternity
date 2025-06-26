@@ -1,6 +1,8 @@
 import * as torgchecks from '/systems/torgeternity/module/torgchecks.js';
 import { TestDialog } from '/systems/torgeternity/module/test-dialog.js';
 
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
@@ -124,7 +126,7 @@ export class TorgeternityMacros {
       input: fields.createCheckboxInput({ name: 'wholeRevive' }),
     });
 
-    foundry.applications.api.DialogV2.wait({
+    DialogV2.wait({
       window: { title: 'torgeternity.macros.reviveMacroChatHeadline', },
       content: `${shockGroup.outerHTML}${checkGroup.outerHTML}`,
       buttons: [
@@ -211,7 +213,7 @@ export class TorgeternityMacros {
       input: fields.createNumberInput({ name: 'inputValue' }),
     });
 
-    foundry.applications.api.DialogV2.wait({
+    DialogV2.wait({
       window: { title: 'torgeternity.macros.bonusDieMacroTitle', },
       content: inputGroup.outerHTML,
       buttons: [
@@ -315,7 +317,7 @@ export class TorgeternityMacros {
     });
 
     // Choose the nb of cards to show
-    const numCards = await foundry.applications.api.DialogV2.wait({
+    const numCards = await DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.showingDramaCards.nbCards', },
       content: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCardsValue'),
       buttons: [
@@ -330,7 +332,7 @@ export class TorgeternityMacros {
     // Find ?? the index of the Active Drama Card in the Drama Deck
     const ind = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive)._source.cards[0].sort;
 
-    foundry.applications.api.DialogV2.wait({
+    DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.showingDramaCards.recipient', },
       content: `${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.whisper')} ${checkOptions} <br>`,
       buttons: [
@@ -439,8 +441,8 @@ export class TorgeternityMacros {
     };
 
     if (test.isother1 === false) {
-      await Dialog.prompt({
-        title: 'torgeternity.macros.reconnectMacroZoneModifierNotDetectedTitle',
+      await DialogV2.prompt({
+        window: { title: 'torgeternity.macros.reconnectMacroZoneModifierNotDetectedTitle' },
         content: `<p>${game.i18n.localize('torgeternity.macros.reconnectMacroZoneModifierNotDetected')}</p>`,
       });
     }
@@ -529,7 +531,7 @@ export class TorgeternityMacros {
       checkOptions += `<br>${checkbox.outerHTML}`;
     });
 
-    foundry.applications.api.DialogV2.wait({
+    DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.cardRetour.cardBack', },
       content: `${game.i18n.localize('torgeternity.dialogWindow.cardRetour.cardOwner')} ${checkOptions} <br>`,
       buttons: [
@@ -572,7 +574,7 @@ export class TorgeternityMacros {
       return;
     }
     // Choose the attribute you want to modify
-    const attr = await foundry.applications.api.DialogV2.wait({
+    const attr = await DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.buffMacro.choice', },
       content: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choose'),
       buttons: [
@@ -600,7 +602,7 @@ export class TorgeternityMacros {
     }
 
     // choose the bonus you expect
-    const bonus = await foundry.applications.api.DialogV2.wait({
+    const bonus = await DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.buffMacro.bonusTitle', },
       content: `<div>${game.i18n.localize(
         'torgeternity.dialogWindow.buffMacro.value'
@@ -615,7 +617,7 @@ export class TorgeternityMacros {
     });
 
     // choose the duration of the effect
-    const duration = await foundry.applications.api.DialogV2.wait({
+    const duration = await DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.buffMacro.timeLabel' },
       content: `<div>${game.i18n.localize('torgeternity.dialogWindow.buffMacro.time')} <input name="dur" value=1 style="width:50px"/></div>`,
       buttons: [
@@ -812,7 +814,7 @@ export class TorgeternityMacros {
 
     // add options for AP and bypass the window
 
-    const info = await foundry.applications.api.DialogV2.prompt({
+    const info = await DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
               <label>${game.i18n.localize(
