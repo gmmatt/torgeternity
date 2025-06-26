@@ -6,7 +6,10 @@ const { DialogV2 } = foundry.applications.api;
 export default class torgeternityCardConfig extends foundry.applications.sheets.CardConfig {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'standard-form'],
+    classes: ['torgeternity'],
+    window: {
+      contentClasses: ["standard-form"],
+    },
     position: {
       width: 480,
       height: 'auto',

@@ -7,10 +7,11 @@ export default class MacroHub extends HandlebarsApplicationMixin(ApplicationV2) 
 
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'centered', 'standard-form', 'macroHub'],
+    classes: ['torgeternity', 'centered', 'macroHub'],
     window: {
       title: 'torgeternity.macros.macroHub.title',
       resizable: false,
+      contentClasses: ["standard-form"],
     },
     position: {
       //center: true,

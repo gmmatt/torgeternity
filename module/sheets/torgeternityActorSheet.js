@@ -16,7 +16,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   #dragDrop;
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'sheet', 'actor', 'standard-form'],
+    classes: ['torgeternity', 'sheet', 'actor'],
+    window: {
+      contentTag: 'div',
+      contentClasses: ['standard-form', 'scrollable'],
+      resizable: true,
+    },
     position: {
       width: 773,
       height: 860,
@@ -29,9 +34,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     ],
     form: {
       submitOnChange: true
-    },
-    window: {
-      resizable: true,
     },
     actions: {
       skillList: TorgeternityActorSheet.#onSkillList,

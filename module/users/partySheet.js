@@ -11,8 +11,9 @@ export default class PartySheet extends foundry.applications.ui.Players {
   static DEFAULT_OPTIONS = {
     id: 'party-sheet',
     tag: "form",
-    classes: ['torgeternity', 'standard-form'],   // "faded-ui" removed by _initializeApplicationOptions
+    classes: ['torgeternity'],   // "faded-ui" removed by _initializeApplicationOptions
     window: {
+      contentClasses: ["standard-form"],
       resizable: true,
       frame: true,
       positioned: true,

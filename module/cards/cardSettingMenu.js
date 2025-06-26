@@ -6,10 +6,11 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 export default class DeckSettingMenu extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'standard-form', 'deckSetting'],
+    classes: ['torgeternity', 'deckSetting'],
     tag: "form",
     window: {
       title: 'torgeternity.settingMenu.deckSetting.name',
+      contentClasses: ["standard-form"],
     },
     form: {
       handler: DeckSettingMenu.#onSubmit,

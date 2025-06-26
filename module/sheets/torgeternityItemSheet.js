@@ -10,8 +10,9 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     // TODO: 
     // need 'app' to pick up styling of 'sheet-header'
     // but that screws up the window's title
-    classes: ['torgeternity', 'sheet', 'item', 'standard-form'],
+    classes: ['torgeternity', 'sheet', 'item'],
     window: {
+      contentClasses: ['standard-form', 'scrollable'],
       resizable: true,
     },
     position: {

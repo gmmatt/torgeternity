@@ -8,10 +8,11 @@ export class TestUpdate extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
     tag: 'form',
-    classes: ['torgeternity', 'application', 'standard-form', 'test-dialog'],
+    classes: ['torgeternity', 'application', 'test-dialog'],
     window: {
       title: 'Skill Test',
-      resizable: false
+      resizable: false,
+      contentClasses: ["standard-form"],
     },
     form: {
       handler: TestUpdate.#onRoll,

@@ -7,8 +7,9 @@ export default class torgeternityDeck extends foundry.applications.sheets.CardDe
 
   static DEFAULT_OPTIONS = {
     type: "deck",
-    classes: ['torgeternity', 'standard-form', 'sheet', 'cardsDeck'],
+    classes: ['torgeternity', 'sheet', 'cardsDeck'],
     position: {
+      contentClasses: ["standard-form"],
       width: 600,
       height: "auto"
     },
