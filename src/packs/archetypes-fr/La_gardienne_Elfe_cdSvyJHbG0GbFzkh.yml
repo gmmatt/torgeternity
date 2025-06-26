@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.iAsTMdPbFnFfYbBe
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -119,20 +118,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iAsTMdPbFnFfYbBe
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.q33jbisDvFLOCyfH'
   - _id: 93G8qxXjw6byrBMI
     name: Loup blanc
     type: perk
     sort: 200001
     flags:
-      core:
-        sourceId: Item.OibVBWUouOM0VqRS
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -258,20 +257,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.OibVBWUouOM0VqRS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.93G8qxXjw6byrBMI'
   - _id: xSUfyWUYlFvFHbn7
     name: Vision nocturne
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -362,20 +361,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.JCBCYFMvmpQHFWM4
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.xSUfyWUYlFvFHbn7'
   - _id: 60VM3jzDEEY3SxpK
     name: Gracieux
     type: perk
     sort: 200001
     flags:
-      core:
-        sourceId: Item.vlDGBvvot6Ig0bzj
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -472,20 +471,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.vlDGBvvot6Ig0bzj
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.60VM3jzDEEY3SxpK'
   - _id: 7vJhgHMYAd6SmA9J
     name: Affinité avec la magie
     type: perk
     sort: 300001
     flags:
-      core:
-        sourceId: Item.qC6VYYNiTxOLv7L6
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -584,20 +583,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qC6VYYNiTxOLv7L6
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.7vJhgHMYAd6SmA9J'
   - _id: qSq08wDd7BjOyDUe
     name: Potion de soin
     type: gear
     sort: 1200000
     flags:
-      core:
-        sourceId: Item.sSWLrPCSi2G5jq6S
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -616,20 +615,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.sSWLrPCSi2G5jq6S
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.qSq08wDd7BjOyDUe'
   - _id: ppzqLywwc7NrsWMn
     name: Corde de 10m
     type: gear
     sort: 900000
     flags:
-      core:
-        sourceId: Item.gzQRZhlLKWBaS49M
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -645,20 +644,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.gzQRZhlLKWBaS49M
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.ppzqLywwc7NrsWMn'
   - _id: vkDycEA4FyKcqNDp
     name: Carquois
     type: gear
     sort: 1400000
     flags:
-      core:
-        sourceId: Item.LFzKGBpEJvAe6D1t
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -676,20 +675,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.LFzKGBpEJvAe6D1t
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.vkDycEA4FyKcqNDp'
   - _id: 88RG3LRq6IDjebha
     name: Justaucorps en cuir
     type: armor
     sort: 800000
     flags:
-      core:
-        sourceId: Item.2rrg1qTCfjdHFtKl
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: m4QT8vQ1gc6L97GC
@@ -719,7 +718,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -727,6 +726,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -752,20 +752,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.2rrg1qTCfjdHFtKl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.88RG3LRq6IDjebha'
   - _id: 2SAaQ2J6dbdqjiuu
     name: épée longue
     type: meleeweapon
     sort: 500000
     flags:
-      core:
-        sourceId: Item.LGGaptAxiwJMZLsD
+      core: {}
     img: systems/torgeternity/images/icons/melee-weapon-icon.webp
     effects: []
     folder: null
@@ -789,20 +789,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.LGGaptAxiwJMZLsD
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.2SAaQ2J6dbdqjiuu'
   - _id: sc5964pofzXsBkEK
     name: Arc long composite
     type: missileweapon
     sort: 100000
     flags:
-      core:
-        sourceId: Item.95xJ3EnPzdWIOAWh
+      core: {}
     img: systems/torgeternity/images/icons/missileweapon.webp
     effects: []
     folder: null
@@ -836,12 +836,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.95xJ3EnPzdWIOAWh
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.sc5964pofzXsBkEK'
   - _id: i5pjyJX601Lh6KM5
     name: Attaque à mains nues
@@ -851,8 +852,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -867,12 +867,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.i5pjyJX601Lh6KM5'
 effects:
   - _id: k9rKjxoCSjltaKB2
@@ -902,7 +903,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -910,6 +911,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1436,7 +1438,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1448,14 +1449,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809619
   modifiedTime: 1716827809619
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!cdSvyJHbG0GbFzkh'
 

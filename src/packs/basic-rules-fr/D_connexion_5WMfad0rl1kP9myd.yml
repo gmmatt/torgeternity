@@ -3,8 +3,7 @@ name: Déconnexion
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: JournalEntry.mGmjsnwHLWn7MXvU
+  core: {}
 pages:
   - name: Déconnexion
     type: text
@@ -59,12 +58,14 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!5WMfad0rl1kP9myd.C7Y68xq0SWNTA13A'
 ownership:
   kz1RJu8vrAPmTUwN: 3
@@ -72,11 +73,13 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827810014
   modifiedTime: 1716827810014
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: JournalEntry.mGmjsnwHLWn7MXvU
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!5WMfad0rl1kP9myd'
 

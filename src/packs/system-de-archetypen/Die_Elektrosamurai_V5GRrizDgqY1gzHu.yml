@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WR4mGlmM1EdIyHUW
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -103,12 +102,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866298554
       modifiedTime: 1722164869738
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WR4mGlmM1EdIyHUW
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.kSLUifL30SjjsOrA'
   - _id: kX73wRdLxfe0Sbz0
     name: Elektrokatana
@@ -118,9 +118,7 @@ items:
     folder: null
     sort: 18900000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.blwojapRBKk4M4Xg
+      core: {}
     system:
       cosm: panPacifica
       description: >-
@@ -151,12 +149,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866320665
       modifiedTime: 1722164918416
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.blwojapRBKk4M4Xg
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.kX73wRdLxfe0Sbz0'
   - name: Rauchkugeln
     type: gear
@@ -165,8 +164,7 @@ items:
     folder: null
     sort: 7500000
     flags:
-      core:
-        sourceId: Item.M1wtMEqhkMKt7zPa
+      core: {}
     _id: IrcoBjk02YCM7KTS
     system:
       cosm: panPacifica
@@ -187,12 +185,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866345041
       modifiedTime: 1722164907484
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.M1wtMEqhkMKt7zPa
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.IrcoBjk02YCM7KTS'
   - _id: tHnol0Anh6GtJ72e
     name: SC Kyogo 144 SMG
@@ -202,9 +201,7 @@ items:
     folder: null
     sort: 8300000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.HM1hHISeFvyErmvU
+      core: {}
     system:
       cosm: panPacifica
       description: >-
@@ -240,12 +237,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866439177
       modifiedTime: 1722164912883
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.HM1hHISeFvyErmvU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.tHnol0Anh6GtJ72e'
   - _id: qxjS47DIU0aTw16e
     name: Ionengusoku
@@ -255,8 +253,7 @@ items:
     folder: null
     sort: 50000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5ILSmFBkAJ0HDq1v
+      core: {}
     system:
       category: electricSamurai
       cosm: panPacifica
@@ -369,12 +366,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711706232065
       modifiedTime: 1722165991520
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5ILSmFBkAJ0HDq1v
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.qxjS47DIU0aTw16e'
   - name: Ionengusoku (Rüstung)
     type: armor
@@ -383,9 +381,7 @@ items:
     folder: null
     sort: 300000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr
+      core: {}
     _id: wh1XEzDQhhm5obr3
     system:
       cosm: panPacifica
@@ -413,12 +409,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366100
       modifiedTime: 1722164895227
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.wh1XEzDQhhm5obr3'
   - name: Mensch
     type: race
@@ -447,12 +444,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599454271
       modifiedTime: 1729599454271
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: C5EezChzOZPGj3FX
     sort: 0
     ownership:
@@ -463,8 +461,7 @@ effects: []
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.QVpKuacd4LKfpJOy
+  core: {}
 system:
   shock:
     max: 8
@@ -888,7 +885,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -900,14 +896,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694866294442
   modifiedTime: 1729013572888
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.QVpKuacd4LKfpJOy
   duplicateSource: null
+  exportSource: null
 _key: '!actors!V5GRrizDgqY1gzHu'
 

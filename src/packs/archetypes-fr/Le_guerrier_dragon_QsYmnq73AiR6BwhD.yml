@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 200000
     flags:
-      core:
-        sourceId: Item.E4srtrmeNNVxRqHf
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -136,20 +135,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.E4srtrmeNNVxRqHf
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.0e2qeJEXy89eDqmQ'
   - _id: kBiGdjd85DU1MtHd
     name: Dragon Breath
     type: enhancement
     sort: 200001
     flags:
-      core:
-        sourceId: Item.HlSAJi0eR2q7UF8E
+      core: {}
     img: systems/torgeternity/images/icons/enhancement.webp
     effects: []
     folder: null
@@ -170,20 +169,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.HlSAJi0eR2q7UF8E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
   - _id: U0CKtAHQmBDo9ZyF
     name: Souffle de dragon
     type: missileweapon
     sort: 100000
     flags:
-      core:
-        sourceId: Item.njMZnZIEFvRkHHIS
+      core: {}
     img: systems/torgeternity/images/icons/missileweapon.webp
     effects: []
     folder: null
@@ -213,20 +212,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.njMZnZIEFvRkHHIS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.U0CKtAHQmBDo9ZyF'
   - _id: NTS6mLpRgHF7WkO4
     name: Potion de soin
     type: gear
     sort: 1200000
     flags:
-      core:
-        sourceId: Item.sSWLrPCSi2G5jq6S
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -244,20 +243,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.sSWLrPCSi2G5jq6S
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NTS6mLpRgHF7WkO4'
   - _id: vfqnqkIvFw372Nck
     name: Corde de 10m
     type: gear
     sort: 900000
     flags:
-      core:
-        sourceId: Item.HIzFdoBtoEzc8eaE
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -273,20 +272,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.HIzFdoBtoEzc8eaE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
   - _id: F2DgHaQHYRxdQU4b
     name: Caltrops
     type: gear
     sort: 1300000
     flags:
-      core:
-        sourceId: Item.nszREOuoibD1inHs
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -309,12 +308,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.nszREOuoibD1inHs
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.F2DgHaQHYRxdQU4b'
   - _id: sDhCWgxPaBzw0M2R
     name: Grande hache
@@ -323,7 +323,6 @@ items:
     flags:
       core:
         sheetClass: torgeternity.torgeternityItemSheet
-        sourceId: Item.Aan7zdkY9kl0RE7T
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -350,20 +349,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Aan7zdkY9kl0RE7T
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.sDhCWgxPaBzw0M2R'
   - _id: W80yHGyLWk5wrLJW
     name: Giant Strength
     type: enhancement
     sort: 500001
     flags:
-      core:
-        sourceId: Item.q3wDWkbSqbWYKVNB
+      core: {}
     img: systems/torgeternity/images/icons/enhancement.webp
     effects:
       - _id: 07KQJUY5nlOb5K7Q
@@ -389,7 +388,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -397,6 +396,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -416,20 +416,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.q3wDWkbSqbWYKVNB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
   - _id: w5ZFXzswpME4OajM
     name: Vision nocturne
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -521,20 +521,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.JCBCYFMvmpQHFWM4
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.w5ZFXzswpME4OajM'
   - _id: RDjcmGM0lIqKpHUO
     name: Armure draconnique
     type: armor
     sort: 900001
     flags:
-      core:
-        sourceId: Item.yq5AhONJLd10H9EI
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: PS0f9cwh4yZcYyBo
@@ -564,7 +564,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -572,6 +572,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -601,12 +602,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.yq5AhONJLd10H9EI
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.RDjcmGM0lIqKpHUO'
   - _id: LKxM2YXkNPmaj31J
     name: Attaque à mains nues
@@ -616,8 +618,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -632,12 +633,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.LKxM2YXkNPmaj31J'
 effects:
   - _id: xcPZLZIBGvMvU25Z
@@ -663,7 +665,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -671,6 +673,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -703,7 +706,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -711,6 +714,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1237,7 +1241,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1249,14 +1252,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809381
   modifiedTime: 1716827809381
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!QsYmnq73AiR6BwhD'
 

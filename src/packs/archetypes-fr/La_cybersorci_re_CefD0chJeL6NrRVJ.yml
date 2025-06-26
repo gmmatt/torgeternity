@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.8qfs6BvtH7wTJ09g
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -114,20 +113,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.8qfs6BvtH7wTJ09g
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.ZKurTYCidkV0AVSA'
   - _id: yaftfIz25Ryczaqq
     name: Lanceur de sorts
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.gOZE58k6tfHDbUJ0
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -237,20 +236,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.gOZE58k6tfHDbUJ0
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.yaftfIz25Ryczaqq'
   - _id: 4nMDDruOMrPLT1YO
     name: Hexxer Mk II
     type: implant
     sort: 600001
     flags:
-      core:
-        sourceId: Item.8NEZIXyg4imLfga9
+      core: {}
     img: systems/torgeternity/images/icons/implant.webp
     effects: []
     folder: null
@@ -284,20 +283,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.8NEZIXyg4imLfga9
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.4nMDDruOMrPLT1YO'
   - _id: SFdVeSet2JXoY01t
     name: Lunettes de soleil
     type: gear
     sort: 2200000
     flags:
-      core:
-        sourceId: Item.Wi4lFW6mtBCZS8EY
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -313,20 +312,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Wi4lFW6mtBCZS8EY
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.SFdVeSet2JXoY01t'
   - _id: m5mzP31xcN0sfDmc
     name: Saint-Pierre Express
     type: firearm
     sort: 400000
     flags:
-      core:
-        sourceId: Item.e2Jc6xS0T4XEs8q9
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -363,20 +362,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.e2Jc6xS0T4XEs8q9
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.m5mzP31xcN0sfDmc'
   - _id: SgtqDeoK74N1BlLX
     name: Diminution
     type: spell
     sort: 2300000
     flags:
-      core:
-        sourceId: Compendium.world.spells.spell-diminish
+      core: {}
     img: systems/torgeternity/images/icons/spell.webp
     effects: []
     folder: null
@@ -421,20 +420,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.SgtqDeoK74N1BlLX'
   - _id: uLEvrzm5QIU35Qzs
     name: Amélioration
     type: spell
     sort: 2400000
     flags:
-      core:
-        sourceId: Compendium.world.spells.spell-enhance
+      core: {}
     img: systems/torgeternity/images/icons/spell.webp
     effects: []
     folder: null
@@ -481,20 +480,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.uLEvrzm5QIU35Qzs'
   - _id: ac0BbUkLcRrcrMSj
     name: Brouillage
     type: spell
     sort: 2500000
     flags:
-      core:
-        sourceId: Compendium.world.spells.spell-scrambler
+      core: {}
     img: systems/torgeternity/images/icons/spell.webp
     effects: []
     folder: null
@@ -536,12 +535,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.ac0BbUkLcRrcrMSj'
   - _id: AzobLwjp2cbbDXgm
     name: Attaque à mains nues
@@ -551,8 +551,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -567,12 +566,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.AzobLwjp2cbbDXgm'
 effects: []
 folder: null
@@ -1097,7 +1097,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1109,14 +1108,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809277
   modifiedTime: 1716827809277
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!CefD0chJeL6NrRVJ'
 

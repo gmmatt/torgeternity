@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 2300000
     flags:
-      core:
-        sourceId: Item.V6vSEnqgNmYQKs4o
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,12 +26,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722161827659
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.V6vSEnqgNmYQKs4o
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.OZvqS64IhCczdFkT'
   - _id: pj0EqVly0EhHxRF2
     name: Peitschenschwanz
@@ -62,7 +62,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -70,6 +70,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -79,8 +80,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hwrzWawaqs7kKuHI
+      core: {}
     system:
       category: edeinos
       cosm: livingLand
@@ -177,12 +177,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867606000
       modifiedTime: 1722161754220
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hwrzWawaqs7kKuHI
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.pj0EqVly0EhHxRF2'
   - _id: S4nEXXlDkjQCu2k3
     name: Waffensegen
@@ -192,8 +193,7 @@ items:
     folder: null
     sort: 400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.1UNRGoERfcYtYKW0
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -220,12 +220,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867621482
       modifiedTime: 1694867637048
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.1UNRGoERfcYtYKW0
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.S4nEXXlDkjQCu2k3'
   - _id: v2vh6Mp1Uleuo29h
     name: Heilung
@@ -235,8 +236,7 @@ items:
     folder: null
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.z2F1fYz1l6okzYor
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -263,12 +263,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867628032
       modifiedTime: 1694867635719
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.z2F1fYz1l6okzYor
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.v2vh6Mp1Uleuo29h'
   - _id: UzYif4jabH5Y4b4j
     name: Feind abwehren
@@ -306,7 +307,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -314,6 +315,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -351,7 +353,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -359,6 +361,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -396,7 +399,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -404,6 +407,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -413,8 +417,7 @@ items:
     folder: null
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.geTWA7krOqHuXpxk
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -443,12 +446,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867632361
       modifiedTime: 1694867635719
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.geTWA7krOqHuXpxk
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j'
   - _id: j47RejnFxrA6drwg
     name: Hrockt-Wurzelrüstung
@@ -458,9 +462,7 @@ items:
     folder: null
     sort: 7600000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.GY0pNAesiNYc1UXL
+      core: {}
     system:
       cosm: livingLand
       description: >-
@@ -493,12 +495,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366100
       modifiedTime: 1722161839484
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.GY0pNAesiNYc1UXL
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.j47RejnFxrA6drwg'
   - _id: vvTNXAsidaocnOLN
     name: Wunderwirker
@@ -612,12 +615,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.D1RJR3lXmVGDsPJr
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.vvTNXAsidaocnOLN'
   - name: Hrockt-Sprossenspeer
     type: missileweapon
@@ -658,12 +662,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.oA1Elm4eVdBcBSn2
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _id: z1qqBadmQ8CgUUel
     sort: 0
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.z1qqBadmQ8CgUUel'
@@ -709,12 +714,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.bsYMg4OVWpTV2Ixt'
   - name: Edeinos
     type: race
@@ -894,12 +900,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.BvoukFhiu0Mz7E2D
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599382656
       modifiedTime: 1729599382656
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: Rf6mjm5jZFCPB5AP
     sort: 100000
     ownership:
@@ -1007,12 +1014,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599382683
       modifiedTime: 1729599382807
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: eEJth3GcmS7oNeFM
     effects: []
     folder: null
@@ -1042,12 +1050,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599382809
       modifiedTime: 1729599382983
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: GPiq4BtMLhEG67BA
     effects: []
     folder: null
@@ -1076,7 +1085,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1084,6 +1093,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1120,7 +1130,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1128,6 +1138,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1164,7 +1175,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1172,6 +1183,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1208,7 +1220,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1216,6 +1228,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1224,8 +1237,7 @@ effects:
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.hcdhRCs56U5JrAl4
+  core: {}
 system:
   shock:
     max: 5
@@ -1649,7 +1661,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1661,14 +1672,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694867487836
   modifiedTime: 1729013545546
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.hcdhRCs56U5JrAl4
   duplicateSource: null
+  exportSource: null
 _key: '!actors!6Pc9oa7mM6kZkFUi'
 

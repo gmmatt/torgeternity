@@ -12,12 +12,13 @@ flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '12.327'
+  coreVersion: '13.345'
   systemId: torgeternity
   systemVersion: 12.2.0
   createdTime: 1721895414776
   modifiedTime: 1721895414776
   lastModifiedBy: RqPNkwrogJP7Mmsh
+  exportSource: null
 _id: nTlZJzoObldTIr0k
 sort: 0
 _key: '!macros!nTlZJzoObldTIr0k'

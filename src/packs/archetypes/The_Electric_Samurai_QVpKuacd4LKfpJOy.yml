@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.yCG51H4lsZOyJjhO
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,12 +26,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156084472
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.yCG51H4lsZOyJjhO
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.KyvSH0G67CXa05a2'
   - _id: Q3AEnYDnCuWdHQJw
     name: Trademark Weapon (Electric Katana)
@@ -42,8 +42,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -134,12 +133,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693909771387
       modifiedTime: 1722152912839
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.Q3AEnYDnCuWdHQJw'
   - _id: hgQ7xfsFIFCuvCv8
     name: Electric Katana
@@ -149,8 +149,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
+      core: {}
     system:
       cosm: panPacifica
       description: "<p>The ion circuitry nano-imprinted into the katana’s blade glows with energy when activated. The field generated just over the surface cuts even sharper, and protects the metal underneath from chipping or dulling. May be used as a normal katana when not energized.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -176,12 +175,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693909861972
       modifiedTime: 1722155948464
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.hgQ7xfsFIFCuvCv8'
   - _id: yoJKfoP1BFsr65l9
     name: SC Kyogo 144 SMG
@@ -191,8 +191,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
+      core: {}
     system:
       cosm: panPacifica
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short Burst}</p>\n<p>A lightweight submachine gun from Pan-Pacifica, the Kyogo is unusually accurate for a submachine gun and is quite popular due to its exceptional range and damage.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -220,12 +219,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693909870243
       modifiedTime: 1722155971096
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.yoJKfoP1BFsr65l9'
   - name: Ion Gusoku
     type: perk
@@ -380,17 +380,17 @@ items:
         value: null
     effects: []
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.vW54lUFBIwEtpPKL
+      core: {}
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1675505758859
       modifiedTime: 1722152889992
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.vW54lUFBIwEtpPKL
       duplicateSource: null
+      exportSource: null
     folder: null
     ownership:
       default: 0
@@ -406,8 +406,7 @@ items:
     folder: null
     sort: 22800000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1
+      core: {}
     system:
       cosm: panPacifica
       description: >-
@@ -435,12 +434,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722156064288
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.19I6fIErltEo3Hqw'
   - name: Human
     type: race
@@ -472,12 +472,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582153082
       modifiedTime: 1729582153082
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: I7NDnlTSLg7AkZ4t
     sort: 100000
     _key: '!actors.items!QVpKuacd4LKfpJOy.I7NDnlTSLg7AkZ4t'
@@ -908,7 +909,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -920,14 +920,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693909765954
   modifiedTime: 1729013431705
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!QVpKuacd4LKfpJOy'
 

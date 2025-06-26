@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.perk-indomitable
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -100,20 +99,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.hGMOwQsVX9hXhB1B'
   - _id: yJtCrW7pRJJ1iIqx
     name: Tenace
     type: perk
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.perk-tenacious
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -205,20 +204,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.yJtCrW7pRJJ1iIqx'
   - _id: T5PZhlJ3fPdAqTd7
     name: Matériel d'escalade
     type: gear
     sort: 3100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-climbing-gear
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -238,20 +237,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.T5PZhlJ3fPdAqTd7'
   - _id: fkClaT4EVtrolVh0
     name: Silencieux
     type: gear
     sort: 700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-silencer
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -275,20 +274,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.fkClaT4EVtrolVh0'
   - _id: PdWFjwZntFEHyhTf
     name: Machette
     type: meleeweapon
     sort: 1100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-machete
+      core: {}
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -319,12 +318,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.PdWFjwZntFEHyhTf'
   - _id: tFgCXQMcrGDML1lz
     name: Glock 9mm
@@ -334,8 +334,7 @@ items:
     folder: null
     sort: 500000
     flags:
-      core:
-        sourceId: Item.iOnl5BiGmVFaCzma
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -363,12 +362,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.tFgCXQMcrGDML1lz'
   - _id: 8AMGcsoi4D8VsBE8
     name: Glock 9mm
@@ -378,8 +378,7 @@ items:
     folder: null
     sort: 500000
     flags:
-      core:
-        sourceId: Item.iOnl5BiGmVFaCzma
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -407,12 +406,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.8AMGcsoi4D8VsBE8'
   - _id: ZHCCH7GF1KN0V5RW
     name: Veste en cuir
@@ -446,7 +446,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -454,6 +454,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -463,8 +464,7 @@ items:
     folder: null
     sort: 800000
     flags:
-      core:
-        sourceId: Item.Ih77xAUJLZwOROR7
+      core: {}
     system:
       cosm: (Sans cosm)
       description: ''
@@ -484,12 +484,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.ZHCCH7GF1KN0V5RW'
   - _id: vweQ3DMFNSfo2YxA
     name: Chargeurs supplémentaires (5)
@@ -499,8 +500,7 @@ items:
     folder: null
     sort: 1500000
     flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Cinq recharges pour Glock 9 mm</p>
@@ -514,12 +514,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.vweQ3DMFNSfo2YxA'
   - _id: Oo122VOhEfcoQl3l
     name: Torche
@@ -529,8 +530,7 @@ items:
     folder: null
     sort: 2400000
     flags:
-      core:
-        sourceId: Item.TE2jmWDyTxhRulgk
+      core: {}
     system:
       cosm: Terre-Vivante
       description: <p>&Eacute;claire</p>
@@ -544,12 +544,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.TE2jmWDyTxhRulgk
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.Oo122VOhEfcoQl3l'
   - _id: 2S5Lg83o3W77FIYr
     name: Corde de 30m
@@ -559,8 +560,7 @@ items:
     folder: null
     sort: 900000
     flags:
-      core:
-        sourceId: Item.gzQRZhlLKWBaS49M
+      core: {}
     system:
       cosm: Aysle
       description: ''
@@ -574,12 +574,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.gzQRZhlLKWBaS49M
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.2S5Lg83o3W77FIYr'
   - _id: dLGm2dhMTASDcjCW
     name: Grappin
@@ -589,8 +590,7 @@ items:
     folder: null
     sort: 100001
     flags:
-      core:
-        sourceId: Item.6ApaXink04BzbAAv
+      core: {}
     system:
       cosm: (Sans cosm)
       description: |-
@@ -606,12 +606,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.6ApaXink04BzbAAv
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.dLGm2dhMTASDcjCW'
   - _id: sCjdjpQHZnleEMW4
     name: Sac à dos
@@ -621,8 +622,7 @@ items:
     folder: null
     sort: 3000000
     flags:
-      core:
-        sourceId: Item.th671TeucbJU9ZOl
+      core: {}
     system:
       cosm: Aysle
       description: <p>Pour transporter des tr&eacute;sors</p>
@@ -636,12 +636,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.th671TeucbJU9ZOl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.sCjdjpQHZnleEMW4'
   - _id: 8mospoKsocKydB4J
     name: Téléphone portable
@@ -651,8 +652,7 @@ items:
     folder: null
     sort: 400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -672,12 +672,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.8mospoKsocKydB4J'
   - _id: lsJwNWSawnmGGvR5
     name: Attaque à mains nues
@@ -687,8 +688,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -703,12 +703,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.lsJwNWSawnmGGvR5'
 effects:
   - _id: Aftaj7rmCoOvAz2G
@@ -739,7 +740,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -747,6 +748,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1303,7 +1305,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1315,14 +1316,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809839
   modifiedTime: 1716827809839
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!tbqGzMeQeCA3n1Mt'
 

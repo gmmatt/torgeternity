@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 900000
     flags:
-      core:
-        sourceId: Item.gzQRZhlLKWBaS49M
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,12 +26,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156112824
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.gzQRZhlLKWBaS49M
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.ppzqLywwc7NrsWMn'
   - _id: haZJ2A3wPH74aOBw
     name: Composite Longbow
@@ -42,8 +42,7 @@ items:
     folder: null
     sort: 25100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.RXXesFyswYwzjRCS
+      core: {}
     system:
       cosm: aysle
       description: "<p>A more powerful version of the long bow, this weapon is made up of three different materials, combined to enhance the elastic properties of each. While actually closer in size to the short bow, the composite bow fires arrows at a greater velocity.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -72,12 +71,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693910151043
       modifiedTime: 1722156241312
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.RXXesFyswYwzjRCS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.haZJ2A3wPH74aOBw'
   - _id: tKdZdnj59nY0KkvJ
     name: Longsword
@@ -87,8 +87,7 @@ items:
     folder: null
     sort: 47100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.qbarQFM2pTUrRfsB
+      core: {}
     system:
       cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -114,12 +113,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693910157203
       modifiedTime: 1722156233872
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.qbarQFM2pTUrRfsB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.tKdZdnj59nY0KkvJ'
   - _id: FMilBhNnYxRQwnGG
     name: Healing Potion
@@ -129,8 +129,7 @@ items:
     folder: null
     sort: 700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
+      core: {}
     system:
       cosm: aysle
       description: "<p>Drinking this thick, clear liquid heals one wound and restores a [[/r 1d6x6max5]]{BD} of shock.</p><p>\_</p><p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>"
@@ -147,12 +146,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693910183323
       modifiedTime: 1722156167775
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.FMilBhNnYxRQwnGG'
   - _id: yXXiJ8DCGJ90EQ0s
     name: White Wolf
@@ -162,8 +162,7 @@ items:
     folder: null
     sort: 40600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk
+      core: {}
     system:
       category: elf
       cosm: aysle
@@ -254,12 +253,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693910331627
       modifiedTime: 1722152936223
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.yXXiJ8DCGJ90EQ0s'
   - _id: 21KNmkaBFbvVkPRY
     name: Leather Jerkin
@@ -269,8 +269,7 @@ items:
     folder: null
     sort: 3300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      core: {}
     system:
       cosm: aysle
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>Animal hides tanned or boiled to a stiffer, more durable finish, then reinforced with studs or stitched seams. Found in some form in every cosm.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -293,12 +292,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722156189944
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.21KNmkaBFbvVkPRY'
   - name: Quiver
     type: ammunition
@@ -331,12 +331,13 @@ items:
     _stats:
       compendiumSource: Item.5ksMgyuK1eouSxnA
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722108884240
       modifiedTime: 1722156467671
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.wCLRJT1H9YSdxQOi'
   - _id: zLqqXAUExJoLHgji
     name: Warden
@@ -376,12 +377,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!cdSvyJHbG0GbFzkh.zLqqXAUExJoLHgji.5oFKyciCaTJSwu99
     folder: gjZiCPX5knOIpsHd
@@ -479,12 +481,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.C53zQKf33q28slDw
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.zLqqXAUExJoLHgji'
   - name: Elf
     type: race
@@ -856,12 +859,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582166779
       modifiedTime: 1729582166779
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: DtJdgrfeaXuwXG8K
     sort: 275000
     _key: '!actors.items!cdSvyJHbG0GbFzkh.DtJdgrfeaXuwXG8K'
@@ -967,12 +971,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582166798
       modifiedTime: 1729582166904
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: lwq2I5tEFyCBeDmL
     effects: []
     folder: null
@@ -1082,12 +1087,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582166798
       modifiedTime: 1729582166906
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: ru0BFpRazwilktPG
     effects: []
     folder: null
@@ -1199,12 +1205,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582166798
       modifiedTime: 1729582166908
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: nmHMp4N1KLo9RdnC
     effects: []
     folder: null
@@ -1243,12 +1250,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!cdSvyJHbG0GbFzkh.cV8YXWqajAED1Car'
   - origin: Actor.cdSvyJHbG0GbFzkh.Item.yUrDm5bnBMSFn1e9
     duration:
@@ -1279,12 +1287,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!cdSvyJHbG0GbFzkh.9R097xVyhquN9Z0X'
 folder: null
 sort: 100001
@@ -1801,7 +1810,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1813,14 +1821,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.3.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693910130714
   modifiedTime: 1729582171650
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!cdSvyJHbG0GbFzkh'
 

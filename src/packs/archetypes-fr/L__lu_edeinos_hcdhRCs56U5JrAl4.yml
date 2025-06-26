@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 400001
     flags:
-      core:
-        sourceId: Item.9fW6U7drFdMu7bJ9
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -104,20 +103,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.9fW6U7drFdMu7bJ9
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.5my70YmZnnaeEIRG'
   - _id: fjKbGNOzANmk1Ncb
     name: Coup de queue
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.y88YRPsbrWD62tic
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -211,20 +210,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.y88YRPsbrWD62tic
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.fjKbGNOzANmk1Ncb'
   - _id: OZvqS64IhCczdFkT
     name: Totem
     type: gear
     sort: 100000
     flags:
-      core:
-        sourceId: Item.V6vSEnqgNmYQKs4o
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -240,20 +239,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.V6vSEnqgNmYQKs4o
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.OZvqS64IhCczdFkT'
   - _id: EYZeSgW1bN1FwJ3M
     name: Armure en racines d’hrockt
     type: armor
     sort: 1200000
     flags:
-      core:
-        sourceId: Item.ReyQMFRMLe44saUX
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: n01gCYi1zesLMJRk
@@ -283,7 +282,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -291,6 +290,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -323,20 +323,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.ReyQMFRMLe44saUX
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M'
   - _id: b4PHFD1K2nhuxwQ7
     name: Lance en bois d’hrockt
     type: meleeweapon
     sort: 800000
     flags:
-      core:
-        sourceId: Item.0ibFEQi66ymd6PnN
+      core: {}
     img: systems/torgeternity/images/icons/melee-weapon-icon.webp
     effects: []
     folder: null
@@ -366,20 +366,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.0ibFEQi66ymd6PnN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.b4PHFD1K2nhuxwQ7'
   - _id: IqVsEgZ91RWXgkHw
     name: Frappe
     type: miracle
     sort: 300001
     flags:
-      core:
-        sourceId: Item.n96Wp0YtxBbpMAJG
+      core: {}
     img: systems/torgeternity/images/icons/miracle.webp
     effects: []
     folder: null
@@ -425,12 +425,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.n96Wp0YtxBbpMAJG
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.IqVsEgZ91RWXgkHw'
   - _id: xYEb0MXVrXspQdDt
     name: Miracles
@@ -440,8 +441,7 @@ items:
     folder: null
     sort: 2600000
     flags:
-      core:
-        sourceId: Compendium.world.perks.perk-miracles
+      core: {}
     system:
       category: faith
       cosm: (Non)
@@ -542,12 +542,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.xYEb0MXVrXspQdDt'
   - _id: g0cH43XIVTVK0fYY
     name: morsure/griffes
@@ -557,8 +558,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ZFmi6QH0qgga6sTT
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -577,12 +577,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.ZFmi6QH0qgga6sTT
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.g0cH43XIVTVK0fYY'
   - _id: mlBKn7lTOYY4sEqu
     name: morsure/griffes
@@ -594,7 +595,6 @@ items:
     flags:
       core:
         sheetClass: torgeternity.torgeternityItemSheet
-        sourceId: Item.Aan7zdkY9kl0RE7T
     system:
       cosm: (Sans cosm)
       description: ''
@@ -616,12 +616,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Aan7zdkY9kl0RE7T
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.mlBKn7lTOYY4sEqu'
   - _id: v3Kj5kG8dQiQ0l8i
     name: Soins
@@ -631,8 +632,7 @@ items:
     folder: null
     sort: 2900000
     flags:
-      core:
-        sourceId: Item.iDFKWtv4WCTrteId
+      core: {}
     system:
       ap: 0
       applyArmor: true
@@ -677,12 +677,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iDFKWtv4WCTrteId
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.v3Kj5kG8dQiQ0l8i'
   - _id: GdJyPlTcYVLbC7rU
     name: Protection contre les ennemis
@@ -692,8 +693,7 @@ items:
     folder: null
     sort: 3000000
     flags:
-      core:
-        sourceId: Compendium.world.miracles.miracle-ward-enemy
+      core: {}
     system:
       ap: 0
       applyArmor: true
@@ -745,12 +745,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.GdJyPlTcYVLbC7rU'
 effects:
   - _id: tmMqjv8tqvtHiRnE
@@ -780,7 +781,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -788,6 +789,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1309,7 +1311,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1321,14 +1322,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809684
   modifiedTime: 1716827809684
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!hcdhRCs56U5JrAl4'
 

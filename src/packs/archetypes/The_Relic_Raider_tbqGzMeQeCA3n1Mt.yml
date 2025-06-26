@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 150000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-backpack
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,20 +26,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722157316310
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.QayPfCSPHXuXYyc5'
   - _id: bQBAcD2IXkPOvQ42
     name: Grappling Hook
     type: gear
     sort: 450000
     flags:
-      core:
-        sourceId: Item.6ApaXink04BzbAAv
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -58,12 +57,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722157377534
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.6ApaXink04BzbAAv
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.bQBAcD2IXkPOvQ42'
   - _id: PgRaIRVyGkjrtSoO
     name: Indomitable
@@ -73,8 +73,7 @@ items:
     folder: null
     sort: 19000000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.IpjNxuQbiiWF9x2X
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -165,12 +164,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912855771
       modifiedTime: 1722153475198
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.IpjNxuQbiiWF9x2X
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.PgRaIRVyGkjrtSoO'
   - _id: WNyng6MMW4TRC8gY
     name: Tenacious
@@ -180,8 +180,7 @@ items:
     folder: null
     sort: 29400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.WeYvQBnwAWkLdvyR
+      core: {}
     system:
       category: reality
       cosm: coreEarth
@@ -272,12 +271,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912860781
       modifiedTime: 1722153508806
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.WeYvQBnwAWkLdvyR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.WNyng6MMW4TRC8gY'
   - _id: as5X028z0AGrj3Xz
     name: Glock 9mm
@@ -287,8 +287,7 @@ items:
     folder: null
     sort: 3400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -316,12 +315,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912919026
       modifiedTime: 1722157282118
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.as5X028z0AGrj3Xz'
   - _id: 1ArDlWQasMrdYIBi
     name: Glock 9mm
@@ -331,8 +331,7 @@ items:
     folder: null
     sort: 3400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -360,12 +359,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912920114
       modifiedTime: 1722157285333
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.1ArDlWQasMrdYIBi'
   - _id: 0dEHsnxKa5BHwwYS
     name: Climbing Gear
@@ -375,8 +375,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.RclieVCtP5HgeKO5
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>Climbing gear and safety measures take several minutes to set up, but once done the character may use Dexterity in place of Strength to climb.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -393,12 +392,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913020723
       modifiedTime: 1722157332270
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.RclieVCtP5HgeKO5
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.0dEHsnxKa5BHwwYS'
   - _id: Cffeo6N9mc02vpfk
     name: Mobile Phone
@@ -408,8 +408,7 @@ items:
     folder: null
     sort: 500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>Applications like GPS and a flashlight are included. Most cellphones require signal boosting towers to get signal, so in low technology areas a phone may still not have reception. Reality storms play havoc with signals as well.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -426,12 +425,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913027915
       modifiedTime: 1722157388846
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.Cffeo6N9mc02vpfk'
   - _id: Pz51HoQIepm60kzL
     name: Rope, 30 meters
@@ -441,8 +441,7 @@ items:
     folder: null
     sort: 550000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ali1RHpvnZc4jmjr
+      core: {}
     system:
       cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -459,12 +458,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913058859
       modifiedTime: 1722157395350
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.ali1RHpvnZc4jmjr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.Pz51HoQIepm60kzL'
   - _id: Bf0yT1rs3OaW8yO5
     name: Silencer
@@ -474,8 +474,7 @@ items:
     folder: null
     sort: 600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.OpsZKEBRm3gU5yXO
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>A silencer is a tube or baffle added to the barrel of a weapon that suppresses the amount of noise it makes when fired. This lowers the damage value of the firearm by two, but reduces the sound of most weapons by enough that firing doesn’t automatically give away a hidden character’s position. Silenced weapons can only be fired out to Medium range.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -492,12 +491,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913068882
       modifiedTime: 1722157399661
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.OpsZKEBRm3gU5yXO
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.Bf0yT1rs3OaW8yO5'
   - _id: afSWn6GATHVmNMLW
     name: Torch
@@ -507,8 +507,7 @@ items:
     folder: null
     sort: 700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.R4N0t7lhhqM2uJO9
+      core: {}
     system:
       cosm: livingLand
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -525,12 +524,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913075083
       modifiedTime: 1722157408621
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.R4N0t7lhhqM2uJO9
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.afSWn6GATHVmNMLW'
   - _id: OMBiOTq5oRqbacsG
     name: Leather Jacket
@@ -540,8 +540,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -565,12 +564,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722157300878
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.OMBiOTq5oRqbacsG'
   - name: Extra Magazines
     type: ammunition
@@ -605,12 +605,13 @@ items:
     _stats:
       compendiumSource: Item.KRYQ71jof26XeGEv
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722109283314
       modifiedTime: 1722157277822
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.6IVrXK6F4zKSRhbh'
   - _id: KgPr4gJpKrjSjjIj
     name: Machete
@@ -642,12 +643,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -657,8 +659,7 @@ items:
     folder: gjZiCPX5knOIpsHd
     sort: 450000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>Designed for cutting through thick foliage, these mid-sized, single-edged blades are also perfectly useful for cutting flesh. Modern machetes have builtin tools and features that make <em>survival</em> tests Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -685,12 +686,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.KgPr4gJpKrjSjjIj'
   - name: Human
     type: race
@@ -722,12 +724,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582221597
       modifiedTime: 1729582221597
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: 9PEHZHPvqUIopsV2
     sort: 100000
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.9PEHZHPvqUIopsV2'
@@ -757,12 +760,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1279,7 +1283,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1291,14 +1294,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693912855771
   modifiedTime: 1729013470393
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!tbqGzMeQeCA3n1Mt'
 

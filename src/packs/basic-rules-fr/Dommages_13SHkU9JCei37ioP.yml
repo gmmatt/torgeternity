@@ -3,8 +3,7 @@ name: Dommages
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: JournalEntry.ZUjwVA7Mh1wjoKu5
+  core: {}
 pages:
   - name: Dommages
     type: text
@@ -212,12 +211,14 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!13SHkU9JCei37ioP.AT0paXQq8zRf3EOR'
 ownership:
   kz1RJu8vrAPmTUwN: 3
@@ -225,11 +226,13 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809994
   modifiedTime: 1716827809994
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: JournalEntry.ZUjwVA7Mh1wjoKu5
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!13SHkU9JCei37ioP'
 

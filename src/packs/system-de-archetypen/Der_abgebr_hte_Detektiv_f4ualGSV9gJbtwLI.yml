@@ -11,8 +11,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 300000
     flags:
-      core:
-        sourceId: Item.nPZyQyNBzc62zWh7
+      core: {}
     system:
       cosm: coreEarth
       description: <p>Örtliche Polizeiautorität</p>
@@ -28,12 +27,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722161490227
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.nPZyQyNBzc62zWh7
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.3oIUNQEve7fSs3Ei'
   - _id: VYhy5tju01eTVrOM
     name: Smartphone
@@ -43,8 +43,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 400000
     flags:
-      core:
-        sourceId: Item.ELZyQ5vEHcMPe2tX
+      core: {}
     system:
       cosm: coreEarth
       description: >-
@@ -66,12 +65,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722161496843
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.ELZyQ5vEHcMPe2tX
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.VYhy5tju01eTVrOM'
   - _id: WbsMVXW3Az6DGO1P
     name: Stilvolle Kleidung
@@ -81,8 +81,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 600000
     flags:
-      core:
-        sourceId: Item.mTsiRJl8NOEUjAKV
+      core: {}
     system:
       cosm: (Keins)
       description: <p>Gut aussehen ist zeitlos!</p>
@@ -98,12 +97,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1694869588488
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Item.mTsiRJl8NOEUjAKV
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.WbsMVXW3Az6DGO1P'
   - _id: 3gQNZCXm93gEdOwb
     name: Waffenlos
@@ -113,8 +113,7 @@ items:
     folder: R0u9Ztaprf22IfSC
     sort: 0
     flags:
-      core:
-        sourceId: Item.w4b7qWApQXkghQXE
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -129,12 +128,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1694867177709
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Item.w4b7qWApQXkghQXE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.3gQNZCXm93gEdOwb'
   - _id: vqndyczWncWn7olt
     name: Gegenschlag
@@ -144,8 +144,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WxifoHdJt9UdFAfO
+      core: {}
     system:
       category: kiPowers
       cosm: panPacifica
@@ -240,12 +239,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869458824
       modifiedTime: 1722161202292
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WxifoHdJt9UdFAfO
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.vqndyczWncWn7olt'
   - _id: Rqb1AKS8SWxi1xqM
     name: Schläger
@@ -255,8 +255,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -347,12 +346,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869464696
       modifiedTime: 1722161208164
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.Rqb1AKS8SWxi1xqM'
   - _id: bIfNWj1FDQwDsqZG
     name: Glock 9mm
@@ -362,9 +362,7 @@ items:
     folder: null
     sort: 30200000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      core: {}
     system:
       cosm: coreEarth
       description: >-
@@ -396,12 +394,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869489370
       modifiedTime: 1722161388820
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.bIfNWj1FDQwDsqZG'
   - _id: RCMHOsLlvVdprXvr
     name: Glock 9mm
@@ -411,9 +410,7 @@ items:
     folder: null
     sort: 30200000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      core: {}
     system:
       cosm: coreEarth
       description: >-
@@ -445,12 +442,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869490779
       modifiedTime: 1722161457156
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.RCMHOsLlvVdprXvr'
   - _id: GzLZEYOYkSHaZqOu
     name: Handschellen
@@ -460,8 +458,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Item.sh2tcK6G0tcScgwq
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -483,12 +480,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869506448
       modifiedTime: 1722161485564
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.sh2tcK6G0tcScgwq
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.GzLZEYOYkSHaZqOu'
   - name: Sonnenbrille
     type: gear
@@ -497,8 +495,7 @@ items:
     folder: null
     sort: 500000
     flags:
-      core:
-        sourceId: Item.5wtRULBzLY17nU2s
+      core: {}
     _id: l5EJRkGXrWCJNyEg
     system:
       cosm: nileEmpire
@@ -516,12 +513,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869515392
       modifiedTime: 1722161500947
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.5wtRULBzLY17nU2s
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.l5EJRkGXrWCJNyEg'
   - name: Taschenlampe
     type: gear
@@ -530,8 +528,7 @@ items:
     folder: null
     sort: 700000
     flags:
-      core:
-        sourceId: Item.ghYEu90Et15IioVa
+      core: {}
     _id: H6HBbufEIw9Miatd
     system:
       cosm: nileEmpire
@@ -549,12 +546,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869528799
       modifiedTime: 1722161507307
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.ghYEu90Et15IioVa
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.H6HBbufEIw9Miatd'
   - _id: rFy5ucB7V1HgwoVj
     name: Lederjacke
@@ -564,9 +562,7 @@ items:
     folder: null
     sort: 23000000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -592,12 +588,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366193
       modifiedTime: 1722161468203
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.rFy5ucB7V1HgwoVj'
   - name: Extra-Magazine
     type: ammunition
@@ -631,12 +628,13 @@ items:
     _stats:
       compendiumSource: Item.TptgnUCwWM2QZCaK
       duplicateSource: Item.KRYQ71jof26XeGEv
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722161378739
       modifiedTime: 1722167125877
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _id: rcW2fFiZ2TLjiQsg
     _key: '!actors.items!f4ualGSV9gJbtwLI.rcW2fFiZ2TLjiQsg'
   - name: Mensch
@@ -666,12 +664,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599314168
       modifiedTime: 1729599314168
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: g7evsvFjXXbzk4tg
     sort: 0
     ownership:
@@ -682,8 +681,7 @@ effects: []
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.8YH1e6xGG3IHb1Mm
+  core: {}
 system:
   shock:
     max: 8
@@ -1196,7 +1194,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1208,14 +1205,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694867157183
   modifiedTime: 1729013533222
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.8YH1e6xGG3IHb1Mm
   duplicateSource: null
+  exportSource: null
 _key: '!actors!f4ualGSV9gJbtwLI'
 

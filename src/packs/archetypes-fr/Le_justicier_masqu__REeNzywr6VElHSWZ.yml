@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.world.perks.perk-brawler
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -109,20 +108,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.wY0gJqukmhoR1ar5'
   - _id: RpNrke9ubLEc5xWb
     name: Super Compétence (intimidation)
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.AtEMebfVHcb25baY
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects:
       - _id: dXpzXzrjw9UvaNpT
@@ -148,7 +147,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -156,6 +155,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -275,20 +275,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.AtEMebfVHcb25baY
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.RpNrke9ubLEc5xWb'
   - _id: S67kDdh9ssjgwSK7
     name: Veste en cuir
     type: armor
     sort: 800000
     flags:
-      core:
-        sourceId: Item.Ih77xAUJLZwOROR7
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: m4QT8vQ1gc6L97GC
@@ -318,7 +318,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -326,6 +326,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -351,20 +352,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.S67kDdh9ssjgwSK7'
   - _id: 7ReWsx8LjYqyPMEx
     name: Pistolet Mauser
     type: firearm
     sort: 900000
     flags:
-      core:
-        sourceId: Compendium.world.firearms.item-mauser-pistol
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -397,20 +398,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.7ReWsx8LjYqyPMEx'
   - _id: WfpWhmXMDhdsA6VN
     name: Cape et masque
     type: gear
     sort: 2600000
     flags:
-      core:
-        sourceId: Item.wl0B9YS9kJ0vhxwg
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -426,20 +427,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.wl0B9YS9kJ0vhxwg
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.WfpWhmXMDhdsA6VN'
   - _id: YNsCLlOR3zgPCtdI
     name: Dispositif de pistage
     type: gear
     sort: 2800000
     flags:
-      core:
-        sourceId: Item.zGj5mxLW7ygVnIKC
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -458,12 +459,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.zGj5mxLW7ygVnIKC
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.YNsCLlOR3zgPCtdI'
   - _id: y0B6HPYsSspYtVvE
     name: Chargeurs supplémentaires (5)
@@ -473,8 +475,7 @@ items:
     folder: null
     sort: 1600000
     flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Cinq recharges pour Glock 9 mm</p>
@@ -489,12 +490,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.y0B6HPYsSspYtVvE'
   - _id: YfdvUQUHc7i4GNmh
     name: Fusées éclairantes (3)
@@ -504,8 +506,7 @@ items:
     folder: null
     sort: 1600000
     flags:
-      core:
-        sourceId: Item.JniN3c3c6HNv7cSp
+      core: {}
     system:
       cosm: Empire du Nil
       description: <p>&Eacute;claire, peut allumer un feu</p>
@@ -519,12 +520,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.JniN3c3c6HNv7cSp
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.YfdvUQUHc7i4GNmh'
   - _id: Ry951V53ZbMo7DVq
     name: Menottes
@@ -534,8 +536,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.YUDCGkWXWHejH49G
+      core: {}
     system:
       cosm: Empire du Nil
       description: <p>Entrave un adversaire captur&eacute;</p>
@@ -550,12 +551,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.YUDCGkWXWHejH49G
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.Ry951V53ZbMo7DVq'
   - _id: aPOfL2ECIo5XDkjo
     name: Attaque à mains nues (+2)
@@ -565,8 +567,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -581,12 +582,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.aPOfL2ECIo5XDkjo'
 effects:
   - _id: 35ZydiYloB6XEGzz
@@ -612,7 +614,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -620,6 +622,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -652,7 +655,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -660,6 +663,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1212,7 +1216,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1224,14 +1227,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809436
   modifiedTime: 1716827809436
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!REeNzywr6VElHSWZ'
 

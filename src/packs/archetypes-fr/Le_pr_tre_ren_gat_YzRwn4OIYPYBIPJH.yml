@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.world.perks.perk-miracles
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -112,20 +111,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.ZDlwhpBV9R5FvOoq'
   - _id: FH4pTnt4glgNUx3h
     name: OEil cybernétique Bellevue 20-20
     type: implant
     sort: 700000
     flags:
-      core:
-        sourceId: Item.apWcQPWXR3MWrYa5
+      core: {}
     img: systems/torgeternity/images/icons/implant.webp
     effects: []
     folder: null
@@ -148,20 +147,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.apWcQPWXR3MWrYa5
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.FH4pTnt4glgNUx3h'
   - _id: EHgbPjUs99WBMdIF
     name: Vision de nuit Bellevue MKII
     type: implant
     sort: 300001
     flags:
-      core:
-        sourceId: Item.kecMXRAcxTOf9sn4
+      core: {}
     img: systems/torgeternity/images/icons/implant.webp
     effects: []
     folder: null
@@ -178,20 +177,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.kecMXRAcxTOf9sn4
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.EHgbPjUs99WBMdIF'
   - _id: rU1HD6a5mXVgKb6W
     name: Cyberdeck
     type: gear
     sort: 2200000
     flags:
-      core:
-        sourceId: Item.xHacesSGQZhNT8BL
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -211,20 +210,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.xHacesSGQZhNT8BL
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.rU1HD6a5mXVgKb6W'
   - _id: 8dLYtRllOMXVcq3N
     name: Bras HardPlas
     type: implant
     sort: 500001
     flags:
-      core:
-        sourceId: Item.nQHIT7jLyfe7LNQ1
+      core: {}
     img: systems/torgeternity/images/icons/implant.webp
     effects:
       - _id: F4YhvEE9LfHoZxZ8
@@ -250,7 +249,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -258,6 +257,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -285,20 +285,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.nQHIT7jLyfe7LNQ1
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.8dLYtRllOMXVcq3N'
   - _id: iymHb9kSwcAnU0fm
     name: Symbole saint
     type: gear
     sort: 2100000
     flags:
-      core:
-        sourceId: Item.yLlmFt0wyS2ppWTq
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -314,20 +314,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.yLlmFt0wyS2ppWTq
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.iymHb9kSwcAnU0fm'
   - _id: SNqRefdKZ8Z4g0ek
     name: Tenue IriMesh
     type: armor
     sort: 1100000
     flags:
-      core:
-        sourceId: Item.uBos0D7Tz2MSgxg3
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: CC6u4jnep56ormZw
@@ -357,7 +357,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -365,6 +365,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -398,20 +399,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.uBos0D7Tz2MSgxg3
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek'
   - _id: 1cmZRM3QUaceL2m9
     name: Rayon divin GWI
     type: firearm
     sort: 2200000
     flags:
-      core:
-        sourceId: Compendium.world.firearms.item-gwi-godbeam-laser
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -446,20 +447,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.1cmZRM3QUaceL2m9'
   - _id: D9IQmTfXPqSPGrPw
     name: Bénédiction
     type: miracle
     sort: -99999
     flags:
-      core:
-        sourceId: Compendium.world.miracles.miracle-bless
+      core: {}
     img: systems/torgeternity/images/icons/miracle.webp
     effects: []
     folder: null
@@ -502,20 +503,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.D9IQmTfXPqSPGrPw'
   - _id: sMpIpI7t3K7B4ZYp
     name: Protection contre les ennemis
     type: miracle
     sort: 1
     flags:
-      core:
-        sourceId: Compendium.world.miracles.miracle-ward-enemy
+      core: {}
     img: systems/torgeternity/images/icons/miracle.webp
     effects: []
     folder: null
@@ -569,20 +570,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.sMpIpI7t3K7B4ZYp'
   - _id: rRgSLibvwdjK75eO
     name: Soins
     type: miracle
     sort: 1150001
     flags:
-      core:
-        sourceId: Item.iDFKWtv4WCTrteId
+      core: {}
     img: systems/torgeternity/images/icons/miracle.webp
     effects: []
     folder: null
@@ -629,12 +630,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iDFKWtv4WCTrteId
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.rRgSLibvwdjK75eO'
   - _id: sP4THOjN48b0gZDL
     name: Implants cybernétiques
@@ -644,8 +646,7 @@ items:
     folder: null
     sort: 1950000
     flags:
-      core:
-        sourceId: Item.8qfs6BvtH7wTJ09g
+      core: {}
     system:
       category: cyberware
       cosm: Cyberpapauté
@@ -748,12 +749,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.8qfs6BvtH7wTJ09g
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.sP4THOjN48b0gZDL'
   - _id: oET6xeuwJvv023mL
     name: Attaque à mains nues
@@ -763,8 +765,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -779,12 +780,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.oET6xeuwJvv023mL'
 effects:
   - _id: iqpflWpeduToapXb
@@ -810,7 +812,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -818,6 +820,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -850,7 +853,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -858,6 +861,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1378,7 +1382,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1390,14 +1393,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809520
   modifiedTime: 1716827809520
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!YzRwn4OIYPYBIPJH'
 
