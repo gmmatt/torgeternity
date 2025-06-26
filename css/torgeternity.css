@@ -1661,7 +1661,6 @@ german tent cards images
   margin: 0;
   border: none;
   min-width: 200px;
-  min-height: 20px;
   box-shadow: none;
   padding: 10px 0 0 0;
   color: white;
@@ -1692,20 +1691,6 @@ german tent cards images
   text-align: center;
   color: white;
   position: relative;
-}
-
-#players h3 .players-mode {
-  color: white;
-}
-
-#players ol {
-  list-style: none;
-  margin: 0 0 4px;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  /* justify-items: flex-end; */
 }
 
 #players ol li.player {
@@ -1770,15 +1755,6 @@ german tent cards images
   background: rgb(200, 200, 200);
 }
 
-#players ol li.player .player-active {
-  flex: 0 0 15px;
-  height: 15px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  margin: 5px 5px 0 0;
-  background-size: cover;
-}
-
 #players ol li.player .player-name {
   text-shadow: 0px 3px 10px #8181cc;
   color: white;
@@ -1786,7 +1762,7 @@ german tent cards images
   word-break: unset;
 }
 
-#players ol li.player .player-name.self {
+#players ol li.player.self .player-name {
   text-decoration: underline;
   color: #f6f6f6;
 }
@@ -1808,8 +1784,7 @@ nav#controls,
 #logo,
 #scene-navigation,
 #sidebar,
-#hotbar,
-#players {
+#hotbar {
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
