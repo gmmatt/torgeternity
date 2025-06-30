@@ -54,20 +54,23 @@ export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2
    * @param ev
    */
   static #onClickItem(event, target) {
-    const itemId = target.getAttribute('data-itemID');
-    const actorId = target.getAttribute('data-actorID');
+    const itemId = target.dataset.itemid;
+    const actorId = target.dataset.actorid;
     const item = game.actors.get(actorId).items.get(itemId);
     item.sheet.render(true);
   }
   /**
-   *
-   * @param ev
+   * 
+   * @param {*} event 
+   * @param {*} target 
    */
   static #onClickActor(event, target) {
-    const actorId = target.getAttribute('data-actorID');
+    const actorId = target.dataset.actorid;
     game.actors.get(actorId).sheet.render(true);
   }
-
+  /**
+   * Prompt for whether ALL or only ACTIVE users are to be shown.
+   */
   static showParty() {
     DialogV2.wait({
       classes: ['torgeternity'],

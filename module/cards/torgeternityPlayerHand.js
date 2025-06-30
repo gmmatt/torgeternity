@@ -350,7 +350,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         card.style.transform = `rotateZ(${correction}deg)`;
       }
     } else {
-      card.style.transform = card.getAttribute('data-rot');
+      card.style.transform = card.dataset.rot;
     }
   }
 
