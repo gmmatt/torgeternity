@@ -6,4 +6,4 @@
 
 ## Other Changes
 
-- Make player list collapsible (to hide inactive players)
+- Decide whether core dialogs should be in Torg colour scheme.
