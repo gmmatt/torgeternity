@@ -10,7 +10,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
   static DEFAULT_OPTIONS = {
     actions: {
       partySheet: PartySheet.showParty,
-      possAdd: TorgeternityPlayerList.#onAaddPossibility,
+      possAdd: TorgeternityPlayerList.#onAddPossibility,
       possMinus: TorgeternityPlayerList.#onMinusPossibility,
       possReset: TorgeternityPlayerList.#onResetPossibilities
     }
@@ -42,34 +42,9 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
   }
   /**
    *
-   */
-  static async #onPartySheet() {
-    DialogV2.wait({
-      classes: ['torgeternity'],
-      window: {
-        title: 'torgeternity.partySheet.openParty',
-        contentClasses: ["standard-form"],
-      },
-      content: `${game.i18n.localize('torgeternity.partySheet.chooseParty')}`,
-      buttons: [
-        {
-          action: "all",
-          label: "torgeternity.partySheet.allPlayers",
-          callback: () => PartySheet.showAllParty()
-        },
-        {
-          action: 'active',
-          label: "torgeternity.partySheet.activePlayers",
-          callback: () => PartySheet.showActiveParty()
-        }
-      ]
-    });
-  }
-  /**
-   *
    * @param event
    */
-  static async #onAaddPossibility(event, target) {
+  static async #onAddPossibility(event, target) {
     if (target.dataset.targetId === 'GMpossibilities') {
       const gmuser = game.users.activeGM;
       const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') + 1;
