@@ -12,6 +12,8 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
       partySheet: PartySheet.showParty,
       possAdd: TorgeternityPlayerList.#onAddPossibility,
       possMinus: TorgeternityPlayerList.#onMinusPossibility,
+      possAddGM: TorgeternityPlayerList.#onAddPossibilityGM,
+      possMinusGM: TorgeternityPlayerList.#onMinusPossibilityGM,
       possReset: TorgeternityPlayerList.#onResetPossibilities
     }
   }
@@ -45,28 +47,26 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
    * @param event
    */
   static async #onAddPossibility(event, target) {
-    if (target.dataset.targetId === 'GMpossibilities') {
-      const gmuser = game.users.activeGM;
-      const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') + 1;
-      gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
-    } else {
-      const targetActor = game.actors.get(target.dataset.targetId);
-      return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) + 1, });
-    }
+    const targetActor = game.actors.get(target.dataset.targetId);
+    return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) + 1, });
+  }
+  static async #onAddPossibilityGM(event, target) {
+    const gmuser = game.users.activeGM;
+    const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') + 1;
+    gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
   }
   /**
    *
    * @param event
    */
   static async #onMinusPossibility(event, target) {
-    if (target.dataset.targetId === 'GMpossibilities') {
-      const gmuser = game.users.activeGM;
-      const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') - 1;
-      gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
-    } else {
-      const targetActor = game.actors.get(target.dataset.targetId);
-      return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) - 1, });
-    }
+    const targetActor = game.actors.get(target.dataset.targetId);
+    return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) - 1, });
+  }
+  static async #onMinusPossibilityGM(event, target) {
+    const gmuser = game.users.activeGM;
+    const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') - 1;
+    gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
   }
 
   /**

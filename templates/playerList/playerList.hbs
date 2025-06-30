@@ -17,11 +17,11 @@
             {{/if}}
           </em>
           {{#if ../self.isGM}}
-            <em class="possAdd" data-action="possAdd"
+            <em class="possAdd" data-action="possAdd{{#if player.isGM}}GM{{/if}}"
               data-target-id="{{#if player.isGM}}GMpossibilities{{else}}{{player.character.id}}{{/if}}">
               <i class="fas fa-plus-circle"></i>
             </em>
-            <em class="possMinus" data-action="possMinus"
+            <em class="possMinus" data-action="possMinus{{#if player.isGM}}GM{{/if}}"
               data-target-id="{{#if player.isGM}}GMpossibilities{{else}}{{player.character.id}}{{/if}}">
               <i class="fas fa-minus-circle"></i>
             </em>
@@ -50,11 +50,11 @@
             {{/if}}
           </em>
           {{#if ../self.isGM}}
-            <em class="possAdd" data-action="possAdd"
+            <em class="possAdd" data-action="possAdd{{#if player.isGM}}GM{{/if}}"
               data-target-id="{{#if player.isGM}}GMpossibilities{{else}}{{player.character.id}}{{/if}}">
               <i class="fas fa-plus-circle"></i>
             </em>
-            <em class="possMinus" data-action="possMinus"
+            <em class="possMinus" data-action="possMinus{{#if player.isGM}}GM{{/if}}"
               data-target-id="{{#if player.isGM}}GMpossibilities{{else}}{{player.character.id}}{{/if}}">
               <i class="fas fa-minus-circle"></i>
             </em>
