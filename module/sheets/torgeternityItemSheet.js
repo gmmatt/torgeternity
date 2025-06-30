@@ -87,6 +87,17 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     powers: { template: `systems/torgeternity/templates/parts/active-effects.hbs`, scrollable: [""] }
   };
 
+  static TABS = {
+    primary: {
+      tabs: [
+        { id: 'stats' },
+        { id: 'enhancements' },  // perks only
+        { id: 'limitations' },   // perks only
+        { id: 'effects' },
+      ],
+      initial: 'stats'
+    }
+  }
   /**
    *
    * @param {...any} args
