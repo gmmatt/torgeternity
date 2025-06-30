@@ -95,7 +95,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         { id: 'limitations' },   // perks only
         { id: 'effects' },
       ],
-      initial: 'stats'
+      initial: 'stats',
+      labelPrefix: 'torgeternity.sheetLabels'
     }
   }
   /**

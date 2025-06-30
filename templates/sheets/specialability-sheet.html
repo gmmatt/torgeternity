@@ -1,10 +1,8 @@
 <section class="tab stats {{tab.cssClass}}" data-group="primary" data-tab="stats">
   <div class="sheet-content">
     <div class="main-content">
-      <div name="data.description" class="item-description-textarea">
-        <prose-mirror toggled name="system.description" {{disabled (not editable)}}
-          value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
-      </div>
+      <prose-mirror toggled name="system.description" class="item-description-textarea" {{disabled (not editable)}}
+        value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
     </div>
   </div>
 

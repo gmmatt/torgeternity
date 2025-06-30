@@ -93,7 +93,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         { id: 'gear', },
         { id: 'powers', },
         { id: 'effects', },
-        { id: 'background', },
+        { id: 'background', label: 'torgeternity.sheetLabels.notes' },
       ],
       initial: "stats",
       labelPrefix: 'torgeternity.sheetLabels'
@@ -224,7 +224,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       'vehicleAddOn',
     ]) {
       for (const item of context[type]) {
-        item.system.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description);
+        item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description);
       }
     }
 

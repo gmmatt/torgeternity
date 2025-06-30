@@ -118,25 +118,7 @@ a.inline-roll.broken:hover {
   display: none;
 }
 
-form.application,
-div.application,
-dialog.application {
-  background-image: url(../images/thunder.webp);
-  background-size: cover;
-  color: white;
-}
 
-.application .window-content select,
-.application .window-content input[type="text"],
-.application .window-content input[type="number"],
-.application .window-content input[type="password"],
-.application .window-content input[type="date"],
-.application .window-content input[type="time"] .editor,
-.application .window-content input[type="checkbox"] {
-  padding-left: 3px;
-  padding-right: 3px;
-  color: white;
-}
 
 .sidebar-tab {
   color: white;

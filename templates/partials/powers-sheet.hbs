@@ -34,7 +34,7 @@
         name="system.duration"
         type="text"
         value="{{item.system.duration}}" />
-      <p class="item-data-label">
+      <p class="item-data-label atkDmgAP">
         {{localize "torgeternity.powers.attack"}}? / {{localize "torgeternity.powers.damage"}} /
         {{localize "torgeternity.powers.ap"}}
       </p>
@@ -59,10 +59,9 @@
     </div>
     <div class="main-content">
       <p class="item-data-label">{{localize "torgeternity.gear.description"}}</p>
-      <div name="system.description" class="item-description-textarea">
-        <prose-mirror toggled name="system.description" {{disabled (not editable)}}
-          value="{{ item.system.description }}">{{{ enrichedDetails }}}</prose-mirror>
-      </div>
+      <prose-mirror name="system.description" class="item-description-textarea" toggled name="system.description"
+        {{disabled (not editable)}}
+        value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.goodResult"}}</p>
       <div>
         <textarea name="system.good" class="item-description-textarea">

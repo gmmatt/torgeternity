@@ -144,9 +144,9 @@ form.torgeternity {
   row-gap: normal;
 }
 
-/*.scrollable {
+.scrollable {
   margin-right: 0px;
-}*/
+}
 
 .window-content.scrollable {
   overflow-y: auto;
@@ -223,17 +223,6 @@ form.sheet.torgeternity table td select {
   display: none;
 }
 
-.sheet.actor .window-content .background .editor {
-  grid-column: 1/9;
-  grid-row: 1/9;
-  background: url(../images/bckg-hex.webp);
-  background-size: 100% 90%;
-  background-repeat: no-repeat;
-  min-height: 200px;
-  min-width: 150px;
-  padding: 15% 10% 10% 10%;
-}
-
 .sheet.actor.vehicle .window-content .background .list-section-heading {
   grid-column: 1/9;
   grid-row: 1/2;
@@ -289,6 +278,12 @@ form.sheet.torgeternity table td select {
 
 .left-align {
   text-align: left;
+}
+
+.sheet.actor .window-content input {
+  width: 30px;
+  height: 20px;
+  text-align: center;
 }
 
 .sheet.actor .window-content input.long-text {
@@ -444,16 +439,7 @@ div.application.torgeternity.standard-form {
   color: white;
 }
 
-.application.torgeternity .window-content select,
-.application.torgeternity .window-content input[type="text"],
-.application.torgeternity .window-content input[type="number"],
-.application.torgeternity .window-content input[type="password"],
-.application.torgeternity .window-content input[type="date"],
-.application.torgeternity .window-content input[type="time"] .editor,
-.application.torgeternity .window-content input[type="checkbox"] {
-  background-color: rgba(255, 255, 255, 0.39);
-  --checkbox-background-color: white;
-}
+
 
 .torgeternity {
   --color-text-emphatic: white;
@@ -815,13 +801,13 @@ textarea:hover {
   font-size: 12px;
 }
 
-/*body * {
+body * {
   scrollbar-color: #227878 #2e2e2e94;
   scrollbar-width: thin;
 }
 
 
-footer button {
+/*footer button {
   font-family: "Palatino Linotype";
 }*/
 
@@ -906,7 +892,6 @@ a:hover,
   background-image: url(../images/resizerRound.webp);
   background-size: 115% 115%;
   background-position: center;
-  padding: 2px;
   border: none;
   z-index: -1;
   border-radius: 50%;
@@ -915,7 +900,7 @@ a:hover,
 }
 
 .application.torgeternity .window-resizable-handle:hover {
-  z-index: +1;
+  z-index: 200;
 }
 
 .application.torgeternity .window-resizable-handle i.fas {
@@ -2429,6 +2414,7 @@ p.skill-chat-title.skilled {
   max-height: 20px;
   font-size: 13px;
   font-family: Signika;
+  width: initial;
 }
 
 .sheet.actor .window-content select:active,
@@ -2451,7 +2437,7 @@ p.skill-chat-title.skilled {
   border-radius: 50%;
   background: url(../images/roundBack.webp);
   background-size: cover;
-  /*font-family: Signika;*/
+  font-family: Signika;
   font-size: 15px;
   color: black;
 }
@@ -2818,9 +2804,11 @@ p.skill-chat-title.skilled {
   grid-row: 1/9;
   background: url(../images/bckg-hex.webp);
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   min-height: 200px;
   min-width: 150px;
-  padding: 20% 10% 10% 10%;
+  padding: 15% 10% 10% 10%;
+  /*padding: 20% 10% 10% 10%;*/
   font-family: Palatino;
   font-size: 14px;
 }
@@ -2920,7 +2908,7 @@ p.skill-chat-title.skilled {
   }
 }
 
-.sheet.actor .window-content .xp {
+.sheet.actor.torgeternity .window-content .xp {
   grid-column: 5/9;
   grid-row: 4/5;
   flex-direction: row;
@@ -3359,8 +3347,8 @@ p.skill-chat-title.skilled {
     font-size: 0.9em;
     max-height: 95%;
 
-    div.editor-content {
-      height: 100%;
+    .editor-content {
+      flex: 1 0 auto;
     }
   }
 
@@ -3644,7 +3632,7 @@ p.skill-chat-title.skilled {
     width: 100%;
   }
 
-  .window-content div[name="prerequisites"] .editor {
+  .window-content .editor[name="system.prerequisites"] {
     min-height: 150px;
   }
 
@@ -4224,7 +4212,7 @@ form.deckSetting div.flexrow {
   border-radius: 10px;
 }
 
-.sheet.actor .window-content .threat-sidebar .sidebar-stats {
+.sheet.actor.torgeternity .window-content .threat-sidebar .sidebar-stats {
   border: solid;
   border-width: 2px;
   border-color: black;
@@ -4527,5 +4515,18 @@ body.theme-dark .application.torgeternity {
 .application.torgeternity .window-content input[type="checkbox"] {
   padding-left: 3px;
   padding-right: 3px;
-  /*color: white;*/
+  background-color: rgba(255, 255, 255, 0.39);
+  --checkbox-background-color: white;
+}
+
+.application.torgeternity .window-content select {
+  width: initial;
+}
+
+.sheet.item.miracle p.atkDmgAP {
+  font-size: smaller;
+}
+
+.application.torgeternity textarea {
+  min-height: 50px;
 }
