@@ -9,7 +9,7 @@
       data-tab="background">{{localize "torgeternity.sheetLabels.description"}}</a>
   </nav>
 
-  <header class="sheet-header-vehicle">
+  <header class="sheet-header">
     <div class="vehicle-header-image">
       <img src="{{document.img}}" data-edit="img" data-tooltip="{{document.name}}" />
     </div>
@@ -17,17 +17,17 @@
       <input name="name" type="text" value="{{document.name}}" placeholder="Vehicle Name" size="50" />
     </div>
   </header>
-  <header class="sheet-header-vehicle vehicle-stats">
+  <header class="sheet-header vehicle-stats">
     <div>
       <p>{{localize "torgeternity.sheetLabels.type"}}:</p>
-      <select name="system.type" class="input-box">
+      <select name="system.type">
         {{selectOptions config.vehicleTypes selected=document.system.type localize=true sort=true}}
       </select>
     </div>
 
     <div>
       <p>{{localize "torgeternity.sheetLabels.size"}}:</p>
-      <select name="system.details.sizeBonus" class="input-box">
+      <select name="system.details.sizeBonus">
         {{selectOptions config.sizes selected=document.system.details.sizeBonus localize=true sort=true}}
       </select>
     </div>
@@ -103,7 +103,7 @@
               <td class="vehicle-stat">
                 <input name="system.price.dollars" type="number" value="{{document.system.price.dollars}}"
                   data-dtype="Number" />
-                <select name="system.price.magnitude" class="input-box">
+                <select name="system.price.magnitude">
                   {{selectOptions config.magnitudes selected=document.system.price.magnitude sort=true
                 localize=true}}
                 </select>
