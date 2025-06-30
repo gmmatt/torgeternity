@@ -1,4 +1,4 @@
-<header class="combat-tracker-header">
+<header id="combat-round" class="combat-tracker-header">
   {{#if user.isGM}}
 
     {{!-- Encounter Controls --}}
@@ -80,16 +80,14 @@
   <!-- <img src="systems/torgeternity/images/cards/drama-back.jpg" id="active-drama-card" style="object-fit:contain"> -->
   <nav class="encounters flexrow">
     {{#if user.isGM}}
-      <a class="heros-first" data-tooltip="{{localize 'torgeternity.combat.herosTooltip'}}" {{#unless
-        turns}}disabled{{/unless}}>
-        <i class="fas fa-users" style="color:rgb(132, 132, 255)"></i>
-      </a>
-      <a class="vilains-first" data-tooltip="{{localize 'torgeternity.combat.vilainsTooltip'}}" {{#unless
-        turns}}disabled{{/unless}}>
-        <i class="fas fa-users" style="color:rgb(253, 148, 148)"></i>
-      </a>
+      <button type="button" class="heros-first icon fa-solid fa-users" data-action="heroesFirst"
+        data-tooltip="{{localize 'torgeternity.combat.herosTooltip'}}" {{disabled (not combat.turns)}}>
+      </button>
+      <button type="button" class="vilains-first icon fa-solid fa-users" data-action="villainsFirst"
+        data-tooltip="{{localize 'torgeternity.combat.vilainsTooltip'}}" {{disabled (not combat.turns)}}>
+      </button>
     {{/if}}
-    <a class="dsr-counter" {{#unless turns}}disabled{{/unless}}>
+    <button type="button" class="dsr-counter" data-action="dsrCounter" {{disabled (not combat.turns)}}>
       <span class="dsr-token">
         <span class="dsr-step">
           {{#if combat.flags.torgeternity.dsrStage}}
@@ -104,47 +102,30 @@
           {{/if}}
         </span>
       </span>
-    </a>
+    </button>
 
-    <div class="encounter-controls {{#if hasCombat}}combat{{/if}}">
-
-      {{!-- Bulk Rolls --}}
-      <div class="control-buttons left flexrow">
-        {{#if user.isGM}}
-          <button type="button" class="inline-control combat-control icon fa-solid fa-users" data-action="rollAll"
-            {{#unless combat.turns.length}}disabled{{/unless}} data-tooltip="COMBAT.RollAll"
-            aria-label="{{ localize 'COMBAT.RollAll' }}"></button>
-          <button type="button" class="inline-control combat-control icon fa-solid fa-users-cog" data-action="rollNPC"
-            {{#unless combat.turns.length}}disabled{{/unless}} data-tooltip="COMBAT.RollNPC"
-            aria-label="{{ localize 'COMBAT.RollNPC' }}"></button>
+    {{!-- Combat Status --}}
+    <strong class="encounter-title">
+      {{#if combats.length}}
+        {{#if combat.round}}
+          {{ localize "COMBAT.Round" round=combat.round }}
         {{else}}
-          <div class="spacer"></div>
-          <div class="spacer"></div>
+          {{ localize "COMBAT.NotStarted" }}
         {{/if}}
-      </div>
+      {{else}}
+        {{ localize "COMBAT.None" }}
+      {{/if}}
+    </strong>
 
-      {{!-- Combat Status --}}
-      <strong class="encounter-title">
-        {{#if combats.length}}
-          {{#if combat.round}}
-            {{ localize "COMBAT.Round" round=combat.round }}
-          {{else}}
-            {{ localize "COMBAT.NotStarted" }}
-          {{/if}}
-        {{else}}
-          {{ localize "COMBAT.None" }}
-        {{/if}}
-      </strong>
-
-      {{!-- Combat Controls --}}
-      <div class="control-buttons right flexrow">
-        <div class="spacer"></div>
-        <button type="button"
-          class="encounter-context-menu inline-control combat-control icon fa-solid fa-ellipsis-vertical"
-          {{#unless (and user.isGM hasCombat)}}disabled{{/unless}}></button>
-      </div>
-
+    {{!-- Combat Controls --}}
+    <div class="control-buttons right flexrow">
+      <div class="spacer"></div>
+      <button type="button"
+        class="encounter-context-menu inline-control combat-control icon fa-solid fa-ellipsis-vertical"
+        {{#unless (and user.isGM hasCombat)}}disabled{{/unless}}></button>
     </div>
+
+
 
     <!--{{#if combatCount}} {{#if round}}
         <h3>{{localize 'COMBAT.Round'}} {{round}}</h3>
