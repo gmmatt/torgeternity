@@ -9,7 +9,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
 
   static DEFAULT_OPTIONS = {
     actions: {
-      partySheet: TorgeternityPlayerList.#onPartySheet,
+      partySheet: PartySheet.showParty,
       possAdd: TorgeternityPlayerList.#onAaddPossibility,
       possMinus: TorgeternityPlayerList.#onMinusPossibility,
       possReset: TorgeternityPlayerList.#onResetPossibilities

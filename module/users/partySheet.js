@@ -6,17 +6,15 @@
  * The constructors accepts `{activePlayers: true}` to restrict the list of players to only
  * those which are currently online.
  */
-export default class PartySheet extends foundry.applications.ui.Players {
+const { ApplicationV2, HandlebarsApplicationMixin, DialogV2 } = foundry.applications.api
+
+export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
-    id: 'party-sheet',
-    tag: "form",
-    classes: ['torgeternity'],   // "faded-ui" removed by _initializeApplicationOptions
+    classes: ['torgeternity', 'party-sheet'],   // "faded-ui" removed by _initializeApplicationOptions
     window: {
       contentClasses: ["standard-form"],
       resizable: true,
-      frame: true,
-      positioned: true,
     },
     actions: {
       clickItem: PartySheet.#onClickItem,
@@ -27,15 +25,13 @@ export default class PartySheet extends foundry.applications.ui.Players {
     body: { template: 'systems/torgeternity/templates/playerList/partySheet.hbs', scrollable: [""] },
   }
 
-
   /**
    *
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
-    context.users = this.options.activeActors ?
-      game.users.filter(user => !user.isGM && user.active) :
-      game.users.filter(user => !user.isGM);
+    const showAll = !this.options.activeActors;
+    context.users = game.users.filter(user => !user.isGM && (showAll || user.active));
 
     for (const user of context.users) {
       if (user.role === CONST.USER_ROLES.GAMEMASTER || !user.character) continue;
@@ -53,21 +49,6 @@ export default class PartySheet extends foundry.applications.ui.Players {
     return context;
   }
 
-  /**
-   * Remove flex-ui class (to prevent fading)
-   * @param {*} options 
-   * @returns 
-   */
-  _initializeApplicationOptions(options) {
-    const appOptions = super._initializeApplicationOptions(options);
-    appOptions.classes = appOptions.classes.filter(cl => cl !== 'faded-ui');
-    return appOptions;
-  }
-
-  async _onRender(context, options) {
-    super._onRender(context, options);
-    console.log(context);
-  }
   /**
    *
    * @param ev
@@ -87,19 +68,33 @@ export default class PartySheet extends foundry.applications.ui.Players {
     game.actors.get(actorId).sheet.render(true);
   }
 
-  /**
-   * Display a window showing all actors.
-   */
-  static showAllParty() {
-    const dialog = new PartySheet({ activeActors: false });
-    dialog.render(true);
-  }
-
-  /**
-   * Display a window showing only active Actors.
-   */
-  static showActiveParty() {
-    const dialog = new PartySheet({ activeActors: false });
-    dialog.render(true);
+  static showParty() {
+    DialogV2.wait({
+      classes: ['torgeternity'],
+      window: {
+        title: 'torgeternity.partySheet.openParty',
+        contentClasses: ["standard-form"],
+      },
+      content: `${game.i18n.localize('torgeternity.partySheet.chooseParty')}`,
+      buttons: [
+        {
+          action: "all",
+          label: "torgeternity.partySheet.allPlayers",
+          callback: () => {
+            const dialog = new PartySheet({ activeActors: false });
+            dialog.render(true);
+          }
+        },
+        {
+          action: 'active',
+          label: "torgeternity.partySheet.activePlayers",
+          disabled: game.users.filter(user => user.active && !user.isGM).length === 0,
+          callback: () => {
+            const dialog = new PartySheet({ activeActors: true });
+            dialog.render(true);
+          }
+        }
+      ]
+    });
   }
 }
