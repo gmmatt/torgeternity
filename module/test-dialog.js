@@ -224,25 +224,23 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   async _onRender(context, options) {
     await super._onRender(context, options);
 
-    this.element.querySelector('#bonus-text')?.addEventListener('change', (event) => {
-      if (isNaN(parseInt(event.currentTarget.value))) {
-        const rdb = $(event.currentTarget).parent().find('#roll');
-        const rdbNo = $(event.currentTarget).parent().find('#previous-bonus');
-        if (rdb.length > 0) {
-          rdb.prop('checked', true);
-          rdbNo.prop('checked', false);
-        }
-      } else {
-        const rdb = $(event.currentTarget).parent().find('#previous-bonus');
-        const rdbNo = $(event.currentTarget).parent().find('#roll');
-        if (rdb.length > 0) {
-          rdb.prop('checked', true);
-          rdbNo.prop('checked', false);
-        }
-      }
-    });
+    this.element.querySelector('#bonus-text')?.addEventListener('change', this.onChangeBonusText.bind(this));
   }
 
+  /**
+   * Ensure the correct radio button is selected.
+   * @param {*} event 
+   * 
+   */
+  onChangeBonusText(event) {
+    const input = event.target;
+    const rdb = input.parentElement.querySelector('#roll');
+    const rdbNum = input.parentElement.querySelector('#previous-bonus');
+    if (!rdb) return;
+    const isEmpty = isNaN(parseInt(input.value));
+    rdb.checked = isEmpty;
+    rdbNum.checked = !isEmpty;
+  }
   /**
    *
    * @param event

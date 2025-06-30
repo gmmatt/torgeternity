@@ -259,8 +259,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   static #onItemDelete(event, target) {
     if (this.item.type === 'race') {
-      const inheritedType = $(event.currentTarget.closest('.item')).attr('data-inheritedType');
-      const id = $(event.currentTarget.closest('.item')).attr('data-item-id');
+      const inheritedType = target.closest('.item').dataset.inheritedtype;
+      const id = target.closest('.item').dataset.itemid;
       const raceItem = this.item;
       const allThingsOfRaceItem =
         inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
