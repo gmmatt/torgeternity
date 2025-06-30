@@ -2,21 +2,20 @@
   <div class="sheet-content">
     <div class="asside">
       <p class="item-data-label">{{localize "torgeternity.powers.skill"}}</p>
-      <select name="system.attackWith" class="input-box">
+      <select name="system.attackWith">
         {{selectOptions config.skills selected=item.system.attackWith localize=true sort=true}}
       </select>
       <p class="item-data-label">{{localize "torgeternity.gear.damageType"}}</p>
-      <select name="system.damageType" class="input-box">
+      <select name="system.damageType">
         {{selectOptions config.damageTypes selected=item.system.damageType localize=true}}
       </select>
       <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
       <input
         name="system.damage"
         type="number"
-        value="{{item.system.damage}}"
-        class="input-box" />
+        value="{{item.system.damage}}" />
       <p class="item-data-label">{{localize "torgeternity.gear.ap"}}</p>
-      <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
+      <input name="system.ap" type="number" value="{{item.system.ap}}" />
     </div>
     <div class="main-content">
       <p class="item-data-label">
@@ -24,16 +23,14 @@
         <input
           name="system.notes"
           type="text"
-          value="{{item.system.notes}}"
-          class="input-box" />
+          value="{{item.system.notes}}" />
       </p>
       <p class="item-data-label">
         {{localize "torgeternity.gear.chatNote"}}
         <input
           name="system.chatNote"
           type="text"
-          value="{{item.system.chatNote}}"
-          class="input-box" />
+          value="{{item.system.chatNote}}" />
       </p>
       <div name="system.description" class="item-description-textarea">
         <prose-mirror toggled name="system.description" {{disabled (not editable)}}

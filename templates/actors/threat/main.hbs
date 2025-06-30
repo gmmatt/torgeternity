@@ -21,12 +21,12 @@
       <h1><input name="name" type="text" value="{{document.name}}" placeholder="Threat Name" /></h1><br>
       <div class="sub-header">
         <span class="threat-edit">
-          <select name="system.details.sizeBonus" class="input-box">
+          <select name="system.details.sizeBonus">
             {{selectOptions config.sizes selected=document.system.details.sizeBonus localize=true sort=true}}
           </select>
         </span>
         <span class="threat-edit">
-          <select name="system.details.clearance" class="input-box">
+          <select name="system.details.clearance">
             {{selectOptions config.clearances selected=document.system.details.clearance localize=true sort=true}}
           </select>
         </span>

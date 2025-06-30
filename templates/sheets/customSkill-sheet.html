@@ -2,17 +2,16 @@
   <div class="sheet-content">
     <div class="asside">
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.skillAdds"}}</p>
-      <input name="system.adds" type="number" value="{{item.system.adds}}" class="input-box" />
+      <input name="system.adds" type="number" value="{{item.system.adds}}" />
 
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.skillValue"}}</p>
       <input
         name="system.value"
         type="number"
-        value="{{item.system.value}}"
-        class="input-box" />
+        value="{{item.system.value}}" />
 
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.baseAttribute"}}</p>
-      <select name="system.baseAttribute" class="input-box">
+      <select name="system.baseAttribute">
         {{selectOptions config.attributeTypes selected=item.system.baseAttribute localize=true sort=true}}
       </select>
 

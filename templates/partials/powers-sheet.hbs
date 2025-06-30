@@ -2,63 +2,58 @@
   <div class="sheet-content">
     <div class="asside">
       <p class="item-data-label">{{localize "torgeternity.powers.axiom"}}</p>
-      <input name="system.axiom" type="number" value="{{item.system.axiom}}" class="input-box" />
+      <input name="system.axiom" type="number" value="{{item.system.axiom}}" />
       <p class="item-data-label">
         {{localize "torgeternity.powers.skill"}}/{{localize "torgeternity.powers.skilllevel"}}
       </p>
-      <select name="system.skill" class="input-box">
+      <select name="system.skill">
         {{selectOptions config.powerSkills selected=item.system.skill localize=true sort=true}}
       </select>
       <input
         name="system.skilllevel"
         type="number"
-        value="{{item.system.skilllevel}}"
-        class="input-box" />
+        value="{{item.system.skilllevel}}" />
       <p class="item-data-label">{{localize "torgeternity.powers.dn"}}</p>
-      <select name="system.dn" class="input-box">
+      <select name="system.dn">
         {{selectOptions config.dnTypes selected=item.system.dn localize=true}}
       </select>
       <p class="item-data-label">{{localize "torgeternity.powers.modifier"}}</p>
       <input
         name="system.modifier"
         type="number"
-        value="{{item.system.modifier}}"
-        class="input-box" />
+        value="{{item.system.modifier}}" />
       <p class="item-data-label">{{localize "torgeternity.powers.castingtime"}}</p>
       <input
         name="system.castingtime"
         type="text"
-        value="{{item.system.castingtime}}"
-        class="input-box" />
+        value="{{item.system.castingtime}}" />
       <p class="item-data-label">{{localize "torgeternity.powers.range"}}</p>
-      <input name="system.range" type="text" value="{{item.system.range}}" class="input-box" />
+      <input name="system.range" type="text" value="{{item.system.range}}" />
       <p class="item-data-label">{{localize "torgeternity.powers.duration"}}</p>
       <input
         name="system.duration"
         type="text"
-        value="{{item.system.duration}}"
-        class="input-box" />
+        value="{{item.system.duration}}" />
       <p class="item-data-label">
         {{localize "torgeternity.powers.attack"}}? / {{localize "torgeternity.powers.damage"}} /
         {{localize "torgeternity.powers.ap"}}
       </p>
-      <select name="system.isAttack" class="input-box-small" default="false">
+      <select name="system.isAttack" default="false">
         {{selectOptions config.yesNo selected=item.system.isAttack localize=true sort=true}}
       </select>
       <input
         name="system.damage"
         type="number"
-        value="{{item.system.damage}}"
-        class="input-box-small" />
-      <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box-small" />
+        value="{{item.system.damage}}" />
+      <input name="system.ap" type="number" value="{{item.system.ap}}" />
       <p class="item-data-label">
         {{localize "torgeternity.powers.applySize"}} / {{localize
           "torgeternity.powers.applyArmor"}}
       </p>
-      <select name="system.applySize" class="input-box-small" default="false">
+      <select name="system.applySize" default="false">
         {{selectOptions config.yesNo selected=item.system.applySize localize=true sort=true}}
       </select>
-      <select name="system.applyArmor" class="input-box-small" default="false">
+      <select name="system.applyArmor" default="false">
         {{selectOptions config.yesNo selected=item.system.applyArmor localize=true sort=true}}
       </select>
     </div>

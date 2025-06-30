@@ -5,29 +5,25 @@
       <input
         name="system.techlevel"
         type="number"
-        value="{{item.system.techlevel}}"
-        class="input-box-small" />
+        value="{{item.system.techlevel}}" />
 
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.quantity"}}</p>
       <input
         name="system.quantity"
         type="number"
-        value="{{item.system.quantity}}"
-        class="input-box-small" />
+        value="{{item.system.quantity}}" />
 
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.damageMod"}}</p>
       <input
         name="system.damageMod"
         type="number"
-        value="{{item.system.damageMod}}"
-        class="input-box-small" />
+        value="{{item.system.damageMod}}" />
 
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.APMod"}}</p>
       <input
         name="system.apMod"
         type="number"
-        value="{{item.system.apMod}}"
-        class="input-box-small" />
+        value="{{item.system.apMod}}" />
 
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.firedamage"}}</p>
       <input
@@ -36,7 +32,7 @@
         {{checked item.system.fireDamage}} />
 
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.blastRadius"}}</p>
-      <select name="system.blastRadius" class="input-box">
+      <select name="system.blastRadius">
         <option>{{localize "torgeternity.sheetLabels.none"}}</option>
         {{selectOptions config.blastRadius selected=item.system.blastRadius localize=true}}
       </select>
@@ -44,7 +40,7 @@
       <p class="item-data-label">
         {{localize "torgeternity.chatText.check.modifier.darkness"}}{{localize "torgeternity.powers.modifier"}}
       </p>
-      <select name="system.darknessMod" class="input-box">
+      <select name="system.darknessMod">
         {{selectOptions config.levelDifferences selected=item.system.darknessMod localize=true}}
       </select>
     </div>

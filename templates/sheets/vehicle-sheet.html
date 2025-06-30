@@ -2,51 +2,45 @@
   <div class="sheet-content">
     <div class="asside">
       <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
-      <select name="system.cosm" class="input-box">
+      <select name="system.cosm">
         {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
       </select>
       <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
       <input
         name="system.techlevel"
         type="number"
-        value="{{item.system.techlevel}}"
-        class="input-box" />
+        value="{{item.system.techlevel}}" />
       <p class="item-data-label">
         {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
       </p>
       <input
         name="system.price"
         type="text"
-        value="{{item.system.price}}"
-        class="input-box-small" />
+        value="{{item.system.price}}" />
       <input
         name="system.value"
         type="number"
-        value="{{item.system.value}}"
-        class="input-box-small" />
+        value="{{item.system.value}}" />
       <p class="item-data-label">{{localize "torgeternity.gear.topspeed"}}</p>
       <input
         name="system.topspeed"
         type="text"
-        value="{{item.system.topspeed}}"
-        class="input-box" />
+        value="{{item.system.topspeed}}" />
       <p class="item-data-label">{{localize "torgeternity.gear.passengers"}}</p>
-      <input name="system.pass" type="number" value="{{item.system.pass}}" class="input-box" />
+      <input name="system.pass" type="number" value="{{item.system.pass}}" />
       <p class="item-data-label">{{localize "torgeternity.gear.mr"}}</p>
-      <input name="system.mr" type="number" value="{{item.system.mr}}" class="input-box" />
+      <input name="system.mr" type="number" value="{{item.system.mr}}" />
       <p class="item-data-label">
         {{localize "torgeternity.gear.wounds"}}/{{localize "torgeternity.gear.toughness"}}
       </p>
       <input
         name="system.wounds"
         type="number"
-        value="{{item.system.wounds}}"
-        class="input-box-small" />
+        value="{{item.system.wounds}}" />
       <input
         name="system.tough"
         type="text"
-        value="{{item.system.tough}}"
-        class="input-box-small" />
+        value="{{item.system.tough}}" />
     </div>
     <div class="main-content">
       <div class="item-description-textarea" style="padding: 0px 0px 0px 10px">
