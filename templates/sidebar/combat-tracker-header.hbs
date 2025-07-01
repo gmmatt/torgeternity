@@ -87,7 +87,8 @@
         data-tooltip="{{localize 'torgeternity.combat.vilainsTooltip'}}" {{disabled (not combat.turns)}}>
       </button>
     {{/if}}
-    <button type="button" class="dsr-counter" data-action="dsrCounter" {{disabled (not combat.turns)}}>
+    <button type="button" class="dsr-counter" data-action="dsrCounter"
+      {{disabled (not (and @root.user.isGM combat.turns))}}>
       <span class="dsr-token">
         <span class="dsr-step">
           {{#if combat.flags.torgeternity.dsrStage}}
