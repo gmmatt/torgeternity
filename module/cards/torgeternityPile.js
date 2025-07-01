@@ -8,8 +8,10 @@ export default class torgeternityPile extends foundry.applications.sheets.CardPi
   static DEFAULT_OPTIONS = {
     type: "pile",
     classes: ['torgeternity', 'sheet', 'cardsPile', 'cards-config'],
-    position: {
+    window: {
       contentClasses: ["standard-form"],
+    },
+    position: {
       width: 400,
       height: "auto"
     },
