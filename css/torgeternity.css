@@ -4503,3 +4503,11 @@ body.theme-dark .application.torgeternity {
   text-align: center;
   background-color: #9e96868e;
 }
+
+.sidebar-tab.combat-sidebar {
+  background-image: url(../images/thunder.webp);
+
+  button {
+    color: white;
+  }
+}
