@@ -147,9 +147,9 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "endMyTurn": "Done",
       "nextKeep": "Next Round (Keep Current Card)",
-      "nextNew": "Next Round (New Card)",
-      "herosTooltip": "heros first",
-      "vilainsTooltip": "vilains first",
+      "nextNew": "Next Round (Draw New Card)",
+      "herosTooltip": "Heroes first",
+      "vilainsTooltip": "Villains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
     },
     "contextMenu": {
