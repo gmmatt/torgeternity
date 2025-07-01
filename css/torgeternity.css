@@ -4504,6 +4504,11 @@ body.theme-dark .application.torgeternity {
   background-color: #9e96868e;
 }
 
+body.game .app,
+body {
+  --sidebar-width: 350px;
+}
+
 .sidebar-tab.combat-sidebar {
   background-image: url(../images/thunder.webp);
 
