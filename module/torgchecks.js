@@ -8,7 +8,8 @@ import { ChatMessageTorg } from './documents/chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
-  if (!test?.targetAll.length) test.targetAll = test.targets;
+  // A bad way of handling no targets!
+  if (!test?.targetAll.length) test.targetAll = [test.targets];
 
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try {
