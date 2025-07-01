@@ -2870,7 +2870,8 @@ nav#controls,
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-#combat {
+#combat,
+#combat-popout {
   .combatant-init {
     color: white;
   }
