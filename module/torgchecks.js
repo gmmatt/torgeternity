@@ -8,8 +8,7 @@ import { ChatMessageTorg } from './documents/chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
-  if (test?.targetAll.length != 0) {
-  } else test.targetAll = [test.targets];
+  if (!test?.targetAll.length) test.targetAll = test.targets;
 
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try {
@@ -140,17 +139,17 @@ export async function renderSkillChat(test) {
       }
     }
 
-    if (unskilledTest === true) {
+    if (unskilledTest) {
       test.unskilledLabel = 'display:block';
     } else {
       test.unskilledLabel = 'display:none';
     }
 
     // Generate roll, if needed
-    if ((test.rollTotal === 0) & (test.previousBonus === false)) {
+    if (test.rollTotal === 0 && !test.previousBonus) {
       // Generate dice roll
       let dice = '1d20x10x20';
-      if (unskilledTest === true) {
+      if (unskilledTest) {
         dice = '1d20x10';
       }
       test.diceroll = await new Roll(dice).evaluate();
@@ -301,44 +300,34 @@ export async function renderSkillChat(test) {
       test.modifiers += parseInt(test.targetsModifier);
     }
 
-    if (test.isOther1 == true) {
+    if (test.isOther1) {
       test.displayModifiers = true;
       test.modifierText += test.other1Description + ' ' + test.other1Modifier + '\n';
       test.modifiers += parseInt(test.other1Modifier);
     }
 
-    if (test.isOther2 == true) {
+    if (test.isOther2) {
       test.displayModifiers = true;
       test.modifierText += test.other2Description + ' ' + test.other2Modifier + '\n';
       test.modifiers += parseInt(test.other2Modifier);
     }
 
-    if (test.isOther3 == true) {
+    if (test.isOther3) {
       test.displayModifiers = true;
       test.modifierText += test.other3Description + ' ' + test.other3Modifier + '\n';
       test.modifiers += parseInt(test.other3Modifier);
     }
 
     // Apply target-related modifiers
-    if (target?.present == true) {
+    if (target?.present) {
       // Apply the size modifier in appropriate circumstances
-      if (test.applySize == true) {
-        if (test.sizeModifier > 0) {
+      if (test.applySize) {
+        if (test.sizeModifier !== 0) {
           test.displayModifiers = true;
           test.modifiers += parseInt(test.sizeModifier);
           test.modifierText +=
             game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') +
-            ' +' +
-            test.sizeModifier +
-            '\n';
-        } else if (test.sizeModifier < 0) {
-          test.displayModifiers = true;
-          test.modifiers += parseInt(test.sizeModifier);
-          test.modifierText +=
-            game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') +
-            ' ' +
-            test.sizeModifier +
-            '\n';
+            ' +' + test.sizeModifier + '\n';
         }
       }
 
@@ -388,7 +377,7 @@ export async function renderSkillChat(test) {
       const ownToken = canvas.tokens.placeables.find((tok) =>
         test.actor.includes(tok.document.actor.uuid)
       );
-      if (!!ownToken & (i === 0)) {
+      if (!!ownToken && (i === 0)) {
         if (!ownToken.document.hasStatusEffect('veryVulnerable')) {
           if (ownToken.document.hasStatusEffect('vulnerable')) {
             // take away vulnerable effect
@@ -436,7 +425,7 @@ export async function renderSkillChat(test) {
 
     if (test.type === 'power') {
       if (test.powerModifier > 0 || test.powerModifier < 0) {
-        test.displayModifiers === true;
+        test.displayModifiers = true;
         test.modifiers += parseInt(test.powerModifier);
         test.modifierText +=
           game.i18n.localize('torgeternity.chatText.check.modifier.powerModifier') +
@@ -449,7 +438,7 @@ export async function renderSkillChat(test) {
     // Apply vehicle-related modifiers
     if (test.testType === 'chase' || test.testType === 'stunt' || test.testType === 'vehicleBase') {
       if (test.maneuverModifier > 0 || test.maneuverModifier < 0) {
-        test.displayModifiers === true;
+        test.displayModifiers = true;
         test.modifiers += parseInt(test.maneuverModifier);
         test.modifierText +=
           game.i18n.localize('torgeternity.stats.maneuverModifier') +
@@ -461,14 +450,14 @@ export async function renderSkillChat(test) {
 
     if (test.testType === 'chase') {
       if (test.speedModifier > 0) {
-        test.displayModifiers === true;
+        test.displayModifiers = true;
         test.modifiers += parseInt(test.speedModifier);
         test.modifierText +=
           game.i18n.localize('torgeternity.stats.speedModifier') + ' ' + test.speedModifier + '\n';
       }
     }
 
-    if (test.displayModifiers === true) {
+    if (test.displayModifiers = true) {
       test.modifierLabel = 'display:';
     } else {
       test.modifierLabel = 'display:none';
@@ -482,9 +471,7 @@ export async function renderSkillChat(test) {
     const tempBonus = parseInt(test.bonus);
     test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
 
-    test.rollResult = parseInt(
-      parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers)
-    );
+    test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
 
     // Determine Outcome
     test.outcome = null;
@@ -786,7 +773,7 @@ export async function renderSkillChat(test) {
       test.resultTextColor = test.outcomeColor;
     }
     // If an attack, calculate and display damage
-    if (test.isAttack === true) {
+    if (test.isAttack) {
       test.damageLabel = 'display: block';
       // Add damage modifier for vital area hits, if necessary
       let adjustedDamage = test.damage;
@@ -794,14 +781,14 @@ export async function renderSkillChat(test) {
         adjustedDamage = test.damage + test.vitalAreaDamageModifier;
       }
       // add additional Damage from roll dialogue
-      if (test?.additionalDamage && test.previousBonus === false) {
+      if (test?.additionalDamage && !test.previousBonus) {
         adjustedDamage += test?.additionalDamage;
       }
       // Check for whether a target is present & turn on display of damage sub-label
       if (test?.target?.present) {
         test.damageSubLabel = 'display:block';
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
-        if (test.applyArmor === true) {
+        if (test.applyArmor) {
           test.targetAdjustedToughness =
             test.target.toughness -
             Math.min(parseInt(test.weaponAP), test.target.armor) +
@@ -824,7 +811,7 @@ export async function renderSkillChat(test) {
           );
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
-          if (test.addBDs && test.previousBonus === false) {
+          if (test.addBDs && !test.previousBonus) {
             iteratedRoll = await torgBD(test.trademark, test.addBDs);
             test.BDDamageInPromise = iteratedRoll.total;
             test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
@@ -888,7 +875,7 @@ export async function renderSkillChat(test) {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
     } else if (test.testType === 'power') {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
-      if (test.isAttack === true) {
+      if (test.isAttack) {
         test.bdStyle = 'display:';
       } else {
         test.bdStyle = 'display:none';

@@ -314,7 +314,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       this.test.concealmentModifier = fields.concealmentModifier;
 
       // Add Cover Modifier
-      this.test.coverModifier = fields.coverModifier;
+      this.test.coverModifier = fields.coverModifier ?? 0;
 
       // Add additional damage and BDs in promise. Null if not applicable
       this.test.additionalDamage = fields.additionalDamage ?? 0;
