@@ -1192,8 +1192,8 @@ form.torgeternity {
   }
 
   img.profile-img {
-    height: 100%;
-    width: unset;
+    height: 120px;
+    width: 120px;
     object-fit: cover;
     object-position: 50% 0;
     aspect-ratio: 1/1;
