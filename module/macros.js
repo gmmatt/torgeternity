@@ -327,10 +327,13 @@ export class TorgeternityMacros {
       ],
     });
 
+    const setting = game.settings.get('torgeternity', 'deckSetting');
     // Find the Drama Deck
-    const dram = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    const dramaDeck = game.cards.get(setting.dramaDeck);
     // Find ?? the index of the Active Drama Card in the Drama Deck
-    const ind = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive)._source.cards[0].sort;
+    const activeDeck = game.cards.get(setting.dramaActive);
+    const cardSort = (activeDeck.cards.size === 0) ? dramaDeck.size :
+      dramaDeck.cards.get(activeDeck._source.cards[0]._id).sort + 1;
 
     DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.showingDramaCards.recipient', },
@@ -348,20 +351,27 @@ export class TorgeternityMacros {
               }
             }
             if (!targets.length) return;
+            let msg = {
+              whisper: targets,
+              content: `<div class="card-draw flexcol">${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.show')}`
+            };
             for (let j = 0; j < numCards; j++) {
-              const card = dram.cards.find((i) => i.sort === ind + j + 1);
-              ChatMessage.create({
-                whisper: targets,
-                content: `<div class="card-draw flexrow">
+              const card = dramaDeck.cards.find(card => card.sort === cardSort + j);
+              if (!card) {
+                ui.notifications.warn(game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.noMoreCards'));
+                break;;
+              }
+              msg.content +=
+                `<div class="card-draw flexrow">
                 <span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/>
-                <span><img src="${card.img}"></span>
-                </span>
-                <span class="card-name">${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.show')} ${card.name}</span>
-                </div>`,
-              });
-            }
+                <span><img src="${card.img}"></span></span>
+                <span class="card-name">${card.name}</span>
+                </div>`;
+            };
+            msg.content += `</div>`;
+            ChatMessage.create(msg);
           }
-        },
+        }
       ],
     });
   }

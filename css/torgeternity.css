@@ -1876,9 +1876,13 @@ div.application.torgeternity.standard-form {
     width: initial;
   }
 
-  span.handdesign input[type="checkbox"] {
-    background-color: transparent;
-    --checkbox-background-color: white;
+  div.test-dialog,
+  span.handdesign {
+
+    input[type="checkbox"] {
+      background-color: transparent;
+      --checkbox-background-color: white;
+    }
   }
 }
 
@@ -3285,6 +3289,10 @@ p.skill-chat-title.skilled {
   flex: 1;
   text-align: center;
   margin-left: auto;
+}
+
+.chat-message .card-draw.flexcol {
+  align-items: start;
 }
 
 .chat-message .card-draw .card-name {

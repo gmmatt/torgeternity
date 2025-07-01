@@ -272,7 +272,8 @@
         "recipient": "Choice of whisper's recipient",
         "whisper": "Whisper to checked active player",
         "apply": "Apply",
-        "show": "Next card(s)"
+        "show": "Next card(s)",
+        "noMoreCards": "No More Drama cards available"
       },
       "cardRetour": {
         "cardBack": "Card goes back after missplay",
