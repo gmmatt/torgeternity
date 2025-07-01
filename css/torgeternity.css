@@ -1792,6 +1792,10 @@ form.torgeternity {
 /* --------Heavy Weapon Sheet Footer-------- */
 /*                          */
 
+.torgeternity {
+  --color-text-emphatic: white;
+  --color-form-label: white;
+}
 
 form.application.torgeternity.standard-form,
 div.application.torgeternity.standard-form {
@@ -1801,73 +1805,81 @@ div.application.torgeternity.standard-form {
 
 .application.torgeternity .window-content {
   padding: 8px;
-}
 
-.application.torgeternity .window-content .form-header {
-  color: white;
-}
-
-.application.torgeternity .window-content div.form-group input {
-  color: white;
-}
-
-
-
-.torgeternity {
-  --color-text-emphatic: white;
-  --color-form-label: white;
-}
-
-/*
-.application.torgeternity .window-content input::placeholder {
-  background-color: rgba(0, 0, 0, 0);
-}*/
-
-.application.torgeternity .window-content .rollable:hover,
-.application.torgeternity .window-content .rollable:focus {
-  color: #000;
-  text-shadow: 0 0 10px white;
-  cursor: pointer;
-}
-
-.application.torgeternity .window-content .notes,
-.application.torgeternity .window-content .hint {
-  color: #b1afaf;
-  font-family: Palatino;
-  font-size: 14px;
-}
-
-.application.torgeternity .window-content button,
-.application.torgeternity .window-content select {
-  color: rgb(233, 233, 233);
-  cursor: pointer;
-}
-
-.application.torgeternity .window-content button[disabled] {
-  color: gray;
-  border: 1px solid red;
-  cursor: not-allowed;
-}
-
-.application.torgeternity .window-content select option {
-  color: white;
-
-  &disabled {
-    color: rgb(156, 100, 100);
-    background-color: rgb(83, 77, 77);
+  .form-header {
+    color: white;
   }
-}
 
+  div.form-group input {
+    color: white;
+  }
 
+  .rollable:hover,
+  .rollable:focus {
+    color: #000;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+  }
 
-.application.torgeternity .window-content select.doubled {
-  background-color: rgb(238, 148, 148);
-  color: black;
-  border: 1px solid red;
-}
+  .notes,
+  .hint {
+    color: #b1afaf;
+    font-family: Palatino;
+    font-size: 14px;
+  }
 
-.application.torgeternity .window-content button:hover {
-  box-shadow: 0px 0px 5px #4970fa;
+  button,
+  select {
+    color: rgb(233, 233, 233);
+    cursor: pointer;
+  }
+
+  button[disabled] {
+    color: gray;
+    border: 1px solid red;
+    cursor: not-allowed;
+  }
+
+  select option {
+    color: white;
+
+    &disabled {
+      color: rgb(156, 100, 100);
+      background-color: rgb(83, 77, 77);
+    }
+
+    &.doubled {
+      background-color: rgb(238, 148, 148);
+      color: black;
+      border: 1px solid red;
+    }
+  }
+
+  button:hover {
+    box-shadow: 0px 0px 5px #4970fa;
+  }
+
+  select,
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"] .editor,
+  input[type="checkbox"] {
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: rgba(255, 255, 255, 0.39);
+    --checkbox-background-color: black;
+  }
+
+  select {
+    width: initial;
+  }
+
+  span.handdesign input[type="checkbox"] {
+    background-color: transparent;
+    --checkbox-background-color: white;
+  }
 }
 
 .journal-sheet .window-content input[type="text"],
@@ -4463,23 +4475,6 @@ body.theme-dark .application.torgeternity {
   background-image: url(../images/thunder.webp);
   background-size: cover;
   color: white;
-}
-
-.application.torgeternity .window-content select,
-.application.torgeternity .window-content input[type="text"],
-.application.torgeternity .window-content input[type="number"],
-.application.torgeternity .window-content input[type="password"],
-.application.torgeternity .window-content input[type="date"],
-.application.torgeternity .window-content input[type="time"] .editor,
-.application.torgeternity .window-content input[type="checkbox"] {
-  padding-left: 3px;
-  padding-right: 3px;
-  background-color: rgba(255, 255, 255, 0.39);
-  --checkbox-background-color: white;
-}
-
-.application.torgeternity .window-content select {
-  width: initial;
 }
 
 .sheet.item.miracle p.atkDmgAP {
