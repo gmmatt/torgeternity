@@ -8,13 +8,13 @@ import { ChatMessageTorg } from './documents/chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
-  if (test?.targetAll.length != 0) {
-  } else test.targetAll = [test.targets];
+  // A bad way of handling no targets!
+  if (!test?.targetAll.length) test.targetAll = [test.targets];
 
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try {
     game.dice3d.messageHookDisabled = true;
-  } catch (e) {}
+  } catch (e) { }
 
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
@@ -140,17 +140,17 @@ export async function renderSkillChat(test) {
       }
     }
 
-    if (unskilledTest === true) {
+    if (unskilledTest) {
       test.unskilledLabel = 'display:block';
     } else {
       test.unskilledLabel = 'display:none';
     }
 
     // Generate roll, if needed
-    if ((test.rollTotal === 0) & (test.previousBonus === false)) {
+    if (test.rollTotal === 0 && !test.previousBonus) {
       // Generate dice roll
       let dice = '1d20x10x20';
-      if (unskilledTest === true) {
+      if (unskilledTest) {
         dice = '1d20x10';
       }
       test.diceroll = await new Roll(dice).evaluate();
@@ -301,44 +301,34 @@ export async function renderSkillChat(test) {
       test.modifiers += parseInt(test.targetsModifier);
     }
 
-    if (test.isOther1 == true) {
+    if (test.isOther1) {
       test.displayModifiers = true;
       test.modifierText += test.other1Description + ' ' + test.other1Modifier + '\n';
       test.modifiers += parseInt(test.other1Modifier);
     }
 
-    if (test.isOther2 == true) {
+    if (test.isOther2) {
       test.displayModifiers = true;
       test.modifierText += test.other2Description + ' ' + test.other2Modifier + '\n';
       test.modifiers += parseInt(test.other2Modifier);
     }
 
-    if (test.isOther3 == true) {
+    if (test.isOther3) {
       test.displayModifiers = true;
       test.modifierText += test.other3Description + ' ' + test.other3Modifier + '\n';
       test.modifiers += parseInt(test.other3Modifier);
     }
 
     // Apply target-related modifiers
-    if (target?.present == true) {
+    if (target?.present) {
       // Apply the size modifier in appropriate circumstances
-      if (test.applySize == true) {
-        if (test.sizeModifier > 0) {
+      if (test.applySize) {
+        if (test.sizeModifier !== 0) {
           test.displayModifiers = true;
           test.modifiers += parseInt(test.sizeModifier);
           test.modifierText +=
             game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') +
-            ' +' +
-            test.sizeModifier +
-            '\n';
-        } else if (test.sizeModifier < 0) {
-          test.displayModifiers = true;
-          test.modifiers += parseInt(test.sizeModifier);
-          test.modifierText +=
-            game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') +
-            ' ' +
-            test.sizeModifier +
-            '\n';
+            ' +' + test.sizeModifier + '\n';
         }
       }
 
@@ -388,26 +378,27 @@ export async function renderSkillChat(test) {
       const ownToken = canvas.tokens.placeables.find((tok) =>
         test.actor.includes(tok.document.actor.uuid)
       );
-      if (!!ownToken & (i === 0)) {
-        if (!ownToken.actor.statuses.find((d) => d === 'veryVulnerable')) {
-          if (ownToken.actor.statuses.find((d) => d === 'vulnerable')) {
+      if (!!ownToken && (i === 0)) {
+        if (!ownToken.document.hasStatusEffect('veryVulnerable')) {
+          if (ownToken.document.hasStatusEffect('vulnerable')) {
             // take away vulnerable effect
-            const ef = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
-            await ownToken.toggleEffect(ef, { active: false });
+            await ownToken.actor.toggleStatusEffect('vulnerable', { active: false });
           }
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
-          eff.origin = test.actor;
-          eff.duration = { rounds: 2, turns: 2 };
-          await ownToken.toggleEffect(eff, { active: true });
+          const effect = await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: true });
+          effect.update({
+            origin: test.actor,
+            duration: { rounds: 2, turns: 2 }
+          })
         } else if (
           ownToken.actor.appliedEffects.find((d) => d.statuses.find((e) => e === 'veryVulnerable'))
             .duration.turns != 2
         ) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
-          await ownToken.toggleEffect(eff, { active: false });
-          eff.origin = test.actor;
-          eff.duration = { rounds: 2, turns: 2 };
-          await ownToken.toggleEffect(eff, { active: true });
+          await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: false });
+          const effect = await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: true });
+          effect.update({
+            origin: test.actor,
+            duration: { rounds: 2, turns: 2 }
+          })
         }
       }
     }
@@ -435,7 +426,7 @@ export async function renderSkillChat(test) {
 
     if (test.type === 'power') {
       if (test.powerModifier > 0 || test.powerModifier < 0) {
-        test.displayModifiers === true;
+        test.displayModifiers = true;
         test.modifiers += parseInt(test.powerModifier);
         test.modifierText +=
           game.i18n.localize('torgeternity.chatText.check.modifier.powerModifier') +
@@ -448,7 +439,7 @@ export async function renderSkillChat(test) {
     // Apply vehicle-related modifiers
     if (test.testType === 'chase' || test.testType === 'stunt' || test.testType === 'vehicleBase') {
       if (test.maneuverModifier > 0 || test.maneuverModifier < 0) {
-        test.displayModifiers === true;
+        test.displayModifiers = true;
         test.modifiers += parseInt(test.maneuverModifier);
         test.modifierText +=
           game.i18n.localize('torgeternity.stats.maneuverModifier') +
@@ -460,14 +451,14 @@ export async function renderSkillChat(test) {
 
     if (test.testType === 'chase') {
       if (test.speedModifier > 0) {
-        test.displayModifiers === true;
+        test.displayModifiers = true;
         test.modifiers += parseInt(test.speedModifier);
         test.modifierText +=
           game.i18n.localize('torgeternity.stats.speedModifier') + ' ' + test.speedModifier + '\n';
       }
     }
 
-    if (test.displayModifiers === true) {
+    if (test.displayModifiers = true) {
       test.modifierLabel = 'display:';
     } else {
       test.modifierLabel = 'display:none';
@@ -481,9 +472,7 @@ export async function renderSkillChat(test) {
     const tempBonus = parseInt(test.bonus);
     test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
 
-    test.rollResult = parseInt(
-      parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers)
-    );
+    test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
 
     // Determine Outcome
     test.outcome = null;
@@ -785,7 +774,7 @@ export async function renderSkillChat(test) {
       test.resultTextColor = test.outcomeColor;
     }
     // If an attack, calculate and display damage
-    if (test.isAttack === true) {
+    if (test.isAttack) {
       test.damageLabel = 'display: block';
       // Add damage modifier for vital area hits, if necessary
       let adjustedDamage = test.damage;
@@ -793,14 +782,14 @@ export async function renderSkillChat(test) {
         adjustedDamage = test.damage + test.vitalAreaDamageModifier;
       }
       // add additional Damage from roll dialogue
-      if (test?.additionalDamage && test.previousBonus === false) {
+      if (test?.additionalDamage && !test.previousBonus) {
         adjustedDamage += test?.additionalDamage;
       }
       // Check for whether a target is present & turn on display of damage sub-label
       if (test?.target?.present) {
         test.damageSubLabel = 'display:block';
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
-        if (test.applyArmor === true) {
+        if (test.applyArmor) {
           test.targetAdjustedToughness =
             test.target.toughness -
             Math.min(parseInt(test.weaponAP), test.target.armor) +
@@ -823,7 +812,7 @@ export async function renderSkillChat(test) {
           );
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
-          if (test.addBDs && test.previousBonus === false) {
+          if (test.addBDs && !test.previousBonus) {
             iteratedRoll = await torgBD(test.trademark, test.addBDs);
             test.BDDamageInPromise = iteratedRoll.total;
             test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
@@ -887,7 +876,7 @@ export async function renderSkillChat(test) {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
     } else if (test.testType === 'power') {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
-      if (test.isAttack === true) {
+      if (test.isAttack) {
         test.bdStyle = 'display:';
       } else {
         test.bdStyle = 'display:none';
@@ -963,8 +952,11 @@ export async function renderSkillChat(test) {
     const messageDataIterated = {
       ...chatData,
       flags: {
-        torgeternity: { test, currentTarget },
-        template: './systems/torgeternity/templates/partials/skill-card.hbs',
+        torgeternity: {
+          test,
+          currentTarget,
+          template: 'systems/torgeternity/templates/partials/skill-card.hbs',
+        },
       },
     };
 
@@ -972,23 +964,23 @@ export async function renderSkillChat(test) {
     if (i === 0) {
       try {
         await game.dice3d.showForRoll(test.diceroll, game.user, true);
-      } catch (e) {}
+      } catch (e) { }
     }
     try {
       game.dice3d.showForRoll(iteratedRoll);
       iteratedRoll = undefined;
-    } catch (e) {}
+    } catch (e) { }
 
     messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
 
   if (game.settings.get('torgeternity', 'unTarget')) {
-    await game.user.updateTokenTargets();
+    if (game.canvas) await game.user._onUpdateTokenTargets();
     await game.user.broadcastActivity({ targets: [] });
   }
   try {
     game.dice3d.messageHookDisabled = false;
-  } catch (e) {}
+  } catch (e) { }
 
   return messages;
 }
@@ -1000,12 +992,8 @@ export async function renderSkillChat(test) {
  */
 
 export function checkForDiscon(actor) {
-  for (const ef of actor.statuses) {
-    if (ef === 'disconnected') {
-      return true;
-    }
-  }
-  return false;
+  // just like TokenDocument.hasStatusEffect
+  return actor?.statuses.has('disconnected') ?? false;
 }
 
 /**
@@ -1138,17 +1126,15 @@ export async function applyDamages(damageObject, targetuuid) {
       });
       // too many wounds => apply defeat ? Ko ?
       if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
-          await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('dead')) {
+          await targetToken.actor.toggleStatusEffect('dead', { active: true, overlay: true });
         }
       }
       // too many shocks, apply KO if not dead
       if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
-          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('unconscious')) {
+          if (!targetToken.document.hasStatusEffect('dead')) {
+            await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
           }
         }
       }
@@ -1161,9 +1147,8 @@ export async function applyDamages(damageObject, targetuuid) {
       });
       // too many wounds => apply defeat ? Ko ?
       if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
-          await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('dead')) {
+          await targetToken.actor.toggleStatusEffect('dead', { active: true, overlay: true });
         }
       }
     }
@@ -1192,10 +1177,9 @@ export async function backlash1(targetuuid) {
       });
       // too many shocks, apply KO if not dead
       if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
-          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        if (!targetToken.document.hasStatusEffect('unconscious')) {
+          if (!targetToken.document.hasStatusEffect('dead')) {
+            await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
           }
         }
       }
@@ -1222,13 +1206,10 @@ export async function backlash2(targetuuid) {
         'system.shock.value': newShock,
       });
       // too many shocks, apply KO if not dead
-      if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
-          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-            await targetToken.toggleEffect(eff, { active: true, overlay: true });
-          }
-        }
+      if (newShock > targetToken.actor.system.shock.max &&
+        !targetToken.document.hasStatusEffect('unconscious') &&
+        !targetToken.document.hasStatusEffect('dead')) {
+        await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
       }
     }
   } else {
@@ -1244,21 +1225,17 @@ export async function backlash3(targetuuid) {
     targetuuid.includes(tok.document.actorId)
   );
   // apply Stymied, or veryStymied
-  let eff;
-  let oldEff;
-  if (targetToken.actor.statuses.find((d) => d === 'veryStymied')) {
-  } else if (targetToken.actor.statuses.find((d) => d === 'stymied')) {
-    oldEff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
-  } else {
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  if (targetToken.document.hasStatusEffect('stymied')) {
+    await targetToken.actor.toggleStatusEffect('stymied', { active: false });
   }
-  if (eff) {
-    eff.origin = targetuuid;
-    eff.duration = { rounds: 1, turns: 1 };
-    await targetToken.toggleEffect(eff, { active: true });
+
+  if (!targetToken.document.hasStatusEffect('veryStymied')) {
+    let eff = await targetToken.actor.toggleStatusEffect('veryStymied', { active: true });
+    eff.update({
+      origin: targetuuid,
+      duration: { rounds: 1, turns: 1 }
+    })
   }
-  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 //
 /**
@@ -1275,7 +1252,7 @@ export async function soakDamages(soaker) {
     return;
   }
 
-  const test = {
+  new TestDialog({
     testType: 'soak',
     actor: soaker.uuid,
     actorPic: soaker.img,
@@ -1294,9 +1271,7 @@ export async function soakDamages(soaker) {
     attackOptions: false,
     chatNote: '',
     rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
-  };
-
-  new TestDialog(test);
+  });
   // do reality roll
 }
 
@@ -1310,20 +1285,22 @@ export async function applyStymiedState(targetuuid, sourceuuid) {
   );
   // apply Stymied, or veryStymied
   let eff;
-  let oldEff;
-  if (targetToken.actor.statuses.find((d) => d === 'veryStymied')) {
-  } else if (targetToken.actor.statuses.find((d) => d === 'stymied')) {
-    oldEff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  if (targetToken.document.hasStatusEffect('veryStymied')) {
+    //
+  } else if (targetToken.document.hasStatusEffect('stymied')) {
+    await targetToken.actor.toggleStatusEffect('stymied', { active: false });
+    eff = 'veryStymied';
   } else {
-    eff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
+    eff = 'stymied';
   }
+
   if (eff) {
-    eff.origin = sourceuuid;
-    eff.duration = { rounds: 1, turns: 1 };
-    await targetToken.toggleEffect(eff, { active: true });
+    const effect = await targetToken.actor.toggleStatusEffect(eff, { active: true });
+    effect.update({
+      origin: sourceuuid,
+      duration: { rounds: 1, turns: 1 }
+    })
   }
-  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
 /**
@@ -1336,20 +1313,21 @@ export async function applyVulnerableState(targetuuid, sourceuuid) {
   );
   // apply Vulnerable, or veryVulnerable
   let eff;
-  let oldEff;
-  if (targetToken.actor.statuses.find((d) => d === 'veryVulnerable')) {
-  } else if (targetToken.actor.statuses.find((d) => d === 'vulnerable')) {
-    oldEff = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
-    eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
+  if (targetToken.document.hasStatusEffect('veryVulnerable')) {
+    //
+  } else if (targetToken.document.hasStatusEffect('vulnerable')) {
+    await targetToken.actor.toggleStatusEffect('vulnerable', { active: false });
+    eff = 'veryVulnerable';
   } else {
-    eff = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
+    eff = 'vulnerable';
   }
   if (eff) {
-    eff.origin = sourceuuid;
-    eff.duration = { rounds: 1, turns: 1 };
-    await targetToken.toggleEffect(eff, { active: true });
+    const effect = await targetToken.actor.toggleStatusEffect(eff, { active: true });
+    effect.update({
+      origin: sourceuuid,
+      duration: { rounds: 1, turns: 1 }
+    })
   }
-  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
 /**

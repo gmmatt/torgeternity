@@ -23,12 +23,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.8.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1716788509931
       modifiedTime: 1716788609201
       lastModifiedBy: pYSulyhjOdVnRAJt
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!azyXdSKJRLmriHz6.RXchDCkWZSSTuYjj'
 effects: []
 folder: null
@@ -450,7 +451,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -462,14 +462,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716788509928
   modifiedTime: 1716827809574
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!azyXdSKJRLmriHz6'
 

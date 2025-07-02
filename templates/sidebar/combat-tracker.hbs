@@ -1,0 +1,82 @@
+<ol class="combat-tracker plain">
+  {{#each combat.turns as |turn id|}}
+    <li class="combatant document.directory-item flexrow dispo{{turn.token.disposition}}
+            {{#if turn.turnTaken}} turnDone {{else}} active{{/if}}" style="align-items:center"
+      data-combatant-id="{{turn.id}}" data-action="activateCombatant">
+      <!--
+            <div class="token-initiative">
+                <span>{{turn.initiative}}</span>
+            </div>
+        -->
+      <div class="flexrow" style="align-items:center;">
+        <img class="token-image" src="{{turn.img}}" alt="{{turn.name}}" loading="lazy">
+        <div class="token-name flexcol">
+          <h4 style="color:white">{{turn.name}}</h4>
+          <div class="combatant-controls flexrow">
+
+            <button type="button" style="margin: 0px 5px 0px 0px"
+              class="inline-control combatant-control icon has-played fa-solid fa-check {{#if turn.flags.world.turnTaken}}playedOK{{/if}}"
+              data-action="hasPlayed" data-tooltip
+              aria-label="{{ localize 'torgeternity.combat.hasPlayedTooltip' }}"></button>
+
+            {{#if @root.user.isGM}}
+              <button type="button"
+                class="inline-control combatant-control icon fa-solid fa-skull {{#if isDefeated}}active{{/if}}"
+                data-action="toggleDefeated" data-tooltip
+                aria-label="{{ localize 'COMBAT.ToggleDead' }}"></button>
+              <!--<a class="combatant-control {{#if turn.defeated}}active{{/if}}"
+                data-tooltip="{{localize 'COMBAT.ToggleDead'}}" data-control="toggleDefeated">
+                <i class="fas fa-skull"></i></a>-->
+            {{/if}}
+            {{#if turn.canPing}}
+              <button type="button" class="inline-control combatant-control icon fa-solid fa-bullseye-arrow"
+                data-action="pingCombatant" data-tooltip
+                aria-label="{{ localize 'COMBAT.PingCombatant' }}"></button>
+            {{/if}}
+            {{#unless @root.user.isGM}}
+              <button type="button" class="inline-control combatant-control icon fa-solid fa-arrows-to-eye"
+                data-action="panToCombatant" data-tooltip
+                aria-label="{{ localize 'COMBAT.PanToCombatant' }}"></button>
+            {{/unless}}
+
+            <a class="player-dsr-counter" data-action="playerDsrCounter" {{#unless turn.isOwner}}disabled{{/unless}}>
+              <span class="player-dsr-token">
+                <span class="dsr-step">
+                  {{#if flags.torgeternity.dsrStage}}
+                    {{localize 'torgeternity.tokens.step'}}
+                  {{else}}
+                    {{localize 'torgeternity.tokens.noDSR'}}
+                  {{/if}}
+                </span>
+                <span class="dsr-step-number">
+                  {{#if flags.torgeternity.dsrStage}}
+                    &nbsp;{{flags.torgeternity.dsrStage}}
+                  {{/if}}
+                </span>
+              </span>
+            </a>
+
+            <div class="token-effects">
+              {{#each turn.effects}}
+                <img class="token-effect" src="{{this}}" /> {{/each}}
+            </div>
+          </div>
+          {{#if (eq turn.document.type "stormknight")}}
+            <ul style="margin: 0 0 0.5em 0">
+              {{localize 'torgeternity.sheetLabels.pool'}}:
+              <span class="pool-list">{{{poolList turn.document.id}}}</span>
+            </ul>
+          {{/if}}
+        </div>
+
+      </div>
+
+      <!--
+            {{#if ../user.isGM}}
+            <a class="init-up" data-action="initUp"><i class="fas fa-arrow-up"></i></a>
+            <a class="init-down" data-action="initDown"><i class="fas fa-arrow-down"></i></a> 
+            {{/if}}
+-->
+    </li>
+  {{/each}}
+</ol>

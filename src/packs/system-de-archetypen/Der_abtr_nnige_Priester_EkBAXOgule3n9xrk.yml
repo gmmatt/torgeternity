@@ -11,8 +11,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 0
     flags:
-      core:
-        sourceId: Item.XNd1hm8Qf4RNfaKE
+      core: {}
     system:
       cosm: livingLand
       description: <p>Katholisches Kreuz</p>
@@ -28,12 +27,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722161572718
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.XNd1hm8Qf4RNfaKE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.ReViXP9Dca4UAPCm'
   - _id: 5601IENGXA9lwkOT
     name: Cyberware-Implantate
@@ -43,8 +43,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DI70dRyfP5h47btG
+      core: {}
     system:
       category: cyberware
       cosm: cyberpapacy
@@ -135,12 +134,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867208350
       modifiedTime: 1722161703606
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DI70dRyfP5h47btG
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.5601IENGXA9lwkOT'
   - _id: GCSnZrpS8WjskteR
     name: GWI GodBeam Laser
@@ -150,9 +150,7 @@ items:
     folder: null
     sort: 21400000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.fuYQYaZohFwwXDTS
+      core: {}
     system:
       cosm: cyberpapacy
       description: >-
@@ -189,12 +187,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867248691
       modifiedTime: 1722161559582
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.fuYQYaZohFwwXDTS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.GCSnZrpS8WjskteR'
   - _id: 7olrbbhAQNCgPb94
     name: Cyberdeck
@@ -224,7 +223,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -232,6 +231,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -241,8 +241,7 @@ items:
     folder: null
     sort: -100000
     flags:
-      core:
-        sourceId: Item.7dkVCtCJNaMK4znm
+      core: {}
     system:
       cosm: cyberpapacy
       description: >-
@@ -262,12 +261,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867263083
       modifiedTime: 1722161567566
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.7dkVCtCJNaMK4znm
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.7olrbbhAQNCgPb94'
   - name: HardPlas-Arm
     type: implant
@@ -296,7 +296,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -304,6 +304,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -338,7 +339,7 @@ items:
         flags: {}
         tint: '#ffffff'
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -346,6 +347,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -355,9 +357,7 @@ items:
     folder: null
     sort: 11800000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NuiosxP2lpF0vndA
+      core: {}
     _id: 3T7yOOEdZ3BPAL1U
     system:
       cosm: cyberpapacy
@@ -383,12 +383,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867419265
       modifiedTime: 1722161584614
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NuiosxP2lpF0vndA
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.3T7yOOEdZ3BPAL1U'
   - name: Trigon integrierte Waffenhalterung
     type: implant
@@ -397,9 +398,7 @@ items:
     folder: null
     sort: 18800000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.biTp8hxSCHaeTnpA
+      core: {}
     _id: ZJ85muf6mGLJ4vSd
     system:
       cosm: cyberpapacy
@@ -424,12 +423,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867425148
       modifiedTime: 1722161589246
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.biTp8hxSCHaeTnpA
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.ZJ85muf6mGLJ4vSd'
   - _id: ET9NNtB5uofc4WlR
     name: Feind abwehren
@@ -467,7 +467,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -475,6 +475,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -512,7 +513,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -520,6 +521,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -557,7 +559,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -565,6 +567,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -574,8 +577,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.geTWA7krOqHuXpxk
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -604,12 +606,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867458812
       modifiedTime: 1694867458812
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.geTWA7krOqHuXpxk
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.ET9NNtB5uofc4WlR'
   - _id: T7Hx6KrN8izgnmYb
     name: Heilung
@@ -619,8 +622,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.z2F1fYz1l6okzYor
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -647,12 +649,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867462972
       modifiedTime: 1694867462972
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.z2F1fYz1l6okzYor
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.T7Hx6KrN8izgnmYb'
   - name: IriMesh-Kleidung
     type: armor
@@ -661,9 +664,7 @@ items:
     folder: null
     sort: 2900000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
+      core: {}
     _id: vqNUZnBICV3jpdG8
     system:
       cosm: panPacifica
@@ -692,12 +693,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366100
       modifiedTime: 1722161563270
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.vqNUZnBICV3jpdG8'
   - _id: wyjO9Y9RxQ9WIWkj
     name: Wunderwirker
@@ -811,12 +813,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.D1RJR3lXmVGDsPJr
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.wyjO9Y9RxQ9WIWkj'
   - _id: TnOoZOTsRjX1IkpD
     name: Segnen
@@ -853,12 +856,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.d6IEaim5SKRR6wFV
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.TnOoZOTsRjX1IkpD'
   - _id: tLu5NnroxGgZzUIh
     name: Belleview 20-20 Cyberaugen
@@ -899,12 +903,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!EkBAXOgule3n9xrk.tLu5NnroxGgZzUIh.E5AukEsWExBLuvMO
     folder: WDvJC2MufxrqwbzV
@@ -938,12 +943,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.fn5nBz7AZXCDDKeB
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.tLu5NnroxGgZzUIh'
   - name: Belleview Low-Light MK II
     type: implant
@@ -972,12 +978,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.e785pkoh3UmWeaCE
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!EkBAXOgule3n9xrk.XSmTa12TX1e9N9A0'
   - name: Mensch
     type: race
@@ -1006,12 +1013,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599320841
       modifiedTime: 1729599320841
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: fBNXaENjqznksP7V
     sort: 0
     ownership:
@@ -1042,7 +1050,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1050,6 +1058,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1078,7 +1087,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1086,6 +1095,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1114,7 +1124,7 @@ effects:
     flags: {}
     tint: '#ffffff'
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1122,6 +1132,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1158,7 +1169,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1166,6 +1177,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1202,7 +1214,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1210,6 +1222,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1246,7 +1259,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1254,6 +1267,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1292,18 +1306,18 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!EkBAXOgule3n9xrk.wmufrZO0KyBQcPAH'
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.YzRwn4OIYPYBIPJH
+  core: {}
 system:
   shock:
     max: 5
@@ -1727,7 +1741,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1739,14 +1752,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694867208350
   modifiedTime: 1729013539892
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.YzRwn4OIYPYBIPJH
   duplicateSource: null
+  exportSource: null
 _key: '!actors!EkBAXOgule3n9xrk'
 

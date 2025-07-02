@@ -1,191 +1,207 @@
-<div>
-    <form>
-        <div style="display:grid; grid-template-columns: auto auto auto; grid-template-rows:auto auto auto; grid-column-gap: 1.5em;grid-row-gap:2em;text-align:center; text-wrap: wrap; align-items:center; justify-items: center;">
+<div
+  style="display:grid; grid-template-columns: auto auto auto; grid-template-rows:auto auto auto; grid-column-gap: 1.5em;grid-row-gap:2em;text-align:center; text-wrap: wrap; align-items:center; justify-items: center;">
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.ayslePoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.aysle"}}"> 
-                <a class="content-link"
-                    data-uuid="{{localize "torgeternity.cosms.ayslePossLink"}}"
-                    data-hash="{{localize "torgeternity.cosms.ayslePossLink2"}}">
-                    {{localize "torgeternity.cosms.aysle"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_aysle.webp" 
-                    type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
-                <img src="systems\torgeternity\images\cosm-icons\aysle.webp" 
-                    class="possibilitiesByCosmWindow imagesShown"
-                    data-tooltip="No Module"
-                    style="{{#if this.actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
-                </object>
-                <input class="possibilitiesByCosmWindow inputField" 
-                    id="ayslePoss" 
-                    type="number"
-                    value="{{this.actorPoss.ayslePoss}}" 
-                    data-dtype="Number">
-            </div>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.ayslePoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.aysle'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.ayslePossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.ayslePossLink2'}}">
+      {{localize "torgeternity.cosms.aysle"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_aysle.webp"
+      type="image/webp"
+      class="possibilitiesByCosmWindow imagesShown"
+      style="{{#if actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
+      <img src="systems\torgeternity\images\cosm-icons\aysle.webp"
+        class="possibilitiesByCosmWindow imagesShown"
+        data-tooltip="No Module"
+        style="{{#if actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="ayslePoss"
+      type="number"
+      value="{{actorPoss.ayslePoss}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actor.system.other.possibilities}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.coreEarth"}}"> 
-                <a class="content-link" 
-                    data-uuid="{{localize "torgeternity.cosms.coreEarthPossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.coreEarthPossLink2"}}">
-                    {{localize "torgeternity.cosms.coreEarth"}}
-                </a>
-                <img src="systems\torgeternity\images\possytoken.webp"
-                    class="possibilitiesByCosmWindow imagesShown">
-                <input class="possibilitiesByCosmWindow inputField"
-                    id="coreEarthPoss" 
-                    type="number"
-                    value="{{this.actor.system.other.possibilities}}" 
-                    data-dtype="Number">
-            </div>
+  <div
+    class="possibilitiesByCosmWindow eachDiversion {{#if this.document.system.other.possibilities}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.coreEarth'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.coreEarthPossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.coreEarthPossLink2'}}">
+      {{localize "torgeternity.cosms.coreEarth"}}
+    </a>
+    <img src="systems\torgeternity\images\possytoken.webp"
+      class="possibilitiesByCosmWindow imagesShown">
+    <input class="possibilitiesByCosmWindow inputField"
+      name="coreEarthPoss"
+      type="number"
+      required="true"
+      value="{{this.document.system.other.possibilities}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.cyberpapacyPoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.cyberpapacy"}}"> 
-                <a class="content-link" 
-                    data-uuid="{{localize "torgeternity.cosms.cyberpapacyPossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.cyberpapacyPossLink2"}}">
-                    {{localize "torgeternity.cosms.cyberpapacy"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_cyberpapacy.webp" 
-                    type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown">
-                <img src="systems\torgeternity\images\cosm-icons\cyberpapacy.webp" 
-                    class="possibilitiesByCosmWindow imagesShown"
-                    data-tooltip="No Module">
-                </object>
-                <input class="possibilitiesByCosmWindow inputField"
-                    id="cyberpapacyPoss" 
-                    type="number"
-                    value="{{this.actorPoss.cyberpapacyPoss}}" 
-                    data-dtype="Number">
-            </div>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.cyberpapacyPoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.cyberpapacy'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.cyberpapacyPossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.cyberpapacyPossLink2'}}">
+      {{localize "torgeternity.cosms.cyberpapacy"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_cyberpapacy.webp"
+      type="image/webp"
+      class="possibilitiesByCosmWindow imagesShown">
+      <img src="systems\torgeternity\images\cosm-icons\cyberpapacy.webp"
+        class="possibilitiesByCosmWindow imagesShown"
+        data-tooltip="No Module">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="cyberpapacyPoss"
+      type="number"
+      value="{{actorPoss.cyberpapacyPoss}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.livingLandPoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.livingLand"}}"> 
-                <a class="content-link" 
-                    data-uuid="{{localize "torgeternity.cosms.livingLandPossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.livingLandPossLink2"}}">
-                    {{localize "torgeternity.cosms.livingLand"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_livingland.webp" 
-                    type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown">
-                <img src="systems\torgeternity\images\cosm-icons\livingLand.webp" 
-                    class="possibilitiesByCosmWindow imagesShown"
-                    data-tooltip="No Module">
-                </object>
-                <input class="possibilitiesByCosmWindow inputField"
-                    id="livingLandPoss" 
-                    type="number"
-                    value="{{this.actorPoss.livingLandPoss}}" 
-                    data-dtype="Number">
-            </div>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.livingLandPoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.livingLand'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.livingLandPossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.livingLandPossLink2'}}">
+      {{localize "torgeternity.cosms.livingLand"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_livingland.webp"
+      type="image/webp"
+      class="possibilitiesByCosmWindow imagesShown">
+      <img src="systems\torgeternity\images\cosm-icons\livingLand.webp"
+        class="possibilitiesByCosmWindow imagesShown"
+        data-tooltip="No Module">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="livingLandPoss"
+      type="number"
+      value="{{actorPoss.livingLandPoss}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.nileEmpirePoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.nileEmpire"}}"> 
-                <a class="content-link" 
-                    data-uuid="{{localize "torgeternity.cosms.nileEmpirePossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.nileEmpirePossLink2"}}">
-                    {{localize "torgeternity.cosms.nileEmpire"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_nileempire.webp" 
-                    type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown">
-                <img src="systems\torgeternity\images\cosm-icons\nileEmpire.webp" 
-                    class="possibilitiesByCosmWindow imagesShown"
-                    data-tooltip="No Module">
-                </object>
-                <input class="possibilitiesByCosmWindow inputField" 
-                id="nileEmpirePoss" 
-                type="number"
-                value="{{this.actorPoss.nileEmpirePoss}}" 
-                data-dtype="Number">
-            </div>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.nileEmpirePoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.nileEmpire'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.nileEmpirePossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.nileEmpirePossLink2'}}">
+      {{localize "torgeternity.cosms.nileEmpire"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_nileempire.webp"
+      type="image/webp"
+      class="possibilitiesByCosmWindow imagesShown">
+      <img src="systems\torgeternity\images\cosm-icons\nileEmpire.webp"
+        class="possibilitiesByCosmWindow imagesShown"
+        data-tooltip="No Module">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="nileEmpirePoss"
+      type="number"
+      value="{{actorPoss.nileEmpirePoss}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.orrorshPoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.orrorsh"}}"> 
-                <a class="content-link" 
-                    data-uuid="{{localize "torgeternity.cosms.orrorshPossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.orrorshPossLink2"}}">
-                    {{localize "torgeternity.cosms.orrorsh"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_orrorsh.webp" 
-                    type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown">
-                <img src="systems\torgeternity\images\cosm-icons\orrorsh.webp" 
-                    class="possibilitiesByCosmWindow imagesShown"
-                    data-tooltip="No Module">
-                </object>
-                <input class="possibilitiesByCosmWindow inputField"
-                    id="orrorshPoss" 
-                    type="number"
-                    value="{{this.actorPoss.orrorshPoss}}" 
-                    data-dtype="Number">
-            </div>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.orrorshPoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.orrorsh'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.orrorshPossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.orrorshPossLink2'}}">
+      {{localize "torgeternity.cosms.orrorsh"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_orrorsh.webp"
+      type="image/webp"
+      class="possibilitiesByCosmWindow imagesShown">
+      <img src="systems\torgeternity\images\cosm-icons\orrorsh.webp"
+        class="possibilitiesByCosmWindow imagesShown"
+        data-tooltip="No Module">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="orrorshPoss"
+      type="number"
+      value="{{actorPoss.orrorshPoss}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.panPacificaPoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.panPacifica"}}"> 
-                <a class="content-link" 
-                    data-uuid="{{localize "torgeternity.cosms.panPacificaPossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.panPacificaPossLink2"}}">
-                    {{localize "torgeternity.cosms.panPacifica"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_panpacifica.webp" 
-                    type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown">
-                <img src="systems\torgeternity\images\cosm-icons\panPacifica.webp" 
-                    class="possibilitiesByCosmWindow imagesShown"
-                    data-tooltip="No Module">
-                    </object>
-                <input class="possibilitiesByCosmWindow inputField"
-                    id="panPacificaPoss" 
-                    type="number"
-                    value="{{this.actorPoss.panPacificaPoss}}" 
-                    data-dtype="Number">
-            </div>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.panPacificaPoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.panPacifica'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.panPacificaPossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.panPacificaPossLink2'}}">
+      {{localize "torgeternity.cosms.panPacifica"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_panpacifica.webp"
+      type="image/webp"
+      class="possibilitiesByCosmWindow imagesShown">
+      <img src="systems\torgeternity\images\cosm-icons\panPacifica.webp"
+        class="possibilitiesByCosmWindow imagesShown"
+        data-tooltip="No Module">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="panPacificaPoss"
+      type="number"
+      value="{{actorPoss.panPacificaPoss}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.tharkoldPoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.tharkold"}}"> 
-                <a class="content-link" 
-                    data-uuid="{{localize "torgeternity.cosms.tharkoldPossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.tharkoldPossLink2"}}">
-                    {{localize "torgeternity.cosms.tharkold"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_tharkold.webp" 
-                type="image/webp" 
-                class="possibilitiesByCosmWindow imagesShown">
-                <img src="systems\torgeternity\images\cosm-icons\tharkold.webp" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    data-tooltip="No Module">
-                </object>
-                <input class="possibilitiesByCosmWindow inputField"
-                    id="tharkoldPoss" 
-                    type="number" 
-                    value="{{this.actorPoss.tharkoldPoss}}" 
-                    data-dtype="Number">
-            </div>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.tharkoldPoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.tharkold'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.tharkoldPossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.tharkoldPossLink2'}}">
+      {{localize "torgeternity.cosms.tharkold"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_tharkold.webp"
+      type="image/webp"
+      class="possibilitiesByCosmWindow imagesShown">
+      <img src="systems\torgeternity\images\cosm-icons\tharkold.webp"
+        class="possibilitiesByCosmWindow imagesShown"
+        data-tooltip="No Module">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="tharkoldPoss"
+      type="number"
+      value="{{actorPoss.tharkoldPoss}}"
+      data-dtype="Number">
+  </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.otherPoss}}{{else}}hide{{/if}}"
-                data-tooltip="{{localize "torgeternity.cosms.otherPoss"}}"> 
-                <a class="content-link" 
-                    style="margin:0rem" 
-                    data-uuid="{{localize "torgeternity.cosms.otherPossLink"}}" 
-                    data-hash="{{localize "torgeternity.cosms.otherPossLink2"}}">
-                    {{localize "torgeternity.cosms.other"}}
-                </a>
-                <object data="systems\torgeternity\images\possy_other.webp" 
-                    alt="Other" 
-                    class="possibilitiesByCosmWindow imagesShown">
-                </object>
-                <input class="possibilitiesByCosmWindow inputField"
-                    id="otherPoss" 
-                    type="number" 
-                    value="{{this.actorPoss.otherPoss}}" 
-                    data-dtype="Number">
-            </div>
-        </div>
-    </form>
-    <button style="margin-top:2em; font-weight:bold; background-image: url(../images/bg-sheet.webp)" class="save-button">{{localize "CARDS.Save"}}</button>
+  <div class="possibilitiesByCosmWindow eachDiversion {{#if actorPoss.otherPoss}}{{else}}hide{{/if}}"
+    data-tooltip="{{localize 'torgeternity.cosms.otherPoss'}}">
+    <a class="content-link"
+      data-action="testActiveModule"
+      style="margin:0rem"
+      data-link
+      data-uuid="{{localize 'torgeternity.cosms.otherPossLink'}}"
+      data-hash="{{localize 'torgeternity.cosms.otherPossLink2'}}">
+      {{localize "torgeternity.cosms.other"}}
+    </a>
+    <object data="systems\torgeternity\images\possy_other.webp"
+      alt="Other"
+      class="possibilitiesByCosmWindow imagesShown">
+    </object>
+    <input class="possibilitiesByCosmWindow inputField"
+      name="otherPoss"
+      type="number"
+      value="{{actorPoss.otherPoss}}"
+      data-dtype="Number">
+  </div>
 </div>

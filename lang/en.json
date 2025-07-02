@@ -29,7 +29,7 @@
     "axioms": {
       "magic": "Magic",
       "social": "Social",
-      "spirit": "Spirituality",      
+      "spirit": "Spirituality",
       "tech": "Tech"
     },
     "cardTypes": {
@@ -147,17 +147,20 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "endMyTurn": "Done",
       "nextKeep": "Next Round (Keep Current Card)",
-      "nextNew": "Next Round (New Card)",
-      "herosTooltip": "heros first",
-      "vilainsTooltip": "vilains first",
+      "nextNew": "Next Round (Draw New Card)",
+      "herosTooltip": "Heroes first",
+      "vilainsTooltip": "Villains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
     },
     "contextMenu": {
       "characterInfo": {
-        "contextMenuTitle":"Show character information",
+        "contextMenuTitle": "Show character information",
         "windowTitle": "Notes and Backgrounds from {a}",
         "createChatCard": "Create chat card"
       }
+    },
+    "core": {
+      "forceDarkModeHint": "TORG only works with Applications set to Dark mode"
     },
     "cosmDecks": {
       "aysle": "Aysle Cosm Deck",
@@ -229,10 +232,10 @@
     },
     "dialogWindow": {
       "externalLinks": {
-        "bug": "<p>Bug?</p>",
+        "bug": "Bug?",
         "content": "<p>Need help? Want to report a bug? Here are a few usefull links.</p>",
-        "publisher": "<p>Publisher</p>",
-        "reference": "<p>Reference</p>",
+        "publisher": "Publisher",
+        "reference": "Reference",
         "title": "Links"
       },
       "hideForeignCompendium": {
@@ -244,8 +247,8 @@
         "title": "Confirm Deletion"
       },
       "raceDeletion": {
-        "content":"Are you sure you want to delete this? It will be permanently removed from the sheet and all racial perks will be deleted as well.",
-        "title":"Confirm Deletion"
+        "content": "Are you sure you want to delete this? It will be permanently removed from the sheet and all racial perks will be deleted as well.",
+        "title": "Confirm Deletion"
       },
       "realityCheck": {
         "title": "Reconnecting?",
@@ -264,28 +267,29 @@
         "windowTitle": "Set a driver"
       },
       "showingDramaCards": {
-        "nbCards":"Quantity of cards",
-        "nbCardsValue":"Number of cards to show to player",
-        "recipient":"Choice of whisper's recipient",
-        "whisper":"Whisper to checked active player",
-        "apply":"Apply",
-        "show":"Next card(s)"
+        "nbCards": "Quantity of cards",
+        "nbCardsValue": "Number of cards to show to player",
+        "recipient": "Choice of whisper's recipient",
+        "whisper": "Whisper to checked active player",
+        "apply": "Apply",
+        "show": "Next card(s)",
+        "noMoreCards": "No More Drama cards available"
       },
       "cardRetour": {
-        "cardBack":"Card goes back after missplay",
-        "cardOwner":"Who will get the the last played card back ?"        
+        "cardBack": "Card goes back after missplay",
+        "cardOwner": "Who will get the the last played card back ?"
       },
       "buffMacro": {
-        "choice":"Your choice",
-        "choose":"Which attribute do you want to modify ?",
-        "allAttributes":"All attributes",
-        "defenses":"Defenses",
-        "physicalDefenses" : "Physical defenses",
+        "choice": "Your choice",
+        "choose": "Which attribute do you want to modify ?",
+        "allAttributes": "All attributes",
+        "defenses": "Defenses",
+        "physicalDefenses": "Physical defenses",
         "cancelEffects": "Cancel effects",
-        "bonusTitle":"Input the bonus/malus's value",
-        "value":"Choose the value for the bonus",
-        "timeLabel":"Duration choice",
-        "time":"Choose the duration in round(s)"
+        "bonusTitle": "Input the bonus/malus's value",
+        "value": "Choose the value for the bonus",
+        "timeLabel": "Duration choice",
+        "time": "Choose the duration in round(s)"
       },
       "raceDiminishAttribute": {
         "maintext": "The attribute {attribute} is greater than the race maximum. Should the attribute be set to the race maximum?",
@@ -409,7 +413,7 @@
     "itemSheetDescriptions": {
       "armor": "Armor",
       "ammunition": "Ammunition",
-      "customAttack": "Custom Attack",      
+      "customAttack": "Custom Attack",
       "customSkill": "Custom Skill",
       "enhancement": "Enhancement",
       "eternityshard": "Eternity Shard",
@@ -446,7 +450,7 @@
     "notifications": {
       "beginningMigration": "Migrating Torg system version to ",
       "defaultAction": "Default action, Gear for example",
-      "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",      
+      "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
       "migrationRunning": "Migrating Torg system version to ",
       "moduleNotActive": "Activate the module to see desscription.",
@@ -468,7 +472,8 @@
       "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
       "noPossibility": "There is no possibility left",
       "noCapacity": "{a} can't pilote this kind of vehicle!",
-      "noFight":"No active combat, or not started",
+      "noFight": "No active combat, or not started",
+      "noPlayers": "No active players",
       "raceExistent": "You have already chosen a race.",
       "notAPerkItem": "You attempted to assign a perk from the {a} category to this race, but it must belong to the racial category. Action has been aborted.",
       "addedRacePerkToActor": "Added {perkName}-perk to actor.",
@@ -480,9 +485,11 @@
       "decks": "torgeternity.core-card-set"
     },
     "partySheet": {
-      "chooseParty": "<h3>If you choose YES, it will open with all characters.<br>If you choose NO, it'll open only active characters.</h3>",
+      "chooseParty": "<h3>Choose whether you want to see ALL players, or only the ACTIVE players</h3>",
       "noCharacter": "This user doesn't own any actor",
-      "openParty": "Choose the party sheet"
+      "openParty": "Choose the party sheet",
+      "allPlayers": "All Players",
+      "activePlayers": "Active Players"
     },
     "perks": {
       "category": "Category",
@@ -1095,7 +1102,7 @@
       "reviveMacroAlreadyFull": " is already recovered and has no shock.",
       "reviveMacroCharRevived": " is fully revived.",
       "reviveMacroCharPartyRevived": " was healed by the following amount: ",
-      "reviveMacroCharDeKOed": "Liftet K.O. status from ",
+      "reviveMacroCharDeKOed": "Lifted K.O. status from ",
       "reviveMacroWholeRevive": "Revive all shock?",
       "clearStatusEffectsHeadline": "Lifting status effects from the following characters:",
       "clearStatusEffectsNothingFound": "No status effects found for marked characters.",
@@ -1114,16 +1121,16 @@
       "reconnectMacroZoneModifier": "Zone modifier",
       "reconnectMacroZoneModifierNotDetectedTitle": "No zone modifier",
       "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand.",
-      "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll.",
-      "periculumSourceName":"Source's damages",
-      "periculumSourcePlaceHolder":"Describe the hazard",
-      "periculumDamageValue":"Base damage ",
-      "periculumBds":"BDs modifiers ",
-      "periculumArmor":"Apply armor ? ",
-      "periculumAp":"Armor piercing value ",
+      "reconnectMacroStatusLiftet": "Disconnection-Status lifted after a successful Reconnect-Roll.",
+      "periculumSourceName": "Source's damages",
+      "periculumSourcePlaceHolder": "Describe the hazard",
+      "periculumDamageValue": "Base damage ",
+      "periculumBds": "BDs modifiers ",
+      "periculumArmor": "Apply armor ? ",
+      "periculumAp": "Armor piercing value ",
       "macroHub": {
         "buttonTitle": "MacroHub",
-        "title":"The Torg Eternity Macro Hub"
+        "title": "The Torg Eternity Macro Hub"
       }
     }
   }

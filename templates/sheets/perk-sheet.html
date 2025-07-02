@@ -1,417 +1,65 @@
-<form class="{{cssClass}} item-sheet" autocomplete="off" height=400>
-    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.perk"}}</span></h3>
+<section class="tab stats {{tab.cssClass}}" data-group="primary" data-tab="stats">
+  <div class="sheet-content">
+    <div class="asside">
+      <p class="item-data-label">
+        {{localize "torgeternity.perks.category"}}
+      </p>
+      <select name="system.category">
+        {{selectOptions config.perkTypes selected=item.system.category localize=true sort=true}}
+      </select>
+      <p class="item-data-label">
+        {{localize "torgeternity.perks.cosm"}}
+      </p>
+      <select name="system.cosm">
+        {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
+      </select>
 
-    <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}"  />
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Perk Name"
-                 /></h1>
-    </header>
-    
-    <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="{{item.system.navStyle}}">
-        <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
-        <a class="item" data-tab="enhancements" style="font-size:10px" {{#unless item.system.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.enhancements"}}</a>
-        <a class="item" data-tab="limitations" {{#unless item.system.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.limitations"}}</a>
-        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-    </nav>
+      <p class="item-data-label">
+        {{localize "torgeternity.perks.timestaken"}}
+      </p>
+      <input name="system.timestaken" type="number" value="{{item.system.timestaken}}" />
+      <div data-tooltip="{{localize " torgeternity.perks.generalContradictionTT"}}"
+        class="asside perks generalContradiction">
+        <input name="system.generalContradiction"
+          id="system.generalContradiction"
+          type="checkbox"
+          value="*"
+          {{checked item.system.generalContradiction}}
+          data-dtype="Boolean">
 
-    <section class="sheet-body" >
+        <label class="item-data-label"
+          for="system.generalContradiction">
+          {{localize "torgeternity.perks.generalContradiction"}}
+        </label>
+      </div>
+      <p class="item-data-label" style="grid-column: 1/3">
+        {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
+      </p>
 
-        <div class="tab stats" data-group="primary" data-tab="stats">
+      <select style="grid-column: 1/3" name="system.secondaryAxiom.selected" class=" selectSecondaryAxiom">
+        <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
+        {{selectOptions config.axioms selected=item.system.secondaryAxiom.selected localize=true}}
+      </select>
 
-            <div class="sheet-content">
-                <div class="asside">
-                    <p class="item-data-label">
-                        {{localize "torgeternity.perks.category"}}
-                    </p>
-                    <select name="system.category" class="input-box">
-                        {{selectOptions config.perkTypes selected=item.system.category localize=true sort=true}}
-                    </select>
-                    <p class="item-data-label">
-                        {{localize "torgeternity.perks.cosm"}}
-                    </p>
-                    <select name="system.cosm" class="input-box">
-                        {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
-                    </select>
-                    
-                    <p class="item-data-label">
-                        {{localize "torgeternity.perks.timestaken"}}
-                    </p>
-                    <input name="system.timestaken" type="number" value="{{item.system.timestaken}}" class="input-box" />
-                    <div data-tooltip="{{localize "torgeternity.perks.generalContradictionTT"}}" 
-                    class="asside perks generalContradiction">
-                        <input name="system.generalContradiction" 
-                        id="system.generalContradiction" 
-                        type="checkbox"
-                        value="*"
-                        {{checked item.system.generalContradiction}}
-                        data-dtype="Boolean">
-                        
-                        <label class="item-data-label" 
-                        for="system.generalContradiction">
-                        {{localize "torgeternity.perks.generalContradiction"}}
-                        </label>
-                    </div>
-                    <p class="item-data-label" style="grid-column: 1/3">
-                        {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
-                    </p>
-
-                    <select style="grid-column: 1/3" name="system.secondaryAxiom.selected" class="input-box selectSecondaryAxiom">
-                        <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
-                        {{selectOptions config.axioms selected=item.system.secondaryAxiom.selected localize=true}}
-                    </select>
-
-                    {{#if displaySecondaryAxiomValue}}
-                        <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
-                        <input
-                        name="system.secondaryAxiom.value"
-                        type="number"
-                        value="{{item.system.secondaryAxiom.value}}"
-                        class="input-box"
-                        />
-                    {{/if}}
-                </div>                
-                <div class="main-content">                    
-                    <div name="description" class="item-description-textarea">
-                        {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
-                    </div>
-                    <p style="min-height: 22px; height:auto;" class="item-data-label">
-                        {{localize "torgeternity.perks.prerequisites"}}
-                    </p>
-                    <div name="prerequisites" class="item-description-textarea">
-                        {{editor prerequisites target="system.prerequisites" engine="prosemirror" button=true editable=editable}}                    
-                    </div>                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="tab enhancements" data-group="primary" data-tab="enhancements"> 
-
-            <div class="enhancements-section-heading">
-                <span class="enhancements-title">
-                    {{localize "torgeternity.sheetLabels.enhancements"}}
-                </span>
-                <div class="enhancements-controls">
-                    <a class="remove-enhancement" data-tooltip="{{localize "torgeternity.sheetLabels.enhancementRemoveTooltip"}}"><i class="fas fa-minus"></i></a>
-                    <a class="add-enhancement" data-tooltip="{{localize "torgeternity.sheetLabels.enhancementAddTooltip"}}"><i class="fas fa-plus"></i></a>
-                </div>
-            </div>
-            <ol class="item-list">
-                {{#if (gt item.system.pulpPowers.enhancementNumber 0)}}
-                <li class="item-block" >
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            {{localize "torgeternity.sheetLabels.taken"}}
-                        </div>
-                        <div class="item-name enhancement-content">
-                            {{localize "torgeternity.sheetLabels.titleDescription"}}
-                        </div>
-                    </div>
-                </li>                
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement01.taken" class="toggle" type="checkbox" id="taken01" {{checked item.system.pulpPowers.enhancement01.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement01.title" value="{{item.system.pulpPowers.enhancement01.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement01.description" class="pulp-description">{{item.system.pulpPowers.enhancement01.description}}</textarea>
-                        </div>
-                    </div>
-                </li>
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 1)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement02.taken" class="toggle" type="checkbox" id="taken02" {{checked item.system.pulpPowers.enhancement02.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement02.title" value="{{item.system.pulpPowers.enhancement02.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement02.description" class="pulp-description">{{item.system.pulpPowers.enhancement02.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 2)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement03.taken" class="toggle" type="checkbox" id="taken03" {{checked item.system.pulpPowers.enhancement03.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement03.title" value="{{item.system.pulpPowers.enhancement03.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement03.description" class="pulp-description">{{item.system.pulpPowers.enhancement03.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 3)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement04.taken" class="toggle" type="checkbox" id="taken04" {{checked item.system.pulpPowers.enhancement04.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement04.title" value="{{item.system.pulpPowers.enhancement04.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement04.description" class="pulp-description">{{item.system.pulpPowers.enhancement04.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 4)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement05.taken" class="toggle" type="checkbox" id="taken05" {{checked item.system.pulpPowers.enhancement05.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement05.title" value="{{item.system.pulpPowers.enhancement05.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement05.description" class="pulp-description">{{item.system.pulpPowers.enhancement05.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 5)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement06.taken" class="toggle" type="checkbox" id="taken06" {{checked item.system.pulpPowers.enhancement06.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement06.title" value="{{item.system.pulpPowers.enhancement06.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement06.description" class="pulp-description">{{item.system.pulpPowers.enhancement06.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 6)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement07.taken" class="toggle" type="checkbox" id="taken07" {{checked item.system.pulpPowers.enhancement07.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement07.title" value="{{item.system.pulpPowers.enhancement07.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement07.description" class="pulp-description">{{item.system.pulpPowers.enhancement07.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 7)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement08.taken" class="toggle" type="checkbox" id="taken08" {{checked item.system.pulpPowers.enhancement08.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement08.title" value="{{item.system.pulpPowers.enhancement08.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement08.description" class="pulp-description">{{item.system.pulpPowers.enhancement08.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 8)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement09.taken" class="toggle" type="checkbox" id="taken09" {{checked item.system.pulpPowers.enhancement09.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement09.title" value="{{item.system.pulpPowers.enhancement09.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement09.description" class="pulp-description">{{item.system.pulpPowers.enhancement09.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 9)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement10.taken" class="toggle" type="checkbox" id="taken10" {{checked item.system.pulpPowers.enhancement10.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement10.title" value="{{item.system.pulpPowers.enhancement10.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement10.description" class="pulp-description">{{item.system.pulpPowers.enhancement10.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 10)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement11.taken" class="toggle" type="checkbox" id="taken11" {{checked item.system.pulpPowers.enhancement11.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement11.title" value="{{item.system.pulpPowers.enhancement11.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement11.description" class="pulp-description">{{item.system.pulpPowers.enhancement11.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 11)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement12.taken" class="toggle" type="checkbox" id="taken12" {{checked item.system.pulpPowers.enhancement12.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement12.title" value="{{item.system.pulpPowers.enhancement12.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement12.description" class="pulp-description">{{item.system.pulpPowers.enhancement12.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 12)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement13.taken" class="toggle" type="checkbox" id="taken13" {{checked item.system.pulpPowers.enhancement13.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement13.title" value="{{item.system.pulpPowers.enhancement13.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement13.description" class="pulp-description">{{item.system.pulpPowers.enhancement13.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 13)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement14.taken" class="toggle" type="checkbox" id="taken14" {{checked item.system.pulpPowers.enhancement14.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement14.title" value="{{item.system.pulpPowers.enhancement14.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement14.description" class="pulp-description">{{item.system.pulpPowers.enhancement14.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}         
-                {{#if (gt item.system.pulpPowers.enhancementNumber 14)}}       
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-check">
-                            <input name="system.pulpPowers.enhancement15.taken" class="toggle" type="checkbox" id="taken15" {{checked item.system.pulpPowers.enhancement15.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
-                        </div>
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.enhancement15.title" value="{{item.system.pulpPowers.enhancement15.title}}" class="input-box" />
-                            <textarea name="system.pulpPowers.enhancement15.description" class="pulp-description">{{item.system.pulpPowers.enhancement15.description}}</textarea>
-                        </div>
-                    </div>
-                </li>                
-                {{/if}}
-            </ol>
-
-        </div>
-
-        <div class="tab limitations" data-group="primary" data-tab="limitations">
-
-            <div class="enhancements-section-heading">
-                <span class="enhancements-title">
-                    {{localize "torgeternity.sheetLabels.limitations"}}
-                </span>
-                <div class="enhancements-controls">
-                    <a class="remove-limitation" data-tooltip="{{localize "torgeternity.sheetLabels.limitationsRemoveTooltip"}}"><i class="fas fa-minus"></i></a>
-                    <a class="add-limitation" data-tooltip="{{localize "torgeternity.sheetLabels.limitationsAddTooltip"}}"><i class="fas fa-plus"></i></a>
-                </div>
-            </div>
-            <ol class="item-list">
-                {{#if (gt item.system.pulpPowers.limitationNumber 0)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation01" value="{{item.system.pulpPowers.limitation01}}" class="input-box" />
-                        </div>
-                    </div>
-                </li> 
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 1)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation02" value="{{item.system.pulpPowers.limitation02}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 2)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation03" value="{{item.system.pulpPowers.limitation03}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 3)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation04" value="{{item.system.pulpPowers.limitation04}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 4)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation05" value="{{item.system.pulpPowers.limitation05}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 5)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation06" value="{{item.system.pulpPowers.limitation06}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 6)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation07" value="{{item.system.pulpPowers.limitation07}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 7)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation08" value="{{item.system.pulpPowers.limitation08}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 8)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation09" value="{{item.system.pulpPowers.limitation09}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-                {{#if (gt item.system.pulpPowers.limitationNumber 9)}}
-                <li class="item-block">
-                    <div class="item-row flexrow">
-                        <div class="item-name enhancement-content">
-                            <input type="text" name="system.pulpPowers.limitation10" value="{{item.system.pulpPowers.limitation10}}" class="input-box" />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
-        </div>
-
-        <div class="tab effects" data-group="primary" data-tab="effects">
-            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-        </div>
-
-    </section>
-</form>
+      {{#if displaySecondaryAxiomValue}}
+        <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
+        <input
+          name="system.secondaryAxiom.value"
+          type="number"
+          value="{{item.system.secondaryAxiom.value}}" />
+      {{/if}}
+    </div>
+    <div class="main-content">
+      <p style="min-height: 22px; height:auto;" class="item-data-label">
+        {{localize "torgeternity.perks.description"}}
+      </p>
+      <prose-mirror toggled name="system.description" class="item-description-textarea" {{disabled (not editable)}}
+        value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
+      <p style="min-height: 22px; height:auto;" class="item-data-label">
+        {{localize "torgeternity.perks.prerequisites"}}
+      </p>
+      <prose-mirror toggled name="system.prerequisites" class="item-description-textarea" {{disabled (not editable)}}
+        value="{{ item.system.prerequisites }}">{{{ prerequisites }}}</prose-mirror>
+    </div>
+  </div>
+</section>

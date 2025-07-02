@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.6yvgujLe6KwpQj8J
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -102,20 +101,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.6yvgujLe6KwpQj8J
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.nHyY0U6fVQiVDVyn'
   - _id: KpWgjWWFgY2tXQbG
     name: Vêtements raffinés
     type: gear
     sort: 100001
     flags:
-      core:
-        sourceId: Item.2JInMXbRcbRiQo0P
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -133,12 +132,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.2JInMXbRcbRiQo0P
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.KpWgjWWFgY2tXQbG'
   - _id: WQEeARuIk5dWxWCC
     name: Glock 9mm
@@ -148,8 +148,7 @@ items:
     folder: null
     sort: 500000
     flags:
-      core:
-        sourceId: Item.iOnl5BiGmVFaCzma
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -177,12 +176,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.WQEeARuIk5dWxWCC'
   - _id: tQXpaYu7WFDR2pYc
     name: Glock 9mm
@@ -192,8 +192,7 @@ items:
     folder: null
     sort: 500000
     flags:
-      core:
-        sourceId: Item.iOnl5BiGmVFaCzma
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -221,12 +220,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.tQXpaYu7WFDR2pYc'
   - _id: tc8NY79Kdx6Kda2K
     name: Bagarreur
@@ -236,8 +236,7 @@ items:
     folder: null
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.world.perks.perk-brawler
+      core: {}
     system:
       category: prowess
       cosm: (Sans cosm)
@@ -335,12 +334,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.tc8NY79Kdx6Kda2K'
   - _id: RQQULXqFcG4khx3v
     name: Chargeurs supplémentaires (5)
@@ -350,8 +350,7 @@ items:
     folder: null
     sort: 1500000
     flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Cinq recharges pour Glock 9 mm</p>
@@ -365,12 +364,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.RQQULXqFcG4khx3v'
   - _id: Lc1K5kWq3eCwHeM5
     name: Insigne de police
@@ -380,8 +380,7 @@ items:
     folder: null
     sort: 1800000
     flags:
-      core:
-        sourceId: Item.fgtK79BumQwmkPzK
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Autorit&eacute;s locales</p>
@@ -395,12 +394,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.fgtK79BumQwmkPzK
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.Lc1K5kWq3eCwHeM5'
   - _id: shbOrxTn1RVzXEcf
     name: Téléphone portable
@@ -410,8 +410,7 @@ items:
     folder: null
     sort: 400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -431,12 +430,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.shbOrxTn1RVzXEcf'
   - _id: Qlh7pQzLxy6K5QNk
     name: Lampe torche
@@ -446,8 +446,7 @@ items:
     folder: null
     sort: 1700000
     flags:
-      core:
-        sourceId: Item.tktQLV7z5tnNkEqr
+      core: {}
     system:
       cosm: Empire du Nil
       description: <p>&Eacute;claire</p>
@@ -461,12 +460,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.tktQLV7z5tnNkEqr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.Qlh7pQzLxy6K5QNk'
   - _id: 3Q7pQRHtUJQLwBoN
     name: Lunettes de soleil
@@ -476,8 +476,7 @@ items:
     folder: null
     sort: 2200000
     flags:
-      core:
-        sourceId: Item.Wi4lFW6mtBCZS8EY
+      core: {}
     system:
       cosm: Empire du Nil
       description: <p>&Eacute;l&eacute;gantes</p>
@@ -491,12 +490,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Wi4lFW6mtBCZS8EY
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.3Q7pQRHtUJQLwBoN'
   - _id: kPWYETAaWgKsBoqG
     name: Menottes rapides
@@ -506,8 +506,7 @@ items:
     folder: null
     sort: 3500000
     flags:
-      core:
-        sourceId: Item.YUDCGkWXWHejH49G
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Entrave une cible</p>
@@ -522,12 +521,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.YUDCGkWXWHejH49G
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.kPWYETAaWgKsBoqG'
   - _id: PZxTNQSw6DWLKpxb
     name: Veste en cuir
@@ -561,7 +561,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -569,6 +569,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -578,8 +579,7 @@ items:
     folder: null
     sort: 800000
     flags:
-      core:
-        sourceId: Item.Ih77xAUJLZwOROR7
+      core: {}
     system:
       cosm: (Non)
       description: ''
@@ -599,12 +599,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.PZxTNQSw6DWLKpxb'
   - _id: cPqgeosGBc2dqDWm
     name: Attaque à mains nues (+2)
@@ -614,8 +615,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -630,12 +630,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.cPqgeosGBc2dqDWm'
 effects:
   - _id: yyVL5akSwrj5jb44
@@ -666,7 +667,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -674,6 +675,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1200,7 +1202,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1212,14 +1213,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809136
   modifiedTime: 1716827809136
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!8YH1e6xGG3IHb1Mm'
 

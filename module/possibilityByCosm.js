@@ -1,28 +1,41 @@
 /**
  *
  */
-export class PossibilityByCosm extends Application {
-  /**
-   *
-   */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      template: 'systems/torgeternity/templates/possibilityByCosm.hbs',
+export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
+
+  static DEFAULT_OPTIONS = {
+    classes: ['torgeternity'],
+    tag: 'form',
+    position: {
       width: 'auto',
       height: 'auto',
-      title: game.i18n.localize('torgeternity.sheetLabels.possibilityByCosm'),
+    },
+    window: {
+      title: 'torgeternity.sheetLabels.possibilityByCosm',
       resizeable: false,
-    });
+      contentClasses: ["standard-form"],
+    },
+    actions: {
+      testActiveModule: PossibilityByCosm.#onTestActiveModule,
+    },
+    form: {
+      handler: PossibilityByCosm.#onSave,
+      closeOnSubmit: true
+    }
+  }
+
+  static PARTS = {
+    body: { template: 'systems/torgeternity/templates/possibilityByCosm.hbs', },
+    footer: { template: "templates/generic/form-footer.hbs", },
   }
 
   /**
    *
    * @param actor
    */
-  constructor(actor) {
-    super();
-    this.actorPoss = actor.getFlag('torgeternity', 'possibilityByCosm');
-    this.actor = actor;
+  constructor(options = {}) {
+    super(options);
+    //this.actor = actor;
   }
 
   /**
@@ -30,36 +43,28 @@ export class PossibilityByCosm extends Application {
    * @param actor
    */
   static async create(actor) {
-    new PossibilityByCosm(actor).render(true);
+    new PossibilityByCosm({ document: actor }).render(true);
   }
 
   /**
    *
    */
-  async getData() {
-    // return mergeObject(await super.getData(), this.parameters)
-    const data = super.getData();
-    data.actor = this.actor;
-    data.actorPoss = this.actor.getFlag('torgeternity', 'possibilityByCosm');
-    return data;
-  }
-
-  /**
-   *
-   * @param html
-   */
-  activateListeners(html) {
-    super.activateListeners(html);
-    html.find('.save-button').click(this.onSave.bind(this));
-    html.find('.inputField').change(this.modifyPoss.bind(this));
-    html.find('.content-link').click(this.testActiveModule.bind(this));
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    return Object.assign(context, {
+      actor: this.actor,
+      actorPoss: this.actor.getFlag('torgeternity', 'possibilityByCosm'),
+      buttons: [
+        { type: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" }
+      ],
+    })
   }
 
   /**
    *
    * @param event
    */
-  async testActiveModule(event) {
+  static async #onTestActiveModule(event) {
     const compendiumLink = event.target.dataset.uuid;
     try {
       const tes = await fromUuidSync(compendiumLink);
@@ -76,61 +81,9 @@ export class PossibilityByCosm extends Application {
    *
    * @param event
    */
-  async modifyPoss(event) {
-    const ayslePoss = parseInt(document.getElementById('ayslePoss').value);
-    const cyberpapacyPoss = parseInt(document.getElementById('cyberpapacyPoss').value);
-    const coreEarthPoss = parseInt(document.getElementById('coreEarthPoss').value);
-    const livingLandPoss = parseInt(document.getElementById('livingLandPoss').value);
-    const nileEmpirePoss = parseInt(document.getElementById('nileEmpirePoss').value);
-    const orrorshPoss = parseInt(document.getElementById('orrorshPoss').value);
-    const panPacificaPoss = parseInt(document.getElementById('panPacificaPoss').value);
-    const tharkoldPoss = parseInt(document.getElementById('tharkoldPoss').value);
-    const otherPoss = parseInt(document.getElementById('otherPoss').value);
-    const acto = this.actor;
-    const possibilityByCosm = {
-      ayslePoss: ayslePoss,
-      cyberpapacyPoss: cyberpapacyPoss,
-      coreEarthPoss: coreEarthPoss,
-      livingLandPoss: livingLandPoss,
-      nileEmpirePoss: nileEmpirePoss,
-      orrorshPoss: orrorshPoss,
-      panPacificaPoss: panPacificaPoss,
-      tharkoldPoss: tharkoldPoss,
-      otherPoss: otherPoss,
-    };
-    await acto.setFlag('torgeternity', 'possibilityByCosm', possibilityByCosm);
-    await acto.update({ system: { other: { possibilities: coreEarthPoss } } });
-    await this._render();
-  }
-
-  /**
-   *
-   * @param event
-   */
-  async onSave(event) {
-    const ayslePoss = parseInt(document.getElementById('ayslePoss').value);
-    const cyberpapacyPoss = parseInt(document.getElementById('cyberpapacyPoss').value);
-    const coreEarthPoss = parseInt(document.getElementById('coreEarthPoss').value);
-    const livingLandPoss = parseInt(document.getElementById('livingLandPoss').value);
-    const nileEmpirePoss = parseInt(document.getElementById('nileEmpirePoss').value);
-    const orrorshPoss = parseInt(document.getElementById('orrorshPoss').value);
-    const panPacificaPoss = parseInt(document.getElementById('panPacificaPoss').value);
-    const tharkoldPoss = parseInt(document.getElementById('tharkoldPoss').value);
-    const otherPoss = parseInt(document.getElementById('otherPoss').value);
-    const acto = this.actor;
-    const possibilityByCosm = {
-      ayslePoss: ayslePoss,
-      cyberpapacyPoss: cyberpapacyPoss,
-      coreEarthPoss: coreEarthPoss,
-      livingLandPoss: livingLandPoss,
-      nileEmpirePoss: nileEmpirePoss,
-      orrorshPoss: orrorshPoss,
-      panPacificaPoss: panPacificaPoss,
-      tharkoldPoss: tharkoldPoss,
-      otherPoss: otherPoss,
-    };
-    await acto.setFlag('torgeternity', 'possibilityByCosm', possibilityByCosm);
-    await acto.update({ system: { other: { possibilities: coreEarthPoss } } });
-    this.close();
+  static async #onSave(event, form, formData) {
+    const actor = this.actor;
+    await actor.setFlag('torgeternity', 'possibilityByCosm', formData.object);
+    await actor.update({ "system.other.possibilities": formData.object.coreEarthPoss });
   }
 }

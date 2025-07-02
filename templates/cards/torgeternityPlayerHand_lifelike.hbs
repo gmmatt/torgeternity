@@ -1,115 +1,98 @@
-<form class="{{cssClass}}" autocomplete="off">
-	<span class="handdesign">
-		{{localize 'torgeternity.dialogPrompts.lifelike'}}
-		<input name="flags.torgeternity.lifelike" class="toggle" type="checkbox" id="lifelike" {{checked
-			data.flags.torgeternity.lifelike}}>
-
-	</span>
-	<div class="flexrow">
-		<h2 class="areaTitles">
-			{{localize 'torgeternity.cardTypes.destiny'}}
-			<span class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.drawDestiny'}}"
-				data-action="drawDestiny">
-				<i class="fas fa-plus"></i>
-			</span>
-		</h2>
-
-		<h2 class="areaTitles">
-			{{localize 'torgeternity.cardTypes.cosm'}}
-			<span class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.drawCosm'}}"
-				data-action="drawCosm">
-				<i class="fas fa-plus"></i>
-			</span>
-		</h2>
-	</div>
-	<div id="handedCards">
+<span class="handdesign">
+  {{localize 'torgeternity.dialogPrompts.lifelike'}}
+  <input name="flags.torgeternity.lifelike" class="toggle" type="checkbox" id="lifelike"
+    {{checked source.flags.torgeternity.lifelike}} data-action="lifelike">
+</span>
 
 
-		<ol class="cards destinyCards">
-			{{#each cards as |card|}}
-			{{#if (eq card.type "destiny")}}
-			<li class="card flexrow {{#if card.flags.torgeternity.pooled}}pooled{{/if}}"
-				data-card-id="{{card.id}}">
-				<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+<div id="handedCards">
+  <ol class="cards destinyCards">
+    {{#each cards as |card|}}
+      {{#if (eq card.type "destiny")}}
+        <li class="card flexrow {{#if card.flags.torgeternity.pooled}}pooled{{/if}}"
+          data-card-id="{{card.id}}">
+          <img class="card-face" src="{{card.img}}" data-action="focusCard" alt="{{card.name}}" height="48">
 
-				<div class="torg-card-controls flexcol">
-					<div class="card-faces flexrow">
-						<a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
-							card.hasNextFace}} disabled {{/unless}}>
-							<i class="fas fa-caret-up"></i>
-						</a>
-						<a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace"
-							{{#unless card.hasPreviousFace}} disabled {{/unless}}>
-							<i class="fas fa-caret-down"></i>
-						</a>
-					</div>
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}" data-action="play">
-						<i class="fas fa-play-circle" style="color:white"></i>
-					</a>
-					<!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
-						data-action="display">
-						<i class="fas fa-broadcast-tower" style="color:white"></i>
-					</a>
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
-						data-action="pass">
-						<i class="fas fa-share-square" style="color:white"></i>
-					</a>
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
-						data-action="discard">
-						<i class="fas fa-inbox" style="color:white"></i>
-					</a>
-					<span class="card-pooled">
-						<h5 class="verticalRot">
-							{{localize "torgeternity.dialogPrompts.cardPooled"}}
-						</h5>
-						<input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle"
-							type="checkbox" id="pooled" {{checked card.flags.torgeternity.pooled}}>
-					</span>
-				</div>
-			</li>
-			{{/if}}
-			{{/each}}
+          <div class="torg-card-controls controls flexcol">
+            <div class="card-faces flexrow">
+              <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
+                data-control="nextFace"
+                {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i>
+              </a>
+              <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="controlCard"
+                data-control="prevFace"
+                {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i>
+              </a>
+            </div>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}"
+              data-action="controlCard" data-control="play">
+              <i class="fas fa-play-circle" style="color:white"></i>
+            </a>
+            <!-- <a class="card-control" data-tooltip="View Card" data-action="controlCard" data-control="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
+              data-action="controlCard" data-control="display">
+              <i class="fas fa-broadcast-tower" style="color:white"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
+              data-action="controlCard" data-control="pass">
+              <i class="fas fa-share-square" style="color:white"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
+              data-action="controlCard" data-control="discard">
+              <i class="fas fa-inbox" style="color:white"></i>
+            </a>
+            <span class="card-pooled">
+              <h5 class="verticalRot">
+                {{localize "torgeternity.dialogPrompts.cardPooled"}}
+              </h5>
+              <input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle"
+                type="checkbox" id="pooled" {{checked card.flags.torgeternity.pooled}}>
+            </span>
+          </div>
+        </li>
+      {{/if}}
+    {{/each}}
 
 
-		</ol>
+  </ol>
 
-		<ol class="cards  cosmCards">
-			{{#each cards as |card|}}
-			{{#if (eq card.type "cosm")}}
+  <ol class="cards cosmCards">
+    {{#each cards as |card|}}
+      {{#if (eq card.type "cosm")}}
 
-			<li class="card flexrow" data-card-id="{{card.id}}">
-				<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
-				<div class="torg-card-controls flexcol">
-					<div class="card-faces flexrow">
-						<a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
-							card.hasNextFace}} disabled {{/unless}}>
-							<i class="fas fa-caret-up"></i>
-						</a>
-						<a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace"
-							{{#unless card.hasPreviousFace}} disabled {{/unless}}>
-							<i class="fas fa-caret-down"></i>
-						</a>
-					</div>
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}" data-action="play">
-						<i class="fas fa-play-circle" style="color:white"></i>
-					</a>
-					<!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}" data-action="display">
-						<i class="fas fa-broadcast-tower" style="color:white"></i>
-					</a>
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}" data-action="pass">
-						<i class="fas fa-share-square" style="color:white"></i>
-					</a>
-					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}" data-action="discard">
-						<i class="fas fa-inbox" style="color:white"></i>
-					</a>
-				</div>
-			</li>
-			{{/if}}
-			{{/each}}
-		</ol>
-	</div>
-	<!-- Sheet Footer -->
-
-</form>
+        <li class="card flexrow" data-card-id="{{card.id}}">
+          <img class="card-face" src="{{card.img}}" data-action="focusCard" alt="{{card.name}}" height="48">
+          <div class="torg-card-controls controls flexcol">
+            <div class="card-faces flexrow">
+              <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
+                data-control="nextFace"
+                {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i>
+              </a>
+              <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="controlCard"
+                data-control="prevFace"
+                {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i>
+              </a>
+            </div>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}"
+              data-action="controlCard" data-control="play">
+              <i class="fas fa-play-circle" style="color:white"></i>
+            </a>
+            <!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
+              data-action="controlCard" data-control="display">
+              <i class="fas fa-broadcast-tower" style="color:white"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
+              data-action="controlCard" data-control="pass">
+              <i class="fas fa-share-square" style="color:white"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
+              data-action="controlCard" data-control="discard">
+              <i class="fas fa-inbox" style="color:white"></i>
+            </a>
+          </div>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ol>
+</div>

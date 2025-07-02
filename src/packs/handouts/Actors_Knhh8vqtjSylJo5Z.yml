@@ -24,12 +24,14 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886048529
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.v8EhlvFjQYGClORG'
   - sort: 100000
     name: Archetype - The Dragon Warrior
@@ -53,13 +55,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886111282
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: wyqIUAZMhqAUvoD6
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.wyqIUAZMhqAUvoD6'
   - sort: 100000
     name: Archetype - The Eccentric Inventor
@@ -83,13 +87,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886126497
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: 59zUF4TrfxfdMfhs
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.59zUF4TrfxfdMfhs'
   - sort: 100000
     name: Archetype - The Edeinos Optant
@@ -113,13 +119,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886143098
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: S9ZpLno9HjlxRrmV
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.S9ZpLno9HjlxRrmV'
   - sort: 100000
     name: Archetype - The Electric Samurai
@@ -143,13 +151,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886159906
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: JrsdRBb5FF01sg6B
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.JrsdRBb5FF01sg6B'
   - sort: 100000
     name: Archetype - The Elven Warden
@@ -173,13 +183,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886174826
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: Y5Ywt3WpLVzwhwnm
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.Y5Ywt3WpLVzwhwnm'
   - sort: 100000
     name: Archetype - The Hardoiled Detective
@@ -203,13 +215,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886192513
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: jGMEVr72h0Jjm3CQ
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.jGMEVr72h0Jjm3CQ'
   - sort: 100000
     name: Archetype - The Masked Crusader
@@ -233,13 +247,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886212522
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: 4XMfQXpiBN5gsUNL
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.4XMfQXpiBN5gsUNL'
   - sort: 100000
     name: Archetype - The Monster Hunter
@@ -263,13 +279,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886230234
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: XuZD3GOezHrsiAbQ
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.XuZD3GOezHrsiAbQ'
   - sort: 100000
     name: Archetype - The Primitive Hunter
@@ -293,13 +311,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886251722
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: XE6X141rfpUROtgY
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.XE6X141rfpUROtgY'
   - sort: 100000
     name: Archetype - The Realm Runner
@@ -323,13 +343,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886283946
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: RLk67atzGeIrJ9Ml
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.RLk67atzGeIrJ9Ml'
   - sort: 100000
     name: Archetype - The Relic Raider
@@ -353,13 +375,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886302738
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: tuOeVEYqdKLQkea4
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.tuOeVEYqdKLQkea4'
   - sort: 100000
     name: Archetype - The Renegade Priest
@@ -383,13 +407,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886317882
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: hkGNur6sw23AZTbu
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.hkGNur6sw23AZTbu'
   - sort: 100000
     name: Archetype - The Resistance Fighter
@@ -413,13 +439,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886334098
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: pZZTcePrdVDCeCeF
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.pZZTcePrdVDCeCeF'
   - sort: 100000
     name: Archetype - The Scrapper
@@ -443,13 +471,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886349386
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: KlL26KhVUnkWipzG
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.KlL26KhVUnkWipzG'
   - sort: 100000
     name: Archetype - The Unstoppable Cop
@@ -473,13 +503,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886365442
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: j7NJZCO90CI0aetf
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.j7NJZCO90CI0aetf'
   - sort: 100000
     name: Companion - Sabre-Tooth Cat
@@ -503,13 +535,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886394514
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: oSp48783apDZJbHt
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.oSp48783apDZJbHt'
   - sort: 100000
     name: Companion - White Wolf
@@ -533,13 +567,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1693886416650
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: ItABNBtu0A2pm0Dc
+    category: null
     _key: '!journal.pages!Knhh8vqtjSylJo5Z.ItABNBtu0A2pm0Dc'
 folder: null
 sort: 0
@@ -551,11 +587,13 @@ flags: {}
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693885308072
   modifiedTime: 1716827808382
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!Knhh8vqtjSylJo5Z'
 

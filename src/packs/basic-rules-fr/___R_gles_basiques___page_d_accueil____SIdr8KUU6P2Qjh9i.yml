@@ -3,8 +3,7 @@ name: '** Règles basiques - page d''accueil **'
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: JournalEntry.13rKfxD1L5FPRnPr
+  core: {}
 pages:
   - name: '** Règles basiques - page d''accueil **'
     type: text
@@ -28,12 +27,14 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!SIdr8KUU6P2Qjh9i.725ni3z9LP4ep2zL'
 ownership:
   kz1RJu8vrAPmTUwN: 3
@@ -41,11 +42,13 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827810234
   modifiedTime: 1716827810234
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: JournalEntry.13rKfxD1L5FPRnPr
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!SIdr8KUU6P2Qjh9i'
 

@@ -11,8 +11,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 0
     flags:
-      core:
-        sourceId: Item.hnzAJpMqPZrjYrX8
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -30,12 +29,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722166703718
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.hnzAJpMqPZrjYrX8
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.oYpHjuMGhIsNv8XC'
   - _id: Ld5AIx57YpaDZE4T
     name: Stromstrahl
@@ -45,8 +45,7 @@ items:
     folder: null
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Oow5hug0e0C5BCNH
+      core: {}
     system:
       category: pulpPowers
       cosm: nileEmpire
@@ -138,12 +137,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866747115
       modifiedTime: 1722166533974
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Oow5hug0e0C5BCNH
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.Ld5AIx57YpaDZE4T'
   - _id: 33139H5tzkxx6FAx
     name: Kraftfeld
@@ -153,8 +153,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.RUqkRcpgyDXQXRi2
+      core: {}
     system:
       category: pulpPowers
       cosm: nileEmpire
@@ -247,12 +246,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866751899
       modifiedTime: 1722166540912
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.RUqkRcpgyDXQXRi2
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.33139H5tzkxx6FAx'
   - _id: ILlukSLFB0oP3oxR
     name: Stromstrahl (Waffe)
@@ -262,9 +262,7 @@ items:
     folder: null
     sort: 23400000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jDYOf9wwFysGXhkN
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -295,12 +293,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866995356
       modifiedTime: 1722166724463
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jDYOf9wwFysGXhkN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.ILlukSLFB0oP3oxR'
   - name: Mikro-Audiosender
     type: gear
@@ -309,8 +308,7 @@ items:
     folder: null
     sort: -25000
     flags:
-      core:
-        sourceId: Item.oQDasq1tsV2C1xba
+      core: {}
     _id: z5kuKXicHCTjagsy
     system:
       cosm: nileEmpire
@@ -328,12 +326,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867036963
       modifiedTime: 1722166672015
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.oQDasq1tsV2C1xba
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.z5kuKXicHCTjagsy'
   - name: Rucksack
     type: gear
@@ -342,8 +341,7 @@ items:
     folder: null
     sort: 13500000
     flags:
-      core:
-        sourceId: Item.9OFC7IM8K9EMljbZ
+      core: {}
     _id: 4aD1KQ5M35j8LPLG
     system:
       cosm: aysle
@@ -361,12 +359,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867043890
       modifiedTime: 1722166708031
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.9OFC7IM8K9EMljbZ
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.4aD1KQ5M35j8LPLG'
   - _id: vsz0ZonowO3k7bcL
     name: Erste-Hilfe-Kasten
@@ -396,7 +395,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -404,6 +403,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -413,8 +413,7 @@ items:
     folder: null
     sort: -100000
     flags:
-      core:
-        sourceId: Item.qfuqdyayux9JCd6l
+      core: {}
     system:
       cosm: nileEmpire
       description: <p><em>Erste-Hilfe</em>-Proben sind begünstigt</p>
@@ -431,12 +430,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867047131
       modifiedTime: 1722166698774
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.qfuqdyayux9JCd6l
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.vsz0ZonowO3k7bcL'
   - name: Taschenlampe
     type: gear
@@ -445,8 +445,7 @@ items:
     folder: null
     sort: 22100000
     flags:
-      core:
-        sourceId: Item.ghYEu90Et15IioVa
+      core: {}
     _id: A3zASEYHS3ksPNvh
     system:
       cosm: nileEmpire
@@ -464,12 +463,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867051051
       modifiedTime: 1722166711399
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.ghYEu90Et15IioVa
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.A3zASEYHS3ksPNvh'
   - name: Funkempfänger
     type: gear
@@ -478,8 +478,7 @@ items:
     folder: null
     sort: -50000
     flags:
-      core:
-        sourceId: Item.CBYudRRbDHQzC9F2
+      core: {}
     _id: 5V8SDuZZgyq8hEge
     system:
       cosm: nileEmpire
@@ -497,12 +496,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867074874
       modifiedTime: 1722166667591
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.CBYudRRbDHQzC9F2
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.5V8SDuZZgyq8hEge'
   - name: Werkzeuggürtel
     type: gear
@@ -511,8 +511,7 @@ items:
     folder: null
     sort: 30700000
     flags:
-      core:
-        sourceId: Item.NDVbTsJFnguLs4Bx
+      core: {}
     _id: JOEXCC8y8rElWHrS
     system:
       cosm: nileEmpire
@@ -530,12 +529,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867083090
       modifiedTime: 1722166716056
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.NDVbTsJFnguLs4Bx
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.JOEXCC8y8rElWHrS'
   - name: Ledermantel
     type: armor
@@ -544,9 +544,7 @@ items:
     folder: null
     sort: 28400000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
+      core: {}
     _id: 8FoodSadABORHrmX
     system:
       cosm: nileEmpire
@@ -571,12 +569,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366193
       modifiedTime: 1722166728591
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.8FoodSadABORHrmX'
   - name: Mensch
     type: race
@@ -605,12 +604,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599482463
       modifiedTime: 1729599482463
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: cWJKBZQuvvDdTCa9
     sort: 0
     ownership:
@@ -641,7 +641,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -649,6 +649,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -657,8 +658,7 @@ effects:
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.Aq6ZhdfGe9SMQxwv
+  core: {}
 system:
   shock:
     max: 5
@@ -1082,7 +1082,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1094,14 +1093,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694866736301
   modifiedTime: 1729013588594
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.Aq6ZhdfGe9SMQxwv
   duplicateSource: null
+  exportSource: null
 _key: '!actors!LS1z3a6GAJT83doA'
 

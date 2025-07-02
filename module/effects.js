@@ -3,12 +3,12 @@
  * @param event
  * @param owner
  */
-export function onManageActiveEffect(event, owner) {
+export function onManageActiveEffect(event, target, owner) {
   event.preventDefault();
-  const a = event.currentTarget;
-  const li = a.closest('li');
+  const a = event.target;
+  const li = target.closest('li');
   const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
-  switch (a.dataset.action) {
+  switch (target.dataset.control) {
     case 'create':
       return owner.createEmbeddedDocuments('ActiveEffect', [
         {

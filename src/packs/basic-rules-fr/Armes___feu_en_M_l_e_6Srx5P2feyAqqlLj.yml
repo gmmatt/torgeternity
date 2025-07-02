@@ -2,8 +2,7 @@ name: Armes à feu en Mêlée
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: JournalEntry.3UWmgP16pWaKSCqG
+  core: {}
 _id: 6Srx5P2feyAqqlLj
 pages:
   - name: Armes à feu en Mêlée
@@ -37,12 +36,14 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!6Srx5P2feyAqqlLj.IOp9gq1QsRp686i1'
 ownership:
   default: 0
@@ -51,11 +52,13 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827810064
   modifiedTime: 1716827810064
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: JournalEntry.3UWmgP16pWaKSCqG
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!6Srx5P2feyAqqlLj'
 

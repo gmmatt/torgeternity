@@ -11,8 +11,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 200000
     flags:
-      core:
-        sourceId: Item.YPwj95vVULBwePmN
+      core: {}
     system:
       cosm: livingLand
       description: <p>Rot, weiß und blau. Lehre deinen Feinden das Fürchten!</p>
@@ -28,12 +27,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722167441564
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.YPwj95vVULBwePmN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.RTFA8GGOPi8crymC'
   - _id: ObSFboHHSLAndid6
     name: Totem
@@ -43,8 +43,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 300000
     flags:
-      core:
-        sourceId: Item.XNd1hm8Qf4RNfaKE
+      core: {}
     system:
       cosm: livingLand
       description: ''
@@ -60,12 +59,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722167444693
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.XNd1hm8Qf4RNfaKE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.ObSFboHHSLAndid6'
   - _id: C57Br0iAfeRJhhiH
     name: Tiergefährte (Säbelzahntiger)
@@ -75,8 +75,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sAnjais7Ifne0Gxn
+      core: {}
     system:
       category: savagery
       cosm: livingLand
@@ -167,12 +166,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694861927004
       modifiedTime: 1722167369685
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sAnjais7Ifne0Gxn
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.C57Br0iAfeRJhhiH'
   - _id: U9r4bGF9Qf9Y2tdX
     name: Unnachgiebig (Kampfkraft)
@@ -182,8 +182,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.HPYtbg4vPrY05AQ6
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -274,12 +273,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694861933004
       modifiedTime: 1722167365204
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.HPYtbg4vPrY05AQ6
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.U9r4bGF9Qf9Y2tdX'
   - _id: PUNnBfqB6aI6XuN0
     name: Knochenmesser
@@ -289,9 +289,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.AgXzt07RwyGh98ej
+      core: {}
     system:
       cosm: livingLand
       description: >-
@@ -323,12 +321,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694862023179
       modifiedTime: 1722167411725
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.AgXzt07RwyGh98ej
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.PUNnBfqB6aI6XuN0'
   - name: Fackel
     type: gear
@@ -337,8 +336,7 @@ items:
     folder: null
     sort: 100000
     flags:
-      core:
-        sourceId: Item.EVp5rwRYSGcx7uFV
+      core: {}
     _id: YidgqgRHWHRc1NCw
     system:
       cosm: livingLand
@@ -356,12 +354,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694862039292
       modifiedTime: 1722167429885
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.EVp5rwRYSGcx7uFV
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.YidgqgRHWHRc1NCw'
   - _id: 1oyv8fqmX1WIiSaF
     name: Knochen und Fell
@@ -371,9 +370,7 @@ items:
     folder: null
     sort: 29000000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.tDUAjI78Wk2mAV6s
+      core: {}
     system:
       cosm: livingLand
       description: >-
@@ -403,12 +400,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366193
       modifiedTime: 1722167425309
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.tDUAjI78Wk2mAV6s
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.1oyv8fqmX1WIiSaF'
   - _id: LQlc5m0bbPHAdLiG
     name: Hrockt-Sprossenspeer
@@ -452,12 +450,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.LQlc5m0bbPHAdLiG'
   - name: Hrockt-Sprossenspeer
     type: missileweapon
@@ -498,12 +497,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.oA1Elm4eVdBcBSn2
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _id: dtM8WTZFd7JOeKMr
     sort: 0
     _key: '!actors.items!pGJE5A6rJMK7Za84.dtM8WTZFd7JOeKMr'
@@ -534,12 +534,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599503135
       modifiedTime: 1729599503135
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: JjYU7hAsq8pAZdJh
     sort: 0
     ownership:
@@ -550,8 +551,7 @@ effects: []
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.sPLt8RBL1hieic6p
+  core: {}
 system:
   shock:
     max: 5
@@ -975,7 +975,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -987,14 +986,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694861916375
   modifiedTime: 1729013603479
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.sPLt8RBL1hieic6p
   duplicateSource: null
+  exportSource: null
 _key: '!actors!pGJE5A6rJMK7Za84'
 

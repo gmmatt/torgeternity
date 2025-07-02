@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.5o1m7pL2fi5LABQw
+      core: {}
     system:
       cosm: livingLand
       description: <p>Bone carving of Lanala</p>
@@ -29,12 +28,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693909398173
       modifiedTime: 1722155751457
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.5o1m7pL2fi5LABQw
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.OgvvLI102HQqibWo'
   - _id: j4bd2LSc9RyWGvDr
     name: Healing
@@ -44,8 +44,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -72,12 +71,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693909676811
       modifiedTime: 1693909676811
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.j4bd2LSc9RyWGvDr'
   - _id: bVioii8rx0LCXrcH
     name: Strike
@@ -87,8 +87,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.mtNAkQHSz276enpC
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -115,12 +114,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693909681228
       modifiedTime: 1693909681228
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.Items.mtNAkQHSz276enpC
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.bVioii8rx0LCXrcH'
   - _id: Xc2qo0WjOqwKb1qy
     name: Ward Enemy
@@ -130,8 +130,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -160,12 +159,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693909685043
       modifiedTime: 1693909685043
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.Xc2qo0WjOqwKb1qy'
   - _id: gjqT8qHAzPDsvKBD
     name: Hrockt Root Armor
@@ -175,8 +175,7 @@ items:
     folder: null
     sort: 54800000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
+      core: {}
     system:
       cosm: livingLand
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>Crafted from the extremely durable roots of the hrockt tree, this armor is highly protective but also immobile without the will of Lanala. To be of any use the wearer must be a jakatt, with one or more adds in faith (Keta Kalles) and a Spirit Axiom of 11 or more. If the local axiom is lower this armor does cause a Contradiction.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -199,12 +198,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146924
       modifiedTime: 1722155790760
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.gjqT8qHAzPDsvKBD'
   - _id: dNmKxJaFaTINQHBa
     name: Miracles
@@ -306,12 +306,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.W6HcoYyOqi6pGGfD
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.dNmKxJaFaTINQHBa'
   - _id: yAe9TWoKpqHEnno9
     name: Whip Tail
@@ -347,12 +348,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!hcdhRCs56U5JrAl4.yAe9TWoKpqHEnno9.050BsL6MF5PErpeT
     folder: gjZiCPX5knOIpsHd
@@ -450,12 +452,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.MLrktsSHLMM5n7g9
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.yAe9TWoKpqHEnno9'
   - _id: dhZt4ogIENT8UrvV
     name: Hrockt Shoot Spear
@@ -492,12 +495,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.ammMtd4GDTZAbVQx
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.dhZt4ogIENT8UrvV'
   - name: Hrockt Shoot Spear
     type: missileweapon
@@ -537,12 +541,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.6Pb5rtY0QdIMTbRF
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _id: GQGV7PufpwLZ9DdV
     sort: 0
     _key: '!actors.items!hcdhRCs56U5JrAl4.GQGV7PufpwLZ9DdV'
@@ -717,12 +722,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.R7iwjAD49l0zullR
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582129107
       modifiedTime: 1729582129107
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: lepxKAfPcxH7cEuk
     sort: 250000
     _key: '!actors.items!hcdhRCs56U5JrAl4.lepxKAfPcxH7cEuk'
@@ -825,12 +831,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582129117
       modifiedTime: 1729582129232
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: il3Z7vPAt1moqpxZ
     effects: []
     folder: null
@@ -858,12 +865,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582129234
       modifiedTime: 1729582129427
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: 99I93QMkOyDEUng1
     effects: []
     folder: null
@@ -898,12 +906,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!hcdhRCs56U5JrAl4.I1ZQfHgB1zhqV1it'
 folder: null
 sort: 100001
@@ -1413,7 +1422,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1425,14 +1433,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693901456910
   modifiedTime: 1729013423860
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!hcdhRCs56U5JrAl4'
 

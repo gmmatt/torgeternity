@@ -1,177 +1,57 @@
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
-export default class torgeternityPile extends CardsPile {
-  /**
-   *
-   * @returns {object} The default options for the torgeternityPile class.
-   */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['torgeternity', 'sheet', 'cardsPile', 'cards-config'],
+export default class torgeternityPile extends foundry.applications.sheets.CardPileConfig { // type = "pile"
+
+  static DEFAULT_OPTIONS = {
+    type: "pile",
+    classes: ['torgeternity'],
+    position: {
       width: 400,
-    });
+      height: "auto"
+    },
+    actions: {
+      return: torgeternityPile.#onReturn,
+    }
   }
 
-  /**
-   *
-   * @returns {string} The template path for the torgeternityPile class.
-   */
-  get template() {
-    return 'systems/torgeternity/templates/cards/torgeternityPile.hbs';
+  static PARTS = {
+    cards: {
+      template: 'systems/torgeternity/templates/cards/torgeternityPile.hbs',
+      root: true,
+      scrollable: ["ol.cards"]
+    },
+    footer: { template: "templates/generic/form-footer.hbs" }
   }
 
   /**
    *
    * @inheritdoc
    */
-  async getData(data) {
-    data = await super.getData();
-
-    for (const card of data?.cards) {
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    context.cards = this._prepareCards(); // Get in sorted order
+    for (const card of context.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
     }
-
-    return data;
+    return context;
   }
 
-  /**
-   *
-   * @param {Event} event The event object.
-   */
-  async _onCardControl(event) {
-    // Shamelessly stolen from core software
-    const button = event.currentTarget;
-    const li = button.closest('.card');
-    const card = li ? this.object.cards.get(li.dataset.cardId) : null;
-    const cls = getDocumentClass('Card');
+  _prepareButtons() {
+    if (!this.document.isOwner) return [];
 
-    // Save any pending change to the form
-    await this._onSubmit(event, { preventClose: true, preventRender: true });
+    return [
+      { type: 'button', icon: 'fas fa-random', label: 'CARDS.ACTIONS.Shuffle', action: "shuffle" },
+      { type: 'button', icon: 'fas fa-share-square', label: 'CARDS.ACTIONS.Pass', action: "pass" },
+      { type: 'button', icon: 'fas fa-recycle', label: 'torgeternity.sheetLabels.return', action: "return", tooltip: 'torgeternity.dialogPrompts.return' },
+    ]
+  }
 
-    // Handle the control action
-    switch (button.dataset.action) {
-      case 'play':
-        card.setFlag('torgeternity', 'pooled', false);
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
-        card.toMessage({
-          content: `<div class="card-draw flexrow"><img class="card-face" src="${
-            card.img
-          }"/><h4 class="card-name">${game.i18n.localize('torgeternity.chatText.playsCard')} ${
-            card.name
-          }</h4>
-            </div>`,
-        });
-        return;
-      case 'view':
-        new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
-        return;
-      case 'display':
-        const x = new ImagePopout(card.img, { title: card.name }).render(true, {
-          width: 425,
-          height: 650,
-        });
-        x.shareImage();
-        return;
-      case 'discard':
-        card.setFlag('torgeternity', 'pooled', false);
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
-        card.toMessage({
-          content: `<div class="card-draw flexrow"><img class="card-face" src="${
-            card.img
-          }"/><h4 class="card-name">${game.i18n.localize('torgeternity.chatText.discardsCard')} ${
-            card.name
-          }</h4></div>`,
-        });
-        return;
-      case 'drawDestiny':
-        const destinyDeck = game.cards.get(
-          game.settings.get('torgeternity', 'deckSetting').destinyDeck
-        );
-        if (destinyDeck.cards.size) {
-          const [firstCardKey] = destinyDeck.cards.keys(); // need to grab a card to get toMessage access
-          const card = destinyDeck.cards.get(firstCardKey);
-          card.toMessage({
-            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
-              destinyDeck.img
-            }"/><span><img src="${
-              destinyDeck.img
-            }"></span></span><h4 class="card-name">${game.i18n.localize(
-              'torgeternity.chatText.drawsCard'
-            )} ${destinyDeck.name}.</h4></div>`,
-          });
-        }
-        return this.object.draw(destinyDeck);
-      case 'drawCosm':
-        this.drawCosmDialog();
-        return;
-      case 'create':
-        return cls.createDialog({}, { parent: this.object, pack: this.object.pack });
-      case 'edit':
-        return card.sheet.render(true);
-      case 'delete':
-        return card.deleteDialog();
-      case 'deal':
-        return this.object.dealDialog();
-      case 'draw':
-        return this.object.drawDialog();
-      case 'pass':
-        return this.object.passDialog();
-      case 'reset':
-        this._sortStandard = true;
-        return this.object.recall();
-      case 'shuffle':
-        this._sortStandard = false;
-        return this.object.shuffle();
-      case 'toggleSort':
-        this._sortStandard = !this._sortStandard;
-        return this.render();
-      case 'nextFace':
-        return card.update({ face: card.face === null ? 0 : card.face + 1 });
-      case 'prevFace':
-        return card.update({ face: card.face === 0 ? null : card.face - 1 });
-      case 'return':
-        for (let i = 0; i < this.object.cards.size; i++) {
-          this.object.cards.contents[i].recall();
-        }
+  static async #onReturn(event) {
+    for (let i = 0; i < this.document.cards.size; i++) {
+      this.document.cards.contents[i].recall();
     }
-  }
-
-  /**
-   *
-   */
-  async passDialog() {
-    const cards = game.cards.filter(
-      (c) => c !== this && c.type !== 'deck' && c.testUserPermission(game.user, 'LIMITED')
-    );
-    if (!cards.length) return ui.notifications.warn('CARDS.PassWarnNoTargets', { localize: true });
-
-    // Construct the dialog HTML
-    const html = await renderTemplate('templates/cards/dialog-pass.html', {
-      cards: cards,
-      modes: {
-        [CONST.CARD_DRAW_MODES.TOP]: 'CARDS.DrawModeTop',
-        [CONST.CARD_DRAW_MODES.BOTTOM]: 'CARDS.DrawModeBottom',
-        [CONST.CARD_DRAW_MODES.RANDOM]: 'CARDS.DrawModeRandom',
-      },
-    });
-
-    // Display the prompt
-    return Dialog.prompt({
-      title: game.i18n.localize('CARDS.PassTitle'),
-      label: game.i18n.localize('CARDS.Pass'),
-      content: html,
-      callback: (html) => {
-        const form = html.querySelector('form.cards-dialog');
-        const fd = new FormDataExtended(form).object;
-        const to = game.cards.get(fd.to);
-        const options = { how: fd.how, updateData: fd.down ? { face: null } : {} };
-        return this.deal([to], fd.number, options).catch((err) => {
-          ui.notifications.error(err.message);
-          return this;
-        });
-      },
-      options: { jQuery: false },
-    });
   }
 }

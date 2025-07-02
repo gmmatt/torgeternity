@@ -1,32 +1,34 @@
 <div class="sksheet header totalbox">
   <h1 class="sksheet header nameinput">
-    <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+    <input name="name" type="text" value="{{document.name}}" placeholder="Name" />
   </h1>
-  <img class="open-hand" src="systems/torgeternity/images/icons/cardhand.webp" data-tooltip="{{localize
-  "torgeternity.dialogPrompts.openHand"}}">
+  <img class="open-hand" data-action="openHand" src="systems/torgeternity/images/icons/cardhand.webp" data-tooltip="{{localize
+  " torgeternity.dialogPrompts.openHand"}}">
 
   <div class="sksheet header CRSbox">
     <span>{{localize "torgeternity.gear.cosm"}}</span>
-    <select style="width: 100%" name="system.other.cosm" class="input-box">
-      {{selectOptions config.cosmTypes selected=actor.system.other.cosm localize=true sort=true}}
+    <select style="width: 100%" name="system.other.cosm">
+      {{selectOptions config.cosmTypes selected=document.system.other.cosm localize=true sort=true}}
     </select>
 
     <span class="raceSpan">
       <p class="raceSpanHeader">{{localize "torgeternity.sheetLabels.race"}}</p>
-      <p 
+      <p
         style="grid-column: 1/
-          {{#if (and actor.flags.torgeternity.editAttributes (ne actor.system.details.race (localize 'torgeternity.sheetLabels.noRace')))}}2{{else}}3{{/if}}" 
+          {{#if (and document.flags.torgeternity.editAttributes (ne document.system.details.race (localize 'torgeternity.sheetLabels.noRace')))}}2{{else}}3{{/if}}"
         class="raceSpanRace">
-          {{actor.system.details.race}}
-        </p>
-      {{#if (and actor.flags.torgeternity.editAttributes (ne actor.system.details.race (localize 'torgeternity.sheetLabels.noRace')))}}
-        <a class="deleteRaceButton" data-tooltip="{{localize 'torgeternity.iconeTitles.deleteRace'}}"><i class="fas fa-trash"></i></a>
+        {{document.system.details.race}}
+      </p>
+      {{#if (and document.flags.torgeternity.editAttributes (ne document.system.details.race (localize 'torgeternity.sheetLabels.noRace')))}}
+        <a class="deleteRaceButton" data-action"deleteRaceButton"
+          data-tooltip="{{localize 'torgeternity.iconeTitles.deleteRace'}}"><i
+            class="fas fa-trash"></i></a>
       {{/if}}
     </span>
 
     <span>{{localize "torgeternity.sheetLabels.size"}}</span>
-    <select style="width: 100%" name="system.details.sizeBonus" class="input-box">
-      {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true sort=true}}
+    <select style="width: 100%" name="system.details.sizeBonus">
+      {{selectOptions config.sizes selected=document.system.details.sizeBonus localize=true sort=true}}
     </select>
   </div>
 
@@ -36,34 +38,30 @@
     <input
       name="system.axioms.magic"
       type="number"
-      value="{{actor.system.axioms.magic}}"
+      value="{{document.system.axioms.magic}}"
       data-dtype="Number"
-      class="small-input"
-    />
+      class="small-input" />
     <span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
     <input
       name="system.axioms.social"
       type="number"
-      value="{{actor.system.axioms.social}}"
+      value="{{document.system.axioms.social}}"
       data-dtype="Number"
-      class="small-input"
-    />
+      class="small-input" />
     <span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
     <input
       name="system.axioms.spirit"
       type="number"
-      value="{{actor.system.axioms.spirit}}"
+      value="{{document.system.axioms.spirit}}"
       data-dtype="Number"
-      class="small-input"
-    />
+      class="small-input" />
     <span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
     <input
       name="system.axioms.tech"
       type="number"
-      value="{{actor.system.axioms.tech}}"
+      value="{{document.system.axioms.tech}}"
       data-dtype="Number"
-      class="small-input"
-    />
+      class="small-input" />
   </div>
 
   <h2 class="sksheet header woundsheadline">{{localize "torgeternity.sheetLabels.wounds"}}</h2>
@@ -71,19 +69,17 @@
     <input
       name="system.wounds.value"
       type="number"
-      value="{{actor.system.wounds.value}}"
+      value="{{document.system.wounds.value}}"
       data-dtype="Number"
-      class="small-input"
-    />
+      class="small-input" />
     /
     <input
       name="system.wounds.max"
       type="number"
-      value="{{actor.system.wounds.max}}"
+      value="{{document.system.wounds.max}}"
       data-dtype="Number"
       class="small-input"
-      disabled
-    />
+      disabled />
   </div>
 
   <h2 class="sksheet header shockheadline">{{localize "torgeternity.sheetLabels.shock"}}</h2>
@@ -91,30 +87,27 @@
     <input
       name="system.shock.value"
       type="number"
-      value="{{actor.system.shock.value}}"
+      value="{{document.system.shock.value}}"
       data-dtype="Number"
-      class="small-input"
-    />
+      class="small-input" />
     /
     <input
       name="system.shock.max"
       type="number"
-      value="{{actor.system.shock.max}}"
+      value="{{document.system.shock.max}}"
       data-dtype="Number"
       class="small-input"
-      disabled
-    />
+      disabled />
   </div>
 
-  <h2 class="sksheet header possyheadline open-poss">
+  <h2 class="sksheet header possyheadline open-poss" data-action="openPoss">
     {{localize "torgeternity.sheetLabels.possibilities"}}
   </h2>
   <div class="sksheet header possybox">
     <input
       name="system.other.possibilities"
       type="number"
-      value="{{actor.system.other.possibilities}}"
-      data-dtype="number"
-    />
+      value="{{document.system.other.possibilities}}"
+      data-dtype="number" />
   </div>
 </div>

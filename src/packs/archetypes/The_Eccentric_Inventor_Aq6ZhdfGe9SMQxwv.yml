@@ -8,8 +8,7 @@ items:
     type: firearm
     sort: 400001
     flags:
-      core:
-        sourceId: Item.W8ZARSxZdHHv4JZN
+      core: {}
     img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
@@ -40,12 +39,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722154981890
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.W8ZARSxZdHHv4JZN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.E6JiAtIrHBIrc4Hp'
   - _id: el7ijfFcwh1cCRcR
     name: Electro-Ray
@@ -55,8 +55,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.OMSbysWG7R7kHKnY
+      core: {}
     system:
       category: pulpPowers
       cosm: nileEmpire
@@ -151,12 +150,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901087967
       modifiedTime: 1722152785951
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.OMSbysWG7R7kHKnY
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.el7ijfFcwh1cCRcR'
   - _id: uk7sK6sWfxJIbulc
     name: Force Field
@@ -166,8 +166,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.r3NzZGyQ04yQNJXc
+      core: {}
     system:
       category: pulpPowers
       cosm: nileEmpire
@@ -258,12 +257,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901168472
       modifiedTime: 1722152797064
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.r3NzZGyQ04yQNJXc
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.uk7sK6sWfxJIbulc'
   - _id: NWapUa2jcALYy3AO
     name: Flashlight
@@ -273,8 +273,7 @@ items:
     folder: null
     sort: 425000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -291,12 +290,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901305711
       modifiedTime: 1722155672355
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.NWapUa2jcALYy3AO'
   - _id: sURNPsJD7MBaiuoE
     name: Tracking Device
@@ -306,8 +306,7 @@ items:
     folder: null
     sort: 900000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.06c6JoWaPqyNzpRv
+      core: {}
     system:
       cosm: nileEmpire
       description: "<p>A beacon that broadcasts its location to any attuned radio receiver within one kilometer.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -324,12 +323,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901311210
       modifiedTime: 1722155628777
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.06c6JoWaPqyNzpRv
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.sURNPsJD7MBaiuoE'
   - _id: 36umQpiNEdaUN7yk
     name: Micro Audio Transmitter
@@ -339,8 +339,7 @@ items:
     folder: null
     sort: 500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.cae3PZicII8jW148
+      core: {}
     system:
       cosm: nileEmpire
       description: "<p>Relays sound to any attuned radio receivers within 400 meters.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -357,12 +356,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901326287
       modifiedTime: 1722155689761
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.cae3PZicII8jW148
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.36umQpiNEdaUN7yk'
   - _id: cVUn4Bk2Dzitb68n
     name: Backpack
@@ -372,8 +372,7 @@ items:
     folder: null
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.RSnCZO6bMZqc5e1X
+      core: {}
     system:
       cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -390,12 +389,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901332502
       modifiedTime: 1722155658417
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.RSnCZO6bMZqc5e1X
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.cVUn4Bk2Dzitb68n'
   - _id: bnlZswmHuUmFCgDL
     name: Lock Picks
@@ -405,8 +405,7 @@ items:
     folder: null
     sort: 450000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.lyBSUlh3gT1qYamL
+      core: {}
     system:
       cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -423,12 +422,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901350757
       modifiedTime: 1722155682712
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.lyBSUlh3gT1qYamL
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.bnlZswmHuUmFCgDL'
   - _id: d7byAJpKPH7u0yYz
     name: Radio Receiver
@@ -438,8 +438,7 @@ items:
     folder: null
     sort: 700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.EyJpTkom5GEE706E
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -456,12 +455,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901357439
       modifiedTime: 1722155697833
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.EyJpTkom5GEE706E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.d7byAJpKPH7u0yYz'
   - _id: AHDH6vseOwIBIwfs
     name: Tool Belt
@@ -471,8 +471,7 @@ items:
     folder: null
     sort: 800000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.L3NJPS1akDMAqkPK
+      core: {}
     system:
       cosm: orrorsh
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -489,12 +488,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693901366464
       modifiedTime: 1722155722881
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.L3NJPS1akDMAqkPK
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.AHDH6vseOwIBIwfs'
   - _id: gKZOg5vmIgArnWQj
     name: Leather Coat
@@ -504,8 +504,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -529,12 +528,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722155014075
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.gKZOg5vmIgArnWQj'
   - _id: BioSWECX8OLQhqht
     name: First Aid Kit
@@ -570,19 +570,19 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!Aq6ZhdfGe9SMQxwv.BioSWECX8OLQhqht.tf0VK9CsMozw0bUh
     folder: gjZiCPX5knOIpsHd
     sort: 362500
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
+      core: {}
     system:
       cosm: nileEmpire
       description: "<p>Makes first aid tests Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -600,12 +600,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.BioSWECX8OLQhqht'
   - name: Human
     type: race
@@ -637,12 +638,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582124411
       modifiedTime: 1729582124411
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: WxWrR6snWWc7GRAE
     sort: 100000
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.WxWrR6snWWc7GRAE'
@@ -676,12 +678,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.mQorDXPsnkJYGih3'
 folder: null
 sort: 100001
@@ -1191,7 +1194,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1203,14 +1205,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693901061941
   modifiedTime: 1729013413073
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!Aq6ZhdfGe9SMQxwv'
 

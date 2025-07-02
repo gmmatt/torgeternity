@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 1800000
     flags:
-      core:
-        sourceId: Item.fgtK79BumQwmkPzK
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,20 +26,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722158355475
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.fgtK79BumQwmkPzK
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.IWuewwOZhaOsjEZt'
   - _id: 60Hn7sxT2ytPIWI9
     name: Baton
     type: meleeweapon
     sort: 600000
     flags:
-      core:
-        sourceId: Item.NwUEzGCgHe2GgC6N
+      core: {}
     img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
@@ -68,12 +67,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722158438088
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.NwUEzGCgHe2GgC6N
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.60Hn7sxT2ytPIWI9'
   - _id: foEY3vdIO3IYdKLF
     name: Situational Awareness
@@ -83,8 +83,7 @@ items:
     folder: null
     sort: 28400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.VolVbsElAMc8KiPt
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -175,12 +174,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914682084
       modifiedTime: 1722153737285
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.VolVbsElAMc8KiPt
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.foEY3vdIO3IYdKLF'
   - _id: 850Io47ql85dGtYF
     name: Negation
@@ -190,8 +190,7 @@ items:
     folder: null
     sort: 50600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.uNmrQFTiSe5b1FXp
+      core: {}
     system:
       category: reality
       cosm: coreEarth
@@ -282,12 +281,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914688523
       modifiedTime: 1722153712093
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.uNmrQFTiSe5b1FXp
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.850Io47ql85dGtYF'
   - _id: um7IpTMm9O9yoHyJ
     name: Glock 9mm
@@ -297,8 +297,7 @@ items:
     folder: null
     sort: 3400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -326,12 +325,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914872301
       modifiedTime: 1722158381211
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.um7IpTMm9O9yoHyJ'
   - _id: RCKN2Q1yd7kkWeRT
     name: Multi-Tool
@@ -341,8 +341,7 @@ items:
     folder: null
     sort: 1650000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>A handy device that combines clippers, screwdrivers, a wrench, and other small tools into a single fold-out tool.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -359,12 +358,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914887003
       modifiedTime: 1722158350907
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.RCKN2Q1yd7kkWeRT'
   - _id: nIDSxLm272ubu5xH
     name: Flares (3)
@@ -374,8 +374,7 @@ items:
     folder: null
     sort: 1537500
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -392,12 +391,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914896396
       modifiedTime: 1722158339595
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.nIDSxLm272ubu5xH'
   - _id: WCcrMD3PJGI2XPWL
     name: Flashlight
@@ -407,8 +407,7 @@ items:
     folder: null
     sort: 1575000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -425,12 +424,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914926964
       modifiedTime: 1722158346163
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.WCcrMD3PJGI2XPWL'
   - _id: 1jhdApzFS5pZJkoZ
     name: Ballistic/Kevlar Vest
@@ -440,8 +440,7 @@ items:
     folder: null
     sort: 42900000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>\n<p>Also known as bulletproof vests or Kevlar armor. Made of synthetic material designed to catch and stop bullets as they spin into different protective layers.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -464,12 +463,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146882
       modifiedTime: 1722158364507
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.1jhdApzFS5pZJkoZ'
   - name: Extra Magazines
     type: ammunition
@@ -504,12 +504,13 @@ items:
     _stats:
       compendiumSource: Item.KRYQ71jof26XeGEv
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722109384299
       modifiedTime: 1722158376442
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.LZhzeSpPiVcOepk9'
   - name: Human
     type: race
@@ -541,12 +542,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582238602
       modifiedTime: 1729582238602
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: J8pUUnFDElHqAPug
     sort: 100000
     _key: '!actors.items!non4XwpfJLE9GiST.J8pUUnFDElHqAPug'
@@ -1064,7 +1066,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1076,14 +1077,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693914682084
   modifiedTime: 1729013502759
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!non4XwpfJLE9GiST'
 

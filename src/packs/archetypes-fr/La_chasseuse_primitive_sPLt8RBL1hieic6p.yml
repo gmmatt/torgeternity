@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100001
     flags:
-      core:
-        sourceId: Item.FqVsqSep5SeNqgM5
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -128,20 +127,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.FqVsqSep5SeNqgM5
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.xNbAv1yLOKLJxM1E'
   - _id: TXRJ5Hx0I1MN1Ci4
     name: Implacable
     type: perk
     sort: 200001
     flags:
-      core:
-        sourceId: Item.DsqhT4kTf01FBNRU
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -240,20 +239,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.DsqhT4kTf01FBNRU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.TXRJ5Hx0I1MN1Ci4'
   - _id: Py9XbkHtiMeVAivQ
     name: Torche
     type: gear
     sort: 2200000
     flags:
-      core:
-        sourceId: Item.TE2jmWDyTxhRulgk
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -269,20 +268,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.TE2jmWDyTxhRulgk
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.Py9XbkHtiMeVAivQ'
   - _id: d9AM1AiyTKzB2o6A
     name: Totem
     type: gear
     sort: 2300000
     flags:
-      core:
-        sourceId: Item.V6vSEnqgNmYQKs4o
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -298,20 +297,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.V6vSEnqgNmYQKs4o
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.d9AM1AiyTKzB2o6A'
   - _id: eoKkKx6JMkRheNol
     name: Peintures de guerre
     type: gear
     sort: 2500000
     flags:
-      core:
-        sourceId: Item.6g0k6JMCuHpfTB8I
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -327,20 +326,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.6g0k6JMCuHpfTB8I
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.eoKkKx6JMkRheNol'
   - _id: J9Nx3xa1SuyivqJt
     name: Armure de peau et d’os
     type: armor
     sort: 1300000
     flags:
-      core:
-        sourceId: Item.zeffK1HwBwoOyzMS
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: KMCP74pS3Oni3hU2
@@ -370,7 +369,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -378,6 +377,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -408,20 +408,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.zeffK1HwBwoOyzMS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt'
   - _id: 7ESgSBRK5O5s8qxS
     name: Lance en bois d’hrockt
     type: meleeweapon
     sort: 800000
     flags:
-      core:
-        sourceId: Item.0ibFEQi66ymd6PnN
+      core: {}
     img: systems/torgeternity/images/icons/melee-weapon-icon.webp
     effects: []
     folder: null
@@ -450,20 +450,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.0ibFEQi66ymd6PnN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.7ESgSBRK5O5s8qxS'
   - _id: X0LdK9v3c3BUGbM9
     name: Couteau en os
     type: meleeweapon
     sort: 900000
     flags:
-      core:
-        sourceId: Item.2OZHSyASNn86YGNX
+      core: {}
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -489,12 +489,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.2OZHSyASNn86YGNX
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.X0LdK9v3c3BUGbM9'
   - _id: YQoorToSdQKjoWmk
     name: Attaque à mains nues
@@ -504,8 +505,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -520,12 +520,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.YQoorToSdQKjoWmk'
 effects:
   - _id: zNxpmtLv3HaujTQW
@@ -555,7 +556,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -563,6 +564,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1080,7 +1082,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1092,14 +1093,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809787
   modifiedTime: 1716827809787
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!sPLt8RBL1hieic6p'
 

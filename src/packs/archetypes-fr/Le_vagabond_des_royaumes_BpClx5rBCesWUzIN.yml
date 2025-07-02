@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 200001
     flags:
-      core:
-        sourceId: Item.xXE09FeMfKBjV4uE
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -103,20 +102,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.xXE09FeMfKBjV4uE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kDR688PEiU9j0oUd'
   - _id: FXRnJ7s4n9TlajKU
     name: Vagabond des royaumes
     type: perk
     sort: 500001
     flags:
-      core:
-        sourceId: Item.DJAlj7BkFtkJ8GmN
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -210,20 +209,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.DJAlj7BkFtkJ8GmN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.FXRnJ7s4n9TlajKU'
   - _id: 2p6hVKXGKxFiYmjT
     name: Blouson d’aviateur
     type: armor
     sort: 800000
     flags:
-      core:
-        sourceId: Item.Ih77xAUJLZwOROR7
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: m4QT8vQ1gc6L97GC
@@ -253,7 +252,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -261,6 +260,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -286,20 +286,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.2p6hVKXGKxFiYmjT'
   - _id: 0z1Kf0KY2aBw5QDV
     name: Machette
     type: meleeweapon
     sort: 700000
     flags:
-      core:
-        sourceId: Item.Of0q2y9B0BpfAByr
+      core: {}
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -329,20 +329,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Of0q2y9B0BpfAByr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.0z1Kf0KY2aBw5QDV'
   - _id: kRW5blcdeOEP8xRp
     name: Grenade à disruption
     type: missileweapon
     sort: 200000
     flags:
-      core:
-        sourceId: Item.hvK73rLc7gT5pQIA
+      core: {}
     img: systems/torgeternity/images/icons/missileweapon.webp
     effects: []
     folder: null
@@ -376,12 +376,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.hvK73rLc7gT5pQIA
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kRW5blcdeOEP8xRp'
   - _id: HaOi3fVkKquJiWrR
     name: Glock 9mm
@@ -391,8 +392,7 @@ items:
     folder: null
     sort: 600000
     flags:
-      core:
-        sourceId: Item.iOnl5BiGmVFaCzma
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -420,12 +420,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.HaOi3fVkKquJiWrR'
   - _id: nB4dr3hVirizxtBL
     name: Outil polyvalent
@@ -435,8 +436,7 @@ items:
     folder: null
     sort: 1900000
     flags:
-      core:
-        sourceId: Item.qclakuW3FUv87ufW
+      core: {}
     system:
       cosm: Prime Terre
       description: >-
@@ -453,12 +453,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qclakuW3FUv87ufW
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.nB4dr3hVirizxtBL'
   - _id: kran1rL5Py2M7ZKo
     name: Lampe torche
@@ -468,8 +469,7 @@ items:
     folder: null
     sort: 2200000
     flags:
-      core:
-        sourceId: Item.tktQLV7z5tnNkEqr
+      core: {}
     system:
       cosm: (Sans cosm)
       description: <p>&Eacute;claire</p>
@@ -483,12 +483,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.tktQLV7z5tnNkEqr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kran1rL5Py2M7ZKo'
   - _id: XuhiHJMpwJmi9Us2
     name: Chargeurs supplémentaires (5)
@@ -498,8 +499,7 @@ items:
     folder: null
     sort: 1600000
     flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Cinq recharges pour Glock 9 mm</p>
@@ -513,12 +513,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.XuhiHJMpwJmi9Us2'
   - _id: kXukzOgxxMCFYLCC
     name: Potion de soin
@@ -528,8 +529,7 @@ items:
     folder: null
     sort: 1800000
     flags:
-      core:
-        sourceId: Item.sSWLrPCSi2G5jq6S
+      core: {}
     system:
       cosm: Aysle
       description: >-
@@ -546,12 +546,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.sSWLrPCSi2G5jq6S
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kXukzOgxxMCFYLCC'
   - _id: k4qzTZV4hihR1LmC
     name: Attaque à mains nues
@@ -561,8 +562,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -577,12 +577,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.k4qzTZV4hihR1LmC'
 effects:
   - _id: pklu4BLFg7hviXaT
@@ -612,7 +613,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -620,6 +621,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1142,7 +1144,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1154,14 +1155,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809233
   modifiedTime: 1716827809233
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!BpClx5rBCesWUzIN'
 

@@ -8,8 +8,7 @@ items:
     type: firearm
     sort: 100001
     flags:
-      core:
-        sourceId: Item.fW9IrnHVWRXgCWEx
+      core: {}
     img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
@@ -40,20 +39,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156872255
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.fW9IrnHVWRXgCWEx
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.gfxtCXojsN3PMaUK'
   - _id: P5v3znC9UTPMRB7J
     name: Silver Dagger
     type: meleeweapon
     sort: 500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-dagger
+      core: {}
     img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
@@ -80,12 +79,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722157017118
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.P5v3znC9UTPMRB7J'
   - _id: 7DX5OkocFjEmYTOv
     name: Webley Revolver
@@ -95,8 +95,7 @@ items:
     folder: null
     sort: 44400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.n63WoEGQsRLKfkBa
+      core: {}
     system:
       cosm: orrorsh
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -124,12 +123,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693911912230
       modifiedTime: 1722156887470
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.n63WoEGQsRLKfkBa
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.7DX5OkocFjEmYTOv'
   - _id: d9Bzjb00u4cjYSiu
     name: Bulletsmith
@@ -139,8 +139,7 @@ items:
     folder: null
     sort: 39500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.iKjiXUHRWLiyQY3S
+      core: {}
     system:
       category: occult
       cosm: orrorsh
@@ -257,12 +256,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693911979828
       modifiedTime: 1722154268019
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.iKjiXUHRWLiyQY3S
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.d9Bzjb00u4cjYSiu'
   - _id: KgWICNPz8lNZiFIB
     name: Medals (Dragon Slayer)
@@ -272,8 +272,7 @@ items:
     folder: null
     sort: 39600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.MevCMs1Mc6Ck02PP
+      core: {}
     system:
       category: occult
       cosm: orrorsh
@@ -389,12 +388,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693911984563
       modifiedTime: 1722156800664
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.MevCMs1Mc6Ck02PP
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.KgWICNPz8lNZiFIB'
   - _id: rojDSaAJcWsl7TIO
     name: Torch
@@ -404,8 +404,7 @@ items:
     folder: null
     sort: 24700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.R4N0t7lhhqM2uJO9
+      core: {}
     system:
       cosm: livingLand
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -422,12 +421,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912110937
       modifiedTime: 1722156848703
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.R4N0t7lhhqM2uJO9
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.rojDSaAJcWsl7TIO'
   - _id: PUXI2Ww7Tkw5WtJm
     name: Monster Hide Duster
@@ -437,8 +437,7 @@ items:
     folder: null
     sort: 24800000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.RMjiwdeeAr3kBkLK
+      core: {}
     system:
       cosm: orrorsh
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>\n<p>A long overcoat made from the treated skins of various beasts that once terrorized the innocent. The monsters of Orrorsh are notoriously hardy, so leather made from their hides is especially durable.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -461,12 +460,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146791
       modifiedTime: 1722156861270
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.RMjiwdeeAr3kBkLK
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.PUXI2Ww7Tkw5WtJm'
   - name: Slayer's Bandoleer
     type: ammunition
@@ -503,12 +503,13 @@ items:
     _stats:
       compendiumSource: Item.KRYQ71jof26XeGEv
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722154361280
       modifiedTime: 1722154473668
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.wbWDSIYhAgGrPHBz'
   - _id: 0reE7AXEREP0lHJD
     name: Caltrops
@@ -540,12 +541,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -573,12 +575,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.KKJPrdjO5sFkhZzF
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722358319260
       modifiedTime: 1722358319260
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.0reE7AXEREP0lHJD'
   - name: Human
     type: race
@@ -610,12 +613,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582211851
       modifiedTime: 1729582211851
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: zw6Wh8zLqHjFZfU8
     sort: 100000
     _key: '!actors.items!8KlJAaxeijOcrJKN.zw6Wh8zLqHjFZfU8'
@@ -646,12 +650,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722358319265
       modifiedTime: 1722358319265
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1173,7 +1178,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1185,14 +1189,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693895859465
   modifiedTime: 1729013454730
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!8KlJAaxeijOcrJKN'
 

@@ -26,11 +26,11 @@
       "spirit": "Geist",
       "strength": "Stärke"
     },
-    "axioms": {      
+    "axioms": {
       "magic": "Magie",
       "social": "Sozial",
       "spirit": "Spiritualität",
-      "tech": "Tech"      
+      "tech": "Tech"
     },
     "cardTypes": {
       "activeDrama": "Aktive Dramakarte",
@@ -154,7 +154,7 @@
     },
     "contextMenu": {
       "characterInfo": {
-        "contextMenuTitle":"Show character information",
+        "contextMenuTitle": "Show character information",
         "windowTitle": "Notes and Backgrounds from {a}",
         "createChatCard": "Mache eine Chatkarte"
       }
@@ -229,10 +229,10 @@
     },
     "dialogWindow": {
       "externalLinks": {
-        "bug": "<p>Bug?</p>",
+        "bug": "Bug?",
         "content": "<p>Du brauchst Hilfe? Möchtest einen Fehler melden? Hier sind ein paar nützliche Links</p>",
-        "publisher": "<p>Herausgeber</p>",
-        "reference": "<p>Referenz</p>",
+        "publisher": "Herausgeber",
+        "reference": "Referenz",
         "title": "Links"
       },
       "hideForeignCompendium": {
@@ -244,8 +244,8 @@
         "title": "Wirklich löschen?"
       },
       "raceDeletion": {
-        "content":"Bist du sicher, dass du dies löschen willst? Es wird dauerhaft aus dem Blatt entfernt und alle Vorteile der Kategorie Volk werden ebenfalls gelöscht.",
-        "title":"Wirklich löschen?"
+        "content": "Bist du sicher, dass du dies löschen willst? Es wird dauerhaft aus dem Blatt entfernt und alle Vorteile der Kategorie Volk werden ebenfalls gelöscht.",
+        "title": "Wirklich löschen?"
       },
       "realityCheck": {
         "title": "Reconnecting?",
@@ -264,28 +264,28 @@
         "windowTitle": "Bestimme einen Fahrer"
       },
       "showingDramaCards": {
-        "nbCards":"Anzahl der Karten",
-        "nbCardsValue":"Menge der Karten, die Spieler gezeigt werden sollen",
-        "recipient":"Zielperson zum flüstern",
-        "whisper":"An markierte Spieler flüstern",
-        "apply":"Anwenden",
-        "show":"Nächste Karte(n)"
+        "nbCards": "Anzahl der Karten",
+        "nbCardsValue": "Menge der Karten, die Spieler gezeigt werden sollen",
+        "recipient": "Zielperson zum flüstern",
+        "whisper": "An markierte Spieler flüstern",
+        "apply": "Anwenden",
+        "show": "Nächste Karte(n)"
       },
       "cardRetour": {
-        "cardBack":"Die Karte wandert nach einem Irrtum zurück",
-        "cardOwner":"Wer bekommt die zuletzt ausgespielte Karte zurück?"
+        "cardBack": "Die Karte wandert nach einem Irrtum zurück",
+        "cardOwner": "Wer bekommt die zuletzt ausgespielte Karte zurück?"
       },
       "buffMacro": {
-        "choice":"Deine Wahl",
-        "choose":"Welches Attribut soll modifiziert werden?",
-        "allAttributes":"Alle Attribute",
-        "defenses":"Defenses",
+        "choice": "Deine Wahl",
+        "choose": "Welches Attribut soll modifiziert werden?",
+        "allAttributes": "Alle Attribute",
+        "defenses": "Defenses",
         "physicalDefenses": "Physische Verteidigungen",
         "cancelEffects": "Effekte aufheben",
-        "bonusTitle":"Eingabe Bonus/Malus",
-        "value":"Wähle die Höhe des Bonus",
-        "timeLabel":"Wahl der Dauer",
-        "time":"Wähle die Dauer in Runden"
+        "bonusTitle": "Eingabe Bonus/Malus",
+        "value": "Wähle die Höhe des Bonus",
+        "timeLabel": "Wahl der Dauer",
+        "time": "Wähle die Dauer in Runden"
       },
       "raceDiminishAttribute": {
         "maintext": "Das Attribut {attribute} ist größer als das Volksmaximum. Soll das Attribut auf das Volksmaximum gesetzt werden?",
@@ -468,7 +468,7 @@
       "ammoValueExceedsMax": "Der aktuelle Munitionswert der Waffe {a} übersteigt seinen Maximalwert. Der Wert wird auf sein Maximum reduziert.",
       "noPossibility": "Es sind keine Möglichkeiten mehr übrig.",
       "noCapacity": "{a} kann diese Art von Fahrzeug nicht steuern!",
-      "noFight":"Kein aktiver Kampf, oder noch nicht gestartet",
+      "noFight": "Kein aktiver Kampf, oder noch nicht gestartet",
       "raceExistent": "Du hast dich bereits für ein Volk entschieden.",
       "notAPerkItem": "Du hast versucht, diesem Volk einen Vorteil aus der Kategorie {a} zuzuweisen, aber er muss zur Kategorie Volksfähigkeit gehören. Aktion wurde abgebrochen.",
       "addedRacePerkToActor": "{perkName}-Vorzug dem Charakter hinzugefügt.",
@@ -865,7 +865,7 @@
       "unspent": "nicht ausgegeben",
       "up": "Oberhand",
       "update": "Aktualisieren",
-      "usePreviousBonusLegend": "Wähle, ob du (1) würfeln willst oder (2) einen zuvor gewürfelten Bonus eingibst, wenn du eine Mehrfachaktion versuchst.",      
+      "usePreviousBonusLegend": "Wähle, ob du (1) würfeln willst oder (2) einen zuvor gewürfelten Bonus eingibst, wenn du eine Mehrfachaktion versuchst.",
       "usePreviousBonustitle": "Wenn du eine Mehrfachaktion durchführst, setze hier einen Haken und trage den Bonus des letzten Würfelwurfs ein.",
       "usePreviousBonusText": "Trage den BONUS ein, nicht die Augenzahl des Würfels!",
       "vehicle": "Fahrzeug",
@@ -1115,16 +1115,16 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
       "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben.",
-      "periculumSourceName":"Source's damages",
-      "periculumSourcePlaceHolder":"Describe the source of hazard",
-      "periculumDamageValue":"Base damage",
-      "periculumBds":"BDs modifiers",
-      "periculumArmor":"Apply armor ?",
-      "periculumAp":"Armor piercing value",
+      "periculumSourceName": "Source's damages",
+      "periculumSourcePlaceHolder": "Describe the source of hazard",
+      "periculumDamageValue": "Base damage",
+      "periculumBds": "BDs modifiers",
+      "periculumArmor": "Apply armor ?",
+      "periculumAp": "Armor piercing value",
       "macroHub": {
         "buttonTitle": "MacroHub",
-        "title":"Der Torg Eternity Macro Hub"
+        "title": "Der Torg Eternity Macro Hub"
       }
-    }    
+    }
   }
 }

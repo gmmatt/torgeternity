@@ -3,8 +3,7 @@ name: Défense active
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: JournalEntry.el2TAJ1281IGcBPB
+  core: {}
 pages:
   - name: Défense active
     type: text
@@ -50,12 +49,14 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!ialagbnRGKzWMABZ.NUO769ENXyrD1bzb'
 ownership:
   default: 0
@@ -64,11 +65,13 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827810315
   modifiedTime: 1716827810315
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: JournalEntry.el2TAJ1281IGcBPB
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!ialagbnRGKzWMABZ'
 

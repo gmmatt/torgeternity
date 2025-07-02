@@ -8,63 +8,67 @@ export default function initTorgControlButtons() {
   /**
    *
    */
-  CONFIG.Canvas.layers.torgeternity = { layerClass: ControlsLayer, group: 'primary' };
+  CONFIG.Canvas.layers.torgeternity = { layerClass: foundry.canvas.layers.ControlsLayer, group: 'primary' };
 
-  Hooks.on('getSceneControlButtons', (btns) => {
-    const menu = [
-      {
-        name: game.i18n.localize('CARDS.TypeHand'),
-        title: game.i18n.localize('CARDS.TypeHand'),
-        icon: 'fa fa-id-badge',
-        button: true,
-        onClick: () => {
-          if (game.user.character) {
-            game.user.character.getDefaultHand().sheet.toggleRender();
-          } else {
-            ui.notifications.error(game.i18n.localize('torgeternity.notifications.noHands'));
-          }
-        },
-      },
-    ];
+  Hooks.on('getSceneControlButtons', (controls) => {
 
-    if (game.user.isGM) {
-      menu.push(
-        {
-          name: game.i18n.localize('torgeternity.gmScreen.toggle'),
-          title: game.i18n.localize('torgeternity.gmScreen.toggle'),
-          icon: 'fa fa-book-open',
-          button: true,
-          onClick: () => {
-            ui.GMScreen.toggleRender();
-          },
-        },
-        {
-          name: game.i18n.localize('torgeternity.settingMenu.deckSetting.name'),
-          title: game.i18n.localize('torgeternity.settingMenu.deckSetting.name'),
-          icon: 'fa fa-cog',
-          button: true,
-          onClick: () => {
-            new DeckSettingMenu().render(true);
-          },
-        },
-        {
-          name: game.i18n.localize('torgeternity.macros.macroHub.buttonTitle'),
-          title: game.i18n.localize('torgeternity.macros.macroHub.buttonTitle'),
-          icon: 'fa-solid fa-bottle-water',
-          button: true,
-          onClick: () => {
-            ui.macroHub.toggleRender();
-          },
-        }
-      );
-    }
-
-    btns.push({
-      name: 'TORG',
+    controls.torg = {
+      name: 'torg',
       title: 'TORG',
       icon: 'torg',
       layer: 'torgeternity',
-      tools: menu,
-    });
+      onToolChange: (event, tool) => {
+        console.log(`TORG SCENE controls, onToolChange", tool`);
+      },
+      tools: {
+        playerHand:
+        {
+          name: 'playerHand',
+          title: 'TYPES.Cards.hand',
+          icon: 'fa fa-id-badge',
+          button: true,
+          onChange: () => {
+            if (game.user.character) {
+              game.user.character.getDefaultHand().sheet.toggleRender();
+            } else {
+              ui.notifications.error(game.i18n.localize('torgeternity.notifications.noHands'));
+            }
+          },
+        },
+        gmScreen:
+        {
+          name: 'gmScreen',
+          title: 'torgeternity.gmScreen.toggle',
+          icon: 'fa fa-book-open',
+          button: true,
+          onChange: () => {
+            ui.GMScreen.toggleRender();
+          },
+          visible: game.user.isGM,
+        },
+        deckSettings:
+        {
+          name: 'deckSettings',
+          title: 'torgeternity.settingMenu.deckSetting.name',
+          icon: 'fa fa-cog',
+          button: true,
+          onChange: () => {
+            new DeckSettingMenu().render(true);
+          },
+          visible: game.user.isGM,
+        },
+        macroHub:
+        {
+          name: 'macroHub',
+          title: 'torgeternity.macros.macroHub.buttonTitle',
+          icon: 'fa-solid fa-bottle-water',
+          button: true,
+          onChange: () => {
+            ui.macroHub.toggleRender();
+          },
+          visible: game.user.isGM,
+        }
+      }
+    };
   });
 }

@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4Vc4cb3K1prH1zQy
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -42,12 +41,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694865946306
       modifiedTime: 1694865946306
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4Vc4cb3K1prH1zQy
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.J3s8JBqYUJjIfz7Y'
   - name: GWI GodMeeter
     type: firearm
@@ -56,9 +56,7 @@ items:
     folder: null
     sort: 14900000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UmGmfErD1dmV7GuL
+      core: {}
     _id: KiKe4Jru8egaH7t1
     system:
       cosm: cyberpapacy
@@ -94,12 +92,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694865974402
       modifiedTime: 1722164227136
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UmGmfErD1dmV7GuL
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.KiKe4Jru8egaH7t1'
   - name: Sonnenbrille
     type: gear
@@ -108,8 +107,7 @@ items:
     folder: null
     sort: 25300000
     flags:
-      core:
-        sourceId: Item.5wtRULBzLY17nU2s
+      core: {}
     _id: BvHZj9Qn7Qr8Gn3E
     system:
       cosm: nileEmpire
@@ -127,12 +125,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694865991923
       modifiedTime: 1722164249047
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.5wtRULBzLY17nU2s
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.BvHZj9Qn7Qr8Gn3E'
   - _id: iw9csUusobEHCcSK
     name: Hexxer MK II
@@ -142,9 +141,7 @@ items:
     folder: null
     sort: 23800000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jcdVu7MTTKxF02Vx
+      core: {}
     system:
       cosm: cyberpapacy
       description: "<p>Dieses Upgrade für das Hexxer-Implantat speichert die Energie aus einer Rückkopplung und erlaubt es Hexern und Hexen, sie später zu benutzen, um ihre eigenen Zauber zu verstärken.\_</p>\n<p>Wenn ein Zauberkundiger eine Rückkopplung erleidet, funktioniert der Hexxer MK II wie die MK-I-Version (siehe @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.DKGshzXtDwEg4nQj]{Hexxer MK I}) und negiert die Hälfte des Schockschadens. Darüber hinaus werden die auf diese Weise negierten Schockpunkte automatisch als Bonus auf den nächsten Zauberspruch des Charakters angewendet. Die Energie verschwindet spätestens nach einer Minute (sechs Runden), also muss sie innerhalb dieses Zeitraums verbraucht werden, oder der Bonus geht verloren.</p>"
@@ -162,12 +159,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694865998659
       modifiedTime: 1722164218338
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jcdVu7MTTKxF02Vx
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.iw9csUusobEHCcSK'
   - _id: i9PYOXT6J8N1W9AN
     name: Cyberware-Implantate
@@ -177,8 +175,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DI70dRyfP5h47btG
+      core: {}
     system:
       category: cyberware
       cosm: cyberpapacy
@@ -269,12 +266,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866008612
       modifiedTime: 1722164209815
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DI70dRyfP5h47btG
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.i9PYOXT6J8N1W9AN'
   - name: IriMesh-Kleidung
     type: armor
@@ -283,9 +281,7 @@ items:
     folder: null
     sort: 2900000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
+      core: {}
     _id: Z4nC236F0vnt4Neo
     system:
       cosm: panPacifica
@@ -314,12 +310,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366100
       modifiedTime: 1722164235328
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.Z4nC236F0vnt4Neo'
   - _id: 01LpjUm29w7H335H
     name: Zauberkundiger
@@ -422,12 +419,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.96Uk1RoSQ6jUkoK6
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.01LpjUm29w7H335H'
   - _id: gg7xWRG5lWcaA4jA
     name: Reduzieren
@@ -467,12 +465,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.dnvTmgrdRgrEjvo9
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.gg7xWRG5lWcaA4jA'
   - _id: QG9VdMEKPS1pFJUA
     name: Verbesserung
@@ -509,12 +508,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.373rRZieSUiFDMNo
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.QG9VdMEKPS1pFJUA'
   - name: Mensch
     type: race
@@ -543,12 +543,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599409623
       modifiedTime: 1729599409623
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: WnQ5PdFEfsIEFG6U
     sort: 0
     ownership:
@@ -559,8 +560,7 @@ effects: []
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.CefD0chJeL6NrRVJ
+  core: {}
 system:
   shock:
     max: 5
@@ -984,7 +984,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -996,14 +995,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694865921702
   modifiedTime: 1729013568444
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.CefD0chJeL6NrRVJ
   duplicateSource: null
+  exportSource: null
 _key: '!actors!KXfP2nOG8VVWBOtA'
 

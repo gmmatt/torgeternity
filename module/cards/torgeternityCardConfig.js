@@ -1,85 +1,24 @@
 /**
  *
  */
-export default class torgeternityCardConfig extends CardConfig {
-  /** @inheritdoc */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['torgeternity', 'sheet', 'card-config'],
-      width: 480,
-      height: 'auto',
-      tabs: [{ navSelector: '.tabs', contentSelector: 'form', initial: 'details' }],
-      sheetConfig: true,
-    });
+export default class torgeternityCardConfig extends foundry.applications.sheets.CardConfig {
+
+  static DEFAULT_OPTIONS = {
+    classes: ['torgeternity'],
   }
 
-  /** @inheritdoc */
-  getData(options) {
-    return foundry.utils.mergeObject(super.getData(options), {
-      types: CONFIG.Card.typeLabels,
-    });
+  static PARTS = {
+    header: { template: 'templates/cards/card/header.hbs' },
+    tabs: { template: "templates/generic/tab-navigation.hbs" },
+    details: { template: 'systems/torgeternity/templates/cards/torgeternityCard.hbs' },
+    faces: { template: "templates/cards/card/faces.hbs", scrollable: [""] },
+    back: { template: "templates/cards/card/back.hbs" },
+    footer: { template: "templates/generic/form-footer.hbs" }
   }
 
-  /* -------------------------------------------- */
-  /* 	Event Listeners and Handlers								*/
-  /* -------------------------------------------- */
-
-  /** @inheritdoc */
-  activateListeners(html) {
-    super.activateListeners(html);
-    html.find('.face-control').click(this._onFaceControl.bind(this));
-  }
-
-  /* -------------------------------------------- */
-
-  /** @inheritdoc */
-  _getSubmitData(updateData) {
-    const submitData = foundry.utils.expandObject(super._getSubmitData(updateData));
-    submitData.faces = submitData.faces ? Array.from(Object.values(submitData.faces)) : [];
-    return submitData;
-  }
-
-  /** @inheritdoc */
-  get template() {
-    if (this.object.type === 'destiny') {
-      return 'systems/torgeternity/templates/cards/torgeternityDestiny.hbs';
-    } else if (this.object.type === 'cosm') {
-      return 'systems/torgeternity/templates/cards/torgeternityCosm.hbs';
-    } else {
-      return 'systems/torgeternity/templates/cards/torgeternityDrama.hbs';
-    }
-  }
-
-  /**
-   *
-   * @param {Event} event The event object.
-   */
-  async _onFaceControl(event) {
-    const button = event.currentTarget;
-    const face = button.closest('.face');
-    let faces = [];
-
-    // Save any pending change to the form
-    await this._onSubmit(event, { preventClose: true, preventRender: true });
-
-    // Handle the control action
-    switch (button.dataset.action) {
-      case 'addFace':
-        faces = this.object.faces.map((f) => f.object).concat([{}]);
-        return this.object.update({ faces });
-      case 'deleteFace':
-        return Dialog.confirm({
-          title: game.i18n.localize('CARD.FaceDelete'),
-          content: `<h4>${game.i18n.localize('AreYouSure')}</h4><p>${game.i18n.localize(
-            'CARD.FaceDeleteWarning'
-          )}</p>`,
-          yes: () => {
-            const i = Number(face.dataset.face);
-            faces = foundry.utils.deepClone(this.object.faces);
-            faces.splice(i, 1);
-            return this.object.update({ faces });
-          },
-        });
-    }
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    context.systemFields = context.document.system.schema.fields;
+    return context;
   }
 }

@@ -1,4 +1,4 @@
-<form class="actor-sheet {{cssClass}}" autocomplete="off">
+<div id="stormknight">
   <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.stormknight"}}</span></h3>
 
   <!--**************** tabs******************--->
@@ -23,7 +23,7 @@
       <div class="skills block">{{> "systems/torgeternity/templates/actors/stormknight/skills.hbs"}}</div>
 
       <div class="char_image">
-        <img src="{{actor.img}}" class="profile-img" data-edit="img" data-tooltip="{{actor.name}}" />
+        <img src="{{document.img}}" class="profile-img" data-edit="img" data-tooltip="{{document.name}}" />
       </div>
 
       <div class="weapons-list block">{{> "systems/torgeternity/templates/actors/stormknight/weapons-list.hbs"}}</div>
@@ -55,7 +55,8 @@
       <h1 class="list-section-heading" style="color: white">
         {{localize "torgeternity.sheetLabels.backgroundAndNotes"}}
       </h1>
-      {{editor enrichedBackground target="system.details.background" button=true editable=editable}}
+      <prose-mirror toggled name="system.details.background" {{disabled (not editable)}}
+        value="{{ document.system.details.background }}">{{{ enrichedBackground }}}</prose-mirror>
     </div>
   </section>
-</form>
+</div>

@@ -11,8 +11,7 @@ items:
     folder: LyasDNAhbLqYWU56
     sort: 0
     flags:
-      core:
-        sourceId: Item.2o4uyAarfqhvXsAb
+      core: {}
     system:
       perk: Medaillen
       description: "<p><span style=\"font-family:'Palatino Linotype'\">Verliehen an diejenigen, die ein Sehr Großes und mächtiges Monster besiegt haben. Der Charakter darf gegen Große oder größere Kreaturen (nicht Fahrzeuge oder Konstrukte) +1 BW Schaden addieren, wenn Angriff eine Anerkannte Aktion ist.\_</span></p>"
@@ -22,12 +21,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.2o4uyAarfqhvXsAb
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.l5YztYoW2lLfFuE7'
   - _id: cgOoj7U8q9ElWme8
     name: Weihwasser-Patrone
@@ -37,8 +37,7 @@ items:
     folder: LyasDNAhbLqYWU56
     sort: 0
     flags:
-      core:
-        sourceId: Item.ZLEDMBxF7sYYfGDt
+      core: {}
     system:
       perk: Patronenschmied
       description: >-
@@ -51,12 +50,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.ZLEDMBxF7sYYfGDt
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.cgOoj7U8q9ElWme8'
   - _id: RKUDEuSrme3mIBsL
     name: Adamant-Patrone
@@ -66,8 +66,7 @@ items:
     folder: LyasDNAhbLqYWU56
     sort: 0
     flags:
-      core:
-        sourceId: Item.aixA8mnHcAnk2jqP
+      core: {}
     system:
       perk: Patronenschmied
       description: "<p><span style=\"font-family:'Palatino Linotype'\">Einige der Feinde der Viktorianer sind von Kopf bis Fuß mit Metall, Schuppen und manchmal sogar dicken Panzerplatten bedeckt. Diese Patrone ist dafür ausgelegt, solche Rüstungen zu durchbrechen, sodass ein Angriff mit ihr Panzerbrechend 4 erhält.\_</span></p>"
@@ -77,12 +76,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.aixA8mnHcAnk2jqP
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.RKUDEuSrme3mIBsL'
   - _id: ggMge8q9mNLisoLF
     name: Riesenjäger-Patrone
@@ -92,8 +92,7 @@ items:
     folder: LyasDNAhbLqYWU56
     sort: 0
     flags:
-      core:
-        sourceId: Item.bGEJwusZZlTPjJ8E
+      core: {}
     system:
       perk: Patronenschmied
       description: "<p><span style=\"font-family:'Palatino Linotype'\">Die Viktorianer entwickelten diese schweren Patronen, um die größten Schrecken des Hageren Mannes zu besiegen. Sie verursachen +5 Schaden gegen Kreaturen, die Groß oder größer sind.\_</span></p>"
@@ -103,12 +102,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.bGEJwusZZlTPjJ8E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.ggMge8q9mNLisoLF'
   - _id: Hs5XdWPZjiVqyJJb
     name: Medaillen
@@ -118,8 +118,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.j5BUaTKWjvJuOV9O
+      core: {}
     system:
       category: occult
       cosm: orrorsh
@@ -239,12 +238,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867975270
       modifiedTime: 1722162621137
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.j5BUaTKWjvJuOV9O
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.Hs5XdWPZjiVqyJJb'
   - _id: 6RWboAjDxAtNFv3N
     name: Patronenschmied
@@ -254,8 +254,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Xbg2XCya32s9HKJJ
+      core: {}
     system:
       category: occult
       cosm: orrorsh
@@ -378,12 +377,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867980101
       modifiedTime: 1722163257346
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Xbg2XCya32s9HKJJ
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.6RWboAjDxAtNFv3N'
   - _id: y3PEaQZquxm7CfN5
     name: Silberdolch
@@ -393,9 +393,7 @@ items:
     folder: null
     sort: 22700000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.iDd5uxOdpiUJ9JFn
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -425,12 +423,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868092620
       modifiedTime: 1722162204887
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.iDd5uxOdpiUJ9JFn
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.y3PEaQZquxm7CfN5'
   - _id: kJWVVFbIlxn2K1fe
     name: Webley Revolver
@@ -440,9 +439,7 @@ items:
     folder: null
     sort: 31400000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.eaDTP2RPFOw4DHnq
+      core: {}
     system:
       cosm: orrorsh
       description: >-
@@ -471,12 +468,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868115803
       modifiedTime: 1722162075931
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.eaDTP2RPFOw4DHnq
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.kJWVVFbIlxn2K1fe'
   - _id: pQwYUD5tTVwa0iN2
     name: Jagdrevolvergewehr
@@ -486,9 +484,7 @@ items:
     folder: null
     sort: 31300000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wEOCxOMN84sOaC3F
+      core: {}
     system:
       cosm: orrorsh
       description: >-
@@ -517,12 +513,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868126947
       modifiedTime: 1722163333640
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wEOCxOMN84sOaC3F
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.pQwYUD5tTVwa0iN2'
   - _id: lntlAp4VUb9lNjTJ
     name: Krähenfüße
@@ -552,7 +549,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -560,6 +557,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -569,8 +567,7 @@ items:
     folder: null
     sort: 8600000
     flags:
-      core:
-        sourceId: Item.prL9HtFgNGaw1Szz
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -592,12 +589,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868152308
       modifiedTime: 1722162058498
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.prL9HtFgNGaw1Szz
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.lntlAp4VUb9lNjTJ'
   - name: Fackel
     type: gear
@@ -606,8 +604,7 @@ items:
     folder: null
     sort: 8500000
     flags:
-      core:
-        sourceId: Item.EVp5rwRYSGcx7uFV
+      core: {}
     _id: 6AtnJDCxsnKsj6Ab
     system:
       cosm: livingLand
@@ -625,12 +622,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868156419
       modifiedTime: 1722162055130
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.EVp5rwRYSGcx7uFV
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.6AtnJDCxsnKsj6Ab'
   - _id: PxU0v0Y7eUaDyHIJ
     name: Monsterfell-Mantel
@@ -640,9 +638,7 @@ items:
     folder: null
     sort: 3400000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6bQe7SykCFATMjWD
+      core: {}
     system:
       cosm: orrorsh
       description: >-
@@ -670,12 +666,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366100
       modifiedTime: 1722162063162
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6bQe7SykCFATMjWD
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!54xKJBBQREaETwap.PxU0v0Y7eUaDyHIJ'
   - name: Drachentöter
     type: enhancement
@@ -692,12 +689,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.2SM0WnI40gl89eWT
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722162276122
       modifiedTime: 1722162276122
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _id: mq1nmibIe5s602RM
     sort: 0
     _key: '!actors.items!54xKJBBQREaETwap.mq1nmibIe5s602RM'
@@ -737,12 +735,13 @@ items:
     _stats:
       compendiumSource: Item.TptgnUCwWM2QZCaK
       duplicateSource: Item.KRYQ71jof26XeGEv
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722162711632
       modifiedTime: 1722162966623
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _id: h7fC9k4emlniwjII
     _key: '!actors.items!54xKJBBQREaETwap.h7fC9k4emlniwjII'
   - name: Mensch
@@ -772,12 +771,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599398088
       modifiedTime: 1729599398088
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: WxvuyXqLKAiJm7Ru
     sort: 0
     ownership:
@@ -808,7 +808,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -816,6 +816,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -824,8 +825,7 @@ effects:
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.8KlJAaxeijOcrJKN
+  core: {}
 system:
   shock:
     max: 10
@@ -1249,7 +1249,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1261,14 +1260,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694867975270
   modifiedTime: 1729013554225
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.8KlJAaxeijOcrJKN
   duplicateSource: null
+  exportSource: null
 _key: '!actors!54xKJBBQREaETwap'
 
