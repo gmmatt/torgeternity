@@ -1,5 +1,11 @@
 # TORG Eternity Changelog
 
+## v13.2.0
+
+- Foundry v13 compatible version.
+- Converted all relevant classes to use AppV2.
+- Removed System styling from the core dialogs.
+
 ## v.13.1.0
 
 - Now option to surpress chat notifications on card shuffle.
