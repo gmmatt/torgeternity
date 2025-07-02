@@ -2126,16 +2126,16 @@ textarea:hover {
   box-shadow: 0 0 10px #008cff7a;
 }
 
-#module-management {
+#module-management.unused {
   color: white;
-}
 
-#module-management input {
-  color: lightgray;
-}
+  input {
+    color: lightgray;
+  }
 
-#module-management .package-list .package-title {
-  color: #c6e2fa;
+  .package-list .package-title {
+    color: #c6e2fa;
+  }
 }
 
 @keyframes rotateblur {
@@ -2182,11 +2182,6 @@ body * {
   scrollbar-width: thin;
 }
 
-
-/*footer button {
-  font-family: "Palatino Linotype";
-}*/
-
 button:hover,
 button:focus {
   box-shadow: 0 0 10px #3bb3b3;
@@ -2196,31 +2191,6 @@ a:hover {
   text-shadow: 0 0 10px #3bb3b3;
   cursor: pointer;
 }
-
-/*
-.app,
-.application.torgeternity {
-  border-radius: 5px;
-  box-shadow: 0 0 15px #122529;
-  z-index: 30;
-  font-size: var(--font-size-12);
-
-
-.app a.entity-link,
-.application.torgeternity a.entity-link {
-  color: black;
-}
-
-.app input[type="text"]::placeholder,
-.app input[type="number"]::placeholder,
-.application.torgeternity input[type="text"]::placeholder,
-.application.torgeternity input[type="number"]::placeholder {
-  color: rgba(245, 245, 245, 0.9);
-  background-color: transparent;
-  text-shadow: 0px 0px 10px black;
-}
-}*/
-/*search-fields on items*/
 
 .directory .directory-header .header-search input {
   background: transparent;
@@ -2272,29 +2242,29 @@ a:hover {
   border-radius: 50%;
   box-shadow: 0px 0px 5px blue;
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-}
 
-.application.torgeternity .window-resizable-handle:hover {
-  z-index: 200;
-}
+  &:hover {
+    z-index: 200;
+  }
 
-.application.torgeternity .window-resizable-handle i.fas {
-  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  transform: rotate(45deg);
-  top: 25%;
-  left: 25%;
-  position: absolute;
-  color: rgba(255, 255, 255, 0);
-  text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
-}
+  &:active {
+    box-shadow: 0px 0px 30px blue;
+  }
 
-.application.torgeternity .window-resizable-handle i.fas:hover {
-  transform: rotate(45deg) scaleX(1.6);
-  color: #ffffff;
-}
+  i.fas {
+    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    transform: rotate(45deg);
+    top: 25%;
+    left: 25%;
+    position: absolute;
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
 
-.application.torgeternity .window-resizable-handle:active {
-  box-shadow: 0px 0px 30px blue;
+    &:hover {
+      transform: rotate(45deg) scaleX(1.6);
+      color: #ffffff;
+    }
+  }
 }
 
 .application.torgeternity .window-header {
@@ -2309,6 +2279,10 @@ a:hover {
   border: none;
   box-shadow: 0px 15px 30px #00000061;
   z-index: 100;
+
+  .window-title {
+    margin: 0;
+  }
 }
 
 #pause img {
@@ -3045,40 +3019,200 @@ div.readme a.compendium {
   }
 }
 
-.chat-message .flip-card {
-  animation: flip 0.2s linear both;
-}
-
 .chat-message {
   margin: 5px;
   color: black;
   background: url("../images/bgparch.webp");
   background-size: cover;
   background-color: rgba(255, 247, 247, 0.25);
-}
 
-.chat-message .torgeternity-message-header {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 2fr;
-  border: none;
-  background: transparent;
-}
+  .flip-card {
+    animation: flip 0.2s linear both;
+  }
 
-.chat-message .torgeternity-message-header img {
-  border: none;
-}
+  .torgeternity-message-header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 2fr;
+    border: none;
+    background: transparent;
 
-.chat-message .message-header .flavor-text {
-  font-size: unset;
-}
+    img {
+      border: none;
+    }
+  }
 
-.message-header .torgeternity-actor-icon {
-  max-width: 50px;
-  grid-column: 1 / 1;
-  grid-row: 1 / 2;
-  aspect-ratio: 1/1;
-  border: none;
+  .message-header .flavor-text {
+    font-size: unset;
+  }
+
+  .message-header .torgeternity-actor-icon {
+    max-width: 50px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+    aspect-ratio: 1/1;
+    border: none;
+  }
+
+  table td {
+    padding: 0px 0px;
+  }
+
+  .item-description-chat {
+    font-family: Palatino;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .chat-title {
+    font-size: 18px;
+    display: flex;
+  }
+
+  .skill-chat-title {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .skill-unskilled-label {
+    font-size: 12px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Palatino Linotype";
+    /*width: 100%;*/
+    grid-row: 2/2;
+  }
+
+  .skill-roll-disconnect-label {
+    font-size: 12px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Palatino Linotype";
+    width: 100%;
+    font-style: italic;
+  }
+
+  .skill-roll-result {
+    text-align: center;
+    font-size: 24px;
+    /*font-family: "Alaska";*/
+    padding: 3px 0px 0px 0px;
+    margin: 0px;
+  }
+
+  .skill-roll-action-label {
+    text-align: center;
+    font-family: "Palatino Linotype";
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .skill-roll-table {
+    padding-bottom: 5px;
+    font-family: "Palatino Linotype";
+    margin-bottom: 5px;
+    table-layout: fixed;
+    background-color: rgba(255, 247, 247, 0.25);
+
+    tr:nth-child(odd) {
+      background-color: transparent;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--table2nd);
+    }
+
+    td {
+      padding-left: 3px;
+      border: solid black 1px;
+
+      &:nth-child(odd) {
+        width: 40%;
+      }
+
+      &:nth-child(even) {
+        width: 60%;
+      }
+    }
+  }
+
+  .skill-roll-menu {
+    font-family: "Palatino Linotype";
+    font-size: 8px;
+    text-align: center;
+    margin: 12px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 12px;
+  }
+
+  .skill-roll-damage-label {
+    font-family: "Palatino Linotype";
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+  }
+
+  .applyButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    flex-flow: wrap;
+  }
+
+  .generalHeader {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border: none;
+      aspect-ratio: 1/1;
+    }
+
+    span {
+      display: inline-block;
+      font-size: large;
+      flex: 1;
+      text-align: center;
+      margin-left: auto;
+    }
+  }
+
+  .card-draw.flexcol {
+    align-items: start;
+  }
+
+  .card-draw .card-name {
+    line-height: 20px;
+  }
+
+  details.chatCardDetailsElement {
+    background: transparent;
+
+    &[open] summary::before {
+      content: attr(data-open);
+    }
+
+    &:not([open]) summary::before {
+      content: attr(data-close);
+    }
+  }
 }
 
 .torgeternity-skill-description {
@@ -3099,30 +3233,6 @@ div.readme a.compendium {
   border: none;
 }
 
-.chat-message table td {
-  padding: 0px 0px;
-}
-
-.chat-message .item-description-chat {
-  font-family: Palatino;
-  background-image: none;
-  background-color: transparent;
-}
-
-.chat-message .chat-title {
-  /*font-family: Alaska;*/
-  font-size: 18px;
-  display: flex;
-}
-
-.chat-message .skill-chat-title {
-  font-size: 20px;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-  /*font-family: Alaska;*/
-}
-
 p.skill-chat-title.unskilled {
   grid-row: 1/1;
 }
@@ -3132,84 +3242,6 @@ p.skill-chat-title.skilled {
   align-items: center;
   grid-row: span 2;
   display: grid;
-}
-
-.chat-message .skill-unskilled-label {
-  font-size: 12px;
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
-  font-family: "Palatino Linotype";
-  /*width: 100%;*/
-  grid-row: 2/2;
-}
-
-.chat-message .skill-roll-disconnect-label {
-  font-size: 12px;
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
-  font-family: "Palatino Linotype";
-  width: 100%;
-  font-style: italic;
-}
-
-.chat-message .skill-roll-result {
-  text-align: center;
-  font-size: 24px;
-  /*font-family: "Alaska";*/
-  padding: 3px 0px 0px 0px;
-  margin: 0px;
-}
-
-.chat-message .skill-roll-action-label {
-  text-align: center;
-  font-family: "Palatino Linotype";
-  font-size: 14px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.chat-message .skill-roll-table {
-  padding-bottom: 5px;
-  font-family: "Palatino Linotype";
-  margin-bottom: 5px;
-  table-layout: fixed;
-  background-color: rgba(255, 247, 247, 0.25);
-}
-
-.chat-message .skill-roll-table tr:nth-child(odd) {
-  background-color: transparent;
-}
-
-.chat-message .skill-roll-table tr:nth-child(even) {
-  background-color: var(--table2nd);
-}
-
-.chat-message .skill-roll-table td {
-  padding-left: 3px;
-  border: solid black 1px;
-}
-
-.chat-message .skill-roll-table td:nth-child(odd) {
-  width: 40%;
-}
-
-.chat-message .skill-roll-table td:nth-child(even) {
-  width: 60%;
-}
-
-.chat-message .skill-roll-menu {
-  font-family: "Palatino Linotype";
-  font-size: 8px;
-  text-align: center;
-  margin: 12px 0 0 0;
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 12px;
 }
 
 .dice-tooltip .dice-rolls {
@@ -3225,22 +3257,6 @@ p.skill-chat-title.skilled {
   flex-wrap: wrap;
   justify-content: flex-start;
   justify-content: space-around;
-}
-
-.chat-message .skill-roll-damage-label {
-  font-family: "Palatino Linotype";
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0.5em 0 0 0;
-}
-
-.chat-message .applyButtons {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 5px;
-  flex-flow: wrap;
 }
 
 .applyDam,
@@ -3268,50 +3284,6 @@ p.skill-chat-title.skilled {
   margin-bottom: 7px;
 }
 
-.chat-message .generalHeader {
-  border: none;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.chat-message .generalHeader img {
-  width: 50px;
-  height: 50px;
-  border: none;
-  aspect-ratio: 1/1;
-}
-
-.chat-message .generalHeader span {
-  display: inline-block;
-  font-size: large;
-  flex: 1;
-  text-align: center;
-  margin-left: auto;
-}
-
-.chat-message .card-draw.flexcol {
-  align-items: start;
-}
-
-.chat-message .card-draw .card-name {
-  line-height: 20px;
-}
-
-.chat-message details.chatCardDetailsELement {
-  background: transparent;
-}
-
-.chat-message details.chatCardDetailsELement[open] summary::before {
-  content: attr(data-open);
-}
-
-.chat-message details.chatCardDetailsELement:not([open]) summary::before {
-  content: attr(data-close);
-}
-
 /* Styles limited to torg sheets */
 
 @keyframes roll {
@@ -3323,7 +3295,6 @@ p.skill-chat-title.skilled {
     transform: scaleX(0.8) scaleY(0.8);
   }
 }
-
 
 .activeDefense-roll {
   animation: none;
@@ -4498,11 +4469,6 @@ h4 {
   padding: 0;
   font-weight: normal;
 }
-
-.application.torgeternity .window-header .window-title {
-  margin: 0;
-}
-
 
 body.theme-dark .application.torgeternity {
   --background: url(../images/thunder.webp) center;
