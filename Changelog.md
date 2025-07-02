@@ -1,7 +1,9 @@
 # TORG Eternity Changelog
 
-## v.13.1.0
+## v.13.0.0
 
+- v13 compatibility- open Beta!
+  
 - Now option to surpress chat notifications on card shuffle.
 - Miracles now have the skill "Faith" selected on creation.
 - custom attacks are now possible on threats [471](https://github.com/gmmatt/torgeternity/issues/471)
