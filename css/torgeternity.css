@@ -2088,7 +2088,8 @@ div.application.torgeternity.standard-form {
   background-color: rgba(0, 0, 0, 0.68);
 }
 
-form .form-group .form-fields.torgeternityFormFields>* {
+
+.torgeternity form .form-group .form-fields.torgeternityFormFields>* {
   background-color: rgba(128, 128, 128, 0.301);
   color: white;
 }
@@ -4165,6 +4166,36 @@ form.deckSetting div.flexrow {
   padding: 0 0 0 1.5em;
 }
 
+form.cards-config {
+
+  /*--color-form-label-hover: var(--color-dark-1);*/
+  --color-text-secondary: white;
+
+  header .card-name,
+  ol.cards .card-name {
+    flex-grow: 3;
+  }
+
+  input[type="checkbox"] {
+
+    &::before {
+      color: gray;
+    }
+
+    &:checked::before {
+      color: white;
+    }
+  }
+
+  .controls>a {
+    color: white;
+  }
+
+  div.slim div.form-fields {
+    flex-grow: 2;
+  }
+}
+
 .pool-list {
   font-family: Palatino;
   font-size: 12px;
@@ -4477,7 +4508,7 @@ body.theme-dark .application.torgeternity {
   --background: url(../images/thunder.webp) center;
 }
 
-.application.torgeternity,
+dialog.torgeternity,
 .application.torgeternity,
 .application.torgeternity {
   background-image: url(../images/thunder.webp);

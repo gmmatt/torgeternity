@@ -1,12 +1,9 @@
-<!-- Details Tab -->
 <section class="tab{{#if tab.active}} active{{/if}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
 
-  {{formGroup fields.img value=source.img rootId=rootId}}
+  {{formGroup systemFields.number value=source.system.number rootId=rootId label=(localize "torgeternity.sheetLabels.number")}}
 
-  {{formGroup fields.description value=source.description rootId=rootId elementType="textarea"}}
-
-  <div class="form-group slim">
-    <label>{{localize "CARDS.Dimensions"}}</label>
+  <div class="form-group">
+    <label>{{localize "CARD.Dimensions"}}</label>
     <div class="form-fields">
       <label for="{{rootId}}-width">{{localize "DOCUMENT.FIELDS.width.label"}}</label>
       {{formInput fields.width value=source.width id=(concat rootId "-width")}}
@@ -16,4 +13,7 @@
       {{formInput fields.rotation value=source.rotation id=(concat rootId "-rotation")}}
     </div>
   </div>
+
+  {{formGroup fields.description value=source.description rootId=rootId elementType="textarea"}}
+
 </section>

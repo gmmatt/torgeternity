@@ -7,9 +7,8 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
 
   static DEFAULT_OPTIONS = {
     type: "hand",
-    classes: ['torgeternity', 'sheet', 'cardsHand', 'cards-config'],
+    classes: ['torgeternity'],
     window: {
-      contentClasses: ["standard-form"],
       resizable: false
     },
     position: {
@@ -107,14 +106,8 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       case 'pass':
         return this.document.passDialog();
       case 'reset':
-        this._sortStandard = true;
+        this._prepareCards('standard');
         return this.document.recall();
-      case 'shuffle':
-        this._sortStandard = false;
-        return this.document.shuffle();
-      case 'toggleSort':
-        this._sortStandard = !this._sortStandard;
-        return this.render();
       case 'nextFace':
         return card.update({ face: card.face === null ? 0 : card.face + 1 });
       case 'prevFace':
@@ -253,6 +246,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
 
     // Display the prompt
     return DialogV2.prompt({
+      classes: ['torgeternity'],
       window: { title: game.i18n.localize('torgeternity.dialogPrompts.playerPassTitle') },
       content: html,
       ok: {
@@ -290,7 +284,8 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     );
 
     return DialogV2.prompt({
-      window: { title: game.i18n.localize('torgeternity.dialogPrompts.cosmDialogTitle') },
+      classes: ['torgeternity'],
+      window: { title: game.i18n.localize('torgeternity.dialogPrompts.cosmDialogTitle'), },
       content: html,
       ok: {
         label: game.i18n.localize('torgeternity.dialogPrompts.cosmDeckDialogLabel'),

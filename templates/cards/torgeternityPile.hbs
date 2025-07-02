@@ -6,29 +6,30 @@
   <header class="cards-header flexrow">
     <span class="card-faces">{{localize 'CARD.FIELDS.face.label'}}</span>
     <span class="sort-mode"></span>
-    <h4 class="card-name">{{localize 'CARD.FIELDS.face.label'}}</h4>
-    <span class="card-type">{{localize 'CARDS.FIELDS.type.label'}}</span>
+    <strong class="card-name">{{localize 'torgeternity.sheetLabels.name'}}</strong>
+    <span class="card-type">{{localize 'DOCUMENT.FIELDS.type.label'}}</span>
   </header>
-  <ol class="cards">
+  <ol class="cards scrollable">
     {{#each cards as |card|}}
       <li class="card flexrow" data-card-id="{{card.id}}">
-        <div class="card-faces flexcol">
-          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
-            data-control="nextFace"
-            {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i>
+
+        <div class="faces flexcol">
+          <a data-action="controlCard" data-control="nextFace" data-tooltip="CARDS.ACTIONS.NextFace"
+            {{disabled (not card.hasNextFace)}}>
+            <i class="fa-solid fa-caret-up"></i>
           </a>
-          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="controlCard"
-            data-control="prevFace"
-            {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i>
+          <a data-action="controlCard" data-control="prevFace" data-tooltip="CARDS.ACTIONS.PreviousFace"
+            {{disabled (not card.hasPreviousFace)}}>
+            <i class="fa-solid fa-caret-down"></i>
           </a>
         </div>
+
         <span class="card-tooltip" href="">
           <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
           <span><img src="{{card.img}}"></span>
         </span>
-        <h4 class="card-name">{{card.name}}</h4>
+        <strong class="card-name">{{card.name}}</strong>
         {{#if card.showFace}}
-          <!--<span class="card-type">{{card.typeLoc}}</span>-->
           <span class="card-type">{{card.typeLoc}}</span>
         {{/if}}
       </li>

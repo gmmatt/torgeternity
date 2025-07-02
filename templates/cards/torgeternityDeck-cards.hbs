@@ -1,5 +1,5 @@
 <!-- Cards Tab -->
-<section class="tab item active" data-group="primary" data-tab="cards">
+<section class="tab cards{{#if tab.active}} active{{/if}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
   <header class="cards-header flexrow">
     <span class="card-faces">{{localize "CARD.FIELDS.face.label"}}</span>
     <a class="card-control sort-mode" data-tooltip="{{localize 'CARDS.ACTIONS.ToggleSortMode'}}"
@@ -15,16 +15,20 @@
     </div>
   </header>
   <ol class="cards scrollable" data-cards>
-    {{#each document.cards as |card|}}
+    {{#each cards as |card|}}
       <li class="flexrow" data-card-id="{{card.id}}">
-        <div class="card-faces flexcol">
-          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
-            data-control="nextFace"
-            {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i></a>
-          <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="controlCard"
-            data-control="prevFace"
-            {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i></a>
+
+        <div class="faces flexcol">
+          <a data-action="controlCard" data-control="nextFace" data-tooltip="CARDS.ACTIONS.NextFace"
+            {{disabled (not card.hasNextFace)}}>
+            <i class="fa-solid fa-caret-up"></i>
+          </a>
+          <a data-action="controlCard" data-control="prevFace" data-tooltip="CARDS.ACTIONS.PreviousFace"
+            {{disabled (not card.hasPreviousFace)}}>
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
         </div>
+
         <span class="card-tooltip" href="">
           <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
           <span><img src="{{card.img}}"></span>
@@ -34,13 +38,14 @@
         <div class="card-drawn">
           <input type="checkbox" class="card-value" {{checked card.drawn}} disabled>
         </div>
+
         <div class="controls">
-          <a class="control" data-tooltip="{{localize 'CARDS.ACTIONS.Edit'}}" data-action="controlCard"
-            data-control="edit"><i
-              class="fa-solid fa-pen-to-square"></i></a>
-          <a class="control" data-tooltip="{{localize 'CARDS.ACTIONS.Delete'}}" data-action="controlCard"
-            data-control="delete"><i
-              class="fa-solid fa-trash"></i></a>
+          <a data-action="controlCard" data-control="edit" data-tooltip="CARDS.ACTIONS.Edit">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+          <a data-action="controlCard" data-control="delete" data-tooltip="CARDS.ACTIONS.Delete">
+            <i class="fa-solid fa-trash"></i>
+          </a>
         </div>
       </li>
     {{else}}
