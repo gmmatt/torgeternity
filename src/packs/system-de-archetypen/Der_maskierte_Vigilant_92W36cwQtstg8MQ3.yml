@@ -11,8 +11,7 @@ items:
     folder: R0u9Ztaprf22IfSC
     sort: 0
     flags:
-      core:
-        sourceId: Item.w4b7qWApQXkghQXE
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -27,12 +26,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1694868187854
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Item.w4b7qWApQXkghQXE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.eu1fNLOkaeAxVTKf'
   - _id: aMOK1Bd8rFpUkhIL
     name: Mantel und Maske
@@ -42,8 +42,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 0
     flags:
-      core:
-        sourceId: Item.UuCLymRLTqUajZYc
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Geheimnisvoll!</p>
@@ -59,12 +58,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722161959410
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.UuCLymRLTqUajZYc
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.aMOK1Bd8rFpUkhIL'
   - _id: y4woDXhqG1YWPcpB
     name: Leuchtfackel
@@ -74,8 +74,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 0
     flags:
-      core:
-        sourceId: Item.Uc1pL9fqLa4cfonl
+      core: {}
     system:
       cosm: nileEmpire
       description: ''
@@ -91,12 +90,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722162008122
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.Uc1pL9fqLa4cfonl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.y4woDXhqG1YWPcpB'
   - _id: 9EFl6ObKOnDr8PqP
     name: Handschellen
@@ -106,8 +106,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 0
     flags:
-      core:
-        sourceId: Item.sh2tcK6G0tcScgwq
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -128,12 +127,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722162012666
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.sh2tcK6G0tcScgwq
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.9EFl6ObKOnDr8PqP'
   - _id: XbOqDjoqDkDk2Coa
     name: Peilsender
@@ -143,8 +143,7 @@ items:
     folder: YrLpjzkzDZxqWzUw
     sort: 0
     flags:
-      core:
-        sourceId: Item.hnzAJpMqPZrjYrX8
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -162,12 +161,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722162016154
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.hnzAJpMqPZrjYrX8
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.XbOqDjoqDkDk2Coa'
   - _id: 2Ek4UPEwzb1actmc
     name: Schläger
@@ -177,8 +177,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -269,12 +268,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867682420
       modifiedTime: 1722161941737
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.2Ek4UPEwzb1actmc'
   - name: Mauser Pistole
     type: firearm
@@ -283,9 +283,7 @@ items:
     folder: null
     sort: 18200000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
+      core: {}
     _id: 5uhBz0KDWgG5ye1v
     system:
       cosm: nileEmpire
@@ -318,12 +316,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694867881572
       modifiedTime: 1722162025386
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.5uhBz0KDWgG5ye1v'
   - _id: b7Tc9x2NPJN6ghs2
     name: Lederweste
@@ -333,9 +332,7 @@ items:
     folder: null
     sort: 32400000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -359,12 +356,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366229
       modifiedTime: 1722162030018
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.b7Tc9x2NPJN6ghs2'
   - name: Extra-Magazine
     type: ammunition
@@ -398,12 +396,13 @@ items:
     _stats:
       compendiumSource: Item.TptgnUCwWM2QZCaK
       duplicateSource: Item.KRYQ71jof26XeGEv
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722161972831
       modifiedTime: 1722167137485
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _id: CMUZ3Qyku3JcWe0h
     _key: '!actors.items!92W36cwQtstg8MQ3.CMUZ3Qyku3JcWe0h'
   - _id: DmmM7o5UHBdJ8zzW
@@ -436,12 +435,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -477,19 +477,19 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!92W36cwQtstg8MQ3.DmmM7o5UHBdJ8zzW.SODFj28k0zgdMyCx
     folder: WDvJC2MufxrqwbzV
     sort: 500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+      core: {}
     system:
       category: pulpPowers
       cosm: nileEmpire
@@ -581,12 +581,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.DmmM7o5UHBdJ8zzW'
   - name: Mensch
     type: race
@@ -615,12 +616,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599393896
       modifiedTime: 1729599393896
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: QgRsO9XiDOoOafo4
     sort: 0
     ownership:
@@ -657,12 +659,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!92W36cwQtstg8MQ3.DqVIEZY6NNam3X8S'
   - origin: Actor.92W36cwQtstg8MQ3.Item.DmmM7o5UHBdJ8zzW
     duration:
@@ -689,12 +692,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -703,8 +707,7 @@ effects:
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.REeNzywr6VElHSWZ
+  core: {}
 system:
   shock:
     max: 5
@@ -1128,7 +1131,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1140,14 +1142,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694867673206
   modifiedTime: 1729013549754
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.REeNzywr6VElHSWZ
   duplicateSource: null
+  exportSource: null
 _key: '!actors!92W36cwQtstg8MQ3'
 

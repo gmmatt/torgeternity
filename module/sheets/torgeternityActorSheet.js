@@ -6,133 +6,197 @@ import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
 import { ChatMessageTorg } from '../documents/chat/document.js';
 
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
-export default class TorgeternityActorSheet extends ActorSheet {
+export default class TorgeternityActorSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
+
+  #dragDrop;
+
+  static DEFAULT_OPTIONS = {
+    classes: ['torgeternity', 'sheet', 'actor'],
+    window: {
+      contentTag: 'div',
+      contentClasses: ['standard-form', 'scrollable'],
+      resizable: true,
+    },
+    position: {
+      width: 773,
+      height: 860,
+    },
+    dragDrop: [
+      {
+        dragSelector: '[drag-drop="true"],.item-list .item',
+        dropSelector: null,
+      },
+    ],
+    form: {
+      submitOnChange: true
+    },
+    actions: {
+      skillList: TorgeternityActorSheet.#onSkillList,
+      skillRoll: TorgeternityActorSheet.#onSkillRoll,
+      skillElementRoll: TorgeternityActorSheet.#onSkillElementRoll,
+      skillEditToggle: TorgeternityActorSheet.#onSkillEditToggle,
+      itemToChat: TorgeternityActorSheet.#onItemChat,
+      itemAttackRoll: TorgeternityActorSheet.#onAttackRoll,
+      interactionAttack: TorgeternityActorSheet.#onInteractionAttack,
+      unarmedAttack: TorgeternityActorSheet.#onUnarmedAttack,
+      //itemBonusRoll: TorgeternityActorSheet.#onBonusRoll,
+      itemPowerRoll: TorgeternityActorSheet.#onPowerRoll,
+      itemEquip: TorgeternityActorSheet.#onItemEquip,
+      itemCreateSa: TorgeternityActorSheet.#onCreateSa,
+      itemCreateRsa: TorgeternityActorSheet.#onCreateSaR,
+      activeDefenseRoll: TorgeternityActorSheet.#onActiveDefenseRoll,
+      activeDefenseRollGlow: TorgeternityActorSheet.#onActiveDefenseCancel,
+      effectControl: TorgeternityActorSheet.#onManageActiveEffect, // data-action already on relevant elements
+      chaseRoll: TorgeternityActorSheet.#onChaseRoll,
+      stuntRoll: TorgeternityActorSheet.#onStuntRoll,
+      baseRoll: TorgeternityActorSheet.#onBaseRoll,
+      applyFatigue: TorgeternityActorSheet.#onApplyFatigue,
+      changeAttributesToggle: TorgeternityActorSheet.#onChangeAttributesToggle,
+      increaseAttribute: TorgeternityActorSheet.#onIncreaseAttribute,
+      decreaseAttribute: TorgeternityActorSheet.#onDecreaseAttribute,
+      openHand: TorgeternityActorSheet.#onOpenHand,
+      openPoss: TorgeternityActorSheet.#onCosmPoss,
+      itemEdit: TorgeternityActorSheet.#onItemEdit,
+      itemDelete: TorgeternityActorSheet.#onItemDelete,
+      reloadWeapon: TorgeternityActorSheet.#reloadWeapon,
+      itemName: TorgeternityActorSheet.#onitemName,
+      deleteRaceButton: TorgeternityActorSheet.#onDeleteRaceButton,
+    }
+  }
+
+  static PARTS = {
+    tabs: { template: 'templates/generic/tab-navigation.hbs' },
+
+    //stormknight: { template: `systems/torgeternity/templates/actors/stormknight/main.hbs` },
+    title: { template: "systems/torgeternity/templates/actors/stormknight/title.hbs" },
+    stats: { template: "systems/torgeternity/templates/actors/stormknight/stats-details.hbs", scrollable: [""] },
+    perks: { template: "systems/torgeternity/templates/actors/stormknight/perks-details.hbs", scrollable: [""] },
+    gear: { template: "systems/torgeternity/templates/actors/stormknight/gear.hbs", scrollable: [""] },
+    powers: { template: "systems/torgeternity/templates/actors/stormknight/powers.hbs", scrollable: [""] },
+    effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs", scrollable: [""] },
+    background: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs", scrollable: [""] },
+
+    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: [""] },
+    vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs`, scrollable: [""] }
+  }
+
+  static TABS = {
+    primary: {
+      tabs: [
+        { id: 'stats', },
+        { id: 'perks', },
+        { id: 'gear', },
+        { id: 'powers', },
+        { id: 'effects', },
+        { id: 'background', label: 'torgeternity.sheetLabels.notes' },
+      ],
+      initial: "stats",
+      labelPrefix: 'torgeternity.sheetLabels'
+    }
+  }
+
+  tabGroups = {
+    primary: "stats"
+  }
+
   /**
    *
    * @param {...any} args
    */
-  constructor(...args) {
-    super(...args);
+  constructor(options = {}) {
+    super(options);
 
-    if (this.object.type === 'threat') {
-      this.options.width = this.position.width = 690;
-      this.options.height = this.position.height = 645;
-    }
-
-    this._filters = {
-      effects: new Set(),
-    };
+    this._filters = { effects: new Set() };
+    this.#dragDrop = this.#createDragDropHandlers();
   }
 
-  /**
-   *
-   */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ['torgeternity', 'sheet', 'actor'],
-      width: 773,
-      height: 860,
-      tabs: [{ navSelector: '.sheet-tabs', contentSelector: '.sheet-body', initial: 'stats' }],
-      scrollY: ['.stats', '.perks', '.gear', '.powers', 'effects', 'background'],
-      dragdrop: [
-        {
-          dragSelector: '.item-list .item',
-          dropSelector: null,
-        },
-      ],
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options);
+    this.options.classes.push(this.actor.type);
+
+    switch (this.actor.type) {
+      case 'stormknight':
+        options.parts = ['title', 'tabs', 'stats', 'perks', 'gear', 'powers', 'effects', 'background'];
+        break;
+      case 'vehicle':
+        options.parts = [this.actor.type];
+        break;
+      case 'threat':
+        options.parts = [this.actor.type];
+        if (options.isFirstRender) {
+          options.position.width = 690;
+          options.position.height = 645;
+        }
+        break;
+    }
+  }
+
+  #createDragDropHandlers() {
+    return this.options.dragDrop.map((d) => {
+      /*d.permissions = {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this),
+      };*/
+      d.callbacks = {
+        dragstart: this._onDragStart.bind(this),
+        //dragover: this._onDragOver.bind(this),
+        drop: this._onDrop.bind(this),
+      };
+      return new foundry.applications.ux.DragDrop.implementation(d);
     });
   }
 
-  /**
-   *
-   */
-  get template() {
-    // modified path => one folder per type
-    return `systems/torgeternity/templates/actors/${this.actor.type}/main.hbs`;
+  get dragDrop() {
+    return this.#dragDrop;
+  }
+
+  async _preparePartContext(partId, context, options) {
+    context = await super._preparePartContext(partId, context, options);
+    if (this.actor.type === 'stormknight') {
+      context.tab = context.tabs[partId];
+    }
+    return context;
   }
 
   /**
-   *
    * @param options
    */
-  async getData(options) {
-    const data = super.getData(options);
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
 
-    data.meleeweapons = data.items.filter(function (item) {
-      return item.type == 'meleeweapon';
-    });
-    data.customAttack = data.items.filter(function (item) {
-      return item.type == 'customAttack';
-    });
-    data.customSkill = data.items.filter(function (item) {
-      return item.type == 'customSkill';
-    });
-    data.gear = data.items.filter(function (item) {
-      return item.type == 'gear';
-    });
-    data.eternityshard = data.items.filter(function (item) {
-      return item.type == 'eternityshard';
-    });
-    data.armor = data.items.filter(function (item) {
-      return item.type == 'armor';
-    });
-    data.shield = data.items.filter(function (item) {
-      return item.type == 'shield';
-    });
-    data.missileweapon = data.items.filter(function (item) {
-      return item.type == 'missileweapon';
-    });
-    data.firearm = data.items.filter(function (item) {
-      return item.type == 'firearm';
-    });
-    data.implant = data.items.filter(function (item) {
-      return item.type == 'implant';
-    });
-    data.heavyweapon = data.items.filter(function (item) {
-      return item.type == 'heavyweapon';
-    });
-    data.vehicle = data.items.filter(function (item) {
-      return item.type == 'vehicle';
-    });
-    data.perk = data.items.filter(function (item) {
-      return item.type == 'perk';
-    });
-    data.spell = data.items.filter(function (item) {
-      return item.type == 'spell';
-    });
-    data.miracle = data.items.filter(function (item) {
-      return item.type == 'miracle';
-    });
-    data.psionicpower = data.items.filter(function (item) {
-      return item.type == 'psionicpower';
-    });
-    data.specialability = data.items.filter(function (item) {
-      return item.type == 'specialability';
-    });
-    data.specialabilityRollable = data.items.filter(function (item) {
-      return item.type == 'specialability-rollable';
-    });
-    data.enhancement = data.items.filter(function (item) {
-      return item.type == 'enhancement';
-    });
-    data.dramaCard = data.items.filter(function (item) {
-      return item.type == 'dramaCard';
-    });
-    data.destinyCard = data.items.filter(function (item) {
-      return item.type == 'destinyCard';
-    });
-    data.cosmCard = data.items.filter(function (item) {
-      return item.type == 'cosmCard';
-    });
-    data.vehicleAddOn = data.items.filter(function (item) {
-      return item.type == 'vehicleAddOn';
-    });
-    data.ammunitions = data.items.filter(function (item) {
-      return item.type == 'ammunition';
-    });
+    context.systemFields = context.document.system.schema.fields;
+    context.items = Array.from(context.document.items);
+    context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
+    context.meleeweapons = context.items.filter(item => item.type === 'meleeweapon');
+    context.customAttack = context.items.filter(item => item.type === 'customAttack');
+    context.customSkill = context.items.filter(item => item.type === 'customSkill');
+    context.gear = context.items.filter(item => item.type === 'gear');
+    context.eternityshard = context.items.filter(item => item.type === 'eternityshard');
+    context.armor = context.items.filter(item => item.type === 'armor');
+    context.shield = context.items.filter(item => item.type === 'shield');
+    context.missileweapon = context.items.filter(item => item.type === 'missileweapon');
+    context.firearm = context.items.filter(item => item.type === 'firearm');
+    context.implant = context.items.filter(item => item.type === 'implant');
+    context.heavyweapon = context.items.filter(item => item.type === 'heavyweapon');
+    context.vehicle = context.items.filter(item => item.type === 'vehicle');
+    context.perk = context.items.filter(item => item.type === 'perk');
+    context.spell = context.items.filter(item => item.type === 'spell');
+    context.miracle = context.items.filter(item => item.type === 'miracle');
+    context.psionicpower = context.items.filter(item => item.type === 'psionicpower');
+    context.specialability = context.items.filter(item => item.type === 'specialability');
+    context.specialabilityRollable = context.items.filter(item => item.type === 'specialability-rollable');
+    context.enhancement = context.items.filter(item => item.type === 'enhancement');
+    context.dramaCard = context.items.filter(item => item.type === 'dramaCard');
+    context.destinyCard = context.items.filter(item => item.type === 'destinyCard');
+    context.cosmCard = context.items.filter(item => item.type === 'cosmCard');
+    context.vehicleAddOn = context.items.filter(item => item.type === 'vehicleAddOn');
+    context.ammunitions = context.items.filter(item => item.type === 'ammunition');
 
     for (const type of [
       'meleeweapons',
@@ -159,52 +223,53 @@ export default class TorgeternityActorSheet extends ActorSheet {
       'cosmCard',
       'vehicleAddOn',
     ]) {
-      for (const item of data[type]) {
-        item.description = await TextEditor.enrichHTML(item.system.description, {
-          async: true,
-        });
+      for (const item of context[type]) {
+        item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description);
       }
     }
 
     // Enrich Text Editors
-    switch (this.object.type) {
+    switch (this.document.type) {
       case 'stormknight':
-        data.enrichedBackground = await TextEditor.enrichHTML(
-          this.object.system.details.background,
-          { async: true }
-        );
+        context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.background);
         break;
       case 'threat':
-        data.enrichedDetails = await TextEditor.enrichHTML(this.object.system.details.description, {
-          async: true,
-        });
+        context.enrichedDetails = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.description);
         break;
       case 'vehicle':
-        data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
-          async: true,
-        });
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description);
     }
 
-    /* if (this.actor.system.editstate === undefined) {
-            this.actor.system.editstate = "none";
-        }; */
+    // if (this.actor.system.editstate === undefined) 
+    //        this.actor.system.editstate = "none";
 
-    data.effects = prepareActiveEffectCategories(this.document.effects);
+    context.effects = prepareActiveEffectCategories(this.document.effects);
 
-    data.config = CONFIG.torgeternity;
-    data.disableXP = true;
+    context.config = CONFIG.torgeternity;
+    context.disableXP = true;
     if (game.user.isGM || !game.settings.get('torgeternity', 'disableXP')) {
-      data.disableXP = false;
+      context.disableXP = false;
     }
 
     // is the actor actively defending at the moment?
-    data.actor.defenses.isActivelyDefending = this.actor.effects.find(
+    context.document.defenses.isActivelyDefending = this.actor.effects.find(
       (e) => e.name === 'ActiveDefense'
     )
       ? true
       : false;
 
-    return data;
+    context.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
+
+    return context;
+  }
+
+  _onDragStart(event) {
+    if (event.target.classList.contains('skill-roll'))
+      this._skillAttrDragStart(event) // a.skill-roll
+    else if (event.target.classList.contains('interaction-attack'))
+      this._interactionDragStart // a.interaction-attack
+    else
+      super._onDragStart(event) // a.item-name, threat: a.item
   }
 
   // Skills are not Foundry "items" with IDs, so the skill data is not automatically
@@ -213,35 +278,33 @@ export default class TorgeternityActorSheet extends ActorSheet {
   //    retrievable when the skill is dropped on the macro bar.
   /**
    *
-   * @param evt
+   * @param event
    */
-  _skillAttrDragStart(evt) {
-    this._onDragStart(evt);
+  _skillAttrDragStart(event) {
     const skillAttrData = {
-      type: evt.currentTarget.attributes['data-testtype'].value,
+      type: event.target.attributes['data-testtype'].value,
       data: {
-        name: evt.currentTarget.attributes['data-name'].value,
-        attribute: evt.currentTarget.attributes['data-baseattribute'].value,
-        adds: evt.currentTarget.attributes['data-adds'].value,
-        value: evt.currentTarget.attributes['data-value'].value,
-        unskilledUse: evt.currentTarget.attributes['data-unskilleduse'].value,
+        name: event.target.attributes['data-name'].value,
+        attribute: event.target.attributes['data-baseattribute'].value,
+        adds: event.target.attributes['data-adds'].value,
+        value: event.target.attributes['data-value'].value,
+        unskilledUse: event.target.attributes['data-unskilleduse'].value,
         attackType: '',
         targets: Array.from(game.user.targets),
         DNDescriptor: 'standard',
         rollTotal: 0,
       },
     };
-    evt.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
+    event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
   }
 
   // See _skillAttrDragStart above.
   /**
    *
-   * @param evt
+   * @param event
    */
-  _interactionDragStart(evt) {
-    this._onDragStart(evt);
-    const skillNameKey = evt.currentTarget.attributes['data-name'].value;
+  _interactionDragStart(event) {
+    const skillNameKey = event.target.attributes['data-name'].value;
     const skill = this.actor.system.skills[skillNameKey];
     const value = skill.value
       ? skill.value
@@ -254,234 +317,49 @@ export default class TorgeternityActorSheet extends ActorSheet {
         adds: skill.adds,
         value: value,
         unskilledUse: skill.unskilledUse,
-        attackType: evt.currentTarget.attributes['data-attack-type'].value,
+        attackType: event.target.attributes['data-attack-type'].value,
       },
     };
-    evt.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
+    event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
   }
 
   /**
    *
    * @param html
    */
-  activateListeners(html) {
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+    let html = this.element;
+
+    // Configure drag/drop
+    this.#dragDrop.forEach((d) => d.bind(this.element));
+
     // localizing hardcoded possibility potential value
     if (this.actor.isOwner) {
-      // Owner-only Listeners
-      let handler = (ev) => this._onDragStart(ev);
-      // Find all items on the character sheet.
-      html.find('a.item-name').each((i, a) => {
-        // Ignore for the header row.
-        if (a.classList.contains('item-header')) return;
-        // Add draggable attribute and dragstart listener.
-        a.setAttribute('draggable', true);
-        a.addEventListener('dragstart', handler, false);
-      });
-      // Find all attributes on the character sheet.
-      handler = (ev) => this._skillAttrDragStart(ev);
-      html.find('a.skill-roll').each((i, a) => {
-        // Add draggable attribute and dragstart listener.
-        a.setAttribute('draggable', true);
-        a.addEventListener('dragstart', handler, false);
-      });
-      // Find all interactions on the character sheet.
-      handler = (ev) => this._interactionDragStart(ev);
-      html.find('a.interaction-attack').each((i, a) => {
-        // Add draggable attribute and dragstart listener.
-        a.setAttribute('draggable', true);
-        a.addEventListener('dragstart', handler, false);
-      });
-      // listeners for items on front page of threat sheet
-      if (this.object.type === 'threat') {
-        handler = (ev) => this._onDragStart(ev);
-        html.find('a.item').each((i, a) => {
-          // Add draggable attribute and dragstart listener.
-          a.setAttribute('draggable', true);
-          a.addEventListener('dragstart', handler, false);
-        });
-      }
-
-      html.find('.skill-roll').click(this._onSkillRoll.bind(this));
-
-      html.find('.skill-list').click(this._onSkillList.bind(this));
-
-      // New for skills rolls without values
-      html.find('.skill-element-roll').click(this._onSkillElementRoll.bind(this));
-
-      html.find('.skill-edit-toggle').click(this._onSkillEditToggle.bind(this));
-
-      html.find('.item-tochat').click(this._onItemChat.bind(this));
-
-      html.find('.item-attackRoll').click(this._onAttackRoll.bind(this));
-
-      html.find('.interaction-attack').click(this._onInteractionAttack.bind(this));
-
-      html.find('.unarmed-attack').click(this._onUnarmedAttack.bind(this));
-
-      // html.find('.item-bonusRoll').click(this._onBonusRoll.bind(this));
-
-      html.find('.item-powerRoll').click(this._onPowerRoll.bind(this));
-
-      html.find('.item-equip').click(this._onItemEquip.bind(this));
-
-      html.find('.item-create-sa').click(this._onCreateSa.bind(this));
-
-      html.find('.item-create-rsa').click(this._onCreateSaR.bind(this));
-
-      html.find('.activeDefense-roll').click(this._onActiveDefenseRoll.bind(this));
-
-      html.find('.activeDefense-roll-glow').click(this._onActiveDefenseCancel.bind(this));
-
-      html.find('.effect-control').click((ev) => onManageActiveEffect(ev, this.document));
-
-      html.find('.chase-roll').click(this._onChaseRoll.bind(this));
-
-      html.find('.stunt-roll').click(this._onStuntRoll.bind(this));
-
-      html.find('.base-roll').click(this._onBaseRoll.bind(this));
-
-      html.find('.apply-fatigue').click((ev) => {
-        const newShock = this.actor.system.shock.value + parseInt(ev.currentTarget.dataset.fatigue);
-        this.actor.update({ 'system.shock.value': newShock });
-      });
-
-      html.find('.attributeValueField').change((ev) => {
-        const concernedAttribute = ev.currentTarget.dataset.baseattributeinput;
-
-        this.actor.update({
-          [`system.attributes.${concernedAttribute}.base`]: parseInt(ev.target.value),
-        });
-      });
-
-      html.find('.changeAttributesToggle').click((ev) => {
-        this.document.setFlag(
-          'torgeternity',
-          'editAttributes',
-          !this.document.getFlag('torgeternity', 'editAttributes')
-        );
-      });
-
-      html.find('.increaseAttribute').click((ev) => {
-        const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
-        const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
-        this.actor.update({
-          [`system.attributes.${concernedAttribute}.base`]: attributeToChange + 1,
-        });
-      });
-
-      html.find('.decreaseAttribute').click((ev) => {
-        const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
-        const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
-        this.actor.update({
-          [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1,
-        });
-      });
+      html.querySelectorAll('.attributeValueField').forEach(elem =>
+        elem.addEventListener('change', event => {
+          const concernedAttribute = target.dataset.baseattributeinput;
+          this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: parseInt(target.value) });
+        }));
     }
 
-    super.activateListeners(html);
-
     // Everything below here is only needed if the sheet is editable
-    if (!this.options.editable) return;
-
-    // Open Cards Hand
-
-    html.find('.open-hand').click(this.onOpenHand.bind(this));
-    html.find('.open-poss').click(this.onCosmPoss.bind(this));
-
-    // Update Inventory Item
-    html.find('.item-edit').click((ev) => {
-      const li = $(ev.currentTarget).parents('.item');
-      const item = this.actor.items.get(li.data('itemId'));
-      item.sheet.render(true);
-    });
-
-    // Delete Inventory Item
-    html.find('.item-delete').click((ev) => {
-      let applyChanges = false;
-      new Dialog({
-        title: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.title'),
-        content: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.content'),
-        buttons: {
-          yes: {
-            icon: '<i class="fas fa-check"></i>',
-            label: game.i18n.localize('torgeternity.yesNo.true'),
-            callback: () => (applyChanges = true),
-          },
-          no: {
-            icon: '<i class="fas fa-times"></i>',
-            label: game.i18n.localize('torgeternity.yesNo.false'),
-          },
-        },
-        default: 'yes',
-        close: () => {
-          if (applyChanges) {
-            const li = $(ev.currentTarget).parents('.item');
-            this.actor.deleteEmbeddedDocuments('Item', [li.data('itemId')]);
-            li.slideUp(200, () => this.render(false));
-          }
-        },
-      }).render(true);
-    });
-
-    // reload-function for weapons with ammunition, directly from the actors sheet.
-    html.find('.reload-weapon').click((ev) => {
-      const button = ev.currentTarget.closest('[data-item-id]');
-      const weapon = this.actor.items.get(button.dataset.itemId);
-
-      reloadAmmo(this.actor, weapon);
-    });
-
-    // Toggle Item Detail Visibility
-    html.find('.item-name').click((ev) => {
-      const section = ev.currentTarget.closest('.item');
-      const detail = $(section).find('.item-detail');
-      const content = detail.get(0);
-      if (content != undefined && content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        if (content) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      }
-    });
-
-    // Delete a race of an actor
-    html.find('a.deleteRaceButton').click(async () => {
-      const raceItem = this.actor.items.find((i) => i.type === 'race');
-      if (!raceItem) {
-        ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
-        return;
-      }
-      await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title'),
-        content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
-        yes: async () => {
-          await this.actor.deleteEmbeddedDocuments('Item', [
-            raceItem.id,
-            ...this.actor.items
-              .filter((i) => i.type === 'perk' && i.system.category === 'racial')
-              .map((i) => i.id),
-          ]);
-        },
-        no: () => {
-          return;
-        },
-      });
-    });
+    if (!context.editable) return;
 
     // compute adds from total for threats
     if (this.actor.type == 'threat') {
-      html.find('.skill-element-edit .inputsFav').change(this.setThreatAdds.bind(this));
+      html.querySelectorAll('.skill-element-edit .inputsFav').forEach(elem =>
+        elem.addEventListener('change', ev => this.#setThreatAdds.bind(this)));
     }
   }
 
   /** @inheritdoc */
   async _onDrop(event) {
-    if (this.object.type !== 'stormknight') {
+    if (this.document.type !== 'stormknight') {
       await super._onDrop(event);
       return;
     }
-    const data = TextEditor.getDragEventData(event);
+    const data = foundry.applications.ux.TextEditor.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
     if (dropedObject instanceof TorgeternityItem && dropedObject.type === 'race') {
       const raceItem = this.actor.items.find((i) => i.type === 'race');
@@ -502,17 +380,11 @@ export default class TorgeternityActorSheet extends ActorSheet {
       for (const [key, value] of Object.entries(dropedObject.system.attributeMaximum)) {
         if (this.actor.system.attributes[key].base <= value) continue;
 
-        const proceed = await foundry.applications.api.DialogV2.confirm({
-          window: {
-            title: await game.i18n.localize(
-              'torgeternity.dialogWindow.raceDiminishAttribute.title'
-            ),
-          },
+        const proceed = await DialogV2.confirm({
+          window: { title: 'torgeternity.dialogWindow.raceDiminishAttribute.title' },
           content: await game.i18n.format(
             'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
-            {
-              attribute: await game.i18n.localize('torgeternity.attributes.' + key),
-            }
+            { attribute: await game.i18n.localize('torgeternity.attributes.' + key), }
           ),
           rejectClose: false,
           modal: true,
@@ -525,15 +397,16 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
       if (dropedObject.system.darkvision)
         await this.actor.update({ 'prototypeToken.sight.visionMode': 'darkvision' });
+    } else {
+      await super._onDrop(event);
     }
-    await super._onDrop(event);
   }
 
   /**
    *
    * @param event
    */
-  async setThreatAdds(event) {
+  async #setThreatAdds(event) {
     const skill = event.target.dataset.skill;
     if (['0', ''].includes(event.target.value)) {
       // reset the 'skill object' to hide any value (the zero)
@@ -559,13 +432,13 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  async onOpenHand(event) {
-    const characterHand = this.object.getDefaultHand();
+  static async #onOpenHand(event, target) {
+    const characterHand = this.document.getDefaultHand();
     // if default hand => render it
     if (characterHand) {
       characterHand.sheet.render(true);
     } else {
-      await this.object.createDefaultHand();
+      await this.document.createDefaultHand();
       characterHand.sheet.render(true);
     }
   }
@@ -574,12 +447,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  async onCosmPoss(event) {
-    const actor = this.object;
-    const windo = Object.values(ui.windows).find(
+  static async #onCosmPoss(event, target) {
+    const actor = this.actor;
+    const window = Object.values(ui.windows).find(
       (w) => w.title === game.i18n.localize('torgeternity.sheetLabels.possibilityByCosm')
     );
-    if (!windo) {
+    if (!window) {
       PossibilityByCosm.create(actor);
     }
   }
@@ -588,8 +461,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  async _onSkillList(event) {
-    const skillName = event.currentTarget.dataset.name;
+  static async #onSkillList(event, target) {
+    const skillName = target.dataset.name;
     const isThreatSkill = this.actor.system.skills[skillName]?.isThreatSkill;
     const update = { [`system.skills.${skillName}.isThreatSkill`]: !isThreatSkill };
     if (isThreatSkill) {
@@ -602,13 +475,13 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  async _onSkillRoll(event) {
-    const skillName = event.currentTarget.dataset.name;
-    const attributeName = event.currentTarget.dataset.baseattribute;
-    const isAttributeTest = event.currentTarget.dataset.testtype === 'attribute';
-    const skillValue = event.currentTarget.dataset.value;
+  static async #onSkillRoll(event, target) {
+    const skillName = target.dataset.name;
+    const attributeName = target.dataset.baseattribute;
+    const isAttributeTest = target.dataset.testtype === 'attribute';
+    const skillValue = target.dataset.value;
     let isFav;
-    if (event.currentTarget.dataset.isfav === 'true') {
+    if (target.dataset.isfav === 'true') {
       isFav = true;
     } else {
       isFav = false;
@@ -621,8 +494,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
     if (skillName === 'reality' && torgchecks.checkForDiscon(this.actor)) {
-      const d = await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title'),
+      const d = await DialogV2.confirm({
+        window: { title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title') },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
       });
       if (d === false) {
@@ -640,7 +513,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
           actorName: this.actor.name,
         };
 
-        const templatePromise = renderTemplate(
+        const templatePromise = foundry.applications.handlebars.renderTemplate(
           './systems/torgeternity/templates/partials/skill-error-card.hbs',
           templateData
         );
@@ -653,9 +526,9 @@ export default class TorgeternityActorSheet extends ActorSheet {
       }
     }
 
-    const test = {
-      testType: event.currentTarget.dataset.testtype,
-      customSkill: event.currentTarget.dataset.customskill,
+    new TestDialog({
+      testType: target.dataset.testtype,
+      customSkill: target.dataset.customskill,
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,
@@ -675,9 +548,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   // Adapted from above, with event targetting in edit skills list
@@ -685,18 +556,18 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  async _onSkillElementRoll(event) {
-    const skillName = event.currentTarget.dataset.name;
-    const attributeName = event.currentTarget.dataset.baseattribute;
-    const isUnskilledTest = event.currentTarget.dataset.unskilleduse === '0';
+  static async #onSkillElementRoll(event, target) {
+    const skillName = target.dataset.name;
+    const attributeName = target.dataset.baseattribute;
+    const isUnskilledTest = target.dataset.unskilleduse === '0';
     const skillValue =
-      event.currentTarget.dataset.value === 'NaN'
+      target.dataset.value === 'NaN'
         ? isUnskilledTest
           ? '-'
           : this.actor.system.attributes[attributeName].value
-        : event.currentTarget.dataset.value;
+        : target.dataset.value;
     let isFav;
-    if (event.currentTarget.dataset.isfav === 'true') {
+    if (target.dataset.isfav === 'true') {
       isFav = true;
     } else {
       isFav = false;
@@ -707,9 +578,9 @@ export default class TorgeternityActorSheet extends ActorSheet {
       return;
     }
 
-    const test = {
-      testType: event.currentTarget.dataset.testtype,
-      customSkill: event.currentTarget.dataset.customskill,
+    new TestDialog({
+      testType: target.dataset.testtype,
+      customSkill: target.dataset.customskill,
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,
@@ -729,22 +600,20 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  async _onChaseRoll(event) {
+  static async #onChaseRoll(event, target) {
     if (!game.combats.active) {
       ui.notifications.info(game.i18n.localize('torgeternity.chatText.check.noTracker'));
       return;
     }
 
-    const test = {
+    new TestDialog({
       testType: 'chase',
       customSkill: 'false',
       actor: this.actor.uuid,
@@ -753,28 +622,26 @@ export default class TorgeternityActorSheet extends ActorSheet {
       actorType: 'vehicle',
       isAttack: false,
       skillName: 'Vehicle Chase',
-      skillValue: event.currentTarget.dataset.skillValue,
+      skillValue: target.dataset.skillValue,
       targets: Array.from(game.user.targets),
       applySize: false,
       DNDescriptor: 'highestSpeed',
       attackOptions: false,
       rollTotal: 0,
       chatNote: '',
-      vehicleSpeed: event.currentTarget.dataset.speed,
-      maneuverModifier: event.currentTarget.dataset.maneuver,
+      vehicleSpeed: target.dataset.speed,
+      maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  async _onBaseRoll(event) {
-    const test = {
+  static async #onBaseRoll(event, target) {
+    new TestDialog({
       testType: 'vehicleBase',
       customSkill: 'false',
       actor: this.actor.uuid,
@@ -783,27 +650,25 @@ export default class TorgeternityActorSheet extends ActorSheet {
       actorType: 'vehicle',
       isAttack: false,
       skillName: 'Vehicle Operation',
-      skillValue: event.currentTarget.dataset.skillValue,
+      skillValue: target.dataset.skillValue,
       targets: Array.from(game.user.targets),
       applySize: false,
       DNDescriptor: 'standard',
       attackOptions: false,
       rollTotal: 0,
       chatNote: '',
-      vehicleSpeed: event.currentTarget.dataset.speed,
-      maneuverModifier: event.currentTarget.dataset.maneuver,
+      vehicleSpeed: target.dataset.speed,
+      maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  async _onStuntRoll(event) {
+  static async #onStuntRoll(event, target) {
     let dnDescriptor = 'standard';
 
     if (Array.from(game.user.targets).length > 0) {
@@ -812,7 +677,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
         dnDescriptor = 'targetVehicleDefense';
       }
     }
-    const test = {
+    new TestDialog({
       testType: 'stunt',
       customSkill: 'false',
       actor: this.actor.uuid,
@@ -821,29 +686,27 @@ export default class TorgeternityActorSheet extends ActorSheet {
       actorType: 'vehicle',
       isAttack: false,
       skillName: 'Vehicle Stunt',
-      skillValue: event.currentTarget.dataset.skillValue,
+      skillValue: target.dataset.skillValue,
       targets: Array.from(game.user.targets),
       applySize: false,
       DNDescriptor: dnDescriptor,
       attackOptions: false,
       rollTotal: 0,
       chatNote: '',
-      vehicleSpeed: event.currentTarget.dataset.speed,
-      maneuverModifier: event.currentTarget.dataset.maneuver,
+      vehicleSpeed: target.dataset.speed,
+      maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  _onInteractionAttack(event) {
+  static #onInteractionAttack(event, target) {
     let dnDescriptor = 'standard';
-    const attackType = event.currentTarget.getAttribute('data-attack-type');
+    const attackType = target.dataset.attackType;
     if (Array.from(game.user.targets).length > 0) {
       switch (attackType) {
         case 'intimidation':
@@ -865,20 +728,20 @@ export default class TorgeternityActorSheet extends ActorSheet {
       dnDescriptor = 'standard';
     }
 
-    const test = {
+    new TestDialog({
       testType: 'interactionAttack',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
       isAttack: false,
-      interactionAttackType: event.currentTarget.getAttribute('data-attack-type'),
-      skillName: event.currentTarget.getAttribute('data-name'),
+      interactionAttackType: target.dataset.attackType,
+      skillName: target.dataset.name,
       skillBaseAttribute: game.i18n.localize(
-        'torgeternity.skills.' + event.currentTarget.getAttribute('data-base-attribute')
+        'torgeternity.skills.' + target.dataset.baseAttribute
       ),
-      skillAdds: event.currentTarget.getAttribute('data-adds'),
-      skillValue: event.currentTarget.getAttribute('data-skill-value'),
+      skillAdds: target.dataset.adds,
+      skillValue: target.dataset.skillValue,
       isFav: this.actor.system.skills[attackType].isFav,
       unskilledUse: true,
       darknessModifier: 0,
@@ -892,16 +755,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  _onUnarmedAttack(event) {
+  static #onUnarmedAttack(event, target) {
     let dnDescriptor = 'standard';
     if (Array.from(game.user.targets).length > 0) {
       let firstTarget = Array.from(game.user.targets).find(
@@ -921,11 +782,11 @@ export default class TorgeternityActorSheet extends ActorSheet {
       dnDescriptor = 'standard';
     }
 
-    const skillValue = isNaN(event.currentTarget.getAttribute('data-skill-value'))
+    const skillValue = isNaN(target.dataset.skillValue)
       ? this.actor.system.attributes.dexterity.value
-      : event.currentTarget.getAttribute('data-skill-value');
+      : target.dataset.skillValue;
 
-    const test = {
+    new TestDialog({
       testType: 'attack',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
@@ -938,7 +799,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       skillValue: skillValue,
       isFav: this.actor.system.skills.unarmedCombat.isFav,
       unskilledUse: true,
-      damage: parseInt(event.currentTarget.getAttribute('data-damage')),
+      damage: parseInt(target.dataset.damage),
       weaponAP: 0,
       applyArmor: true,
       darknessModifier: 0,
@@ -952,16 +813,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
       amountBD: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  _onSkillEditToggle(event) {
+  static #onSkillEditToggle(event, target) {
     event.preventDefault();
     const toggleState = this.actor.system.editstate;
     this.actor.update({ 'system.editstate': !toggleState });
@@ -971,10 +830,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onActiveDefenseRoll(event) {
+  static #onActiveDefenseRoll(event, target) {
     const dnDescriptor = 'standard';
 
-    const test = {
+    new TestDialog({
       testType: 'activeDefense',
       activelyDefending: false,
       actor: this.actor.uuid,
@@ -1002,16 +861,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
       sizeModifierAll: [0],
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  async _onActiveDefenseCancel(event) {
+  static async #onActiveDefenseCancel(event, target) {
     const dnDescriptor = 'standard';
 
     const test = {
@@ -1047,15 +904,17 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  async _onItemChat(event) {
-    const itemID = event.currentTarget.closest('.item').dataset.itemId;
+  static async #onItemChat(event, target) {
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     const chatData = {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: item,
-        template: TorgeternityItem.CHAT_TEMPLATE[item.type],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE[item.type],
+        }
       },
     };
 
@@ -1066,8 +925,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onAttackRoll(event) {
-    const itemID = event.currentTarget.closest('.item').dataset.itemId;
+  static #onAttackRoll(event, target) {
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     let attributes;
     const weaponData = item.system;
@@ -1077,7 +936,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     let skillValue;
     let skillData;
 
-    if (item?.weaponWithAmmo && !item.hasAmmo) {
+    if (item?.weaponWithAmmo && !item.hasAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
       ui.notifications.warn(game.i18n.localize('torgeternity.chatText.noAmmo'));
       return;
     }
@@ -1097,7 +956,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     if (checkUnskilled(skillValue, attackWith, this.actor)) return;
 
     let dnDescriptor = 'standard';
-    const attackType = event.currentTarget.getAttribute('data-attack-type');
+    const attackType = target.dataset.attackType;
     let adjustedDamage = 0;
 
     if (Array.from(game.user.targets).length > 0) {
@@ -1155,7 +1014,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
         adjustedDamage = parseInt(weaponDamage);
     }
 
-    const test = {
+    new TestDialog({
       testType: 'attack',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
@@ -1183,14 +1042,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
       item: item,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /* I've commented that out because it shouldn't be needed anymore but I don't know yet :D
-    _onBonusRoll(event) {
-    const itemID = event.currentTarget.closest('.item').dataset.itemId;
+   static #onBonusRoll(event, target) {
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
 
     item.bonus();
@@ -1200,8 +1057,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onPowerRoll(event) {
-    const itemID = event.currentTarget.closest('.item').dataset.itemId;
+  static #onPowerRoll(event, target) {
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     const powerData = item.system;
     const skillName = powerData.skill;
@@ -1229,7 +1086,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
     if (checkUnskilled(skillData.value, skillName, this.actor)) return;
 
-    const test = {
+    new TestDialog({
       testType: 'power',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
@@ -1242,7 +1099,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       isFav: skillData.isFav,
       skillName: skillName,
       skillBaseAttribute: game.i18n.localize(
-        'torgeternity.skills.' + event.currentTarget.getAttribute('data-base-attribute')
+        'torgeternity.skills.' + target.dataset.baseAttribute
       ),
       skillAdds: skillData.adds,
       skillValue: Math.max(
@@ -1265,16 +1122,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
       bdDamageLabelStyle: 'display:none',
       amountBD: 0,
       bdDamageSum: 0,
-    };
-
-    new TestDialog(test);
+    });
   }
 
   /**
    *
    * @param event
    */
-  _onCreateSa(event) {
+  static #onCreateSa(event, target) {
     event.preventDefault();
     const itemData = {
       name: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
@@ -1289,7 +1144,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onCreateSaR(event) {
+  static #onCreateSaR(event, target) {
     event.preventDefault();
     const itemData = {
       name: game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
@@ -1304,10 +1159,100 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onItemEquip(event) {
-    const itemID = event.currentTarget.closest('.item').getAttribute('data-item-id');
+  static #onItemEquip(event, target) {
+    const itemID = target.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
     TorgeternityItem.toggleEquipState(item, this.actor);
+  }
+
+  static #onManageActiveEffect(event, target) {
+    onManageActiveEffect(event, target, this.document);
+  }
+
+  static #onApplyFatigue(event, target) {
+    const newShock = this.actor.system.shock.value + parseInt(target.dataset.fatigue);
+    this.actor.update({ 'system.shock.value': newShock });
+  }
+
+  static #onChangeAttributesToggle(event, target) {
+    this.document.setFlag(
+      'torgeternity',
+      'editAttributes',
+      !this.document.getFlag('torgeternity', 'editAttributes')
+    );
+  }
+  static #onIncreaseAttribute(event, target) {
+    const concernedAttribute = target.dataset.concernedattribute;
+    const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
+    this.actor.update({
+      [`system.attributes.${concernedAttribute}.base`]: attributeToChange + 1,
+    });
+  }
+  static #onDecreaseAttribute(event, target) {
+    const concernedAttribute = target.dataset.concernedattribute;
+    const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
+    this.actor.update({
+      [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1,
+    });
+  }
+  static #onItemEdit(event, target) {
+    const li = target.closest('.item');
+    const item = this.actor.items.get(li.dataset.itemId);
+    item.sheet.render(true);
+  }
+  static #onItemDelete(event, target) {
+    return DialogV2.confirm({
+      window: { title: 'torgeternity.dialogWindow.itemDeletion.title' },
+      content: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.content'),
+      yes: {
+        icon: 'fa-solid fa-check',
+        label: 'torgeternity.yesNo.true',
+        default: true,
+        callback: () => {
+          const li = target.closest('.item');
+          this.actor.deleteEmbeddedDocuments('Item', [li.dataset.itemId])
+        }
+      },
+      no: {
+        icon: 'fa-solid fa-times',
+        label: 'torgeternity.yesNo.false',
+      },
+    });
+  }
+  static #reloadWeapon(event, target) {
+    const button = target.closest('[data-item-id]');
+    const weapon = this.actor.items.get(button.dataset.itemId);
+
+    reloadAmmo(this.actor, weapon);
+  }
+  static #onitemName(event, target) {
+    const section = target.closest('.item');
+    const detail = section.querySelector('.item-detail');
+    if (!detail) return;
+    detail.style.maxHeight = detail.style.maxHeight ? null : (detail.scrollHeight + 'px');
+  }
+
+  static async #onDeleteRaceButton(event, target) {
+    const raceItem = this.actor.items.find((i) => i.type === 'race');
+    if (!raceItem) {
+      ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
+      return;
+    }
+    await DialogV2.confirm({
+      window: { title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title') },
+      content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
+      yes: async () => {
+        await this.actor.deleteEmbeddedDocuments('Item', [
+          raceItem.id,
+          ...this.actor.items
+            .filter((i) => i.type === 'perk' && i.system.category === 'racial')
+            .map((i) => i.id),
+        ]);
+      },
+      no: () => {
+        return;
+      },
+    });
   }
 }
 
@@ -1334,7 +1279,7 @@ export function checkUnskilled(skillValue, skillName, actor) {
       actorName: actor.name,
     };
 
-    const templatePromise = renderTemplate(
+    const templatePromise = foundry.applications.handlebars.renderTemplate(
       './systems/torgeternity/templates/partials/skill-error-card.hbs',
       templateData
     );

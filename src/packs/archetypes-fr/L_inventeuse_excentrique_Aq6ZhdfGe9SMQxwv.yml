@@ -9,8 +9,7 @@ items:
     type: perk
     sort: 200001
     flags:
-      core:
-        sourceId: Item.XCIWjW6xVzFfafSU
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -110,20 +109,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.XCIWjW6xVzFfafSU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.80rM8r1q1ZuSjmNW'
   - _id: GGNr7g7vMSTPaehJ
     name: Champ de force
     type: perk
     sort: 300001
     flags:
-      core:
-        sourceId: Item.K6kYBttafWPIdNQs
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -221,20 +220,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.K6kYBttafWPIdNQs
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.GGNr7g7vMSTPaehJ'
   - _id: YTn3DwXQRjQmHiv8
     name: Mini transmetteur audio
     type: gear
     sort: 2900000
     flags:
-      core:
-        sourceId: Item.j3maRwDVRJPYt1wO
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -252,20 +251,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.j3maRwDVRJPYt1wO
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.YTn3DwXQRjQmHiv8'
   - _id: ULLKqlRuslVlrPkq
     name: Sac à dos
     type: gear
     sort: 3000000
     flags:
-      core:
-        sourceId: Item.th671TeucbJU9ZOl
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -281,20 +280,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.th671TeucbJU9ZOl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.ULLKqlRuslVlrPkq'
   - _id: D9xL4vD2vlmk43xR
     name: Kit de premiers soins
     type: gear
     sort: 3100000
     flags:
-      core:
-        sourceId: Item.HsanlzQCJP0vTtEy
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -310,20 +309,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.HsanlzQCJP0vTtEy
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.D9xL4vD2vlmk43xR'
   - _id: xThbbxSuvzYe2PyQ
     name: Outils de crochetage
     type: gear
     sort: 3200000
     flags:
-      core:
-        sourceId: Item.xSw6gIp8xiCT1yXM
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -339,20 +338,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.xSw6gIp8xiCT1yXM
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.xThbbxSuvzYe2PyQ'
   - _id: 1Hl7YPPwsY9etNJl
     name: Poste radio
     type: gear
     sort: 3300000
     flags:
-      core:
-        sourceId: Item.X4B9Ye2030sICMCa
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -368,20 +367,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.X4B9Ye2030sICMCa
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.1Hl7YPPwsY9etNJl'
   - _id: 5DKkp05nGxK833lv
     name: Ceinture à outils
     type: gear
     sort: 3400000
     flags:
-      core:
-        sourceId: Item.CvZU96RR15BnScXb
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -397,20 +396,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.CvZU96RR15BnScXb
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.5DKkp05nGxK833lv'
   - _id: MV07jQ3ZSwt0XVAu
     name: Dispositif de pistage
     type: gear
     sort: 2800000
     flags:
-      core:
-        sourceId: Item.zGj5mxLW7ygVnIKC
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -429,20 +428,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.zGj5mxLW7ygVnIKC
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.MV07jQ3ZSwt0XVAu'
   - _id: E6JiAtIrHBIrc4Hp
     name: Électro-rayon
     type: firearm
     sort: 400001
     flags:
-      core:
-        sourceId: Item.W8ZARSxZdHHv4JZN
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -469,12 +468,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.W8ZARSxZdHHv4JZN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.E6JiAtIrHBIrc4Hp'
   - _id: m4UNIQgIVWh0ofrr
     name: Lampe torche
@@ -484,8 +484,7 @@ items:
     folder: null
     sort: 1700000
     flags:
-      core:
-        sourceId: Item.tktQLV7z5tnNkEqr
+      core: {}
     system:
       cosm: Empire du Nil
       description: >-
@@ -501,12 +500,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.tktQLV7z5tnNkEqr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.m4UNIQgIVWh0ofrr'
   - _id: JtXllaXMDuTpHTWT
     name: Manteau en cuir
@@ -540,7 +540,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -548,6 +548,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -557,8 +558,7 @@ items:
     folder: null
     sort: 800000
     flags:
-      core:
-        sourceId: Item.Ih77xAUJLZwOROR7
+      core: {}
     system:
       cosm: (Sans cosm)
       description: ''
@@ -578,12 +578,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.JtXllaXMDuTpHTWT'
   - _id: oHBqOwXO2ED4k0wN
     name: Attaque à mains nues
@@ -593,8 +594,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -609,12 +609,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.oHBqOwXO2ED4k0wN'
 effects:
   - _id: 0cb20uUutlrniHzZ
@@ -645,7 +646,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -653,6 +654,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1177,7 +1179,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1189,14 +1190,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809182
   modifiedTime: 1716827809182
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!Aq6ZhdfGe9SMQxwv'
 

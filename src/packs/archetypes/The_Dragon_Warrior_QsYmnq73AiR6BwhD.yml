@@ -8,8 +8,7 @@ items:
     type: enhancement
     sort: 200001
     flags:
-      core:
-        sourceId: Item.HlSAJi0eR2q7UF8E
+      core: {}
     img: systems/torgeternity/images/icons/enhancement.webp
     effects: []
     folder: null
@@ -30,20 +29,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.HlSAJi0eR2q7UF8E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
   - _id: U0CKtAHQmBDo9ZyF
     name: Dragon Breath (weapon)
     type: missileweapon
     sort: 100000
     flags:
-      core:
-        sourceId: Item.njMZnZIEFvRkHHIS
+      core: {}
     img: systems/torgeternity/images/icons/missile-weapon-icon.webp
     effects: []
     folder: null
@@ -78,20 +77,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722347753223
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.njMZnZIEFvRkHHIS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.U0CKtAHQmBDo9ZyF'
   - _id: NTS6mLpRgHF7WkO4
     name: Healing Potion
     type: gear
     sort: 1200000
     flags:
-      core:
-        sourceId: Item.sSWLrPCSi2G5jq6S
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -109,20 +108,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156163021
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.sSWLrPCSi2G5jq6S
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NTS6mLpRgHF7WkO4'
   - _id: vfqnqkIvFw372Nck
     name: Rope, 10 meters
     type: gear
     sort: 900000
     flags:
-      core:
-        sourceId: Item.HIzFdoBtoEzc8eaE
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -140,20 +139,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722154878275
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.HIzFdoBtoEzc8eaE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
   - _id: W80yHGyLWk5wrLJW
     name: Giant Strength
     type: enhancement
     sort: 500001
     flags:
-      core:
-        sourceId: Item.q3wDWkbSqbWYKVNB
+      core: {}
     img: systems/torgeternity/images/icons/enhancement.webp
     effects:
       - _id: 07KQJUY5nlOb5K7Q
@@ -179,7 +178,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -187,6 +186,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -206,12 +206,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.q3wDWkbSqbWYKVNB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
   - _id: vvOcq2YtdmDi6tiY
     name: Great Axe
@@ -221,8 +222,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.N6G6v7wgDhnpsIiQ
+      core: {}
     system:
       cosm: aysle
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#unwieldy:]{Unwieldy}</p>\n<p>The most terrifying of the <q>barbarian</q> weapons is the great axe. The double-edged blade and wide arc cuts swaths through the wielder’s foes.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -248,12 +248,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693900634311
       modifiedTime: 1722154788109
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.N6G6v7wgDhnpsIiQ
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vvOcq2YtdmDi6tiY'
   - name: Dragon Warrior Armor
     type: armor
@@ -261,8 +262,7 @@ items:
     effects: []
     folder: null
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.kKfw6Od1PySvYsOs
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -286,12 +286,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722154966379
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.kKfw6Od1PySvYsOs
       duplicateSource: null
+      exportSource: null
     _id: mi1BCKboWCKq3gqY
     sort: 0
     ownership:
@@ -326,7 +327,7 @@ items:
         flags: {}
         tint: '#ffffff'
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -334,6 +335,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -343,8 +345,7 @@ items:
     folder: null
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.eItDWecF1ue7Hvp0
+      core: {}
     system:
       category: dwarf
       cosm: aysle
@@ -462,12 +463,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146835
       modifiedTime: 1722152718080
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.eItDWecF1ue7Hvp0
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NTS9DWGhHsYfxJGC'
   - _id: NKhj8CtGws6Adv8j
     name: Caltrops
@@ -499,12 +501,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -532,12 +535,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.KKJPrdjO5sFkhZzF
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722357677030
       modifiedTime: 1722357677030
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NKhj8CtGws6Adv8j'
   - name: Dwarf
     type: race
@@ -777,12 +781,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.2AQ87OBFRFvaPeuX
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582100916
       modifiedTime: 1729582100916
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: 0sDfrrvToWzIqF30
     sort: 200000
     _key: '!actors.items!QsYmnq73AiR6BwhD.0sDfrrvToWzIqF30'
@@ -888,12 +893,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582100923
       modifiedTime: 1729582101054
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: yfVfnVzvsVpYoWpA
     effects: []
     folder: null
@@ -999,12 +1005,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582100923
       modifiedTime: 1729582101056
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: Rmja4NJZMvFXuQm0
     effects: []
     folder: null
@@ -1033,7 +1040,7 @@ effects:
     flags: {}
     tint: '#ffffff'
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1041,6 +1048,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1072,12 +1080,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722357677036
       modifiedTime: 1722357677036
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1511,7 +1520,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1523,14 +1531,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693900608203
   modifiedTime: 1729582101393
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!QsYmnq73AiR6BwhD'
 

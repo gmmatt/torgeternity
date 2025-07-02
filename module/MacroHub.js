@@ -1,34 +1,36 @@
 /**
  * A class that represents the MacroHub
  */
-export default class MacroHub extends Application {
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.template = 'systems/torgeternity/templates/macrohub/hub.html';
-    options.id = 'MacroHub';
-    options.title = game.i18n.localize('torgeternity.macros.macroHub.title');
-    options.resizable = false;
-    options.position = 'center';
-    return options;
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
+
+export default class MacroHub extends HandlebarsApplicationMixin(ApplicationV2) {
+
+
+  static DEFAULT_OPTIONS = {
+    classes: ['torgeternity', 'centered', 'macroHub'],
+    window: {
+      title: 'torgeternity.macros.macroHub.title',
+      resizable: false,
+      contentClasses: ["standard-form"],
+    },
+    position: {
+      //center: true,
+    },
+    actions: {
+      executeMacro: MacroHub.#executeMacro
+    }
+  }
+
+  static PARTS = {
+    hub: { template: 'systems/torgeternity/templates/macrohub/hub.html' }
   }
 
   /**
-   * activation of listeners
+   * _prepareContext extension
+   * @returns context
    */
-  activateListeners(html) {
-    super.activateListeners();
-
-    html[0]
-      .querySelectorAll('a.macroHubSpan')
-      .forEach((spanM) => spanM.addEventListener('click', this._executeMacro.bind(this)));
-  }
-
-  /**
-   * getData extension
-   * @returns data
-   */
-  async getData() {
-    const data = super.getData();
+  async _prepareContext(options) {
+    const data = await super._prepareContext(options);
 
     const macros = await game.packs.get('torgeternity.macros').index;
     const sortable = [];
@@ -49,20 +51,21 @@ export default class MacroHub extends Application {
 
     data.macros = {};
     Object.assign(data.macros, sortable);
-
     return data;
   }
 
   toggleRender() {
-    if (this.rendered) {
-      if (this._minimized) return this.maximize();
-      else return this.close();
-    } else return this.render(true);
+    if (!this.rendered)
+      return this.render({ force: true });
+    else if (this._minimized)
+      return this.maximize();
+    else
+      return this.close();
   }
 
-  async _executeMacro(event) {
+  static async #executeMacro(event) {
     const macroPack = await game.packs.get('torgeternity.macros');
-    const macroId = event.currentTarget.closest('.macroHubSpan').dataset.macroId;
-    await macroPack.getDocument(macroId).then((m) => m.execute());
+    const macroId = event.target.closest('.macroHubSpan').dataset.macroId;
+    return macroPack.getDocument(macroId).then((m) => m.execute());
   }
 }

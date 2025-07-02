@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 800001
     flags:
-      core:
-        sourceId: Item.qxJvzeASZsfyHgHj
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -106,20 +105,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qxJvzeASZsfyHgHj
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.Bh5BKWwn5ZCR10rX'
   - _id: W0Q0w7oeP6a464AI
     name: Conscience environnementale
     type: perk
     sort: 300001
     flags:
-      core:
-        sourceId: Item.04E7lm4oz4EZGlSs
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -218,20 +217,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.04E7lm4oz4EZGlSs
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.W0Q0w7oeP6a464AI'
   - _id: FO6D5TLpZiLFO2dm
     name: Chargeurs supplémentaires (5)
     type: gear
     sort: 250000
     flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -247,20 +246,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.FO6D5TLpZiLFO2dm'
   - _id: coAYdlmiRPR2SErV
     name: Fusées éclairantes (3)
     type: gear
     sort: 325000
     flags:
-      core:
-        sourceId: Item.JniN3c3c6HNv7cSp
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -276,20 +275,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.JniN3c3c6HNv7cSp
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.coAYdlmiRPR2SErV'
   - _id: ikOnhbUEDPap417o
     name: Lampe torche
     type: gear
     sort: 350000
     flags:
-      core:
-        sourceId: Item.tktQLV7z5tnNkEqr
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -305,20 +304,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.tktQLV7z5tnNkEqr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.ikOnhbUEDPap417o'
   - _id: E3S7lZD9oDPdNwVO
     name: Outil polyvalent
     type: gear
     sort: 700000
     flags:
-      core:
-        sourceId: Item.qclakuW3FUv87ufW
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -337,20 +336,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qclakuW3FUv87ufW
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.E3S7lZD9oDPdNwVO'
   - _id: IWuewwOZhaOsjEZt
     name: Insigne de police
     type: gear
     sort: 300000
     flags:
-      core:
-        sourceId: Item.fgtK79BumQwmkPzK
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -366,20 +365,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.fgtK79BumQwmkPzK
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.IWuewwOZhaOsjEZt'
   - _id: RUMcCWACZRv1vpoO
     name: Veste balistique
     type: armor
     sort: 600000
     flags:
-      core:
-        sourceId: Item.hRA2cLvVL3HWJxlu
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: eCfGs5VS46PUaxI8
@@ -409,7 +408,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -417,6 +416,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/shield.svg
         type: base
         system: {}
@@ -447,20 +447,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.hRA2cLvVL3HWJxlu
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.RUMcCWACZRv1vpoO'
   - _id: 60Hn7sxT2ytPIWI9
     name: Matraque
     type: meleeweapon
     sort: 600000
     flags:
-      core:
-        sourceId: Item.NwUEzGCgHe2GgC6N
+      core: {}
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -487,20 +487,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.NwUEzGCgHe2GgC6N
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.60Hn7sxT2ytPIWI9'
   - _id: 0zgpX8TP92cI60QP
     name: Glock 9mm
     type: firearm
     sort: 500000
     flags:
-      core:
-        sourceId: Item.iOnl5BiGmVFaCzma
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -530,12 +530,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.0zgpX8TP92cI60QP'
   - _id: bnn1lL9T1zV8c9wP
     name: Menottes rapides
@@ -545,8 +546,7 @@ items:
     folder: null
     sort: 525000
     flags:
-      core:
-        sourceId: Item.YUDCGkWXWHejH49G
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Entrave une cible</p>
@@ -560,12 +560,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.YUDCGkWXWHejH49G
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.bnn1lL9T1zV8c9wP'
   - _id: zlCFLaObdqm1Pt1P
     name: Attaque à mains nues
@@ -575,8 +576,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -591,12 +591,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.zlCFLaObdqm1Pt1P'
 effects:
   - _id: G3bURQ2VTFKNrIcf
@@ -626,7 +627,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -634,6 +635,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/shield.svg
     type: base
     system: {}
@@ -1158,7 +1160,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1170,14 +1171,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809742
   modifiedTime: 1716827809742
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!non4XwpfJLE9GiST'
 

@@ -41,8 +41,7 @@ flags:
   torgeternity:
     cosm: none
     zone: pure
-  core:
-    sourceId: Scene.wB8N2w9glm6jjIWK
+  core: {}
 _id: LxFt3CsDFSCSkASP
 ownership:
   default: 2
@@ -65,12 +64,13 @@ journalEntryPage: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827808907
   modifiedTime: 1716827808907
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: Scene.wB8N2w9glm6jjIWK
   duplicateSource: null
+  exportSource: null
 regions: []
 environment:
   globalLight:

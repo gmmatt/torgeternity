@@ -1,98 +1,51 @@
-<form class="{{cssClass}} item-sheet" autocomplete="off">
-  <h3 class="item-type"><span>{{localize "torgeternity.sheetLabels.vehicles"}}</span></h3>
-
-  <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
-    <h1>
+<section class="tab stats {{tab.cssClass}}" data-group="primary" data-tab="stats">
+  <div class="sheet-content">
+    <div class="asside">
+      <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
+      <select name="system.cosm">
+        {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
+      </select>
+      <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
       <input
-        name="name"
+        name="system.techlevel"
+        type="number"
+        value="{{item.system.techlevel}}" />
+      <p class="item-data-label">
+        {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
+      </p>
+      <input
+        name="system.price"
         type="text"
-        value="{{item.name}}"
-        placeholder="vehicule Name"
-        style="
-          background-color: white;
-          border-radius: 10px;
-          width: 320px;
-          font-family: 'Palatino Linotype';
-        "
-      />
-    </h1>
-  </header>
-
-  <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats" style="vertical-align: center">
-      {{localize "torgeternity.sheetLabels.stats"}}
-    </a>
-    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-  </nav>
-
-  <section class="sheet-body" style="display: flex; flex-direction: column">
-    <div class="tab stats" data-group="primary" data-tab="stats">
-      <div class="sheet-content">
-        <div class="asside">
-          <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
-          <select name="system.cosm" class="input-box">
-            {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
-          </select>
-          <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
-          <input
-            name="system.techlevel"
-            type="number"
-            value="{{item.system.techlevel}}"
-            class="input-box"
-          />
-          <p class="item-data-label">
-            {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
-          </p>
-          <input
-            name="system.price"
-            type="text"
-            value="{{item.system.price}}"
-            class="input-box-small"
-          />
-          <input
-            name="system.value"
-            type="number"
-            value="{{item.system.value}}"
-            class="input-box-small"
-          />
-          <p class="item-data-label">{{localize "torgeternity.gear.topspeed"}}</p>
-          <input
-            name="system.topspeed"
-            type="text"
-            value="{{item.system.topspeed}}"
-            class="input-box"
-          />
-          <p class="item-data-label">{{localize "torgeternity.gear.passengers"}}</p>
-          <input name="system.pass" type="number" value="{{item.system.pass}}" class="input-box" />
-          <p class="item-data-label">{{localize "torgeternity.gear.mr"}}</p>
-          <input name="system.mr" type="number" value="{{item.system.mr}}" class="input-box" />
-          <p class="item-data-label">
-            {{localize "torgeternity.gear.wounds"}}/{{localize "torgeternity.gear.toughness"}}
-          </p>
-          <input
-            name="system.wounds"
-            type="number"
-            value="{{item.system.wounds}}"
-            class="input-box-small"
-          />
-          <input
-            name="system.tough"
-            type="text"
-            value="{{item.system.tough}}"
-            class="input-box-small"
-          />
-        </div>
-        <div class="main-content">
-          <div class="item-description-textarea" style="padding: 0px 0px 0px 10px">
-            {{editor description target="system.description" engine="prosemirror" button=true
-            editable=editable}}
-          </div>
-        </div>
-      </div>
+        value="{{item.system.price}}" />
+      <input
+        name="system.value"
+        type="number"
+        value="{{item.system.value}}" />
+      <p class="item-data-label">{{localize "torgeternity.gear.topspeed"}}</p>
+      <input
+        name="system.topspeed"
+        type="text"
+        value="{{item.system.topspeed}}" />
+      <p class="item-data-label">{{localize "torgeternity.gear.passengers"}}</p>
+      <input name="system.pass" type="number" value="{{item.system.pass}}" />
+      <p class="item-data-label">{{localize "torgeternity.gear.mr"}}</p>
+      <input name="system.mr" type="number" value="{{item.system.mr}}" />
+      <p class="item-data-label">
+        {{localize "torgeternity.gear.wounds"}}/{{localize "torgeternity.gear.toughness"}}
+      </p>
+      <input
+        name="system.wounds"
+        type="number"
+        value="{{item.system.wounds}}" />
+      <input
+        name="system.tough"
+        type="text"
+        value="{{item.system.tough}}" />
     </div>
-    <div class="tab effects" data-group="primary" data-tab="effects">
-      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+    <div class="main-content">
+      <prose-mirror toggled name="system.description" class="item-description-textarea"
+        style="padding: 0px 0px 0px 10px" {{disabled (not editable)}}
+        value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
     </div>
-  </section>
-</form>
+  </div>
+</section>

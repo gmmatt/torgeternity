@@ -23,12 +23,14 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857711326
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.v8EhlvFjQYGClORG'
   - sort: 375000
     name: Archetyp - Die Drachenkriegerin
@@ -52,13 +54,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857712773
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: wyqIUAZMhqAUvoD6
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.wyqIUAZMhqAUvoD6'
   - sort: 400000
     name: Archetyp - Die exzentrische Erfinderin
@@ -82,13 +86,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857672888
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: 59zUF4TrfxfdMfhs
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.59zUF4TrfxfdMfhs'
   - sort: 250000
     name: Archetyp - Der Edeinos-Optant
@@ -112,13 +118,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857679238
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: S9ZpLno9HjlxRrmV
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.S9ZpLno9HjlxRrmV'
   - sort: 387500
     name: Archetyp - Die Elektrosamurai
@@ -142,13 +150,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857715773
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: JrsdRBb5FF01sg6B
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.JrsdRBb5FF01sg6B'
   - sort: 393750
     name: Archetyp - Die elfische Hüterin
@@ -172,13 +182,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857720126
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: Y5Ywt3WpLVzwhwnm
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.Y5Ywt3WpLVzwhwnm'
   - sort: 100000
     name: Archetyp - Der abgebrühte Detektiv
@@ -202,13 +214,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857557261
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: jGMEVr72h0Jjm3CQ
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.jGMEVr72h0Jjm3CQ'
   - sort: 275000
     name: Archetyp - Der maskierte Vigilant
@@ -232,13 +246,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857683310
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: 4XMfQXpiBN5gsUNL
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.4XMfQXpiBN5gsUNL'
   - sort: 287500
     name: Archetyp - Der Monsterjäger
@@ -262,13 +278,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857685854
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: XuZD3GOezHrsiAbQ
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.XuZD3GOezHrsiAbQ'
   - sort: 775000
     name: Archetyp - Die urzeitliche Jägerin
@@ -292,13 +310,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857728686
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: XE6X141rfpUROtgY
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.XE6X141rfpUROtgY'
   - sort: 296875
     name: Archetyp - Der Weltenläufer
@@ -322,13 +342,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857703758
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: RLk67atzGeIrJ9Ml
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.RLk67atzGeIrJ9Ml'
   - sort: 700000
     name: Archetyp - Die Schatzjägerin
@@ -352,13 +374,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857723837
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: tuOeVEYqdKLQkea4
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.tuOeVEYqdKLQkea4'
   - sort: 150000
     name: Archetyp - Der abtrünnige Priester
@@ -382,13 +406,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857676771
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: hkGNur6sw23AZTbu
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.hkGNur6sw23AZTbu'
   - sort: 850000
     name: Archetyp - Die Widerstandskämpferin
@@ -412,13 +438,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857727350
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: pZZTcePrdVDCeCeF
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.pZZTcePrdVDCeCeF'
   - sort: 293750
     name: Archetyp - Der Schrottsammler
@@ -442,13 +470,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857699293
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: KlL26KhVUnkWipzG
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.KlL26KhVUnkWipzG'
   - sort: 737500
     name: Archetyp - Die unaufhaltsame Polizistin
@@ -472,13 +502,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857729789
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: j7NJZCO90CI0aetf
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.j7NJZCO90CI0aetf'
   - sort: 1700000
     name: Tiergefährte - Säbelzahntiger
@@ -502,13 +534,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857672888
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: oSp48783apDZJbHt
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.oSp48783apDZJbHt'
   - sort: 1800000
     name: Tiergefährte - Weißer Wolf
@@ -532,13 +566,15 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: 1693885332040
       modifiedTime: 1694857672888
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _id: ItABNBtu0A2pm0Dc
+    category: null
     _key: '!journal.pages!DLLvnXpv7RFhRgHu.ItABNBtu0A2pm0Dc'
 folder: null
 ownership:
@@ -550,13 +586,15 @@ flags:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693885308072
   modifiedTime: 1716827811980
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _id: DLLvnXpv7RFhRgHu
 sort: 0
+categories: []
 _key: '!journal!DLLvnXpv7RFhRgHu'
 

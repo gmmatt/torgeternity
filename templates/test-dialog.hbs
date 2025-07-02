@@ -1,40 +1,23 @@
-<div>
-    <form class="test-dialog">
-        <div>                    
-            {{#if test.isActiveDefenseRoll}}{{else}}
-                {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
-            {{/if}}
-                {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}                            
-        </div>
-        <div>            
-            {{> "systems/torgeternity/templates/testDialogs/favored.hbs"}}
-            {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
-        </div>
-        <div>
-            {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}}
-        </div>
-        <div>
-            {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}}
-        </div>
-        {{#if test.attackOptions}}
-        <div>
-            {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}}
-        </div>
-        <div>
-            {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}}
-        </div>
-        {{/if}}
-        <div>
-            {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}}
-        </div>
+<div class="test-dialog">
+  <div>
+    {{#unless test.isActiveDefenseRoll}}
+      {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
+    {{/unless}}
+    {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}
+  </div>
+  <div>
+    {{> "systems/torgeternity/templates/testDialogs/favored.hbs"}}
+    {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
+  </div>
+  <div> {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}} </div>
+  <div> {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}} </div>
+  {{#if test.attackOptions}}
+    <div> {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}} </div>
+    <div> {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}} </div>
+  {{/if}}
+  <div> {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}} </div>
 
-        {{#if test.hasModifiers}}
-        <div>
-            {{> "systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs"}}
-        </div>
-        {{/if}}
-    </form>    
-</div>
-<div>
-    <button class="test-dialog-rollbutton"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.roll"}}</button>
+  {{#if test.hasModifiers}}
+    <div> {{> "systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs"}} </div>
+  {{/if}}
 </div>

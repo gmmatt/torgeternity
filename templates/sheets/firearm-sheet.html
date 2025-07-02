@@ -1,129 +1,89 @@
-<form class="{{cssClass}} item-sheet" autocomplete="off" height="400">
-  <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.firearm"}}</span></h3>
+<section class="tab stats {{tab.cssClass}}" data-group="primary" data-tab="stats">
+  <div class="sheet-content">
+    <tr>
+      <div class="asside">
+        <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
+        <select name="system.cosm">
+          {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
+        </select>
+        <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
+        <input
+          name="system.techlevel"
+          type="number"
+          value="{{item.system.techlevel}}" />
+        <p class="item-data-label">{{localize "torgeternity.gear.ammo"}}</p>
+        <input
+          name="system.ammo.value"
+          type="number"
+          value="{{item.system.ammo.value}}" />
+        /
+        <input
+          name="system.ammo.max"
+          type="number"
+          value="{{item.system.ammo.max}}" />
+        <p class="item-data-label">{{localize "torgeternity.gear.price"}}/Value</p>
+        <input
+          name="system.price"
+          type="text"
+          value="{{item.system.price}}" />
+        <input
+          name="system.value"
+          type="number"
+          value="{{item.system.value}}" />
+        <p class="item-data-label">{{localize "torgeternity.gear.range"}}</p>
+        <input
+          name="system.range"
+          type="text"
+          value="{{item.system.range}}" />
+        <p class="item-data-label">{{localize "torgeternity.gear.attackWith"}}</p>
+        <select name="system.attackWith">
+          {{selectOptions config.attackTypes selected=item.system.attackWith localize=true}}
+        </select>
+        <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
+        <input
+          name="system.damage"
+          type="number"
+          value="{{item.system.damage}}" />
+        <p class="item-data-label">{{localize "torgeternity.gear.ap"}}</p>
+        <input name="system.ap" type="number" value="{{item.system.ap}}" />
+        <p class="item-data-label" style="grid-column: 1/3">
+          {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
+        </p>
 
-  <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
-    <h1><input name="name" type="text" value="{{item.name}}" placeholder="firearm Name" /></h1>
-  </header>
+        <select style="grid-column: 1/3" name="system.secondaryAxiom.selected"
+          class=" selectSecondaryAxiom">
+          <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
+          {{selectOptions config.axioms selected=item.system.secondaryAxiom.selected localize=true}}
+        </select>
 
-  <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-  </nav>
+        {{#if displaySecondaryAxiomValue}}
+          <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
+          <input
+            name="system.secondaryAxiom.value"
+            type="number"
+            value="{{item.system.secondaryAxiom.value}}" />
+        {{/if}}
 
-  <section class="sheet-body">
-    <div class="tab stats" data-group="primary" data-tab="stats">
-      <div class="sheet-content">
-        <tr>
-          <div class="asside">
-            <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
-            <select name="system.cosm" class="input-box">
-              {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
-            </select>
-            <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
-            <input
-              name="system.techlevel"
-              type="number"
-              value="{{item.system.techlevel}}"
-              class="input-box-small"
-            />
-            <p class="item-data-label">{{localize "torgeternity.gear.ammo"}}</p>
-            <input
-              name="system.ammo.value"
-              type="number"
-              value="{{item.system.ammo.value}}"
-              class="input-box-small"
-            />
-            /
-            <input
-              name="system.ammo.max"
-              type="number"
-              value="{{item.system.ammo.max}}"
-              class="input-box-small"
-            />
-            <p class="item-data-label">{{localize "torgeternity.gear.price"}}/Value</p>
-            <input
-              name="system.price"
-              type="text"
-              value="{{item.system.price}}"
-              class="input-box-small"
-            />
-            <input
-              name="system.value"
-              type="number"
-              value="{{item.system.value}}"
-              class="input-box-small"
-            />
-            <p class="item-data-label">{{localize "torgeternity.gear.range"}}</p>
-            <input
-              name="system.range"
-              type="text"
-              value="{{item.system.range}}"
-              class="input-box"
-            />
-            <p class="item-data-label">{{localize "torgeternity.gear.attackWith"}}</p>
-            <select name="system.attackWith" class="input-box">
-              {{selectOptions config.attackTypes selected=item.system.attackWith localize=true}}
-            </select>
-            <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
-            <input
-              name="system.damage"
-              type="number"
-              value="{{item.system.damage}}"
-              class="input-box"
-            />
-            <p class="item-data-label">{{localize "torgeternity.gear.ap"}}</p>
-            <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
-            <p class="item-data-label" style="grid-column: 1/3">
-              {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
-            </p>
-  
-            <select style="grid-column: 1/3" name="system.secondaryAxiom.selected" class="input-box selectSecondaryAxiom">
-              <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
-              {{selectOptions config.axioms selected=item.system.secondaryAxiom.selected localize=true}}
-            </select>
-  
-            {{#if displaySecondaryAxiomValue}}
-              <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
-              <input
-                name="system.secondaryAxiom.value"
-                type="number"
-                value="{{item.system.secondaryAxiom.value}}"
-                class="input-box"
-              />
-            {{/if}}
-  
-          </div>
-          <div class="main-content">
-            <p class="item-data-label">
-              {{localize "torgeternity.gear.notes"}}&nbsp;
-              <input
-                name="system.notes"
-                type="text"
-                value="{{item.system.notes}}"
-                class="input-box"
-              />
-            </p>
-            <p class="item-data-label">
-              {{localize "torgeternity.gear.chatNote"}}
-              <input
-                name="system.chatNote"
-                type="text"
-                value="{{item.system.chatNote}}"
-                class="input-box"
-              />
-            </p>
-            <div name="system.description" class="item-description-textarea">
-              {{editor description target="system.description" engine="prosemirror" button=true
-              editable=editable}}
-            </div>
-            {{> "systems/torgeternity/templates/sheets/ammunition-field.hbs"}}
-          </div>
-        </tr>
       </div>
-    </div>
-    <div class="tab effects" data-group="primary" data-tab="effects">
-      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-    </div>
-  </section>
-</form>
+      <div class="main-content">
+        <p class="item-data-label">
+          {{localize "torgeternity.gear.notes"}}&nbsp;
+          <input
+            name="system.notes"
+            type="text"
+            value="{{item.system.notes}}" />
+        </p>
+        <p class="item-data-label">
+          {{localize "torgeternity.gear.chatNote"}}
+          <input
+            name="system.chatNote"
+            type="text"
+            value="{{item.system.chatNote}}" />
+        </p>
+        <prose-mirror toggled name="system.description" class="item-description-textarea" {{disabled (not editable)}}
+          value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
+        {{> "systems/torgeternity/templates/sheets/ammunition-field.hbs"}}
+      </div>
+    </tr>
+  </div>
+</section>

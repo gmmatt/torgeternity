@@ -2,9 +2,11 @@
   0% {
     box-shadow: 0px 0px 3px green;
   }
+
   50% {
     box-shadow: 0px -0px 15px rgb(148, 255, 184);
   }
+
   100% {
     box-shadow: 0px 0px 3px green;
   }
@@ -15,6 +17,7 @@
     position: absolute;
     transform-origin: 50% 150% 0;
   }
+
   to {
     transform: scale(2);
     top: -300px;
@@ -26,7 +29,8 @@
   }
 }
 
-.app.torgeternity.cardsHand .window-content {
+.application.torgeternity.hand .window-content {
+  /* Cards flow outside the window in Enhanced Display */
   overflow: visible;
   background-position: center;
 }
@@ -36,10 +40,15 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   right: 0%;
   top: 0;
   width: 100%;
+}
+
+div.torg-card-controls.flexcol>* {
+  flex: 1;
 }
 
 #handedCards h2 {
@@ -55,7 +64,6 @@
   height: 200px;
   width: 138px;
   position: relative;
-  overflow: visible;
 }
 
 #handedCards .destinyCards li.card,
@@ -97,7 +105,7 @@
 
 #handedCards li.card div.torg-card-controls {
   opacity: 0;
-  color: white;
+  /*color: white;*/
   background-color: #2c7dc3;
   justify-content: space-around;
   border-radius: 15% 0% 0% 15%;
@@ -111,7 +119,7 @@
   display: flex;
 }
 
-#handedCards li.card div.torg-card-controls > * {
+#handedCards li.card div.torg-card-controls>* {
   height: 0;
 }
 
@@ -146,7 +154,7 @@ li.card.pooled {
   border-bottom: 3px solid #2c7dc3;
 }
 
-#handedCards + .sheet-footer {
+#handedCards+.sheet-footer {
   border: 2px solid green;
   top: -30%;
 }
@@ -157,9 +165,14 @@ li.card.pooled {
   bottom: 0;
 }
 
-span.handdesign {
+form.hand span.handdesign {
   left: 40%;
   position: absolute;
   top: 0px;
   z-index: 300;
+}
+
+form.hand span.handdesign input.toggle {
+  font-size: 12px;
+  line-height: normal;
 }

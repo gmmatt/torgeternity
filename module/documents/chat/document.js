@@ -7,11 +7,10 @@ import { torgeternity } from '../../config.js';
 class ChatMessageTorg extends ChatMessage {
   template = '';
 
-  async getHTML() {
-    const $html = await super.getHTML();
-    const html = $html[0];
-    if (this.flags?.template && (this.flags?.data || this.flags?.torgeternity?.test)) {
-      const template = this.flags.template;
+  async renderHTML() {
+    const html = await super.renderHTML();
+    if (this.flags?.torgeternity?.template && (this.flags?.data || this.flags?.torgeternity?.test)) {
+      const template = this.flags.torgeternity.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
 
       if (
@@ -32,11 +31,11 @@ class ChatMessageTorg extends ChatMessage {
           `torgeternity.skills.${templateData.system?.skill}`
         );
 
-      const renderedTemplate = await renderTemplate(template, templateData);
-      const enrichedHTML = await TextEditor.enrichHTML(renderedTemplate);
+      const renderedTemplate = await foundry.applications.handlebars.renderTemplate(template, templateData);
+      const enrichedHTML = await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate);
       html.querySelector('.message-content').innerHTML = enrichedHTML;
     }
-    return $html;
+    return html;
   }
 }
 

@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DKa7TaWUVZibh2yn
+      core: {}
     system:
       category: reality
       cosm: coreEarth
@@ -107,12 +106,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868513566
       modifiedTime: 1722163680855
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DKa7TaWUVZibh2yn
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.N0NOWg4w2Hgj95hF'
   - _id: 7jS3c05xSw5MIrlf
     name: Wunderkind
@@ -142,7 +142,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -150,6 +150,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -159,8 +160,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5NH1DrMFKWCJIHKn
+      core: {}
     system:
       category: reality
       cosm: coreEarth
@@ -251,12 +251,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868518647
       modifiedTime: 1722163673702
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5NH1DrMFKWCJIHKn
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.7jS3c05xSw5MIrlf'
   - _id: fZ2i8jtev3Zxzgzk
     name: Disruptorgranate
@@ -266,9 +267,7 @@ items:
     folder: null
     sort: 17000000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.YEMCChtf6jhno2TS
+      core: {}
     system:
       cosm: Cyberpontifikat
       description: >-
@@ -308,12 +307,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868543565
       modifiedTime: 1694868543565
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.YEMCChtf6jhno2TS
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.fZ2i8jtev3Zxzgzk'
   - _id: OgeIr0GPjdO21ell
     name: Glock 9mm
@@ -323,9 +323,7 @@ items:
     folder: null
     sort: 30200000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      core: {}
     system:
       cosm: coreEarth
       description: >-
@@ -357,12 +355,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868550013
       modifiedTime: 1722163851478
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.OgeIr0GPjdO21ell'
   - name: Multitool
     type: gear
@@ -371,8 +370,7 @@ items:
     folder: null
     sort: 12300000
     flags:
-      core:
-        sourceId: Item.G0KmopPlr7jWlbXo
+      core: {}
     _id: FFUsBNHLuKjWCfNW
     system:
       cosm: coreEarth
@@ -390,12 +388,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868564181
       modifiedTime: 1722163750022
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.G0KmopPlr7jWlbXo
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.FFUsBNHLuKjWCfNW'
   - name: Taschenlampe
     type: gear
@@ -404,8 +403,7 @@ items:
     folder: null
     sort: 18450000
     flags:
-      core:
-        sourceId: Item.ghYEu90Et15IioVa
+      core: {}
     _id: yyssBr6H3JoILMf8
     system:
       cosm: nileEmpire
@@ -423,12 +421,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868568884
       modifiedTime: 1722163753174
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.ghYEu90Et15IioVa
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.yyssBr6H3JoILMf8'
   - _id: ohO82JzysApayR0C
     name: Trank der Heilung
@@ -438,9 +437,7 @@ items:
     folder: null
     sort: 24600000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -460,12 +457,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694868573414
       modifiedTime: 1722163826279
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.ohO82JzysApayR0C'
   - _id: 4AmydcIKkXPHFyFx
     name: Lederjacke
@@ -475,9 +473,7 @@ items:
     folder: null
     sort: 23000000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -503,12 +499,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366193
       modifiedTime: 1722163844991
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.4AmydcIKkXPHFyFx'
   - name: Extra-Magazine
     type: ammunition
@@ -542,12 +539,13 @@ items:
     _stats:
       compendiumSource: Item.TptgnUCwWM2QZCaK
       duplicateSource: Item.KRYQ71jof26XeGEv
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722163712378
       modifiedTime: 1722167154501
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _id: xijwVjoJ01mJoTD1
     _key: '!actors.items!tzZ99BGG1WkwkQMO.xijwVjoJ01mJoTD1'
   - _id: y1UR3kyIL5JTouJL
@@ -580,12 +578,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -595,9 +594,7 @@ items:
     folder: WDvJC2MufxrqwbzV
     sort: 250000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
+      core: {}
     system:
       cosm: coreEarth
       description: >-
@@ -629,12 +626,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.y1UR3kyIL5JTouJL'
   - name: Mensch
     type: race
@@ -663,12 +661,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599405712
       modifiedTime: 1729599405712
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: kaMNHmJ3zNYegG7L
     sort: 0
     ownership:
@@ -701,12 +700,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -715,8 +715,7 @@ effects:
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.BpClx5rBCesWUzIN
+  core: {}
 system:
   shock:
     max: 5
@@ -1140,7 +1139,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1152,14 +1150,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694868498745
   modifiedTime: 1729013564459
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.BpClx5rBCesWUzIN
   duplicateSource: null
+  exportSource: null
 _key: '!actors!tzZ99BGG1WkwkQMO'
 

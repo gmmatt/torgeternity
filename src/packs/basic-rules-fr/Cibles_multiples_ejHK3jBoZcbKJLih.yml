@@ -3,8 +3,7 @@ name: Cibles multiples
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: JournalEntry.xdrk6Ham3C1W9VNZ
+  core: {}
 pages:
   - name: Cibles multiples
     type: text
@@ -43,12 +42,14 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!ejHK3jBoZcbKJLih.tdakM0F1lZma0efJ'
 ownership:
   default: 0
@@ -57,11 +58,13 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827810287
   modifiedTime: 1716827810287
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: JournalEntry.xdrk6Ham3C1W9VNZ
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!ejHK3jBoZcbKJLih'
 

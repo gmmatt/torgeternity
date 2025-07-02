@@ -1,16 +1,40 @@
+import TorgCombatant from './torgeternityCombatant.js';
 /**
  *
  */
-export default class torgeternityCombatTracker extends CombatTracker {
+
+export default class torgeternityCombatTracker extends foundry.applications.sidebar.tabs.CombatTracker {
   /**
    *
    */
-  get template() {
-    return 'systems/torgeternity/templates/sidebar/combat-tracker.html';
+
+  static PARTS = {
+    header: {
+      template: "systems/torgeternity/templates/sidebar/combat-tracker-header.hbs"
+    },
+    tracker: {
+      template: 'systems/torgeternity/templates/sidebar/combat-tracker.hbs'
+    },
+    footer: {
+      template: "systems/torgeternity/templates/sidebar/combat-tracker-footer.hbs"
+    }
   }
 
-  async getData(options) {
-    const data = await super.getData(options);
+  static DEFAULT_OPTIONS = {
+    actions: {
+      'initUp': torgeternityCombatTracker.#onIncInit,
+      'initDown': torgeternityCombatTracker.#onDecInit,
+      'heroesFirst': torgeternityCombatTracker.#onHeroesFirst,
+      'villainsFirst': torgeternityCombatTracker.#onVillainsFirst,
+      'hasPlayed': torgeternityCombatTracker.#onToggleTurn,
+      'dsrCounter': torgeternityCombatTracker.#incStage,
+      'playerDsrCounter': torgeternityCombatTracker.#incPlayerStage,
+      'combat-finish.center': torgeternityCombatTracker.#onTurnTaken,
+    }
+  }
+
+  async _prepareContext(options) {
+    const data = await super._prepareContext(options);
     data.hasTurn = this.viewed?.combatants?.some((c) => {
       const returnValue = !c.turnTaken && c.isOwner && !!data.round;
       return returnValue;
@@ -22,18 +46,14 @@ export default class torgeternityCombatTracker extends CombatTracker {
    *
    * @param html
    */
-  async activateListeners(html) {
-    super.activateListeners(html);
-    html.find('input.combatant-init').change(this._onUpdateInit.bind(this));
-    html.find('a.init-up').click(this._onInitUp.bind(this));
-    html.find('a.init-down').click(this._onInitDown.bind(this));
-    html.find('a.heros-first').click(this._sortHeroesFirst.bind(this));
-    html.find('a.vilains-first').click(this._sortVilainsFirst.bind(this));
-    html.find('a.has-played').click(this._hasPlayed.bind(this));
-    html.find('a.dsr-counter').click(this._dsrCounter.bind(this));
-    html.find('a.player-dsr-counter').click(this._playerDsrCounter.bind(this));
-    html.find('a.combat-finish.center').click(this._hasFinished.bind(this));
-    // html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+    const html = this.element;
+    function set(field, event, func) {
+      html.querySelectorAll(field).forEach(e => e.addEventListener(event, func))
+    }
+    set('input.combatant-init', 'change', this._onUpdateInit.bind(this));
+
     for (const element of document.querySelectorAll('.pool-tooltip')) {
       await element.addEventListener('mouseenter', this._notOutOfBounds);
     }
@@ -42,10 +62,10 @@ export default class torgeternityCombatTracker extends CombatTracker {
   /**
    * Making sure, that mouseover card display isn't out of bounds
    *
-   * @param {object} ev The event
+   * @param {object} event The event
    */
-  async _notOutOfBounds(ev) {
-    const tooltipImage = ev.target.children[0];
+  async _notOutOfBounds(event) {
+    const tooltipImage = event.target.children[0];
     const rect = tooltipImage.getBoundingClientRect();
 
     if (rect.left < 0) {
@@ -59,19 +79,19 @@ export default class torgeternityCombatTracker extends CombatTracker {
 
   /**
    *
-   * @param ev
+   * @param event
    */
-  _toggleCheck(ev) {
-    ev.currentTarget.classList.toggle('fas');
-    ev.currentTarget.classList.toggle('far');
-    ev.currentTarget.classList.toggle('playedOK');
+  static _toggleCheck(event) {
+    event.target.classList.toggle('fas');
+    event.target.classList.toggle('far');
+    event.target.classList.toggle('playedOK');
   }
 
   /**
    *
-   * @param ev
+   * @param event
    */
-  async _hasFinished(ev) {
+  static async #onTurnTaken(event, button) {
     await this.viewed?.combatants
       .find((c) => c.actorId === game.user.character.id)
       .setFlag('world', 'turnTaken', true);
@@ -79,119 +99,92 @@ export default class torgeternityCombatTracker extends CombatTracker {
 
   /**
    *
-   * @param ev
+   * @param event
    */
-  async _hasPlayed(ev) {
-    const combatantId = ev.currentTarget.closest('[data-combatant-id]').dataset.combatantId;
+  static async #onToggleTurn(event, button) {
+    const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
     const combatant = this.viewed?.combatants.get(combatantId);
-    if (!combatant.isOwner) return;
+    if (!combatant) return;
+
     const turnTaken = combatant.getFlag('world', 'turnTaken');
     await combatant.setFlag('world', 'turnTaken', !turnTaken);
   }
 
   /**
    *
-   * @param ev
+   * @param event
    */
-  async _onUpdateInit(ev) {
-    const input = ev.currentTarget;
-    const li = input.closest('.combatant');
-    const c = this.viewed?.combatants.get(li.dataset.combatantId);
-    await this.viewed?.combatant.update({
-      _id: c._id,
-      ['initiative']: input.value,
-    });
+  async _onUpdateInit(event) {
+    const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
+    const combatant = this.viewed?.combatants.get(combatantId);
+    if (!combatant) return;
 
+    await this.viewed?.combatant.update({ initiative: input.value });
     this.render();
   }
 
   /**
    *
-   * @param ev
+   * @param event
    */
-  async _onInitUp(ev) {
-    const btn = ev.currentTarget;
-    const li = btn.closest('.combatant');
-    const c = this.viewed?.combatants.get(li.dataset.combatantId); // hope this works!
-    await this.viewed?.combatant.update({
-      _id: c.id,
-      ['initiative']: c.initiative + 1,
-    });
+  static async #onIncInit(event, button) {
+    const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
+    const combatant = this.viewed?.combatants.get(combatantId);
+    if (!combatant) return;
+
+    await this.viewed?.combatant.update({ initiative: combatant.initiative + 1 });
     this.render();
   }
   /**
    *
-   * @param ev
+   * @param event
    */
-  async _onInitDown(ev) {
-    const btn = ev.currentTarget;
-    const li = btn.closest('li.combatant');
-    const c = this.viewed?.combatants.get(li.dataset.combatantId); // hope this works!
-    await this.viewed?.combatant.update({
-      _id: c.id,
-      ['initiative']: c.initiative - 1,
-    });
+  static async #onDecInit(event, button) {
+    const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
+    const combatant = this.viewed?.combatants.get(combatantId);
+    if (!combatant) return;
+
+    await this.viewed?.combatant.update({ initiative: combatant.initiative - 1 });
     this.render();
   }
 
   /**
    *
    */
-  async _sortVilainsFirst() {
-    await this.viewed?.resetAll();
-    let combatantArray = null;
-    let i = 0;
-    for (combatantArray = this.viewed?.turns; i < combatantArray.length; i++) {
-      if (this.viewed?.turns[i].token.disposition < 1) {
-        // token disposition is neutral or hostile (0 or -1)
-        await this.viewed?.turns[i].update({
-          initiative: 2,
-        });
-      } else {
-        // token disposition is frinedly 1
-        await this.viewed?.turns[i].update({
-          initiative: 1,
-        });
-      }
+  static async #onVillainsFirst() {
+    if (!this.viewed) return;
+    await this.viewed.resetAll();
+    const updates = [];
+    for (const combatant of this.viewed.turns) {
+      const initiative = (combatant.token.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY) ? 1 : 2;
+      updates.push({ _id: combatant.id, initiative });
     }
-    this.render();
+    if (updates.length) this.viewed.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
   }
 
   /**
    *
    */
-  async _sortHeroesFirst() {
-    await this.viewed?.resetAll();
-    let combatantArray = null;
-    let i = 0;
-    for (combatantArray = this.viewed?.turns; i < combatantArray.length; i++) {
-      if (this.viewed?.turns[i].token.disposition < 1) {
-        // token disposition is neutral or hostile (0 or -1)
-        await this.viewed?.turns[i].update({
-          initiative: 1,
-        });
-      } else {
-        // token disposition is frinedly 1
-        await this.viewed?.turns[i].update({
-          initiative: 2,
-        });
-      }
+  static async #onHeroesFirst() {
+    if (!this.viewed) return;
+    await this.viewed.resetAll();
+    const updates = [];
+    for (const combatant of this.viewed.turns) {
+      const initiative = (combatant.token.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY) ? 2 : 1;
+      updates.push({ _id: combatant.id, initiative });
     }
-    // await this.viewed?.setupTurns()
-    this.render();
+    if (updates.length) this.viewed.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
   }
 
   /**
    *
-   * @param ev
+   * @param event
    */
-  async _dsrCounter(ev) {
+  static async #incStage(event, button) {
     const currentStep = this.viewed?.getFlag('torgeternity', 'dsrStage');
 
     switch (currentStep) {
       case undefined:
-        this.viewed?.setFlag('torgeternity', 'dsrStage', 'A');
-        break;
       case '':
         this.viewed?.setFlag('torgeternity', 'dsrStage', 'A');
         break;
@@ -212,33 +205,31 @@ export default class torgeternityCombatTracker extends CombatTracker {
 
   /**
    *
-   * @param ev
+   * @param event
    */
-  async _playerDsrCounter(ev) {
-    const btn = ev.currentTarget;
-    const li = btn.closest('li.combatant');
-    const c = this.viewed?.combatants.get(li.dataset.combatantId);
+  static async #incPlayerStage(event, button) {
+    const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
+    const combatant = this.viewed?.combatants.get(combatantId);
+    if (!combatant) return;
 
-    const currentStep = c.getFlag('torgeternity', 'dsrStage');
+    const currentStep = combatant.getFlag('torgeternity', 'dsrStage');
 
     switch (currentStep) {
       case undefined:
-        c.setFlag('torgeternity', 'dsrStage', 'A');
-        break;
       case '':
-        c.setFlag('torgeternity', 'dsrStage', 'A');
+        combatant.setFlag('torgeternity', 'dsrStage', 'A');
         break;
       case 'A':
-        c.setFlag('torgeternity', 'dsrStage', 'B');
+        combatant.setFlag('torgeternity', 'dsrStage', 'B');
         break;
       case 'B':
-        c.setFlag('torgeternity', 'dsrStage', 'C');
+        combatant.setFlag('torgeternity', 'dsrStage', 'C');
         break;
       case 'C':
-        c.setFlag('torgeternity', 'dsrStage', 'D');
+        combatant.setFlag('torgeternity', 'dsrStage', 'D');
         break;
       case 'D':
-        c.setFlag('torgeternity', 'dsrStage', '');
+        combatant.setFlag('torgeternity', 'dsrStage', '');
         break;
     }
   }

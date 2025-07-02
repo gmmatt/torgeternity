@@ -4,7 +4,7 @@ import { torgeternity } from '../../config.js';
 /**
  *
  */
-export default class TorgeternityItem extends Item {
+export default class TorgeternityItem extends foundry.documents.Item {
   // TODO: Chatcardtemplate for ammunitions & race
   static CHAT_TEMPLATE = {
     perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
@@ -129,6 +129,8 @@ export default class TorgeternityItem extends Item {
     if (this.type === 'perk' || this.type === 'customAttack') {
       await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
     }
+
+    if (this.type === 'miracle') await this.update({ 'system.skill': 'faith' });
   }
 
   /**
@@ -160,9 +162,16 @@ export default class TorgeternityItem extends Item {
 
   async _onUpdate(changed, options, userId) {
     await super._onUpdate(changed, options, userId);
-    
-    if (changed?.system && this.type === 'implant' && Object.keys(changed?.system)[0] === 'implantType' && this.img.includes('systems/torgeternity/images/icons/'))
-      await this.update({img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`});
+
+    if (
+      changed?.system &&
+      this.type === 'implant' &&
+      Object.keys(changed?.system)[0] === 'implantType' &&
+      this.img.includes('systems/torgeternity/images/icons/')
+    )
+      await this.update({
+        img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`,
+      });
   }
 
   /**
@@ -217,7 +226,9 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE[this.type],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE[this.type],
+        }
       },
     };
 
@@ -229,7 +240,7 @@ export default class TorgeternityItem extends Item {
    */
   async weaponAttack() {
     // Roll those dice!
-    const dicerollint = new Roll('1d20x10x20').roll({ async: false });
+    const dicerollint = await new Roll('1d20x10x20').roll();
     dicerollint.toMessage();
     const diceroll = dicerollint.total;
 
@@ -238,12 +249,12 @@ export default class TorgeternityItem extends Item {
       diceroll === 1
         ? -10
         : diceroll <= 8
-        ? Math.ceil(diceroll / 2 - 5) * 2
-        : diceroll <= 14
-        ? Math.ceil(diceroll / 2 - 6)
-        : diceroll <= 20
-        ? diceroll - 13
-        : 7 + Math.ceil((diceroll - 20) / 5);
+          ? Math.ceil(diceroll / 2 - 5) * 2
+          : diceroll <= 14
+            ? Math.ceil(diceroll / 2 - 6)
+            : diceroll <= 20
+              ? diceroll - 13
+              : 7 + Math.ceil((diceroll - 20) / 5);
 
     const messageContent =
       diceroll > 4
@@ -278,7 +289,9 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE['attack'],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE['attack'],
+        }
       },
     };
 
@@ -290,7 +303,7 @@ export default class TorgeternityItem extends Item {
 
   // Commented that out because I don't think it's needed anymore but I don't know yet :D
   /* async bonus() {
-    const rollResult = new Roll('1d6x6max5').roll({ async: false });
+    const rollResult = await new Roll('1d6x6max5').roll();
 
     const chatData = {
       type: CONST.CHAT_MESSAGE_TYPES.ROLL,
@@ -309,7 +322,7 @@ export default class TorgeternityItem extends Item {
    */
   async power() {
     // Roll those dice!
-    const dicerollint = new Roll('1d20x10x20').roll({ async: false });
+    const dicerollint = await new Roll('1d20x10x20').roll();
     dicerollint.toMessage();
     const diceroll = dicerollint.total;
 
@@ -317,12 +330,12 @@ export default class TorgeternityItem extends Item {
       diceroll === 1
         ? -10
         : diceroll <= 8
-        ? Math.ceil(diceroll / 2 - 5) * 2
-        : diceroll <= 14
-        ? Math.ceil(diceroll / 2 - 6)
-        : diceroll <= 20
-        ? diceroll - 13
-        : 7 + Math.ceil((diceroll - 20) / 5);
+          ? Math.ceil(diceroll / 2 - 5) * 2
+          : diceroll <= 14
+            ? Math.ceil(diceroll / 2 - 6)
+            : diceroll <= 20
+              ? diceroll - 13
+              : 7 + Math.ceil((diceroll - 20) / 5);
 
     const messageContent =
       diceroll > 4
@@ -352,7 +365,9 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE['power'],
+        torgeternity: {
+          template: TorgeternityItem.CHAT_TEMPLATE['power'],
+        }
       },
     };
 

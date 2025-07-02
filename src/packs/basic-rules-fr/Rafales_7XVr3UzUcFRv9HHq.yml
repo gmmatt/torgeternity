@@ -3,8 +3,7 @@ name: Rafales
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: JournalEntry.GaKxs9k9VSIHQadj
+  core: {}
 pages:
   - name: Rafales
     type: text
@@ -60,12 +59,14 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
+    category: null
     _key: '!journal.pages!7XVr3UzUcFRv9HHq.oGmBIG4VM6wXmI8L'
 ownership:
   default: 0
@@ -74,11 +75,13 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827810080
   modifiedTime: 1716827810080
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: JournalEntry.GaKxs9k9VSIHQadj
   duplicateSource: null
+  exportSource: null
+categories: []
 _key: '!journal!7XVr3UzUcFRv9HHq'
 

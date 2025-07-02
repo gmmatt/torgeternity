@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -114,20 +113,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.mkDfDTkeExfM9yZj'
   - _id: t3n2NL6Htq5sswMD
     name: Armure de cuir
     type: armor
     sort: 500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.6GTnNpLUtydDJVi1
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: 4FkehvPf5gFKLufu
@@ -157,7 +156,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -165,6 +164,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -194,20 +194,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.6GTnNpLUtydDJVi1
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.t3n2NL6Htq5sswMD'
   - _id: T5GcUNDAOu00TRze
     name: Gilet de protection
     type: armor
     sort: 600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.G9m8o4kbueF7EWdt
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: OzihOXYdkQa3KJuz
@@ -237,7 +237,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -245,6 +245,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -274,20 +275,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.G9m8o4kbueF7EWdt
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.T5GcUNDAOu00TRze'
   - _id: 29h6SVCn6EMXUikn
     name: Gantelet de souffrance
     type: meleeweapon
     sort: 700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.fmwK3vCtQr2PAPtN
+      core: {}
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -316,20 +317,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.fmwK3vCtQr2PAPtN
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.29h6SVCn6EMXUikn'
   - _id: rWow8Eu4Xl2rShRt
     name: Thav-9 Pistolet Mitrailleur
     type: firearm
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -359,20 +360,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.rWow8Eu4Xl2rShRt'
   - _id: tzZyWcxOUjPq4oxo
     name: Stimulation
     type: psionicpower
     sort: 900000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
+      core: {}
     img: systems/torgeternity/images/icons/psionicpower.webp
     effects: []
     folder: null
@@ -412,20 +413,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.tzZyWcxOUjPq4oxo'
   - _id: capa9jmSXVQHjYmI
     name: Télékinésie
     type: psionicpower
     sort: 1000000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
+      core: {}
     img: systems/torgeternity/images/icons/psionicpower.webp
     effects: []
     folder: null
@@ -467,20 +468,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.capa9jmSXVQHjYmI'
   - _id: s63Bnkgoh62Vk0Yt
     name: Barrière télékinétique
     type: psionicpower
     sort: 1100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
+      core: {}
     img: systems/torgeternity/images/icons/psionicpower.webp
     effects: []
     folder: null
@@ -518,12 +519,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.s63Bnkgoh62Vk0Yt'
   - _id: xVz42Esa7k2roy65
     name: Psionique
@@ -533,8 +535,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.4ZtIS4h8WRGarKIV
+      core: {}
     system:
       category: cyberware
       cosm: Tharkold
@@ -646,12 +647,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.4ZtIS4h8WRGarKIV
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.xVz42Esa7k2roy65'
   - _id: HA3ZNV6zpDV4OeJ3
     name: Caltrops
@@ -661,8 +663,7 @@ items:
     folder: null
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-caltrops
+      core: {}
     system:
       cosm: Aysle
       description: >-
@@ -682,12 +683,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.HA3ZNV6zpDV4OeJ3'
   - _id: 54w2eixS1RsNzOer
     name: Chargeurs supplémentaires (5)
@@ -697,8 +699,7 @@ items:
     folder: null
     sort: 1500000
     flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
+      core: {}
     system:
       cosm: Prime Terre
       description: <p>Cinq recharges pour Glock 9 mm</p>
@@ -712,12 +713,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.54w2eixS1RsNzOer'
   - _id: HuQq8uxNbNpaZR8h
     name: Fusées éclairantes (3)
@@ -727,8 +729,7 @@ items:
     folder: null
     sort: 1600000
     flags:
-      core:
-        sourceId: Item.JniN3c3c6HNv7cSp
+      core: {}
     system:
       cosm: Empire du Nil
       description: <p>&Eacute;claire, peut allumer un feu</p>
@@ -742,12 +743,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.JniN3c3c6HNv7cSp
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.HuQq8uxNbNpaZR8h'
   - _id: KlCPFk1qWVHG8kGN
     name: Attaque à mains nues
@@ -757,8 +759,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -773,12 +774,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.KlCPFk1qWVHG8kGN'
 effects:
   - _id: fD9gcuFeLzY5eA8Z
@@ -808,7 +810,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -816,6 +818,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -848,7 +851,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -856,6 +859,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1374,7 +1378,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1386,14 +1389,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809021
   modifiedTime: 1716827809021
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!6ThunRV3sj9ZSMQW'
 

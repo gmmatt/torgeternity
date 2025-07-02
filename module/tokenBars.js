@@ -2,7 +2,7 @@
  *
  */
 export function modifyTokenBars() {
-  Token.prototype._drawBar = function (number, bar, data) {
+  foundry.canvas.placeables.Token.prototype._drawBar = function (number, bar, data) {
     const val = Number(data.value);
     const pct = Math.clamp(val, 0, data.max) / data.max;
     let h = Math.max(canvas.dimensions.size / 12, 8);

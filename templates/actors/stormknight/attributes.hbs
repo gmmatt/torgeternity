@@ -1,9 +1,10 @@
 <div class="attributes header">
   <h2>{{localize "torgeternity.sheetLabels.attributes"}}</h2>
-  <a class="changeAttributesToggle" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+  <a class="changeAttributesToggle" data-action="changeAttributesToggle"
+    data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
     <i class="fas fa-edit"></i>
   </a>
-  {{#if actor.flags.torgeternity.editAttributes}}
+  {{#if document.flags.torgeternity.editAttributes}}
     <h5>{{localize "torgeternity.sheetLabels.alterAttributes"}}</h5>
   {{/if}}
 </div>
@@ -11,282 +12,258 @@
 <ul class="attribut-list">
 
   <!-- iterate each attribute individually to avoid a problem with data structures in sheets created under early versions of system -->
-  <li class="attribut-block">    
+  <li class="attribut-block">
     <a
-      class="skill-roll"
+      class="skill-roll" data-drag="true" data-action="skillRoll"
       data-testType="attribute"
-      data-value="{{actor.system.attributes.charisma.value}}"
+      data-value="{{document.system.attributes.charisma.value}}"
       data-name="charisma"
       data-baseAttribute="charisma"
       data-adds="0"
-      data-unskilledUse="1"
-    >
-    {{localize "torgeternity.attributes.charisma"}}
+      data-unskilledUse="1">
+      {{localize "torgeternity.attributes.charisma"}}
     </a>
 
-    {{#if actor.flags.torgeternity.editAttributes}}
+    {{#if document.flags.torgeternity.editAttributes}}
       <a
-      class="increaseAttribute"
-      data-concernedAttribute="charisma"
-      {{#if (gte actor.system.attributes.charisma.base actor.system.attributes.charisma.maximum)}}
-      style="visibility:hidden"
-      {{/if}}
-      >
+        class="increaseAttribute" data-action="increaseAttribute"
+        data-concernedAttribute="charisma"
+        {{#if (gte document.system.attributes.charisma.base document.system.attributes.charisma.maximum)}}
+        style="visibility:hidden"
+        {{/if}}>
         <i class="fa-solid fa-plus changeAttributeAdd"></i>
       </a>
     {{/if}}
-        
+
     <input
       name="system.attributes.charisma.value"
       type="number"
       class="attributeValueField"
       data-baseAttributeInput="charisma"
-      {{#if actor.flags.torgeternity.editAttributes}}
-      value='{{actor.system.attributes.charisma.base}}'
+      {{#if document.flags.torgeternity.editAttributes}}
+      value='{{document.system.attributes.charisma.base}}'
       {{else}}
-      value='{{actor.system.attributes.charisma.value}}'
+      value='{{document.system.attributes.charisma.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#if actor.flags.torgeternity.editAttributes}}
-        {{else}}
-        readonly="true"
-      {{/if}}
-    />
-    {{#if actor.flags.torgeternity.editAttributes}}
-      <a class="decreaseAttribute"
-        data-concernedAttribute="charisma"
-      >
-      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      {{#if document.flags.torgeternity.editAttributes}}
+      {{else}}
+      readonly="true"
+      {{/if}} />
+    {{#if document.flags.torgeternity.editAttributes}}
+      <a class="decreaseAttribute" data-action="decreaseAttribute"
+        data-concernedAttribute="charisma">
+        <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
 
-      <i 
-        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
-          style="visibility:hidden"
-        {{/if}}> 
-        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.charisma.maximum}}
+      <i
+        {{#if (eq document.system.details.race (localize "torgeternity.sheetLabels.noRace" ))}}
+        style="visibility:hidden"
+        {{/if}}>
+        {{localize "torgeternity.sheetLabels.max"}} {{document.system.attributes.charisma.maximum}}
       </i>
     {{/if}}
   </li>
 
   <li class="attribut-block">
     <a
-      class="skill-roll"
+      class="skill-roll" data-drag="true" data-action="skillRoll"
       data-testType="attribute"
-      data-value="{{actor.system.attributes.dexterity.value}}"
+      data-value="{{document.system.attributes.dexterity.value}}"
       data-name="dexterity"
       data-baseAttribute="dexterity"
       data-adds="0"
-      data-unskilledUse="1"
-    >
-    {{localize "torgeternity.attributes.dexterity"}}
+      data-unskilledUse="1">
+      {{localize "torgeternity.attributes.dexterity"}}
     </a>
-    {{#if actor.flags.torgeternity.editAttributes}}
+    {{#if document.flags.torgeternity.editAttributes}}
       <a
-        class="increaseAttribute"
+        class="increaseAttribute" data-action="increaseAttribute"
         data-concernedAttribute="dexterity"
-        {{#if (gte actor.system.attributes.dexterity.base actor.system.attributes.dexterity.maximum)}}
+        {{#if (gte document.system.attributes.dexterity.base document.system.attributes.dexterity.maximum)}}
         style="visibility:hidden"
-        {{/if}}
-        >
-      <i class="fa-solid fa-plus changeAttributeAdd"></i>
+        {{/if}}>
+        <i class="fa-solid fa-plus changeAttributeAdd"></i>
       </a>
     {{/if}}
-    
+
     <input
       name="system.attributes.dexterity.value"
       type="number"
       class="attributeValueField"
       data-baseAttributeInput="dexterity"
-      {{#if actor.flags.torgeternity.editAttributes}}
-      value='{{actor.system.attributes.dexterity.base}}'
+      {{#if document.flags.torgeternity.editAttributes}}
+      value='{{document.system.attributes.dexterity.base}}'
       {{else}}
-      value='{{actor.system.attributes.dexterity.value}}'
+      value='{{document.system.attributes.dexterity.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#if actor.flags.torgeternity.editAttributes}}{{else}}
+      {{#if document.flags.torgeternity.editAttributes}}{{else}}
       readonly="true"
-      {{/if}}
-    />
+      {{/if}} />
 
-    {{#if actor.flags.torgeternity.editAttributes}}
-      <a class="decreaseAttribute"
-      data-concernedAttribute="dexterity"
-      >
-      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+    {{#if document.flags.torgeternity.editAttributes}}
+      <a class="decreaseAttribute" data-action="decreaseAttribute"
+        data-concernedAttribute="dexterity">
+        <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
-      <i 
-        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
-          style="visibility:hidden"
-        {{/if}}
-      > 
-        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.dexterity.maximum}}
+      <i
+        {{#if (eq document.system.details.race (localize "torgeternity.sheetLabels.noRace" ))}}
+        style="visibility:hidden"
+        {{/if}}>
+        {{localize "torgeternity.sheetLabels.max"}} {{document.system.attributes.dexterity.maximum}}
       </i>
-    {{/if}}    
+    {{/if}}
   </li>
 
   <li class="attribut-block">
     <a
-      class="skill-roll"
+      class="skill-roll" data-drag="true" data-action="skillRoll"
       data-testType="attribute"
-      data-value="{{actor.system.attributes.mind.value}}"
+      data-value="{{document.system.attributes.mind.value}}"
       data-name="mind"
       data-baseAttribute="mind"
       data-adds="0"
-      data-unskilledUse="1"
-    >
+      data-unskilledUse="1">
       {{localize "torgeternity.attributes.mind"}}
     </a>
-    {{#if actor.flags.torgeternity.editAttributes}}
-    <a
-      class="increaseAttribute"
-      data-concernedAttribute="mind"
-      {{#if (gte actor.system.attributes.mind.base actor.system.attributes.mind.maximum)}}
-      style="visibility:hidden"
-      {{/if}}
-      >
-    <i class="fa-solid fa-plus changeAttributeAdd"></i>
-    </a>
+    {{#if document.flags.torgeternity.editAttributes}}
+      <a
+        class="increaseAttribute" data-action="increaseAttribute"
+        data-concernedAttribute="mind"
+        {{#if (gte document.system.attributes.mind.base document.system.attributes.mind.maximum)}}
+        style="visibility:hidden"
+        {{/if}}>
+        <i class="fa-solid fa-plus changeAttributeAdd"></i>
+      </a>
     {{/if}}
 
-    <input 
-    name="system.attributes.mind.value" 
-    type="number"    
-    class="attributeValueField"
-    data-baseAttributeInput="mind" 
-    {{#if actor.flags.torgeternity.editAttributes}}
-    value='{{actor.system.attributes.mind.base}}'
-    {{else}}
-    value='{{actor.system.attributes.mind.value}}'
-    {{/if}}
-    data-dtype="Number" 
-    {{#if actor.flags.torgeternity.editAttributes}}{{else}}
-    readonly="true"
-    {{/if}}
-    />
-    
-    {{#if actor.flags.torgeternity.editAttributes}}
-    <a class="decreaseAttribute"
-       data-concernedAttribute="mind"
-    >
-    <i class="fa-solid fa-minus changeAttributeSubstract"></i>
-    </a>
-          <i 
-        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
-          style="visibility:hidden"
-        {{/if}}
-      > 
-        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.mind.maximum}}
+    <input
+      name="system.attributes.mind.value"
+      type="number"
+      class="attributeValueField"
+      data-baseAttributeInput="mind"
+      {{#if document.flags.torgeternity.editAttributes}}
+      value='{{document.system.attributes.mind.base}}'
+      {{else}}
+      value='{{document.system.attributes.mind.value}}'
+      {{/if}}
+      data-dtype="Number"
+      {{#if document.flags.torgeternity.editAttributes}}{{else}}
+      readonly="true"
+      {{/if}} />
+
+    {{#if document.flags.torgeternity.editAttributes}}
+      <a class="decreaseAttribute" data-action="decreaseAttribute"
+        data-concernedAttribute="mind">
+        <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      </a>
+      <i
+        {{#if (eq document.system.details.race (localize "torgeternity.sheetLabels.noRace" ))}}
+        style="visibility:hidden"
+        {{/if}}>
+        {{localize "torgeternity.sheetLabels.max"}} {{document.system.attributes.mind.maximum}}
       </i>
     {{/if}}
   </li>
 
   <li class="attribut-block">
     <a
-      class="skill-roll"
+      class="skill-roll" data-drag="true" data-action="skillRoll"
       data-testType="attribute"
-      data-value="{{actor.system.attributes.spirit.value}}"
+      data-value="{{document.system.attributes.spirit.value}}"
       data-name="spirit"
       data-baseAttribute="spirit"
       data-adds="0"
-      data-unskilledUse="1"
-    >
+      data-unskilledUse="1">
       {{localize "torgeternity.attributes.spirit"}}
     </a>
-    {{#if actor.flags.torgeternity.editAttributes}}
+    {{#if document.flags.torgeternity.editAttributes}}
       <a
-        class="increaseAttribute"
+        class="increaseAttribute" data-action="increaseAttribute"
         data-concernedAttribute="spirit"
-        {{#if (gte actor.system.attributes.spirit.base actor.system.attributes.spirit.maximum)}}
+        {{#if (gte document.system.attributes.spirit.base document.system.attributes.spirit.maximum)}}
         style="visibility:hidden"
-        {{/if}}
-        >
-      <i class="fa-solid fa-plus changeAttributeAdd"></i>
+        {{/if}}>
+        <i class="fa-solid fa-plus changeAttributeAdd"></i>
       </a>
     {{/if}}
-    
+
     <input
       name="system.attributes.spirit.value"
       type="number"
       class="attributeValueField"
-      data-baseAttributeInput="spirit" 
-      {{#if actor.flags.torgeternity.editAttributes}}
-      value='{{actor.system.attributes.spirit.base}}'
+      data-baseAttributeInput="spirit"
+      {{#if document.flags.torgeternity.editAttributes}}
+      value='{{document.system.attributes.spirit.base}}'
       {{else}}
-      value='{{actor.system.attributes.spirit.value}}'
+      value='{{document.system.attributes.spirit.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#if actor.flags.torgeternity.editAttributes}}{{else}}
+      {{#if document.flags.torgeternity.editAttributes}}{{else}}
       readonly="true"
-      {{/if}}
-    />
-    {{#if actor.flags.torgeternity.editAttributes}}
-      <a class="decreaseAttribute"
-      data-concernedAttribute="spirit"
-      >
-      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      {{/if}} />
+    {{#if document.flags.torgeternity.editAttributes}}
+      <a class="decreaseAttribute" data-action="decreaseAttribute"
+        data-concernedAttribute="spirit">
+        <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
-      <i 
-        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
-          style="visibility:hidden"
-        {{/if}}
-      > 
-        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.spirit.maximum}}
+      <i
+        {{#if (eq document.system.details.race (localize "torgeternity.sheetLabels.noRace" ))}}
+        style="visibility:hidden"
+        {{/if}}>
+        {{localize "torgeternity.sheetLabels.max"}} {{document.system.attributes.spirit.maximum}}
       </i>
-    {{/if}} 
-    
+    {{/if}}
+
   </li>
 
   <li class="attribut-block">
     <a
-      class="skill-roll"
+      class="skill-roll" data-drag="true" data-action="skillRoll"
       data-testType="attribute"
-      data-value="{{actor.system.attributes.strength.value}}"
+      data-value="{{document.system.attributes.strength.value}}"
       data-name="strength"
       data-baseAttribute="strength"
       data-adds="0"
-      data-unskilledUse="1"
-    >
+      data-unskilledUse="1">
       {{localize "torgeternity.attributes.strength"}}
     </a>
-    {{#if actor.flags.torgeternity.editAttributes}}
-    <a
-      class="increaseAttribute"
-      data-concernedAttribute="strength"
-      {{#if (gte actor.system.attributes.strength.base actor.system.attributes.strength.maximum)}}
-      style="visibility:hidden"
-      {{/if}}
-      >
-    <i class="fa-solid fa-plus changeAttributeAdd"></i>
-    </a>
+    {{#if document.flags.torgeternity.editAttributes}}
+      <a
+        class="increaseAttribute" data-action="increaseAttribute"
+        data-concernedAttribute="strength"
+        {{#if (gte document.system.attributes.strength.base document.system.attributes.strength.maximum)}}
+        style="visibility:hidden"
+        {{/if}}>
+        <i class="fa-solid fa-plus changeAttributeAdd"></i>
+      </a>
     {{/if}}
-    
+
     <input
       name="system.attributes.strength.value"
       type="number"
       class="attributeValueField"
-      data-baseAttributeInput="strength" 
-      {{#if actor.flags.torgeternity.editAttributes}}
-      value='{{actor.system.attributes.strength.base}}'
+      data-baseAttributeInput="strength"
+      {{#if document.flags.torgeternity.editAttributes}}
+      value='{{document.system.attributes.strength.base}}'
       {{else}}
-      value='{{actor.system.attributes.strength.value}}'
+      value='{{document.system.attributes.strength.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#if actor.flags.torgeternity.editAttributes}}{{else}}
+      {{#if document.flags.torgeternity.editAttributes}}{{else}}
       readonly="true"
-      {{/if}}
-    />
-    {{#if actor.flags.torgeternity.editAttributes}}
-      <a class="decreaseAttribute"
-      data-concernedAttribute="strength"
-      >
-      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      {{/if}} />
+    {{#if document.flags.torgeternity.editAttributes}}
+      <a class="decreaseAttribute" data-action="decreaseAttribute"
+        data-concernedAttribute="strength">
+        <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
-      <i 
-        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
-          style="visibility:hidden"
-        {{/if}}
-      > 
-        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.strength.maximum}}
+      <i
+        {{#if (eq document.system.details.race (localize "torgeternity.sheetLabels.noRace" ))}}
+        style="visibility:hidden"
+        {{/if}}>
+        {{localize "torgeternity.sheetLabels.max"}} {{document.system.attributes.strength.maximum}}
       </i>
     {{/if}}
   </li>

@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 2200000
     flags:
-      core:
-        sourceId: Item.Wi4lFW6mtBCZS8EY
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,12 +26,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722154587766
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.Wi4lFW6mtBCZS8EY
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.SFdVeSet2JXoY01t'
   - _id: hAArbMfImIilyKBK
     name: GWI GodMeeter
@@ -42,8 +42,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.pBPp45py3ynKoMI1
+      core: {}
     system:
       cosm: cyberpapacy
       description: "<p>The most common sidearm in use by the Church Police. It’s a high caliber and very loud firearm. Like other GWI weapons it has a limited artificial intelligence built in—not to assist with firing but to disable functions and preach at miscreants if the weapon falls into the wrong hands. The gun is also capable of selecting between different types of ammunition by vocal command if more than one type is loaded.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -71,12 +70,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693900431785
       modifiedTime: 1722108680119
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.pBPp45py3ynKoMI1
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.hAArbMfImIilyKBK'
   - _id: ptj1Hps6YOKo6uRC
     name: Hexxer MK II
@@ -86,8 +86,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ThXFhhCEysLaKu33
+      core: {}
     system:
       cosm: cyberpapacy
       description: "<p>An upgrade to the hexxer stores the energy from Backlash and allows the warlock or witch to actually <em>use</em> it in powering her own spells.</p><p>After a spellcaster suffers Backlash, the hexxer MK II works like a MK I above, negating half the shock from a failed spell. In addition, the amount of shock negated is automatically applied as a bonus on the character’s next spellcasting test. The energy dissipates after one minute (six rounds), so it must be used within that time frame or the bonus is lost.</p>\n<p>updated in Cyberpapacy Sourcebook</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>"
@@ -105,12 +104,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693900468752
       modifiedTime: 1722154648375
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.ThXFhhCEysLaKu33
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.ptj1Hps6YOKo6uRC'
   - _id: qscZR782i9ypoNW4
     name: Scrambler
@@ -120,8 +120,7 @@ items:
     folder: null
     sort: 675000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.CJz3Fe0Ld1tsBRYc
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -150,12 +149,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693900486816
       modifiedTime: 1693900486816
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.Items.CJz3Fe0Ld1tsBRYc
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.qscZR782i9ypoNW4'
   - _id: MXjTP0iOJzjmjAP2
     name: IriMesh Clothing
@@ -165,8 +165,7 @@ items:
     folder: null
     sort: 40100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
+      core: {}
     system:
       cosm: panPacifica
       description: "<p>A light textile woven by nano-machines. IriMesh looks and feels similar to silk, but with even more tensile strength. IriMesh can be worn at elegant banquets without looking out of place, and doesn’t raise security concerns at checkpoints.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -189,12 +188,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146882
       modifiedTime: 1722154620846
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.MXjTP0iOJzjmjAP2'
   - _id: 8N90vcxtBELt25E3
     name: Spellcaster
@@ -296,12 +296,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.veILcJaF0ucF9xAA
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.8N90vcxtBELt25E3'
   - _id: w5jnKX7ZPYxR0WDO
     name: Cyberware Implants
@@ -403,12 +404,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.8LBHAgahJO6xorta
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.w5jnKX7ZPYxR0WDO'
   - _id: XuKxoZ61AaEax8wH
     name: Diminish
@@ -418,8 +420,7 @@ items:
     folder: gjZiCPX5knOIpsHd
     sort: 406250
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -449,12 +450,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.XuKxoZ61AaEax8wH'
   - name: Enhance
     type: spell
@@ -462,8 +464,7 @@ items:
     effects: []
     folder: gjZiCPX5knOIpsHd
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.wFtHQvjizwV4c8U5
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -490,12 +491,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.wFtHQvjizwV4c8U5
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _id: EPad9pMZNZO483aP
     sort: 575000
     _key: '!actors.items!CefD0chJeL6NrRVJ.EPad9pMZNZO483aP'
@@ -529,12 +531,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582088910
       modifiedTime: 1729582088910
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: v3OyE4fW0R7CVm8h
     sort: 100000
     _key: '!actors.items!CefD0chJeL6NrRVJ.v3OyE4fW0R7CVm8h'
@@ -967,7 +970,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -979,14 +981,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.3.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693893984135
   modifiedTime: 1729582095938
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!CefD0chJeL6NrRVJ'
 

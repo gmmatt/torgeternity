@@ -1,4 +1,5 @@
 import { torgeternity } from '../../config.js';
+import { getTorgValue } from '../../torgchecks.js';
 
 const fields = foundry.data.fields;
 /**
@@ -49,6 +50,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
    */
   prepareBaseData() {
     super.prepareBaseData();
+    this.value = this.price && !isNaN(this.price) ? getTorgValue(parseInt(this.price)) : null;
   }
 
   /**

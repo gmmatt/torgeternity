@@ -3,37 +3,37 @@
  */
 export function sheetResize() {
   Hooks.on('renderTorgeternityActorSheet', async function (app, html, data) {
-    if (app.object.type === 'stormknight') {
-      const sheet = document.getElementById(app.id);
-      const ro = new ResizeObserver((entries) => {
-        for (const entry of entries) {
-          const cr = entry.contentRect;
-
-          if (cr.width < 510 || cr.height < 650) {
-            sheet.classList.add('compact');
-          } else {
-            sheet.classList.remove('compact');
+    let ro;
+    switch (app.document.type) {
+      case 'stormknight':
+        ro = new ResizeObserver((entries) => {
+          for (const entry of entries) {
+            const cr = entry.contentRect;
+            if (cr.width < 510 || cr.height < 650) {
+              html.classList.add('compact');
+            } else {
+              html.classList.remove('compact');
+            }
           }
-        }
-      });
-      ro.observe(sheet);
-    }
-    if (app.object.type === 'threat') {
-      const sheet = document.getElementById(app.id);
-      const ro = new ResizeObserver((entries) => {
-        for (const entry of entries) {
-          const cr = entry.contentRect;
+        });
+        ro.observe(html);
+        break;
 
-          if (cr.height < 630) {
-            sheet.classList.add('tabsOff');
-            sheet.classList.remove('tabsOn');
-          } else {
-            sheet.classList.remove('tabsOff');
-            sheet.classList.add('tabsOn');
+      case 'threat':
+        ro = new ResizeObserver((entries) => {
+          for (const entry of entries) {
+            const cr = entry.contentRect;
+            if (cr.height < 630) {
+              html.classList.add('tabsOff');
+              html.classList.remove('tabsOn');
+            } else {
+              html.classList.remove('tabsOff');
+              html.classList.add('tabsOn');
+            }
           }
-        }
-      });
-      ro.observe(sheet);
+        });
+        ro.observe(html);
+        break;
     }
   });
 }

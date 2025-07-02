@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 2400000
     flags:
-      core:
-        sourceId: Item.TE2jmWDyTxhRulgk
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,20 +26,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722157050558
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.TE2jmWDyTxhRulgk
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.Py9XbkHtiMeVAivQ'
   - _id: d9AM1AiyTKzB2o6A
     name: Totem
     type: gear
     sort: 2300000
     flags:
-      core:
-        sourceId: Item.V6vSEnqgNmYQKs4o
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -58,20 +57,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722157047326
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.V6vSEnqgNmYQKs4o
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.d9AM1AiyTKzB2o6A'
   - _id: eoKkKx6JMkRheNol
     name: War Paint
     type: gear
     sort: 2500000
     flags:
-      core:
-        sourceId: Item.6g0k6JMCuHpfTB8I
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -89,12 +88,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722157053446
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.6g0k6JMCuHpfTB8I
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.eoKkKx6JMkRheNol'
   - _id: buudvAP0bQpbvIvj
     name: Animal Companion (Sabre-Tooth Cat)
@@ -104,8 +104,7 @@ items:
     folder: null
     sort: 700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.0dFkF4uWXXNOCRQ0
+      core: {}
     system:
       category: savagery
       cosm: livingLand
@@ -229,12 +228,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912137290
       modifiedTime: 1722153407326
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.0dFkF4uWXXNOCRQ0
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.buudvAP0bQpbvIvj'
   - _id: 4yiDEmxDFxwBzdiF
     name: Relentless
@@ -244,8 +244,7 @@ items:
     folder: null
     sort: 39100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.u8mNCguZj1SbAIVd
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -336,12 +335,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912142691
       modifiedTime: 1722153429829
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.u8mNCguZj1SbAIVd
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.4yiDEmxDFxwBzdiF'
   - _id: JJc7a0Avc4bXfsDP
     name: Bone Knife
@@ -351,8 +351,7 @@ items:
     folder: null
     sort: 10500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.9AgUL9MMDkCf2WT9
+      core: {}
     system:
       cosm: livingLand
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fragile:]{Fragile}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#small:]{Small}</p>\n<p>The simplest stabbing weapon, usually little more than a handhold and a short shaft with a sharpened point.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -378,12 +377,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912255642
       modifiedTime: 1722157083414
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.9AgUL9MMDkCf2WT9
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.JJc7a0Avc4bXfsDP'
   - _id: R3UtYJxpc9sgFYTK
     name: Bone and Hide
@@ -393,8 +393,7 @@ items:
     folder: null
     sort: 1400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.1KCcsTDnBSqBMA8h
+      core: {}
     system:
       cosm: livingLand
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>Bone and hide armor consists of finely shaped bone pieces carefully sewn into the hide. It is very difficult to make, for if the bone layer does not conform in shape to the user, it breaks easily in combat.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -417,12 +416,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722157061222
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.1KCcsTDnBSqBMA8h
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.R3UtYJxpc9sgFYTK'
   - _id: e9xaMsAeSysyibki
     name: Hrockt Shoot Spear
@@ -459,12 +459,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.ammMtd4GDTZAbVQx
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.e9xaMsAeSysyibki'
   - name: Hrockt Shoot Spear
     type: missileweapon
@@ -504,12 +505,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.6Pb5rtY0QdIMTbRF
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _id: sUwjzPc7YwVZ31dC
     sort: 0
     _key: '!actors.items!sPLt8RBL1hieic6p.sUwjzPc7YwVZ31dC'
@@ -543,12 +545,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582214908
       modifiedTime: 1729582214908
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: 0NHrfRKUxPO9P80B
     sort: 100000
     _key: '!actors.items!sPLt8RBL1hieic6p.0NHrfRKUxPO9P80B'
@@ -1061,7 +1064,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1073,14 +1075,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693912137290
   modifiedTime: 1729013458520
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!sPLt8RBL1hieic6p'
 

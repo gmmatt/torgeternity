@@ -30,7 +30,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -38,6 +38,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.vQqNb4v5lKyvm3u0'
     cards: []
   - _id: oy906a4v5vQSh8xF
@@ -66,7 +67,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -74,6 +75,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.oy906a4v5vQSh8xF'
     cards: []
   - _id: 2W6RBaxBeFnF5fNS
@@ -102,7 +104,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -110,6 +112,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.2W6RBaxBeFnF5fNS'
     cards: []
   - _id: ACcNaj2JRvg1Eqne
@@ -138,7 +141,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -146,6 +149,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.ACcNaj2JRvg1Eqne'
     cards: []
   - _id: UCTewmpNWxUe5WcU
@@ -174,7 +178,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -182,6 +186,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.UCTewmpNWxUe5WcU'
     cards: []
   - _id: C5IH0Jz6PKaB80p1
@@ -210,7 +215,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -218,6 +223,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.C5IH0Jz6PKaB80p1'
     cards: []
   - _id: XvBUW0RdlsapE9Qz
@@ -246,7 +252,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -254,6 +260,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.XvBUW0RdlsapE9Qz'
     cards: []
   - _id: ghETWrWI4ywPahU8
@@ -282,7 +289,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -290,6 +297,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.ghETWrWI4ywPahU8'
     cards: []
   - _id: OOyGHH3WXv8AG4hy
@@ -318,7 +326,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -326,6 +334,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.OOyGHH3WXv8AG4hy'
     cards: []
   - _id: t5fD22ut3oxRMdEx
@@ -354,7 +363,7 @@ cards:
     width: null
     height: null
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -362,6 +371,7 @@ cards:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!cards.cards!wC9PKdHJuhDjCwyV.t5fD22ut3oxRMdEx'
     cards: []
 rotation: 0
@@ -369,13 +379,7 @@ displayCount: false
 folder: null
 sort: 0
 flags:
-  exportSource:
-    world: torgv2p2
-    system: torgeternity
-    coreVersion: '9.235'
-    systemVersion: 2.0.5
-  core:
-    sourceId: Cards.7rhA82uDSE499m1h
+  core: {}
   torgeternity:
     usage: orrorsh
 system: {}
@@ -388,11 +392,17 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827808857
   modifiedTime: 1716827808857
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: Cards.7rhA82uDSE499m1h
   duplicateSource: null
+  exportSource:
+    worldId: torgv2p2
+    uuid: null
+    coreVersion: '9.235'
+    systemId: torgeternity
+    systemVersion: 2.0.5
 _key: '!cards!wC9PKdHJuhDjCwyV'
 

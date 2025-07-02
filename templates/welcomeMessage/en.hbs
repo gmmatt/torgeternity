@@ -1,30 +1,47 @@
-<h1>Welcome to the Torg Eternity System for Foundry VTT</h1>
-<div class="form-group">
-  <a href="https://ulisses-us.com/"><img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" />
-  </a>
-  <p>
-    This system is developed by VTT Southwest, LLC under license from Ulisses Medien und Spiel Distributions GmbH.
-  </p>
-  <p>
-    Thank you for downloading and playing Torg Eternity on Foundry. If you need help with the system, please visit our
-    Discord channel on the Foundry server.
-  </p>
-  <h3>
-    A Note on Card Play
-  </h3>
-  <p>
-    This system includes all of the cards from the Core Drama Deck. It also integrates the Drama Deck with the combat
-    tracker. The built-in cards system is fairly intuitive, but if you need help, you can ask any/all questions about it
-    on the #torg-eternity channel in the Foundry server.
-  </p>
-  <h2>
-    Acknowledgements
-  </h2>
-  <p>
-    Many thanks to @rwanoux for his amazing work on this project. This system would not look as fantastic as it does
-    without his contributions. The project would also not have realized its potential without the Torg Eternity
-    community on Foundry. There are too many people to mention individually, but I especially want to give a shout-out
-    to @Manuel, @Orome, @Paul Emerson, @Markus Raab, and @ForjaSalvaje for their contributions, input, and
-    encouragement. -GM Matt (December 2021)
-  </p>
+<div class="readme" style="background-image:url('systems/torgeternity/images/journal-background.webp');background-repeat:no-repeat;padding:2rem 1rem;background-size:cover;color:black;">
+   <p style="padding-left:100px; padding-right:100px;"><img src="systems/torgeternity/images/TORG_Logo.webp"></p>
+<div style="padding-left:15px; padding-right:15px;">
+    <p style="font-family: alaska; font-size: 2rem; color: white; text-shadow: 3px 3px 3px #09090c;  text-align: center; text-transform: uppercase">System</p>
+    <h3>Beside of all the necessary features to bring the game experience from the table to the screen, the TORG Eternity System also provides the following compendiums:</h3>
+    <ul class="flexcol">
+        <li><a class="compendium systemRules">Basic Rules</a> contains quickstart rules, Foundry specific explanations and a list of Effect commands.</li>
+        <li><a class="compendium systemArchetypes">Archetypes</a>, which contains the 16 iconic Storm Knights as ready to play characters.</li>
+        <li><a class="compendium systemHandouts">Handouts</a>, which contains shareable handouts for the iconic Archetypes.</li>
+        <li><a class="compendium systemCards">Core Card Set</a>, which contains the complete core card deck. It will be imported automatically and integrates the drama deck with the combat tracker. The Cosm modules include their Card expansions that can simply be added to the core decks or be replaced.</li>
+        <li><a class="compendium systemScenes">Main Scene</a>, which contains the TORG background as a generic Landing Page which will be imported with the first launch of the world.</li>
+        <li><a class="compendium systemMacros">Macros</a> contains several useful macros that should ease the flow of the game for the GM.</li>
+    </ul>
+  <p style="padding-left:150px; padding-right:150px;"><a href="https://ulisses-us.com/"><img src="systems/torgeternity/images/ulisseslogoDE.webp" alt="logo ulisses"></a></p>
+   <p>Thank you for downloading and playing Torg Eternity on Foundry. If you need help with this module, please visit our Discord channel on the Foundry or Ulisses Spiele server.</p>
+    <h3>Acknowledgements</h3>
+ <p>Many thanks to @rwanoux for his amazing work on this project. This system would not look as fantastic as it does without his contributions. The project would also not have realized its potential without the Torg Eternity community on Foundry. There are too many people to mention individually, but I especially want to give a shout-out to @Manuel, @Orome, @Paul Emerson, @Markus Raab, and @ForjaSalvaje for their contributions, input, and encouragement. -GM Matt (December 2021)</p>
+    <p>I like to thank Helmut, BadIdeasBureau and Durak for their contributions, and Matt
+    for being the first Chief o.D. - Algor</p>
 </div>
+</div>
+<script>
+    let crCompLinks = document.getElementsByClassName("compendium");
+    for (let link of crCompLinks) {
+        link.addEventListener("click", (ev) => openCrComp(ev));
+    }
+    function openCrComp(ev) {
+        if (ev.currentTarget.classList.contains("systemRules")) {
+            game.packs.get("torgeternity.basic-rules").render(true);
+        }
+        else if (ev.currentTarget.classList.contains("systemArchetypes")) {
+            game.packs.get("torgeternity.archetypes").render(true);
+        }
+        else if (ev.currentTarget.classList.contains("systemHandouts")) {
+            game.packs.get("torgeternity.handouts").render(true);
+        }
+        else if (ev.currentTarget.classList.contains("systemCards")) {
+            game.packs.get("torgeternity.core-card-set").render(true);
+        }
+        else if (ev.currentTarget.classList.contains("systemScenes")) {
+            game.packs.get("torgeternity.core-scenes").render(true);
+        }
+        else if (ev.currentTarget.classList.contains("systemMacros")) {
+            game.packs.get("torgeternity.macros").render(true);
+        }
+    }
+</script>

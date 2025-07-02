@@ -75,8 +75,11 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/partials/powers-sheet.hbs',
     // Items
     'systems/torgeternity/templates/sheets/ammunition-field.hbs',
+
+    // Cards
+    "systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs",
   ];
 
   // Load the template parts
-  return loadTemplates(templatePaths);
+  return foundry.applications.handlebars.loadTemplates(templatePaths);
 };

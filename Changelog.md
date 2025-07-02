@@ -1,5 +1,22 @@
 # TORG Eternity Changelog
 
+## v.13.0.0
+
+- v13 compatibility- open Beta!
+- Foundry v13 compatible version.
+- Converted all relevant classes to use AppV2.
+- Removed System styling from the core dialogs.
+  
+- Now option to surpress chat notifications on card shuffle.
+- Miracles now have the skill "Faith" selected on creation.
+- custom attacks are now possible on threats [471](https://github.com/gmmatt/torgeternity/issues/471)
+- A new macro that deals damage to targeted tokens [472](https://github.com/gmmatt/torgeternity/issues/472)
+- Giving an option to ignore ammo mechanics [#490](https://github.com/gmmatt/torgeternity/issues/490)
+- Implants now do have a secondary axiom as well [#487](https://github.com/gmmatt/torgeternity/issues/487)
+- Item price-values are now completely automatically calculated [#486](https://github.com/gmmatt/torgeternity/issues/486)
+- Nice new possiblity token images [#495](https://github.com/gmmatt/torgeternity/issues/495)
+- Shiny new Welcome Messages [#496](https://github.com/gmmatt/torgeternity/issues/496)
+
 ## v.12.3.9
 
 - Squished a bug (call stack exception) that occured in Chrome

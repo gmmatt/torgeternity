@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 11600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ADQgF3E47pmCCHys
+      core: {}
     system:
       category: reality
       cosm: coreEarth
@@ -103,12 +102,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912370274
       modifiedTime: 1722153459702
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.ADQgF3E47pmCCHys
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.uwfWU4r0b3wdHGiX'
   - _id: jDFKgbIvzl6CsXOY
     name: MAS Disruptor Grenade
@@ -118,8 +118,7 @@ items:
     folder: null
     sort: 38300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.gcwGTAcBHXmDUney
+      core: {}
     system:
       cosm: cyberpapacy
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#non-lethal-damage]{Non-Lethal}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Blast}</p>\n<p>Each grenade resembles a flat throwing disc. When it strikes the ground or a target it emits a strong pulse meant to incapacitate anyone nearby. Some disruptors use electric pulses, others use sonic waves, but either has the same effect on those unfortunate enough to be caught within the pulse!</p>\n<p>updated in Cyberpapacy Sourcebook</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>"
@@ -148,12 +147,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912407562
       modifiedTime: 1722157170262
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.gcwGTAcBHXmDUney
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.jDFKgbIvzl6CsXOY'
   - _id: RxDRpiVQ29xDGiGX
     name: Glock 9mm
@@ -163,8 +163,7 @@ items:
     folder: null
     sort: 3400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -192,12 +191,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912420479
       modifiedTime: 1722157126694
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.RxDRpiVQ29xDGiGX'
   - _id: ZlZ8dDR8qO6ZyF9z
     name: Multi-Tool
@@ -207,8 +207,7 @@ items:
     folder: null
     sort: 17900000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>A handy device that combines clippers, screwdrivers, a wrench, and other small tools into a single fold-out tool.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -225,12 +224,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912492200
       modifiedTime: 1722157230461
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.ZlZ8dDR8qO6ZyF9z'
   - _id: 9sBYXuMbD1Wt9ACk
     name: Healing Potion
@@ -240,8 +240,7 @@ items:
     folder: null
     sort: 13800000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
+      core: {}
     system:
       cosm: aysle
       description: "<p>Drinking this thick, clear liquid heals one wound and restores a [[/r 1d6x6max5]]{BD} of shock.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>"
@@ -258,12 +257,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912497883
       modifiedTime: 1722157244141
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.9sBYXuMbD1Wt9ACk'
   - _id: KjgBml4EdUym5Ebu
     name: Flashlight
@@ -273,8 +273,7 @@ items:
     folder: null
     sort: 9700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -291,12 +290,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912503154
       modifiedTime: 1722157226086
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.KjgBml4EdUym5Ebu'
   - name: Prodigy
     type: perk
@@ -304,8 +304,7 @@ items:
     effects: []
     folder: null
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.dT11RqKEyVnWbEHw
+      core: {}
     system:
       category: reality
       cosm: coreEarth
@@ -395,12 +394,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693912314258
       modifiedTime: 1722153455822
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.dT11RqKEyVnWbEHw
       duplicateSource: null
+      exportSource: null
     _id: kT4xT1ZyGgyvWg9q
     sort: 300000
     _key: '!actors.items!BpClx5rBCesWUzIN.kT4xT1ZyGgyvWg9q'
@@ -412,8 +412,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -437,12 +436,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722157209806
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.H4lAQvvvcSaBwk3A'
   - name: Extra Magazines
     type: ammunition
@@ -477,12 +477,13 @@ items:
     _stats:
       compendiumSource: Item.KRYQ71jof26XeGEv
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722109253990
       modifiedTime: 1722157119685
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.pbkdXjZUi93kO25A'
   - _id: AI8XhF4PDkjEWg1o
     name: Machete
@@ -514,12 +515,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -529,8 +531,7 @@ items:
     folder: gjZiCPX5knOIpsHd
     sort: 450000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>Designed for cutting through thick foliage, these mid-sized, single-edged blades are also perfectly useful for cutting flesh. Modern machetes have builtin tools and features that make <em>survival</em> tests Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -557,12 +558,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.AI8XhF4PDkjEWg1o'
   - name: Human
     type: race
@@ -594,12 +596,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582218331
       modifiedTime: 1729582218331
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: GMK8y60Nc3rVO6vE
     sort: 100000
     _key: '!actors.items!BpClx5rBCesWUzIN.GMK8y60Nc3rVO6vE'
@@ -629,12 +632,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1153,7 +1157,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1165,14 +1168,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693912355058
   modifiedTime: 1729013464858
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!BpClx5rBCesWUzIN'
 

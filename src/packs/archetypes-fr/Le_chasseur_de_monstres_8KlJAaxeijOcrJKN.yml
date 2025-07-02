@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.perk-bulletsmith
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -120,20 +119,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.9Kmq8C81nIIjwSdi'
   - _id: UTEYkvqTcKLhFHtX
     name: Caltrops (en argent)
     type: gear
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-caltrops
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -156,20 +155,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.UTEYkvqTcKLhFHtX'
   - _id: gfxtCXojsN3PMaUK
     name: Fusil tueur
     type: firearm
     sort: 100001
     flags:
-      core:
-        sourceId: Item.fW9IrnHVWRXgCWEx
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -208,20 +207,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.fW9IrnHVWRXgCWEx
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.gfxtCXojsN3PMaUK'
   - _id: P5v3znC9UTPMRB7J
     name: Dague en argent
     type: meleeweapon
     sort: 500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-dagger
+      core: {}
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -248,20 +247,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.P5v3znC9UTPMRB7J'
   - _id: JUgj5Cmj63HzgDek
     name: Revolver Webley
     type: firearm
     sort: 600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.item-webley-revolver
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -288,20 +287,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.JUgj5Cmj63HzgDek'
   - _id: RUsXW2vMzlcDbzM4
     name: Manteau en peau de monstre
     type: armor
     sort: 100001
     flags:
-      core:
-        sourceId: Item.Lr8qGqk2VWGODo7S
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: 1oM56g3yX2h8ox2M
@@ -331,7 +330,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -339,6 +338,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -368,12 +368,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.Lr8qGqk2VWGODo7S
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.RUsXW2vMzlcDbzM4'
   - _id: k5oxi4S2Vf0lhwIa
     name: Médaille (Tueur de dragon)
@@ -383,8 +384,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.perk-medals
+      core: {}
     system:
       category: occult
       cosm: Orrorsh
@@ -526,12 +526,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.k5oxi4S2Vf0lhwIa'
   - _id: rj0VDXqmToHXvSNg
     name: Torche
@@ -541,8 +542,7 @@ items:
     folder: null
     sort: 2400000
     flags:
-      core:
-        sourceId: Item.TE2jmWDyTxhRulgk
+      core: {}
     system:
       cosm: Terre-Vivante
       description: <p>&Eacute;claire</p>
@@ -556,12 +556,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.TE2jmWDyTxhRulgk
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.rj0VDXqmToHXvSNg'
   - _id: hQZcOgojBbDcCCfe
     name: Attaque à mains nues
@@ -571,8 +572,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -587,12 +587,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.hQZcOgojBbDcCCfe'
 effects:
   - _id: 4CnECaHDlW4TJfe7
@@ -622,7 +623,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -630,6 +631,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1171,7 +1173,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1183,14 +1184,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809076
   modifiedTime: 1716827809076
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!8KlJAaxeijOcrJKN'
 

@@ -8,8 +8,7 @@ items:
     type: perk
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.NlvMMLc98zfTyvF1
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -204,20 +203,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.NlvMMLc98zfTyvF1
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.XNNnqI7Q5kO7Z7hb'
   - _id: 1IqkOxn2nuTJbnzP
     name: Arme de prédilection
     type: perk
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
+      core: {}
     img: systems/torgeternity/images/icons/perk.webp
     effects: []
     folder: null
@@ -314,20 +313,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.1IqkOxn2nuTJbnzP'
   - _id: KyvSH0G67CXa05a2
     name: Fumigènes
     type: gear
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.yCG51H4lsZOyJjhO
+      core: {}
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
@@ -347,20 +346,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.yCG51H4lsZOyJjhO
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.KyvSH0G67CXa05a2'
   - _id: 6vIlsRdE93ELD2MV
     name: Ion Gusoku
     type: armor
     sort: 100001
     flags:
-      core:
-        sourceId: Item.DYmLw9hKYR8HEw4V
+      core: {}
     img: systems/torgeternity/images/icons/armor.webp
     effects:
       - _id: deuJR26c5jsbRHSt
@@ -390,7 +389,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.331'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -398,6 +397,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -423,20 +423,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.DYmLw9hKYR8HEw4V
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.6vIlsRdE93ELD2MV'
   - _id: zkYCDyzIyDecR5fz
     name: Katana électrique
     type: meleeweapon
     sort: 400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
+      core: {}
     img: systems/torgeternity/images/icons/meleeweapon.webp
     effects: []
     folder: null
@@ -467,20 +467,20 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.zkYCDyzIyDecR5fz'
   - _id: bEn1gcBGt9V4r48H
     name: SC Kyogo 144 SMG
     type: firearm
     sort: 500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
+      core: {}
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
@@ -511,12 +511,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.bEn1gcBGt9V4r48H'
   - _id: BiMMDksBM9tbqL7R
     name: Attaque à mains nues
@@ -526,8 +527,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -542,12 +542,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.BiMMDksBM9tbqL7R'
 effects:
   - _id: fnTQB8GZ8ORoh6VK
@@ -577,7 +578,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -585,6 +586,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1105,7 +1107,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1117,14 +1118,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1716827809333
   modifiedTime: 1716827809333
   lastModifiedBy: VAnYow5sWS9EJzo0
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!QVpKuacd4LKfpJOy'
 

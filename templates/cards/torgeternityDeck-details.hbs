@@ -1,0 +1,19 @@
+<!-- Details Tab -->
+<section class="tab{{#if tab.active}} active{{/if}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+
+  {{formGroup fields.img value=source.img rootId=rootId}}
+
+  {{formGroup fields.description value=source.description rootId=rootId elementType="textarea"}}
+
+  <div class="form-group slim">
+    <label>{{localize "CARDS.Dimensions"}}</label>
+    <div class="form-fields">
+      <label for="{{rootId}}-width">{{localize "DOCUMENT.FIELDS.width.label"}}</label>
+      {{formInput fields.width value=source.width id=(concat rootId "-width")}}
+      <label for="{{rootId}}-height">{{localize "DOCUMENT.FIELDS.height.label"}}</label>
+      {{formInput fields.height value=source.height id=(concat rootId "-height")}}
+      <label for="{{rootId}}-rotation">{{localize "DOCUMENT.FIELDS.rotation.label"}}</label>
+      {{formInput fields.rotation value=source.rotation id=(concat rootId "-rotation")}}
+    </div>
+  </div>
+</section>

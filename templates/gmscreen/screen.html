@@ -1,16 +1,14 @@
-{{#if background }}
-
 <div id="gm-screen">
-  <div id="left-panel" {{{background}}} class="screen-panel"></div>
-  <div id="center-panel" {{{background}}} class="screen-panel"></div>
-  <div id="right-panel" {{{background}}} class="screen-panel"></div>
+  {{#if background }}
+    <div id="left-panel" {{{background}}} class="screen-panel" data-action="clickPanel"></div>
+    <div id="center-panel" {{{background}}} class="screen-panel" data-action="clickPanel"></div>
+    <div id="right-panel" {{{background}}} class="screen-panel" data-action="clickPanel"></div>
+  {{/if}} {{#if noScreen}}
+    <h2>{{localize "torgeternity.gmScreen.noScreen"}}</h2>
+    <p>{{localize "torgeternity.gmScreen.noScreenMessage"}}</p>
+    <p>
+      <a href="https://www.ulissesf-shop.com/virtual-tabletops/"><img src="systems/torgeternity/images/ulissesLogo.webp"
+          alt="ulisses shop" /></a>
+    </p>
+  {{/if}}
 </div>
-{{/if}} {{#if noScreen}}
-<h2>{{localize "torgeternity.gmScreen.noScreen"}}</h2>
-<p>{{localize "torgeternity.gmScreen.noScreenMessage"}}</p>
-<p>
-  <a href="https://www.ulissesf-shop.com/virtual-tabletops/"
-    ><img src="systems/torgeternity/images/ulissesLogo.webp" alt="ulisses shop"
-  /></a>
-</p>
-{{/if}}

@@ -23,19 +23,19 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.8.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1716788510616
       modifiedTime: 1716788609695
       lastModifiedBy: pYSulyhjOdVnRAJt
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!Hy1XeUQA64WoxKxs.sIrEjkMEuSDzeIk8'
 effects: []
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.te001-core-rulebook.Actors.fImZbwzh0jbEYGN5
+  core: {}
 system:
   shock:
     max: 9
@@ -459,7 +459,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -471,14 +470,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694860825482
   modifiedTime: 1729013631440
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.te001-core-rulebook.Actors.fImZbwzh0jbEYGN5
   duplicateSource: null
+  exportSource: null
 _key: '!actors!Hy1XeUQA64WoxKxs'
 

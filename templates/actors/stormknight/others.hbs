@@ -1,53 +1,52 @@
-<h2>{{localize 'torgeternity.sheetLabels.derivedValues'}}</h2>
+<div class="others header">
+  <h2>{{localize 'torgeternity.sheetLabels.derivedValues'}}</h2>
+</div>
 
 <ul>
   <li class="attribut-block">
-    <span class="other-label" data-skill-value="{{actor.system.other.move}}">
+    <span class="other-label" data-skill-value="{{document.system.other.move}}">
       {{localize 'torgeternity.sheetLabels.move'}}
     </span>
     <input
       name="system.other.move"
       type="number"
-      value="{{actor.system.other.move}}"
+      value="{{document.system.other.move}}"
       data-dtype="Number"
-      disabled
-    />
+      disabled />
   </li>
   <li class="attribut-block">
-    <span class="other-label" data-skill-value="{{actor.system.other.run}}">
+    <span class="other-label" data-skill-value="{{document.system.other.run}}">
       {{localize 'torgeternity.sheetLabels.run'}}
     </span>
     <input
       name="system.other.run"
       type="number"
-      value="{{actor.system.other.run}}"
+      value="{{document.system.other.run}}"
       data-dtype="Number"
-      disabled
-    />
+      disabled />
   </li>
 
   <li class="attribut-block">
-    <span class="other-label" data-skill-value="{{actor.defenses.toughness}}">
+    <span class="other-label" data-skill-value="{{document.defenses.toughness}}">
       {{localize 'torgeternity.sheetLabels.toughness'}}
     </span>
-    <input type="number" value="{{actor.defenses.toughness}}" data-dtype="Number" disabled />
+    <input type="number" value="{{document.defenses.toughness}}" data-dtype="Number" disabled />
   </li>
 
   <li class="attribut-block">
-    <span class="other-label" data-skill-value="{{actor.defenses.armor}}">
+    <span class="other-label" data-skill-value="{{document.defenses.armor}}">
       {{localize 'torgeternity.sheetLabels.armor'}}
     </span>
-    <input type="number" value="{{actor.defenses.armor}}" data-dtype="Number" disabled />
+    <input type="number" value="{{document.defenses.armor}}" data-dtype="Number" disabled />
   </li>
 
   <li class="attribut-block">
     <a
-      class="attribut-block apply-fatigue"
-      data-fatigue="{{actor.fatigue}}"
-      data-tooltip="{{localize 'torgeternity.sheetLabels.fatigueTooltip'}}"
-    >
+      class="attribut-block apply-fatigue" data-action="applyFatigue"
+      data-fatigue="{{document.fatigue}}"
+      data-tooltip="{{localize 'torgeternity.sheetLabels.fatigueTooltip'}}">
       {{localize 'torgeternity.sheetLabels.fatigue'}}
     </a>
-    <input type="number" value="{{actor.fatigue}}" data-dtype="Number" disabled />
+    <input type="number" value="{{document.fatigue}}" data-dtype="Number" disabled />
   </li>
 </ul>

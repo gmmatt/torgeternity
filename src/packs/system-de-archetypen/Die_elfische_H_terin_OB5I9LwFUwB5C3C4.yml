@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 350000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr
+      core: {}
     system:
       category: elf
       cosm: aysle
@@ -103,12 +102,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866631347
       modifiedTime: 1722166081560
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.bK9FTMS5YhLFH13I'
   - name: Langschwert
     type: meleeweapon
@@ -117,9 +117,7 @@ items:
     folder: null
     sort: 1900000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.3YH7UaaVOmI5NACl
+      core: {}
     _id: yMSKWEoWqjj6uJ7h
     system:
       cosm: aysle
@@ -146,12 +144,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866678858
       modifiedTime: 1722166461591
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.3YH7UaaVOmI5NACl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.yMSKWEoWqjj6uJ7h'
   - name: Kompositlangbogen
     type: missileweapon
@@ -160,9 +159,7 @@ items:
     folder: null
     sort: 23700000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jbnyGq61BgeKPjNL
+      core: {}
     _id: xFxiSrb1dOBKtdz9
     system:
       cosm: aysle
@@ -197,12 +194,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866689090
       modifiedTime: 1722166441302
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jbnyGq61BgeKPjNL
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.xFxiSrb1dOBKtdz9'
   - name: Hanfseil, 10 Meter
     type: gear
@@ -211,8 +209,7 @@ items:
     folder: null
     sort: 8700000
     flags:
-      core:
-        sourceId: Item.UqBpg4NYAUDXT2Yr
+      core: {}
     _id: IduEEQ2qynnSB3rk
     system:
       cosm: aysle
@@ -230,12 +227,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866705662
       modifiedTime: 1722166406760
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.UqBpg4NYAUDXT2Yr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.IduEEQ2qynnSB3rk'
   - _id: f4vHwajpFSfAwKNx
     name: Lederweste
@@ -245,9 +243,7 @@ items:
     folder: null
     sort: 32400000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -275,12 +271,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366229
       modifiedTime: 1722166431256
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.f4vHwajpFSfAwKNx'
   - name: Köcher
     type: ammunition
@@ -313,12 +310,13 @@ items:
     _stats:
       compendiumSource: Item.5ksMgyuK1eouSxnA
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722166143740
       modifiedTime: 1722166204655
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.iDIFCRUIEmbD3ZIW'
   - _id: kKgCKpt5xVSLK4NX
     name: Trank der Heilung
@@ -328,9 +326,7 @@ items:
     folder: null
     sort: 24600000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -351,12 +347,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722166418564
       modifiedTime: 1722166418564
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.kKgCKpt5xVSLK4NX'
   - _id: e6cZvGjHUiIJPlPn
     name: Wächter
@@ -392,12 +389,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -498,12 +496,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.jgTek2ORzUYzW7VR
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.e6cZvGjHUiIJPlPn'
   - name: Elf
     type: race
@@ -876,12 +875,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.mUbmPDIYErf34hLh
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599471640
       modifiedTime: 1729599471640
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: vxUoivYaxFGewlmX
     sort: 300000
     ownership:
@@ -989,12 +989,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599471645
       modifiedTime: 1729599471701
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: KAyGcb0i89itAbEk
     effects: []
     folder: null
@@ -1106,12 +1107,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599471645
       modifiedTime: 1729599471703
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: tVF0F4r9o6TF7PpG
     effects: []
     folder: null
@@ -1225,12 +1227,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599471645
       modifiedTime: 1729599471704
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: yRS2fqlwwnUeidQi
     effects: []
     folder: null
@@ -1265,12 +1268,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1305,18 +1309,18 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!OB5I9LwFUwB5C3C4.icZp6QEzyhsN4eCt'
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.torgeternity.archetypes.cdSvyJHbG0GbFzkh
+  core: {}
 system:
   shock:
     max: 5
@@ -1740,7 +1744,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1752,14 +1755,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694866454541
   modifiedTime: 1729599466325
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.cdSvyJHbG0GbFzkh
   duplicateSource: null
+  exportSource: null
 _key: '!actors!OB5I9LwFUwB5C3C4'
 

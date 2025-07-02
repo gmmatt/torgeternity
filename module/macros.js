@@ -1,6 +1,8 @@
 import * as torgchecks from '/systems/torgeternity/module/torgchecks.js';
 import { TestDialog } from '/systems/torgeternity/module/test-dialog.js';
 
+const { DialogV2 } = foundry.applications.api;
+
 /**
  *
  */
@@ -30,8 +32,7 @@ export class TorgeternityMacros {
             case 'veryStymied':
             case 'vulnerable':
             case 'veryVulnerable':
-              const ef = CONFIG.statusEffects.find((e) => e.id === effect);
-              await token.toggleEffect(ef, { active: false });
+              await token.actor.toggleStatusEffect(effect, { active: false });
               chatOutput += `<li>${game.i18n.localize(
                 'torgeternity.macros.clearStatusEffectsliftetFrom'
               )} ${token.actor.name} ${game.i18n.localize(
@@ -96,10 +97,9 @@ export class TorgeternityMacros {
       )}`;
       if (
         parseInt(token.actor.system.shock.value) >= parseInt(token.actor.system.shock.max) &&
-        !token.actor.statuses.find((d) => d === 'unconscious')
+        !token.document.hasStatusEffect('unconscious')
       ) {
-        const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-        token.toggleEffect(eff, { active: true, overlay: true });
+        token.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
         chatOutput += `<br><strong>${token.document.name}${game.i18n.localize(
           'torgeternity.macros.fatigueMacroCharKO'
         )}</strong>`;
@@ -115,41 +115,41 @@ export class TorgeternityMacros {
    *
    */
   async reviveShock() {
-    const windowContent = `
-            <form style="margin-bottom: 1rem; display:grid; grid-template-rows: repeat(2,auto); grid-template-columns: repeat(2,auto); align-items: center; gap:6px;">
-                <label for="inputValue">${game.i18n.localize(
-                  'torgeternity.macros.reviveMacroWindowLabel1'
-                )}</label>
-                <input type="number" min="1" step="1" name="inputValue" id="inputValue">
-                <input style="grid-row: 2/3;grid-column: 2/3;" type="checkbox" name="wholeRevive"> <label for="wholeRevive" style="grid-row: 2/3; grid-column: 1/2">${game.i18n.localize(
-                  'torgeternity.macros.reviveMacroWholeRevive'
-                )}
-            </form>
-        `;
 
-    new Dialog({
-      title: game.i18n.localize('torgeternity.macros.reviveMacroChatHeadline'),
-      content: windowContent,
-      buttons: {
-        buttonExecute: {
-          label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'),
+    const fields = foundry.applications.fields;
+    const shockGroup = fields.createFormGroup({
+      label: game.i18n.localize('torgeternity.macros.reviveMacroWindowLabel1'),
+      input: fields.createNumberInput({ name: 'inputValue' }),
+    });
+    const checkGroup = fields.createFormGroup({
+      label: game.i18n.localize('torgeternity.macros.reviveMacroWholeRevive'),
+      input: fields.createCheckboxInput({ name: 'wholeRevive' }),
+    });
+
+    DialogV2.wait({
+      window: { title: 'torgeternity.macros.reviveMacroChatHeadline', },
+      content: `${shockGroup.outerHTML}${checkGroup.outerHTML}`,
+      buttons: [
+        {
+          action: 'execute',
+          label: 'torgeternity.dialogWindow.buttons.execute',
           callback: game.torgeternity.macros._processReviveShock,
+          default: true
         },
-      },
-      default: 'buttonExecute',
-    }).render(true);
+      ],
+    });
   }
 
   /**
    *
    * @param html
    */
-  async _processReviveShock(html) {
+  async _processReviveShock(event, button, dialog) {
     try {
       const tokens = canvas.tokens.controlled;
 
-      const formElement = html[0].querySelector('form');
-      const formData = await new FormDataExtended(formElement);
+      const formElement = dialog.element.querySelector('form');
+      const formData = new foundry.applications.ux.FormDataExtended(formElement);
       const bolWholeRevive = formData.object.wholeRevive;
       const reviveAmount = parseInt(formData.object.inputValue);
 
@@ -174,31 +174,22 @@ export class TorgeternityMacros {
         }
 
         if (targetShockValue === 0) {
-          chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
-            'torgeternity.macros.reviveMacroAlreadyFull'
-          )}</li>`;
+          chatOutput += `<li>${token.actor.name} ${game.i18n.localize('torgeternity.macros.reviveMacroAlreadyFull')}</li>`;
           continue;
         }
 
         if (bolWholeRevive) {
           await token.actor.update({ 'system.shock.value': 0 });
-          chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
-            'torgeternity.macros.reviveMacroCharRevived'
-          )}`;
+          chatOutput += `<li>${token.actor.name} ${game.i18n.localize('torgeternity.macros.reviveMacroCharRevived')}`;
         } else {
           const newShockValue = parseInt(targetShockValue) - reviveAmount;
           await token.actor.update({ 'system.shock.value': newShockValue });
-          chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
-            'torgeternity.macros.reviveMacroCharPartyRevived'
-          )}${reviveAmount}`;
+          chatOutput += `<li>${token.actor.name} ${game.i18n.localize('torgeternity.macros.reviveMacroCharPartyRevived')}${reviveAmount}`;
         }
 
-        if (token.actor.statuses.find((d) => d === 'unconscious')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-          token.toggleEffect(eff, { active: false, overlay: false });
-          chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${
-            token.actor.name
-          }`;
+        if (token.document.hasStatusEffect('unconscious')) {
+          token.actor.toggleStatusEffect('unconscious', { active: false, overlay: false });
+          chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${token.actor.name}`;
         }
         chatOutput += '</li>';
       }
@@ -215,36 +206,35 @@ export class TorgeternityMacros {
    *
    */
   async rollBDs() {
-    const windowContent = `
-            <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap: 9px;align-items:center">
-                <label for="inputValue">${game.i18n.localize(
-                  'torgeternity.macros.bonusDieMacroContent'
-                )}</label>
-                <input style="width:25%;" type="number" min="1" step="1" name="inputValue" id="inputValue">
-            </form>
-        `;
 
-    new Dialog({
-      title: game.i18n.localize('torgeternity.macros.bonusDieMacroTitle'),
-      content: windowContent,
-      buttons: {
-        buttonRoll: {
+    const fields = foundry.applications.fields;
+    const inputGroup = fields.createFormGroup({
+      label: game.i18n.localize('torgeternity.macros.bonusDieMacroContent'),
+      input: fields.createNumberInput({ name: 'inputValue' }),
+    });
+
+    DialogV2.wait({
+      window: { title: 'torgeternity.macros.bonusDieMacroTitle', },
+      content: inputGroup.outerHTML,
+      buttons: [
+        {
+          action: 'buttonRoll`',
           label: game.i18n.localize('torgeternity.sheetLabels.roll') + '!',
           callback: game.torgeternity.macros._rollItBDs,
+          default: true
         },
-      },
-      default: 'buttonRoll',
-    }).render(true);
+      ],
+    });
   }
 
   /**
    *
    * @param html
    */
-  async _rollItBDs(html) {
+  async _rollItBDs(event, button, dialog) {
     try {
-      const formElement = html[0].querySelector('form');
-      const formData = new FormDataExtended(formElement);
+      const formElement = dialog.element.querySelector('form');
+      const formData = new foundry.applications.ux.FormDataExtended(formElement);
       const diceAmount = parseInt(formData.object.inputValue);
 
       if (isNaN(diceAmount)) {
@@ -276,15 +266,12 @@ export class TorgeternityMacros {
       for (const token of targetedTokens) {
         const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.defenses.toughness);
         if (tokenDamage.shocks > 0) {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${
-            token.document.name
-          } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${
-            tokenDamage.label
-          }.</li>`;
+          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
+            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label
+            }.</li>`;
         } else {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${
-            token.document.name
-          } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage')}.</li>`;
+          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
+            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage')}.</li>`;
         }
       }
       chatOutput += '</ul>';
@@ -297,14 +284,12 @@ export class TorgeternityMacros {
 
   // Show next 1-3 drama cards to a selection of players (much of this code is stolen in others macros)
   async dramaVision() {
-    if (!game.user.isGM) {
-      return;
-    }
+    if (!game.user.isGM) return;
+
     if (!game.combats.viewed?.round) {
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noFight'));
     }
 
-    let applyChanges = false;
     const users = game.users.filter((user) => user.active && !user.isGM);
     let checkOptions = '';
     const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
@@ -312,93 +297,83 @@ export class TorgeternityMacros {
       if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
     });
 
+    if (users.length === 0) {
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noPlayers'));
+    }
+
     // Build checkbox list for all active players
+    const fields = foundry.applications.fields;
     users.forEach((user) => {
-      const checked =
-        !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
-      checkOptions += `
-        <br>
-        <input type="checkbox" name="${user.id}" id="${user.id}" value="${user.name}" ${checked}>\n
-        <label for="${user.id}">${user.name}</label>
-    `;
+      const checkbox =
+        fields.createFormGroup({
+          label: user.name,
+          input: fields.createCheckboxInput({
+            name: user.id,
+            //value: user.name,
+            value: !!user.character && selectedPlayerIds.includes(user.character.id)
+          })
+        });
+      checkOptions += `<br>${checkbox.outerHTML}`;
     });
 
     // Choose the nb of cards to show
-    const mychoice = new Promise((resolve, reject) => {
-      new Dialog({
-        title: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCards'),
-        content: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCardsValue'),
-        buttons: {
-          1: {
-            label: 1,
-            callback: async (html) => {
-              resolve(1);
-            },
-          },
-          2: {
-            label: 2,
-            callback: async (html) => {
-              resolve(2);
-            },
-          },
-          3: {
-            label: 3,
-            callback: async (html) => {
-              resolve(3);
-            },
-          },
-        },
-      }).render(true);
+    const numCards = await DialogV2.wait({
+      window: { title: 'torgeternity.dialogWindow.showingDramaCards.nbCards', },
+      content: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCardsValue'),
+      buttons: [
+        { action: "1", label: "1", },
+        { action: "2", label: "2", },
+        { action: "3", label: "3", },
+      ],
     });
 
-    const nbc = await mychoice.then((nbc) => {
-      return nbc;
-    });
-
+    const setting = game.settings.get('torgeternity', 'deckSetting');
     // Find the Drama Deck
-    const dram = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    const dramaDeck = game.cards.get(setting.dramaDeck);
     // Find ?? the index of the Active Drama Card in the Drama Deck
-    const ind = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive)._source
-      .cards[0].sort;
+    const activeDeck = game.cards.get(setting.dramaActive);
+    const cardSort = (activeDeck.cards.size === 0) ? dramaDeck.size :
+      dramaDeck.cards.get(activeDeck._source.cards[0]._id).sort + 1;
 
-    new Dialog({
-      title: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.recipient'),
-      content: `${game.i18n.localize(
-        'torgeternity.dialogWindow.showingDramaCards.whisper'
-      )} ${checkOptions} <br>`,
-      buttons: {
-        whisper: {
-          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
-          callback: (html) => createMessage(html),
-        },
-      },
-    }).render(true);
-
-    function createMessage(html) {
-      const targets = [];
-      // build list of selected players ids for whispers target
-      for (const user of users) {
-        if (html.find('[name="' + user.id + '"]')[0].checked) {
-          applyChanges = true;
-          targets.push(user.id);
+    DialogV2.wait({
+      window: { title: 'torgeternity.dialogWindow.showingDramaCards.recipient', },
+      content: `${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.whisper')} ${checkOptions} <br>`,
+      buttons: [
+        {
+          action: "whisper",
+          label: 'torgeternity.dialogWindow.showingDramaCards.apply',
+          callback: (event, button, dialog) => {
+            const targets = [];
+            // build list of selected players ids for whispers target
+            for (const user of users) {
+              if (dialog.element.querySelector(`[name="${user.id}"]`).checked) {
+                targets.push(user.id);
+              }
+            }
+            if (!targets.length) return;
+            let msg = {
+              whisper: targets,
+              content: `<div class="card-draw flexcol">${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.show')}`
+            };
+            for (let j = 0; j < numCards; j++) {
+              const card = dramaDeck.cards.find(card => card.sort === cardSort + j);
+              if (!card) {
+                ui.notifications.warn(game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.noMoreCards'));
+                break;;
+              }
+              msg.content +=
+                `<div class="card-draw flexrow">
+                <span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/>
+                <span><img src="${card.img}"></span></span>
+                <span class="card-name">${card.name}</span>
+                </div>`;
+            };
+            msg.content += `</div>`;
+            ChatMessage.create(msg);
+          }
         }
-      }
-      if (!applyChanges) return;
-      for (let j = 0; j < nbc; j++) {
-        const card = dram.cards.find((i) => i.sort === ind + j + 1);
-        ChatMessage.create({
-          whisper: targets,
-          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
-            card.img
-          }"/><span><img src="${
-            card.img
-          }"></span></span><span class="card-name"> ${game.i18n.localize(
-            'torgeternity.dialogWindow.showingDramaCards.show'
-          )} ${card.name}</span>
-                    </div>`,
-        });
-      }
-    }
+      ],
+    });
   }
 
   async dramaFlashback() {
@@ -427,20 +402,14 @@ export class TorgeternityMacros {
   async reconnection() {
     const _token = canvas.tokens.controlled[0];
     const _actor = _token?.actor;
-    const eff = CONFIG.statusEffects.find((e) => e.id === 'disconnected');
 
     if (!_actor) {
       ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoTokensSelected'));
       return;
     }
     const realitySkill = _actor.system.skills.reality;
-    let _status;
 
-    for (const ef of _actor.statuses) {
-      _status = ef === 'disconnected' ? eff : false;
-    }
-
-    if (!_status) {
+    if (!_token.document.hasStatusEffect('disconnected')) {
       ui.notifications.error(game.i18n.localize('torgeternity.macros.bonusDieMacroNoDiscon'));
       return;
     }
@@ -482,11 +451,9 @@ export class TorgeternityMacros {
     };
 
     if (test.isother1 === false) {
-      await Dialog.prompt({
-        title: game.i18n.localize('torgeternity.macros.reconnectMacroZoneModifierNotDetectedTitle'),
-        content: `<p>${game.i18n.localize(
-          'torgeternity.macros.reconnectMacroZoneModifierNotDetected'
-        )}</p>`,
+      await DialogV2.prompt({
+        window: { title: 'torgeternity.macros.reconnectMacroZoneModifierNotDetectedTitle' },
+        content: `<p>${game.i18n.localize('torgeternity.macros.reconnectMacroZoneModifierNotDetected')}</p>`,
       });
     }
 
@@ -502,8 +469,8 @@ export class TorgeternityMacros {
     switch (dialog.flags.torgeternity.test.resultText) {
       case game.i18n.localize('torgeternity.chatText.check.result.standartSuccess'):
       case game.i18n.localize('torgeternity.chatText.check.result.goodSuccess'):
-      case game.i18n.localize('torgeternity.chatText.check.result.standartSuccess'):
-        await _token.toggleEffect(eff, { active: false, overlay: false });
+      case game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess'):
+        await _actor.toggleStatusEffect('disconnected', { active: false, overlay: false });
         ui.notifications.info(
           `${game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet')}</p>`
         );
@@ -552,60 +519,59 @@ export class TorgeternityMacros {
     if (!game.user.isGM) {
       return;
     }
-    let applyChanges = false;
     const users = game.users.filter((user) => user.active && !user.isGM);
     let checkOptions = '';
     const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
     const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
       if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
     });
-    // Build checkbox list for all active players
-    users.forEach((user) => {
-      const checked =
-        !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
-      checkOptions += `
-            <br>
-            <input type="checkbox" name="${user.id}" id="${user.id}" value="${user.name}" ${checked}>\n
-            <label for="${user.id}">${user.name}</label>
-        `;
-    });
-    new Dialog({
-      title: game.i18n.localize('torgeternity.dialogWindow.cardRetour.cardBack'),
-      content: `${game.i18n.localize(
-        'torgeternity.dialogWindow.cardRetour.cardOwner'
-      )} ${checkOptions} <br>`,
-      buttons: {
-        whisper: {
-          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
-          callback: (html) => createMessage(html),
-        },
-      },
-    }).render(true);
 
-    function createMessage(html) {
+    // Build checkbox list for all active players
+    const fields = foundry.applications.fields;
+    users.forEach((user) => {
+      const checkbox =
+        fields.createFormGroup({
+          label: user.name,
+          input: fields.createCheckboxInput({
+            name: user.id,
+            //value: user.name,
+            value: !!user.character && selectedPlayerIds.includes(user.character.id)
+          })
+        });
+      checkOptions += `<br>${checkbox.outerHTML}`;
+    });
+
+    DialogV2.wait({
+      window: { title: 'torgeternity.dialogWindow.cardRetour.cardBack', },
+      content: `${game.i18n.localize('torgeternity.dialogWindow.cardRetour.cardOwner')} ${checkOptions} <br>`,
+      buttons: [
+        {
+          action: 'whisper',
+          label: 'torgeternity.dialogWindow.showingDramaCards.apply',
+          callback: (event, button, dialog) => createMessage(event, button, dialog),
+        },
+      ],
+    });
+
+    function createMessage(event, button, dialog) {
       let target;
       // build list of selected players ids for whispers target
       for (const user of users) {
-        if (html.find('[name="' + user.id + '"]')[0].checked) {
-          applyChanges = true;
+        if (dialog.element.querySelector(`[name="${user.id}"]`).checked) {
           target = user;
         }
       }
-      if (!applyChanges) {
-        return;
-      } else {
-        const destinyDiscard = game.cards.get(
-          game.settings.get('torgeternity', 'deckSetting').destinyDiscard
-        );
+      if (target) {
+        const userid = target.id;
+        const destinyDiscard = game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard);
         const lastCard = destinyDiscard.cards.contents.pop();
+        if (!astCard) return;
         const parentHand = target.character.getDefaultHand();
-        const listMessage = game.messages.contents;
-        const filtre = listMessage.filter((m) => m._source.user === target.id);
-        const lastMessage = filtre.pop();
+        const found = game.messages.contents.filter(m => m.user.id === userid);
+        if (!found.length) return;
+        const lastMessage = found.pop();
         lastCard.pass(parentHand);
-        if (lastCard) {
-          ChatMessage.deleteDocuments([lastMessage.id]);
-        }
+        ChatMessage.deleteDocuments([lastMessage.id]);
       }
     }
   }
@@ -618,70 +584,20 @@ export class TorgeternityMacros {
       return;
     }
     // Choose the attribute you want to modify
-    const mychoice = new Promise((resolve, reject) => {
-      new Dialog({
-        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choice'),
-        content: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choose'),
-        buttons: {
-          mind: {
-            label: game.i18n.localize('torgeternity.attributes.mind'),
-            callback: async (html) => {
-              resolve('mind');
-            },
-          },
-          strength: {
-            label: game.i18n.localize('torgeternity.attributes.strength'),
-            callback: async (html) => {
-              resolve('strength');
-            },
-          },
-          charisma: {
-            label: game.i18n.localize('torgeternity.attributes.charisma'),
-            callback: async (html) => {
-              resolve('charisma');
-            },
-          },
-          spirit: {
-            label: game.i18n.localize('torgeternity.attributes.spirit'),
-            callback: async (html) => {
-              resolve('spirit');
-            },
-          },
-          dexterity: {
-            label: game.i18n.localize('torgeternity.attributes.dexterity'),
-            callback: async (html) => {
-              resolve('dexterity');
-            },
-          },
-          curse: {
-            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes'),
-            callback: async (html) => {
-              resolve('all');
-            },
-          },
-          physicalDefense: {
-            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses'),
-            callback: async (html) => {
-              resolve('physicalDefense');
-            },
-          },
-          defense: {
-            label: game.i18n.localize('torgeternity.sheetLabels.defenses'),
-            callback: async (html) => {
-              resolve('defense');
-            },
-          },
-          cancel: {
-            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.cancelEffects'),
-            callback: async (html) => {
-              resolve('cancel');
-            },
-          },
-        },
-      }).render(true);
-    });
-    const attr = await mychoice.then((attr) => {
-      return attr;
+    const attr = await DialogV2.wait({
+      window: { title: 'torgeternity.dialogWindow.buffMacro.choice', },
+      content: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choose'),
+      buttons: [
+        { action: 'mind', label: 'torgeternity.attributes.mind', },
+        { action: 'strength', label: 'torgeternity.attributes.strength', },
+        { action: 'charisma', label: 'torgeternity.attributes.charisma', },
+        { action: 'spirit', label: 'torgeternity.attributes.spirit', },
+        { action: 'dexterity', label: 'torgeternity.attributes.dexterity', },
+        { action: 'all', label: 'torgeternity.dialogWindow.buffMacro.allAttributes', },
+        { action: 'physicalDefense', label: 'torgeternity.dialogWindow.buffMacro.physicalDefenses', },
+        { action: 'defense', label: 'torgeternity.sheetLabels.defenses', },
+        { action: 'cancel', label: 'torgeternity.dialogWindow.buffMacro.cancelEffects', },
+      ],
     });
 
     if (attr === 'cancel') {
@@ -696,47 +612,31 @@ export class TorgeternityMacros {
     }
 
     // choose the bonus you expect
-    const mybonus = new Promise((resolve, reject) => {
-      new Dialog({
-        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.bonusTitle'),
-        content: `<div>${game.i18n.localize(
-          'torgeternity.dialogWindow.buffMacro.value'
-        )} <input name="bonu" value=1 style="width:50px"/></div>`,
-        buttons: {
-          1: {
-            label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
-            callback: (html) => {
-              const bonu = parseInt(html.find('[name=bonu]')[0].value);
-              resolve(bonu);
-            },
-          },
+    const bonus = await DialogV2.wait({
+      window: { title: 'torgeternity.dialogWindow.buffMacro.bonusTitle', },
+      content: `<div>${game.i18n.localize(
+        'torgeternity.dialogWindow.buffMacro.value'
+      )} <input name="bonu" value=1 style="width:50px"/></div>`,
+      buttons: [
+        {
+          action: '1',
+          label: 'torgeternity.dialogWindow.showingDramaCards.apply',
+          callback: (event, button, dialog) => parseInt(dialog.element.querySelector('[name=bonu]').value)
         },
-      }).render(true);
-    });
-    const bonu = await mybonus.then((bonu) => {
-      return bonu;
+      ],
     });
 
     // choose the duration of the effect
-    const mytime = new Promise((resolve, reject) => {
-      new Dialog({
-        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.timeLabel'),
-        content: `<div>${game.i18n.localize(
-          'torgeternity.dialogWindow.buffMacro.time'
-        )} <input name="dur" value=1 style="width:50px"/></div>`,
-        buttons: {
-          1: {
-            label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
-            callback: (html) => {
-              const dur = parseInt(html.find('[name=dur]')[0].value);
-              resolve(dur);
-            },
-          },
+    const duration = await DialogV2.wait({
+      window: { title: 'torgeternity.dialogWindow.buffMacro.timeLabel' },
+      content: `<div>${game.i18n.localize('torgeternity.dialogWindow.buffMacro.time')} <input name="dur" value=1 style="width:50px"/></div>`,
+      buttons: [
+        {
+          action: '1',
+          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+          callback: (event, button, dialog) => parseInt(dialog.element.querySelector('[name=dur]').value)
         },
-      }).render(true);
-    });
-    const dur = await mytime.then((dur) => {
-      return dur;
+      ],
     });
 
     let newEffect = {};
@@ -744,56 +644,50 @@ export class TorgeternityMacros {
     if (attr === 'defense') {
       // only Defenses, but ALL defenses
       newEffect = {
-        name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defenses') +
-          ' / ' +
-          bonu +
-          ' / ' +
-          dur +
-          'rd(s)',
-        duration: { rounds: dur, turns: dur },
+        name: `${game.i18n.localize('torgeternity.dialogWindow.buffMacro.defenses')} / ${bonus} / ${duration} rd(s)`,
+        duration: { rounds: duration, turns: duration },
         changes: [
           {
             key: 'system.dodgeDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.meleeWeaponsDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.unarmedCombatDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.intimidationDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.maneuverDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.tauntDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.trickDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
         ],
         disabled: false,
       };
       // Aspect modifications related to bonus/malus
-      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
-      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
+      newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     else if (attr === 'physicalDefense') {
       // only physical Defenses
@@ -801,33 +695,33 @@ export class TorgeternityMacros {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses') +
           ' / ' +
-          bonu +
+          bonus +
           ' / ' +
-          dur +
+          duration +
           'rd(s)',
-        duration: { rounds: dur, turns: dur },
+        duration: { rounds: duration, turns: duration },
         changes: [
           {
             key: 'system.dodgeDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.meleeWeaponsDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.unarmedCombatDefenseMod',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
         ],
         disabled: false,
       };
       // Aspect modifications related to bonus/malus
-      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
-      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
+      newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     else if (attr === 'all') {
       // preparation of attribute effect
@@ -835,43 +729,43 @@ export class TorgeternityMacros {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes') +
           ' / ' +
-          bonu +
+          bonus +
           ' / ' +
-          dur +
+          duration +
           'rd(s)',
-        duration: { rounds: dur, turns: dur },
+        duration: { rounds: duration, turns: duration },
         changes: [
           {
             key: 'system.attributes.mind.value',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.attributes.spirit.value',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.attributes.strength.value',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.attributes.dexterity.value',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
           {
             key: 'system.attributes.charisma.value',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
         ],
         disabled: false,
       };
       // Aspect modifications related to bonus/malus
-      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
-      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
+      newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } else {
       // One attribute
       // preparation of attribute effect
@@ -879,15 +773,15 @@ export class TorgeternityMacros {
         name:
           game.i18n.localize('torgeternity.attributes.' + attr) +
           ' / ' +
-          bonu +
+          bonus +
           ' / ' +
-          dur +
+          duration +
           'rd(s)',
-        duration: { rounds: dur, turns: dur },
+        duration: { rounds: duration, turns: duration },
         changes: [
           {
             key: 'system.attributes.' + attr + '.value',
-            value: bonu,
+            value: bonus,
             mode: 2,
           },
         ],
@@ -895,8 +789,8 @@ export class TorgeternityMacros {
       };
 
       // Aspect modifications related to bonus/malus
-      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
-      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
+      newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     }
     const actors = [];
     if (game.canvas.tokens.controlled.length > 0) {
@@ -910,5 +804,202 @@ export class TorgeternityMacros {
     for (const actor of actors) {
       await actor?.createEmbeddedDocuments('ActiveEffect', [newEffect]);
     }
+  }
+
+  /**
+   * Applies damage on targeted tokens
+   *
+   * @param {string} source A description of the source the damage comes from
+              * @param {number} value The actual damage value
+              * @param {number} bds The number of Bonus Dice that ought to take place.
+              * @param {boolean} armored Does armor count?
+              * @param {number} ap The amount of armor piercing.
+              * @returns {null} no Value
+              */
+  async periculum(source = '', value = 10, bds = 0, armored = false, ap = 0) {
+    const victims = Array.from(game.user.targets);
+    if (armored) armored = 'checked';
+    if (!(victims.length > 0))
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+
+    // add options for AP and bypass the window
+
+    const info = await DialogV2.prompt({
+      window: { title: 'Periculum' },
+      content: `
+              <label>${game.i18n.localize(
+        'torgeternity.macros.periculumSourceName'
+      )}<br><input placeholder=${game.i18n.localize(
+        'torgeternity.macros.periculumSourcePlaceHolder'
+      )} style="color:black" name="source" type="string" value="${source}"></label>
+                  <label>${game.i18n.localize(
+        'torgeternity.macros.periculumDamageValue'
+      )}<input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
+                  <label>${game.i18n.localize(
+        'torgeternity.macros.periculumBds'
+      )}<input name="plusBD" type="number" value=${bds} style="width:35px"></label>
+                  <label>${game.i18n.localize(
+        'torgeternity.macros.periculumArmor'
+      )}<input name="armor" type="checkbox" ${armored}></label>
+                  <label>${game.i18n.localize(
+        'torgeternity.macros.periculumAp'
+      )}<input name="ap" type="number" style="width:35px" value=${ap}></label>
+                  `,
+      ok: {
+        label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), // 'Submit Effect',
+        callback: (event, button, dialog) => [
+          button.form.elements.source.value,
+          button.form.elements.damageBase.valueAsNumber,
+          button.form.elements.plusBD.value,
+          button.form.elements.armor.checked,
+          button.form.elements.ap.value,
+        ],
+      },
+    });
+
+    const allID = victims.map((victim) => victim.actor.id);
+    const allUUID = victims.map((victim) => victim.document.uuid);
+    const targetAll = [];
+
+    for (const victim of victims) {
+      const { actor } = victim;
+      // Set vehicle defense if needed
+      if (actor.type === 'vehicle') {
+        targetAll.push({
+          present: true,
+          type: 'vehicle',
+          id: actor.id,
+          uuid: victim.document.uuid,
+          targetPic: actor.img,
+          targetName: actor.name,
+          defenses: {
+            vehicle: actor.system.defense,
+            dodge: actor.system.defense,
+            unarmedCombat: actor.system.defense,
+            meleeWeapons: actor.system.defense,
+            intimidation: actor.system.defense,
+            maneuver: actor.system.defense,
+            taunt: actor.system.defense,
+            trick: actor.system.defense,
+          },
+          toughness: actor.defenses.toughness,
+          armor: actor.defenses.armor,
+        });
+      } else {
+        targetAll.push({
+          present: true,
+          type: actor.type,
+          id: actor.id,
+          uuid: victim.document.uuid,
+          targetPic: actor.img,
+          targetName: actor.name,
+          skills: actor.system.skills,
+          attributes: actor.system.attributes,
+          toughness: actor.defenses.toughness,
+          armor: actor.defenses.armor,
+          defenses: {
+            dodge: actor.defenses.dodge.value,
+            unarmedCombat: actor.defenses.unarmedCombat.value,
+            meleeWeapons: actor.defenses.meleeWeapons.value,
+            intimidation: actor.defenses.intimidation.value,
+            maneuver: actor.defenses.maneuver.value,
+            taunt: actor.defenses.taunt.value,
+            trick: actor.defenses.trick.value,
+          },
+        });
+      }
+    }
+
+    const validuuid = Array.from(game.actors)[0].uuid;
+    const test = {
+      testType: 'custom',
+      actor: validuuid,
+      actorPic: 'systems/torgeternity/images/tokens/vulnerable.webp',
+      actorName: 'Quid',
+      actorType: 'threat',
+      addBDs: parseInt(info[2]),
+      amountBD: 0,
+      isAttack: true,
+      skillName: info[0],
+      skillValue: '10',
+      isFav: false,
+      unskilledUse: true,
+      damage: parseInt(info[1]),
+      weaponAP: parseInt(info[4]),
+      applyArmor: info[3],
+      darknessModifier: 0,
+      DNDescriptor: 'standard',
+      type: 'attack',
+      targets: victims,
+      applySize: false,
+      attackOptions: true,
+      rollTotal: 11,
+      chatNote: '',
+      bdDamageSum: 0,
+      hasModifiers: false,
+      woundModifier: 0,
+      stymiedModifier: 0,
+      sizeModifier: 0,
+      vulnerableModifier: 0,
+      sizeModifierAll: [0],
+      vulnerableModifierAll: [0],
+      targetAll: targetAll,
+      targetsAllID: allID,
+      targetsAllUUID: allUUID,
+      disfavored: false,
+      previousBonus: false,
+      bonus: 0,
+      bdStyle: 'display:block',
+      upStyle: 'display:none',
+      possibilityStyle: 'display:none',
+      movementModifier: 0,
+      multiModifier: 0,
+      targetsModifier: 0,
+      calledShotModifier: 0,
+      vitalAreaDamageModifier: 0,
+      burstModifier: 0,
+      allOutModifier: 0,
+      aimedModifier: 0,
+      blindFireModifier: 0,
+      trademark: false,
+      concealmentModifier: 0,
+      coverModifier: '0',
+      additionalDamage: false,
+      isOther1: false,
+      isOther2: false,
+      isOther3: false,
+      applyDebuffLabel: 'display:none',
+      applyDamLabel: 'display:inline',
+      backlashLabel: 'display:true',
+      ammoLabel: 'display:none',
+      target: victims[0],
+      chatTitle: '',
+      DN: 9,
+      unskilledLabel: 'display:none',
+      diceroll: null,
+      isFavStyle: 'pointer-events:none;color:gray;display:none',
+      unskilledTest: false,
+      diceList: [10],
+      combinedRollTotal: 10,
+      bonusPlusLabel: 'display:none',
+      displayModifiers: true,
+      modifiers: 0,
+      modifierText: '',
+      modifierLabel: 'display:',
+      cardsPlayed: 0,
+      rollResult: 11,
+      outcome: '',
+      actionTotalContent: '',
+      modifierPlusLabel: 'display:none',
+      resultText: '',
+      resultTextColor:
+        'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
+      damageLabel: 'display: block',
+      damageSubLabel: 'display:block',
+      disconnectLabel: 'display:none',
+      cardsPlayedLabel: 'display:none',
+      notesLabel: 'display:none',
+    };
+    await torgchecks.renderSkillChat(test);
   }
 }

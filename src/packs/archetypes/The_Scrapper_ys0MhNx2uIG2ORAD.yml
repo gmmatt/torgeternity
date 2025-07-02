@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 54400000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.z7Zj7CEp6QKU15aW
+      core: {}
     system:
       category: occultech
       cosm: none
@@ -103,12 +102,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914389548
       modifiedTime: 1722153652301
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.z7Zj7CEp6QKU15aW
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.TwU5pg3OXKknzNFA'
   - _id: fF3wo6bNS33bnk31
     name: Whirlwind
@@ -118,8 +118,7 @@ items:
     folder: null
     sort: 54500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Jk0kUgblznvJQrsI
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -210,12 +209,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914394476
       modifiedTime: 1722153640878
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Jk0kUgblznvJQrsI
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.fF3wo6bNS33bnk31'
   - _id: YstxDnzfvEu7Fqm3
     name: Impact Hammer
@@ -225,8 +225,7 @@ items:
     folder: null
     sort: 300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
+      core: {}
     system:
       cosm: tharkold
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p><p>The heavy head contains a pneumatic mechanism that adds a burst of thrust to the swing and drives a spike forward at the point of impact to greatly increase the force directed at the impact point—if a wielder is strong enough to get the hammer moving in the first place.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
@@ -252,12 +251,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914415715
       modifiedTime: 1722158182874
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.YstxDnzfvEu7Fqm3'
   - _id: 3cpjqoL7Qu1R3hNm
     name: Net Launcher
@@ -267,8 +267,7 @@ items:
     folder: null
     sort: 49100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
+      core: {}
     system:
       cosm: tharkold
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#blas:]{Blast}</p>\n<p>A weighted net fits into a tube launcher powered by a tightly wound torsion spring. A mechanical engine is needed to wind the spring or recover the net after it’s been launched. The net acts just like a Grappling attempt (page 123), with a hit dealing −2 damage. A Good hit restrains the target temporarily and does full damage. An Outstanding hit restrains and Stymies the target. Technodemons often employ a special version of this weapon that deploys a net with the same properties as a pain gauntlet.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -297,12 +296,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914426740
       modifiedTime: 1722158221388
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.3cpjqoL7Qu1R3hNm'
   - _id: y7Vavfy3rgxzs0mG
     name: Filter Mask
@@ -312,8 +312,7 @@ items:
     folder: null
     sort: 6700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.WP88DoYjrypNKL22
+      core: {}
     system:
       cosm: panPacifica
       description: "<p>Advanced microfibers screen particles from the air, making the wearer immune to inhaled poisons and toxins.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -330,12 +329,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914445650
       modifiedTime: 1722158284036
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.WP88DoYjrypNKL22
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.y7Vavfy3rgxzs0mG'
   - _id: UKW0uwOazYvkWwEK
     name: Flares
@@ -345,8 +345,7 @@ items:
     folder: null
     sort: 6750000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -363,12 +362,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914453148
       modifiedTime: 1722158293548
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.UKW0uwOazYvkWwEK'
   - _id: qJ5eghHKWM2cg5ig
     name: Radiation Detector
@@ -378,8 +378,7 @@ items:
     folder: null
     sort: 6800000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.6CYd0HCZf6RrM4JB
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>Also known as a Geiger counter. When switched on it automatically alerts the user of dangerous radiation levels. Grants a +4 bonus to find items that are more radioactive than the background area.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -396,12 +395,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914458276
       modifiedTime: 1722158307107
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.6CYd0HCZf6RrM4JB
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.qJ5eghHKWM2cg5ig'
   - _id: S2Lgu82VZjuG0Q0M
     name: Thav Radiation Filter MK II
@@ -411,8 +411,7 @@ items:
     folder: null
     sort: 39000000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.hkVo701Qmh9NUKVg
+      core: {}
     system:
       cosm: tharkold
       description: <p>Wounds from radiation heal normally.</p>
@@ -430,12 +429,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914511570
       modifiedTime: 1722158258204
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.hkVo701Qmh9NUKVg
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.S2Lgu82VZjuG0Q0M'
   - _id: 6QxM5pY3h7MRaTHM
     name: Digan CyberArm
@@ -465,7 +465,7 @@ items:
         flags: {}
         tint: '#ffffff'
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -473,6 +473,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -506,7 +507,7 @@ items:
         flags: {}
         tint: '#ffffff'
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -514,6 +515,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -523,8 +525,7 @@ items:
     folder: null
     sort: 600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.eqLYuyoAdwVRcQrQ
+      core: {}
     system:
       cosm: tharkold
       description: "<p>Digan constructions are bulky but powerful, and this modular replacement arm is no exception. It increases <em>Strength</em> tests and damage by +2 , and has +3 Armor on that limb only. The arm’s Armor protects the character’s torso if he takes an Active Defense. The <em>Strength</em> increase applies only to tests and attacks made with that limb.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -542,12 +543,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693914499180
       modifiedTime: 1722158255468
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.eqLYuyoAdwVRcQrQ
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM'
   - _id: ryISQSHD5wRghm0e
     name: Diffrax Plate
@@ -557,8 +559,7 @@ items:
     folder: null
     sort: 52500000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
+      core: {}
     system:
       cosm: tharkold
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>\n<p>Black metallic armor cobbled together from energy-diffusing salvage. It resembles obsidian, and energy skitters across its surface, sizzling and popping until it coalesces and re-emerges projected at some different angle.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -581,12 +582,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146924
       modifiedTime: 1722158231404
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.ryISQSHD5wRghm0e'
   - name: Human
     type: race
@@ -618,12 +620,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582232723
       modifiedTime: 1729582232723
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: hhVPF9K1d6OKbb5o
     sort: 100000
     _key: '!actors.items!ys0MhNx2uIG2ORAD.hhVPF9K1d6OKbb5o'
@@ -651,7 +654,7 @@ effects:
     flags: {}
     tint: '#ffffff'
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -659,6 +662,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -687,7 +691,7 @@ effects:
     flags: {}
     tint: '#ffffff'
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -695,6 +699,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1207,7 +1212,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1219,14 +1223,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693914389548
   modifiedTime: 1729013496591
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!ys0MhNx2uIG2ORAD'
 

@@ -8,8 +8,7 @@ items:
     type: gear
     sort: 1400000
     flags:
-      core:
-        sourceId: Item.wl0B9YS9kJ0vhxwg
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -27,20 +26,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156505479
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.wl0B9YS9kJ0vhxwg
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.WfpWhmXMDhdsA6VN'
   - _id: 8r2D7ws1w2oTQZv6
     name: Flares (3)
     type: gear
     sort: 1600000
     flags:
-      core:
-        sourceId: Item.JniN3c3c6HNv7cSp
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -58,20 +57,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156519367
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.JniN3c3c6HNv7cSp
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.8r2D7ws1w2oTQZv6'
   - _id: tYj1sE2cK5Dqrc5r
     name: Handcuffs
     type: gear
     sort: 2700000
     flags:
-      core:
-        sourceId: Item.ByDipt9PRxbFf96I
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -89,20 +88,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156523631
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.ByDipt9PRxbFf96I
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.tYj1sE2cK5Dqrc5r'
   - _id: YNsCLlOR3zgPCtdI
     name: Tracking Device
     type: gear
     sort: 2800000
     flags:
-      core:
-        sourceId: Item.zGj5mxLW7ygVnIKC
+      core: {}
     img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
@@ -122,12 +121,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: 1722156527207
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.zGj5mxLW7ygVnIKC
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.YNsCLlOR3zgPCtdI'
   - _id: F5aP7JJO0Up7FJLN
     name: Mauser Pistol
@@ -137,8 +137,7 @@ items:
     folder: null
     sort: 18300000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.IM84bwdaJWaAVAIj
+      core: {}
     system:
       cosm: nileEmpire
       description: "<p>An often-copied design that features a high muzzle velocity and excellent penetration and a distinctive box magazine in front of the trigger. It remains extremely popular in the Nile Empire, where knock-offs are still manufactured.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -166,20 +165,20 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693911089244
       modifiedTime: 1722156447519
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.IM84bwdaJWaAVAIj
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.F5aP7JJO0Up7FJLN'
   - _id: gz6ZDd5HIAYQOsyC
     name: Fist
     type: customAttack
     sort: 1000000
     flags:
-      core:
-        sourceId: Item.ewfPYWfFRJSZ1FOs
+      core: {}
     img: systems/torgeternity/images/icons/fist-icon.webp
     effects: []
     folder: null
@@ -197,12 +196,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694869337163
       modifiedTime: 1694869355340
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Item.ewfPYWfFRJSZ1FOs
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.gz6ZDd5HIAYQOsyC'
   - _id: UfhSHSsuH4nExjRt
     name: Leather Vest
@@ -212,8 +212,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      core: {}
     system:
       cosm: nileEmpire
       description: >-
@@ -237,12 +236,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722156497255
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.UfhSHSsuH4nExjRt'
   - name: Extra Magazines
     type: ammunition
@@ -277,12 +277,13 @@ items:
     _stats:
       compendiumSource: Item.KRYQ71jof26XeGEv
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722109055958
       modifiedTime: 1722156440727
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.gBsngeXIOkpN6rC4'
   - _id: uGeVAUPHf5j4e5Gu
     name: Brawler
@@ -292,8 +293,7 @@ items:
     folder: null
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.8DjcKPmDCOTdObL6
+      core: {}
     system:
       category: prowess
       cosm: none
@@ -385,12 +385,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.8DjcKPmDCOTdObL6
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722156409095
       modifiedTime: 1722156409095
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.uGeVAUPHf5j4e5Gu'
   - _id: A0o61qpmZKYS0Enn
     name: Super Skill (Intimidation)
@@ -426,12 +427,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn.FhLvfZqxa0xs4Ay2
       - origin: Item.c1L1ioMuPK1NLBN0
@@ -463,19 +465,19 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn.D9VJayk42Xb85aV0
     folder: gjZiCPX5knOIpsHd
     sort: 425000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+      core: {}
     system:
       category: pulpPowers
       cosm: nileEmpire
@@ -567,12 +569,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722358614372
       modifiedTime: 1722358614372
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn'
   - name: Human
     type: race
@@ -604,12 +607,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582208843
       modifiedTime: 1729582208843
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: nvlwBY4LLCZwJVMv
     sort: 100000
     _key: '!actors.items!REeNzywr6VElHSWZ.nvlwBY4LLCZwJVMv'
@@ -644,12 +648,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722358614376
       modifiedTime: 1722358614376
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.effects!REeNzywr6VElHSWZ.a1A2szfBznmjFxeY'
   - origin: >-
       Compendium.torgeternity.archetypes.Actor.REeNzywr6VElHSWZ.Item.A0o61qpmZKYS0Enn
@@ -681,12 +686,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722358614376
       modifiedTime: 1722358614376
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.effects!REeNzywr6VElHSWZ.YSR6jOqg0EuB5Ulf'
 folder: null
 sort: 100001
@@ -1197,7 +1203,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1209,14 +1214,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693911035741
   modifiedTime: 1729013450336
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!REeNzywr6VElHSWZ'
 

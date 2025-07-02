@@ -11,8 +11,7 @@ items:
     folder: null
     sort: 8900000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
+      core: {}
     system:
       category: leadership
       cosm: none
@@ -103,12 +102,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913842164
       modifiedTime: 1722153610438
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.1EwZ557khUp8utQa'
   - _id: 4D9jNE3QVpfIK5ju
     name: Thav-9 SMG
@@ -118,8 +118,7 @@ items:
     folder: null
     sort: 20700000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
+      core: {}
     system:
       cosm: tharkold
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short Burst}</p>\n<p>A standard submachine gun design used in Tharkold. Sophisticated muzzle brake design prevents <q>climbing</q> problems when fired on Long Burst.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -147,12 +146,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913890908
       modifiedTime: 1722158040021
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.4D9jNE3QVpfIK5ju'
   - _id: 8oEBq0nCbKQZBYmI
     name: Flares
@@ -162,8 +162,7 @@ items:
     folder: null
     sort: 2025000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+      core: {}
     system:
       cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
@@ -180,12 +179,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913935699
       modifiedTime: 1722357053902
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.8oEBq0nCbKQZBYmI'
   - _id: lP1gDobehm2cIDnI
     name: Telekinesis
@@ -195,8 +195,7 @@ items:
     folder: null
     sort: 150000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -223,12 +222,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1693913984781
       modifiedTime: 1693914330460
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.lP1gDobehm2cIDnI'
   - _id: Uv3ApXgF1UfEH3ay
     name: Pain Gauntlet (Attack)
@@ -238,8 +238,7 @@ items:
     folder: null
     sort: 0
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-ausruestung.vBsXbuQHBLGfECPi
+      core: {}
     system:
       ap: 0
       attackWith: unarmedCombat
@@ -255,12 +254,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1672297398089
       modifiedTime: 1693914254765
       lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.vBsXbuQHBLGfECPi
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.Uv3ApXgF1UfEH3ay'
   - _id: i45pPCUAHmPwtlVJ
     name: Stab Vest
@@ -270,8 +270,7 @@ items:
     folder: null
     sort: 16600000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.G9m8o4kbueF7EWdt
+      core: {}
     system:
       cosm: coreEarth
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>Lighter and more comfortable than a ballistic vest, and designed more to stop slashing and piercing weapons. Still somewhat effective against bullets.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -294,12 +293,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146747
       modifiedTime: 1722157722733
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.G9m8o4kbueF7EWdt
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.i45pPCUAHmPwtlVJ'
   - _id: foI6JV88RYV10i7V
     name: Leather Armor
@@ -309,8 +309,7 @@ items:
     folder: null
     sort: 6900000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.6GTnNpLUtydDJVi1
+      core: {}
     system:
       cosm: aysle
       description: "<p>Animal hides tanned or boiled to a stiffer, more durable finish, then reinforced with studs or stitched seams. Found in some form in every cosm.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
@@ -333,12 +332,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711551146690
       modifiedTime: 1722157716477
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.6GTnNpLUtydDJVi1
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.foI6JV88RYV10i7V'
   - name: Extra Magazines
     type: ammunition
@@ -373,12 +373,13 @@ items:
     _stats:
       compendiumSource: Item.KRYQ71jof26XeGEv
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722109312435
       modifiedTime: 1722157728294
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.HxDE38fw5P5C3piX'
   - _id: jMfjA1rvFH5x3A9Z
     name: Psionic
@@ -480,12 +481,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.4ZtIS4h8WRGarKIV
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.jMfjA1rvFH5x3A9Z'
   - name: Pain Gauntlet
     type: gear
@@ -512,12 +514,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.1yvr2buYP58FJnE3
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _id: kTd6nbSynTup5qkZ
     sort: 3400000
     _key: '!actors.items!6ThunRV3sj9ZSMQW.kTd6nbSynTup5qkZ'
@@ -529,8 +532,7 @@ items:
     folder: null
     sort: 100000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -560,12 +562,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.nFGTz9tIc1q3JMvQ'
   - _id: jVVPxqxbRFvMFqHr
     name: Telekinetic Barrier
@@ -575,8 +578,7 @@ items:
     folder: null
     sort: 200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
+      core: {}
     system:
       ap: 0
       applyArmor: false
@@ -604,12 +606,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.jVVPxqxbRFvMFqHr'
   - _id: 16w2fwrhuFzIJGuv
     name: Caltrops
@@ -641,12 +644,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -674,12 +678,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.KKJPrdjO5sFkhZzF
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722357050918
       modifiedTime: 1722357050918
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.16w2fwrhuFzIJGuv'
   - name: Human
     type: race
@@ -711,12 +716,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729582228755
       modifiedTime: 1729582228755
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: 4XelAqgy7s6Z1mNx
     sort: 100000
     _key: '!actors.items!6ThunRV3sj9ZSMQW.4XelAqgy7s6Z1mNx'
@@ -747,12 +753,13 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722357050923
       modifiedTime: 1722357050923
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1270,7 +1277,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1282,14 +1288,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1693913842164
   modifiedTime: 1729013492047
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!actors!6ThunRV3sj9ZSMQW'
 

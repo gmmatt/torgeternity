@@ -1,20 +1,29 @@
 import * as torgchecks from './torgchecks.js';
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
 /**
  *
  */
-export class TestUpdate extends FormApplication {
-  /**
-   *
-   */
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.template = 'systems/torgeternity/templates/test-update.hbs';
-    options.width = 'auto';
-    options.height = 'auto';
-    options.title = 'Skill Test';
-    options.resizeable = false;
-    return options;
+export class TestUpdate extends HandlebarsApplicationMixin(ApplicationV2) {
+
+  static DEFAULT_OPTIONS = {
+    tag: 'form',
+    classes: ['torgeternity', 'application', 'test-dialog'],
+    window: {
+      title: 'Skill Test',
+      resizable: false,
+      contentClasses: ["standard-form"],
+    },
+    form: {
+      handler: TestUpdate.#onRoll,
+      submitOnChange: false,
+      closeOnSubmit: true,
+    }
+  }
+
+  static PARTS = {
+    body: { template: 'systems/torgeternity/templates/test-update.hbs' },
+    footer: { template: "templates/generic/form-footer.hbs" },
   }
 
   /**
@@ -29,24 +38,15 @@ export class TestUpdate extends FormApplication {
   /**
    *
    */
-  getData() {
-    const data = super.getData();
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    context.test = this.test;
+    context.config = CONFIG.torgeternity;
 
-    data.test = this.test;
-
-    data.config = CONFIG.torgeternity;
-
-    return data;
-  }
-
-  /**
-   *
-   * @param html
-   */
-  activateListeners(html) {
-    html.find('.update-roll-button').click(this._onModify.bind(this));
-
-    super.activateListeners(html);
+    context.buttons = [
+      { type: 'submit', icon: 'fas fa-redo', label: 'torgeternity.sheetLabels.update' }
+    ]
+    return context;
   }
 
   /**
@@ -54,69 +54,14 @@ export class TestUpdate extends FormApplication {
    * @param event
    * @param html
    */
-  async _onModify(event, html) {
-    // Set DN Descriptor
-    this.test.DNDescriptor = document.getElementById('difficulty').value;
+  static async #onRoll(event, form, formData) {
+    const fields = formData.object;
 
-    // Add movement modifier
-    if (document.getElementById('running-radio').checked) {
-      this.test.movementModifier = -2;
-    } else {
-      this.test.movementModifier = 0;
-    }
+    foundry.utils.mergeObject(this.test, fields, { inplace: true });
 
-    // Add multi-action modifier
-    if (document.getElementById('multi1-radio').checked) {
-      this.test.multiModifier = 0;
-    } else if (document.getElementById('multi2-radio').checked) {
-      this.test.multiModifier = -2;
-    } else if (document.getElementById('multi3-radio').checked) {
-      this.test.multiModifier = -4;
-    } else {
-      this.test.multiModifier = -6;
-    }
-
-    // Add multi-target modifier
-    if (document.getElementById('targets1-radio').checked) {
-      this.test.targetsModifier = 0;
-    } else if (document.getElementById('targets2-radio').checked) {
-      this.test.targetsModifier = -2;
-    } else if (document.getElementById('targets3-radio').checked) {
-      this.test.targetsModifier = -4;
-    } else if (document.getElementById('targets4-radio').checked) {
-      this.test.targetsModifier = -6;
-    } else if (document.getElementById('targets5-radio').checked) {
-      this.test.targetsModifier = -8;
-    } else {
-      this.test.targetsModifier = -10;
-    }
-
-    // Add other modifier 1
-    if (document.getElementById('other1-modifier-text').value != 0) {
-      this.test.isOther1 = true;
-      this.test.other1Description = document.getElementById('other1-description-text').value;
-      this.test.other1Modifier = document.getElementById('other1-modifier-text').value;
-    } else {
-      this.test.isOther1 = false;
-    }
-
-    // Add other modifier 2
-    if (document.getElementById('other2-modifier-text').value != 0) {
-      this.test.isOther2 = true;
-      this.test.other2Description = document.getElementById('other2-description-text').value;
-      this.test.other2Modifier = document.getElementById('other2-modifier-text').value;
-    } else {
-      this.test.isOther2 = false;
-    }
-
-    // Add other modifier 3
-    if (document.getElementById('other3-modifier-text').value != 0) {
-      this.test.isOther3 = true;
-      this.test.other3Description = document.getElementById('other3-description-text').value;
-      this.test.other3Modifier = document.getElementById('other3-modifier-text').value;
-    } else {
-      this.test.isOther3 = false;
-    }
+    this.test.isOther1 = fields.other1Modifier != 0;
+    this.test.isOther2 = fields.other2Modifier != 0;
+    this.test.isOther3 = fields.other3Modifier != 0;
 
     this.test.diceroll = null;
 

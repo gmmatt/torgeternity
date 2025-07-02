@@ -1,0 +1,218 @@
+form .window-content button,
+form .window-content select {
+  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+  background-image: url(../images/lightning_bar.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  color: white;
+}
+
+form.test-dialog footer button {
+  margin-top: 1rem;
+  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+  background-image: url(../images/lightning_bar.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  color: white;
+  cursor: pointer;
+}
+
+
+a.button,
+button {
+  --button-text-color: white;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=search],
+input[type=file],
+select {
+  --input-text-color: white;
+  --input-background-color: black;
+  --input-border-color: white;
+  --input-placeholder-color: var(--color-light-5);
+}
+
+
+.standard-form .form-group>label,
+.standard-form .form-group>span.label {
+  color: white;
+}
+
+.themed.theme-light,
+.themed.theme-dark {
+  --color-text-secondary: white;
+  --color-text-emphatic: white;
+  --color-text-subtle: white;
+  --color-form-hint: white;
+}
+
+body.theme-light .application,
+body.theme-light.application {
+  --background: var(--color-cool-5-90);
+  --color-header-background: rgba(0, 0, 0, 0.5);
+  --color-border: var(--color-cool-4);
+  --color-tabs-border: var(--color-light-5);
+  --color-fieldset-border: var(--color-light-6);
+  --color-form-hint: var(--color-light-5);
+  --color-form-hint-hover: var(--color-light-4);
+  --color-form-label: var(--color-light-4);
+  --color-form-label-hover: var(--color-light-2);
+  --color-select-option-bg: transparent;
+
+  --color-text-emphatic: var(--color-light-1);
+  --color-text-primary: var(--color-light-2);
+  --color-text-secondary: var(--color-light-3);
+  --color-text-subtle: var(--color-light-5);
+  --color-text-selection: var(--color-light-1);
+  --color-text-selection-bg: var(--color-cool-3);
+}
+
+body,
+body.theme-dark,
+body.theme-light,
+app,
+app.theme-dark,
+app.theme-light {
+
+  --color-underline-header: #782e22;
+  --input-height: 26px;
+  --checkbox-background-color: white;
+  --color-border-light-tertiary: #7a7971;
+
+  --color-text-primary: ;
+  --color-text-secondary: white;
+  --color-text-emphatic: white;
+  --color-text-subtle: white;
+  --color-form-hint: white;
+}
+
+/* Broken links become normal text */
+
+a.entity-link.broken,
+a.content-link.broken,
+a.inline-roll.broken {
+  color: black !important;
+  text-decoration: inherit;
+  cursor: text;
+  background: none;
+  border: none;
+  padding: 0;
+  text-shadow: none;
+}
+
+a.entity-link.broken:hover,
+a.content-link.broken:hover,
+a.inline-roll.broken:hover {
+  text-shadow: none;
+}
+
+.fa-unlink:before {
+  display: none;
+}
+
+
+
+.sidebar-tab {
+  color: white;
+  background-image: url(../images/thunder.webp);
+  z-index: 20;
+  background-size: 100% 100%;
+  height: 100%;
+  border: none;
+
+  a:hover {
+    text-shadow: 0 0 10px #001aff;
+  }
+
+  textarea#chat-message {
+    color: black;
+  }
+}
+
+
+
+#sidebar .tabs {
+  flex: 0 0 32px;
+  box-sizing: border-box;
+  margin: 0 0 5px;
+  border-bottom: 1px solid #2c6d6d;
+  box-shadow: 0 0 10px #227878;
+
+  &>.item.active {
+    color: #fff;
+    border: 1px solid #154949;
+    border-bottom: none;
+    box-shadow: 0 0 6px inset #154949;
+  }
+
+  .item.active {
+    text-shadow: 0 0 10px #154949;
+  }
+}
+
+
+#hotbar {
+  width: 630px;
+
+  .bar-controls {
+    flex: 0 0 55px;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 120%;
+    margin: 0 2px;
+    text-align: center;
+    background: url(../images/resizerRound.webp);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    box-shadow: none;
+    border-radius: 40%;
+    font-weight: bolder;
+  }
+
+  .bar-controls a,
+  .bar-controls a.page-control,
+  .bar-controls span.page-number {
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    display: block;
+    line-height: 5px;
+    font-size: 20px;
+  }
+
+  .bar-controls a:hover {
+    transform: scale(1.8);
+  }
+
+  #action-bar ol#macro-list {
+    border: none;
+  }
+
+  #action-bar ol#macro-list li.macro {
+    position: relative;
+    flex: 0 0 50px;
+    height: 50px;
+    background: url(../images/backg-page.webp);
+    border-radius: 25%;
+    box-shadow: 0 0 5px #000 inset;
+    cursor: pointer;
+    border-radius: 0% 0% 75%;
+  }
+
+  #action-bar ol#macro-list li.macro.active {
+    border-radius: 10%;
+  }
+
+  #action-bar ol#macro-list li.macro:hover {
+    box-shadow: 0 0 10px #004777 inset;
+  }
+}

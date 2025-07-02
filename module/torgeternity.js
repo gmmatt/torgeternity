@@ -1,6 +1,6 @@
 'use strict';
 import { torgeternity } from './config.js';
-import * as Chat from './chat.js';
+import TorgeternityChatLog from './torgeternityChatLog.js';
 import TorgeternityItem from './documents/item/torgeternityItem.js';
 import TorgeternityActor from './documents/actor/torgeternityActor.js';
 import TorgeternityItemSheet from './sheets/torgeternityItemSheet.js';
@@ -43,6 +43,8 @@ import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import MacroHub from './MacroHub.js';
 
+const { DialogV2 } = foundry.applications.api;
+
 Hooks.once('init', async function () {
   console.log('torgeternity | Initializing Torg Eternity System');
   // CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
@@ -76,7 +78,7 @@ Hooks.once('init', async function () {
 
   // ----scenes
   // CONFIG.Scene.sheetClass = torgeternitySceneConfig;
-  DocumentSheetConfig.registerSheet(Scene, 'torgeternity', torgeternitySceneConfig, {
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Scene, 'torgeternity', torgeternitySceneConfig, {
     label: 'Torg Eternity Scene Config',
     makeDefault: true,
   });
@@ -85,11 +87,59 @@ Hooks.once('init', async function () {
   // ---custom user class
   // Player list disabled for now
   CONFIG.ui.players = TorgeternityPlayerList;
+  CONFIG.ui.chat = TorgeternityChatLog;
 
   // ---cards
   CONFIG.Cards.documentClass = torgeternityCards;
   CONFIG.cardTypes = torgeternity.cardTypes;
 
+
+  ui.GMScreen = new GMScreen();
+  ui.macroHub = new MacroHub();
+  // all settings after config
+  registerTorgSettings();
+  // ---register items and actors
+  foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Items.registerSheet('torgeternity', TorgeternityItemSheet, {
+    makeDefault: true,
+  });
+
+  foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
+  foundry.documents.collections.Actors.registerSheet('torgeternity', TorgeternityActorSheet, {
+    makeDefault: true,
+  });
+
+  // ---register cards
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
+    label: 'Torg Player Hand',
+    types: ['hand'],
+    makeDefault: true,
+  });
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
+    label: 'Torg Pile',
+    types: ['pile'],
+    makeDefault: true,
+  });
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
+    label: 'Torg Deck',
+    types: ['deck'],
+    makeDefault: true,
+  });
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Card, 'core', torgeternityCardConfig, {
+    label: 'Torg Eternity Card Configuration',
+    types: ['destiny', 'drama', 'cosm'],
+    makeDefault: true,
+  });
+
+  // ----------preloading handlebars templates
+  preloadTemplates();
+  // adding special torg buttons
+  initTorgControlButtons();
+  // create torg shortcuts
+  createTorgShortcuts();
+});
+
+Hooks.once('i18nInit', () => {
   // ---localizing entities labels
   CONFIG.Actor.typeLabels = {
     stormknight: game.i18n.localize('torgeternity.sheetLabels.stormknight'),
@@ -123,50 +173,7 @@ Hooks.once('init', async function () {
     race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
   };
 
-  ui.GMScreen = new GMScreen();
-  ui.macroHub = new MacroHub();
-  // all settings after config
-  registerTorgSettings();
-  // ---register items and actors
-  Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('torgeternity', TorgeternityItemSheet, {
-    makeDefault: true,
-  });
-
-  Actors.unregisterSheet('core', ItemSheet);
-  Actors.registerSheet('torgeternity', TorgeternityActorSheet, {
-    makeDefault: true,
-  });
-
-  // ---register cards
-  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
-    label: 'Torg Player Hand',
-    types: ['hand'],
-    makeDefault: true,
-  });
-  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
-    label: 'Torg Pile',
-    types: ['pile'],
-    makeDefault: true,
-  });
-  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
-    label: 'Torg Deck',
-    types: ['deck'],
-    makeDefault: true,
-  });
-  DocumentSheetConfig.registerSheet(Card, 'core', torgeternityCardConfig, {
-    label: 'Torg Eternity Card Configuration',
-    types: ['destiny', 'drama', 'cosm'],
-    makeDefault: true,
-  });
-
-  // ----------preloading handlebars templates
-  preloadTemplates();
-  // adding special torg buttons
-  initTorgControlButtons();
-  // create torg shortcuts
-  createTorgShortcuts();
-});
+})
 
 Hooks.once('setup', async function () {
   modifyTokenBars();
@@ -187,8 +194,30 @@ Hooks.once('diceSoNiceReady', (dice3d) => {
   registerDiceSoNice(dice3d);
 });
 
+/*
+Hooks.on("renderUIConfig", (config, html, context, options) => {
+  let select = html.querySelector('[name="core.uiConfig.colorScheme.applications');
+  if (select) {
+    select.disabled = true;
+    let hint = select.parentElement.parentElement.querySelector("p.hint");
+    if (hint) hint.innerText = game.i18n.localize("torgeternity.core.forceDarkModeHint");
+  }
+})
+  */
+
 // -------------once everything ready
 Hooks.on('ready', async function () {
+
+  /*
+  // Force DARK application colour scheme
+  const uiconfig = game.settings.get('core', 'uiConfig');
+  if (uiconfig.colorScheme.applications !== 'dark') {
+    //ui.notifications.warn('TORG system works best when the Applications theme is set to DARK');
+    uiconfig.colorScheme.applications = 'dark';
+    game.settings.set('core', 'uiConfig', uiconfig);
+  }
+    */
+
   // migration script
   if (game.user.isGM) torgMigration();
 
@@ -210,35 +239,30 @@ Hooks.on('ready', async function () {
   let lang = game.settings.get('core', 'language');
   torgeternity.supportedLanguages.indexOf(lang) == -1 ? (lang = 'en') : (lang = lang);
 
-  torgeternity.welcomeMessage = await renderTemplate(
+  torgeternity.welcomeMessage = await foundry.applications.handlebars.renderTemplate(
     `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
   );
 
   // ----rendering welcome message
-  if (game.settings.get('torgeternity', 'welcomeMessage') == true) {
-    const d = new Dialog(
-      {
-        title: 'Welcome to the Official Torg Eternity System for Foundry VTT!',
-        content: torgeternity.welcomeMessage,
-        buttons: {
-          one: {
-            icon: '<i class="fas fa-check"></i>',
-            label: `${game.i18n.localize('torgeternity.submit.OK')}`,
-          },
-          two: {
-            icon: '<i class="fas fa-ban"></i>',
-            label: `${game.i18n.localize('torgeternity.submit.dontShow')}`,
-            callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
-          },
-        },
+  if (game.settings.get('torgeternity', 'welcomeMessage') === true) {
+    DialogV2.confirm({
+      window: { title: 'Welcome to the Torg Eternity System for Foundry VTT!', },
+      content: torgeternity.welcomeMessage,
+      yes: {
+        icon: 'fas fa-check',
+        label: 'torgeternity.submit.OK',
       },
-      {
+      no: {
+        icon: 'fas fa-ban',
+        label: 'torgeternity.submit.dontShow',
+        callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
+      },
+      position: {
+        top: 150,
         left: 100,
-        top: 100,
-        resizable: true,
+        width: 675,
       }
-    );
-    d.render(true);
+    });
   }
 
   // ------Ask about hiding nonlocal compendium
@@ -246,31 +270,27 @@ Hooks.on('ready', async function () {
     game.settings.get('torgeternity', 'welcomeMessage') == true &&
     !game.settings.get('torgeternity', 'hideForeignCompendium')
   ) {
-    const d = new Dialog(
-      {
-        title: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.title'),
-        content: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.content'),
-        buttons: {
-          one: {
-            icon: `<i class="fas fa-check"></i>`,
-            label: game.i18n.localize('torgeternity.yesNo.true'),
-            callback: async () => {
-              await game.settings.set('torgeternity', 'hideForeignCompendium', true);
-              window.location.reload();
-            },
-          },
-          two: {
-            icon: '<i class="fas fa-ban"></i>',
-            label: game.i18n.localize('torgeternity.yesNo.false'),
-          },
+    DialogV2.confirm({
+      window: { title: 'torgeternity.dialogWindow.hideForeignCompendium.title', },
+      content: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.content'),
+      yes: {
+        icon: 'fas fa-check',
+        label: 'torgeternity.yesNo.true',
+        callback: async () => {
+          await game.settings.set('torgeternity', 'hideForeignCompendium', true);
+          window.location.reload();
         },
       },
+      no: {
+        icon: 'fas fa-ban',
+        label: 'torgeternity.yesNo.false',
+      },
+      position:
       {
-        top: 860,
-        left: 100,
+        top: 100,
+        left: 235,
       }
-    );
-    d.render(true);
+    });
   }
 
   // ----setup cards if needed
@@ -300,83 +320,6 @@ Hooks.on('ready', async function () {
   // img.style.content = `url(${path})`
   // })
 
-  // -------define a dialog for external links
-
-  const dialData = {
-    title: game.i18n.localize('torgeternity.dialogWindow.externalLinks.title'),
-    content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
-    buttons: {
-      one: {
-        icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
-        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.reference'),
-        callback: () => {
-          new FrameViewer('http://torg-gamereference.com/index.php', {
-            title: 'torg game reference',
-            top: 200,
-            left: 200,
-            width: 520,
-            height: 520,
-            resizable: true,
-          }).render(true);
-        },
-      },
-      two: {
-        icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
-        label: '<p>Discord</p>',
-        callback: () => {
-          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openDiscord'));
-          window.open('https://discord.gg/foundryvtt', '_blank');
-        },
-      },
-
-      three: {
-        icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
-        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.bug'),
-        callback: () => {
-          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openIssue'));
-          window.open('https://github.com/gmmatt/torgeternity/issues/new', '_blank');
-        },
-      },
-      four: {
-        icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
-        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.publisher'),
-        callback: () => {
-          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openUlisses'));
-          window.open('https://ulisses-us.com', '_blank');
-        },
-      },
-    },
-  };
-  const dialOption = {
-    width: 'auto',
-    height: 250,
-    left: 100,
-    top: 20,
-  };
-  // adding french links (shamelessly)
-  if (game.settings.get('core', 'language') == 'fr') {
-    dialData.buttons.five = {
-      icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo BBE" style="filter:grayscale(1);max-height:3em">',
-      label: '<p>Distr. français</p>',
-      callback: () => {
-        ui.notifications.info(
-          'votre navigateur va ouvrir le site de BlackBook Editions dans un nouvel onglet  '
-        );
-        window.open('https://www.black-book-editions.fr/catalogue.php?id=668', '_blank');
-      },
-    };
-  }
-  const externalLinks = new Dialog(dialData, dialOption);
-  // ----logo image
-  const logo = document.getElementById('logo');
-  logo.style.position = 'absolute';
-  logo.setAttribute('src', '/systems/torgeternity/images/vttLogo.webp');
-  // ----open links when click on logo
-  logo.title = 'external links';
-  logo.addEventListener('click', function () {
-    externalLinks.render(true);
-  });
-
   /*
   //-----applying players card ui:
   if (game.user.role == false || game.user.role != 4) {
@@ -395,6 +338,110 @@ Hooks.on('ready', async function () {
   };
 */
 });
+
+let externalLinks;
+
+Hooks.on("renderSettings", async (app, html) => {
+  const systemRow = html.querySelectorAll("section.info .system")?.[0];
+  if (!systemRow) {
+    console.warn('No system button available for links');
+    return;
+  }
+  let button = document.createElement("button");
+  button.type = "button";
+  button.style.height = "auto";
+  button.dataset.action = "showTorgLinks";
+
+  const icon = document.createElement("img");
+  icon.setAttribute('src', '/systems/torgeternity/images/te-logo.webp');
+  icon.inert = true;
+  button.append(icon);
+  systemRow.insertAdjacentElement("afterend", button);
+
+  button.addEventListener('click', () => {
+    // Create dialog if not done yet
+    if (!externalLinks) {
+      const dialogOptions = {
+        classes: ['torgeternity', 'externalLinks'],
+        window: {
+          title: 'torgeternity.dialogWindow.externalLinks.title',
+        },
+        position: {
+          left: 100,
+          top: 20,
+        },
+        content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
+        buttons: [
+          {
+            action: 'reference',
+            icon: 'fa-solid fa-expand-arrows-alt',
+            label: 'torgeternity.dialogWindow.externalLinks.reference',
+            callback: () => {
+              new foundry.applications.sidebar.apps.FrameViewer({  // will be removed in Foundry V15
+                url: 'http://torg-gamereference.com/index.php',
+                window: {
+                  title: 'torg game reference',
+                  resizable: true,
+                },
+                position: {
+                  top: 200,
+                  left: 200,
+                  width: 520,
+                  height: 520,
+                }
+              }).render({ force: true });
+            },
+          },
+          {
+            action: 'discord',
+            icon: 'fab fa-discord',
+            label: 'Discord',
+            callback: () => {
+              ui.notifications.info(game.i18n.localize('torgeternity.notifications.openDiscord'));
+              window.open('https://discord.gg/foundryvtt', '_blank');
+            },
+          },
+          {
+            action: 'bug',
+            icon: 'fa-solid fa-bug',
+            label: 'torgeternity.dialogWindow.externalLinks.bug',
+            callback: () => {
+              ui.notifications.info(game.i18n.localize('torgeternity.notifications.openIssue'));
+              window.open('https://github.com/gmmatt/torgeternity/issues/new', '_blank');
+            },
+          },
+          {
+            action: 'publisher',
+            cls: 'publisher',
+            icon: 'systems/torgeternity/images/ulissesLogo.webp', // not FA so ignored
+            label: 'torgeternity.dialogWindow.externalLinks.publisher',
+            callback: () => {
+              ui.notifications.info(game.i18n.localize('torgeternity.notifications.openUlisses'));
+              window.open('https://ulisses-us.com', '_blank');
+            },
+          },
+        ],
+      };
+
+      // adding french links (shamelessly)
+      if (game.settings.get('core', 'language') === 'fr') {
+        dialogOptions.buttons.push({
+          icon: 'systems/torgeternity/images/BBE_logo.webp', // not FA so ignored
+          label: '<p>Distr. français</p>',
+          callback: () => {
+            ui.notifications.info(
+              'votre navigateur va ouvrir le site de BlackBook Editions dans un nouvel onglet  '
+            );
+            window.open('https://www.black-book-editions.fr/catalogue.php?id=668', '_blank');
+          },
+        });
+      }
+      externalLinks = new DialogV2(dialogOptions);
+    }
+
+    externalLinks.render({ force: true })
+  })
+})
 
 // moved out of the setup hook, because it had no need to be in there
 Hooks.on('hotbarDrop', (bar, data, slot) => {
@@ -436,11 +483,10 @@ Hooks.on('getMonarchHandComponents', (hand, components) => {
         card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard));
       }
       card.toMessage({
-        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
-          card.img
-        }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-          'torgeternity.chatText.discardsCard'
-        )} ${card.name}</span></div>`,
+        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
+          }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
+            'torgeternity.chatText.discardsCard'
+          )} ${card.name}</span></div>`,
       });
     },
   });
@@ -450,11 +496,12 @@ Hooks.on('getMonarchHandComponents', (hand, components) => {
     icon: 'fas fa-broadcast-tower',
     color: '#FFFFFF',
     onclick: (event, card) => {
-      const x = new ImagePopout(card.img, { title: card.name }).render(true, {
+      const image = new foundry.applications.apps.ImagePopout({ src: card.img }, { title: card.name });
+      image.render(true, {
         width: 425,
         height: 650,
       });
-      x.shareImage();
+      image.shareImage();
     },
   });
   components.controls.push({
@@ -470,11 +517,10 @@ Hooks.on('getMonarchHandComponents', (hand, components) => {
         card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard));
       }
       card.toMessage({
-        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
-          card.img
-        }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-          'torgeternity.chatText.playsCard'
-        )} ${card.name}</span></div>`,
+        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
+          }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
+            'torgeternity.chatText.playsCard'
+          )} ${card.name}</span></div>`,
       });
     },
   });
@@ -673,7 +719,7 @@ function rollItemMacro(itemName) {
             adjustedDamage = parseInt(weaponDamage);
         }
 
-        const mTest = {
+        new TestDialog({
           testType: 'attack',
           type: 'attack',
           actor: actor.uuid,
@@ -706,11 +752,10 @@ function rollItemMacro(itemName) {
           movementModifier: 0,
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        };
-
-        new TestDialog(mTest);
+        });
       }
       break;
+
     case 'psionicpower':
     case 'miracle':
     case 'spell':
@@ -738,7 +783,7 @@ function rollItemMacro(itemName) {
           dnDescriptor = 'standard';
         }
 
-        const test = {
+        new TestDialog({
           testType: 'power',
           actor: actor.uuid,
           actorPic: actor.img,
@@ -767,12 +812,10 @@ function rollItemMacro(itemName) {
           chatNote: '',
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        };
-
-        new TestDialog(test);
+        });
         /*
             // this will cause the power to be printed to the chat
-            return item.roll({ async: false });
+            return await item.roll();
             /* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
                         var powerData = item.system;
                         var skillData = item.actor.system.skills[powerData.skill];
@@ -795,7 +838,7 @@ function rollItemMacro(itemName) {
       break;
     default:
       // this will cause the item to be printed to the chat
-      return item.roll({ async: false });
+      return item.roll();
     // ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
   }
 }
@@ -969,17 +1012,26 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
   }
 });
 
-// link StormKnight Prototype Token to the actor
-Hooks.on('preCreateActor', (actor, data, options, userId) => {
-  if (data.type === 'stormknight' && !data.hasOwnProperty('prototypeToken')) {
-    actor.updateSource({ 'prototypeToken.actorLink': true });
-  }
-  if (data.type === 'vehicle' && actor.img.includes('mystery-man')) {
-    actor.updateSource({
-      'prototypeToken.texture.src':
-        'systems/torgeternity/images/characters/vehicle-land-Token.webp',
-      img: 'systems/torgeternity/images/characters/vehicle-land.webp',
-    });
+// change the generic threat token to match the cosm's one if it's set in the scene
+Hooks.on('preCreateToken', async (...args) => {
+  if (args[0].texture.src.includes('threat')) {
+    const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
+    if (!cosm) return;
+    if (
+      [
+        'coreEarth',
+        'livingLand',
+        'nileEmpire',
+        'aysle',
+        'cyberpapacy',
+        'tharkold',
+        'panPacifica',
+        'orrorsh',
+      ].includes(cosm)
+    )
+      args[0].updateSource({
+        'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp',
+      });
   }
 });
 
@@ -1022,11 +1074,6 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
 Hooks.on('deleteActor', async (actor, data1, data2) => {
   if (!game.user.isGM || actor.type != 'stormknight') return;
   actor.getDefaultHand()?.delete();
-});
-
-Hooks.on('renderChatLog', (app, html, data) => {
-  // ----chat messages listeners
-  Chat.addChatListeners(html);
 });
 
 Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
@@ -1088,46 +1135,46 @@ async function deleteActiveDefense(...args) {
   }
 }
 
-Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
-  const newOptions = [];
+Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 
-  newOptions.push({
+  menuItems.unshift({
     name: 'torgeternity.contextMenu.characterInfo.contextMenuTitle',
     icon: '<i class="fa-regular fa-circle-info"></i>',
     callback: async (li) => {
-      const actor = game.actors.get(li.data('documentId'));
+      const actor = actorDir.collection.get(li.dataset.entryId);
 
-      const description =
-        '<div class="charInfoOutput">' + actor.system.details.background ??
-        actor.system.details.description ??
-        actor.system.description ??
-        '' + '</div>';
+      let description = actor.system.details.background ?? actor.system.details.description ?? actor.system.description ?? '';
+      description = `<div class="charInfoOutput">${description}</div>`;
 
-      new Dialog(
-        {
+      DialogV2.wait({
+        classes: ['torgeternity', 'charInfoOutput'],
+        window: {
           title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
             a: actor.name,
           }),
-          content: await TextEditor.enrichHTML(description),
-          buttons: {
-            ok: {
-              label: game.i18n.localize('torgeternity.dialogWindow.buttons.ok'),
-              callback: () => {},
-            },
-            showPlayers: {
-              label: game.i18n.localize('torgeternity.dialogPrompts.showToPlayers'),
-              callback: (html) => {
-                ChatMessage.create({
-                  content: html[0].querySelector('.charInfoOutput').outerHTML,
-                });
-              },
+          contentClasses: ["scrollable"],
+        },
+        position: {
+          width: 800
+        },
+        content: await foundry.applications.ux.TextEditor.enrichHTML(description),
+        buttons: [
+          {
+            action: 'close',
+            label: 'torgeternity.dialogWindow.buttons.ok',
+            callback: () => { },
+          },
+          {
+            action: 'showAllPlayers',
+            label: 'torgeternity.dialogPrompts.showToPlayers',
+            callback: (event, button, dialog) => {
+              ChatMessage.create({
+                content: dialog.element.querySelector('.charInfoOutput').outerHTML,
+              });
             },
           },
-        },
-        { width: 800 }
-      ).render(true);
+        ]
+      });
     },
   });
-
-  options.splice(0, 0, ...newOptions);
 });

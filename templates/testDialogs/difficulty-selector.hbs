@@ -1,10 +1,12 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.dn"}}</legend>
   <span class="skill-check-options">
-    <select id="difficulty" name="DNDescriptor" class="input-box">
-      {{#if test.targetPresent}} {{selectOptions config.dnTypes selected=test.DNDescriptor
-      localize=true}} {{else}} {{selectOptions config.dnTypesBasic selected=test.DNDescriptor
-      localize=true}} {{/if}}
+    <select id="difficulty" name="DNDescriptor" data-dtype="String">
+      {{#if test.targetPresent}}
+        {{selectOptions config.dnTypes selected=test.DNDescriptor localize=true value=test.DNDescriptor}}
+      {{else}}
+        {{selectOptions config.dnTypesBasic selected=test.DNDescriptor localize=true value=test.DNDescriptor}}
+      {{/if}}
     </select>
   </span>
 </fieldset>

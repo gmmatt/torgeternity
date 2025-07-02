@@ -11,8 +11,7 @@ items:
     folder: LyasDNAhbLqYWU56
     sort: 0
     flags:
-      core:
-        sourceId: Item.IFfIxQewwnxkWg6m
+      core: {}
     system:
       perk: Drachenkrieger
       description: "<p><span style=\"font-family:'Palatino Linotype'\">An einer der Armschienen der Rüstung ist eine lange Röhre befestigt, die zu einer verstecken Kammer mit komprimiertem Brennstoff auf dem Rücken führt. Wenn sie mit </span><em style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\">Projektilwaffen\_</em><span style=\"font-family:'Palatino Linotype'\">eingesetzt wird, verschießt die Röhre einen Feuerstrahl mit einer Reichweite von 10 Metern und einem kleinen Explosionsradius (siehe Seite 120). Alle getroffenen Ziele erleidet 16 Punkte Feuerschaden (siehe Seite 136). Die Kammer enthält genug Brennstoff für drei Angriffe.\_</span><br style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\" /><span style=\"font-family:'Palatino Linotype'\">Der Behälter lädt sich am Ende jeder Szene oder während einer langen Rast, die mindestens einige Stunden dauert (Spielleiterentscheidung), automatisch auf.</span></p>"
@@ -22,12 +21,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.IFfIxQewwnxkWg6m
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.3KPh7gkb97UOb3Ek'
   - _id: c66bzP2ZNUUu5WBa
     name: Riesenstärke
@@ -57,7 +57,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -65,6 +65,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -74,8 +75,7 @@ items:
     folder: LyasDNAhbLqYWU56
     sort: 0
     flags:
-      core:
-        sourceId: Item.y2OJLdEpjDrwNjfl
+      core: {}
     system:
       perk: Drachenkrieger
       description: "<p><span style=\"font-family:'Palatino Linotype'\">Eine Reihe von Druckluftkompressoren saugen die Luft an und leiten sie zu den Armen der Rüstung. Zusammen mit geschickt platzierten Hebeln entlang der Innenseite der Rüstung erhöht dies seine\_</span><em style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\">Stärke\_</em><span style=\"font-family:'Palatino Linotype'\">bei Proben und für die Ermittlung von Schaden um +2. Die Robustheit wird dadurch nicht beeinflusst.\_</span></p>"
@@ -85,12 +85,13 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
       compendiumSource: Item.y2OJLdEpjDrwNjfl
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.c66bzP2ZNUUu5WBa'
   - _id: IajpoVCzUSfcdAIq
     name: Zweihandaxt
@@ -100,9 +101,7 @@ items:
     folder: null
     sort: 3100000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6BdTFBJxHYmRe9Zd
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -137,12 +136,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866227322
       modifiedTime: 1722164730292
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6BdTFBJxHYmRe9Zd
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.IajpoVCzUSfcdAIq'
   - _id: iL4S4nxhhjsBQrfc
     name: Drachenodem (Waffe)
@@ -152,9 +152,7 @@ items:
     folder: null
     sort: 27000000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ofRqgHBidUIMKc4g
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -185,12 +183,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866234201
       modifiedTime: 1722164809219
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ofRqgHBidUIMKc4g
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.iL4S4nxhhjsBQrfc'
   - name: Hanfseil, 10 Meter
     type: gear
@@ -199,8 +198,7 @@ items:
     folder: null
     sort: 7300000
     flags:
-      core:
-        sourceId: Item.UqBpg4NYAUDXT2Yr
+      core: {}
     _id: n1NNukUx9SJZa7FI
     system:
       cosm: aysle
@@ -218,12 +216,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866242946
       modifiedTime: 1722164710484
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.UqBpg4NYAUDXT2Yr
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.n1NNukUx9SJZa7FI'
   - _id: GLGvMUxF3Aydcn8g
     name: Krähenfüße
@@ -253,7 +252,7 @@ items:
         description: ''
         statuses: []
         _stats:
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: null
           systemVersion: null
           createdTime: null
@@ -261,6 +260,7 @@ items:
           lastModifiedBy: null
           compendiumSource: null
           duplicateSource: null
+          exportSource: null
         img: icons/svg/aura.svg
         type: base
         system: {}
@@ -270,8 +270,7 @@ items:
     folder: null
     sort: 7400000
     flags:
-      core:
-        sourceId: Item.prL9HtFgNGaw1Szz
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -293,12 +292,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1694866252810
       modifiedTime: 1722164702036
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.prL9HtFgNGaw1Szz
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.GLGvMUxF3Aydcn8g'
   - _id: KDVr1QVp8TeWnNDX
     name: Drachenrüstung (Rüstung)
@@ -308,9 +308,7 @@ items:
     folder: null
     sort: 9100000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -336,12 +334,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       createdTime: 1711562366100
       modifiedTime: 1722164796708
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
       duplicateSource: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.KDVr1QVp8TeWnNDX'
   - _id: 0odWHYdsahjtVTrK
     name: Trank der Heilung
@@ -351,9 +350,7 @@ items:
     folder: null
     sort: 24600000
     flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      core: {}
     system:
       cosm: aysle
       description: >-
@@ -374,12 +371,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: 1722164695803
       modifiedTime: 1722164695803
       lastModifiedBy: 93AMwcGe6H37rcPA
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.0odWHYdsahjtVTrK'
   - _id: rWgkIw6gm37tEUAA
     name: Drachenkrieger
@@ -415,12 +413,13 @@ items:
         _stats:
           compendiumSource: null
           duplicateSource: null
-          coreVersion: '12.330'
+          coreVersion: '13.345'
           systemId: torgeternity
           systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
+          exportSource: null
         _key: >-
           !actors.items.effects!4maHTlnkLTHmuYpB.rWgkIw6gm37tEUAA.SzDN8V4WPZxKsfKs
     folder: null
@@ -567,12 +566,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.nFFJqamKJz86Yrig
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.rWgkIw6gm37tEUAA'
   - name: Zwerg
     type: race
@@ -829,12 +829,13 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.TP04HlJ05QTMTtbk
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599444064
       modifiedTime: 1729599444064
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: 5j1GA3FpLKg3r7p5
     sort: 400000
     ownership:
@@ -941,12 +942,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599444069
       modifiedTime: 1729599444145
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: 8A2SzMClG97Gi68S
     effects: []
     folder: null
@@ -1052,12 +1054,13 @@ items:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.331'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.3.0
       createdTime: 1729599444069
       modifiedTime: 1729599444147
       lastModifiedBy: d8YcfsxBOP7RAazk
+      exportSource: null
     _id: gkeZPqeruKfC0DVZ
     effects: []
     folder: null
@@ -1086,7 +1089,7 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: null
       systemVersion: null
       createdTime: null
@@ -1094,6 +1097,7 @@ effects:
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
+      exportSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
@@ -1128,19 +1132,19 @@ effects:
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '13.345'
       systemId: torgeternity
       systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      exportSource: null
     _key: '!actors.effects!4maHTlnkLTHmuYpB.7HWVbiQCr8G0cZFO'
 folder: null
 sort: 0
 flags:
   core:
     sheetClass: torgeternity.torgeternityActorSheet
-    sourceId: Compendium.torgeternity.archetypes.QsYmnq73AiR6BwhD
 system:
   shock:
     max: 8
@@ -1564,7 +1568,6 @@ prototypeToken:
   appendNumber: false
   prependAdjective: false
   detectionModes: []
-  hexagonalShape: 0
   occludable:
     radius: 0
   ring:
@@ -1576,14 +1579,21 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.331'
+  coreVersion: '13.345'
   createdTime: 1694866052812
   modifiedTime: 1729599422460
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.QsYmnq73AiR6BwhD
   duplicateSource: null
+  exportSource: null
 _key: '!actors!4maHTlnkLTHmuYpB'
 
