@@ -310,77 +310,71 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 
   async _preCreate(data, options, user) {
     super._preCreate(data, options, user);
-    const prototypeToken = {};
-    if (data.type === 'stormknight' && !foundry.utils.hasProperty(data, 'prototypeToken')) {
-      Object.assign(prototypeToken, {
-        sight: {
-          enabled: true
-        },
-        actorLink: true,
-        disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY, // HOSTILE -1, NEUTRAL 0, FRIENDLY 1, SECRET -2
-        displayName: 30, // NONE 0, CONTROL 10, OWNER-HOVER 20, HOVER 30, OWNER 40, ALWAYS 50
-        lockRotation: true,
-        rotation: 0,
-        displayBars: 40,
-        bar1: {
-          attribute: 'wounds'
-        },
-        bar2: {
-          attribute: 'shock'
-        },
-      });
-      await this.updateSource({ prototypeToken });
-    } else if (data.type === 'threat' && !foundry.utils.hasProperty(data, 'prototypeToken')) {
-      Object.assign(prototypeToken, {
-        sight: {
-          enabled: true
-        },
-        //actorLink: true,
-        disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
-        displayName: 40,
-        // Core parameters
-        // appendNumber: true,
-        // prependAdjective: true,
-        lockRotation: true,
-        rotation: 0,
-        texture: {
-          src: 'systems/torgeternity/images/characters/threat-generic.Token.webp',
-          rotation: 0,
-        },
-        displayBars: 30,
-        bar1: {
-          attribute: 'wounds'
-        },
-        bar2: {
-          attribute: 'shock'
-        },
-      });
-      await this.updateSource({ prototypeToken });
-      await this.updateSource({ img: 'systems/torgeternity/images/characters/threat.webp' });
-    } else if (!foundry.utils.hasProperty(data, 'prototypeToken')) {
-      Object.assign(prototypeToken, {
-        sight: {
-          enabled: true
-        },
-        //actorLink: true,
-        disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL,
-        displayName: 30,
-        lockRotation: true,
-        rotation: 0,
-        texture: {
-          src: 'systems/torgeternity/images/characters/vehicle-land-Token.webp',
-          rotation: 0,
-        },
-        displayBars: 30,
-        bar1: {
-          attribute: 'wounds'
-        },
-        bar2: {
-          attribute: ''
-        },
-      });
-      await this.updateSource({ prototypeToken });
-      await this.updateSource({ img: 'systems/torgeternity/images/characters/vehicle-land.webp' });
+
+    if (foundry.utils.hasProperty(data, 'prototypeToken')) return;
+
+    switch (data.type) {
+      case 'stormknight':
+        await this.updateSource({
+          prototypeToken: {
+            sight: { enabled: true },
+            actorLink: true,
+            disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY,
+            displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
+            lockRotation: true,
+            rotation: 0,
+            displayBars: CONST.TOKEN_DISPLAY_MODES.OWNER,
+            bar1: { attribute: 'wounds' },
+            bar2: { attribute: 'shock' },
+          }
+        });
+        break;
+
+      case 'threat':
+        await this.updateSource({
+          img: 'systems/torgeternity/images/characters/threat.webp',
+          prototypeToken: {
+            sight: { enabled: true },
+            //actorLink: false,
+            disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
+            displayName: CONST.TOKEN_DISPLAY_MODES.OWNER,
+            // Core parameters
+            // appendNumber: true,
+            // prependAdjective: true,
+            lockRotation: true,
+            rotation: 0,
+            texture: {
+              src: 'systems/torgeternity/images/characters/threat-generic.Token.webp',
+              rotation: 0,
+            },
+            displayBars: CONST.TOKEN_DISPLAY_MODES.HOVER,
+            bar1: { attribute: 'wounds' },
+            bar2: { attribute: 'shock' },
+          }
+        });
+        break;
+
+      default:
+        // Vehicles + other?
+        await this.updateSource({
+          img: 'systems/torgeternity/images/characters/vehicle-land.webp',
+          prototypeToken: {
+            sight: { enabled: true },
+            //actorLink: false,
+            disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL,
+            displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
+            lockRotation: true,
+            rotation: 0,
+            texture: {
+              src: 'systems/torgeternity/images/characters/vehicle-land-Token.webp',
+              rotation: 0,
+            },
+            displayBars: CONST.TOKEN_DISPLAY_MODES.HOVER,
+            bar1: { attribute: 'wounds' },
+            bar2: { attribute: '' },
+          }
+        });
+        break;
     }
   }
 }
