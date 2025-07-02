@@ -4517,3 +4517,13 @@ body {
     color: white;
   }
 }
+
+dialog.externalLinks {
+  button i {
+    font-size: 24px;
+  }
+
+  button.publisher i {
+    src: 'systems/torgeternity/images/ulissesLogo.webp'
+  }
+}

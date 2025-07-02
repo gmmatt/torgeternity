@@ -362,12 +362,11 @@ Hooks.on("renderSettings", async (app, html) => {
     // Create dialog if not done yet
     if (!externalLinks) {
       const dialogOptions = {
+        classes: ['torgeternity', 'externalLinks'],
         window: {
           title: 'torgeternity.dialogWindow.externalLinks.title',
         },
         position: {
-          width: 'auto',
-          height: 250,
           left: 100,
           top: 20,
         },
@@ -413,6 +412,7 @@ Hooks.on("renderSettings", async (app, html) => {
           },
           {
             action: 'publisher',
+            cls: 'publisher',
             icon: 'systems/torgeternity/images/ulissesLogo.webp', // not FA so ignored
             label: 'torgeternity.dialogWindow.externalLinks.publisher',
             callback: () => {
