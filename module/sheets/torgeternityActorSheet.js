@@ -23,7 +23,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       resizable: true,
     },
     position: {
-      width: 773,
+      width: 770,
       height: 860,
     },
     dragDrop: [
@@ -168,7 +168,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
-
     context.systemFields = context.document.system.schema.fields;
     context.items = Array.from(context.document.items);
     context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
@@ -330,6 +329,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _onRender(context, options) {
     await super._onRender(context, options);
     let html = this.element;
+
+    html.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
 
     // Configure drag/drop
     this.#dragDrop.forEach((d) => d.bind(this.element));
