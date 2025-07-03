@@ -3,11 +3,7 @@
     <li class="combatant document.directory-item flexrow dispo{{turn.token.disposition}}
             {{#if turn.turnTaken}} turnDone {{else}} active{{/if}}" style="align-items:center"
       data-combatant-id="{{turn.id}}" data-action="activateCombatant">
-      <!--
-            <div class="token-initiative">
-                <span>{{turn.initiative}}</span>
-            </div>
-        -->
+
       <div class="flexrow" style="align-items:center;">
         <img class="token-image" src="{{turn.img}}" alt="{{turn.name}}" loading="lazy">
         <div class="token-name flexcol">
@@ -62,21 +58,13 @@
             </div>
           </div>
           {{#if (eq turn.actor.type "stormknight")}}
-            <ul style="margin: 0 0 0.5em 0">
+            <ul class="pool-ulist">
               {{localize 'torgeternity.sheetLabels.pool'}}:
               <span class="pool-list">{{{poolList turn.actorId}}}</span>
             </ul>
           {{/if}}
         </div>
-
       </div>
-
-      <!--
-            {{#if ../user.isGM}}
-            <a class="init-up" data-action="initUp"><i class="fas fa-arrow-up"></i></a>
-            <a class="init-down" data-action="initDown"><i class="fas fa-arrow-down"></i></a> 
-            {{/if}}
--->
     </li>
   {{/each}}
 </ol>
