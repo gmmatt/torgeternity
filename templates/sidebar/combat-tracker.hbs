@@ -61,10 +61,10 @@
                 <img class="token-effect" src="{{this}}" /> {{/each}}
             </div>
           </div>
-          {{#if (eq turn.document.type "stormknight")}}
+          {{#if (eq turn.actor.type "stormknight")}}
             <ul style="margin: 0 0 0.5em 0">
               {{localize 'torgeternity.sheetLabels.pool'}}:
-              <span class="pool-list">{{{poolList turn.document.id}}}</span>
+              <span class="pool-list">{{{poolList turn.actorId}}}</span>
             </ul>
           {{/if}}
         </div>
