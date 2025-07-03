@@ -7,7 +7,7 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
 
   static DEFAULT_OPTIONS = {
     tag: 'form',
-    classes: ['torgeternity', 'gmscreen'],
+    classes: ['torgeternity', 'gmscreen', 'themed', 'theme-dark'],
     position: {
       top: 10,
       width: 1300,

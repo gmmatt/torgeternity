@@ -4,7 +4,7 @@
 export default class torgeternityCardConfig extends foundry.applications.sheets.CardConfig {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity'],
+    classes: ['torgeternity', 'themed', 'theme-dark'],
   }
 
   static PARTS = {

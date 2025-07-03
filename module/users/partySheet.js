@@ -11,7 +11,7 @@ const { ApplicationV2, HandlebarsApplicationMixin, DialogV2 } = foundry.applicat
 export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'party-sheet'],   // "faded-ui" removed by _initializeApplicationOptions
+    classes: ['torgeternity', 'party-sheet', 'themed', 'theme-dark'],   // "faded-ui" removed by _initializeApplicationOptions
     window: {
       contentClasses: ["standard-form"],
       resizable: true,

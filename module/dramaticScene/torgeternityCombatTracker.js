@@ -21,6 +21,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   }
 
   static DEFAULT_OPTIONS = {
+    classes: ['torgeternity', 'themed', 'theme-dark'],
     actions: {
       'initUp': torgeternityCombatTracker.#onIncInit,
       'initDown': torgeternityCombatTracker.#onDecInit,

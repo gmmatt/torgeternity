@@ -7,7 +7,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
 
   static DEFAULT_OPTIONS = {
     type: "hand",
-    classes: ['torgeternity'],
+    classes: ['torgeternity', 'themed', 'theme-dark'],
     window: {
       resizable: false
     },

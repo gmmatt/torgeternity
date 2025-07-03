@@ -10,7 +10,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
     tag: 'form',
-    classes: ['torgeternity', 'application', 'test-dialog'],
+    classes: ['torgeternity', 'application', 'test-dialog', 'themed', 'theme-dark'],
     window: {
       title: 'Skill Test',
       resizable: false,
