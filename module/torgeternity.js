@@ -1152,7 +1152,7 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
           title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
             a: actor.name,
           }),
-          contentClasses: ["scrollable"],
+          contentClasses: ['scrollable'],
         },
         position: {
           width: 800

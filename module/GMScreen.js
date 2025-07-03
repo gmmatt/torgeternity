@@ -15,7 +15,7 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
     },
     window: {
       resizable: true,
-      contentClasses: ["standard-form"],
+      contentClasses: ['standard-form'],
     },
     actions: {
       clickPanel: GMScreen.#clickPanel,

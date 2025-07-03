@@ -14,7 +14,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     window: {
       title: 'Skill Test',
       resizable: false,
-      contentClasses: ["standard-form"],
+      contentClasses: ['standard-form'],
     },
     form: {
       handler: TestDialog.#onRoll,

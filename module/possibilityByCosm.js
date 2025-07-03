@@ -13,7 +13,7 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
     window: {
       title: 'torgeternity.sheetLabels.possibilityByCosm',
       resizeable: false,
-      contentClasses: ["standard-form"],
+      contentClasses: ['standard-form'],
     },
     actions: {
       testActiveModule: PossibilityByCosm.#onTestActiveModule,
