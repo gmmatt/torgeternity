@@ -7,10 +7,7 @@ const { DialogV2 } = foundry.applications.api;
 export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheet) {
 
   static DEFAULT_OPTIONS = {
-    // TODO: 
-    // need 'app' to pick up styling of 'sheet-header'
-    // but that screws up the window's title
-    classes: ['torgeternity', 'sheet', 'item'],
+    classes: ['torgeternity', 'sheet', 'item', 'themed', 'theme-light'],
     window: {
       contentClasses: ['standard-form', 'scrollable'],
       resizable: true,

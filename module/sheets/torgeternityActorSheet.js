@@ -16,7 +16,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   #dragDrop;
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity', 'sheet', 'actor'],
+    classes: ['torgeternity', 'sheet', 'actor', 'themed', 'theme-light'],
     window: {
       contentTag: 'div',
       contentClasses: ['standard-form', 'scrollable'],
