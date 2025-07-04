@@ -36,10 +36,10 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (hand)
       context.cardpool = hand.cards?.filter(card =>
         card.flags?.torgeternity?.pooled).map(card => { return { name: card.name, img: card.img } }) ?? [];
-    context.disposition = combatant.token.disposition;
     context.turnTaken = combatant.turnTaken;
-    context.playedOK = combatant.flags?.world?.turnTaken;
     context.actorType = combatant.actor.type;
+    context.css += ` dispo${combatant.token.disposition}`;
+    if (combatant.turnTaken) context.css += ' turnDone';
     return context;
   }
 

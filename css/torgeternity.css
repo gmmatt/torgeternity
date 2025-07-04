@@ -2711,6 +2711,7 @@ nav#controls,
         margin: 0 5px;
 
         h4 {
+          color: white;
           --font-h4: Palatino;
           text-shadow: 1px 1px 4px var(--color-shadow-dark);
           line-height: 28px;
@@ -2724,6 +2725,7 @@ nav#controls,
 
       .combatant-control {
         font-size: 14px;
+        text-shadow: 1px 1px 4px var(--color-shadow-dark);
       }
 
       &.dispo1 {
@@ -2738,7 +2740,7 @@ nav#controls,
         background-color: rgba(141, 143, 1, 0.28);
       }
 
-      &.active {
+      &:not(.turnDone) {
         border-left: 5px solid rgba(255, 255, 0, 0.836);
       }
 
