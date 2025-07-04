@@ -1,5 +1,23 @@
 # TORG Eternity Changelog
 
+## v13.0.1
+
+- Combat Tracker: Cards, Effects, Tracked Resource (optional).
+- Combat Tracker: Hovering over a combatant changes background (as per Core).
+- Combat Tracker: add core buttons for Toggle Visibility, Ping Combatant, Pan to Combatant (Player only).
+- Dark Mode: Tabs don't disappear if Foundry is set to use Dark Mode.
+- Dark mode: Torg Eternity dialogs/sheets should be displayed properly.
+- Journals: Force light mode onto Journal Text Page editor.
+
+### Fixes
+
+- https://github.com/gmmatt/torgeternity/issues/456
+- https://github.com/gmmatt/torgeternity/issues/499
+- https://github.com/gmmatt/torgeternity/issues/500
+- Possibly https://github.com/gmmatt/torgeternity/issues/501  ?
+- https://github.com/gmmatt/torgeternity/issues/504
+- https://github.com/gmmatt/torgeternity/issues/505
+
 ## v.13.0.0
 
 - v13 compatibility- open Beta!

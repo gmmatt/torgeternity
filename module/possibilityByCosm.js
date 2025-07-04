@@ -4,7 +4,7 @@
 export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity'],
+    classes: ['torgeternity', 'themed', 'theme-dark'],
     tag: 'form',
     position: {
       width: 'auto',
@@ -13,7 +13,7 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
     window: {
       title: 'torgeternity.sheetLabels.possibilityByCosm',
       resizeable: false,
-      contentClasses: ["standard-form"],
+      contentClasses: ['standard-form'],
     },
     actions: {
       testActiveModule: PossibilityByCosm.#onTestActiveModule,

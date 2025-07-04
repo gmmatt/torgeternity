@@ -7,7 +7,7 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
 
   static DEFAULT_OPTIONS = {
     tag: 'form',
-    classes: ['torgeternity', 'gmscreen'],
+    classes: ['torgeternity', 'gmscreen', 'themed', 'theme-dark'],
     position: {
       top: 10,
       width: 1300,
@@ -15,7 +15,7 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
     },
     window: {
       resizable: true,
-      contentClasses: ["standard-form"],
+      contentClasses: ['standard-form'],
     },
     actions: {
       clickPanel: GMScreen.#clickPanel,
