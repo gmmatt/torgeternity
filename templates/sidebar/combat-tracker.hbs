@@ -1,6 +1,6 @@
 <ol class="combat-tracker plain">
-  {{#each combat.turns as |turn id|}}
-    <li class="combatant document.directory-item flexrow dispo{{turn.token.disposition}}
+  {{#each turns as |turn id|}}
+    <li class="combatant document.directory-item flexrow dispo{{turn.disposition}}
             {{#if turn.turnTaken}} turnDone {{else}} active{{/if}}" style="align-items:center"
       data-combatant-id="{{turn.id}}" data-action="activateCombatant">
 
@@ -11,7 +11,7 @@
           <div class="combatant-controls flexrow">
 
             <button type="button" style="margin: 0px 5px 0px 0px"
-              class="inline-control combatant-control icon has-played fa-solid fa-check {{#if turn.flags.world.turnTaken}}playedOK{{/if}}"
+              class="inline-control combatant-control icon has-played fa-solid fa-check {{#if turn.playedOK}}playedOK{{/if}}"
               data-action="hasPlayed" data-tooltip
               aria-label="{{ localize 'torgeternity.combat.hasPlayedTooltip' }}"></button>
 
@@ -20,9 +20,6 @@
                 class="inline-control combatant-control icon fa-solid fa-skull {{#if isDefeated}}active{{/if}}"
                 data-action="toggleDefeated" data-tooltip
                 aria-label="{{ localize 'COMBAT.ToggleDead' }}"></button>
-              <!--<a class="combatant-control {{#if turn.defeated}}active{{/if}}"
-                data-tooltip="{{localize 'COMBAT.ToggleDead'}}" data-control="toggleDefeated">
-                <i class="fas fa-skull"></i></a>-->
             {{/if}}
             {{#if turn.canPing}}
               <button type="button" class="inline-control combatant-control icon fa-solid fa-bullseye-arrow"
@@ -52,15 +49,24 @@
               </span>
             </a>
 
-            <div class="token-effects">
-              {{#each turn.effects}}
-                <img class="token-effect" src="{{this}}" /> {{/each}}
+            <div class="token-effects" data-tooltip-html="{{turn.effects.tooltip}}">
+              {{#each turn.effects.icons}} <img class="token-effect" src="{{this.img}}" /> {{/each}}
             </div>
           </div>
-          {{#if (eq turn.actor.type "stormknight")}}
+          {{#if (eq turn.actorType "stormknight")}}
             <ul class="pool-ulist">
               {{localize 'torgeternity.sheetLabels.pool'}}:
-              <span class="pool-list">{{{poolList turn.actorId}}}</span>
+              <span class="pool-list">
+                {{#if turn.noHand}}
+                  {{localize "torgeternity.notifications.noHands"}}
+                {{else}}
+                  {{#each turn.cardpool}}
+                    <span class='pool-tooltip'>{{this.name}}
+                      <span class='pool-tooltip-image'> <img src='{{this.img}}'> </span>
+                    </span>
+                  {{/each}}
+                {{/if}}
+              </span>
             </ul>
           {{/if}}
         </div>

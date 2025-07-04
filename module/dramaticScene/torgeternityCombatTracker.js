@@ -19,13 +19,73 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       'hasPlayed': torgeternityCombatTracker.#onToggleTurn,
       'dsrCounter': torgeternityCombatTracker.#incStage,
       'playerDsrCounter': torgeternityCombatTracker.#incPlayerStage,
+      'hasFinished': torgeternityCombatTracker.#onHasFinished
     }
   }
 
-  async _prepareContext(options) {
-    const context = await super._prepareContext(options);
-    context.hasTurn = this.viewed?.combatants?.some(combatant => !combatant.turnTaken && combatant.isOwner && !!context.round);
+  async _prepareCombatContext(context, options) {
+    await super._prepareCombatContext(context, options);
+    context.hasTurn = context.combat?.combatants?.some(combatant => !combatant.turnTaken && combatant.isOwner && !!context.combat.round);
+  }
+
+  async _prepareTurnContext(combat, combatant, index) {
+    const context = await super._prepareTurnContext(combat, combatant, index);
+
+    const hand = combatant.actor.getDefaultHand();
+    context.noHand = !hand;
+    if (hand)
+      context.cardpool = hand.cards?.filter(card =>
+        card.flags?.torgeternity?.pooled).map(card => { return { name: card.name, img: card.img } }) ?? [];
+    context.disposition = combatant.token.disposition;
+    context.turnTaken = combatant.turnTaken;
+    context.playedOK = combatant.flags?.world?.turnTaken;
+    context.actorType = combatant.actor.type;
     return context;
+  }
+
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+    const html = this.element;
+
+    for (const element of document.querySelectorAll('.pool-tooltip')) {
+      await element.addEventListener('mouseenter', this._notOutOfBounds);
+      await element.addEventListener('mouseleave', this._notOutOfBounds);
+    }
+  }
+
+  /**
+ * Making sure, that mouseover card display isn't out of bounds
+ *
+ * @param {object} event The event
+ */
+  async _notOutOfBounds(event) {
+    const span = event.target;
+    const tooltipImage = span.querySelector('.pool-tooltip-image');
+    const rect = tooltipImage.getBoundingClientRect();
+    // force resize
+    /*console.log('span at ', event.target.getBoundingClientRect());
+    console.log('img  at ', rect);*/
+    span.display = 'none';
+    span.offsetHeight;
+    span.display = 'block';
+
+    if (rect.left < 0) {
+      tooltipImage.style.left = 'auto';
+      tooltipImage.style.right = '-250px';
+    } else if (rect.right > window.innerWidth) {
+      tooltipImage.style.left = '-250px';
+      tooltipImage.style.right = '30px';
+    }
+  }
+
+  /**
+   *
+   * @param event
+   */
+  static async #onHasFinished(event, button) {
+    await this.viewed?.combatants
+      .find(combatant => combatant.actorId === game.user.character.id)
+      .setFlag('world', 'turnTaken', true);
   }
 
   /**

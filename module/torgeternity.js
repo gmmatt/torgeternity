@@ -17,7 +17,6 @@ import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
 import * as torgChecks from './torgchecks.js';
 import { modifyTokenBars } from './tokenBars.js';
-import { registerHelpers } from './handlebarHelpers.js';
 import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
 import torgeternityPlayerHand from './cards/torgeternityPlayerHand.js';
@@ -47,9 +46,6 @@ const { DialogV2 } = foundry.applications.api;
 
 Hooks.once('init', async function () {
   console.log('torgeternity | Initializing Torg Eternity System');
-  // CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
-  // ----helpers
-  registerHelpers();
 
   // -------global
   game.torgeternity = {
