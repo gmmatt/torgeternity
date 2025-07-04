@@ -72,7 +72,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     if (this.document.getFlag('torgeternity', 'lifelike')) {
       this.rotateCards(this.element);
     }
-    //html.find('#lifelike').click(this.submit.bind(this));
     await super._onRender(context, options);
   }
 

@@ -281,8 +281,11 @@ form.torgeternity {
 /*                                             */
 .sheet.actor.torgeternity {
 
-  min-width: 450px;
-  min-height: 636px;
+  &:not(.minimized) {
+    min-width: 450px;
+    min-height: 636px;
+  }
+
   --color-scrollbar: #227878;
   --color-scrollbar-track: #2e2e2e94;
 

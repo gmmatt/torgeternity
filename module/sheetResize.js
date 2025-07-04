@@ -2,21 +2,21 @@
  *
  */
 export function sheetResize() {
-  Hooks.on('renderTorgeternityActorSheet', async function (app, html, data) {
+  Hooks.on('renderTorgeternityActorSheet', async function (sheet, element, context, options) {
     let ro;
-    switch (app.document.type) {
+    switch (sheet.document.type) {
       case 'stormknight':
         ro = new ResizeObserver((entries) => {
           for (const entry of entries) {
             const cr = entry.contentRect;
             if (cr.width < 510 || cr.height < 650) {
-              html.classList.add('compact');
+              element.classList.add('compact');
             } else {
-              html.classList.remove('compact');
+              element.classList.remove('compact');
             }
           }
         });
-        ro.observe(html);
+        ro.observe(element);
         break;
 
       case 'threat':
@@ -24,15 +24,15 @@ export function sheetResize() {
           for (const entry of entries) {
             const cr = entry.contentRect;
             if (cr.height < 630) {
-              html.classList.add('tabsOff');
-              html.classList.remove('tabsOn');
+              element.classList.add('tabsOff');
+              element.classList.remove('tabsOn');
             } else {
-              html.classList.remove('tabsOff');
-              html.classList.add('tabsOn');
+              element.classList.remove('tabsOff');
+              element.classList.add('tabsOn');
             }
           }
         });
-        ro.observe(html);
+        ro.observe(element);
         break;
     }
   });
