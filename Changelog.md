@@ -7,6 +7,7 @@
 - Combat Tracker: add core buttons for Toggle Visibility, Ping Combatant, Pan to Combatant.
 - Dark Mode: Tabs don't disappear if Foundry is set to use Dark Mode.
 - Dark mode: Torg Eternity dialogs/sheets should be displayed properly.
+- Journals: Force light mode onto Journal Text Page editor.
 
 ### Fixes
 

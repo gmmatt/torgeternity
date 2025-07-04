@@ -1174,3 +1174,8 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
     },
   });
 });
+
+
+Hooks.on('renderJournalEntryPageSheet', (sheet, element, document, options) => {
+  element.classList.add('themed', 'theme-light');
+})
