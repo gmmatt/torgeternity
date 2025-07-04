@@ -33,6 +33,7 @@ import { explode, reroll } from './explode.js';
 import { activateStandartScene } from './activateStandartScene.js';
 import { torgMigration } from './migrations.js';
 import initTextEdidor from './initTextEditor.js';
+import initProseMirrorEditor from './initProseMirrorEditor.js';
 import { TorgeternityMacros } from './macros.js';
 import { ChatMessageTorg } from './documents/chat/document.js';
 import * as actorDataModels from './data/actor/index.js';
@@ -54,6 +55,7 @@ Hooks.once('init', async function () {
     macros: new TorgeternityMacros(),
   };
   initTextEdidor();
+  initProseMirrorEditor();
   CONFIG.torgeternity = torgeternity;
   CONFIG.Item.documentClass = TorgeternityItem;
   CONFIG.Actor.documentClass = TorgeternityActor;

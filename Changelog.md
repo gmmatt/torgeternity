@@ -5,6 +5,7 @@
 - Dragging items and skills to the Hotbar should now create the relevant macro.
 - Configure key now closes PossibilityByCosm if it is already open.
 - Reinstate 'compact' form of Stormknight sheet when the window is narrow.
+- Add text styles to the ProseMirror editor (matching those available in TinyMCE).
 
 ## v13.0.1
 
