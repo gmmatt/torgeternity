@@ -281,6 +281,83 @@ form.torgeternity {
 /*                                             */
 .sheet.actor.torgeternity {
 
+  &.compact {
+    .window-content {
+      padding: 1px;
+    }
+
+
+    .block {
+      border: none;
+      margin: 0px;
+      padding: 2px;
+    }
+
+    nav.tabs.right-tab {
+      transform: rotate(90deg) translate(calc(-1 * var(--torg-header-height)), 5px) scale(0.7);
+    }
+
+    .tab[data-tab].active {
+      display: flex;
+      flex-direction: column;
+
+      div.tabbody {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sheet-header p {
+        display: none;
+      }
+
+      .sheet-header div:last-child {
+        display: none;
+      }
+
+      .attributes input,
+      .others input {
+        background: none;
+        height: 20px;
+      }
+
+      .skills .skillAttr,
+      .skills .skillAdd {
+        display: none;
+      }
+
+      .char_image,
+      .xp,
+      .defense {
+        display: none;
+      }
+
+      .perks-list h3,
+      .weapons-list h3 {
+        display: none;
+      }
+
+      .perks-list img,
+      .weapons-list img {
+        display: none;
+      }
+
+      .perks-list li,
+      .weapons-list li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .background h1 {
+        display: none;
+      }
+
+      .background .editor {
+        height: 100%;
+      }
+    }
+  }
+
   &:not(.minimized) {
     min-width: 450px;
     min-height: 636px;
@@ -3150,81 +3227,6 @@ p.skill-chat-title.skilled {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-
-.compact .window-content {
-  padding: 1px;
-}
-
-.compact .sheet.actor {
-
-  .block {
-    border: none;
-    margin: 0px;
-    padding: 2px;
-  }
-
-  nav.sheet-tabs {
-    transform: rotateZ(90deg) scale(0.7);
-  }
-
-  .tab[data-tab].active {
-    display: flex;
-    flex-direction: column;
-
-    .sheet-header {
-      p {
-        display: none;
-      }
-
-      div:last-child {
-        display: none;
-      }
-    }
-
-    .attributes input,
-    .others input {
-      background: none;
-      height: 20px;
-    }
-
-    .skills .skillAttr,
-    .skills .skillAdd {
-      display: none;
-    }
-
-    .char_image,
-    .xp,
-    .defense {
-      display: none;
-    }
-
-    .perks-list h3,
-    .weapons-list h3 {
-      display: none;
-    }
-
-    .perks-list img,
-    .weapons-list img {
-      display: none;
-    }
-
-    .perks-list li,
-    .weapons-list li {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .background h1 {
-      display: none;
-    }
-
-    .background .editor {
-      height: 100%;
-    }
-  }
 }
 
 .item .window-content {

@@ -10,4 +10,3 @@
 - Decide whether core dialogs should be in Torg colour scheme.
 - Should the Combat Tracker support more than one combat?
 - Check all styles for Journals (esp. with the published journals).
-- Support "compact" version of Stormknight actor sheet.
