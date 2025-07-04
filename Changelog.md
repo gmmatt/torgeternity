@@ -2,7 +2,7 @@
 
 ## v13.0.1
 
-- Combat Tracker updates: Cards, Effects, Tracked Resource (optional).
+- Combat Tracker updates: Cards, Effects, Tracked Resource (optional). Hover over combatant changes background.
 - BUG: hovering over a card in the combat track only shows the card image if the Actor has finished their turn.
 - Tabs don't disappear if Foundry is set to use Dark Mode.
 - CSS optimised to better support choosing Light or Dark mode.

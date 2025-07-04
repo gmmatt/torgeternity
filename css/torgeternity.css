@@ -2732,23 +2732,23 @@ nav#controls,
         text-shadow: 1px 1px 4px var(--color-shadow-dark);
       }
 
-      &.friendly {
-        background-color: rgba(15, 47, 189, 0.212);
-      }
-
-      &.hostile {
-        background-color: rgba(143, 1, 1, 0.28);
-      }
-
-      &.neutral {
-        background-color: rgba(141, 143, 1, 0.28);
-      }
-
       &:not(.turnDone) {
         border-left: 5px solid rgba(255, 255, 0, 0.836);
       }
 
-      &.turnDone {
+      &.friendly:not(:hover) {
+        background-color: rgba(15, 47, 189, 0.212);
+      }
+
+      &.hostile:not(:hover) {
+        background-color: rgba(143, 1, 1, 0.28);
+      }
+
+      &.neutral:not(:hover) {
+        background-color: rgba(141, 143, 1, 0.28);
+      }
+
+      &.turnDone:not(:hover) {
         background-color: darkgreen;
       }
     }
