@@ -4,6 +4,7 @@
 
 - Dragging items and skills to the Hotbar should now create the relevant macro.
 - Configure key now closes PossibilityByCosm if it is already open.
+- Reinstate 'compact' form of Stormknight sheet when the window is narrow.
 
 ## v13.0.1
 
