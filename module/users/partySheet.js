@@ -73,7 +73,7 @@ export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2
    */
   static showParty() {
     DialogV2.wait({
-      classes: ['torgeternity'],
+      classes: ['torgeternity', 'themed', 'theme-dark'],
       window: {
         title: 'torgeternity.partySheet.openParty',
         contentClasses: ['standard-form'],

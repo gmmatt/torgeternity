@@ -358,7 +358,7 @@ Hooks.on("renderSettings", async (app, html) => {
     // Create dialog if not done yet
     if (!externalLinks) {
       const dialogOptions = {
-        classes: ['torgeternity', 'externalLinks'],
+        classes: ['torgeternity', 'themed', 'theme-dark', 'externalLinks'],
         window: {
           title: 'torgeternity.dialogWindow.externalLinks.title',
         },
@@ -1143,7 +1143,7 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
       description = `<div class="charInfoOutput">${description}</div>`;
 
       DialogV2.wait({
-        classes: ['torgeternity', 'charInfoOutput'],
+        classes: ['torgeternity', 'themed', 'theme-dark', 'charInfoOutput'],
         window: {
           title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
             a: actor.name,
