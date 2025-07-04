@@ -4,7 +4,7 @@
 
 - Combat Tracker: Cards, Effects, Tracked Resource (optional).
 - Combat Tracker: Hovering over a combatant changes background (as per Core).
-- Combat Tracker: add core buttons for Toggle Visibility, Ping Combatant, Pan to Combatant.
+- Combat Tracker: add core buttons for Toggle Visibility, Ping Combatant, Pan to Combatant (Player only).
 - Dark Mode: Tabs don't disappear if Foundry is set to use Dark Mode.
 - Dark mode: Torg Eternity dialogs/sheets should be displayed properly.
 - Journals: Force light mode onto Journal Text Page editor.
