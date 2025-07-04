@@ -1,5 +1,13 @@
 # TORG Eternity Changelog
 
+## v13.0.1
+
+- Cards and Effects now displayed in the Combat Tracker.
+- BUG: hovering over a card in the combat track only shows the card image if the Actor has finished their turn.
+- Tabs don't disappear if Foundry is set to use Dark Mode.
+- CSS optimised to better support choosing Light or Dark mode.
+-
+
 ## v.13.0.0
 
 - v13 compatibility- open Beta!

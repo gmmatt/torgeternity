@@ -32,12 +32,14 @@
 
 /*Defining colors as variables, using it in an animation-keyframe*/
 :root {
-  --table2nd: #f6e9d7;
-  /*standard-backgroundcolor for tables in every 2nd row, others are transparent*/
   --torgblue: rgb(65, 90, 155);
   --torgred: rgb(150, 0, 0);
-  --sidebar-width: 380px;
   /*formally this was defined in #sidebar{width:380px}, but we need to alter the foundry style.css variable to affect on things like the new "to bottom" Button*/
+  --torg-header-height: 35px;
+}
+
+form button {
+  border: 1px groove var(--color-border-light-highlight);
 }
 
 @keyframes colorchange {
@@ -134,10 +136,6 @@
 
 /* foundry parts */
 
-#modalIO {
-  color: black;
-}
-
 form.torgeternity {
   /* Tabs either side of sheet */
   overflow: visible;
@@ -160,24 +158,76 @@ form.torgeternity {
 /* Actor/Item/Journal sheet */
 .sheet.torgeternity .window-content {
 
+  /* Foundry DARK mode sets backdrop-filter, which breaks the side tabs in sheets */
+  backdrop-filter: none;
+
   input[type="number"],
   input[type="text"] {
     font-family: Arial;
     font-size: 12px;
   }
 
-  input[type="text"]:hover,
-  input[type="number"]:hover,
-  input[type="text"]:focus,
-  input[type="number"]:focus {
-    box-shadow: 0 0 15px #778ba2 inset;
+  h3.left-tab {
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(calc(-100% - var(--torg-header-height)), -10px);
+    top: 0%;
+    margin-bottom: 0px;
+
+    background: url(../images/separatorRound.webp);
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 14px;
+
+    span {
+      background: url(../images/type_back.webp);
+      /*color: black;*/
+      text-shadow: 0px 0px 2px;
+      background-size: 100% 100%;
+      padding: 3px 20px;
+    }
   }
 
-  input[type="text"]::placeholder,
-  input[type="number"]::placeholder {
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  nav.tabs.right-tab {
+    position: absolute;
+    contain: content;
+    left: 100%;
+    transform-origin: bottom left;
+    transform: rotate(90deg) translate(calc(-1 * var(--torg-header-height)), 5px);
+    line-height: 14px;
+    border-width: 0px;
+    column-gap: 5px;
+    row-gap: 0px;
+
+    [data-tab] {
+      text-orientation: mixed;
+      width: auto;
+      min-width: 100px;
+      transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
+      color: white;
+      background-image: url(../images/tab_back.webp);
+      background-size: 100% 100%;
+      padding: 8px 1px;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 13px;
+
+      &:hover,
+      &:active {
+        text-transform: uppercase;
+        transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
+        text-shadow: 0 0 10px #10813f;
+        color: #e5ecec;
+        z-index: 0;
+      }
+
+      &.active {
+        background-image: url(../images/active_tab_back.webp);
+        text-transform: uppercase;
+      }
+    }
   }
 
   .vehicle-header-name input[name="name"],
@@ -189,7 +239,6 @@ form.torgeternity {
     font-size: 24px;
     font-weight: normal;
     text-align: center;
-    color: black;
     width: 100%;
   }
 
@@ -234,53 +283,25 @@ form.torgeternity {
 
   min-width: 450px;
   min-height: 636px;
+  --color-scrollbar: #227878;
+  --color-scrollbar-track: #2e2e2e94;
 
   h2 {
     font-size: 1.5em
   }
 
-  .actor-type {
-    background: url(../images/separatorRound.webp);
-    position: absolute;
-    transform: rotateZ(-90deg);
-    left: -150px;
-    top: 180px;
-    width: 300px;
-    text-align: right;
-    text-transform: uppercase;
-    font-size: 1.25em;
-
-    h3 {
-      font-weight: 400;
-      line-height: 14px;
-    }
-
-    span {
-      background: url(../images/type_back.webp);
-      color: black;
-      text-shadow: 0px 0px 2px black;
-      background-size: 100% 100%;
-      padding: 3px 20px;
-    }
-  }
-
   .window-content {
-    color: black;
-    /*font-family: "Alaska";*/
     font-size: 13px;
     line-height: 14px;
     background-image: url(../images/bg-sheet.webp);
     background-size: cover;
 
     h1 {
-      color: black;
       border: none;
       text-align: center;
-      /*font-family: Alaska;*/
       text-shadow: 0px 0px 15px black;
       text-transform: uppercase;
       font-weight: bold;
-      /*width: 100%;*/
       background: none;
 
       input {
@@ -293,7 +314,6 @@ form.torgeternity {
     }
 
     h2 {
-      color: black;
       border: none;
       text-align: center;
       text-shadow: 0px 0px 15px black;
@@ -322,6 +342,8 @@ form.torgeternity {
       }
 
       .list-section-heading {
+        color-scheme: 'dark2';
+
         grid-column: 1/9;
         grid-row: 1/2;
         align-items: center;
@@ -341,62 +363,21 @@ form.torgeternity {
       }
     }
 
-    select {
-      color: black;
-    }
-
     .skill-list {
       input {
         width: 30px;
         height: 20px;
         text-align: center;
-        color: black;
       }
 
       &:hover,
       &:active {
         text-shadow: 0px 0px 10px var(--torgblue);
       }
-    }
 
-    nav.tabs {
-      display: flex;
-      flex-direction: row;
-      text-align: center;
-      border: none;
-      position: absolute;
-      transform: rotateZ(90deg);
-      font-size: 13px;
-      text-transform: capitalize;
-      right: -310px;
-      top: 310px;
-      line-height: 14px;
-      justify-content: space-around;
-      column-gap: normal;
-      margin: 4px 0;
-      row-gap: normal;
-
-      a {
-        min-width: 100px;
-        transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
+      li.dark {
+        background-color: rgba(0, 0, 0, 0.561);
         color: white;
-        background-image: url(../images/tab_back.webp);
-        background-size: 100% 100%;
-        padding: 8px 1px;
-
-        &:hover,
-        &:active {
-          text-transform: uppercase;
-          transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-          text-shadow: 0 0 10px #10813f;
-          color: #e5ecec;
-          z-index: 0;
-        }
-
-        &.active {
-          background-image: url(../images/active_tab_back.webp);
-          text-transform: uppercase;
-        }
       }
     }
 
@@ -413,7 +394,6 @@ form.torgeternity {
         min-width: 150px;
         min-height: 45px;
         border-radius: 25%;
-        background-color: #fbfbfb49;
       }
 
       &.small-input {
@@ -433,7 +413,6 @@ form.torgeternity {
       display: inline-block;
       font-size: 12px;
       margin: 4px 2px;
-      color: black;
       text-shadow: none;
       background-image: none;
       width: 100px;
@@ -591,11 +570,6 @@ form.torgeternity {
       border: none;
     }
 
-    .dark {
-      background-color: rgba(0, 0, 0, 0.561);
-      color: white;
-    }
-
     a.skill-roll:hover,
     a.skill-roll:active {
       text-shadow: 0px 0px 10px var(--torgblue);
@@ -692,7 +666,6 @@ form.torgeternity {
         background-size: cover;
         font-family: Signika;
         font-size: 15px;
-        color: black;
       }
 
       .header h1 {
@@ -705,8 +678,6 @@ form.torgeternity {
         grid-template-rows: repeat(2, 1fr);
 
         .raceSpanHeader {
-          color: black;
-          /*font-family: "Alaska";*/
           font-size: 13px;
           line-height: 14px;
           grid-column: 1/3;
@@ -727,7 +698,6 @@ form.torgeternity {
     }
 
     select {
-      color: black;
       border: none;
       border-bottom: 1px solid grey;
       max-height: 20px;
@@ -776,7 +746,6 @@ form.torgeternity {
           border-radius: 50%;
           background: url(../images/roundBack.webp);
           background-size: cover;
-          color: black;
         }
 
         a {
@@ -833,17 +802,11 @@ form.torgeternity {
       max-height: 100%;
 
       select {
-        color: black;
         border: none;
         border-bottom: 1px solid grey;
         max-height: 20px;
         font-size: 13px;
         font-family: Signika;
-
-        &:active,
-        &:focus {
-          box-shadow: 0 0 5px #0062ff;
-        }
       }
 
       ul {
@@ -866,7 +829,7 @@ form.torgeternity {
           input {
             border: none;
             text-align: center;
-            width: 18px;
+            width: 25px;
             height: 18px;
             font-family: Arial;
 
@@ -879,7 +842,7 @@ form.torgeternity {
           }
 
           span {
-            width: 90%;
+            width: 100%;
             text-align: center;
           }
 
@@ -889,7 +852,6 @@ form.torgeternity {
 
             &.toggleFav,
             &.toggleDefenseOnly {
-              color: grey;
               position: relative;
               font-size: 10px;
               top: -4px;
@@ -898,7 +860,6 @@ form.torgeternity {
             &.toggleFav.checked,
             &.toggleDefenseOnly.checked {
               font-size: 15px;
-              color: rgba(8, 83, 8, 0.794);
               animation-duration: 0.3s;
               animation-name: roll;
               text-shadow: 0px 0px 3px green;
@@ -1004,7 +965,7 @@ form.torgeternity {
 
             a.item-equip.item-equipped {
               color: #0000af;
-              text-shadow: 0px 0px 5px #0011ff;
+              text-shadow: 0px 0px 5px;
             }
 
             a.item-equip.item-unequipped {
@@ -1015,9 +976,7 @@ form.torgeternity {
 
           .item-dropdown-extras {
             font-style: italic;
-            border: 1px solid grey;
             text-align: center;
-            background-color: #9e96868e;
           }
         }
       }
@@ -1056,8 +1015,6 @@ form.torgeternity {
       }
 
       .effects-heading {
-        color: white;
-        background-color: black;
         margin: 2px 0;
         align-items: center;
         font-weight: bold;
@@ -1069,7 +1026,6 @@ form.torgeternity {
         border-left: 1px solid #c9c7b8;
         border-right: 1px solid #c9c7b8;
         font-size: 12px;
-        color: black;
       }
 
       .effect-name {
@@ -1134,7 +1090,6 @@ form.torgeternity {
         height: 50px;
         border: none;
         border-radius: 50%;
-        color: black;
       }
     }
 
@@ -1359,12 +1314,9 @@ form.torgeternity {
         max-width: 120px;
       }
 
-      nav.tabs {
-        right: -209px;
-        top: 210px;
-      }
-
       .background .list-section-heading {
+        color-scheme: 'dark3';
+
         grid-column: 1/9;
         grid-row: 1/2;
         align-items: center;
@@ -1403,21 +1355,17 @@ form.torgeternity {
         height: 150px;
         border: groove;
         border-width: 10px;
-        border-color: grey;
         border-radius: 10px;
       }
 
       .sidebar-stats {
         border: solid;
         border-width: 2px;
-        border-color: black;
         border-radius: 3px;
         width: 150px;
-        background-color: lightgray;
       }
 
       input {
-        background-color: lightgray;
         font-weight: bold;
         font-family: Signika;
         font-size: 13px;
@@ -1490,16 +1438,9 @@ form.torgeternity {
 
     a.toggleFav,
     a.toggleDefenseOnly {
-      color: grey;
       position: relative;
       font-size: 10px;
       left: 5px;
-
-      &.checked,
-      &.checked {
-        color: rgba(8, 83, 8, 0.794);
-        text-shadow: 0px 0px 3px green;
-      }
     }
 
     span.inputsFav {
@@ -1577,7 +1518,7 @@ form.torgeternity {
         background-image: url(../images/separator.webp);
         background-size: cover;
         background-position: center;
-        color: white;
+        color-scheme: 'dark4';
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1638,9 +1579,7 @@ form.torgeternity {
 
             .item-dropdown-extras {
               font-style: italic;
-              border: 1px solid grey;
               text-align: center;
-              background-color: #9e96868e;
             }
           }
         }
@@ -1669,19 +1608,7 @@ form.torgeternity {
     display: inline-flex;
     width: 100%;
 
-    input[type="text"],
-    input[type="number"],
-    input[type="password"],
-    input[type="date"],
-    input[type="time"] .editor {
-      background-color: rgba(255, 255, 255, 0.39);
-      color: black;
-    }
-
     .section-bar {
-      border: 1px black solid;
-      background-color: var(--torgblue);
-      color: white;
       height: 15px;
       width: 100%;
       text-align: left;
@@ -1792,11 +1719,6 @@ form.torgeternity {
 /* --------Heavy Weapon Sheet Footer-------- */
 /*                          */
 
-.torgeternity {
-  --color-text-emphatic: white;
-  --color-form-label: white;
-}
-
 form.application.torgeternity.standard-form,
 div.application.torgeternity.standard-form {
   column-gap: normal;
@@ -1806,60 +1728,18 @@ div.application.torgeternity.standard-form {
 .application.torgeternity .window-content {
   padding: 8px;
 
-  .form-header {
-    color: white;
-  }
-
-  div.form-group input {
-    color: white;
-  }
-
-  .rollable:hover,
-  .rollable:focus {
-    color: #000;
-    text-shadow: 0 0 10px white;
-    cursor: pointer;
-  }
-
   .notes,
   .hint {
-    color: #b1afaf;
     font-family: Palatino;
     font-size: 14px;
   }
 
   button,
   select {
-    color: rgb(233, 233, 233);
     cursor: pointer;
   }
 
-  button[disabled] {
-    color: gray;
-    border: 1px solid red;
-    cursor: not-allowed;
-  }
-
-  select option {
-    color: white;
-
-    &disabled {
-      color: rgb(156, 100, 100);
-      background-color: rgb(83, 77, 77);
-    }
-
-    &.doubled {
-      background-color: rgb(238, 148, 148);
-      color: black;
-      border: 1px solid red;
-    }
-  }
-
-  button:hover {
-    box-shadow: 0px 0px 5px #4970fa;
-  }
-
-  select,
+  */ select,
   input[type="text"],
   input[type="number"],
   input[type="password"],
@@ -1868,21 +1748,10 @@ div.application.torgeternity.standard-form {
   input[type="checkbox"] {
     padding-left: 3px;
     padding-right: 3px;
-    background-color: rgba(255, 255, 255, 0.39);
-    --checkbox-background-color: black;
   }
 
   select {
     width: initial;
-  }
-
-  div.test-dialog,
-  span.handdesign {
-
-    input[type="checkbox"] {
-      background-color: transparent;
-      --checkbox-background-color: white;
-    }
   }
 }
 
@@ -1892,9 +1761,7 @@ div.application.torgeternity.standard-form {
   text-align: center;
   border: none;
   text-transform: uppercase;
-  /*font-family: Alaska;*/
   font-weight: bold;
-  color: #000;
 }
 
 .journal-sheet .window-content select {
@@ -1936,7 +1803,6 @@ div.application.torgeternity.standard-form {
 /*Begin of ProseMirror Editoring Style 2022-08-27 by Algor*/
 
 .prosemirror .editor-container .editor-content * {
-  color: black;
   font-family: Palatino;
 }
 
@@ -1971,7 +1837,6 @@ div.application.torgeternity.standard-form {
   background-size: 100% 100%;
   border: none;
   margin: 1rem 0px 0.7rem 0px;
-  color: white;
   text-transform: uppercase;
   line-height: 30px;
   text-align: center;
@@ -1997,9 +1862,6 @@ div.application.torgeternity.standard-form {
 
 .prosemirror .editor-container .editor-content h4 {
   text-align: center;
-  /*font-size: 1.5rem;*/
-  color: white;
-  /*font-family: Alaska;*/
   text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
   text-transform: uppercase;
   margin: 1rem 0px 0.7rem 0px;
@@ -2023,27 +1885,12 @@ div.application.torgeternity.standard-form {
   border: none;
 }
 
-.prosemirror .editor-container .editor-content th {
-  background-color: black;
-  color: white;
-}
-
 .prosemirror .editor-container .editor-content table {
   font-size: 0.875rem;
-  background-color: transparent;
-}
-
-.prosemirror .editor-container .editor-content tr:nth-child(even) {
-  background-color: #f6e9d7;
-}
-
-.prosemirror .editor-container .editor-content tr:nth-child(odd) {
-  background-color: transparent;
 }
 
 .prosemirror .editor-container .editor-content div.subtitleright p,
 .prosemirror .editor-container .editor-content div.subtitleleft p {
-  color: white;
   text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
 }
 
@@ -2066,38 +1913,12 @@ div.application.torgeternity.standard-form {
 /*Editing Dropdown buttons' background for healthy eyes*/
 .prosemirror menu .pm-dropdown ul {
   background-color: var(--torgblue);
-
-  /*Either*/
   background-image: url(../images/lightning_bar.webp);
-
-  /*OR
-    background-image: url(../images/thunder.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
 }
 
 .prosemirror.menu-dialog form {
-  background-color: var(--torgblue);
+  /*background-color: var(--torgblue);*/
   background-image: url(../images/lightning_bar.webp);
-  color: white;
-}
-
-.prosemirror.menu-dialog form button {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.68);
-}
-
-
-.torgeternity form .form-group .form-fields.torgeternityFormFields>* {
-  background-color: rgba(128, 128, 128, 0.301);
-  color: white;
-}
-
-/*HTML Sourcecode editor needs a background for better reading*/
-
-.prosemirror.editing-source textarea {
-  background-color: rgba(255, 247, 247, 0.25);
 }
 
 /*End of editing Prosemirror Editor*/
@@ -2113,21 +1934,17 @@ div.application.torgeternity.standard-form {
 }
 
 textarea {
-  background-color: rgba(90, 157, 163, 0.493);
-  /* Some values from V12 */
   width: 100%;
   padding: 5px;
 }
 
 textarea:focus,
 textarea:hover {
-  background-color: rgba(90, 157, 163, 0.65);
   outline: 1px solid #222378;
   box-shadow: 0 0 10px #008cff7a;
 }
 
 #module-management.unused {
-  color: white;
 
   input {
     color: lightgray;
@@ -2177,11 +1994,6 @@ textarea:hover {
   font-size: 12px;
 }
 
-body * {
-  scrollbar-color: #227878 #2e2e2e94;
-  scrollbar-width: thin;
-}
-
 button:hover,
 button:focus {
   box-shadow: 0 0 10px #3bb3b3;
@@ -2192,40 +2004,11 @@ a:hover {
   cursor: pointer;
 }
 
-.directory .directory-header .header-search input {
-  background: transparent;
-  color: rgba(245, 245, 245, 0.9);
-}
-
-.app option,
-.application.torgeternity option {
-  background: grey;
-}
-
-.app optgroup,
-.application.torgeternity optgroup {
-  background: #444242;
-}
-
-.app textarea,
-.application.torgeternity textarea {
-  color: black;
-}
-
 .app.torgeternity div.form-group,
 .application.torgeternity div.form-group {
   margin: 10px;
   padding-bottom: 5px;
   border-bottom: 2px solid #777777;
-}
-
-.app {
-  color: white;
-}
-
-#mgme_question,
-#mgme_re_question {
-  color: black;
 }
 
 .application.torgeternity .window-resize-handle {
@@ -2257,23 +2040,19 @@ a:hover {
     top: 25%;
     left: 25%;
     position: absolute;
-    color: rgba(255, 255, 255, 0);
     text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
 
     &:hover {
       transform: rotate(45deg) scaleX(1.6);
-      color: #ffffff;
     }
   }
 }
 
-.application.torgeternity .window-header {
+.application .window-header {
   background: url(../images/tab-header.webp);
   background-size: 100% 100%;
-  /*font-family: Alaska;*/
   font-weight: bold;
-  color: white;
-  transform: scaleX(1.06);
+  transform: scaleX(1.01);
   padding-left: 5%;
   padding-right: 5%;
   border: none;
@@ -2283,6 +2062,10 @@ a:hover {
   .window-title {
     margin: 0;
   }
+}
+
+.application.torgeternity .window-header {
+  transform: scaleX(1.06);
 }
 
 #pause img {
@@ -2324,7 +2107,6 @@ nav#controls ol .control-tool:hover {
   transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   background: url(../images/resizerRound.webp);
   background-size: 100% 100%;
-  color: #6b6b6b;
   border: none;
   border-radius: 50% 50%;
   box-shadow: 0px 0px 15px black inset;
@@ -2367,16 +2149,6 @@ nav#controls ol .control-tool.toggle.active {
   background-size: 100% 100%;
 }
 
-nav#controls ol .scene-control.active,
-nav#controls ol .control-tool.active,
-nav#controls ol .scene-control:hover,
-nav#controls ol .control-tool:hover {
-  color: white;
-  text-shadow: black 0px 0px 15px;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.678) inset;
-  border: none;
-}
-
 nav#controls ol .torgHand {
   position: relative;
   width: 100%;
@@ -2408,7 +2180,6 @@ nav#controls ol .torgHand:before {
   text-align: center;
   text-shadow: 0 0 10px #db0303;
   border: none;
-  color: white;
   padding-top: 10px;
   font-size: 30px;
 }
@@ -2643,7 +2414,6 @@ german tent cards images
 }
 
 #scene-navigation a.scene-name {
-  /*font-family: "Alaska";*/
   text-transform: uppercase;
   border: none;
   margin-left: 10px;
@@ -2710,7 +2480,6 @@ german tent cards images
   align-items: center;
   justify-content: center;
   box-shadow: none;
-  color: #a0a0a0;
   text-shadow: 0px 0px 3px black;
 }
 
@@ -2735,10 +2504,6 @@ german tent cards images
   box-shadow: none;
 }
 
-.dialog-button {
-  color: white;
-}
-
 #players-popout div.app {
   top: 0%;
   width: 100%;
@@ -2748,10 +2513,6 @@ german tent cards images
 }
 
 #players {
-
-  --player-name-color: white;
-  --player-name-self-color: #f6f6f6;
-  --text-color: white;
 
   #players-inactive,
   #players-active {
@@ -2768,10 +2529,6 @@ german tent cards images
     position: relative;
     z-index: +1;
     left: 15px;
-  }
-
-  button#players-expand {
-    color: white;
   }
 
   .possReset {
@@ -2863,13 +2620,21 @@ nav#controls,
 
 #combat,
 #combat-popout {
-  .combatant-init {
+
+  --sidebar-item-height: 54px;
+
+  nav button {
     color: white;
   }
 
-  nav.encounters button {
-    background: transparent;
-    --button-border-color: none;
+  nav.combat-controls button {
+    font-family: Alaska;
+    font-size: 20px;
+  }
+
+  button {
+    border-width: 0px;
+    height: 24px;
   }
 
   .heros-first {
@@ -2880,14 +2645,85 @@ nav#controls,
     color: rgb(253, 148, 148);
   }
 
+  .dsr-token {
+    color: black;
+    font-family: Palatino;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: beige;
+    outline-color: black;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    width: 65px;
+  }
+
+  .player-dsr-token {
+    color: black;
+    font-family: Palatino;
+    font-size: 10px;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: beige;
+    outline-color: black;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    width: 50px;
+    text-shadow: none;
+  }
+
+  .dsr-step {
+    color: black;
+    display: inline;
+    text-align: center;
+  }
+
+  .dsr-step-number {
+    color: red;
+    display: inline;
+    text-align: center;
+  }
+
   ol {
     li.combatant {
+      border-radius: 0px;
       border-left: 5px solid black;
+      padding: 0px;
+      column-gap: normal;
 
       .token-image {
         max-width: 54px;
         max-height: 54px;
         border: none;
+        flex: 1;
+        height: auto;
+        width: auto;
+      }
+
+      .pool-ulist {
+        margin: 0 0 0.5em 0;
+        color: white;
+      }
+
+      .token-name {
+        margin: 0 5px;
+
+        h4 {
+          --font-h4: Palatino;
+          text-shadow: 1px 1px 4px var(--color-shadow-dark);
+          line-height: 28px;
+          margin-bottom: 2px;
+        }
+      }
+
+      .combatant-controls {
+        line-height: 20px;
+      }
+
+      .combatant-control {
+        font-size: 14px;
       }
 
       &.dispo1 {
@@ -2903,8 +2739,12 @@ nav#controls,
       }
 
       &.active {
-        border-left: 8px solid rgba(255, 255, 0, 0.836);
-        border-left: 5px solid black;
+        border-left: 5px solid rgba(255, 255, 0, 0.836);
+      }
+
+      &.active::before {
+        border: none;
+        border-radius: 0px;
       }
 
       &.turnDone {
@@ -2913,25 +2753,14 @@ nav#controls,
     }
 
     button.has-played {
-      color: rgba(238, 238, 238, 0.739);
+      color: gray;
       text-shadow: 0px 0px 6px black;
       max-width: 5%;
       align-self: center;
 
       &.playedOK {
-        color: #62ff00;
+        color: green;
       }
-    }
-
-    button.init-up,
-    button.init-down {
-      max-width: 5%;
-    }
-
-    button.init-up:hover,
-    button.init-down:hover {
-      text-shadow: 0px 0px 5px #c8cf00;
-      color: #f8f83c;
     }
   }
 }
@@ -2968,7 +2797,6 @@ nav#controls,
   h3,
   h4 {
     text-align: center;
-    color: white;
     margin: 0px 0px 8px 0px;
   }
 
@@ -3021,10 +2849,8 @@ div.readme a.compendium {
 
 .chat-message {
   margin: 5px;
-  color: black;
   background: url("../images/bgparch.webp");
   background-size: cover;
-  background-color: rgba(255, 247, 247, 0.25);
 
   .flip-card {
     animation: flip 0.2s linear both;
@@ -3117,15 +2943,6 @@ div.readme a.compendium {
     font-family: "Palatino Linotype";
     margin-bottom: 5px;
     table-layout: fixed;
-    background-color: rgba(255, 247, 247, 0.25);
-
-    tr:nth-child(odd) {
-      background-color: transparent;
-    }
-
-    tr:nth-child(even) {
-      background-color: var(--table2nd);
-    }
 
     td {
       padding-left: 3px;
@@ -3277,8 +3094,6 @@ p.skill-chat-title.skilled {
   border-radius: 1rem;
   text-align: center;
   padding: 4px;
-  background-color: rgba(40, 1, 1, 0.1);
-  color: black;
   font-weight: bold;
   white-space: nowrap;
   margin-bottom: 7px;
@@ -3298,7 +3113,6 @@ p.skill-chat-title.skilled {
 
 .activeDefense-roll {
   animation: none;
-  color: black;
 }
 
 .activeDefense-roll:hover {
@@ -3323,12 +3137,12 @@ p.skill-chat-title.skilled {
 
 .window-content .list-section-heading {
   height: 40px;
+  line-height: 40px;
   font-size: 2em;
   text-align: center;
   background-image: url(../images/separator.webp);
   background-size: cover;
   background-position: center;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3415,6 +3229,8 @@ p.skill-chat-title.skilled {
 
 .sheet.item {
   height: auto !important;
+  --color-scrollbar: #227878;
+  --color-scrollbar-track: #2e2e2e94;
 
   .window-content .heavy-weapon-footer {
     display: flex;
@@ -3454,7 +3270,6 @@ p.skill-chat-title.skilled {
     padding: unset;
 
     li {
-      color: black;
       list-style: none;
       margin: 5px;
       display: flex;
@@ -3545,40 +3360,16 @@ p.skill-chat-title.skilled {
     }
   }
 
-  .window-content h3.item-type {
-    background: url(../images/separatorRound.webp);
-    position: absolute;
-    transform: rotateZ(-90deg);
-    left: -150px;
-    top: 180px;
-    width: 300px;
-    text-align: right;
-    text-transform: uppercase;
-    border: none;
-    font-weight: 400;
-    font-size: 13.5px;
-
-    span {
-      background: url(../images/type_back.webp);
-      color: black;
-      text-shadow: 0px 0px 2px black;
-      background-size: 100% 100%;
-      padding: 3px 20px;
-    }
-  }
-
   .window-content .sheet-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 15px;
-    color: black;
     column-gap: 0.5em;
   }
 
   .window-content .raceDescriptionHeadline {
     text-align: center;
-    color: black;
     border: none;
     font-weight: bold;
   }
@@ -3596,14 +3387,12 @@ p.skill-chat-title.skilled {
   .window-content .raceAttributes>h1 {
     grid-row: 1/2;
     grid-column: 1/6;
-    color: black;
     border: none;
     font-weight: bold;
   }
 
   .window-content .raceAttributes>label {
     grid-row: 2/3;
-    color: black;
   }
 
   .window-content .raceAttributes>input {
@@ -3615,12 +3404,10 @@ p.skill-chat-title.skilled {
     border-radius: 15px;
     background: url(../images/roundBack.webp);
     background-size: cover;
-    color: black;
   }
 
   .window-content .raceAttributes+hr {
     background-image: url(../images/separator.webp);
-    /* background-position-y: -8px; */
     background-repeat: no-repeat;
     background-size: auto;
     min-height: 20px;
@@ -3632,7 +3419,6 @@ p.skill-chat-title.skilled {
   }
 
   .window-content .raceSpecs {
-    color: black;
     display: flex;
     flex-direction: row;
     margin: 15px;
@@ -3687,18 +3473,15 @@ p.skill-chat-title.skilled {
       border-radius: 15px;
       background: url(../images/roundBack.webp);
       background-size: cover;
-      color: black;
       grid-column: 2/3;
     }
 
     input[name="data.price"],
     input[name="data.tough"] {
       width: 50px;
-      color: black;
     }
 
     select {
-      color: black;
       text-align: center;
       max-width: 150px;
     }
@@ -3715,52 +3498,8 @@ p.skill-chat-title.skilled {
     border-image: url('../images/frameWithoutFilling.svg') 30 / 2rem;
   }
 
-  .window-content nav.tabs {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    border: none;
-    position: absolute;
-    transform: rotateZ(90deg);
-    text-transform: capitalize;
-    right: -110px;
-    top: 115px;
-    justify-content: space-around;
-    line-height: 14px;
-    column-gap: normal;
-
-    a {
-      min-width: 100px;
-      transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
-      color: white;
-      background-image: url(../images/tab_back.webp);
-      background-size: 100% 100%;
-      padding: 8px 1px;
-
-      &:hover,
-      &:active {
-        text-transform: uppercase;
-        transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-        text-shadow: 0 0 10px #10813f;
-        color: #e5ecec;
-        z-index: 0;
-      }
-
-      &.active {
-        background-image: url(../images/active_tab_back.webp);
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  &.perk .window-content nav.tabs {
-    /* Perks have two extra tabs */
-    right: -210px;
-    top: 220px;
-
-    a[data-tab="enhancements"] {
-      font-size: smaller;
-    }
+  &.perk .window-content nav.tabs a[data-tab="enhancements"] {
+    font-size: smaller;
   }
 
   .window-content select:hover,
@@ -3770,14 +3509,6 @@ p.skill-chat-title.skilled {
   .window-content input[type="text"]:focus,
   .window-content input[type="number"]:focus {
     box-shadow: 0 0 10px #4f523c inset;
-  }
-
-  .window-content input[type="text"]::placeholder,
-  .window-content input[type="number"]::placeholder {
-    /*color: #161a1a;*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
   }
 
   .window-content .item-data-label {
@@ -3813,8 +3544,6 @@ p.skill-chat-title.skilled {
     }
 
     .effects-heading {
-      color: white;
-      background-color: black;
       margin: 2px 0;
       align-items: center;
       font-weight: bold;
@@ -3827,7 +3556,6 @@ p.skill-chat-title.skilled {
       border-right: 1px solid #c9c7b8;
       font-family: "Signika";
       font-size: 14px;
-      color: black;
     }
 
     .effect-name {
@@ -3877,7 +3605,6 @@ p.skill-chat-title.skilled {
 }
 
 .window-content .dialog-content .charInfoOutput {
-  background-color: rgba(255, 247, 247, 0.25);
   padding-top: 20px;
   padding-left: 10px
 }
@@ -3890,11 +3617,9 @@ p.skill-chat-title.skilled {
   border: 15px solid transparent;
   border-image: url('../images/frameWithoutFilling.svg') 30 / 5rem;
   max-height: 150px;
-  /*overflow-y: scroll;*/
 }
 
 .item .window-content fieldset.ammofield legend {
-  /*font-family: 'Alaska';*/
   font-size: 14px;
 }
 
@@ -3917,6 +3642,7 @@ p.skill-chat-title.skilled {
 .directory-item {
   font-family: Palatino;
   border-top: 1px solid black;
+  font-weight: bold;
 }
 
 .skill-check-dialog-status-effects {
@@ -3973,7 +3699,6 @@ p.skill-chat-title.skilled {
 }
 
 .torgeternity .standard-form .test-dialog>div>fieldset>hr {
-  border: 1px solid var(--color-border-light-tertiary);
   width: 100%;
 }
 
@@ -4007,10 +3732,6 @@ p.skill-chat-title.skilled {
   font-size: 13px;
 }
 
-.torg-cards-action-icons fas-fa:before {
-  color: white;
-}
-
 .torg-card-controls {
   flex: 1 0 64px;
   text-align: right;
@@ -4024,8 +3745,6 @@ p.skill-chat-title.skilled {
 .card-tooltip span {
   display: none;
   border-radius: 6px;
-  color: black;
-  background: white;
 }
 
 .card-tooltip span img {
@@ -4047,35 +3766,41 @@ p.skill-chat-title.skilled {
   padding: 8px;
 }
 
-.pool-tooltip {
-  text-decoration: none;
-}
+.pool-list {
+  font-family: Palatino;
+  font-size: 12px;
+  font-weight: bold;
 
-.pool-tooltip span {
-  display: none;
-  border-radius: 6px;
-  color: black;
-  background: white;
-}
+  .pool-tooltip {
+    text-decoration: none;
 
-.pool-tooltip span img {
-  float: left;
-}
+    span {
+      display: none;
+      border-radius: 6px;
 
-.pool-tooltip:hover span {
-  display: block;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  left: -250px;
-  z-index: 0;
-  max-width: 246px;
-  min-height: 99px;
-  /*border: 1px solid black;
-  margin-top: 2px;
-  margin-left: 2px;
-  overflow: hidden;
-  padding: 8px;*/
+      img {
+        float: left;
+        margin: 0px 8px 8px 0;
+      }
+    }
+
+    &:hover span {
+      position: absolute;
+      display: block;
+      background-color: white;
+      top: 0px;
+      right: calc(var(--sidebar-width) + 10px);
+      z-index: 1000;
+      max-width: 246px;
+      min-height: 99px;
+      background-color: white;
+      border: 1px solid black;
+      margin-top: 5px;
+      margin-left: 5px;
+      overflow: visible;
+      padding: 8px;
+    }
+  }
 }
 
 .card-chat-tooltip {
@@ -4086,8 +3811,6 @@ p.skill-chat-title.skilled {
 .card-chat-tooltip span {
   display: none;
   border-radius: 6px;
-  color: black;
-  background: white;
 }
 
 .card-chat-tooltip span img {
@@ -4108,6 +3831,7 @@ ol.chat-log {
   z-index: 0;
   max-width: 320px;
   min-height: 128px;
+  background-color: white;
   border: 1px solid black;
   margin-top: 5px;
   margin-left: 5px;
@@ -4117,7 +3841,6 @@ ol.chat-log {
 
 .open-hand {
   width: 150px;
-  color: black !important;
 }
 
 form.deckSetting div.flexrow {
@@ -4139,37 +3862,14 @@ form.deckSetting div.flexrow {
 
 form.cards-config {
 
-  /*--color-form-label-hover: var(--color-dark-1);*/
-  --color-text-secondary: white;
-
   header .card-name,
   ol.cards .card-name {
     flex-grow: 3;
   }
 
-  input[type="checkbox"] {
-
-    &::before {
-      color: gray;
-    }
-
-    &:checked::before {
-      color: white;
-    }
-  }
-
-  .controls>a {
-    color: white;
-  }
-
   div.slim div.form-fields {
     flex-grow: 2;
   }
-}
-
-.pool-list {
-  font-family: Palatino;
-  font-size: 12px;
 }
 
 .interaction-attack-list {
@@ -4182,56 +3882,13 @@ form.cards-config {
   max-height: 90%;
 }
 
-.dsr-token {
-  font-family: Palatino;
-  font-size: 14px;
-  font-weight: bold;
-  border: 2px solid black;
-  background-color: beige;
-  outline-color: black;
-  display: inline-block;
-  border-radius: 10px;
-  padding: 0px 5px 0px 5px;
-  width: 65px;
-}
-
-.player-dsr-token {
-  font-family: Palatino;
-  font-size: 10px;
-  font-weight: bold;
-  border: 2px solid black;
-  background-color: beige;
-  outline-color: black;
-  display: inline-block;
-  border-radius: 10px;
-  padding: 0px 5px 0px 5px;
-  width: 50px;
-  text-shadow: none;
-}
-
-.dsr-step {
-  color: black;
-  display: inline;
-  text-align: center;
-}
-
-.dsr-step-number {
-  color: red;
-  display: inline;
-  text-align: center;
-}
-
 .enhancement-check {
   flex: 10%;
-  color: black;
-  /*font-family: Alaska;*/
   font-size: 12px;
 }
 
 .enhancement-content {
   flex: 90%;
-  color: black;
-  /*font-family: Alaska;*/
   font-size: 12px;
 }
 
@@ -4240,20 +3897,7 @@ form.cards-config {
 }
 
 .available-enhancement {
-  color: black;
   text-align: center;
-}
-
-.pulp-description {
-  background-color: rgba(255, 255, 255, 0.39);
-  color: var(--color-text-dark-primary) !important;
-  border: 1px solid var(--color-border-light-tertiary);
-}
-
-.pulp-description:hover,
-.pulp-description:focus {
-  box-shadow: 0 0 15px #4f523c inset;
-  background-color: rgba(255, 255, 255, 0.39);
 }
 
 .enhancements-section-heading {
@@ -4264,7 +3908,6 @@ form.cards-config {
   background-size: cover;
   background-position: center;
   display: flex;
-  color: white;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -4388,8 +4031,6 @@ app.theme-light {
 select {
   height: 27px;
   padding: 0 3px;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--color-border-light-tertiary);
   border-radius: 3px;
   text-overflow: ellipsis;
 }
@@ -4397,7 +4038,6 @@ select {
 
 .torgeternity h2 {
   font-size: 1.5em;
-  border-bottom: 1px solid var(--color-underline-header);
 }
 
 .torgeternity .standard-form fieldset {
@@ -4406,7 +4046,6 @@ select {
   flex-direction: row;
   flex-wrap: wrap;
   gap: normal;
-  border-color: var(--color-fieldset-border);
   border-radius: 0px;
   line-height: normal;
 
@@ -4423,7 +4062,6 @@ select {
 .torgeternity button,
 dialog footer button {
   margin: 0 1px;
-  border: 1px solid var(--color-border-light-primary);
   border-radius: 3px;
   line-height: 28px;
 }
@@ -4431,21 +4069,15 @@ dialog footer button {
 div.charInfoOutput h3,
 dialog.torgeternity h3 {
   font-size: 1.25em;
-  border-bottom: 1px solid var(--color-underline-header);
   margin: 0 0 0.5rem;
   padding: 0;
   font-weight: normal;
-  color: white;
 }
 
 .torgeternity .standard-form {
   row-gap: normal;
   column-gap: normal;
 }
-
-/*body {
-  line-height: normal;
-}*/
 
 hr {
   margin: 6px 0px 6px 0px;
@@ -4470,16 +4102,11 @@ h4 {
   font-weight: normal;
 }
 
-body.theme-dark .application.torgeternity {
-  --background: url(../images/thunder.webp) center;
-}
-
 dialog.torgeternity,
 .application.torgeternity,
 .application.torgeternity {
   background-image: url(../images/thunder.webp);
   background-size: cover;
-  color: white;
 }
 
 .sheet.item.miracle p.atkDmgAP {
@@ -4502,20 +4129,15 @@ dialog.torgeternity,
   font-style: italic;
   border: 1px solid grey;
   text-align: center;
-  background-color: #9e96868e;
 }
 
 body.game .app,
 body {
-  --sidebar-width: 350px;
+  --sidebar-width: 380px;
 }
 
 .sidebar-tab.combat-sidebar {
   background-image: url(../images/thunder.webp);
-
-  button {
-    color: white;
-  }
 }
 
 dialog.externalLinks {
