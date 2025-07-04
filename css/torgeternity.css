@@ -2748,11 +2748,6 @@ nav#controls,
         border-left: 5px solid rgba(255, 255, 0, 0.836);
       }
 
-      &.active::before {
-        border: none;
-        border-radius: 0px;
-      }
-
       &.turnDone {
         background-color: darkgreen;
       }

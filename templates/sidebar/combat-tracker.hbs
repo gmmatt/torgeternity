@@ -36,17 +36,13 @@
             <a class="player-dsr-counter" data-action="playerDsrCounter" {{#unless isOwner}}disabled{{/unless}}>
               <span class="player-dsr-token">
                 <span class="dsr-step">
-                  {{#if flags.torgeternity.dsrStage}}
+                  {{#if dsrStage}}
                     {{localize 'torgeternity.tokens.step'}}
                   {{else}}
                     {{localize 'torgeternity.tokens.noDSR'}}
                   {{/if}}
                 </span>
-                <span class="dsr-step-number">
-                  {{#if flags.torgeternity.dsrStage}}
-                    &nbsp;{{flags.torgeternity.dsrStage}}
-                  {{/if}}
-                </span>
+                <span class="dsr-step-number"> {{#if dsrStage}}&nbsp;{{dsrStage}}{{/if}} </span>
               </span>
             </a>
             <div class="token-effects" data-tooltip-html="{{effects.tooltip}}">

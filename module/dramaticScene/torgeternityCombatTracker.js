@@ -46,8 +46,14 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       [CONST.TOKEN_DISPOSITIONS.NEUTRAL]: "neutral",
       [CONST.TOKEN_DISPOSITIONS.FRIENDLY]: "friendly",
     }
-    context.css += ` ${dispositions[combatant.token.disposition]}`;
-    if (combatant.turnTaken) context.css += ' turnDone';
+    context.dsrStage = combatant.flags?.torgeternity?.dsrStage;
+
+    // Remove "active" class from combatants since we don't use it, 
+    // and Foundry's core CSS causes it to mess up the card hover function.
+    const css = context.css.split(" ").filter(cls => cls !== 'active');
+    css.push(dispositions[combatant.token.disposition]);
+    if (combatant.turnTaken) css.push(' turnDone');
+    context.css = css.join(" ");
     return context;
   }
 
