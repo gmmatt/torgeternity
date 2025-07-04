@@ -9,7 +9,6 @@ import { sheetResize } from './sheetResize.js';
 import { preloadTemplates } from './preloadTemplates.js';
 import torgeternityCombat from './dramaticScene/torgeternityCombat.js';
 import torgeternityCombatTracker from './dramaticScene/torgeternityCombatTracker.js';
-import { alphabSort } from './AlphabeticalSort.js';
 // Disabling Player List extension until it can be updated for version 10
 import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
 import torgeternitySceneConfig from './torgeternitySceneConfig.js';
@@ -912,12 +911,6 @@ Hooks.on('changeSidebarTab', (tabDirectory) => {
   if (game.settings.get('torgeternity', 'hideForeignCompendium') == true) {
     hideCompendium(game.settings.get('core', 'language'), tabDirectory);
   }
-});
-
-// ----alphabetic sorting in character sheets
-Hooks.on('renderActorSheet', (app, html, data) => {
-  // alphabetical sorting
-  alphabSort(html, data);
 });
 
 Hooks.on('updateActor', (actor, change, options, userId) => {
