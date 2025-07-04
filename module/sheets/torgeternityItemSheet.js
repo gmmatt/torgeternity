@@ -434,13 +434,8 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
           label: `${game.i18n.localize('torgeternity.submit.OK')}`,
           default: true,
           callback: (event, button, dialog) => {
-            const rdbElements = html[0].getElementsByTagName('input');
-            for (const rdb of rdbElements) {
-              if (rdb.checked) {
-                usedAmmo = actor.items.get(rdb.dataset.chosenId);
-                return;
-              }
-            }
+            const checked = dialog.element.querySelector('input:checked');
+            if (checked) usedAmmo = actor.items.get(checked.dataset.chosenId);
           },
         },
         no: {
@@ -449,6 +444,9 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
       });
     }
   }
+  // Maybe no selection made
+  if (!usedAmmo) return;
+
   if (usedAmmo.system.quantity <= 0) {
     ui.notifications.error(game.i18n.localize('torgeternity.notifications.clipEmpty'));
     return;

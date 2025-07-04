@@ -301,35 +301,6 @@ Hooks.on('ready', async function () {
   if (game.scenes.size < 1) {
     activateStandartScene();
   }
-
-  // ----pause image----
-  // Hooks.on("renderPause", () => {
-
-  // Removing this because it doesn't appear to do anything any longer?
-
-  // let path = game.settings.get("torgeternity", "pauseMedia");
-  // let img = document.getElementById("pause").firstElementChild;
-  // path = "./" + path;
-  // img.style.content = `url(${path})`
-  // })
-
-  /*
-  //-----applying players card ui:
-  if (game.user.role == false || game.user.role != 4) {
-    let user=game.users.get(game.user._id)
-    
-    ui.HandedCards = new HandedCardsApp();
-    ui.HandedCards.render(true);
-  };
-  //-----applying GM card ui:
-  if (game.user.role == 4 || game.user.role == 3) {
-    //init cards GM Decks
-    let user=game.users.get(game.user._id)
-   
-    ui.GMDecks = new GMDecksApp();
-    ui.GMDecks.render(true);
-  };
-*/
 });
 
 let externalLinks;

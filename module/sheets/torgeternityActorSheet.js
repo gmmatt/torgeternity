@@ -55,7 +55,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       openPoss: TorgeternityActorSheet.#onCosmPoss,
       itemEdit: TorgeternityActorSheet.#onItemEdit,
       itemDelete: TorgeternityActorSheet.#onItemDelete,
-      reloadWeapon: TorgeternityActorSheet.#reloadWeapon,
+      reloadWeapon: TorgeternityActorSheet.#onReloadWeapon,
       itemName: TorgeternityActorSheet.#onitemName,
       deleteRaceButton: TorgeternityActorSheet.#onDeleteRaceButton,
     }
@@ -1153,12 +1153,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       },
     });
   }
-  static #reloadWeapon(event, target) {
+
+  static #onReloadWeapon(event, target) {
     const button = target.closest('[data-item-id]');
     const weapon = this.actor.items.get(button.dataset.itemId);
-
     reloadAmmo(this.actor, weapon);
   }
+
   static #onitemName(event, target) {
     const section = target.closest('.item');
     const detail = section.querySelector('.item-detail');
