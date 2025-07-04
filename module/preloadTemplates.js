@@ -34,17 +34,16 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/actors/vehicle/main.hbs',
 
     // Test Dialogs
-    'systems/torgeternity/templates/testDialogs/attack-difficulty.hbs',
+    'systems/torgeternity/templates/testDialogs/attack-options.hbs',
+    'systems/torgeternity/templates/testDialogs/bonus-selector.hbs',
     'systems/torgeternity/templates/testDialogs/difficulty-selector.hbs',
     'systems/torgeternity/templates/testDialogs/favored.hbs',
-    'systems/torgeternity/templates/testDialogs/bonus-selector.hbs',
+    'systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs',
+    'systems/torgeternity/templates/testDialogs/modifiers-table.hbs',
     'systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs',
     'systems/torgeternity/templates/testDialogs/multi-action-selector.hbs',
     'systems/torgeternity/templates/testDialogs/multi-target-selector.hbs',
-    'systems/torgeternity/templates/testDialogs/modifiers-table.hbs',
-    'systems/torgeternity/templates/testDialogs/attack-options.hbs',
     'systems/torgeternity/templates/testDialogs/target-options.hbs',
-    'systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs',
 
     // active effect part:
     'systems/torgeternity/templates/parts/active-effects.hbs',
