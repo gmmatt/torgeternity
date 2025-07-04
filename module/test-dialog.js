@@ -116,7 +116,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     context.test.targetPresent = context.test.targets.length > 0 ? true : false;
     if ((context.test.targets.length > 0) & (context.test.testType !== 'soak')) {
       // Identify the first target
-      // var target = Array.from(data.test.targets)[0].actor;
       context.test.targets.forEach((t) => {
         allID.push(t.actor.id);
         allUUID.push(t.document.uuid);
@@ -129,7 +128,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         if (target.type === 'vehicle') {
           context.test.targetAll.push({
             present: true,
-            type: 'vehicle',
+            type: target.type,
             id: target.id,
             uuid: t.document.uuid,
             targetPic: target.img,

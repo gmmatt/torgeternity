@@ -252,9 +252,7 @@ export class TorgeternityMacros {
         'torgeternity.chatText.bonusDice'
       )} ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult2')} ${diceroll.total}.</p>`;
 
-      const targetedTokens = Array.from(game.user.targets);
-
-      if (targetedTokens.size === 0) {
+      if (game.user.targets.size === 0) {
         chatOutput += `<p>${game.i18n.localize(
           'torgeternity.macros.bonusDieMacroNoTokenTargeted'
         )}</p>`;
@@ -262,8 +260,9 @@ export class TorgeternityMacros {
         ChatMessage.create({ content: chatOutput });
         return;
       }
+
       chatOutput += `<ul>`;
-      for (const token of targetedTokens) {
+      for (const token of game.user.targets) {
         const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.defenses.toughness);
         if (tokenDamage.shocks > 0) {
           chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
@@ -290,20 +289,21 @@ export class TorgeternityMacros {
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noFight'));
     }
 
-    const users = game.users.filter((user) => user.active && !user.isGM);
-    let checkOptions = '';
-    const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
-    const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
-      if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
-    });
-
-    if (users.length === 0) {
+    const users = game.users.filter(user => user.active && !user.isGM);
+    if (!users.length) {
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noPlayers'));
     }
 
+    let checkOptions = '';
+    const playerTokenIds = users.map(user => user.character?.id).filter(id => id !== undefined);
+    const selectedPlayerIds = canvas.tokens.controlled.map(token => {
+      if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
+    });
+
+
     // Build checkbox list for all active players
     const fields = foundry.applications.fields;
-    users.forEach((user) => {
+    users.forEach(user => {
       const checkbox =
         fields.createFormGroup({
           label: user.name,
@@ -489,7 +489,7 @@ export class TorgeternityMacros {
         continue;
       }
       await pack.configure({ locked: false });
-      const uuids = pack.index.map((i) => i.uuid);
+      const uuids = pack.index.map(pack => pack.uuid);
 
       for (const uuid of uuids) {
         const doc = await fromUuid(uuid);
@@ -519,9 +519,9 @@ export class TorgeternityMacros {
     if (!game.user.isGM) {
       return;
     }
-    const users = game.users.filter((user) => user.active && !user.isGM);
+    const users = game.users.filter(user => user.active && !user.isGM);
     let checkOptions = '';
-    const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
+    const playerTokenIds = users.map(user => user.character?.id).filter((id) => id !== undefined);
     const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
       if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
     });
@@ -817,33 +817,28 @@ export class TorgeternityMacros {
               * @returns {null} no Value
               */
   async periculum(source = '', value = 10, bds = 0, armored = false, ap = 0) {
-    const victims = Array.from(game.user.targets);
-    if (armored) armored = 'checked';
-    if (!(victims.length > 0))
+    if (!game.user.targets.size)
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+
+    const tokens = Array.from(game.user.targets);
+    if (armored) armored = 'checked';
 
     // add options for AP and bypass the window
 
     const info = await DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
-              <label>${game.i18n.localize(
-        'torgeternity.macros.periculumSourceName'
-      )}<br><input placeholder=${game.i18n.localize(
-        'torgeternity.macros.periculumSourcePlaceHolder'
-      )} style="color:black" name="source" type="string" value="${source}"></label>
-                  <label>${game.i18n.localize(
-        'torgeternity.macros.periculumDamageValue'
-      )}<input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
-                  <label>${game.i18n.localize(
-        'torgeternity.macros.periculumBds'
-      )}<input name="plusBD" type="number" value=${bds} style="width:35px"></label>
-                  <label>${game.i18n.localize(
-        'torgeternity.macros.periculumArmor'
-      )}<input name="armor" type="checkbox" ${armored}></label>
-                  <label>${game.i18n.localize(
-        'torgeternity.macros.periculumAp'
-      )}<input name="ap" type="number" style="width:35px" value=${ap}></label>
+              <label>${game.i18n.localize('torgeternity.macros.periculumSourceName')}<br>
+              <input placeholder=${game.i18n.localize('torgeternity.macros.periculumSourcePlaceHolder')}
+               style="color:black" name="source" type="string" value="${source}"></label>
+                  <label>${game.i18n.localize('torgeternity.macros.periculumDamageValue')}
+                  <input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
+                  <label>${game.i18n.localize('torgeternity.macros.periculumBds')}
+                  <input name="plusBD" type="number" value=${bds} style="width:35px"></label>
+                  <label>${game.i18n.localize('torgeternity.macros.periculumArmor')}
+                  <input name="armor" type="checkbox" ${armored}></label>
+                  <label>${game.i18n.localize('torgeternity.macros.periculumAp')}
+                  <input name="ap" type="number" style="width:35px" value=${ap}></label>
                   `,
       ok: {
         label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), // 'Submit Effect',
@@ -857,19 +852,19 @@ export class TorgeternityMacros {
       },
     });
 
-    const allID = victims.map((victim) => victim.actor.id);
-    const allUUID = victims.map((victim) => victim.document.uuid);
+    const allID = tokens.map(target => target.actor.id);
+    const allUUID = tokens.map(target => target.document.uuid);
     const targetAll = [];
 
-    for (const victim of victims) {
-      const { actor } = victim;
+    for (const token of tokens) {
+      const { actor } = token;
       // Set vehicle defense if needed
       if (actor.type === 'vehicle') {
         targetAll.push({
           present: true,
           type: 'vehicle',
           id: actor.id,
-          uuid: victim.document.uuid,
+          uuid: token.document.uuid,
           targetPic: actor.img,
           targetName: actor.name,
           defenses: {
@@ -890,7 +885,7 @@ export class TorgeternityMacros {
           present: true,
           type: actor.type,
           id: actor.id,
-          uuid: victim.document.uuid,
+          uuid: token.document.uuid,
           targetPic: actor.img,
           targetName: actor.name,
           skills: actor.system.skills,
@@ -910,10 +905,9 @@ export class TorgeternityMacros {
       }
     }
 
-    const validuuid = Array.from(game.actors)[0].uuid;
     const test = {
       testType: 'custom',
-      actor: validuuid,
+      actor: game.actors.contents[0].uuid,
       actorPic: 'systems/torgeternity/images/tokens/vulnerable.webp',
       actorName: 'Quid',
       actorType: 'threat',
@@ -930,7 +924,7 @@ export class TorgeternityMacros {
       darknessModifier: 0,
       DNDescriptor: 'standard',
       type: 'attack',
-      targets: victims,
+      targets: tokens,
       applySize: false,
       attackOptions: true,
       rollTotal: 11,
@@ -972,7 +966,7 @@ export class TorgeternityMacros {
       applyDamLabel: 'display:inline',
       backlashLabel: 'display:true',
       ammoLabel: 'display:none',
-      target: victims[0],
+      target: tokens[0],
       chatTitle: '',
       DN: 9,
       unskilledLabel: 'display:none',

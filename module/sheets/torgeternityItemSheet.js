@@ -38,12 +38,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       itemName: TorgeternityItemSheet.#onItemName,
       itemDelete: TorgeternityItemSheet.#onItemDelete,
     },
-    dragDrop: [
-      {
-        dragSelector: '[drag-drop="true"],.item-list .item',
-        dropSelector: null,
-      },
-    ],
   }
 
   static PARTS = {
@@ -96,36 +90,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       labelPrefix: 'torgeternity.sheetLabels'
     }
   }
-  /**
-   *
-   * @param {...any} args
-   */
-  constructor(options = {}) {
-    super(options);
-    this.#dragDrop = this.#createDragDropHandlers();
-  }
-
-  /**
-   * Create drag-and-drop workflow handlers for this Application
-   * @returns {DragDrop[]}     An array of DragDrop handlers
-   * @private
-   */
-  #dragDrop;
-
-  #createDragDropHandlers() {
-    return this.options.dragDrop.map((d) => {
-      d.permissions = {
-        dragstart: this._canDragStart.bind(this),
-        drop: this._canDragDrop.bind(this),
-      };
-      d.callbacks = {
-        dragstart: this._onDragStart.bind(this),
-        dragover: this._onDragOver.bind(this),
-        drop: this._onDrop.bind(this),
-      };
-      return new foundry.applications.ux.DragDrop.implementation(d);
-    });
-  }
 
   /** @inheritdoc */
   _canDragStart(selector) {
@@ -134,31 +98,20 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   /** @inheritdoc */
   _canDragDrop(selector) {
-    return this.isEditable;
-  }
-
-  /** @inheritdoc
-   *
-   * won't be activated due to
-   */
-
-  _onDragStart(event) {
-    console.log(event);
-  }
-
-  _onDragOver(event) {
-    console.log(event);
+    return this.isEditable && this.item.type === 'race';
   }
 
   /** @inheritdoc */
   async _onDrop(event) {
+    // Note, Item#_onDrop does not exist
     const data = foundry.applications.ux.TextEditor.getDragEventData(event);
-    const dropedObject = await fromUuid(data.uuid);
+    const droppedDocument = await fromUuid(data.uuid);
+    if (!droppedDocument || this.item.type !== 'race') return;
 
-    if (dropedObject.type === 'perk' && this.item.type === 'race')
-      await this.dropPerkOnRace(dropedObject);
-    if (dropedObject.type === 'customAttack' && this.item.type === 'race')
-      await this.dropAttackOnRace(dropedObject);
+    if (droppedDocument.type === 'perk')
+      return this.dropPerkOnRace(droppedDocument);
+    else if (droppedDocument.type === 'customAttack')
+      return this.dropAttackOnRace(droppedDocument);
   }
 
   async dropPerkOnRace(perk) {
@@ -196,8 +149,19 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
    */
   async _onRender(context, options) {
     await super._onRender(context, options);
+
+    new foundry.applications.ux.DragDrop.implementation({
+      dragSelector: '[data-drag], .item-list .item',
+      permissions: {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this),
+      },
+      callbacks: {
+        drop: this._onDrop.bind(this),
+      }
+    }).bind(this.element);
+
     this.element.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
-    this.#dragDrop.forEach((d) => d.bind(this.element));
   }
 
   /**

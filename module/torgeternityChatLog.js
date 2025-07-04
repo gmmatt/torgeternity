@@ -372,7 +372,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!(targetid === game.user?.character?.id) && !game.user.isGM) {
       return;
     }
-    const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? Array.from(game.user.targets)[0].actor;
+    const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? game.user.targets.first().actor;
     if (checkForDiscon(soaker)) {
       await ChatMessage.create({
         speaker: ChatMessage.getSpeaker(),

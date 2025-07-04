@@ -86,4 +86,17 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
     await actor.setFlag('torgeternity', 'possibilityByCosm', formData.object);
     await actor.update({ "system.other.possibilities": formData.object.coreEarthPoss });
   }
+
+  static toggleRender(user) {
+    for (const app of foundry.applications.instances.values()) {
+      if (app instanceof PossibilityByCosm) {
+        if (app.rendered) {
+          if (app._minimized) return this.maximize();
+          return app.close()
+        }
+      }
+    }
+    // Not found, so open a new one
+    PossibilityByCosm.create(user);
+  }
 }

@@ -1243,8 +1243,6 @@ export async function backlash3(targetuuid) {
  */
 export async function soakDamages(soaker) {
   const skillName = 'reality';
-  const attributeName = 'spirit';
-  const isAttributeTest = false;
   const skillValue = soaker.system.skills[skillName].value;
 
   // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
@@ -1263,7 +1261,7 @@ export async function soakDamages(soaker) {
       soaker.system.skills[skillName]?.isFav ||
       soaker.system.attributes[skillName + 'IsFav'] ||
       false,
-    skillName: isAttributeTest ? attributeName : skillName,
+    skillName: skillName,
     skillValue: skillValue,
     targets: Array.from(game.user.targets),
     applySize: false,

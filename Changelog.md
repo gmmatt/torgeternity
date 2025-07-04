@@ -1,5 +1,10 @@
 # TORG Eternity Changelog
 
+## v13.0.2
+
+- Dragging items and skills to the Hotbar should now create the relevant macro.
+- Configure key now closes PossibilityByCosm if it is already open.
+
 ## v13.0.1
 
 - Combat Tracker: Cards, Effects, Tracked Resource (optional).

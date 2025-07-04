@@ -118,7 +118,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
       const actor = this.parent;
       const previousEquipped = actor.items.find(
-        (i) => i.id !== this.id && i.system.equipped && i.type === this.type
+        item => item.id !== this.id && item.system.equipped && item.type === this.type
       );
 
       if (previousEquipped) {
@@ -196,15 +196,15 @@ export default class TorgeternityItem extends foundry.documents.Item {
     // for armors and shields, ensure that there is only one equipped at a time
     if (!wasEquipped && ['armor', 'shield'].includes(item.type)) {
       actor.items
-        .filter((i) => i.id !== item.id && i.system.equipped && i.type === item.type)
-        .forEach((i) => {
+        .filter(item => item.id !== item.id && item.system.equipped && item.type === item.type)
+        .forEach(item => {
           itemUpdates.push({
-            _id: i.id,
+            _id: item.id,
             'system.equipped': false,
           });
           effectUpdates.push(
             ...actor.effects
-              .filter((e) => e.origin && e.origin.endsWith('Item.' + i._id))
+              .filter((e) => e.origin && e.origin.endsWith('Item.' + item._id))
               .map((e) => ({ _id: e.id, disabled: true }))
           );
         });

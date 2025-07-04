@@ -31,8 +31,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     context.self = game.user;
-    const gmuser = game.users.find((user) => user.isGM);
-    context.GMpossibilities = gmuser.getFlag('torgeternity', 'GMpossibilities');
+    context.GMpossibilities = game.users.activeGM.getFlag('torgeternity', 'GMpossibilities');
 
     for (const user of [...context.active, ...context.inactive]) {
       const userdoc = game.users.get(user.id);
