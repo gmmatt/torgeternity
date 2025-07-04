@@ -14,16 +14,6 @@
           <i class="fa-solid fa-stop" inert></i>
           <span>{{ localize "COMBAT.End" }}</span>
         </button>
-
-        <!--<a class="combat-control" data-tooltip="{{localize 'torgeternity.combat.nextNew'}}" data-control="nextRound"><i
-      class="fas fa-step-forward"></i> {{localize "torgeternity.sheetLabels.new"}}</a>
-
-  <a class="combat-control" data-tooltip="{{localize 'torgeternity.combat.nextKeep'}}" data-control="nextRoundKeep"><i
-      class="fas fa-step-forward"></i> {{localize "torgeternity.sheetLabels.keep"}}</a>
-
-  <a class="combat-control" data-tooltip="{{localize 'COMBAT.End'}}" data-control="endCombat"><i
-      class="fas fa-stop"></i>
-    {{localize "torgeternity.sheetLabels.end"}}</a>-->
       {{else}}
         <button type="button" class="combat-control combat-control-lg" data-action="startCombat">
           <i class="fa-solid fa-swords" inert></i>
@@ -32,11 +22,10 @@
       {{/if}}
     {{else}}
       {{#if hasTurn}}
-        <button type="button" class="combat-control combat-control-lg" data-action="nextTurn">
+        <button type="button" class="combat-control combat-control-lg" data-action="hasFinished">
           <i class="fa-solid fa-check"></i>
           <span>{{ localize "torgeternity.combat.endMyTurn" }}</span>
         </button>
-        <!--<a class="combat-finish center">{{localize "torgeternity.combat.endMyTurn"}}</a>-->
       {{/if}}
     {{/if}}
   {{/if}}

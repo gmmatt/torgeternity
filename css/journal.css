@@ -13,19 +13,19 @@
   --torgred: rgb(150, 0, 0);
 }
 
-/*New Journal window styling, 2nd section for restyling the submit changes button*/
-.journal-sheet .window-content form.editable {
-  background: url(../images/journal-background.webp);
+/* JOURNAL : form.application.sheet.journal-sheet.journal-entry */
+/* PAGE VIEW : section.journal-entry-content.flexcol
+    div.journal-entry-pages.scrollable.editable
+    article.journal-entry-page.text.level1.page */
+/* PAGE EDITOR : form.application.sheet.journal-sheet.journal-entry-page.text 
+      section.window-content
+      PROSEMIRROR: <prose-mirror>.journal-page-content.editor.prosemirror.active */
+
+form.journal-sheet.journal-entry-page .window-content {
+  background-image: url(../images/journal-background.webp);
   background-size: 100% 100%;
   box-shadow: -20px 0px 150px black inset, 30px 0px 150px black inset;
   padding: 4% 4% 0% 4%;
-}
-
-/*Styling the actual journal window*/
-.sheet.journal-entry .journal-entry-content {
-  background: url(../images/journal-background.webp);
-  background-size: 100% 100%;
-  padding: 3% 4%;
 }
 
 .journal-sheet .window-content .editor {
@@ -36,47 +36,33 @@
   margin-left: 0;
 }
 
-.journal-sheet.journal-page-sheet .window-content form.editable {
-  font-family: Alaska;
-  background-image: url(../images/thunder.webp);
-  background-size: cover;
-  color: white;
-  overflow-y: scroll;
+.journal-sheet.journal-entry-page.text {
+  button {
+    text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+    background-image: url(../images/lightning_bar.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    color: white;
+  }
+
+  .window-content .prosemirror.editor {
+    font-family: Alaska;
+    overflow-y: scroll;
+
+    menu {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .editor-container {
+      /*background-color: rgba(255, 247, 247, 0.25);*/
+      padding-left: 10px;
+      padding-top: 20px;
+    }
+  }
 }
 
-.sheet.journal-entry .journal-entry-page {
-  font-family: Palatino;
-  background-color: rgba(255, 247, 247, 0.25);
-  /*background-image: url(../images/box-bckg.webp);
-    background-size: 100% 100%;*/
-  color: black;
-  padding: 0 5px;
-}
-
-.editor-content {
-  background-color: rgba(255, 247, 247, 0.25);
-  padding-left: 10px;
-  padding-top: 20px;
-}
-
-/*
-.application .window-content input[type="text"],
-.application .window-content input[type="number"],
-.application .window-content input[type="password"],
-.application .window-content input[type="date"],
-.application .window-content input[type="time"] .editor {
-    background-color: rgba(255, 255, 255, 0.25);
-}*/
-
-/*preventing buttons to go under content*/
-.app.application.sheet.journal-sheet section.window-content footer.sheet-footer {
-  bottom: 0px;
-  position: absolute;
-  width: 80%;
-  left: 10%;
-}
-
-.app.application.sheet.journal-sheet nav.directory {
+.sheet.journal-sheet nav.directory {
   background: url(../images/journal-background.webp);
   background-size: 100% 100%;
   box-shadow: -20px 0px 150px black inset, 30px 0px 150px black inset;
@@ -85,37 +71,9 @@
   outline: black;
 }
 
-.journal-sheet nav .pages-list .directory-item.active {
-  border-color: #009fff;
-  box-shadow: 0px 5px 10px #009fff63 inset;
-}
-
-.application.torgeternity .window-content button,
-.application.torgeternity .window-content select,
-.journal-sheet .directory .action-buttons button,
-dialog footer button {
-  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
-  background-image: url(../images/lightning_bar.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  color: white;
-}
-
-/*Fixing stylebleed*/
-.item.torgeternity .window-content .asside select {
-  text-shadow: none;
-  background: none;
-}
-
 .tox .tox-tbtn--bespoke .tox-tbtn__select-label {
   text-shadow: none;
   color: black;
-  background: none;
-}
-
-.application.actor .window-content select {
-  text-shadow: none;
   background: none;
 }
 
@@ -132,283 +90,307 @@ body#tinymce.mce-content-body {
   background-color: #ffffff7a;
 }
 
-/*
-.tox .tox-editor-container {
-    background-color: #ffffff7a;
-    }*/
-/*/fixed stylebleeds*/
-/*Changing safe button on journal entry*/
-/* Reversed changes to save button to improve v10 Compatibility
-.journal-sheet .window-content button[name="submit"]{
-    background-color: rgba(0, 0, 0, 0.45);
-    text-shadow:    black    1.3px 1.3px 0px,
-                    black    1.3px -1.3px 0px,
-                    black    -1.3px 1.3px 0px,
-                    black    -1.3px 1.3px 0px;
-}
-*/
-form button {
-  border: 1px groove var(--color-border-light-highlight);
-}
+.sheet.journal-entry {
 
-/*...................................................................*/
-/*Lightning in the new sidebar */
-.sheet.journal-entry .sidebar {
-  background-image: url(../images/CHHeader.webp);
-  background-repeat: no-repeat;
-  background-size: 110%;
-}
+  .journal-entry-content {
+    background-image: url(../images/journal-background.webp);
+    background-size: 100% 100%;
+    padding: 3% 4%;
+  }
 
-/*...................................................................*/
-/*New header in V10 becomes Torg-Style! */
-/* ATM commented out for purpose question
+  .journal-entry-page {
+    font-family: Palatino;
+    background-color: rgba(255, 247, 247, 0.25);
+    /*background-image: url(../images/box-bckg.webp);
+    background-size: 100% 100%;*/
+    color: black;
+    padding: 0 5px;
+  }
 
-.sheet.journal-entry .journal-entry-page header {
-    background-image:url(../images/CHHeader.webp);
-    background-size:100% 100%;
+  .journal-sidebar {
+    background-image: url(../images/CHHeader.webp);
     background-repeat: no-repeat;
-    float:left;
-    width:300px;
-    height:825px;
-    margin: 0 0.5em 0.5em 0;
-}
+    background-size: 110%;
 
-.sheet.journal-entry .journal-entry-page header h1{
-    position:relative;
-    top:42.5%;
-    background-image:none;
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-    font-family: Alaska;
-    text-shadow: black 1.3px 1.3px 0px,
-        black 1.3px -1.3px 0px,
-        black -1.3px 1.3px 0px,
-        black -1.3px 1.3px 0px;
-    text-transform: uppercase;
-    border: none;
-    transform: rotate(270deg);
-    
-}*/
-/*...................................................................*/
-/*orange lines in the browser are not that cool with Torg colors*/
-.sheet.journal-entry .pages-list .directory-item.active:first-of-type {
-  border-color: var(--torgblue);
-}
+    .toc {
+      li.page.active {
+        border-color: #009fff;
+        box-shadow: 0px 5px 10px #009fff63 inset;
+      }
 
-.sheet.journal-entry .pages-list .directory-item.active:last-of-type {
-  border-color: var(--torgblue);
-}
+      li.page.active:first-of-type {
+        border-color: var(--torgblue);
+      }
 
-.sheet.journal-entry .pages-list .directory-item:not(.active)+.active {
-  border-color: var(--torgblue);
-}
+      li.page.active:last-of-type {
+        border-color: var(--torgblue);
+      }
 
-.sheet.journal-entry .pages-list .directory-item.active+ :not(.active) {
-  border-color: var(--torgred);
-}
+      li.page:not(.active)+.active {
+        border-color: var(--torgblue);
+      }
 
-/*...................................................................*/
-/*adjustments for <p>*/
-.sheet.journal-entry .journal-entry-page p {
-  text-align: justify;
-  padding-right: 10px;
-  font-family: "Palatino Linotype";
-  font-size: 14px;
-  margin: 0.5em 0;
-}
+      li.page.active+ :not(.active) {
+        border-color: var(--torgred);
+      }
+    }
+  }
 
-.sheet.journal-entry .journal-entry-page :is(p, blockquote)+p {
-  text-indent: 0.75rem;
-}
+  .journal-entry-page {
 
-.sheet.journal-entry .journal-entry-page p:first-of-type {
-  text-indent: 0;
-}
+    p {
+      text-align: justify;
+      padding-right: 10px;
+      font-family: "Palatino Linotype";
+      font-size: 14px;
+      margin: 0.5em 0;
+    }
 
-.sheet.journal-entry .journal-entry-page h3~p {
-  margin-top: 0;
-}
+    :is(p, blockquote)+p {
+      text-indent: 0.75rem;
+    }
 
-/*...................................................................*/
-/*adjustments for ul & ol*/
-.sheet.journal-entry .journal-entry-page :is(ul, ol) {
-  text-align: justify;
-  padding-right: 10px;
-  /*list-style-position: inside;*/
-  font-family: "Palatino Linotype";
-  font-size: 14px;
-}
+    p:first-of-type {
+      text-indent: 0;
+    }
 
-.sheet.journal-entry .journal-entry-page li+p::marker {
-  list-style-type: none;
-  list-style-position: unset;
-}
+    ul,
+    ol {
+      text-align: justify;
+      padding-right: 10px;
+      font-family: "Palatino Linotype";
+      font-size: 14px;
+    }
 
-/*...................................................................*/
-/*general header formatting*/
-.sheet.journal-entry .journal-entry-page :is(h1, h2, h3, h4) {
-  font-family: Alaska;
-}
+    li+p::marker {
+      list-style-type: none;
+      list-style-position: unset;
+    }
 
-/*h1 will become Torg-Style*/
-.sheet.journal-entry .journal-entry-page h1 {
-  background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  overflow: hidden;
-  border: none;
-  margin: 1rem 0px 0.7rem 0px;
-  color: white;
-  text-transform: uppercase;
-  line-height: 30px;
-  text-align: center;
-}
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: Alaska;
+    }
 
-/*...................................................................*/
-/*The <h2> Header will become Torg-Style with grey outlines and centered align*/
-.sheet.journal-entry .journal-entry-page h2 {
-  font-family: Alaska;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bolder;
-  text-shadow: #878787 1.5px 1.5px 0px, #878787 1.5px -1.5px 0px, #878787 -1.5px 1.5px 0px, #878787 -1.5px -1.5px 0px;
-  text-transform: uppercase;
-  margin: 1rem 0px 0.7rem 0px;
-  border: none;
-}
+    h1 {
+      background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      overflow: hidden;
+      border: none;
+      margin: 1rem 0px 0.7rem 0px;
+      color: white;
+      text-transform: uppercase;
+      line-height: 30px;
+      text-align: center;
+    }
 
-/*...................................................................*/
-.sheet.journal-entry .journal-entry-page h3 {
-  margin: 2px 0px 0px 0px;
-  font-weight: bolder;
-  border: none;
-  font-weight: bold;
-  font-size: 15px;
-}
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bolder;
+      text-shadow: #878787 1.5px 1.5px 0px, #878787 1.5px -1.5px 0px, #878787 -1.5px 1.5px 0px, #878787 -1.5px -1.5px 0px;
+      text-transform: uppercase;
+      margin: 1rem 0px 0.7rem 0px;
+      border: none;
+    }
 
-/*...................................................................*/
-/*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
-.sheet.journal-entry .journal-entry-page h4 {
-  text-align: center;
-  font-size: 1.5rem;
-  color: white;
-  font-family: Alaska;
-  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
-  text-transform: uppercase;
-  margin: 1rem 0px 0.7rem 0px;
-  border: none;
-}
+    h3 {
+      margin: 2px 0px 0px 0px;
+      font-weight: bolder;
+      border: none;
+      font-weight: bold;
+      font-size: 15px;
 
-/*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
-.sheet.journal-entry .journal-entry-page h4.bar {
-  background-image: url(../images/separator.webp);
-  background-position-y: -8px;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
+      &~p {
+        margin-top: 0;
+      }
+    }
 
-/*separator*/
-.sheet.journal-entry .journal-entry-page hr {
-  background-image: url(../images/separator.webp);
-  /* background-position-y: -8px; */
-  background-repeat: no-repeat;
-  background-size: auto;
-  min-height: 20px;
-  height: 3rem;
-  width: auto;
-  border: none;
-  transform: scaleY(0.5);
-  margin: -15px 10px -15px 0px;
-}
+    h4 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: white;
+      font-family: Alaska;
+      text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+      text-transform: uppercase;
+      margin: 1rem 0px 0.7rem 0px;
+      border: none;
 
-/*...................................................................*/
-/*Introduced h6 as a format for using anchors (kinda deepfaking paragraphs for anchor-links), basically styled like normal p but strong (what's styles' default)*/
-.sheet.journal-entry .journal-entry-page h6,
-.prosemirror .editor-container .editor-content h6 {
-  font-family: Palatino;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-}
+      /*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
+      &.bar {
+        background-image: url(../images/separator.webp);
+        background-position-y: -8px;
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+    }
 
-/*Some margin adjustments*/
-.sheet.journal-entry .journal-entry-page h6:not(:first-child),
-.prosemirror .editor-container .editor-content h6:not(:first-child) {
-  margin-top: 0;
-}
+    hr {
+      background-image: url(../images/separator.webp);
+      background-repeat: no-repeat;
+      background-size: auto;
+      min-height: 20px;
+      height: 3rem;
+      width: auto;
+      border: none;
+      transform: scaleY(0.5);
+      margin: -15px 10px -15px 0px;
+    }
 
-.sheet.journal-entry .journal-entry-page h6:first-child,
-.prosemirror .editor-container .editor-content h6:first-child {
-  margin: 0.5em 0;
-}
+    /*Introduced h6 as a format for using anchors (kinda deepfaking paragraphs for anchor-links), basically styled like normal p but strong (what's styles' default)*/
+    h6 {
+      font-family: Palatino;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
 
-/*Prevent a linebreak after h6 with "pinline" class*/
-.sheet.journal-entry .journal-entry-page div.pinline>section> :is(h6, p),
-.sheet.journal-entry .journal-entry-page div.pinline> :is(h6, p),
-.prosemirror .editor-container .editor-content div.pinline>section> :is(h6, p),
-.prosemirror .editor-container .editor-content div.pinline> :is(h6, p) {
-  display: inline;
-  break-after: avoid;
-  break-inside: avoid;
-}
+    h6:not(:first-child) {
+      margin-top: 0;
+    }
 
-.sheet.journal-entry .journal-entry-page div.pinline,
-.prosemirror .editor-container .editor-content div.pinline {
-  margin-bottom: 7px;
-}
+    h6:first-child {
+      margin: 0.5em 0;
+    }
 
-/*Place a space between h6 and p*/
-.sheet.journal-entry .journal-entry-page div.pinline h6::after {
-  content: " ";
-}
+    div.pinline>section> :is(h6, p),
+    div.pinline> :is(h6, p) {
+      display: inline;
+      break-after: avoid;
+      break-inside: avoid;
+    }
 
-/*New class "un-list" for faking <ul>s inside this construct*/
-.sheet.journal-entry .journal-entry-page div.pinline.un-list {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 21px;
-}
+    div.pinline {
+      margin-bottom: 7px;
+    }
 
-.sheet.journal-entry .journal-entry-page div.pinline.un-list>section {
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
+    /*Place a space between h6 and p*/
+    div.pinline h6::after {
+      content: " ";
+    }
 
-/*...................................................................*/
-/*<img> comes with a border, what is never seen in TE*/
-.sheet.journal-entry .journal-entry-page img {
-  border-image: none;
-  border: none;
-}
+    /*New class "un-list" for faking <ul>s inside this construct*/
+    div.pinline.un-list {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 21px;
+    }
 
-/*...................................................................*/
-/*formatting tables*/
+    div.pinline.un-list>section {
+      display: list-item;
+      text-align: -webkit-match-parent;
+    }
 
-.sheet.journal-entry .journal-entry-page th {
-  background-color: black;
-  color: white;
-}
+    img {
+      border-image: none;
+      border: none;
+    }
+  }
 
-.sheet.journal-entry .journal-entry-page table {
-  font-size: 0.875rem;
-  background-color: transparent;
-}
+  /*...................................................................*/
+  /*<img> comes with a border, what is never seen in TE*/
+  .sheet.journal-entry .journal-entry-page {
+    img {
+      border-image: none;
+      border: none;
+    }
 
-.sheet.journal-entry .journal-entry-page tr:nth-child(even) {
-  background-color: #f6e9d7;
-}
+    /*...................................................................*/
+    /*formatting tables*/
 
-.sheet.journal-entry .journal-entry-page tr:nth-child(odd) {
-  background-color: transparent;
-}
+    th {
+      background-color: black;
+      color: white;
+    }
 
-.sheet.journal-entry .journal-entry-page td {
-  padding: 0.25em;
+    table {
+      font-size: 0.875rem;
+      background-color: transparent;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f6e9d7;
+    }
+
+    tr:nth-child(odd) {
+      background-color: transparent;
+    }
+
+    td {
+      padding: 0.25em;
+    }
+
+    /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
+    /*.app.application.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-user:before,*/
+    .fa-user:before,
+    .fa-book-open:before,
+    .fa-id-badge:before,
+    .fa-suitcase:before,
+    .fa-map:before,
+    .fa-th-list:before,
+    .fa-cards:before,
+    .fa-music:before,
+    .fa-file-alt:before,
+    .fa-file-lines:before,
+    .fa-file-text:before,
+    .fa-dice-d20:before {
+      color: rgb(245, 245, 245);
+      margin-right: 5px;
+    }
+
+    div.subtitleright p,
+    div.subtitleleft p {
+      margin: 0.5rem;
+      bottom: auto;
+      left: auto;
+      text-align: center;
+      font-size: 1rem;
+      color: white;
+      font-family: Alaska;
+      text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+      text-transform: uppercase;
+    }
+
+    .sidenote {
+
+      h2,
+      h3,
+      h4,
+      ul,
+      table {
+        background-color: rgba(255, 247, 247, 0.5);
+        margin: 0;
+        padding: 10px;
+      }
+
+      p {
+        background-color: rgba(255, 247, 247, 0.5);
+        margin: 0;
+        padding-bottom: 8px;
+        padding-left: 10px;
+      }
+
+      ul {
+        text-align: justify;
+        padding-right: 10px;
+      }
+    }
+
+    .noindent {
+      text-indent: 0px;
+
+      p+p {
+        text-indent: 0px;
+      }
+    }
+  }
 }
 
 /*...................................................................*/
@@ -422,18 +404,18 @@ blockquote {
   overflow: inherit;
   border-left: none;
   font-style: normal;
-}
 
-blockquote p:first-of-type {
-  text-indent: 0px;
-}
+  p:first-of-type {
+    text-indent: 0px;
+  }
 
-blockquote p+p {
-  text-indent: 0px;
-}
+  p+p {
+    text-indent: 0px;
+  }
 
-blockquote em {
-  font-style: italic;
+  em {
+    font-style: italic;
+  }
 }
 
 /*...................................................................*/
@@ -450,24 +432,6 @@ a.inline-roll {
   text-indent: 0px;
 }
 
-/*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
-/*.app.application.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-user:before,*/
-.sheet.journal-entry .journal-entry-page .fa-user:before,
-.sheet.journal-entry .journal-entry-page .fa-book-open:before,
-.sheet.journal-entry .journal-entry-page .fa-id-badge:before,
-.sheet.journal-entry .journal-entry-page .fa-suitcase:before,
-.sheet.journal-entry .journal-entry-page .fa-map:before,
-.sheet.journal-entry .journal-entry-page .fa-th-list:before,
-.sheet.journal-entry .journal-entry-page .fa-cards:before,
-.sheet.journal-entry .journal-entry-page .fa-music:before,
-.sheet.journal-entry .journal-entry-page .fa-file-alt:before,
-.sheet.journal-entry .journal-entry-page .fa-file-lines:before,
-.sheet.journal-entry .journal-entry-page .fa-file-text:before,
-.sheet.journal-entry .journal-entry-page .fa-dice-d20:before {
-  color: rgb(245, 245, 245);
-  margin-right: 5px;
-}
-
 /*...................................................................*/
 /*Image-wraparound, image on left side*/
 
@@ -476,16 +440,16 @@ a.inline-roll {
   margin-right: 0.5rem;
   width: 50%;
   height: 50%;
-}
 
-.imgleft.shrink20p {
-  width: 20%;
-  height: 20%;
-}
+  &.shrink20p {
+    width: 20%;
+    height: 20%;
+  }
 
-.imgleft.shrink30p {
-  width: 30%;
-  height: 30%;
+  &.shrink30p {
+    width: 30%;
+    height: 30%;
+  }
 }
 
 /*Image-wraparound, image on right side.*/
@@ -495,17 +459,19 @@ a.inline-roll {
   margin-left: 0.5rem;
   width: 50%;
   height: 50%;
+
+  &.shrink20p {
+    width: 20%;
+    height: 20%;
+  }
+
+  &.shrink30p {
+    width: 30%;
+    height: 30%;
+  }
+
 }
 
-.imgright.shrink20p {
-  width: 20%;
-  height: 20%;
-}
-
-.imgright.shrink30p {
-  width: 30%;
-  height: 30%;
-}
 
 /*...................................................................*/
 /*IMG underlines */
@@ -525,19 +491,6 @@ div.subtitleleft {
   margin-right: 0.5rem;
 }
 
-.sheet.journal-entry .journal-entry-page div.subtitleright p,
-.sheet.journal-entry .journal-entry-page div.subtitleleft p {
-  margin: 0.5rem;
-  bottom: auto;
-  left: auto;
-  text-align: center;
-  font-size: 1rem;
-  color: white;
-  font-family: Alaska;
-  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
-  text-transform: uppercase;
-}
-
 div.subtitleright img,
 div.subtitleleft img {
   width: 100%;
@@ -552,16 +505,16 @@ div.subtitleleft img {
   shape-margin: 0.5rem;
   width: 50%;
   height: 50%;
-}
 
-.imgfloatmid.shrink20p {
-  width: 20%;
-  height: 20%;
-}
+  &.shrink20p {
+    width: 20%;
+    height: 20%;
+  }
 
-.imgfloatmid.shrink30p {
-  width: 30%;
-  height: 30%;
+  &.shrink30p {
+    width: 30%;
+    height: 30%;
+  }
 }
 
 /*...................................................................*/
@@ -605,41 +558,22 @@ div.subtitleleft img {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
-}
 
-.sheet.journal-entry .journal-entry-page .sidenote :is(h2, h3, h4, ul, table) {
-  background-color: rgba(255, 247, 247, 0.5);
-  margin: 0;
-  padding: 10px;
-}
+  :first-of-type {
+    padding-top: 0;
+  }
 
-.sheet.journal-entry .journal-entry-page .sidenote p {
-  background-color: rgba(255, 247, 247, 0.5);
-  margin: 0;
-  padding-bottom: 8px;
-  padding-left: 10px;
-}
+  &.left {
+    float: left;
+    width: 50%;
+    margin-right: 0.5rem;
+  }
 
-.sheet.journal-entry .journal-entry-page .sidenote ul {
-  /*list-style-position: inside;*/
-  text-align: justify;
-  padding-right: 10px;
-}
-
-.sidenote :first-of-type {
-  padding-top: 0;
-}
-
-.sidenote.left {
-  float: left;
-  width: 50%;
-  margin-right: 0.5rem;
-}
-
-.sidenote.right {
-  float: right;
-  width: 50%;
-  margin-left: 0.5rem;
+  &.right {
+    float: right;
+    width: 50%;
+    margin-left: 0.5rem;
+  }
 }
 
 /*...................................................................*/
@@ -660,30 +594,41 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
   margin-left: 25%;
   min-height: 154px;
   background-image: url(../images/splotch_aysle.webp);
-}
 
-.splotch.aysle {
-  background-image: url(../images/splotch_aysle.webp);
-}
+  &.aysle {
+    background-image: url(../images/splotch_aysle.webp);
+  }
 
-.splotch.cyber {
-  background-image: url(../images/splotch_cyberpapacy.webp);
-}
+  &.cyber {
+    background-image: url(../images/splotch_cyberpapacy.webp);
+  }
 
-.splotch.nile {
-  background-image: url(../images/splotch_nile.webp);
-}
+  &.nile {
+    background-image: url(../images/splotch_nile.webp);
+  }
 
-.splotch.or {
-  background-image: url(../images/splotch_orrorsh.webp);
-}
+  &.or {
+    background-image: url(../images/splotch_orrorsh.webp);
+  }
 
-.splotch.panpa {
-  background-image: url(../images/splotch_panpacifica.webp);
-}
+  &.panpa {
+    background-image: url(../images/splotch_panpacifica.webp);
+  }
 
-.splotch.thark {
-  background-image: url(../images/splotch_tharkold.webp);
+  &.thark {
+    background-image: url(../images/splotch_tharkold.webp);
+  }
+
+  &.right {
+    float: right;
+    margin-left: 0.5rem;
+  }
+
+  &.left {
+    float: left;
+    margin-right: 0.5rem;
+    margin-left: unset;
+  }
 }
 
 .sheet.journal-entry .journal-entry-page .splotch p {
@@ -714,17 +659,6 @@ div.splotch p+p:last-of-type {
   text-indent: 0px;
 }
 
-.splotch.right {
-  float: right;
-  margin-left: 0.5rem;
-}
-
-.splotch.left {
-  float: left;
-  margin-right: 0.5rem;
-  margin-left: unset;
-}
-
 /*...................................................................*/
 /*I was not sure if I can alter blockquote with that, but did so afterwards. Leaving this class because it is actually used in some sorcebooks. Maybe revising it in some time. */
 .exampletext {
@@ -734,14 +668,14 @@ div.splotch p+p:last-of-type {
   font-size: 14px;
   text-align: justify;
   overflow: hidden;
-}
 
-.exampletext.exampletext p:first-of-type {
-  text-indent: 0px;
-}
+  p:first-of-type {
+    text-indent: 0px;
+  }
 
-.exampletext.exampletext p+p {
-  text-indent: 0px;
+  p+p {
+    text-indent: 0px;
+  }
 }
 
 /*...................................................................*/
@@ -783,15 +717,4 @@ div.directive2 {
 
 div.directive2 h3 {
   font-size: 21px;
-}
-
-/*...................................................................*/
-/*Multi-purpose classes*/
-
-.sheet.journal-entry .journal-entry-page .noindent {
-  text-indent: 0px;
-}
-
-.sheet.journal-entry .journal-entry-page .noindent p+p {
-  text-indent: 0px;
 }

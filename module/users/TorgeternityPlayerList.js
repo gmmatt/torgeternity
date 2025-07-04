@@ -8,6 +8,7 @@ const { DialogV2 } = foundry.applications.api;
 export default class TorgeternityPlayerList extends foundry.applications.ui.Players {
 
   static DEFAULT_OPTIONS = {
+    classes: ['torgeternity', 'themed', 'theme-dark'],
     actions: {
       partySheet: PartySheet.showParty,
       possAdd: TorgeternityPlayerList.#onAddPossibility,

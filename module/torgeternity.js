@@ -17,7 +17,6 @@ import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
 import * as torgChecks from './torgchecks.js';
 import { modifyTokenBars } from './tokenBars.js';
-import { registerHelpers } from './handlebarHelpers.js';
 import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
 import torgeternityPlayerHand from './cards/torgeternityPlayerHand.js';
@@ -47,9 +46,6 @@ const { DialogV2 } = foundry.applications.api;
 
 Hooks.once('init', async function () {
   console.log('torgeternity | Initializing Torg Eternity System');
-  // CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
-  // ----helpers
-  registerHelpers();
 
   // -------global
   game.torgeternity = {
@@ -362,7 +358,7 @@ Hooks.on("renderSettings", async (app, html) => {
     // Create dialog if not done yet
     if (!externalLinks) {
       const dialogOptions = {
-        classes: ['torgeternity', 'externalLinks'],
+        classes: ['torgeternity', 'themed', 'theme-dark', 'externalLinks'],
         window: {
           title: 'torgeternity.dialogWindow.externalLinks.title',
         },
@@ -1102,8 +1098,8 @@ Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
 });
 
 // When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
-Hooks.on('updateCombatant', async (combatant, dataFlags, dataDiff, userId) => {
-  if (game.user.hasRole(4) && dataFlags.flags?.world.turnTaken) {
+Hooks.on('updateCombatant', async (combatant, changes, options, userId) => {
+  if (game.user.hasRole(CONST.USER_ROLES.GAMEMASTER) && changes.flags?.world?.turnTaken) {
     const myActor = combatant.actor;
     for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
       if (ef.name === 'ActiveDefense') continue;
@@ -1147,12 +1143,12 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
       description = `<div class="charInfoOutput">${description}</div>`;
 
       DialogV2.wait({
-        classes: ['torgeternity', 'charInfoOutput'],
+        classes: ['torgeternity', 'themed', 'theme-dark', 'charInfoOutput'],
         window: {
           title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
             a: actor.name,
           }),
-          contentClasses: ["scrollable"],
+          contentClasses: ['scrollable'],
         },
         position: {
           width: 800
@@ -1178,3 +1174,8 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
     },
   });
 });
+
+
+Hooks.on('renderJournalEntryPageSheet', (sheet, element, document, options) => {
+  element.classList.add('themed', 'theme-light');
+})
