@@ -33,49 +33,22 @@ export default class torgeternityCombatTracker extends foundry.applications.side
 
     const hand = combatant.actor.getDefaultHand();
     context.noHand = !hand;
-    if (hand)
-      context.cardpool = hand.cards?.filter(card =>
-        card.flags?.torgeternity?.pooled).map(card => { return { name: card.name, img: card.img } }) ?? [];
+    if (hand) {
+      context.cardpool = hand.cards
+        ?.filter(card => card.flags?.torgeternity?.pooled)
+        .map(card => { return { name: card.name, img: card.img } }) ?? [];
+    }
     context.turnTaken = combatant.turnTaken;
     context.actorType = combatant.actor.type;
-    context.css += ` dispo${combatant.token.disposition}`;
+    const dispositions = {
+      [CONST.TOKEN_DISPOSITIONS.SECRET]: "secret",
+      [CONST.TOKEN_DISPOSITIONS.HOSTILE]: "hostile",
+      [CONST.TOKEN_DISPOSITIONS.NEUTRAL]: "neutral",
+      [CONST.TOKEN_DISPOSITIONS.FRIENDLY]: "friendly",
+    }
+    context.css += ` ${dispositions[combatant.token.disposition]}`;
     if (combatant.turnTaken) context.css += ' turnDone';
     return context;
-  }
-
-  async _onRender(context, options) {
-    await super._onRender(context, options);
-    const html = this.element;
-
-    for (const element of document.querySelectorAll('.pool-tooltip')) {
-      await element.addEventListener('mouseenter', this._notOutOfBounds);
-      await element.addEventListener('mouseleave', this._notOutOfBounds);
-    }
-  }
-
-  /**
- * Making sure, that mouseover card display isn't out of bounds
- *
- * @param {object} event The event
- */
-  async _notOutOfBounds(event) {
-    const span = event.target;
-    const tooltipImage = span.querySelector('.pool-tooltip-image');
-    const rect = tooltipImage.getBoundingClientRect();
-    // force resize
-    /*console.log('span at ', event.target.getBoundingClientRect());
-    console.log('img  at ', rect);*/
-    span.display = 'none';
-    span.offsetHeight;
-    span.display = 'block';
-
-    if (rect.left < 0) {
-      tooltipImage.style.left = 'auto';
-      tooltipImage.style.right = '-250px';
-    } else if (rect.right > window.innerWidth) {
-      tooltipImage.style.left = '-250px';
-      tooltipImage.style.right = '30px';
-    }
   }
 
   /**

@@ -2702,6 +2702,10 @@ nav#controls,
         width: auto;
       }
 
+      .token-resource {
+        color: white;
+      }
+
       .pool-ulist {
         margin: 0 0 0.5em 0;
         color: white;
@@ -2728,15 +2732,15 @@ nav#controls,
         text-shadow: 1px 1px 4px var(--color-shadow-dark);
       }
 
-      &.dispo1 {
+      &.friendly {
         background-color: rgba(15, 47, 189, 0.212);
       }
 
-      &.dispo-1 {
+      &.hostile {
         background-color: rgba(143, 1, 1, 0.28);
       }
 
-      &.dispo0 {
+      &.neutral {
         background-color: rgba(141, 143, 1, 0.28);
       }
 
@@ -3779,28 +3783,19 @@ p.skill-chat-title.skilled {
     span {
       display: none;
       border-radius: 6px;
-
-      img {
-        float: left;
-        margin: 0px 8px 8px 0;
-      }
+      padding: 8px;
+      background-color: white;
+      border: 1px solid black;
     }
 
     &:hover span {
       position: absolute;
       display: block;
-      background-color: white;
-      top: 0px;
+      top: 10px;
       right: calc(var(--sidebar-width) + 10px);
       z-index: 1000;
-      max-width: 246px;
-      min-height: 99px;
-      background-color: white;
-      border: 1px solid black;
-      margin-top: 5px;
-      margin-left: 5px;
-      overflow: visible;
-      padding: 8px;
+      max-width: 250px;
+      min-height: 100px;
     }
   }
 }
