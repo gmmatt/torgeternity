@@ -3661,66 +3661,71 @@ p.skill-chat-title.skilled {
   flex-direction: column;
   max-width: 530px;
   min-width: 530px;
+
+  &>div {
+    display: flex;
+    flex-direction: row;
+
+    &>fieldset {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      border-color: auto;
+      column-gap: 1rem;
+
+      legend {
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      &>label {
+        font-family: "Palatino";
+      }
+
+      &>span {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+
+        &>input[type="checkbox"]~label[for] {
+          align-self: center;
+        }
+
+        &>input[type="radio"]~label[for] {
+          align-self: baseline;
+        }
+
+        &>input[type="number"] {
+          width: 3em;
+        }
+
+        &>* {
+          justify-content: left;
+        }
+      }
+
+      &>hr {
+        width: 100%;
+      }
+    }
+  }
+
+  .otherModifiers {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: repeat(4 1fr);
+    row-gap: 2px;
+
+    &>label {
+      justify-self: center;
+      /*font-family: 'Alaska';*/
+    }
+  }
 }
-
-.torgeternity .standard-form .test-dialog>div {
-  display: flex;
-  flex-direction: row;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset {
-  flex-grow: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>label {
-  font-family: "Palatino";
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="checkbox"]~label[for] {
-  align-self: center;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="radio"]~label[for] {
-  align-self: baseline;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="number"] {
-  width: 3em;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>* {
-  justify-content: left;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>hr {
-  width: 100%;
-}
-
-.torgeternity .standard-form .test-dialog .otherModifiers {
-  display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: repeat(4 1fr);
-  row-gap: 2px;
-}
-
-.torgeternity .standard-form .test-dialog .otherModifiers>label {
-  justify-self: center;
-  /*font-family: 'Alaska';*/
-}
-
-
 
 .skill-check-options {
   font-family: Palatino;
