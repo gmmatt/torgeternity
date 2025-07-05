@@ -8,7 +8,7 @@ import { backlash3 } from './torgchecks.js';
 import { soakDamages } from './torgchecks.js';
 import { applyStymiedState } from './torgchecks.js';
 import { applyVulnerableState } from './torgchecks.js';
-import { TestUpdate } from './test-update.js';
+import { TestDialog } from './test-dialog.js';
 import { checkForDiscon } from './torgchecks.js';
 
 const { DialogV2 } = foundry.applications.api;
@@ -343,8 +343,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (parentMessage.author.id !== game.user.id && !game.user.isGM) {
       return;
     }
-    const updateDialog = new TestUpdate(parentMessage.getFlag('torgeternity', 'test'));
-    updateDialog.render(true);
+    TestDialog.renderUpdate(parentMessage.getFlag('torgeternity', 'test'));
   }
 
   static async #applyDam(event, target) {

@@ -24,7 +24,8 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 
   static PARTS = {
-    body: { template: 'systems/torgeternity/templates/test-dialog.hbs' },
+    create: { template: 'systems/torgeternity/templates/test-dialog.hbs' },
+    update: { template: 'systems/torgeternity/templates/test-update.hbs' },
     footer: { template: "templates/generic/form-footer.hbs" },
   }
 
@@ -38,6 +39,11 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     return new Promise((resolve) => new TestDialog(test, resolve, options));
   }
 
+  static renderUpdate(testData) {
+    testData.mode = 'update';
+    (new TestDialog(testData)).render(true);
+  }
+
   /**
    *
    * @param {object} test The test object
@@ -46,6 +52,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    */
   constructor(test, resolve, options = {}) {
     super(options);
+    this.mode = test.mode ?? 'create';
     this.test = test;
     this.callback = resolve;
     this.render(true);
@@ -59,6 +66,11 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
     context.test = this.test;
     context.config = CONFIG.torgeternity;
+
+    if (this.mode === 'update') {
+      context.buttons = [{ type: 'submit', icon: 'fas fa-redo', label: 'torgeternity.sheetLabels.update' }]
+      return context;
+    }
 
     // Set Modifiers from Actor Wounds and Status Effects
     const myActor = this.test.actor.includes('Token')
@@ -210,10 +222,16 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         ? true
         : false;
 
-    context.buttons = [
-      { type: 'submit', icon: 'fas fa-dice-d20', label: 'torgeternity.sheetLabels.roll' }
-    ]
+    context.buttons = [{ type: 'submit', icon: 'fas fa-dice-d20', label: 'torgeternity.sheetLabels.roll' }]
     return context;
+  }
+
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options);
+    switch (this.mode) {
+      case 'create': options.parts = ['create', 'footer']; break;
+      case 'update': options.parts = ['update', 'footer']; break;
+    }
   }
 
   /**
@@ -247,6 +265,21 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    */
   static async #onRoll(event, form, formData) {
     const fields = formData.object;
+
+    if (this.mode === 'update') {
+      const fields = formData.object;
+
+      foundry.utils.mergeObject(this.test, fields, { inplace: true });
+
+      this.test.isOther1 = fields.other1Modifier != 0;
+      this.test.isOther2 = fields.other2Modifier != 0;
+      this.test.isOther3 = fields.other3Modifier != 0;
+
+      this.test.diceroll = null;
+
+      await torgchecks.renderSkillChat(this.test);
+      return this.close();
+    }
 
     // foundry.utils.mergeObject(this.test, fields, { inplace: true });
 
