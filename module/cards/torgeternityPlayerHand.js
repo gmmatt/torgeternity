@@ -220,28 +220,21 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    */
   async playerPassDialog(card) {
     // only hands of connected characters will be shown
-    const activeHand = [];
-    const activePlayers = game.users.filter((u) => u.active & !u.isGM & !u.isSelf);
-    activePlayers.forEach((h) => activeHand.push(h.character.getDefaultHand()));
     let cards;
     if (game.user.isGM) {
-      cards = game.cards.filter(
-        (c) => c !== this && c.type !== 'deck' && c.testUserPermission(game.user, 'LIMITED')
-      );
+      cards = game.cards.filter(cards => cards !== this && cards.type === 'hand');
     } else {
-      cards = activeHand.filter(
-        (c) => c.type !== 'deck' && c.testUserPermission(game.user, 'LIMITED')
-      );
+      cards = game.users
+        .filter(user => user.active && !user.isGM && !user.isSelf)
+        .map(user => user.character.getDefaultHand())
+        .filter(cards => cards.type == 'hand' && cards.testUserPermission(game.user, 'LIMITED'));
     }
     if (!cards.length)
-      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'), {
-        localize: true,
-      });
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'));
 
     // Construct the dialog HTML
-    const html = await foundry.applications.handlebars.renderTemplate('systems/torgeternity/templates/cards/playerPassDialog.hbs', {
-      cards: cards,
-    });
+    const html = await foundry.applications.handlebars.renderTemplate('systems/torgeternity/templates/cards/playerPassDialog.hbs',
+      { cards: cards });
 
     // Display the prompt
     return DialogV2.prompt({
