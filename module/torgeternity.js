@@ -683,7 +683,6 @@ function rollItemMacro(itemName) {
           damage: adjustedDamage,
           weaponAP: weaponData.ap,
           applyArmor: true,
-          targets: Array.from(game.user.targets),
           applySize: true,
           attackOptions: true,
           darknessModifier: 0,
@@ -691,7 +690,7 @@ function rollItemMacro(itemName) {
           movementModifier: 0,
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        });
+        }, { useTargets: true });
       }
       break;
 
@@ -724,14 +723,13 @@ function rollItemMacro(itemName) {
           applyArmor: powerData.applyArmor,
           darknessModifier: 0,
           type: 'power',
-          targets: Array.from(game.user.targets),
           applySize: powerData.applySize,
           attackOptions: true,
           rollTotal: 0,
           chatNote: '',
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        });
+        }, { useTargets: true });
       }
       break;
 
@@ -821,7 +819,6 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     skillValue: skillValue,
     isAttack: false,
     isFav: skill.isFav,
-    targets: Array.from(game.user.targets),
     applySize: false,
     DNDescriptor: DNDescriptor ?? 'standard',
     attackOptions: false,
@@ -870,7 +867,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     test.unskilledUse = true;
   }
 
-  new TestDialog(test);
+  new TestDialog(test, { useTargets: true });
 }
 
 Hooks.on('renderCombatTracker', (combatTracker) => {

@@ -1,4 +1,4 @@
-import { TestDialog } from './test-dialog.js';
+import { oneTestTarget, TestDialog } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
 import { ChatMessageTorg } from './documents/chat/document.js';
 
@@ -8,8 +8,9 @@ import { ChatMessageTorg } from './documents/chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
-  // A bad way of handling no targets!
-  if (!test?.targetAll.length) test.targetAll = [test.targets];
+
+  // For non-targeted tests, ensure we iterate through the loop at least once
+  if (!test.targetAll.length) test.targetAll = [{}];
 
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
@@ -32,18 +33,17 @@ export async function renderSkillChat(test) {
 
   // Handle ammo, if not opt-out. First, check if there is enough ammo, then reduce it.
   if (test.item?.weaponWithAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
-    await test?.item.reduceAmmo(test.burstModifier, test.targetAll.length);
+    await test?.item.reduceAmmo(test.burstModifier, test.targetAll?.length);
     test.ammoLabel = 'display:table-row';
   } else {
     test.ammoLabel = 'display:none';
   }
 
-  for (let i = 0; i < test.targetAll.length; i++) {
-    const target = test.targetAll[i];
+  let first = true;
+  for (const target of test.targetAll) {
     test.target = target;
-    test.sizeModifier = test.sizeModifierAll[i];
-    test.vulnerableModifier = test.vulnerableModifierAll[i];
-    const currentTarget = target;
+    test.sizeModifier = target.sizeModifier;
+    test.vulnerableModifier = target.vulnerableModifier;
 
     //
     // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
@@ -173,7 +173,7 @@ export async function renderSkillChat(test) {
     test.unskilledTest = unskilledTest;
 
     // Add the dices list in test
-    if (i === 0) {
+    if (first) {
       // add the dices only once, not for each target
       if (test.diceroll) {
         // to avoid errors if +3 cards
@@ -191,18 +191,10 @@ export async function renderSkillChat(test) {
     // Get current bonus and make + label visible if number is positive
     //
     // Initialize upTotal, possibilityTotal, heroTotal, and dramaTotal at zero, if necessary
-    if (!test.upTotal) {
-      test.upTotal = 0;
-    }
-    if (!test.possibilityTotal) {
-      test.possibilityTotal = 0;
-    }
-    if (!test.heroTotal) {
-      test.heroTotal = 0;
-    }
-    if (!test.dramaTotal) {
-      test.dramaTotal = 0;
-    }
+    test.upTotal ??= 0;
+    test.possibilityTotal ??= 0;
+    test.heroTotal ??= 0;
+    test.dramaTotal ??= 0;
 
     // Calculate combinedRollTotal
     test.combinedRollTotal =
@@ -220,9 +212,8 @@ export async function renderSkillChat(test) {
 
     // Raise bonus to 1 if actively defending
     if (test.testType === 'activeDefense' || test.testType === 'activeDefenseUpdate') {
-      if (test.bonus < 1) {
-        test.bonus = 1;
-      }
+      if (test.bonus < 1) test.bonus = 1;
+
     }
 
     // Add plus label if number is positive
@@ -232,151 +223,123 @@ export async function renderSkillChat(test) {
       test.bonusPlusLabel = 'display:none';
     }
 
+    function modifierString(label, value) {
+      let result = game.i18n.localize(label);
+      if (value) result += ` (${value > 0 ? '+' : ''}${value})`
+      result += '<br>';
+      return result;
+    }
+
     // Set Modifiers and Chat Content Relating to Modifiers
     test.displayModifiers = true;
     test.modifiers = 0;
     test.modifierText = '';
-    if (test.testTtype === 'soak') {
-      test.vulnerableModifier = 0;
-    }
+    if (test.testTtype === 'soak') test.vulnerableModifier = 0;
+
 
     if (test.woundModifier < 0) {
       test.displayModifiers = true;
-      test.modifierText =
-        game.i18n.localize('torgeternity.chatText.check.modifier.wounds') +
-        test.woundModifier +
-        '\n';
+      test.modifierText = modifierString('torgeternity.chatText.check.modifier.wounds', test.woundModifier);
       test.modifiers = parseInt(test.woundModifier);
     }
 
     if (test.stymiedModifier < 0) {
       test.displayModifiers = true;
       if (test.stymiedModifier == -2) {
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.stymied') + '\n';
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.stymied');
         test.modifiers += -2;
       } else if (test.stymiedModifier == -4) {
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.veryStymied') + '\n';
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.veryStymied');
         test.modifiers += -4;
       }
     }
 
     if (test.darknessModifier < 0) {
       test.displayModifiers = true;
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.darkness') +
-        ' ' +
-        test.darknessModifier +
-        '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.darkness', test.darknessModifier);
       test.modifiers += parseInt(test.darknessModifier);
     }
 
     if (test.movementModifier < 0) {
       test.displayModifiers = true;
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.running') + '  \n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.running');
       test.modifiers += -2;
     }
 
     if (test.multiModifier < 0) {
       test.displayModifiers = true;
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.multiAction') +
-        ' ' +
-        test.multiModifier +
-        '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.multiAction', test.multiModifier);
       test.modifiers += parseInt(test.multiModifier);
     }
 
     if (test.targetsModifier < 0) {
       test.displayModifiers = true;
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.multiTarget') +
-        ' ' +
-        test.targetsModifier +
-        '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.multiTarget', test.targetsModifier);
       test.modifiers += parseInt(test.targetsModifier);
     }
 
     if (test.isOther1) {
       test.displayModifiers = true;
-      test.modifierText += test.other1Description + ' ' + test.other1Modifier + '\n';
+      test.modifierText += modifierString(test.other1Description, test.other1Modifier);
       test.modifiers += parseInt(test.other1Modifier);
     }
 
     if (test.isOther2) {
       test.displayModifiers = true;
-      test.modifierText += test.other2Description + ' ' + test.other2Modifier + '\n';
+      test.modifierText += modifierString(test.other2Description, test.other2Modifier);
       test.modifiers += parseInt(test.other2Modifier);
     }
 
     if (test.isOther3) {
       test.displayModifiers = true;
-      test.modifierText += test.other3Description + ' ' + test.other3Modifier + '\n';
+      test.modifierText += modifierString(test.other3Description, test.other3Modifier);
       test.modifiers += parseInt(test.other3Modifier);
     }
 
     // Apply target-related modifiers
     if (target?.present) {
       // Apply the size modifier in appropriate circumstances
-      if (test.applySize) {
-        if (test.sizeModifier !== 0) {
-          test.displayModifiers = true;
-          test.modifiers += parseInt(test.sizeModifier);
-          test.modifierText +=
-            game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') +
-            ' +' + test.sizeModifier + '\n';
-        }
+      if (test.applySize && test.sizeModifier) {
+        test.displayModifiers = true;
+        test.modifiers += parseInt(test.sizeModifier);
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetSize', test.sizeModifier);
       }
 
       // Apply target vulnerability modifier
       if (test.vulnerableModifier === 2) {
         test.displayModifiers = true;
         test.modifiers += parseInt(test.vulnerableModifier);
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.targetVulnerable') + '\n';
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetVulnerable');
       } else if (test.vulnerableModifier === 4) {
         test.displayModifiers = true;
         test.modifiers += parseInt(test.vulnerableModifier);
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.targetVeryVulnerable') + '\n';
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetVeryVulnerable');
       }
     }
 
-    if (test.calledShotModifier < 0) {
+    if (test.calledShotModifier) {
       test.modifiers += parseInt(test.calledShotModifier);
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.calledShot') +
-        ' ' +
-        test.calledShotModifier +
-        '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.calledShot', test.calledShotModifier);
     }
 
-    if (test.burstModifier > 0) {
+    if (test.burstModifier) {
       test.modifiers += parseInt(test.burstModifier);
       if (test.burstModifier === 2) {
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.shortBurst') + '\n';
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.shortBurst');
       } else if (test.burstModifier === 4) {
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.longBurst') + '\n';
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.longBurst');
       } else if (test.burstModifier === 6) {
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.heavyBurst') + '\n';
+        test.modifierText += modifierString('torgeternity.chatText.check.modifier.heavyBurst');
       }
     }
 
-    if (test.allOutModifier > 0) {
+    if (test.allOutModifier) {
       test.modifiers += 4;
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.allOutAttack') + '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.allOutAttack');
 
       // if it's an all-out-attack, apply very vulnerable to attacker
-      const ownToken = canvas.tokens.placeables.find((tok) =>
-        test.actor.includes(tok.document.actor.uuid)
-      );
-      if (!!ownToken && (i === 0)) {
+      const ownToken = canvas.tokens.placeables.find(token => test.actor.includes(token.document.actor.uuid));
+      if (ownToken && first) {
         if (!ownToken.document.hasStatusEffect('veryVulnerable')) {
           if (ownToken.document.hasStatusEffect('vulnerable')) {
             // take away vulnerable effect
@@ -401,72 +364,52 @@ export async function renderSkillChat(test) {
       }
     }
 
-    if (test.aimedModifier > 0) {
+    if (test.aimedModifier) {
       test.modifiers += 4;
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.aimedShot') + '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.aimedShot');
     }
 
-    if (test.blindFireModifier < 0) {
+    if (test.blindFireModifier) {
       test.modifiers += -6;
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.blindFire') + '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.blindFire');
     }
 
-    if (test.concealmentModifier < 0) {
+    if (test.concealmentModifier) {
       test.modifiers += parseInt(test.concealmentModifier);
-      test.modifierText +=
-        game.i18n.localize('torgeternity.chatText.check.modifier.targetConcealment') +
-        ' ' +
-        test.concealmentModifier +
-        '\n';
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetConcealment', test.concealmentModifier);
     }
 
-    if (test.type === 'power') {
-      if (test.powerModifier > 0 || test.powerModifier < 0) {
-        test.displayModifiers = true;
-        test.modifiers += parseInt(test.powerModifier);
-        test.modifierText +=
-          game.i18n.localize('torgeternity.chatText.check.modifier.powerModifier') +
-          ' ' +
-          test.powerModifier +
-          '\n';
-      }
+    if (test.type === 'power' && test.powerModifier) {
+      test.displayModifiers = true;
+      test.modifiers += parseInt(test.powerModifier);
+      test.modifierText += modifierString('torgeternity.chatText.check.modifier.powerModifier', test.powerModifier);
     }
 
     // Apply vehicle-related modifiers
     if (test.testType === 'chase' || test.testType === 'stunt' || test.testType === 'vehicleBase') {
-      if (test.maneuverModifier > 0 || test.maneuverModifier < 0) {
+      if (test.maneuverModifier) {
         test.displayModifiers = true;
         test.modifiers += parseInt(test.maneuverModifier);
-        test.modifierText +=
-          game.i18n.localize('torgeternity.stats.maneuverModifier') +
-          ' ' +
-          test.maneuverModifier +
-          '\n';
+        test.modifierText += modifierString('torgeternity.stats.maneuverModifier', test.maneuverModifier);
       }
     }
 
-    if (test.testType === 'chase') {
-      if (test.speedModifier > 0) {
-        test.displayModifiers = true;
-        test.modifiers += parseInt(test.speedModifier);
-        test.modifierText +=
-          game.i18n.localize('torgeternity.stats.speedModifier') + ' ' + test.speedModifier + '\n';
-      }
+    if (test.testType === 'chase' && test.speedModifier) {
+      test.displayModifiers = true;
+      test.modifiers += parseInt(test.speedModifier);
+      test.modifierText += modifierString('torgeternity.stats.speedModifier', test.speedModifier);
     }
 
-    if (test.displayModifiers = true) {
+    if (test.displayModifiers) {
       test.modifierLabel = 'display:';
+      test.modifierText = `<p>${test.modifierText}</p>`;
     } else {
       test.modifierLabel = 'display:none';
     }
 
     // Add +3 cards to bonus
     // Initialize cardsPlayed if null
-    if (!test.cardsPlayed) {
-      test.cardsPlayed = 0;
-    }
+    test.cardsPlayed ??= 0;
     const tempBonus = parseInt(test.bonus);
     test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
 
@@ -477,13 +420,8 @@ export async function renderSkillChat(test) {
     test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal');
     const testDifference = test.rollResult - test.DN;
     const dnLabel = 'torgeternity.dnTypes.' + test.DNDescriptor;
-    test.actionTotalContent =
-      game.i18n.localize('torgeternity.chatText.check.result.actionTotal') +
-      ' ' +
-      test.rollResult +
-      ' vs. ' +
-      test.DN +
-      ' ' +
+    test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') +
+      ' ' + test.rollResult + ' vs. ' + test.DN + ' ' +
       game.i18n.localize(dnLabel);
     if (testDifference < 0) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
@@ -575,7 +513,7 @@ export async function renderSkillChat(test) {
       test.resultTextColor = test.outcomeColor;
       if (test.soakWounds > 0) {
         test.chatNote =
-          `${test.soakWounds}` +
+          `${test.soakWounds} ` +
           game.i18n.localize('torgeternity.sheetLabels.soakValue') +
           game.i18n.localize('torgeternity.sheetLabels.possSpent');
       } else if (test.soakWounds === 'all') {
@@ -783,7 +721,7 @@ export async function renderSkillChat(test) {
       if (test?.additionalDamage && !test.previousBonus) {
         adjustedDamage += test?.additionalDamage;
       }
-      // Check for whether a target is present & turn on display of damage sub-label
+      // Check for whether a target is present and turn on display of damage sub-label
       if (test?.target?.present) {
         test.damageSubLabel = 'display:block';
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
@@ -818,7 +756,7 @@ export async function renderSkillChat(test) {
             test.addBDs = 0;
 
             test.chatTitle +=
-              ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
+              ` + ${test.amountBD} ` + game.i18n.localize('torgeternity.chatText.bonusDice');
 
             test.bdDamageLabelStyle = 'display: block';
             test.bdDamageSum += test.BDDamageInPromise;
@@ -868,25 +806,25 @@ export async function renderSkillChat(test) {
       test.testType === 'stunt' ||
       test.testType === 'vehicleBase'
     ) {
-      (test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`),
+      (test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')} `),
         (test.bdStyle = 'display:none');
     } else if (test.testType === 'attack') {
-      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
+      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')} `;
     } else if (test.testType === 'power') {
-      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
+      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')} `;
       if (test.isAttack) {
         test.bdStyle = 'display:';
       } else {
         test.bdStyle = 'display:none';
       }
     } else if (test.testType === 'custom') {
-      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
+      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')} `;
       test.outcomeColor = 'display:none;';
       test.resultTextColor = 'display:none;';
       test.bdStyle = 'display:block';
       test.upStyle = 'display:none';
     } else {
-      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.attributeTestLabel')}`;
+      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.attributeTestLabel')} `;
       test.bdStyle = 'display:none';
     }
 
@@ -934,10 +872,8 @@ export async function renderSkillChat(test) {
       }
     }
 
-    // Cannot pass target array to chat because Bad Things happen when I try it, so we have to clear it out here
-    test.targets = '';
     // record adjustedToughness for each flagged target
-    if (currentTarget) currentTarget.targetAdjustedToughness = test.targetAdjustedToughness;
+    target.targetAdjustedToughness = test.targetAdjustedToughness;
 
     const chatData = {
       user: game.user._id,
@@ -952,7 +888,6 @@ export async function renderSkillChat(test) {
       flags: {
         torgeternity: {
           test,
-          currentTarget,
           template: 'systems/torgeternity/templates/partials/skill-card.hbs',
         },
       },
@@ -966,6 +901,7 @@ export async function renderSkillChat(test) {
     iteratedRoll = undefined;
 
     messages.push(await ChatMessageTorg.create(messageDataIterated));
+    first = false;
   }
 
   if (game.settings.get('torgeternity', 'unTarget')) {
@@ -994,40 +930,12 @@ export function isDisconnected(actor) {
  *
  * @param rollTotal
  */
-export function torgBonus(rollTotal) {
-  let bonus;
-  if (rollTotal == 1) {
-    bonus = -10;
-  } else if (rollTotal == 2) {
-    bonus = -8;
-  } else if (rollTotal <= 4) {
-    bonus = -6;
-  } else if (rollTotal <= 6) {
-    bonus = -4;
-  } else if (rollTotal <= 8) {
-    bonus = -2;
-  } else if (rollTotal <= 10) {
-    bonus = -1;
-  } else if (rollTotal <= 12) {
-    bonus = 0;
-  } else if (rollTotal <= 14) {
-    bonus = 1;
-  } else if (rollTotal == 15) {
-    bonus = 2;
-  } else if (rollTotal == 16) {
-    bonus = 3;
-  } else if (rollTotal == 17) {
-    bonus = 4;
-  } else if (rollTotal == 18) {
-    bonus = 5;
-  } else if (rollTotal == 19) {
-    bonus = 6;
-  } else if (rollTotal == 20) {
-    bonus = 7;
-  } else if (rollTotal >= 21) {
-    bonus = 7 + Math.ceil((rollTotal - 20) / 5);
-  }
-  return bonus;
+function torgBonus(rollTotal) {
+  const VALUES = [0,  // index 0 is inused
+    -10, -8, -6, -6, -4, -4, -2, -2, -1, -1,
+    0, 0, 1, 1, 2, 3, 4, 5, 6, 7];
+
+  return (rollTotal <= 20) ? VALUES[rollTotal] : (7 + Math.ceil((rollTotal - 20) / 5));
 }
 
 /**
@@ -1104,9 +1012,7 @@ export function torgDamage(damage, toughness) {
  * @param targetuuid
  */
 export async function applyDamages(damageObject, targetuuid) {
-  const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.uuid)
-  ); // find(tok=> tok.actor.id === targetuuid);
+  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.uuid));
   // checking if user has target
   if (targetToken) {
     if (targetToken.actor.type !== 'vehicle') {
@@ -1157,9 +1063,7 @@ export async function applyDamages(damageObject, targetuuid) {
  * @param targetuuid
  */
 export async function backlash1(targetuuid) {
-  const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.actorId)
-  );
+  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.actorId));
   // checking if user has target
   if (targetToken) {
     if (targetToken.actor.type !== 'vehicle') {
@@ -1187,9 +1091,7 @@ export async function backlash1(targetuuid) {
  * @param targetuuid
  */
 export async function backlash2(targetuuid) {
-  const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.actorId)
-  );
+  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.actorId));
   // checking if user has target
   if (targetToken) {
     if (targetToken.actor.type !== 'vehicle') {
@@ -1215,9 +1117,7 @@ export async function backlash2(targetuuid) {
  * @param targetuuid
  */
 export async function backlash3(targetuuid) {
-  const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.actorId)
-  );
+  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.actorId));
   // apply Stymied, or veryStymied
   if (targetToken.document.hasStatusEffect('stymied')) {
     await targetToken.actor.toggleStatusEffect('stymied', { active: false });
@@ -1257,13 +1157,12 @@ export async function soakDamages(soaker) {
       false,
     skillName: skillName,
     skillValue: skillValue,
-    targets: Array.from(game.user.targets),
     applySize: false,
     DNDescriptor: 'standard',
     attackOptions: false,
     chatNote: '',
     rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
-  });
+  }, { useTargets: true });
   // do reality roll
 }
 
@@ -1272,9 +1171,7 @@ export async function soakDamages(soaker) {
  * @param targetuuid
  */
 export async function applyStymiedState(targetuuid, sourceuuid) {
-  const targetToken = canvas.tokens.placeables.find((tok) =>
-    tok.document.uuid.includes(targetuuid)
-  );
+  const targetToken = canvas.tokens.placeables.find(token => token.document.uuid.includes(targetuuid));
   // apply Stymied, or veryStymied
   let eff;
   if (targetToken.document.hasStatusEffect('veryStymied')) {
@@ -1300,9 +1197,7 @@ export async function applyStymiedState(targetuuid, sourceuuid) {
  * @param targetuuid
  */
 export async function applyVulnerableState(targetuuid, sourceuuid) {
-  const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.uuid)
-  );
+  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.uuid));
   // apply Vulnerable, or veryVulnerable
   let eff;
   if (targetToken.document.hasStatusEffect('veryVulnerable')) {
@@ -1645,8 +1540,8 @@ async function oneDN(test) {
   }
   function highest(func) {
     let highestDN = test?.DN || 0;
-    for (const tar of test.targetAll) {
-      highestDN = Math.max(highestDN, func(tar));
+    for (const target of test.targetAll) {
+      highestDN = Math.max(highestDN, func(target));
     }
     test.DN = highestDN;
   }
@@ -1677,81 +1572,81 @@ async function oneDN(test) {
       test.DN = 20;
       break;
     case 'targetCharisma':
-      highest(tar => tar.attributes.charisma.value)
+      highest(target => target.attributes.charisma.value)
       break;
     case 'targetDexterity':
-      highest(tar => tar.attributes.dexterity.value);
+      highest(target => target.attributes.dexterity.value);
       break;
     case 'targetMind':
-      highest(tar => tar.attributes.mind.value);
+      highest(target => target.attributes.mind.value);
       break;
     case 'targetSpirit':
-      highest(tar => tar.attributes.spirit.value);
+      highest(target => target.attributes.spirit.value);
       break;
     case 'targetStrength':
-      highest(tar => tar.attributes.strength.value);
+      highest(target => target.attributes.strength.value);
       break;
     case 'targetAlteration':
-      highest(tar => validValue(tar.skills.alteration.value, tar.attributes.mind.value));
+      highest(target => validValue(target.skills.alteration.value, target.attributes.mind.value));
       break;
     case 'targetConjuration':
-      highest(tar => validValue(tar.skills.conjuration.value, tar.attributes.spirit.value));
+      highest(target => validValue(target.skills.conjuration.value, target.attributes.spirit.value));
       break;
     case 'targetDivination':
-      highest(tar => validValue(tar.skills.divination.value, tar.attributes.mind.value));
+      highest(target => validValue(target.skills.divination.value, target.attributes.mind.value));
       break;
     case 'targetDodge':
-      highest(tar => tar.defenses.dodge);
+      highest(target => target.defenses.dodge);
       break;
     case 'targetFaith':
-      highest(tar => tar.skills.faith.value || tar.attributes.spirit.value);
+      highest(target => target.skills.faith.value || target.attributes.spirit.value);
       break;
     case 'targetFind':
-      highest(tar => validValue(tar.skills.find.value, tar.attributes.mind.value));
+      highest(target => validValue(target.skills.find.value, target.attributes.mind.value));
       break;
     case 'targetIntimidation':
-      highest(tar => tar.defenses.intimidation);
+      highest(target => target.defenses.intimidation);
       break;
     case 'targetKinesis':
-      highest(tar => validValue(tar.skills.kinesis.value, tar.attributes.spirit.value));
+      highest(target => validValue(target.skills.kinesis.value, target.attributes.spirit.value));
       break;
     case 'targetManeuver':
-      highest(tar => tar.defenses.maneuver);
+      highest(target => target.defenses.maneuver);
       break;
     case 'targetMeleeWeapons':
-      highest(tar => tar.defenses.meleeWeapons);
+      highest(target => target.defenses.meleeWeapons);
       break;
     case 'targetPrecognition':
-      highest(tar => validValue(tar.skills.precognition.value, tar.attributes.mind.value));
+      highest(target => validValue(target.skills.precognition.value, target.attributes.mind.value));
       break;
     case 'targetStealth':
-      highest(tar => tar.skills.stealth.value || tar.attributes.dexterity.value);
+      highest(target => target.skills.stealth.value || target.attributes.dexterity.value);
       break;
     case 'targetTaunt':
-      highest(tar => tar.defenses.taunt);
+      highest(target => target.defenses.taunt);
       break;
     case 'targetTrick':
-      highest(tar => tar.defenses.trick);
+      highest(target => target.defenses.trick);
       break;
     case 'targetUnarmedCombat':
-      highest(tar => tar.defenses.unarmedCombat);
+      highest(target => target.defenses.unarmedCombat);
       break;
     case 'targetWillpower':
-      highest(tar => tar.skills.willpower.value || tar.attributes.spirit.value);
+      highest(target => target.skills.willpower.value || target.attributes.spirit.value);
       break;
     case 'targetWillpowerMind':
-      highest(tar => tar.skills.willpower.value
-        ? (tar.skills.willpower.value - tar.attributes.spirit.value + tar.attributes.mind.value)
-        : tar.attributes.mind.value);
+      highest(target => target.skills.willpower.value
+        ? (target.skills.willpower.value - target.attributes.spirit.value + target.attributes.mind.value)
+        : target.attributes.mind.value);
       break;
     case 'targetLandVehicles':
-      highest(tar => tar.skills.landVehicles.value || tar.attributes.dexterity.value);
+      highest(target => target.skills.landVehicles.value || target.attributes.dexterity.value);
       break;
     case 'targetAirVehicles':
-      highest(tar => tar.skills.airVehicles.value || tar.attributes.dexterity.value);
+      highest(target => target.skills.airVehicles.value || target.attributes.dexterity.value);
       break;
     case 'targetWaterVehicles':
-      highest(tar => tar.skills.waterVehicles.value || tar.attributes.dexterity.value);
+      highest(target => target.skills.waterVehicles.value || target.attributes.dexterity.value);
       break;
     case 'highestSpeed':
       // Find the fastest participant in the active combat
@@ -1765,7 +1660,7 @@ async function oneDN(test) {
       test.DN = highestSpeed;
       break;
     case 'targetVehicleDefense':
-      highest(tar => tar.defenses?.vehicle ?? 0);
+      highest(target => target.defenses?.vehicle ?? 0);
       break;
     default:
       test.DN = 10;

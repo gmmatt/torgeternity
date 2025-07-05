@@ -1,5 +1,5 @@
-import * as torgchecks from '/systems/torgeternity/module/torgchecks.js';
-import { TestDialog } from '/systems/torgeternity/module/test-dialog.js';
+import * as torgchecks from './torgchecks.js';
+import { oneTestTarget, TestDialog } from './test-dialog.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -310,7 +310,7 @@ export class TorgeternityMacros {
           input: fields.createCheckboxInput({
             name: user.id,
             //value: user.name,
-            value: !!user.character && selectedPlayerIds.includes(user.character.id)
+            value: user.character && selectedPlayerIds.includes(user.character.id)
           })
         });
       checkOptions += `<br>${checkbox.outerHTML}`;
@@ -432,7 +432,6 @@ export class TorgeternityMacros {
       skillValue: realitySkill.value,
       isAttack: false,
       isFav: realitySkill.isFav,
-      targets: Array.from(game.user.targets),
       applySize: false,
       DNDescriptor: 'standard',
       attackOptions: false,
@@ -450,14 +449,14 @@ export class TorgeternityMacros {
       other1Modifier: difficultyRecon[game.scenes.active.flags.torgeternity.zone],
     };
 
-    if (test.isother1 === false) {
+    if (!test.isOther1) {
       await DialogV2.prompt({
         window: { title: 'torgeternity.macros.reconnectMacroZoneModifierNotDetectedTitle' },
         content: `<p>${game.i18n.localize('torgeternity.macros.reconnectMacroZoneModifierNotDetected')}</p>`,
       });
     }
 
-    const dialog = await TestDialog.asPromise(test);
+    const dialog = await TestDialog.asPromise(test, { useTargets: true });
 
     if (!dialog) {
       ui.notifications.error(
@@ -534,8 +533,7 @@ export class TorgeternityMacros {
           label: user.name,
           input: fields.createCheckboxInput({
             name: user.id,
-            //value: user.name,
-            value: !!user.character && selectedPlayerIds.includes(user.character.id)
+            value: user.character && selectedPlayerIds.includes(user.character.id)
           })
         });
       checkOptions += `<br>${checkbox.outerHTML}`;
@@ -820,7 +818,6 @@ export class TorgeternityMacros {
     if (!game.user.targets.size)
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
 
-    const tokens = Array.from(game.user.targets);
     if (armored) armored = 'checked';
 
     // add options for AP and bypass the window
@@ -852,57 +849,6 @@ export class TorgeternityMacros {
       },
     });
 
-    const targetAll = [];
-
-    for (const token of tokens) {
-      const { actor } = token;
-      // Set vehicle defense if needed
-      if (actor.type === 'vehicle') {
-        targetAll.push({
-          present: true,
-          type: 'vehicle',
-          id: actor.id,
-          uuid: token.document.uuid,
-          targetPic: actor.img,
-          targetName: actor.name,
-          defenses: {
-            vehicle: actor.system.defense,
-            dodge: actor.system.defense,
-            unarmedCombat: actor.system.defense,
-            meleeWeapons: actor.system.defense,
-            intimidation: actor.system.defense,
-            maneuver: actor.system.defense,
-            taunt: actor.system.defense,
-            trick: actor.system.defense,
-          },
-          toughness: actor.defenses.toughness,
-          armor: actor.defenses.armor,
-        });
-      } else {
-        targetAll.push({
-          present: true,
-          type: actor.type,
-          id: actor.id,
-          uuid: token.document.uuid,
-          targetPic: actor.img,
-          targetName: actor.name,
-          skills: actor.system.skills,
-          attributes: actor.system.attributes,
-          toughness: actor.defenses.toughness,
-          armor: actor.defenses.armor,
-          defenses: {
-            dodge: actor.defenses.dodge.value,
-            unarmedCombat: actor.defenses.unarmedCombat.value,
-            meleeWeapons: actor.defenses.meleeWeapons.value,
-            intimidation: actor.defenses.intimidation.value,
-            maneuver: actor.defenses.maneuver.value,
-            taunt: actor.defenses.taunt.value,
-            trick: actor.defenses.trick.value,
-          },
-        });
-      }
-    }
-
     const test = {
       testType: 'custom',
       actor: game.actors.contents[0].uuid,
@@ -922,7 +868,6 @@ export class TorgeternityMacros {
       darknessModifier: 0,
       DNDescriptor: 'standard',
       type: 'attack',
-      targets: tokens,
       applySize: false,
       attackOptions: true,
       rollTotal: 11,
@@ -933,9 +878,7 @@ export class TorgeternityMacros {
       stymiedModifier: 0,
       sizeModifier: 0,
       vulnerableModifier: 0,
-      sizeModifierAll: [0],
-      vulnerableModifierAll: [0],
-      targetAll: targetAll,
+      targetAll: game.user.targets.map(token => oneTestTarget(token)), // for renderSkillChat
       disfavored: false,
       previousBonus: false,
       bonus: 0,

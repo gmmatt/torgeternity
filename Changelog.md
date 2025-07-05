@@ -6,6 +6,8 @@
 - Configure key now closes PossibilityByCosm if it is already open.
 - Reinstate 'compact' form of Stormknight sheet when the window is narrow.
 - Add text styles to the ProseMirror editor (matching those available in TinyMCE).
+- Game system should work properly on the Forge and other sites that have a prefix in their URL.
+- Test Modifier tooltip displays a vertical list of modifiers.
 
 ## v13.0.1
 

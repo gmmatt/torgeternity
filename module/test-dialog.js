@@ -122,7 +122,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    * @returns {Promise<ChatMessageTorg|undefined>} The ChatMessage of the Roll
    */
   static asPromise(test, options) {
-    return new Promise((resolve) => new TestDialog(test, resolve, options));
+    return new Promise(resolve => new TestDialog(test, { ...options, callback: resolve }));
   }
 
   static renderUpdate(testData) {
@@ -136,11 +136,10 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    * @param {Function} resolve ChatMessage of the Roll
    * @param {object} options Foundry base options for the Application
    */
-  constructor(test, resolve, options = {}) {
+  constructor(test, options = {}) {
     super(options);
     this.mode = test.mode ?? 'create';
     this.test = foundry.utils.mergeObject(DEFAULT_TEST, test, { inplace: false });
-    this.callback = resolve;
     this.render(true);
   }
 
@@ -169,9 +168,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     context.test.darknessModifier = myActor.statusModifiers.darkness;
     context.test.sizeModifier = 0;
     context.test.vulnerableModifier = 0;
-    context.test.sizeModifierAll = [];
-    context.test.vulnerableModifierAll = [];
-    context.test.targetAll = [];
 
     // Set Modifiers for Vehicles
     if (this.test.testType === 'chase') {
@@ -196,96 +192,27 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     // ***Set Target Data***
     // Transfer data here because passing the entire target to a chat message tends to degrade the data
     //
-    context.test.targetPresent = !!context.test.targets.length;
-    if (context.test.targets.length && context.test.testType !== 'soak') {
-      // Identify the first target
-      context.test.targets.forEach((t) => {
-        const target = t.actor;
-        // Set vehicle defense if needed
-        if (target.type === 'vehicle') {
-          context.test.targetAll.push({
-            present: true,
-            type: target.type,
-            id: target.id,
-            uuid: t.document.uuid,
-            targetPic: target.img,
-            targetName: target.name,
-            defenses: {
-              vehicle: target.system.defense,
-              dodge: target.system.defense,
-              unarmedCombat: target.system.defense,
-              meleeWeapons: target.system.defense,
-              intimidation: target.system.defense,
-              maneuver: target.system.defense,
-              taunt: target.system.defense,
-              trick: target.system.defense,
-            },
-            toughness: target.defenses.toughness,
-            armor: target.defenses.armor,
-          });
-        } else {
-          context.test.targetAll.push({
-            present: true,
-            type: target.type,
-            id: target.id,
-            uuid: t.document.uuid,
-            targetPic: target.img,
-            targetName: target.name,
-            skills: target.system.skills,
-            attributes: target.system.attributes,
-            toughness: target.defenses.toughness,
-            armor: target.defenses.armor,
-            defenses: {
-              dodge: target.defenses.dodge.value,
-              unarmedCombat: target.defenses.unarmedCombat.value,
-              meleeWeapons: target.defenses.meleeWeapons.value,
-              intimidation: target.defenses.intimidation.value,
-              maneuver: target.defenses.maneuver.value,
-              taunt: target.defenses.taunt.value,
-              trick: target.defenses.trick.value,
-            },
-          });
-          context.test.vulnerableModifierAll.push(target.statusModifiers.vulnerable);
-        }
-        if (this.test.applySize == true) {
-          const sizeBonus = target.system.details.sizeBonus;
-          switch (sizeBonus) {
-            case 'normal':
-              context.test.sizeModifier = 0;
-              break;
-            case 'tiny':
-              context.test.sizeModifier = -6;
-              break;
-            case 'verySmall':
-              context.test.sizeModifier = -4;
-              break;
-            case 'small':
-              context.test.sizeModifier = -2;
-              break;
-            case 'large':
-              context.test.sizeModifier = 2;
-              break;
-            case 'veryLarge':
-              context.test.sizeModifier = 4;
-              break;
-            default:
-              context.test.sizeModifier = 0;
-          }
-          context.test.sizeModifierAll.push(context.test.sizeModifier);
-        }
-      });
+    const targets = this.options.useTargets ? Array.from(game.user.targets) : [];
+    context.test.targetPresent = !!targets.length;
+    const MULTITARGET = [0, 0, -2, -4, -6, -8, -10];
+    context.test.targetsModifier ||= MULTITARGET[targets.length] ?? 0;
+
+    if (context.test.targetPresent && context.test.testType !== 'soak') {
+      context.test.targetAll = targets.map(token => oneTestTarget(token, this.test.applySize));
+      context.test.sizeModifier = context.test.targetAll[0].sizeModifier;
+    } else {
+      context.test.targetAll = [];
     }
 
     context.test.hasModifiers =
-      context.test?.woundModifier != 0 ||
-        context.test?.stymiedModifier != 0 ||
-        context.test?.darknessModifier != 0 ||
-        context.test?.sizeModifier != 0 ||
-        context.test?.vulnerableModifier != 0 ||
-        context.test?.speedModifier != 0 ||
-        context.test?.maneuverModifier != 0
-        ? true
-        : false;
+      (context.test?.woundModifier ||
+        context.test?.stymiedModifier ||
+        context.test?.darknessModifier ||
+        context.test?.sizeModifier ||
+        context.test?.vulnerableModifier ||
+        context.test?.speedModifier ||
+        context.test?.maneuverModifier)
+        ? true : false;
 
     context.buttons = [{ type: 'submit', icon: 'fas fa-dice-d20', label: 'torgeternity.sheetLabels.roll' }]
     return context;
@@ -426,11 +353,78 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     }
 
     const messages = await torgchecks.renderSkillChat(this.test);
-    if (messages && this.callback) {
+    if (messages && this.options.callback) {
       for (const message of messages) {
-        this.callback(message);
+        this.options.callback(message);
       }
     }
     this.close();
+  }
+}
+
+
+export function oneTestTarget(token, applySize) {
+  const actor = token.actor;
+
+  let sizeModifier;
+  if (applySize) {
+    switch (actor.system.details.sizeBonus) {
+      case 'normal': sizeModifier = 0; break;
+      case 'tiny': sizeModifier = -6; break;
+      case 'verySmall': sizeModifier = -4; break;
+      case 'small': sizeModifier = -2; break;
+      case 'large': sizeModifier = 2; break;
+      case 'veryLarge': sizeModifier = 4; break;
+      default: sizeModifier = 0; break;
+    }
+  }
+
+  // Set vehicle defense if needed
+  if (actor.type === 'vehicle') {
+    return {
+      present: true,
+      type: actor.type,
+      id: actor.id,
+      uuid: token.document.uuid,
+      targetPic: actor.img,
+      targetName: actor.name,
+      sizeModifier: sizeModifier,
+      defenses: {
+        vehicle: actor.system.defense,
+        dodge: actor.system.defense,
+        unarmedCombat: actor.system.defense,
+        meleeWeapons: actor.system.defense,
+        intimidation: actor.system.defense,
+        maneuver: actor.system.defense,
+        taunt: actor.system.defense,
+        trick: actor.system.defense,
+      },
+      toughness: actor.defenses.toughness,
+      armor: actor.defenses.armor,
+    };
+  } else {
+    return {
+      present: true,
+      type: actor.type,
+      id: actor.id,
+      uuid: token.document.uuid,
+      targetPic: actor.img,
+      targetName: actor.name,
+      skills: actor.system.skills,
+      attributes: actor.system.attributes,
+      toughness: actor.defenses.toughness,
+      armor: actor.defenses.armor,
+      vulnerableModifier: actor.statusModifiers.vulnerable,
+      sizeModifier: sizeModifier,
+      defenses: {
+        dodge: actor.defenses.dodge.value,
+        unarmedCombat: actor.defenses.unarmedCombat.value,
+        meleeWeapons: actor.defenses.meleeWeapons.value,
+        intimidation: actor.defenses.intimidation.value,
+        maneuver: actor.defenses.maneuver.value,
+        taunt: actor.defenses.taunt.value,
+        trick: actor.defenses.trick.value,
+      },
+    };
   }
 }
