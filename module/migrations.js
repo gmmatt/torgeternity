@@ -60,8 +60,8 @@ export async function torgMigration() {
             delete deckSetting[key];
             ui.notifications.error(
               'Torg Eternity: Migrating setting for deck ' +
-                key +
-                'failed.  Deck settings will need to be reconfigured manually'
+              key +
+              'failed.  Deck settings will need to be reconfigured manually'
             );
           }
           continue;
@@ -201,7 +201,7 @@ export async function torgMigration() {
           if (
             key === 'systems\\torgeternity\\images\\icons\\threat.Token.webp' &&
             actor.prototypeToken.texture.src ===
-              'systems\\torgeternity\\images\\icons\\threat.Token.webp'
+            'systems\\torgeternity\\images\\icons\\threat.Token.webp'
           ) {
             const goodKey = 'systems\\torgeternity\\images\\characters\\threat-generic.Token.webp';
             await actor.update({ 'prototypeToken.texture.src': goodKey });
@@ -351,18 +351,9 @@ export async function torgMigration() {
 
 // Function to test if a world is a new world, to hude my hacky approach under a nice rug
 function isNewWorld() {
-  // a whole bunch of tests which would return true for a new world, until I find a neater solution
-  // Some of these are subject to race conditions, as automatic setup would make them false - but they should all be slower than the simple check, and worst case for a false negative is an unnecessary migration which won't harm anything.
-  const retVal = !!(
-    game.scenes.size < 1 &&
-    game.actors.size < 1 &&
-    game.cards.size < 1 &&
-    game.items.size < 1 &&
-    game.settings.get('torgeternity', 'welcomeMessage') &&
-    game.settings.get('torgeternity', 'setUpCards')
-  );
-
-  return retVal;
+  // See NewUserExperienceManager#initialize():
+  // If there are no documents, we can reasonably assume this is a new World.
+  return !(game.actors.size + game.scenes.size + game.items.size + game.journal.size);
 }
 
 async function migrateImagestoWebp(options = { system: true, modules: true }) {
