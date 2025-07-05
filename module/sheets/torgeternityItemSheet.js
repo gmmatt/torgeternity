@@ -209,20 +209,18 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   static async #onReloadWeapon(event, target) {
-    const button = event.currentTarget.closest('[data-item-id]');
+    const button = target.closest('[data-item-id]');
     const usedAmmo = this?.actor.items.get(button.dataset.itemId);
-
     await reloadAmmo(this.actor, this.item, usedAmmo, this);
-    this.render(true);
   }
 
   static #onSelectSecondaryAxiom(event, target) {
-    event.currentTarget.value === 'none' &&
+    target.value === 'none' &&
       this.item.update({ 'system.secondaryAxiom.value': null });
   }
 
   static #onItemName(event, target) {
-    const section = event.currentTarget.closest('.item');
+    const section = target.closest('.item');
     const detail = section.querySelector('.item-detail');
     if (!detail) return;
     detail.style.display =
