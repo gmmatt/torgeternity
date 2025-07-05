@@ -60,7 +60,7 @@
         "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
         "modifier": {
           "aimedShot": "tir visé (+4)",
-          "allOutAttack": "attaque totale",
+          "allOutAttack": "attaque totale (+4)",
           "blindFire": "tir au jugé (-6)",
           "calledShot": "attaque ciblée",
           "darkness": "obscurité ",
