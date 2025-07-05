@@ -500,17 +500,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
-      isAttack: false,
       isFav:
         this.actor.system.skills[skillName]?.isFav ||
         this.actor.system.attributes?.[skillName + 'IsFav'] ||
         target.dataset.isfav,
       skillName: (target.dataset.testtype === 'attribute') ? attributeName : skillName,
       skillValue: skillValue,
-      applySize: false,
-      DNDescriptor: 'standard',
-      attackOptions: false,
-      chatNote: '',
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
@@ -545,17 +540,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
-      isAttack: false,
       isFav:
         this.actor.system.skills[skillName]?.isFav ||
         this.actor.system.attributes?.[skillName + 'IsFav'] ||
         !!target.dataset.isfav,
       skillName: skillName,
       skillValue: skillValue,
-      applySize: false,
-      DNDescriptor: 'standard',
-      attackOptions: false,
-      chatNote: '',
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
@@ -579,14 +569,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: 'vehicle',
-      isAttack: false,
       skillName: 'Vehicle Chase',
       skillValue: target.dataset.skillValue,
-      applySize: false,
       DNDescriptor: 'highestSpeed',
-      attackOptions: false,
       rollTotal: 0,
-      chatNote: '',
       vehicleSpeed: target.dataset.speed,
       maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
@@ -606,14 +592,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: 'vehicle',
-      isAttack: false,
       skillName: 'Vehicle Operation',
       skillValue: target.dataset.skillValue,
-      applySize: false,
-      DNDescriptor: 'standard',
-      attackOptions: false,
       rollTotal: 0,
-      chatNote: '',
       vehicleSpeed: target.dataset.speed,
       maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
@@ -636,14 +617,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: 'vehicle',
-      isAttack: false,
       skillName: 'Vehicle Stunt',
       skillValue: target.dataset.skillValue,
-      applySize: false,
       DNDescriptor: dnDescriptor,
-      attackOptions: false,
       rollTotal: 0,
-      chatNote: '',
       vehicleSpeed: target.dataset.speed,
       maneuverModifier: target.dataset.maneuver,
       bdDamageLabelStyle: 'display:none',
@@ -685,7 +662,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
-      isAttack: false,
       interactionAttackType: target.dataset.attackType,
       skillName: target.dataset.name,
       skillBaseAttribute: game.i18n.localize(
@@ -695,14 +671,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillValue: target.dataset.skillValue,
       isFav: this.actor.system.skills[attackType].isFav,
       unskilledUse: true,
-      darknessModifier: 0,
       DNDescriptor: dnDescriptor,
       type: 'interactionAttack',
-      applySize: false,
-      attackOptions: false,
       rollTotal: 0,
-      chatNote: '',
-      movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -748,13 +719,11 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       damage: parseInt(target.dataset.damage),
       weaponAP: 0,
       applyArmor: true,
-      darknessModifier: 0,
       DNDescriptor: dnDescriptor,
       type: 'attack',
       applySize: true,
       attackOptions: true,
       rollTotal: 0,
-      chatNote: '',
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
       amountBD: 0,
@@ -776,7 +745,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onActiveDefenseRoll(event, target) {
-    const dnDescriptor = 'standard';
 
     new TestDialog({
       testType: 'activeDefense',
@@ -786,20 +754,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorName: this.actor.name,
       actorType: this.actor.type,
       isActiveDefenseRoll: true,
-      isAttack: false,
       skillName: 'activeDefense',
       skillBaseAttribute: 0,
       skillAdds: null,
       skillValue: null,
       unskilledUse: true,
-      darknessModifier: 0,
-      DNDescriptor: dnDescriptor,
       type: 'activeDefense',
-      applySize: false,
-      attackOptions: false,
-      chatNote: '',
       rollTotal: 0,
-      movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -958,14 +919,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       damage: adjustedDamage,
       weaponAP: weaponData.ap,
       applyArmor: true,
-      darknessModifier: 0,
       DNDescriptor: dnDescriptor,
       type: 'attack',
       applySize: true,
       attackOptions: true,
       rollTotal: 0,
       chatNote: weaponData.chatNote,
-      movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
       item: item,
@@ -990,10 +949,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const powerData = item.system;
     const skillName = powerData.skill;
     const skillData = this.actor.system.skills[skillName];
-    const dnDescriptor = powerData.dn;
-    const isAttack = powerData.isAttack;
-    const applyArmor = powerData.applyArmor;
-    const applySize = powerData.applySize;
 
     // Set modifier for this power
     const powerModifier = item.system.modifier || 0;
@@ -1008,29 +963,20 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: this.actor.type,
       powerName: item.name,
       powerModifier: powerModifier,
-      isAttack: isAttack,
+      isAttack: powerData.isAttack,
       isFav: skillData.isFav,
       skillName: skillName,
-      skillBaseAttribute: game.i18n.localize(
-        'torgeternity.skills.' + target.dataset.baseAttribute
-      ),
+      skillBaseAttribute: game.i18n.localize('torgeternity.skills.' + target.dataset.baseAttribute),
       skillAdds: skillData.adds,
-      skillValue: Math.max(
-        skillData.value,
-        this.actor.system.attributes[skillData.baseAttribute].value
-      ),
+      skillValue: Math.max(skillData.value, this.actor.system.attributes[skillData.baseAttribute].value),
       unskilledUse: false,
       damage: powerData.damage,
       weaponAP: powerData.ap,
-      applyArmor: applyArmor,
-      darknessModifier: 0,
-      DNDescriptor: dnDescriptor,
-      type: 'power',
-      chatNote: '',
-      applySize: applySize,
+      applyArmor: powerData.applyArmor,
+      DNDescriptor: powerData.dn,
+      applySize: powerData.applySize,
       attackOptions: true,
       rollTotal: 0,
-      movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       amountBD: 0,
       bdDamageSum: 0,

@@ -379,7 +379,7 @@ export async function renderSkillChat(test) {
       test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetConcealment', test.concealmentModifier);
     }
 
-    if (test.type === 'power' && test.powerModifier) {
+    if (test.testType === 'power' && test.powerModifier) {
       test.displayModifiers = true;
       test.modifiers += parseInt(test.powerModifier);
       test.modifierText += modifierString('torgeternity.chatText.check.modifier.powerModifier', test.powerModifier);
@@ -1150,17 +1150,12 @@ export async function soakDamages(soaker) {
     actorPic: soaker.img,
     actorName: soaker.name,
     actorType: soaker.system.type,
-    isAttack: false,
     isFav:
       soaker.system.skills[skillName]?.isFav ||
       soaker.system.attributes[skillName + 'IsFav'] ||
       false,
     skillName: skillName,
     skillValue: skillValue,
-    applySize: false,
-    DNDescriptor: 'standard',
-    attackOptions: false,
-    chatNote: '',
     rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
   }, { useTargets: true });
   // do reality roll

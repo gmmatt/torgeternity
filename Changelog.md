@@ -9,6 +9,7 @@
 - Game system should work properly on the Forge and other sites that have a prefix in their URL.
 - Test Modifier tooltip displays a vertical list of modifiers.
 - Refactored Skill Test to reduce size of ChatMessage record.
+- Fix creation of Interaction test macros.
 
 ## v13.0.1
 

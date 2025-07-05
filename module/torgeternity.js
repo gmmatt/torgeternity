@@ -524,7 +524,7 @@ async function createTorgEternityMacro(dropData, slot) {
 
     command = `game.torgeternity.rollSkillMacro("${dropName}", "${dropAttribute}", ${isInteractionAttack});`;
 
-    const locSkillName = (dropName === dropAttribute) && game.i18n.localize('torgeternity.skills.' + dropName);
+    const locSkillName = (dropName !== dropAttribute) && game.i18n.localize('torgeternity.skills.' + dropName);
     const locAttributeName = game.i18n.localize('torgeternity.attributes.' + dropAttribute);
 
     if (dropData.type === 'skill')
@@ -533,7 +533,6 @@ async function createTorgEternityMacro(dropData, slot) {
       macroName = locAttributeName;
     else if (dropData.type === 'interaction')
       macroName = locSkillName;
-
 
     if (dropData.type === 'attribute') {
       // this is an attribute test
@@ -685,9 +684,7 @@ function rollItemMacro(itemName) {
           applyArmor: true,
           applySize: true,
           attackOptions: true,
-          darknessModifier: 0,
           chatNote: weaponData.chatNote,
-          movementModifier: 0,
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
         }, { useTargets: true });
@@ -721,12 +718,9 @@ function rollItemMacro(itemName) {
           damage: powerData.damage,
           weaponAP: powerData.ap,
           applyArmor: powerData.applyArmor,
-          darknessModifier: 0,
-          type: 'power',
           applySize: powerData.applySize,
           attackOptions: true,
           rollTotal: 0,
-          chatNote: '',
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
         }, { useTargets: true });
@@ -817,11 +811,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     skillBaseAttribute: game.i18n.localize('torgeternity.attributes.' + attributeName),
     skillAdds: skill.adds,
     skillValue: skillValue,
-    isAttack: false,
     isFav: skill.isFav,
-    applySize: false,
     DNDescriptor: DNDescriptor ?? 'standard',
-    attackOptions: false,
     rollTotal: 0,
     unskilledUse: skill.unskilledUse,
     chatNote: '',
@@ -829,15 +820,13 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
-    movementModifier: 0,
     bdDamageLabelStyle: 'display:none',
     bdDamageSum: 0,
   };
+
   if (isInteractionAttack) {
-    test['type'] = 'interactionAttack';
-    test['testType'] = 'interactionAttack';
-    test['interactionAttackType'] = skillName;
-    test['darknessModifier'] = 0;
+    test.testType = 'interactionAttack';
+    test.interactionAttackType = skillName;
     // Darkness seems like it would be hard to determine if it should apply to
     //    skill/attribute tests or not, maybe should be option in dialog?
 

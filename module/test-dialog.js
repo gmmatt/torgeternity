@@ -2,56 +2,10 @@ import { ChatMessageTorg } from './documents/chat/document.js';
 import * as torgchecks from './torgchecks.js';
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
-/**
- * Perform a Test Check
- * 
- * TestData: {
- *   mode: <string>      "create" (default) or "update"
- *   testType: <string>   one of 'attack', 'chase', 'stunt', 'vehicleBase', 
- *   actor: <uuid> of the actor making the roll
- *   actorType: <string> The type of actor making the roll
- *   item: item,
- *   isAttack: true,
- *   amountBD: 0,
- *   isFav: skillData.isFav,
- *   actorPic: actor.img,
- *   actorName: actor.name,
- *   skillName: attackWith,
- *   skillBaseAttribute: skillData.baseAttribute,
- *   skillValue: skillData?.value || skillData?.skillValue,
- *   skillAdds: skillData.adds,
- *   unskilledUse: true,
- *   rollTotal: 0,
- *   DNDescriptor: dnDescriptor,
- *   weaponName: item.name,
- *   weaponDamageType: damageType,
- *   weaponDamage: weaponData.damage,
- *   damage: adjustedDamage,
- *   weaponAP: weaponData.ap,
- *   applyArmor: true,
- *   targets: Array<Token>,
- *   applySize: true,
- *   attackOptions: true,
- *   darknessModifier: 0,
- *   chatNote: weaponData.chatNote,
- *   movementModifier: 0,
- *   bdDamageLabelStyle: 'display:none',
- *   bdDamageSum: 0,
- *   other1Description <string>
- *   other1Modifier <Number>
- *   other2Description <string>
- *   other2Modifier <Number>
- *   other3Description <string>
- *   other3Modifier <Number>
- * }
- * 
- * 
- */
-
 // Default values for all the fields in the dialog template
 const DEFAULT_TEST = {
   // difficulty-selector
-  DNDescriptor: "0",    // number or string
+  DNDescriptor: "standard",    // number or string
   // bonus-selector
   previousBonus: null,
   bonus: null,      // null or number
@@ -89,6 +43,11 @@ const DEFAULT_TEST = {
   sizeModifier: 0,
   speedModifier: 0,
   maneuverModifier: 0,
+  // sheet flags
+  attackOptions: false,
+  isAttack: false,
+  applySize: false,
+  chatNote: '',
 }
 
 export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
