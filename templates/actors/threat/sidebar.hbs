@@ -1,5 +1,6 @@
 <div class="threat-avatar">
-  <img src="{{document.img}}" class="profile-img" data-edit="img" data-tooltip="{{document.name}}" />
+  <img src="{{document.img}}" class="profile-img" data-edit="img" data-tooltip="{{document.name}}"
+    {{#if editable}}data-action="editImage" {{/if}} />
 </div>
 
 <div class="sidebar-stats">
