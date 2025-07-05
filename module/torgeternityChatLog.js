@@ -9,7 +9,7 @@ import { soakDamages } from './torgchecks.js';
 import { applyStymiedState } from './torgchecks.js';
 import { applyVulnerableState } from './torgchecks.js';
 import { TestDialog } from './test-dialog.js';
-import { checkForDiscon } from './torgchecks.js';
+import { isDisconnected } from './torgchecks.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -372,7 +372,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? game.user.targets.first().actor;
-    if (checkForDiscon(soaker)) {
+    if (isDisconnected(soaker)) {
       await ChatMessage.create({
         speaker: ChatMessage.getSpeaker(),
         content: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),

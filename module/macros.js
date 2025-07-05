@@ -244,7 +244,7 @@ export class TorgeternityMacros {
 
       const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate();
 
-      await game.dice3d?.showForRoll(diceroll);
+      if (game.dice3d) await game.dice3d.showForRoll(diceroll);
 
       let chatOutput = `<p>${game.i18n.localize(
         'torgeternity.macros.bonusDieMacroResult1'
@@ -852,8 +852,6 @@ export class TorgeternityMacros {
       },
     });
 
-    const allID = tokens.map(target => target.actor.id);
-    const allUUID = tokens.map(target => target.document.uuid);
     const targetAll = [];
 
     for (const token of tokens) {
@@ -938,8 +936,6 @@ export class TorgeternityMacros {
       sizeModifierAll: [0],
       vulnerableModifierAll: [0],
       targetAll: targetAll,
-      targetsAllID: allID,
-      targetsAllUUID: allUUID,
       disfavored: false,
       previousBonus: false,
       bonus: 0,

@@ -1808,12 +1808,42 @@ form.torgeternity {
 
 /*                          */
 /* --------Heavy Weapon Sheet Footer-------- */
-/*                          */
 
+/*
 form.application.torgeternity.standard-form,
 div.application.torgeternity.standard-form {
   column-gap: normal;
+}*/
 
+form.application.torgeternity.theme-dark {
+  --color-border-light-tertiary: #7a7971;
+
+  button,
+  select {
+    text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+    background-image: url(../images/lightning_bar.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    color: white;
+
+  }
+
+  button {
+    border: 1px solid var(--color-border-light-primary);
+    border-radius: 3px;
+    margin: 0 1px;
+  }
+
+  select {
+    border: 1px solid var(--color-border-light-tertiary);
+    border-radius: 3px;
+    padding: 0 3px;
+  }
+
+  footer button {
+    margin-top: 1rem;
+  }
 }
 
 .application.torgeternity .window-content {
@@ -1827,7 +1857,7 @@ div.application.torgeternity.standard-form {
 
   button,
   select {
-    cursor: pointer;
+    /*cursor: pointer;*/
   }
 
   */ select,

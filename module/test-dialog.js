@@ -3,8 +3,94 @@ import * as torgchecks from './torgchecks.js';
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
 /**
- *
+ * Perform a Test Check
+ * 
+ * TestData: {
+ *   mode: <string>      "create" (default) or "update"
+ *   testType: <string>   one of 'attack', 'chase', 'stunt', 'vehicleBase', 
+ *   actor: <uuid> of the actor making the roll
+ *   actorType: <string> The type of actor making the roll
+ *   item: item,
+ *   isAttack: true,
+ *   amountBD: 0,
+ *   isFav: skillData.isFav,
+ *   actorPic: actor.img,
+ *   actorName: actor.name,
+ *   skillName: attackWith,
+ *   skillBaseAttribute: skillData.baseAttribute,
+ *   skillValue: skillData?.value || skillData?.skillValue,
+ *   skillAdds: skillData.adds,
+ *   unskilledUse: true,
+ *   rollTotal: 0,
+ *   DNDescriptor: dnDescriptor,
+ *   weaponName: item.name,
+ *   weaponDamageType: damageType,
+ *   weaponDamage: weaponData.damage,
+ *   damage: adjustedDamage,
+ *   weaponAP: weaponData.ap,
+ *   applyArmor: true,
+ *   targets: Array<Token>,
+ *   applySize: true,
+ *   attackOptions: true,
+ *   darknessModifier: 0,
+ *   chatNote: weaponData.chatNote,
+ *   movementModifier: 0,
+ *   bdDamageLabelStyle: 'display:none',
+ *   bdDamageSum: 0,
+ *   other1Description <string>
+ *   other1Modifier <Number>
+ *   other2Description <string>
+ *   other2Modifier <Number>
+ *   other3Description <string>
+ *   other3Modifier <Number>
+ * }
+ * 
+ * 
  */
+
+// Default values for all the fields in the dialog template
+const DEFAULT_TEST = {
+  // difficulty-selector
+  DNDescriptor: "0",    // number or string
+  // bonus-selector
+  previousBonus: null,
+  bonus: null,      // null or number
+  // favored
+  isFav: false,
+  disfavored: false,
+  // movement-penalty
+  movementModifier: 0,
+  // multi-action
+  multiModifier: 0,
+  // multi-target
+  targetsModifier: 0,
+  // attack-options
+  calledShotModifier: 0,
+  vitalAreaDamageModifier: false,
+  burstModifier: 0,
+  allOutModifier: false,
+  aimed: false,
+  blindFireModifier: false,
+  trademark: false,
+  additionalDamage: null,   // Number or null
+  addBDs: 0,  // 0-5
+  // modifiers
+  concealment: 0,
+  other1Description: "",
+  other1Modifier: 0,
+  other2Description: "",
+  other2Modifier: 0,
+  other3Description: "",
+  other3Modifier: 0,
+  // fixed-modifiers
+  stymiedModifier: 0,
+  darknessModifier: 0,
+  woundModifier: 0,
+  sizeModifier: 0,
+  speedModifier: 0,
+  maneuverModifier: 0,
+}
+
 export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   testMessage;
 
@@ -31,7 +117,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   /**
    *
-   * @param {object} test the test object
+   * @param {TestData} test the test object
    * @param {object} options Foundry base options for the Application
    * @returns {Promise<ChatMessageTorg|undefined>} The ChatMessage of the Roll
    */
@@ -46,14 +132,14 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   /**
    *
-   * @param {object} test The test object
+   * @param {TestData} test The test object
    * @param {Function} resolve ChatMessage of the Roll
    * @param {object} options Foundry base options for the Application
    */
   constructor(test, resolve, options = {}) {
     super(options);
     this.mode = test.mode ?? 'create';
-    this.test = test;
+    this.test = foundry.utils.mergeObject(DEFAULT_TEST, test, { inplace: false });
     this.callback = resolve;
     this.render(true);
   }
@@ -73,23 +159,11 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     }
 
     // Set Modifiers from Actor Wounds and Status Effects
-    const myActor = this.test.actor.includes('Token')
-      ? fromUuidSync(this.test.actor)
-      : fromUuidSync(this.test.actor);
+    const myActor = fromUuidSync(this.test.actor)
     context.test.hasModifiers = false;
 
-    if (parseInt(myActor.system.wounds.value) <= 3) {
-      // The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
-      context.test.woundModifier = parseInt(-myActor.system.wounds.value);
-    } else if (
-      myActor.system.wounds.value == null ||
-      isNaN(parseInt(myActor.system.wounds.value))
-    ) {
-      // currentWounds could be empty or a char/string. Users... You know?!
-      context.test.woundModifier = 0;
-    } else {
-      context.test.woundModifier = -3;
-    }
+    // The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
+    context.test.woundModifier = -Math.min(myActor.system.wounds.value ?? 0, 3);
 
     context.test.stymiedModifier = myActor.statusModifiers.stymied;
     context.test.darknessModifier = myActor.statusModifiers.darkness;
@@ -98,7 +172,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     context.test.sizeModifierAll = [];
     context.test.vulnerableModifierAll = [];
     context.test.targetAll = [];
-    context.test.targetsAllID = [];
 
     // Set Modifiers for Vehicles
     if (this.test.testType === 'chase') {
@@ -123,17 +196,9 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     // ***Set Target Data***
     // Transfer data here because passing the entire target to a chat message tends to degrade the data
     //
-    const allID = [];
-    const allUUID = [];
-    context.test.targetPresent = context.test.targets.length > 0 ? true : false;
-    if ((context.test.targets.length > 0) & (context.test.testType !== 'soak')) {
+    context.test.targetPresent = !!context.test.targets.length;
+    if (context.test.targets.length && context.test.testType !== 'soak') {
       // Identify the first target
-      context.test.targets.forEach((t) => {
-        allID.push(t.actor.id);
-        allUUID.push(t.document.uuid);
-      });
-      context.test.targetsAllID = allID;
-      context.test.targetsAllUUID = allUUID;
       context.test.targets.forEach((t) => {
         const target = t.actor;
         // Set vehicle defense if needed
@@ -251,13 +316,9 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    */
   onChangeBonusText(event) {
     const input = event.target;
-    const rdb = input.parentElement.querySelector('#roll');
-    const rdbNum = input.parentElement.querySelector('#previous-bonus');
-    if (!rdb) return;
-    const isEmpty = isNaN(parseInt(input.value));
-    rdb.checked = isEmpty;
-    rdbNum.checked = !isEmpty;
+    input.parentElement.querySelector(input.value.length ? '#previous-bonus' : '#roll').checked = true;
   }
+
   /**
    *
    * @param event
@@ -277,93 +338,90 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
       this.test.diceroll = null;
 
-      await torgchecks.renderSkillChat(this.test);
-      return this.close();
-    }
+    } else {
 
-    // foundry.utils.mergeObject(this.test, fields, { inplace: true });
+      // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
+      this.test.DNDescriptor =
+        this.test.testType === 'activeDefense'
+          ? 'standard'
+          : fields.DNDescriptor;
 
-    // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
-    this.test.DNDescriptor =
-      this.test.testType === 'activeDefense'
-        ? 'standard'
-        : fields.DNDescriptor;
+      // Check for disfavored and flag if needed
+      this.test.disfavored = fields.disfavored;
 
-    // Check for disfavored and flag if needed
-    this.test.disfavored = fields.disfavored;
+      // Check for favored and flag if needed
+      this.test.isFav = fields.isFav;
 
-    // Check for favored and flag if needed
-    this.test.isFav = fields.isFav;
+      // Add bonus, if needed
+      this.test.previousBonus = fields.previousBonus;
+      this.test.bonus = this.test.previousBonus ? fields.bonus : null;
 
-    // Add bonus, if needed
-    this.test.previousBonus = fields.previousBonus;
-    this.test.bonus = this.test.previousBonus ? fields.bonus : null;
+      // Add movement modifier
+      this.test.movementModifier = fields.movementModifier;
 
-    // Add movement modifier
-    this.test.movementModifier = fields.movementModifier;
+      // Add multi-action modifier
+      this.test.multiModifier = fields.multiModifier;
 
-    // Add multi-action modifier
-    this.test.multiModifier = fields.multiModifier;
+      // Add multi-target modifier
+      this.test.targetsModifier = fields.targetsModifier;
 
-    // Add multi-target modifier
-    this.test.targetsModifier = fields.targetsModifier;
+      //
+      // Add attack and target options if needed
+      //
+      if (this.test.attackOptions) {
+        // Add Called Shot Modifier
+        this.test.calledShotModifier = fields.calledShotModifier;
 
-    //
-    // Add attack and target options if needed
-    //
-    if (this.test.attackOptions) {
-      // Add Called Shot Modifier
-      this.test.calledShotModifier = fields.calledShotModifier;
+        // Add Vital Hit Modifier
+        this.test.vitalAreaDamageModifier = fields.vitalAreaDamageModifier ?? 0;
 
-      // Add Vital Hit Modifier
-      this.test.vitalAreaDamageModifier = fields.vitalAreaDamageModifier ?? 0;
+        // Add Burst Modifier
+        this.test.burstModifier = fields.burstModifier;
 
-      // Add Burst Modifier
-      this.test.burstModifier = fields.burstModifier;
+        if (
+          this.test.item?.weaponWithAmmo &&
+          this.test.burstModifier > 0 &&
+          !this.test.item.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
+        ) {
+          ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
+          return;
+        }
 
-      if (
-        this.test.item?.weaponWithAmmo &&
-        this.test.burstModifier > 0 &&
-        !this.test.item.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
-      ) {
-        ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
-        return;
+        // Add All-Out Attack
+        this.test.allOutModifier = fields.allOutModifier;
+
+        // Add Amied Shot
+        this.test.aimedModifier = fields.aimedModifier ?? 0;
+
+        // Add Blind Fire
+        this.test.blindFireModifier = fields.blindFireModifier ?? 0;
+
+        // Add Trademark Weapon
+        this.test.trademark = fields.trademark;
+
+        // Add Concealment Modifier
+        this.test.concealmentModifier = fields.concealmentModifier;
+
+        // Add Cover Modifier
+        this.test.coverModifier = fields.coverModifier ?? 0;
+
+        // Add additional damage and BDs in promise. Null if not applicable
+        this.test.additionalDamage = fields.additionalDamage ?? 0;
+
+        this.test.addBDs = fields.addBDs ?? 0;
       }
 
-      // Add All-Out Attack
-      this.test.allOutModifier = fields.allOutModifier;
+      // Add other modifiers 1-3
+      for (let i = 1; i <= 3; i++) {
+        const modifier = fields[`other${i}Modifier`];
+        const isActive = modifier != 0;
 
-      // Add Amied Shot
-      this.test.aimedModifier = fields.aimedModifier ?? 0;
+        this.test[`isOther${i}`] = isActive;
 
-      // Add Blind Fire
-      this.test.blindFireModifier = fields.blindFireModifier ?? 0;
-
-      // Add Trademark Weapon
-      this.test.trademark = fields.trademark;
-
-      // Add Concealment Modifier
-      this.test.concealmentModifier = fields.concealmentModifier;
-
-      // Add Cover Modifier
-      this.test.coverModifier = fields.coverModifier ?? 0;
-
-      // Add additional damage and BDs in promise. Null if not applicable
-      this.test.additionalDamage = fields.additionalDamage ?? 0;
-
-      this.test.addBDs = fields.addBDs ?? 0;
-    }
-
-    // Add other modifiers 1-3
-    for (let i = 1; i <= 3; i++) {
-      const modifier = fields[`other${i}Modifier`];
-      const isActive = modifier != 0;
-
-      this.test[`isOther${i}`] = isActive;
-
-      if (isActive) {
-        this.test[`other${i}Description`] = fields[`other${i}Description`];
-        this.test[`other${i}Modifier`] = modifier;
+        if (isActive) {
+          this.test[`other${i}Description`] = fields[`other${i}Description`];
+          this.test[`other${i}Modifier`] = modifier;
+        }
       }
     }
 

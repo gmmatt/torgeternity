@@ -1,4 +1,4 @@
-import * as torgchecks from '../torgchecks.js';
+import { isDisconnected, renderSkillChat } from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
@@ -462,7 +462,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
-    if (skillName === 'reality' && torgchecks.checkForDiscon(this.actor)) {
+    if (skillName === 'reality' && isDisconnected(this.actor)) {
       const d = await DialogV2.confirm({
         window: { title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title') },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
@@ -823,9 +823,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onActiveDefenseCancel(event, target) {
-    const dnDescriptor = 'standard';
 
-    const test = {
+    await renderSkillChat({
       testType: 'activeDefense',
       activelyDefending: true,
       actor: this.actor.uuid,
@@ -839,7 +838,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillValue: null,
       unskilledUse: true,
       darknessModifier: 0,
-      DNDescriptor: dnDescriptor,
+      DNDescriptor: 'standard',
       type: 'activeDefense',
       targetAll: Array.from(game.user.targets),
       targets: Array.from(game.user.targets),
@@ -848,10 +847,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       rollTotal: 0,
       vulnerableModifierAll: [0],
       sizeModifierAll: [0],
-    };
-
-    // If cancelling activeDefense, bypass dialog
-    await torgchecks.renderSkillChat(test);
+    });
   }
 
   /**

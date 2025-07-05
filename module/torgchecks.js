@@ -12,9 +12,7 @@ export async function renderSkillChat(test) {
   if (!test?.targetAll.length) test.targetAll = [test.targets];
 
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
-  try {
-    game.dice3d.messageHookDisabled = true;
-  } catch (e) { }
+  if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
@@ -538,7 +536,7 @@ export async function renderSkillChat(test) {
 
     // Choose Text to Display as Result
     const myActor = fromUuidSync(test.actor);
-    if (checkForDiscon(myActor)) {
+    if (isDisconnected(myActor)) {
       test.possibilityStyle = 'display:none';
       test.heroStyle = 'display:none';
       test.dramaStyle = 'display:none';
@@ -961,26 +959,22 @@ export async function renderSkillChat(test) {
     };
 
     // roll Dice once, and handle the error if DSN is not installed
-    if (i === 0) {
-      try {
-        await game.dice3d.showForRoll(test.diceroll, game.user, true);
-      } catch (e) { }
-    }
-    try {
+    if (game.dice3d) {
+      if (i === 0) await game.dice3d.showForRoll(test.diceroll, game.user, true);
       game.dice3d.showForRoll(iteratedRoll);
-      iteratedRoll = undefined;
-    } catch (e) { }
+    }
+    iteratedRoll = undefined;
 
     messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
 
   if (game.settings.get('torgeternity', 'unTarget')) {
+    // see leftClickRelease in Foundry code
     if (game.canvas) await game.user._onUpdateTokenTargets();
     await game.user.broadcastActivity({ targets: [] });
   }
-  try {
-    game.dice3d.messageHookDisabled = false;
-  } catch (e) { }
+
+  if (game.dice3d) game.dice3d.messageHookDisabled = false;
 
   return messages;
 }
@@ -991,7 +985,7 @@ export async function renderSkillChat(test) {
  * @returns
  */
 
-export function checkForDiscon(actor) {
+export function isDisconnected(actor) {
   // just like TokenDocument.hasStatusEffect
   return actor?.statuses.has('disconnected') ?? false;
 }
@@ -1645,8 +1639,18 @@ async function manyDN(test, target) {
 }
 
 async function oneDN(test) {
-  let highestDN = test?.DN || 0;
-  let tempDN;
+
+  function validValue(value, other) {
+    return (value && value != '-') ? value : other;
+  }
+  function highest(func) {
+    let highestDN = test?.DN || 0;
+    for (const tar of test.targetAll) {
+      highestDN = Math.max(highestDN, func(tar));
+    }
+    test.DN = highestDN;
+  }
+
   switch (test.DNDescriptor) {
     case 'veryEasy':
       test.DN = 6;
@@ -1673,258 +1677,95 @@ async function oneDN(test) {
       test.DN = 20;
       break;
     case 'targetCharisma':
-      for (const tar of test.targetAll) {
-        tempDN = tar.attributes.charisma.value;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.attributes.charisma.value)
       break;
     case 'targetDexterity':
-      for (const tar of test.targetAll) {
-        tempDN = tar.attributes.dexterity.value;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.attributes.dexterity.value);
       break;
     case 'targetMind':
-      for (const tar of test.targetAll) {
-        tempDN = tar.attributes.mind.value;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.attributes.mind.value);
       break;
     case 'targetSpirit':
-      for (const tar of test.targetAll) {
-        tempDN = tar.attributes.spirit.value;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.attributes.spirit.value);
       break;
     case 'targetStrength':
-      for (const tar of test.targetAll) {
-        tempDN = tar.attributes.strength.value;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.attributes.strength.value);
       break;
     case 'targetAlteration':
-      for (const tar of test.targetAll) {
-        if (tar.skills.alteration.value && tar.skills.alteration.value != '-') {
-          tempDN = tar.skills.alteration.value;
-        } else {
-          tempDN = tar.attributes.mind.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => validValue(tar.skills.alteration.value, tar.attributes.mind.value));
       break;
     case 'targetConjuration':
-      for (const tar of test.targetAll) {
-        if (tar.skills.conjuration.value && tar.skills.conjuration.value != '-') {
-          tempDN = tar.skills.conjuration.value;
-        } else {
-          tempDN = tar.attributes.spirit.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => validValue(tar.skills.conjuration.value, tar.attributes.spirit.value));
       break;
     case 'targetDivination':
-      for (const tar of test.targetAll) {
-        if (tar.skills.divination.value && tar.skills.divination.value != '-') {
-          tempDN = tar.skills.divination.value;
-        } else {
-          tempDN = tar.attributes.mind.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => validValue(tar.skills.divination.value, tar.attributes.mind.value));
       break;
     case 'targetDodge':
-      for (const tar of test.targetAll) {
-        tempDN = tar.defenses.dodge;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses.dodge);
       break;
     case 'targetFaith':
-      for (const tar of test.targetAll) {
-        if (tar.skills.faith.value) {
-          tempDN = tar.skills.faith.value;
-        } else {
-          tempDN = tar.attributes.spirit.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.skills.faith.value || tar.attributes.spirit.value);
       break;
     case 'targetFind':
-      for (const tar of test.targetAll) {
-        if (tar.skills.find.value && tar.skills.find.value != '-') {
-          tempDN = tar.skills.find.value;
-        } else {
-          tempDN = tar.attributes.mind.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => validValue(tar.skills.find.value, tar.attributes.mind.value));
       break;
     case 'targetIntimidation':
-      for (const tar of test.targetAll) {
-        tempDN = tar.defenses.intimidation;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses.intimidation);
       break;
     case 'targetKinesis':
-      for (const tar of test.targetAll) {
-        if (tar.skills.kinesis.value && tar.skills.kinesis.value != '-') {
-          tempDN = tar.skills.kinesis.value;
-        } else {
-          tempDN = tar.attributes.spirit.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => validValue(tar.skills.kinesis.value, tar.attributes.spirit.value));
       break;
     case 'targetManeuver':
-      for (const tar of test.targetAll) {
-        tempDN = tar.defenses.maneuver;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses.maneuver);
       break;
     case 'targetMeleeWeapons':
-      for (const tar of test.targetAll) {
-        tempDN = tar.defenses.meleeWeapons;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses.meleeWeapons);
       break;
     case 'targetPrecognition':
-      for (const tar of test.targetAll) {
-        if (tar.skills.precognition.value && tar.skills.precognition.value != '-') {
-          tempDN = tar.skills.precognition.value;
-        } else {
-          tempDN = tar.attributes.mind.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => validValue(tar.skills.precognition.value, tar.attributes.mind.value));
       break;
     case 'targetStealth':
-      for (const tar of test.targetAll) {
-        if (tar.skills.stealth.value) {
-          tempDN = tar.skills.stealth.value;
-        } else {
-          tempDN = tar.attributes.dexterity.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.skills.stealth.value || tar.attributes.dexterity.value);
       break;
     case 'targetTaunt':
-      for (const tar of test.targetAll) {
-        tempDN = tar.defenses.taunt;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses.taunt);
       break;
     case 'targetTrick':
-      for (const tar of test.targetAll) {
-        tempDN = tar.defenses.trick;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses.trick);
       break;
     case 'targetUnarmedCombat':
-      for (const tar of test.targetAll) {
-        tempDN = tar.defenses.unarmedCombat;
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses.unarmedCombat);
       break;
     case 'targetWillpower':
-      for (const tar of test.targetAll) {
-        if (tar.skills.willpower.value) {
-          tempDN = tar.skills.willpower.value;
-        } else {
-          tempDN = tar.attributes.spirit.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.skills.willpower.value || tar.attributes.spirit.value);
       break;
     case 'targetWillpowerMind':
-      for (const tar of test.targetAll) {
-        if (tar.skills.willpower.value) {
-          tempDN =
-            tar.skills.willpower.value - tar.attributes.spirit.value + tar.attributes.mind.value;
-        } else {
-          tempDN = tar.attributes.mind.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.skills.willpower.value
+        ? (tar.skills.willpower.value - tar.attributes.spirit.value + tar.attributes.mind.value)
+        : tar.attributes.mind.value);
       break;
     case 'targetLandVehicles':
-      for (const tar of test.targetAll) {
-        if (tar.skills.landVehicles.value) {
-          tempDN = tar.skills.landVehicles.value;
-        } else {
-          tempDN = tar.attributes.dexterity.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.skills.landVehicles.value || tar.attributes.dexterity.value);
       break;
     case 'targetAirVehicles':
-      for (const tar of test.targetAll) {
-        if (tar.skills.airVehicles.value) {
-          tempDN = tar.skills.airVehicles.value;
-        } else {
-          tempDN = tar.attributes.dexterity.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.skills.airVehicles.value || tar.attributes.dexterity.value);
       break;
     case 'targetWaterVehicles':
-      for (const tar of test.targetAll) {
-        if (tar.skills.waterVehicles.value) {
-          tempDN = tar.skills.waterVehicles.value;
-        } else {
-          tempDN = tar.attributes.dexterity.value;
-        }
-        highestDN = Math.max(highestDN, tempDN);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.skills.waterVehicles.value || tar.attributes.dexterity.value);
       break;
     case 'highestSpeed':
       // Find the fastest participant in the active combat
-      const combatants = game.combats.active.turns;
-      const combatantCount = game.combats.active.turns.length;
-      let combatantRun = 0;
-      let combatantSpeed = 0;
       let highestSpeed = 0;
-      for (let i = 0; i < combatantCount; i++) {
-        if (combatants[i].actor.type === 'vehicle') {
-          combatantSpeed = combatants[i].actor.system.topSpeed.value;
-        } else {
-          combatantRun = combatants[i].actor.system.other.run;
-          combatantSpeed = getTorgValue(combatantRun);
-        }
-        if (combatantSpeed > highestSpeed) {
-          highestSpeed = combatantSpeed;
-        }
+      for (const combatant of game.combats.active.turns) {
+        highestSpeed = Math.max(highestSpeed,
+          (combatant.actor.type === 'vehicle')
+            ? combatant.actor.system.topSpeed.value
+            : getTorgValue(combatant.actor.system.other.run));
       }
       test.DN = highestSpeed;
       break;
     case 'targetVehicleDefense':
-      for (const tar of test.targetAll) {
-        highestDN = Math.max(highestDN, tar?.defenses?.vehicle ?? 0);
-      }
-      test.DN = highestDN;
+      highest(tar => tar.defenses?.vehicle ?? 0);
       break;
     default:
       test.DN = 10;
