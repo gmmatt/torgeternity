@@ -121,35 +121,27 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         image2.render(true, { width: 425, height: 650 });
         return;
       case 'discard':
-        await card.setFlag('torgeternity', 'pooled', false);
-        if (card.type == 'destiny') {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
-          );
-        } else {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
-          );
-        }
-        card.toMessage({
-          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-            }"/><span><img src="${card.img
-            }"></span></span><span class="card-name">${game.i18n.localize(
-              'torgeternity.chatText.discardsCard'
-            )} ${card.name}</span>
+        {
+          await card.setFlag('torgeternity', 'pooled', false);
+          const settings = game.settings.get('torgeternity', 'deckSetting');
+          const pile = (card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard;
+          await card.pass(game.cards.get(pile), game.torgeternity.cardChatOptions);
+          card.toMessage({
+            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
+              }"/><span><img src="${card.img
+              }"></span></span><span class="card-name">${game.i18n.localize(
+                'torgeternity.chatText.discardsCard'
+              )} ${card.name}</span>
               </div>`,
-        });
-        return;
+          });
+          return;
+        }
       case 'play':
         await card.setFlag('torgeternity', 'pooled', false);
         if (card.type == 'destiny') {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
-          );
+          await card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard), game.torgeternity.cardChatOptions);
         } else {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
-          );
+          await card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard, game.torgeternity.cardChatOptions));
         }
         card.toMessage({
           content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
@@ -182,7 +174,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
           )} ${destinyDeck.name}.</h4></div>`,
       });
     }
-    return this.document.draw(destinyDeck, 1, { face: 1 });
+    return this.document.draw(destinyDeck, 1, { face: 1, ...game.torgeternity.cardChatOptions });
   }
   /**
  *
@@ -255,7 +247,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
               ${card.name} ${game.i18n.localize('torgeternity.chatText.passesCard2')}
                ${toName}.</h4></div>`,
           });
-          return card.pass(to).catch((err) => {
+          return card.pass(to, game.torgeternity.cardChatOptions, game.torgeternity.cardChatOptions).catch((err) => {
             ui.notifications.error(err.message);
             return this;
           });
@@ -296,7 +288,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
                 )} ${cosmDeck.name}.</h4></div>`,
             });
           }
-          return this.document.draw(cosmDeck, 1, { face: 1 }).catch((err) => {
+          return this.document.draw(cosmDeck, 1, { face: 1, ...game.torgeternity.cardChatOptions }).catch((err) => {
             ui.notifications.error(err.message);
             return this;
           });

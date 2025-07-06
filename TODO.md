@@ -1,5 +1,9 @@
 ## New Translations Required
 
+### 13.0.2
+- `torgeternity.settingMenu.cardChatNotify` (name & hint)
+
+### 13.0.0
 - `torgeternity.partySheet.chooseParty` - change of string
 - `torgeternity.partySheet.allPlayers` - NEW
 - `torgeternity.partySheet.activePlayers` - NEW

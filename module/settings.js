@@ -23,7 +23,7 @@ export function registerTorgSettings() {
     config: true,
     type: Boolean,
     default: false,
-    onChange: () => window.location.reload(),
+    requiresReload: true,
   });
 
   // ---------Set up Cards
@@ -70,7 +70,7 @@ export function registerTorgSettings() {
     config: true,
     type: Boolean,
     default: false,
-    onChange: () => window.location.reload(),
+    requiresReload: true,
   });
 
   // Show always details in Chatcards or keep it tugged in
@@ -82,8 +82,20 @@ export function registerTorgSettings() {
     requiresReload: true,
     type: Boolean,
     default: false,
-    onChange: () => window.location.reload(),
+    requiresReload: true,
   });
+
+  // Show always details in Chatcards or keep it tugged in
+  game.settings.register('torgeternity', 'cardChatNotify', {
+    name: 'torgeternity.settingMenu.cardChatNotify.name',
+    hint: 'torgeternity.settingMenu.cardChatNotify.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+    onChange: value => game.torgeternity.cardChatOptions = { chatNotification: !value }
+  });
+  game.torgeternity.cardChatOptions = { chatNotification: !game.settings.get('torgeternity', 'cardChatNotify') }
 
   game.settings.register('torgeternity', 'useColorBlindnessColors', {
     name: 'torgeternity.settingMenu.useColorBlindnessColors.name',

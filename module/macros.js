@@ -389,6 +389,7 @@ export class TorgeternityMacros {
     );
     const restoreOldActive = Array.from(dramaDiscard.cards).pop();
     const removeActiveCard = Array.from(dramaActive.cards).pop();
+    // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here
     removeActiveCard.pass(dramaDeck);
     restoreOldActive.pass(dramaActive);
     const activeImage = restoreOldActive.faces[0].img;
@@ -560,11 +561,12 @@ export class TorgeternityMacros {
         const userid = target.id;
         const destinyDiscard = game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard);
         const lastCard = destinyDiscard.cards.contents.pop();
-        if (!astCard) return;
+        if (!lastCard) return;
         const parentHand = target.character.getDefaultHand();
-        const found = game.messages.contents.filter(m => m.user.id === userid);
+        const found = game.messages.contents.filter(m => m.author.id === userid);
         if (!found.length) return;
         const lastMessage = found.pop();
+        // don't use game.torgeternity.cardChatOptions, since no other messages put in chat
         lastCard.pass(parentHand);
         ChatMessage.deleteDocuments([lastMessage.id]);
       }

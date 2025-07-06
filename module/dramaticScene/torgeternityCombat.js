@@ -15,10 +15,10 @@ export default class TorgCombat extends Combat {
       }
 
       if (dramaActive.cards.size > 0) {
-        await dramaActive.cards.contents[0].pass(dramaDiscard);
+        await dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
       }
       if (dramaDeck.availableCards.length > 0) {
-        dramaActive.draw(dramaDeck);
+        dramaActive.draw(dramaDeck, game.torgeternity.cardChatOptions);
         await this._onUpdate;
       } else {
         ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
@@ -44,7 +44,7 @@ export default class TorgCombat extends Combat {
       const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
       const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
       if (dramaDeck.availableCards.length > 0) {
-        dramaActive.draw(dramaDeck);
+        dramaActive.draw(dramaDeck, game.torgeternity.cardChatOptions);
       } else {
         ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
       }
@@ -62,7 +62,7 @@ export default class TorgCombat extends Combat {
       const dramaDiscard = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDiscard);
       const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
       if (dramaActive.cards.size > 0) {
-        dramaActive.cards.contents[0].pass(dramaDiscard);
+        dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
       }
     }
     super._onDelete(options, userId);

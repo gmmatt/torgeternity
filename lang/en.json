@@ -655,9 +655,13 @@
         "hint": "Use the Pan-Pacifica tabletent after year 1.",
         "name": "Year-1 PP TT"
       },
+      "cardChatNotify": {
+        "hint": "Hides core Foundry card messages where Torg Eternity supplies its own message",
+        "name": "Suppress Core Card Messages"
+      },
       "shuffleMessageSurpress": {
-        "hint": "If checked, the Chat Message on shuffling cards will be surpressed.",
-        "name": "Supress Chatmessage on shuffle"
+        "hint": "If checked, the Chat Message on shuffling cards will be suppressed.",
+        "name": "Suppress Chatmessage on shuffle"
       },
       "ignoreAmmo": {
         "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
