@@ -258,6 +258,12 @@ Hooks.on('ready', async function () {
         top: 150,
         left: 100,
         width: 675,
+      },
+      actions: {
+        openPack: (event, button) => {
+          const packName = button.dataset.packName;
+          if (packName) game.packs.get(packName).render(true);
+        }
       }
     });
   }
