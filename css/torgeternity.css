@@ -3951,6 +3951,7 @@ form.cards-config {
   background-size: cover;
   background-position: center;
   display: flex;
+  color: white;
   justify-content: center;
   align-items: center;
   position: relative;
