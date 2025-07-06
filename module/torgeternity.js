@@ -239,33 +239,12 @@ Hooks.on('ready', async function () {
   torgeternity.welcomeMessage = await foundry.applications.handlebars.renderTemplate(
     `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
   );
+  // Provide function to show the welcome message at any time.
+  game.torgeternity.showWelcomeMessage = showWelcomeMessage;
 
   // ----rendering welcome message
   if (game.settings.get('torgeternity', 'welcomeMessage') === true) {
-    DialogV2.confirm({
-      window: { title: 'Welcome to the Torg Eternity System for Foundry VTT!', },
-      content: torgeternity.welcomeMessage,
-      yes: {
-        icon: 'fas fa-check',
-        label: 'torgeternity.submit.OK',
-      },
-      no: {
-        icon: 'fas fa-ban',
-        label: 'torgeternity.submit.dontShow',
-        callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
-      },
-      position: {
-        top: 150,
-        left: 100,
-        width: 675,
-      },
-      actions: {
-        openPack: (event, button) => {
-          const packName = button.dataset.packName;
-          if (packName) game.packs.get(packName).render(true);
-        }
-      }
-    });
+    showWelcomeMessage();
   }
 
   // ------Ask about hiding nonlocal compendium
@@ -1054,3 +1033,30 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 Hooks.on('renderJournalEntryPageSheet', (sheet, element, document, options) => {
   element.classList.add('themed', 'theme-light');
 })
+
+function showWelcomeMessage() {
+  DialogV2.confirm({
+    window: { title: 'Welcome to the Torg Eternity System for Foundry VTT!', },
+    content: torgeternity.welcomeMessage,
+    yes: {
+      icon: 'fas fa-check',
+      label: 'torgeternity.submit.OK',
+    },
+    no: {
+      icon: 'fas fa-ban',
+      label: 'torgeternity.submit.dontShow',
+      callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
+    },
+    position: {
+      top: 150,
+      left: 100,
+      width: 675,
+    },
+    actions: {
+      openPack: (event, button) => {
+        const packName = button.dataset.packName;
+        if (packName) game.packs.get(packName).render(true);
+      }
+    }
+  });
+}
