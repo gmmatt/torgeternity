@@ -1852,11 +1852,6 @@ form.application.torgeternity.theme-dark {
     font-size: 14px;
   }
 
-  button,
-  select {
-    /*cursor: pointer;*/
-  }
-
   */ select,
   input[type="text"],
   input[type="number"],
