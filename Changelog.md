@@ -17,6 +17,7 @@
 - **+/- buttons** on Perk Enhancements and Limitations are now visible (in white text)
 - **Active Effects** can now be created on Actor and Item sheets.
 - **Token Ruler** changes walk icon to running when >move and warning when >3*move
+- Don't highlight entire **skill section** on hover.
 
 ### Internal Changes
 
