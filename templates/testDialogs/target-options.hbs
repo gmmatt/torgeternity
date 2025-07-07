@@ -2,16 +2,16 @@
   <legend>{{localize "torgeternity.sheetLabels.targetOptions"}}</legend>
   <span class="skill-check-options">
     {{localize "torgeternity.sheetLabels.concealment"}}:
-    <input type="radio" data-dtype="Number" id="concealment-none" name="concealment" value="0" checked />
+    <input type="radio" data-dtype="Number" id="concealment-none" name="concealmentModifier" value="0" checked />
     <label for="concealment-none">None</label>
-    <input type="radio" data-dtype="Number" id="concealment-2" name="concealment" value="-2"
-      {{checked (eq test.concealment -2)}} />
+    <input type="radio" data-dtype="Number" id="concealment-2" name="concealmentModifier" value="-2"
+      {{checked (eq test.concealmentModifier -2)}} />
     <label for="concealment-2">-2</label>
-    <input type="radio" data-dtype="Number" id="concealment-4" name="concealment" value="-4"
-      {{checked (eq test.concealment -4)}} />
+    <input type="radio" data-dtype="Number" id="concealment-4" name="concealmentModifier" value="-4"
+      {{checked (eq test.concealmentModifier -4)}} />
     <label for="concealment-4">-4</label>
-    <input type="radio" data-dtype="Number" id="concealment-6" name="concealment" value="-6"
-      {{checked (eq test.concealment -6)}} />
+    <input type="radio" data-dtype="Number" id="concealment-6" name="concealmentModifier" value="-6"
+      {{checked (eq test.concealmentModifier -6)}} />
     <label for="concealment-6">-6</label>
     |
     {{localize "torgeternity.sheetLabels.coverBonus"}}
