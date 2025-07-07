@@ -128,11 +128,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   async _preparePartContext(partId, context, options) {
-    context = await super._preparePartContext(partId, context, options);
-    if (this.actor.type === 'stormknight') {
-      context.tab = context.tabs[partId];
-    }
-    return context;
+    const partContext = await super._preparePartContext(partId, context, options);
+    console.log('ACTOR _preparePartContext', { partContext, partId, context, options })
+    if (partId in partContext.tabs) partContext.tab = partContext.tabs[partId];
+    return partContext;
   }
 
   /**
