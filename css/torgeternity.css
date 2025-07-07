@@ -449,11 +449,6 @@ form.torgeternity {
         text-align: center;
       }
 
-      &:hover,
-      &:active {
-        text-shadow: 0px 0px 10px var(--torgblue);
-      }
-
       li.dark {
         background-color: rgba(0, 0, 0, 0.561);
         color: white;
@@ -634,7 +629,6 @@ form.torgeternity {
         justify-content: center;
       }
     }
-
 
     img {
       border: none;
