@@ -1095,7 +1095,9 @@ form.torgeternity {
       }
 
       .effects-heading {
-        margin: 2px 0;
+        color: white;
+        background-color: black;
+        margin: 4px 0;
         align-items: center;
         font-weight: bold;
         font-family: "Palatino Linotype";
@@ -1140,11 +1142,12 @@ form.torgeternity {
       }
 
       .effect-item-image {
+        object-fit: contain;
         flex: 0 0 30px;
         height: 30px;
         background-size: 30px;
         border: none;
-        margin-right: 5px;
+        margin: 0px 5px 0px 5px;
       }
 
       .effect-toggle,
@@ -3591,7 +3594,9 @@ p.skill-chat-title.skilled {
     }
 
     .effects-heading {
-      margin: 2px 0;
+      color: white;
+      background-color: black;
+      margin: 4px 0;
       align-items: center;
       font-weight: bold;
       font-family: "Palatino Linotype";
