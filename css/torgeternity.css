@@ -4198,3 +4198,13 @@ dialog.externalLinks {
     src: 'systems/torgeternity/images/ulissesLogo.webp'
   }
 }
+
+#measurement .waypoint-label .icon {
+  &.fa-person-rays {
+    color: var(--color-level-error);
+  }
+
+  &.fa-person-running {
+    color: var(--color-level-warning);
+  }
+}

@@ -40,6 +40,7 @@ import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
+import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
 
 const { DialogV2 } = foundry.applications.api;
@@ -65,6 +66,7 @@ Hooks.once('init', async function () {
   CONFIG.Card.dataModels = cardDataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
+  CONFIG.Token.rulerClass = TorgEternityTokenRuler;
 
   // --------combats
   CONFIG.Combat.initiative.formula = '1';
