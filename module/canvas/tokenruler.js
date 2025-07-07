@@ -7,11 +7,17 @@ export default class TorgEternityTokenRuler extends foundry.canvas.placeables.to
     if (!context || !context.cost.total) return;
     const cost = context.cost.total;
     const move = this.token?.actor.system.other.move;
-    context.torgIcon =
-      (cost > 3 * move) ? "fa-person-rays" :
-        (cost > move) ? "fa-person-running" :
-          "fa-person-walking";
-
+    const walking = this.token.document.movementAction === 'walk';
+    if (!walking) return context;
+    if (cost > 3 * move) {
+      context.torgIcon = "fa-person-rays";
+      context.cssTorgMove = "moveTooFar";
+    } else if (cost > move) {
+      context.torgIcon = "fa-person-running"
+      context.cssTorgMove = "moveFar";
+    } else {
+      //context.torgIcon = "fa-person-walking";
+    }
     return context;
   }
 }

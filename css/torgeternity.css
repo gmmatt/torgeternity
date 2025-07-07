@@ -4193,12 +4193,12 @@ dialog.externalLinks {
   }
 }
 
-#measurement .waypoint-label .icon {
-  &.fa-person-rays {
+#measurement .waypoint-label {
+  .moveTooFar {
     color: var(--color-level-error);
   }
 
-  &.fa-person-running {
+  .moveFar {
     color: var(--color-level-warning);
   }
 }
