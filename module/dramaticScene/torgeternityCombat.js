@@ -18,8 +18,7 @@ export default class TorgCombat extends Combat {
         await dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
       }
       if (dramaDeck.availableCards.length > 0) {
-        dramaActive.draw(dramaDeck, game.torgeternity.cardChatOptions);
-        await this._onUpdate;
+        await dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
       } else {
         ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
       }
@@ -44,7 +43,7 @@ export default class TorgCombat extends Combat {
       const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
       const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
       if (dramaDeck.availableCards.length > 0) {
-        dramaActive.draw(dramaDeck, game.torgeternity.cardChatOptions);
+        /*await*/ dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
       } else {
         ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
       }
