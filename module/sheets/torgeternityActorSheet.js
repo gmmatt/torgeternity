@@ -129,7 +129,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   async _preparePartContext(partId, context, options) {
     const partContext = await super._preparePartContext(partId, context, options);
-    console.log('ACTOR _preparePartContext', { partContext, partId, context, options })
     if (partId in partContext.tabs) partContext.tab = partContext.tabs[partId];
     return partContext;
   }
@@ -480,7 +479,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         };
 
         const templatePromise = foundry.applications.handlebars.renderTemplate(
-          './systems/torgeternity/templates/partials/skill-error-card.hbs',
+          './systems/torgeternity/templates/chat/skill-error-card.hbs',
           templateData
         );
 
@@ -1138,7 +1137,7 @@ export function checkUnskilled(skillValue, skillName, actor) {
     };
 
     const templatePromise = foundry.applications.handlebars.renderTemplate(
-      './systems/torgeternity/templates/partials/skill-error-card.hbs',
+      './systems/torgeternity/templates/chat/skill-error-card.hbs',
       templateData
     );
 

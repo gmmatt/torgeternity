@@ -888,7 +888,7 @@ export async function renderSkillChat(test) {
       flags: {
         torgeternity: {
           test,
-          template: 'systems/torgeternity/templates/partials/skill-card.hbs',
+          template: 'systems/torgeternity/templates/chat/skill-card.hbs',
         },
       },
     };
