@@ -8,8 +8,8 @@ import { backlash3 } from './torgchecks.js';
 import { soakDamages } from './torgchecks.js';
 import { applyStymiedState } from './torgchecks.js';
 import { applyVulnerableState } from './torgchecks.js';
-import { TestUpdate } from './test-update.js';
-import { checkForDiscon } from './torgchecks.js';
+import { TestDialog } from './test-dialog.js';
+import { isDisconnected } from './torgchecks.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -25,8 +25,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'addPlus3': TorgeternityChatLog.#onPlus3,
       'addBd': TorgeternityChatLog.#onBd,
       'modifierLabel': TorgeternityChatLog.#onModifier,
-      'applyDam': TorgeternityChatLog.#applyDam,
-      'soakDam': TorgeternityChatLog.#soakDam,
+      'applyDam': TorgeternityChatLog.#applyDamage,
+      'soakDam': TorgeternityChatLog.#soakDamage,
       'applyStymied': TorgeternityChatLog.#applyStym,
       'applyVulnerable': TorgeternityChatLog.#applyVul,
       'backlash1': TorgeternityChatLog.#applyBacklash1,
@@ -42,23 +42,32 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
   }
 
   parentDeleteByTime(oldMsg) {
-    const parentMessagesIds = [];
-    game.messages
-      .filter((id) => Math.abs(id.timestamp - oldMsg.timestamp) < 500)
-      .forEach((m) => parentMessagesIds.push(m.id));
-    parentMessagesIds.forEach((id) => game.messages.get(id).delete());
+    // Use time and author to find all messages related to the same test.
+    const messageIds = game.messages
+      .filter(msg => msg.author === oldMsg.author && Math.abs(msg.timestamp - oldMsg.timestamp) < 500)
+      .map(msg => msg.id);
+    if (!messageIds) {
+      console.warn('Failed to find any messages to delete for ', oldMsg);
+      return;
+    }
+    ChatMessage.implementation.deleteDocuments(messageIds);
+  }
+
+  getMessage(target) {
+    const chatMessageId = target.closest('.chat-message').dataset.messageId;
+    const chatMessage = game.messages.get(chatMessageId);
+    const test = chatMessage.flags.torgeternity.test;
+    return { chatMessageId, chatMessage, test }
   }
 
   static async #onFavored(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    test.parentId = parentMessageId;
-    parentMessage.setFlag('torgeternity', 'test');
+    test.parentId = chatMessageId;
+    chatMessage.unsetFlag('torgeternity', 'test');
 
     // reRoll because favored
     test.isFavStyle = 'pointer-events:none;color:gray;display:none';
@@ -71,32 +80,28 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.unskilledLabel = 'display:none';
 
     await renderSkillChat(test);
-    this.parentDeleteByTime(parentMessage);
+    this.parentDeleteByTime(chatMessage);
   }
 
   static async #onPossibility(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const test = parentMessage.getFlag('torgeternity', 'test');
-
     // check for actor possibility
     // If vehicle roll, search for a character from the user
     const possOwner = test.actorType === 'vehicle' ? game.user.character?.uuid : test.actor;
     let possPool;
     // If no valid possOwner, take possibilities from the GM
-    if (!!possOwner) {
+    if (possOwner) {
       possPool = parseInt(fromUuidSync(possOwner).system.other.possibilities);
     } else {
-      possPool = game.user.isGM ? parseInt(game.user.getFlag('torgeternity', 'GMpossibilities')) : 0;
+      possPool = game.user.isGM ? parseInt(game.user.flags.torgeternity.GMpossibilities) : 0;
     }
     // 0 => if GM ask for confirm, or return message "no poss"
-    if ((possPool <= 0) & !game.user.isGM) {
+    if (possPool <= 0 && !game.user.isGM) {
       ui.notifications.warn(game.i18n.localize('torgeternity.sheetLabels.noPoss'));
-
       return;
     }
 
@@ -109,7 +114,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       if (!confirm) return;
       test.chatNote += game.i18n.localize('torgeternity.sheetLabels.lastSpent');
     } // GM can grant an on the fly possibilty if he does the roll
-    else if ((possPool === 0) & game.user.isGM) {
+    else if (possPool == 0 && game.user.isGM) {
       const confirm = await DialogV2.confirm({
         window: { title: game.i18n.localize('torgeternity.sheetLabels.noPoss') },
         content: game.i18n.localize('torgeternity.sheetLabels.noPossFree'),
@@ -118,14 +123,14 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       possPool += 1;
       test.chatNote += game.i18n.localize('torgeternity.sheetLabels.freePoss');
     }
-    if (!!possOwner) {
+    if (possOwner) {
       await fromUuidSync(possOwner).update({ 'system.other.possibilities': possPool - 1 });
     } else {
       game.user.isGM ? game.user.setFlag('torgeternity', 'GMpossibilities', possPool - 1) : {};
     }
 
-    test.parentId = parentMessageId;
-    parentMessage.setFlag('torgeternity', 'test');
+    test.parentId = chatMessageId;
+    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
     // Roll for Possibility
@@ -154,7 +159,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       test.possibilityStyle = 'pointer-events:none;color:gray';
     }
 
-    this.parentDeleteByTime(parentMessage);
+    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.possibilityTotal = 0.1;
@@ -174,17 +179,15 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onUp(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    const { chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    parentMessage.setFlag('torgeternity', 'test');
+    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
     // Roll for Up
-    this.parentDeleteByTime(parentMessage);
+    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.upTotal = 0.1;
@@ -203,18 +206,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onHero(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    test.parentId = parentMessageId;
-    parentMessage.setFlag('torgeternity', 'test');
+    test.parentId = chatMessageId;
+    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
     // Roll for Possibility
-    this.parentDeleteByTime(parentMessage);
+    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.heroTotal = 0.1;
@@ -235,17 +236,15 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onDrama(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    const { chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    parentMessage.setFlag('torgeternity', 'test');
+    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
     // Increase cards played by 1
-    this.parentDeleteByTime(parentMessage);
+    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.dramaTotal = 0.1;
@@ -266,13 +265,11 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onPlus3(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    const { chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    parentMessage.setFlag('torgeternity', 'test');
+    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
     // Add 1 to cards played
@@ -282,31 +279,25 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = null;
 
     test.unskilledLabel = 'display:none';
-    this.parentDeleteByTime(parentMessage);
+    this.parentDeleteByTime(chatMessage);
 
     await renderSkillChat(test);
   }
 
   static async #onBd(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
+    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const currentTarget = parentMessage.getFlag('torgeternity', 'currentTarget');
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    test.targetAll = [currentTarget];
-    test.sizeModifierAll = [test.sizeModifier];
-    test.vulnerableModifierAll = [test.vulnerableModifier];
+    test.targetAll = [test.target];
     test.possibilityStyle = 'display:none';
     test.upStyle = 'display:none';
     test.dramaStyle = 'display:none';
     test.heroStyle = 'display:none';
     test.isFavStyle = 'display:none';
     test.plus3Style = 'display:none';
-    parentMessage.setFlag('torgeternity', 'test');
-    parentMessage.setFlag('torgeternity', 'currentTarget');
+    chatMessage.unsetFlag('torgeternity', 'test');
     test.isFavStyle = 'pointer-events:none;color:gray;display:none';
     test.unskilledLabel = 'display:none';
     test.bdDamageLabelStyle = 'display:block';
@@ -331,49 +322,38 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
 
     test.bdDamageSum += finalValue.total;
-    game.messages.get(parentMessageId).delete();
+    game.messages.get(chatMessageId).delete();
 
     await renderSkillChat(test);
   }
 
   static async #onModifier(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    if (parentMessage.author.id !== game.user.id && !game.user.isGM) {
+    const { chatMessage, test } = this.getMessage(target);
+    if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    const updateDialog = new TestUpdate(parentMessage.getFlag('torgeternity', 'test'));
-    updateDialog.render(true);
+    TestDialog.renderUpdate(test);
   }
 
-  static async #applyDam(event, target) {
+  static async #applyDamage(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
+    const { test } = this.getMessage(target);
     // if (!game.user.isGM) {return};
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    const currentTarget = parentMessage.getFlag('torgeternity', 'currentTarget');
-    const targetuuid = currentTarget.uuid;
-    const dama = test.damage;
-    const toug = currentTarget.targetAdjustedToughness;
-    await applyDamages(torgDamage(dama, toug), targetuuid); // Need to keep target from test
+    await applyDamages(torgDamage(test.damage, test.target.targetAdjustedToughness), test.target.uuid); // Need to keep target from test
   }
 
-  static async #soakDam(event, target) {
+  static async #soakDamage(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    const test = parentMessage.getFlag('torgeternity', 'test');
+    const { test } = this.getMessage(target);
     const targetid = test.target.id;
-    const currentTarget = parentMessage.getFlag('torgeternity', 'currentTarget');
-    const targetuuid = currentTarget.uuid;
+    const targetuuid = test.target.uuid;
 
     if (!(targetid === game.user?.character?.id) && !game.user.isGM) {
       return;
     }
-    const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? Array.from(game.user.targets)[0].actor;
-    if (checkForDiscon(soaker)) {
+    const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? game.user.targets.first().actor;
+    if (isDisconnected(soaker)) {
       await ChatMessage.create({
         speaker: ChatMessage.getSpeaker(),
         content: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
@@ -383,7 +363,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     //
     let possPool = parseInt(soaker.system.other.possibilities);
     // 0 => if GM ask for confirm, or return message "no poss"
-    if ((possPool <= 0) & !game.user.isGM) {
+    if (possPool <= 0 && !game.user.isGM) {
       ui.notifications.warn(game.i18n.localize('torgeternity.sheetLabels.noPoss'));
       return;
     }
@@ -396,7 +376,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       });
       if (!confirm) return;
     } // GM can grant an on the fly possibilty if he does the roll
-    else if ((possPool === 0) & game.user.isGM) {
+    else if (possPool === 0 && game.user.isGM) {
       const confirm = await DialogV2.confirm({
         window: { title: game.i18n.localize('torgeternity.sheetLabels.noPoss') },
         content: game.i18n.localize('torgeternity.sheetLabels.noPossFree'),
@@ -413,11 +393,9 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
   static #adjustDam(event) {  // context menu, not action
     event.preventDefault();
     const target = event.target;
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
+    const { test } = this.getMessage(target);
     // if (!game.user.isGM) {return};
-    const test = parentMessage.getFlag('torgeternity', 'test');
-    const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
+    const targetuuid = test.target.uuid;
     const dama = test.damage;
     const toug = test.targetAdjustedToughness;
     const newDamages = torgDamage(dama, toug);
@@ -457,20 +435,14 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #applyStym(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
-    const sourceuuid = parentMessage.getFlag('torgeternity', 'test').actor;
-    await applyStymiedState(targetuuid, sourceuuid);
+    const { test } = this.getMessage(target);
+    await applyStymiedState(test.target.uuid, test.actor);
   }
 
   static async #applyVul(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
-    const sourceuuid = parentMessage.getFlag('torgeternity', 'test').actor;
-    await applyVulnerableState(targetuuid, sourceuuid);
+    const { test } = this.getMessage(target);
+    await applyVulnerableState(chatest.target.uuid, test.actor);
   }
 
   /**
@@ -479,10 +451,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
    */
   static async #applyBacklash1(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
-    await backlash1(targetuuid);
+    await backlash1(getMessage(target).test.actor);
   }
 
   /**
@@ -491,10 +460,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
    */
   static async #applyBacklash2(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
-    await backlash2(targetuuid);
+    await backlash2(getMessage(target).test.actor);
   }
 
   /**
@@ -503,9 +469,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
    */
   static async #applyBacklash3(event, target) {
     event.preventDefault();
-    const parentMessageId = target.closest('.chat-message').dataset.messageId;
-    const parentMessage = game.messages.get(parentMessageId);
-    const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
-    await backlash3(targetuuid);
+    await backlash3(getMessage(target).test.actor);
   }
 }

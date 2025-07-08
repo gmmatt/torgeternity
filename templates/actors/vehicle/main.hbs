@@ -11,7 +11,8 @@
 
   <header class="sheet-header">
     <div class="vehicle-header-image">
-      <img src="{{document.img}}" data-edit="img" data-tooltip="{{document.name}}" />
+      <img src="{{document.img}}" data-edit="img" data-tooltip="{{document.name}}"
+        {{#if editable}}data-action="editImage" {{/if}} />
     </div>
     <div class="vehicle-header-name">
       <input name="name" type="text" value="{{document.name}}" placeholder="Vehicle Name" size="50" />

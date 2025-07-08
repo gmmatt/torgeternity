@@ -281,8 +281,87 @@ form.torgeternity {
 /*                                             */
 .sheet.actor.torgeternity {
 
-  min-width: 450px;
-  min-height: 636px;
+  &.compact {
+    .window-content {
+      padding: 1px;
+    }
+
+    .block {
+      border: none;
+      margin: 0px;
+      padding: 2px;
+    }
+
+    nav.tabs.right-tab {
+      transform: rotate(90deg) translate(calc(-1 * var(--torg-header-height)), 5px) scale(0.7);
+    }
+
+    .tab[data-tab].active {
+      display: flex;
+      flex-direction: column;
+
+      div.tabbody {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sheet-header p {
+        display: none;
+      }
+
+      .sheet-header div:last-child {
+        display: none;
+      }
+
+      .attributes input,
+      .others input {
+        background: none;
+        height: 20px;
+      }
+
+      .skills .skillAttr,
+      .skills .skillAdd {
+        display: none;
+      }
+
+      .char_image,
+      .xp,
+      .defense {
+        display: none;
+      }
+
+      .perks-list h3,
+      .weapons-list h3 {
+        display: none;
+      }
+
+      .perks-list img,
+      .weapons-list img {
+        display: none;
+      }
+
+      .perks-list li,
+      .weapons-list li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .background h1 {
+        display: none;
+      }
+
+      .background .editor {
+        height: 100%;
+      }
+    }
+  }
+
+  &:not(.minimized) {
+    min-width: 450px;
+    min-height: 636px;
+  }
+
   --color-scrollbar: #227878;
   --color-scrollbar-track: #2e2e2e94;
 
@@ -370,11 +449,6 @@ form.torgeternity {
         text-align: center;
       }
 
-      &:hover,
-      &:active {
-        text-shadow: 0px 0px 10px var(--torgblue);
-      }
-
       li.dark {
         background-color: rgba(0, 0, 0, 0.561);
         color: white;
@@ -400,6 +474,7 @@ form.torgeternity {
         min-width: 5px;
         border: none;
         width: 20px;
+        padding: 3px;
       }
     }
 
@@ -555,7 +630,6 @@ form.torgeternity {
       }
     }
 
-
     img {
       border: none;
       flex: 0 0 60px;
@@ -575,8 +649,8 @@ form.torgeternity {
       text-shadow: 0px 0px 10px var(--torgblue);
     }
 
-    .item-name {
-      margin-right: 10px;
+    .item-controls {
+      align-content: center;
     }
 
     ol.item-list {
@@ -911,8 +985,7 @@ form.torgeternity {
         padding: 1px;
 
         .item-name {
-          padding-top: 5px;
-          max-width: 150px;
+          align-self: center;
         }
 
         img {
@@ -956,6 +1029,7 @@ form.torgeternity {
           }
 
           .item-controls {
+            align-content: center;
             justify-content: end;
 
             a.item-control {
@@ -1015,7 +1089,9 @@ form.torgeternity {
       }
 
       .effects-heading {
-        margin: 2px 0;
+        color: white;
+        background-color: black;
+        margin: 4px 0;
         align-items: center;
         font-weight: bold;
         font-family: "Palatino Linotype";
@@ -1060,11 +1136,12 @@ form.torgeternity {
       }
 
       .effect-item-image {
+        object-fit: contain;
         flex: 0 0 30px;
         height: 30px;
         background-size: 30px;
         border: none;
-        margin-right: 5px;
+        margin: 0px 5px 0px 5px;
       }
 
       .effect-toggle,
@@ -1361,8 +1438,10 @@ form.torgeternity {
       .sidebar-stats {
         border: solid;
         border-width: 2px;
+        border-color: black;
         border-radius: 3px;
         width: 150px;
+        background-color: lightgray;
       }
 
       input {
@@ -1441,6 +1520,11 @@ form.torgeternity {
       position: relative;
       font-size: 10px;
       left: 5px;
+
+      &.checked {
+        color: rgba(8, 83, 8, 0.794);
+        text-shadow: 0px 0px 3px green;
+      }
     }
 
     span.inputsFav {
@@ -1561,6 +1645,7 @@ form.torgeternity {
           }
 
           .item-controls {
+            align-content: center;
             justify-content: end;
             max-width: 80px;
             display: inline;
@@ -1609,7 +1694,10 @@ form.torgeternity {
     width: 100%;
 
     .section-bar {
-      height: 15px;
+      border: 1px black solid;
+      background-color: var(--torgblue);
+      color: white;
+      padding: 2px;
       width: 100%;
       text-align: left;
       font-family: "Signika";
@@ -1717,12 +1805,42 @@ form.torgeternity {
 
 /*                          */
 /* --------Heavy Weapon Sheet Footer-------- */
-/*                          */
 
+/*
 form.application.torgeternity.standard-form,
 div.application.torgeternity.standard-form {
   column-gap: normal;
+}*/
 
+form.application.torgeternity.theme-dark {
+  --color-border-light-tertiary: #7a7971;
+
+  button,
+  select {
+    text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+    background-image: url(../images/lightning_bar.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    color: white;
+
+  }
+
+  button {
+    border: 1px solid var(--color-border-light-primary);
+    border-radius: 3px;
+    margin: 0 1px;
+  }
+
+  select {
+    border: 1px solid var(--color-border-light-tertiary);
+    border-radius: 3px;
+    padding: 0 3px;
+  }
+
+  footer button {
+    margin-top: 1rem;
+  }
 }
 
 .application.torgeternity .window-content {
@@ -1732,11 +1850,6 @@ div.application.torgeternity.standard-form {
   .hint {
     font-family: Palatino;
     font-size: 14px;
-  }
-
-  button,
-  select {
-    cursor: pointer;
   }
 
   */ select,
@@ -3149,81 +3262,6 @@ p.skill-chat-title.skilled {
   align-items: center;
 }
 
-
-.compact .window-content {
-  padding: 1px;
-}
-
-.compact .sheet.actor {
-
-  .block {
-    border: none;
-    margin: 0px;
-    padding: 2px;
-  }
-
-  nav.sheet-tabs {
-    transform: rotateZ(90deg) scale(0.7);
-  }
-
-  .tab[data-tab].active {
-    display: flex;
-    flex-direction: column;
-
-    .sheet-header {
-      p {
-        display: none;
-      }
-
-      div:last-child {
-        display: none;
-      }
-    }
-
-    .attributes input,
-    .others input {
-      background: none;
-      height: 20px;
-    }
-
-    .skills .skillAttr,
-    .skills .skillAdd {
-      display: none;
-    }
-
-    .char_image,
-    .xp,
-    .defense {
-      display: none;
-    }
-
-    .perks-list h3,
-    .weapons-list h3 {
-      display: none;
-    }
-
-    .perks-list img,
-    .weapons-list img {
-      display: none;
-    }
-
-    .perks-list li,
-    .weapons-list li {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .background h1 {
-      display: none;
-    }
-
-    .background .editor {
-      height: 100%;
-    }
-  }
-}
-
 .item .window-content {
   padding: 0px;
 }
@@ -3545,7 +3583,9 @@ p.skill-chat-title.skilled {
     }
 
     .effects-heading {
-      margin: 2px 0;
+      color: white;
+      background-color: black;
+      margin: 4px 0;
       align-items: center;
       font-weight: bold;
       font-family: "Palatino Linotype";
@@ -3656,66 +3696,71 @@ p.skill-chat-title.skilled {
   flex-direction: column;
   max-width: 530px;
   min-width: 530px;
+
+  &>div {
+    display: flex;
+    flex-direction: row;
+
+    &>fieldset {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      border-color: auto;
+      column-gap: 1rem;
+
+      legend {
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      &>label {
+        font-family: "Palatino";
+      }
+
+      &>span {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+
+        &>input[type="checkbox"]~label[for] {
+          align-self: center;
+        }
+
+        &>input[type="radio"]~label[for] {
+          align-self: baseline;
+        }
+
+        &>input[type="number"] {
+          width: 3em;
+        }
+
+        &>* {
+          justify-content: left;
+        }
+      }
+
+      &>hr {
+        width: 100%;
+      }
+    }
+  }
+
+  .otherModifiers {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: repeat(4 1fr);
+    row-gap: 2px;
+
+    &>label {
+      justify-self: center;
+      /*font-family: 'Alaska';*/
+    }
+  }
 }
-
-.torgeternity .standard-form .test-dialog>div {
-  display: flex;
-  flex-direction: row;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset {
-  flex-grow: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>label {
-  font-family: "Palatino";
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="checkbox"]~label[for] {
-  align-self: center;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="radio"]~label[for] {
-  align-self: baseline;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>input[type="number"] {
-  width: 3em;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>span>* {
-  justify-content: left;
-}
-
-.torgeternity .standard-form .test-dialog>div>fieldset>hr {
-  width: 100%;
-}
-
-.torgeternity .standard-form .test-dialog .otherModifiers {
-  display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: repeat(4 1fr);
-  row-gap: 2px;
-}
-
-.torgeternity .standard-form .test-dialog .otherModifiers>label {
-  justify-self: center;
-  /*font-family: 'Alaska';*/
-}
-
-
 
 .skill-check-options {
   font-family: Palatino;
@@ -3900,6 +3945,7 @@ form.cards-config {
   background-size: cover;
   background-position: center;
   display: flex;
+  color: white;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -4139,5 +4185,15 @@ dialog.externalLinks {
 
   button.publisher i {
     src: 'systems/torgeternity/images/ulissesLogo.webp'
+  }
+}
+
+#measurement .waypoint-label {
+  .moveTooFar {
+    color: var(--color-level-error);
+  }
+
+  .moveFar {
+    color: var(--color-level-warning);
   }
 }

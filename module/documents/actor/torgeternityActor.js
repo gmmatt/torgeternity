@@ -266,13 +266,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    * @returns {object|false} the Hand of the actor or false if no default hand is set
    */
   getDefaultHand() {
-    const hand = game.cards.find((c) => c.flags?.torgeternity?.defaultHand === this.id);
-    if (hand) {
-      return hand;
-    } else {
-      console.error(`no default hand for actor : ${this.name}`);
-      return false;
-    }
+    return game.cards.find((c) => c.flags?.torgeternity?.defaultHand === this.id);
   }
 
   /**

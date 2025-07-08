@@ -72,7 +72,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     if (this.document.getFlag('torgeternity', 'lifelike')) {
       this.rotateCards(this.element);
     }
-    //html.find('#lifelike').click(this.submit.bind(this));
     await super._onRender(context, options);
   }
 
@@ -122,35 +121,27 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         image2.render(true, { width: 425, height: 650 });
         return;
       case 'discard':
-        await card.setFlag('torgeternity', 'pooled', false);
-        if (card.type == 'destiny') {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
-          );
-        } else {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
-          );
-        }
-        card.toMessage({
-          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-            }"/><span><img src="${card.img
-            }"></span></span><span class="card-name">${game.i18n.localize(
-              'torgeternity.chatText.discardsCard'
-            )} ${card.name}</span>
+        {
+          await card.setFlag('torgeternity', 'pooled', false);
+          const settings = game.settings.get('torgeternity', 'deckSetting');
+          const pile = (card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard;
+          await card.pass(game.cards.get(pile), game.torgeternity.cardChatOptions);
+          card.toMessage({
+            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
+              }"/><span><img src="${card.img
+              }"></span></span><span class="card-name">${game.i18n.localize(
+                'torgeternity.chatText.discardsCard'
+              )} ${card.name}</span>
               </div>`,
-        });
-        return;
+          });
+          return;
+        }
       case 'play':
         await card.setFlag('torgeternity', 'pooled', false);
         if (card.type == 'destiny') {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
-          );
+          await card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard), game.torgeternity.cardChatOptions);
         } else {
-          await card.pass(
-            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
-          );
+          await card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard, game.torgeternity.cardChatOptions));
         }
         card.toMessage({
           content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
@@ -183,7 +174,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
           )} ${destinyDeck.name}.</h4></div>`,
       });
     }
-    return this.document.draw(destinyDeck, 1, { face: 1 });
+    return this.document.draw(destinyDeck, 1, { face: 1, ...game.torgeternity.cardChatOptions });
   }
   /**
  *
@@ -221,28 +212,21 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    */
   async playerPassDialog(card) {
     // only hands of connected characters will be shown
-    const activeHand = [];
-    const activePlayers = game.users.filter((u) => u.active & !u.isGM & !u.isSelf);
-    activePlayers.forEach((h) => activeHand.push(h.character.getDefaultHand()));
     let cards;
     if (game.user.isGM) {
-      cards = game.cards.filter(
-        (c) => c !== this && c.type !== 'deck' && c.testUserPermission(game.user, 'LIMITED')
-      );
+      cards = game.cards.filter(cards => cards !== this && cards.type === 'hand');
     } else {
-      cards = activeHand.filter(
-        (c) => c.type !== 'deck' && c.testUserPermission(game.user, 'LIMITED')
-      );
+      cards = game.users
+        .filter(user => user.active && !user.isGM && !user.isSelf)
+        .map(user => user.character.getDefaultHand())
+        .filter(cards => cards.type == 'hand' && cards.testUserPermission(game.user, 'LIMITED'));
     }
     if (!cards.length)
-      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'), {
-        localize: true,
-      });
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'));
 
     // Construct the dialog HTML
-    const html = await foundry.applications.handlebars.renderTemplate('systems/torgeternity/templates/cards/playerPassDialog.hbs', {
-      cards: cards,
-    });
+    const html = await foundry.applications.handlebars.renderTemplate('systems/torgeternity/templates/cards/playerPassDialog.hbs',
+      { cards: cards });
 
     // Display the prompt
     return DialogV2.prompt({
@@ -263,7 +247,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
               ${card.name} ${game.i18n.localize('torgeternity.chatText.passesCard2')}
                ${toName}.</h4></div>`,
           });
-          return card.pass(to).catch((err) => {
+          return card.pass(to, game.torgeternity.cardChatOptions, game.torgeternity.cardChatOptions).catch((err) => {
             ui.notifications.error(err.message);
             return this;
           });
@@ -304,7 +288,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
                 )} ${cosmDeck.name}.</h4></div>`,
             });
           }
-          return this.document.draw(cosmDeck, 1, { face: 1 }).catch((err) => {
+          return this.document.draw(cosmDeck, 1, { face: 1, ...game.torgeternity.cardChatOptions }).catch((err) => {
             ui.notifications.error(err.message);
             return this;
           });

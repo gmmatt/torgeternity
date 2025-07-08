@@ -7,7 +7,7 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
 
   static DEFAULT_OPTIONS = {
     classes: ['torgeternity', 'deckSetting', 'themed', 'theme-dark'],
-    tag: "form",
+    tag: 'form',
     window: {
       title: 'torgeternity.settingMenu.deckSetting.name',
       contentClasses: ['standard-form'],
@@ -15,7 +15,6 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
     form: {
       handler: DeckSettingMenu.#onSubmit,
       closeOnSubmit: true,
-      // editable: true,
     },
     position: {
       top: 300,

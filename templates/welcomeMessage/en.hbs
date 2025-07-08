@@ -1,47 +1,43 @@
-<div class="readme" style="background-image:url('systems/torgeternity/images/journal-background.webp');background-repeat:no-repeat;padding:2rem 1rem;background-size:cover;color:black;">
-   <p style="padding-left:100px; padding-right:100px;"><img src="systems/torgeternity/images/TORG_Logo.webp"></p>
-<div style="padding-left:15px; padding-right:15px;">
-    <p style="font-family: alaska; font-size: 2rem; color: white; text-shadow: 3px 3px 3px #09090c;  text-align: center; text-transform: uppercase">System</p>
-    <h3>Beside of all the necessary features to bring the game experience from the table to the screen, the TORG Eternity System also provides the following compendiums:</h3>
+<div class="readme"
+  style="background-image:url('systems/torgeternity/images/journal-background.webp');background-repeat:no-repeat;padding:2rem 1rem;background-size:cover;color:black;">
+  <p style="padding-left:100px; padding-right:100px;"><img src="systems/torgeternity/images/TORG_Logo.webp"></p>
+  <div style="padding-left:15px; padding-right:15px;">
+    <p
+      style="font-family: alaska; font-size: 2rem; color: white; text-shadow: 3px 3px 3px #09090c;  text-align: center; text-transform: uppercase">
+      System</p>
+    <h3>Beside of all the necessary features to bring the game experience from the table to the screen, the TORG
+      Eternity System also provides the following compendiums:</h3>
     <ul class="flexcol">
-        <li><a class="compendium systemRules">Basic Rules</a> contains quickstart rules, Foundry specific explanations and a list of Effect commands.</li>
-        <li><a class="compendium systemArchetypes">Archetypes</a>, which contains the 16 iconic Storm Knights as ready to play characters.</li>
-        <li><a class="compendium systemHandouts">Handouts</a>, which contains shareable handouts for the iconic Archetypes.</li>
-        <li><a class="compendium systemCards">Core Card Set</a>, which contains the complete core card deck. It will be imported automatically and integrates the drama deck with the combat tracker. The Cosm modules include their Card expansions that can simply be added to the core decks or be replaced.</li>
-        <li><a class="compendium systemScenes">Main Scene</a>, which contains the TORG background as a generic Landing Page which will be imported with the first launch of the world.</li>
-        <li><a class="compendium systemMacros">Macros</a> contains several useful macros that should ease the flow of the game for the GM.</li>
+      <li><a class="compendium systemRules" data-action="openPack" data-pack-name="torgeternity.basic-rules">Basic
+          Rules</a> contains quickstart rules, Foundry specific explanations and a list of Effect commands.</li>
+      <li><a class="compendium systemArchetypes" data-action="openPack"
+          data-pack-name="torgeternity.archetypes">Archetypes</a>, which contains the 16 iconic Storm Knights as ready
+        to
+        play characters.</li>
+      <li><a class="compendium systemHandouts" data-action="openPack"
+          data-pack-name="torgeternity.handouts">Handouts</a>, which contains shareable handouts for the iconic
+        Archetypes.</li>
+      <li><a class="compendium systemCards" data-action="openPack" data-pack-name="torgeternity.core-card-set">Core Card
+          Set</a>, which contains the complete core card deck. It will be imported automatically and integrates the
+        drama deck with the combat tracker. The Cosm modules include their Card expansions that can simply be added to
+        the core decks or be replaced.</li>
+      <li><a class="compendium systemScenes" data-action="openPack" data-pack-name="torgeternity.core-scenes">Main
+          Scene</a>, which contains the TORG background as a generic Landing Page which will be imported with the first
+        launch of the world.</li>
+      <li><a class="compendium systemMacros" data-action="openPack" data-pack-name="torgeternity.macros">Macros</a>
+        contains several useful macros that should ease the flow of the game for the GM.</li>
     </ul>
-  <p style="padding-left:150px; padding-right:150px;"><a href="https://ulisses-us.com/"><img src="systems/torgeternity/images/ulisseslogoDE.webp" alt="logo ulisses"></a></p>
-   <p>Thank you for downloading and playing Torg Eternity on Foundry. If you need help with this module, please visit our Discord channel on the Foundry or Ulisses Spiele server.</p>
+    <p style="padding-left:150px; padding-right:150px;"><a href="https://ulisses-us.com/"><img
+          src="systems/torgeternity/images/ulisseslogoDE.webp" alt="logo ulisses"></a></p>
+    <p>Thank you for downloading and playing Torg Eternity on Foundry. If you need help with this module, please visit
+      our Discord channel on the Foundry or Ulisses Spiele server.</p>
     <h3>Acknowledgements</h3>
- <p>Many thanks to @rwanoux for his amazing work on this project. This system would not look as fantastic as it does without his contributions. The project would also not have realized its potential without the Torg Eternity community on Foundry. There are too many people to mention individually, but I especially want to give a shout-out to @Manuel, @Orome, @Paul Emerson, @Markus Raab, and @ForjaSalvaje for their contributions, input, and encouragement. -GM Matt (December 2021)</p>
+    <p>Many thanks to @rwanoux for his amazing work on this project. This system would not look as fantastic as it does
+      without his contributions. The project would also not have realized its potential without the Torg Eternity
+      community on Foundry. There are too many people to mention individually, but I especially want to give a shout-out
+      to @Manuel, @Orome, @Paul Emerson, @Markus Raab, and @ForjaSalvaje for their contributions, input, and
+      encouragement. -GM Matt (December 2021)</p>
     <p>I like to thank Helmut, BadIdeasBureau and Durak for their contributions, and Matt
-    for being the first Chief o.D. - Algor</p>
+      for being the first Chief o.D. - Algor</p>
+  </div>
 </div>
-</div>
-<script>
-    let crCompLinks = document.getElementsByClassName("compendium");
-    for (let link of crCompLinks) {
-        link.addEventListener("click", (ev) => openCrComp(ev));
-    }
-    function openCrComp(ev) {
-        if (ev.currentTarget.classList.contains("systemRules")) {
-            game.packs.get("torgeternity.basic-rules").render(true);
-        }
-        else if (ev.currentTarget.classList.contains("systemArchetypes")) {
-            game.packs.get("torgeternity.archetypes").render(true);
-        }
-        else if (ev.currentTarget.classList.contains("systemHandouts")) {
-            game.packs.get("torgeternity.handouts").render(true);
-        }
-        else if (ev.currentTarget.classList.contains("systemCards")) {
-            game.packs.get("torgeternity.core-card-set").render(true);
-        }
-        else if (ev.currentTarget.classList.contains("systemScenes")) {
-            game.packs.get("torgeternity.core-scenes").render(true);
-        }
-        else if (ev.currentTarget.classList.contains("systemMacros")) {
-            game.packs.get("torgeternity.macros").render(true);
-        }
-    }
-</script>
