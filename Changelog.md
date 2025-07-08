@@ -1,6 +1,11 @@
 # TORG Eternity Changelog
 
-## v13.0.2
+## v13.0.4
+
+- No errors when used with Dice So Nice!
+- Card Editor Dialog should use the correct template on Forge.
+
+## v13.0.3
 
 - **Dragging** items and skills to the Hotbar should now create the relevant macro.
 - Configure key now closes PossibilityByCosm if it is already open.

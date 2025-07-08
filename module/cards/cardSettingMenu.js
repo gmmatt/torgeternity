@@ -26,7 +26,7 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
   }
 
   static PARTS = {
-    form: { template: '/systems/torgeternity/templates/cards/settingMenu.hbs', scrollable: [""] },
+    form: { template: 'systems/torgeternity/templates/cards/settingMenu.hbs', scrollable: [""] },
     footer: { template: "templates/generic/form-footer.hbs" },
   }
 
