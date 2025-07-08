@@ -380,13 +380,10 @@ export class TorgeternityMacros {
     if (!game.user.isGM) {
       return;
     }
-    const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
-    const dramaDiscard = game.cards.get(
-      game.settings.get('torgeternity', 'deckSetting').dramaDiscard
-    );
-    const dramaActive = game.cards.get(
-      game.settings.get('torgeternity', 'deckSetting').dramaActive
-    );
+    const settings = game.settings.get('torgeternity', 'deckSetting');
+    const dramaDeck = game.cards.get(settings.dramaDeck);
+    const dramaDiscard = game.cards.get(settings.dramaDiscard);
+    const dramaActive = game.cards.get(settings.dramaActive);
     const restoreOldActive = Array.from(dramaDiscard.cards).pop();
     const removeActiveCard = Array.from(dramaActive.cards).pop();
     // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here
