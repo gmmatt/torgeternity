@@ -9,7 +9,6 @@ import { sheetResize } from './sheetResize.js';
 import { preloadTemplates } from './preloadTemplates.js';
 import torgeternityCombat from './dramaticScene/torgeternityCombat.js';
 import torgeternityCombatTracker from './dramaticScene/torgeternityCombatTracker.js';
-import { alphabSort } from './AlphabeticalSort.js';
 // Disabling Player List extension until it can be updated for version 10
 import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
 import torgeternitySceneConfig from './torgeternitySceneConfig.js';
@@ -34,12 +33,14 @@ import { explode, reroll } from './explode.js';
 import { activateStandartScene } from './activateStandartScene.js';
 import { torgMigration } from './migrations.js';
 import initTextEdidor from './initTextEditor.js';
+import initProseMirrorEditor from './initProseMirrorEditor.js';
 import { TorgeternityMacros } from './macros.js';
 import { ChatMessageTorg } from './documents/chat/document.js';
 import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
+import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
 
 const { DialogV2 } = foundry.applications.api;
@@ -55,6 +56,7 @@ Hooks.once('init', async function () {
     macros: new TorgeternityMacros(),
   };
   initTextEdidor();
+  initProseMirrorEditor();
   CONFIG.torgeternity = torgeternity;
   CONFIG.Item.documentClass = TorgeternityItem;
   CONFIG.Actor.documentClass = TorgeternityActor;
@@ -64,6 +66,7 @@ Hooks.once('init', async function () {
   CONFIG.Card.dataModels = cardDataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
+  CONFIG.Token.rulerClass = TorgEternityTokenRuler;
 
   // --------combats
   CONFIG.Combat.initiative.formula = '1';
@@ -238,27 +241,12 @@ Hooks.on('ready', async function () {
   torgeternity.welcomeMessage = await foundry.applications.handlebars.renderTemplate(
     `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
   );
+  // Provide function to show the welcome message at any time.
+  game.torgeternity.showWelcomeMessage = showWelcomeMessage;
 
   // ----rendering welcome message
   if (game.settings.get('torgeternity', 'welcomeMessage') === true) {
-    DialogV2.confirm({
-      window: { title: 'Welcome to the Torg Eternity System for Foundry VTT!', },
-      content: torgeternity.welcomeMessage,
-      yes: {
-        icon: 'fas fa-check',
-        label: 'torgeternity.submit.OK',
-      },
-      no: {
-        icon: 'fas fa-ban',
-        label: 'torgeternity.submit.dontShow',
-        callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
-      },
-      position: {
-        top: 150,
-        left: 100,
-        width: 675,
-      }
-    });
+    showWelcomeMessage();
   }
 
   // ------Ask about hiding nonlocal compendium
@@ -296,43 +284,12 @@ Hooks.on('ready', async function () {
 
   // ----reset cards to initial face
   if (game.user.isGM)
-    Array.from(game.cards).forEach((d) =>
-      Array.from(d.cards).forEach((c) => c.update({ face: 0 }))
-    );
+    game.cards.forEach(deck => deck.cards.forEach(card => card.update({ face: 0 })));
 
   // activation of standart scene
   if (game.scenes.size < 1) {
     activateStandartScene();
   }
-
-  // ----pause image----
-  // Hooks.on("renderPause", () => {
-
-  // Removing this because it doesn't appear to do anything any longer?
-
-  // let path = game.settings.get("torgeternity", "pauseMedia");
-  // let img = document.getElementById("pause").firstElementChild;
-  // path = "./" + path;
-  // img.style.content = `url(${path})`
-  // })
-
-  /*
-  //-----applying players card ui:
-  if (game.user.role == false || game.user.role != 4) {
-    let user=game.users.get(game.user._id)
-    
-    ui.HandedCards = new HandedCardsApp();
-    ui.HandedCards.render(true);
-  };
-  //-----applying GM card ui:
-  if (game.user.role == 4 || game.user.role == 3) {
-    //init cards GM Decks
-    let user=game.users.get(game.user._id)
-   
-    ui.GMDecks = new GMDecksApp();
-    ui.GMDecks.render(true);
-  };
-*/
 });
 
 let externalLinks;
@@ -440,17 +397,17 @@ Hooks.on("renderSettings", async (app, html) => {
 })
 
 // moved out of the setup hook, because it had no need to be in there
-Hooks.on('hotbarDrop', (bar, data, slot) => {
+Hooks.on('hotbarDrop', (bar, dropData, slot) => {
   // return true means we are not handling this event, false means we did handle it
   if (
-    data.type !== 'Item' &&
-    data.type !== 'skill' &&
-    data.type !== 'interaction' &&
-    data.type !== 'attribute'
+    dropData.type !== 'Item' &&
+    dropData.type !== 'skill' &&
+    dropData.type !== 'interaction' &&
+    dropData.type !== 'attribute'
   )
     return true;
 
-  createTorgEternityMacro(data, slot);
+  createTorgEternityMacro(dropData, slot);
   return false;
 });
 
@@ -474,9 +431,9 @@ Hooks.on('getMonarchHandComponents', (hand, components) => {
     onclick: (event, card) => {
       card.setFlag('torgeternity', 'pooled', false);
       if (card.type == 'destiny') {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard), game.torgeternity.cardChatOptions);
       } else {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard));
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard), game.torgeternity.cardChatOptions);
       }
       card.toMessage({
         content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
@@ -508,9 +465,9 @@ Hooks.on('getMonarchHandComponents', (hand, components) => {
     onclick: (event, card) => {
       card.setFlag('torgeternity', 'pooled', false);
       if (card.type == 'destiny') {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard), game.torgeternity.cardChatOptions);
       } else {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard));
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard), game.torgeternity.cardChatOptions);
       }
       card.toMessage({
         content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
@@ -530,8 +487,8 @@ Hooks.on('getMonarchHandComponents', (hand, components) => {
   });
 });
 
-async function createTorgEternityMacro(data, slot) {
-  const objData = data.uuid ? fromUuidSync(data.uuid) : data.data;
+async function createTorgEternityMacro(dropData, slot) {
+  const document = dropData.uuid ? fromUuidSync(dropData.uuid) : dropData.data;
   // Create the macro command
   let command = null;
   let macro = null;
@@ -539,43 +496,43 @@ async function createTorgEternityMacro(data, slot) {
   let macroImg = null;
   let macroFlag = null;
 
-  if (data.type === 'Item') {
-    command = `game.torgeternity.rollItemMacro("${objData.name}");`;
-    macroName = objData.name;
-    macroImg = objData.img;
+  if (dropData.type === 'Item') {
     macroFlag = 'itemMacro';
-  } // attribute, skill, interaction
-  else {
-    const internalSkillName = objData.name;
-    const internalAttributeName = objData.attribute;
-    const isAttributeTest = internalSkillName === internalAttributeName;
-    const isInteractionAttack = data.type === 'interaction';
-
-    command = `game.torgeternity.rollSkillMacro("${internalSkillName}", "${internalAttributeName}", ${isInteractionAttack});`;
-
-    const displaySkillName = isAttributeTest
-      ? null
-      : game.i18n.localize('torgeternity.skills.' + internalSkillName);
-    const displayAttributeName = game.i18n.localize(
-      'torgeternity.attributes.' + internalAttributeName
-    );
-
-    if (data.type === 'skill') macroName = displaySkillName + '/' + displayAttributeName;
-    else if (data.type === 'attribute') macroName = displayAttributeName;
-    else if (data.type === 'interaction') macroName = displaySkillName;
+    command = `game.torgeternity.rollItemMacro("${document.name}");`;
+    macroName = document.name;
+    macroImg = document.img;
+  } else {
+    // attribute, skill, interaction
     macroFlag = 'skillMacro';
 
-    if (data.type === 'attribute') {
+    const dropName = document.name;
+    const dropAttribute = document.attribute;
+    const isInteractionAttack = dropData.type === 'interaction';
+
+    command = `game.torgeternity.rollSkillMacro("${dropName}", "${dropAttribute}", ${isInteractionAttack});`;
+
+    const locSkillName = (dropName !== dropAttribute) && game.i18n.localize('torgeternity.skills.' + dropName);
+    const locAttributeName = game.i18n.localize('torgeternity.attributes.' + dropAttribute);
+
+    if (dropData.type === 'skill')
+      macroName = locSkillName + '/' + locAttributeName;
+    else if (dropData.type === 'attribute')
+      macroName = locAttributeName;
+    else if (dropData.type === 'interaction')
+      macroName = locSkillName;
+
+    if (dropData.type === 'attribute') {
       // this is an attribute test
       // use built-in foundry icons
-      if (internalAttributeName === 'charisma')
+      if (dropAttribute === 'charisma')
         macroImg = 'icons/skills/social/diplomacy-handshake.webp';
-      else if (internalAttributeName === 'dexterity')
+      else if (dropAttribute === 'dexterity')
         macroImg = 'icons/skills/movement/feet-winged-boots-brown.webp';
-      else if (internalAttributeName === 'mind') macroImg = 'icons/sundries/books/book-stack.webp';
-      else if (internalAttributeName === 'spirit')
+      else if (dropAttribute === 'mind')
+        macroImg = 'icons/sundries/books/book-stack.webp';
+      else if (dropAttribute === 'spirit')
         macroImg = 'icons/magic/life/heart-shadow-red.webp';
-      else if (internalAttributeName === 'strength')
+      else if (dropAttribute === 'strength')
         macroImg = 'icons/magic/control/buff-strength-muscle-damage.webp';
     } else {
       // not attribute test
@@ -589,40 +546,23 @@ async function createTorgEternityMacro(data, slot) {
     // there is a difference between img: null or img: "" and not including img at all
     // the latter results in default macro icon, the others give broken image icon
     // can remove this when we have skill icons
-    if (!macroImg) {
-      macro = await Macro.create({
-        name: macroName,
-        type: 'script',
-        command: command,
-        ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER },
-        flags: {
-          torgeternity: {
-            [macroFlag]: true,
-          },
-        },
-      });
-    } else {
-      macro = await Macro.create({
-        name: macroName,
-        type: 'script',
-        img: macroImg,
-        command: command,
-        ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER },
-        flags: {
-          torgeternity: {
-            [macroFlag]: true,
-          },
-        },
-      });
-    }
+    const macroData = {
+      name: macroName,
+      type: 'script',
+      command: command,
+      ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER },
+      flags: { torgeternity: { [macroFlag]: true, }, },
+    };
+    if (macroImg) macroData.img = macroImg;
+
+    macro = await Macro.create(macroData);
   }
 
   game.user.assignHotbarMacro(macro, slot);
 }
 
 /**
- * Create a Macro from an Item drop.
- * Get an existing item macro if one exists, otherwise create a new one.
+ * Triggered to roll for an item on the caller's default character.
  *
  * @param {string} itemName
  * @returns {Promise}
@@ -632,11 +572,9 @@ function rollItemMacro(itemName) {
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
-  const item = actor ? actor.items.find((i) => i.name === itemName) : null;
+  const item = actor ? actor.items.find(item => item.name === itemName) : null;
   if (!item)
-    return ui.notifications.warn(
-      game.i18n.localize('torgeternity.notifications.noItemNamed') + itemName
-    );
+    return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noItemNamed') + itemName);
 
   // Trigger the item roll
   switch (item.type) {
@@ -650,21 +588,16 @@ function rollItemMacro(itemName) {
       {
         // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
-        const attackWith = weaponData.attackWith;
-        const skillData = actor.system.skills?.[weaponData.attackWith] || item.system?.gunner;
+        const { attackWith, damageType, weaponDamage } = weaponData;
+        const skillData = actor.system.skills?.[attackWith] || item.system?.gunner;
         let dnDescriptor = 'standard';
-        const damageType = weaponData.damageType;
-        const weaponDamage = weaponData.damage;
         let adjustedDamage;
         const attributes = actor.system.attributes;
-        const attackType = weaponData.damageType;
 
         // Modify dnDecriptor if target exists
-        if (Array.from(game.user.targets).length > 0) {
-          let firstTarget = Array.from(game.user.targets).find(
-            (t) => t.actor.type !== 'vehicle'
-          )?.actor;
-          if (!firstTarget) firstTarget = Array.from(game.user.targets)[0].actor;
+        if (game.user.targets.size) {
+          const firstTarget = game.user.targets.find(token => token.actor.type !== 'vehicle')?.actor ||
+            game.user.targets.first().actor;
 
           switch (attackWith) {
             case 'meleeWeapons':
@@ -687,8 +620,6 @@ function rollItemMacro(itemName) {
           if (firstTarget.type === 'vehicle') {
             dnDescriptor = 'targetVehicleDefense';
           }
-        } else {
-          dnDescriptor = 'standard';
         }
 
         // Calculate damage caused by weapon
@@ -717,17 +648,15 @@ function rollItemMacro(itemName) {
 
         new TestDialog({
           testType: 'attack',
-          type: 'attack',
           actor: actor.uuid,
           actorType: actor.type,
           item: item,
-          attackType: attackType,
           isAttack: true,
           amountBD: 0,
           isFav: skillData.isFav,
           actorPic: actor.img,
           actorName: actor.name,
-          skillName: weaponData.attackWith,
+          skillName: attackWith,
           skillBaseAttribute: skillData.baseAttribute,
           skillValue: skillData?.value || skillData?.skillValue,
           skillAdds: skillData.adds,
@@ -735,20 +664,17 @@ function rollItemMacro(itemName) {
           rollTotal: 0,
           DNDescriptor: dnDescriptor,
           weaponName: item.name,
-          weaponDamageType: weaponData.damageType,
+          weaponDamageType: damageType,
           weaponDamage: weaponData.damage,
           damage: adjustedDamage,
           weaponAP: weaponData.ap,
           applyArmor: true,
-          targets: Array.from(game.user.targets),
           applySize: true,
           attackOptions: true,
-          darknessModifier: 0,
           chatNote: weaponData.chatNote,
-          movementModifier: 0,
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        });
+        }, { useTargets: true });
       }
       break;
 
@@ -759,36 +685,17 @@ function rollItemMacro(itemName) {
         const powerData = item.system;
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
-        let dnDescriptor = 'standard';
-        const isAttack = powerData.isAttack;
-        const applyArmor = powerData.applyArmor;
-        const applySize = powerData.applySize;
-        let powerModifier = 0;
-
-        // Set modifier for this power
-        if (item.system.modifier > 0 || item.system.modifier < 0) {
-          powerModifier = item.system.modifier;
-        } else {
-          powerModifier = 0;
-        }
-
-        // Set difficulty descriptor based on presense of target
-        if (Array.from(game.user.targets).length > 0) {
-          dnDescriptor = powerData.dn;
-        } else {
-          dnDescriptor = 'standard';
-        }
 
         new TestDialog({
           testType: 'power',
+          DNDescriptor: game.user.targets.size ? powerData.dn : 'standard',
           actor: actor.uuid,
           actorPic: actor.img,
           actorName: actor.name,
           actorType: actor.type,
-          attackType: 'power',
           powerName: item.name,
-          powerModifier: powerModifier,
-          isAttack: isAttack,
+          powerModifier: item.system.modifier || 0,
+          isAttack: powerData.isAttack,
           amountBD: 0,
           skillName: skillName,
           skillBaseAttribute: game.i18n.localize('torgeternity.skills.' + skillData.baseAttribute),
@@ -797,45 +704,19 @@ function rollItemMacro(itemName) {
           unskilledUse: false,
           damage: powerData.damage,
           weaponAP: powerData.ap,
-          applyArmor: applyArmor,
-          darknessModifier: 0,
-          DNDescriptor: dnDescriptor,
-          type: 'power',
-          targets: Array.from(game.user.targets),
-          applySize: applySize,
+          applyArmor: powerData.applyArmor,
+          applySize: powerData.applySize,
           attackOptions: true,
           rollTotal: 0,
-          chatNote: '',
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
-        });
-        /*
-            // this will cause the power to be printed to the chat
-            return await item.roll();
-            /* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
-                        var powerData = item.system;
-                        var skillData = item.actor.system.skills[powerData.skill];
-                        console.log(powerData, skillData);
-                        torgchecks.powerRoll({
-                            actor: item.actor,
-                            item: item,
-                            actorPic: item.actor.img,
-                            skillName: powerData.skill,
-                            skillBaseAttribute: skillData.baseAttribute,
-                            skillValue: skillData.value,
-                            powerName: item.name,
-                            powerAttack: powerData.isAttack,
-                            powerDamage: powerData.damage,
-                        });
-            */
-        // console.log("Same action for Psi/Miracles/Spells");
-        // ui.notifications.info(game.i18n.localize('torgeternity.notifications.notImplemented'));
+        }, { useTargets: true });
       }
       break;
+
     default:
       // this will cause the item to be printed to the chat
       return item.roll();
-    // ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
   }
 }
 
@@ -917,12 +798,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     skillBaseAttribute: game.i18n.localize('torgeternity.attributes.' + attributeName),
     skillAdds: skill.adds,
     skillValue: skillValue,
-    isAttack: false,
     isFav: skill.isFav,
-    targets: Array.from(game.user.targets),
-    applySize: false,
     DNDescriptor: DNDescriptor ?? 'standard',
-    attackOptions: false,
     rollTotal: 0,
     unskilledUse: skill.unskilledUse,
     chatNote: '',
@@ -930,21 +807,19 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
-    movementModifier: 0,
     bdDamageLabelStyle: 'display:none',
     bdDamageSum: 0,
   };
+
   if (isInteractionAttack) {
-    test['type'] = 'interactionAttack';
-    test['testType'] = 'interactionAttack';
-    test['interactionAttackType'] = skillName;
-    test['darknessModifier'] = 0;
+    test.testType = 'interactionAttack';
+    test.interactionAttackType = skillName;
     // Darkness seems like it would be hard to determine if it should apply to
     //    skill/attribute tests or not, maybe should be option in dialog?
 
     // Exit if no target or get target data
     let dnDescriptor;
-    if (Array.from(game.user.targets).length > 0 && !DNDescriptor) {
+    if (game.user.targets.size && !DNDescriptor) {
       switch (skillName) {
         case 'intimidation':
           dnDescriptor = 'targetIntimidation';
@@ -968,7 +843,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     test.unskilledUse = true;
   }
 
-  new TestDialog(test);
+  new TestDialog(test, { useTargets: true });
 }
 
 Hooks.on('renderCombatTracker', (combatTracker) => {
@@ -984,12 +859,6 @@ Hooks.on('changeSidebarTab', (tabDirectory) => {
   }
 });
 
-// ----alphabetic sorting in character sheets
-Hooks.on('renderActorSheet', (app, html, data) => {
-  // alphabetical sorting
-  alphabSort(html, data);
-});
-
 Hooks.on('updateActor', (actor, change, options, userId) => {
   // updating playerList with users character up-to-date data
   ui.players.render(true);
@@ -997,7 +866,7 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
   if (actor.type === 'stormknight') {
     const hand = actor.getDefaultHand();
     // If there is no hand for that SK, and a GM is online, create one
-    if (!hand && game.userId === game.users.find((u) => u.isGM && u.active).id) {
+    if (!hand && game.user.isActiveGM) {
       actor.createDefaultHand();
     }
     // If the update includes permissions, sync them to the hand
@@ -1034,42 +903,29 @@ Hooks.on('preCreateToken', async (...args) => {
 // by default creating a  hand for each stormknight
 Hooks.on('createActor', async (actor, options, userId) => {
   // run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
-  if (
-    actor.type === 'stormknight' &&
-    game.userId === game.users.find((u) => u.isGM && u.active).id
-  ) {
+  if (actor.type === 'stormknight' && game.user.isActiveGM) {
     await actor.createDefaultHand();
   }
 });
 
 // un-pool cards of SK when the GM ends the combat encounter
 Hooks.on('deleteCombat', async (combat, dataUpdate) => {
-  if (!game.user.isGM) return;
-  const listCombatants = [];
-  const listHandsReset = [];
-  // listing of actors in the closing combat
-  combat.combatants.forEach((fighter) => listCombatants.push(fighter.actorId));
-  // listing of actors in the closing combat
-  combat.combatants
-    .filter((sk) => sk.actor.type === 'stormknight')
-    .forEach((fighter) => listCombatants.push(fighter.actorId));
+  if (!game.user.isActiveGM) return;
+
   // listing of hands' actors in closing combat
-  listCombatants.forEach((i) => {
-    if (game.actors.get(i).type === 'vehicle') return;
-    if (!!game.actors.get(i).getDefaultHand()) {
-      listHandsReset.push(game.actors.get(i).getDefaultHand());
-    }
-  });
-  // delete the flag that give the pooled condition in each card of each hand
-  listHandsReset.forEach((hand) =>
-    hand.cards.forEach((card) => card.unsetFlag('torgeternity', 'pooled'))
-  );
+  combat.combatants.filter(combatant => combatant.actor.type === 'stormknight')
+    .forEach(combatant => {
+      const hand = game.actors.get(combatant.actorId).getDefaultHand();
+      // delete the flag that give the pooled condition in each card of each hand
+      if (hand) hand.cards.forEach(card => card.unsetFlag('torgeternity', 'pooled'))
+    });
+
   await deleteActiveDefense(combat);
 });
 
 Hooks.on('deleteActor', async (actor, data1, data2) => {
-  if (!game.user.isGM || actor.type != 'stormknight') return;
-  actor.getDefaultHand()?.delete();
+  if (game.user.isActiveGM && actor.type === 'stormknight')
+    actor.getDefaultHand()?.delete();
 });
 
 Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
@@ -1179,3 +1035,30 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 Hooks.on('renderJournalEntryPageSheet', (sheet, element, document, options) => {
   element.classList.add('themed', 'theme-light');
 })
+
+function showWelcomeMessage() {
+  DialogV2.confirm({
+    window: { title: 'Welcome to the Torg Eternity System for Foundry VTT!', },
+    content: torgeternity.welcomeMessage,
+    yes: {
+      icon: 'fas fa-check',
+      label: 'torgeternity.submit.OK',
+    },
+    no: {
+      icon: 'fas fa-ban',
+      label: 'torgeternity.submit.dontShow',
+      callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
+    },
+    position: {
+      top: 150,
+      left: 100,
+      width: 675,
+    },
+    actions: {
+      openPack: (event, button) => {
+        const packName = button.dataset.packName;
+        if (packName) game.packs.get(packName).render(true);
+      }
+    }
+  });
+}

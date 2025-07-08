@@ -10,6 +10,16 @@
         name="system.techlevel"
         type="number"
         value="{{item.system.techlevel}}" />
+      <p class="item-data-label">{{localize "torgeternity.gear.ammo"}}</p>
+      <input
+        name="system.ammo.value"
+        type="number"
+        value="{{item.system.ammo.value}}" />
+      /
+      <input
+        name="system.ammo.max"
+        type="number"
+        value="{{item.system.ammo.max}}" />
       <p class="item-data-label">
         {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
       </p>
@@ -21,27 +31,8 @@
         name="system.value"
         type="number"
         value="{{item.system.value}}" />
-      <p class="item-data-label">{{localize "torgeternity.gear.minStrength"}}</p>
-      <input
-        name="system.minStrength"
-        type="number"
-        value="{{item.system.minStrength}}" />
-      <p class="item-data-label">{{localize "torgeternity.gear.ammo"}}</p>
-      <input
-        name="system.ammo.value"
-        type="number"
-        value="{{item.system.ammo.value}}" />
-      /
-      <input
-        name="system.ammo.max"
-        type="number"
-        value="{{item.system.ammo.max}}" />
       <p class="item-data-label">{{localize "torgeternity.gear.range"}}</p>
       <input name="system.range" type="text" value="{{item.system.range}}" />
-      <p class="item-data-label">{{localize "torgeternity.gear.damageType"}}</p>
-      <select name="system.damageType">
-        {{selectOptions config.damageTypes selected=item.system.damageType localize=true}}
-      </select>
       <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
       <input
         name="system.damage"
@@ -68,6 +59,7 @@
 
     </div>
     <div class="main-content">
+      <!-- right column -->
       <p class="item-data-label">
         {{localize "torgeternity.gear.notes"}}&nbsp;
         <input
@@ -82,9 +74,28 @@
           type="text"
           value="{{item.system.chatNote}}" />
       </p>
-      <prose-mirror toggled name="system.description" class="item-description-textarea" {{disabled (not editable)}}
+      <p class="item-data-label">{{localize "torgeternity.gear.description"}}</p>
+      <prose-mirror toggled name="system.description" class="item-description-textarea"
+        style="padding: 0px 0px 0px 10px" {{disabled (not editable)}}
         value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
-      {{> "systems/torgeternity/templates/sheets/ammunition-field.hbs"}}
+      {{> "systems/torgeternity/templates/items/ammunition-field.hbs"}}
+
+      <div class="heavy-weapon-footer">
+        <p class="heavy-weapon-gunners">
+          {{localize "torgeternity.gear.gunner"}}
+          <input
+            name="system.gunner.name"
+            type="text"
+            value="{{item.system.gunner.name}}"
+            class="gunner-input" />
+          {{localize "torgeternity.gear.skill"}}
+          <input
+            name="system.gunner.skillValue"
+            type="number"
+            value="{{item.system.gunner.skillValue}}"
+            class="gunner-skill" />
+        </p>
+      </div>
     </div>
   </div>
 </section>

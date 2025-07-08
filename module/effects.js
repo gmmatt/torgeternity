@@ -12,7 +12,7 @@ export function onManageActiveEffect(event, target, owner) {
     case 'create':
       return owner.createEmbeddedDocuments('ActiveEffect', [
         {
-          label: 'New Effect',
+          name: 'New Effect',
           icon: 'icons/svg/aura.svg',
           origin: owner.uuid,
           'duration.rounds': li.dataset.effectType === 'temporary' ? 1 : undefined,
@@ -48,7 +48,6 @@ export function prepareActiveEffectCategories(effects) {
     inactive: {
       type: 'inactive',
       label: `${game.i18n.localize('torgeternity.sheetLabels.inactiveEffects')}`,
-
       effects: [],
     },
   };

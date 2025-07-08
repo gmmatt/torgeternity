@@ -60,7 +60,7 @@
         "interactionNeedTarget": "No se puede intentar la prueba de ataque de interacción sin un objetivo. Selecciona un objetivo e inténtalo de nuevo.",
         "modifier": {
           "aimedShot": "Tiro Apuntado (+4)",
-          "allOutAttack": "Ataque Total",
+          "allOutAttack": "Ataque Total (+4)",
           "blindFire": "Tiro a Ciegas (-6)",
           "calledShot": "Tiro Preciso",
           "darkness": "Oscuridad ",

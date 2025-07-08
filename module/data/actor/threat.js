@@ -42,9 +42,7 @@ export class ThreatData extends CommonActorData {
   static migrateData(data) {
     super.migrateData(data);
     if (data?.details && Object.hasOwn(data?.details, 'possibilitypotential')) {
-      data.details.possibilityPotential = !!data.details?.possibilitypotential
-        ? data.details.possibilitypotential
-        : 'Never';
+      data.details.possibilityPotential ??= 'Never';
     }
     if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
       data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)

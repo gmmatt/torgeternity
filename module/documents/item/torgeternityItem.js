@@ -7,26 +7,26 @@ import { torgeternity } from '../../config.js';
 export default class TorgeternityItem extends foundry.documents.Item {
   // TODO: Chatcardtemplate for ammunitions & race
   static CHAT_TEMPLATE = {
-    perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
-    attack: 'systems/torgeternity/templates/partials/attack-card.hbs',
-    bonus: 'systems/torgeternity/templates/partials/bonus-card.hbs',
-    power: 'systems/torgeternity/templates/partials/power-card.hbs',
-    gear: 'systems/torgeternity/templates/partials/gear-card.hbs',
-    implant: 'systems/torgeternity/templates/partials/implant-card.hbs',
-    enhancement: 'systems/torgeternity/templates/partials/enhancement-card.hbs',
-    eternityshard: 'systems/torgeternity/templates/partials/eternityshard-card.hbs',
-    armor: 'systems/torgeternity/templates/partials/armor-card.hbs',
-    shield: 'systems/torgeternity/templates/partials/shield-card.hbs',
-    spell: 'systems/torgeternity/templates/partials/spell-card.hbs',
-    miracle: 'systems/torgeternity/templates/partials/miracle-card.hbs',
-    psionicpower: 'systems/torgeternity/templates/partials/psionicpower-card.hbs',
-    specialability: 'systems/torgeternity/templates/partials/specialability-card.hbs',
-    vehicle: 'systems/torgeternity/templates/partials/vehicle-card.hbs',
-    destinyCard: 'systems/torgeternity/templates/partials/destinyCard.hbs',
-    cosmCard: 'systems/torgeternity/templates/partials/cosmCard.hbs',
-    dramaCard: 'systems/torgeternity/templates/partials/dramaCard.hbs',
-    customSkill: 'systems/torgeternity/templates/partials/customSkill-card.hbs',
-    vehicleAddOn: 'systems/torgeternity/templates/partials/vehicleAddOn-card.hbs',
+    perk: 'systems/torgeternity/templates/chat/perk-card.hbs',
+    attack: 'systems/torgeternity/templates/chat/attack-card.hbs',
+    bonus: 'systems/torgeternity/templates/chat/bonus-card.hbs',
+    power: 'systems/torgeternity/templates/chat/power-card.hbs',
+    gear: 'systems/torgeternity/templates/chat/gear-card.hbs',
+    implant: 'systems/torgeternity/templates/chat/implant-card.hbs',
+    enhancement: 'systems/torgeternity/templates/chat/enhancement-card.hbs',
+    eternityshard: 'systems/torgeternity/templates/chat/eternityshard-card.hbs',
+    armor: 'systems/torgeternity/templates/chat/armor-card.hbs',
+    shield: 'systems/torgeternity/templates/chat/shield-card.hbs',
+    spell: 'systems/torgeternity/templates/chat/spell-card.hbs',
+    miracle: 'systems/torgeternity/templates/chat/miracle-card.hbs',
+    psionicpower: 'systems/torgeternity/templates/chat/psionicpower-card.hbs',
+    specialability: 'systems/torgeternity/templates/chat/specialability-card.hbs',
+    vehicle: 'systems/torgeternity/templates/chat/vehicle-card.hbs',
+    destinyCard: 'systems/torgeternity/templates/chat/destinyCard.hbs',
+    cosmCard: 'systems/torgeternity/templates/chat/cosmCard.hbs',
+    dramaCard: 'systems/torgeternity/templates/chat/dramaCard.hbs',
+    customSkill: 'systems/torgeternity/templates/chat/customSkill-card.hbs',
+    vehicleAddOn: 'systems/torgeternity/templates/chat/vehicleAddOn-card.hbs',
   };
 
   /**
@@ -118,7 +118,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
       const actor = this.parent;
       const previousEquipped = actor.items.find(
-        (i) => i.id !== this.id && i.system.equipped && i.type === this.type
+        item => item.id !== this.id && item.system.equipped && item.type === this.type
       );
 
       if (previousEquipped) {
@@ -196,15 +196,15 @@ export default class TorgeternityItem extends foundry.documents.Item {
     // for armors and shields, ensure that there is only one equipped at a time
     if (!wasEquipped && ['armor', 'shield'].includes(item.type)) {
       actor.items
-        .filter((i) => i.id !== item.id && i.system.equipped && i.type === item.type)
-        .forEach((i) => {
+        .filter(item => item.id !== item.id && item.system.equipped && item.type === item.type)
+        .forEach(item => {
           itemUpdates.push({
-            _id: i.id,
+            _id: item.id,
             'system.equipped': false,
           });
           effectUpdates.push(
             ...actor.effects
-              .filter((e) => e.origin && e.origin.endsWith('Item.' + i._id))
+              .filter((e) => e.origin && e.origin.endsWith('Item.' + item._id))
               .map((e) => ({ _id: e.id, disabled: true }))
           );
         });

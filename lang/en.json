@@ -60,18 +60,18 @@
         "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
         "modifier": {
           "aimedShot": "Aimed Shot (+4)",
-          "allOutAttack": "All out Attack",
+          "allOutAttack": "All out Attack (+4)",
           "blindFire": "Blind Fire (-6)",
           "calledShot": "Called Shot",
           "darkness": "Darkness ",
-          "heavyBurst": "Heavy Burst(+6)",
-          "longBurst": "Long Burst(+4)",
+          "heavyBurst": "Heavy Burst (+6)",
+          "longBurst": "Long Burst (+4)",
           "multiAction": "Multi-action ",
           "multiAttack": "Multi-attack ",
           "multiTarget": "Multi-target ",
           "powerModifier": "Modifier from Power",
           "running": "Running (-2) ",
-          "shortBurst": "Short Burst(+2)",
+          "shortBurst": "Short Burst (+2)",
           "stymied": "Stymied (-2 )",
           "targetConcealment": "Target Concealment",
           "targetSize": "Target Size",
@@ -655,9 +655,13 @@
         "hint": "Use the Pan-Pacifica tabletent after year 1.",
         "name": "Year-1 PP TT"
       },
+      "cardChatNotify": {
+        "hint": "Hides core Foundry card messages where Torg Eternity supplies its own message",
+        "name": "Suppress Core Card Messages"
+      },
       "shuffleMessageSurpress": {
-        "hint": "If checked, the Chat Message on shuffling cards will be surpressed.",
-        "name": "Supress Chatmessage on shuffle"
+        "hint": "If checked, the Chat Message on shuffling cards will be suppressed.",
+        "name": "Suppress Chatmessage on shuffle"
       },
       "ignoreAmmo": {
         "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
@@ -717,7 +721,7 @@
       "customSkills": "Custom Skills",
       "customAttacks": "Custom Attacks",
       "damageAP": "Dmg (AP)",
-      "damageMod": "Damagemodifier",
+      "damageMod": "Damage Modifier",
       "defense": "Defense",
       "defenses": "Defenses",
       "defensesTip": "Click to roll for/disable active defenses",
@@ -747,7 +751,7 @@
       "favored": "Favored",
       "favoredTitle": "Check this if the skill is favored",
       "firearms": "Firearms",
-      "firedamage": "Causes Firedamage",
+      "firedamage": "Causes Fire Damage",
       "freePoss": " GM grants a possibility!",
       "gear": "Gear",
       "generalGear": "General Gear",
