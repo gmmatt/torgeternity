@@ -442,7 +442,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
   static async #applyVul(event, target) {
     event.preventDefault();
     const { test } = this.getMessage(target);
-    await applyVulnerableState(chatest.target.uuid, test.actor);
+    await applyVulnerableState(test.target.uuid, test.actor);
   }
 
   /**
