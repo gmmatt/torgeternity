@@ -1,15 +1,8 @@
 import { renderSkillChat } from './torgchecks.js';
 import { torgBD } from './torgchecks.js';
 import { torgDamage } from './torgchecks.js';
-import { applyDamages } from './torgchecks.js';
-import { backlash1 } from './torgchecks.js';
-import { backlash2 } from './torgchecks.js';
-import { backlash3 } from './torgchecks.js';
 import { soakDamages } from './torgchecks.js';
-import { applyStymiedState } from './torgchecks.js';
-import { applyVulnerableState } from './torgchecks.js';
 import { TestDialog } from './test-dialog.js';
-import { isDisconnected } from './torgchecks.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -27,8 +20,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'modifierLabel': TorgeternityChatLog.#onModifier,
       'applyDam': TorgeternityChatLog.#applyDamage,
       'soakDam': TorgeternityChatLog.#soakDamage,
-      'applyStymied': TorgeternityChatLog.#applyStym,
-      'applyVulnerable': TorgeternityChatLog.#applyVul,
+      'applyStymied': TorgeternityChatLog.#applyStymied,
+      'applyVulnerable': TorgeternityChatLog.#applyVulnerable,
       'backlash1': TorgeternityChatLog.#applyBacklash1,
       'backlash2': TorgeternityChatLog.#applyBacklash2,
       'backlash3': TorgeternityChatLog.#applyBacklash3,
@@ -37,7 +30,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async renderMessage(message, options) {
     const result = await super.renderMessage(message, options);
-    result.querySelector('a.applyDam')?.addEventListener('contextmenu', TorgeternityChatLog.#adjustDam);
+    result.querySelector('a.applyDam')?.addEventListener('contextmenu', TorgeternityChatLog.#adjustDamage);
     return result;
   }
 
@@ -53,7 +46,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     ChatMessage.implementation.deleteDocuments(messageIds);
   }
 
-  getMessage(target) {
+  static getMessage(target) {
     const chatMessageId = target.closest('.chat-message').dataset.messageId;
     const chatMessage = game.messages.get(chatMessageId);
     const test = chatMessage.flags.torgeternity.test;
@@ -339,21 +332,21 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
   static async #applyDamage(event, target) {
     event.preventDefault();
     const { test } = this.getMessage(target);
-    // if (!game.user.isGM) {return};
-    await applyDamages(torgDamage(test.damage, test.target.targetAdjustedToughness), test.target.uuid); // Need to keep target from test
+    const actor = fromUuidSync(test.target.uuid)?.actor;
+    if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+    const damage = torgDamage(test.damage, test.target.targetAdjustedToughness);
+    return actor.applyDamages(damage.shocks, damage.wounds);
   }
 
   static async #soakDamage(event, target) {
     event.preventDefault();
     const { test } = this.getMessage(target);
-    const targetid = test.target.id;
-    const targetuuid = test.target.uuid;
 
-    if (!(targetid === game.user?.character?.id) && !game.user.isGM) {
+    if (test.target.id !== game.user?.character?.id && !game.user.isGM) {
       return;
     }
-    const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? game.user.targets.first().actor;
-    if (isDisconnected(soaker)) {
+    const soaker = fromUuidSync(test.target.uuid)?.actor;
+    if (soaker.isDisconnected) {
       await ChatMessage.create({
         speaker: ChatMessage.getSpeaker(),
         content: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
@@ -390,25 +383,23 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     await soaker.update({ 'system.other.possibilities': possPool - 1 });
   }
 
-  static #adjustDam(event) {  // context menu, not action
+  static #adjustDamage(event) {  // context menu, not action
+    // Prevent Foundry's normal contextmenu handler from doing anything
     event.preventDefault();
-    const target = event.target;
-    const { test } = this.getMessage(target);
-    // if (!game.user.isGM) {return};
+    event.stopImmediatePropagation();
+    const { test } = TorgeternityChatLog.getMessage(event.target);
     const targetuuid = test.target.uuid;
-    const dama = test.damage;
-    const toug = test.targetAdjustedToughness;
-    const newDamages = torgDamage(dama, toug);
+    const newDamages = torgDamage(test.damage, test.targetAdjustedToughness);
 
     const fields = foundry.applications.fields;
     const woundsGroup = fields.createFormGroup({
       label: game.i18n.localize('torgeternity.sheetLabels.modifyWounds'),
-      input: fields.createNumberInput({ name: 'nw', value: newDamages.wounds }),
+      input: fields.createNumberInput({ name: 'nw', value: newDamages.wounds, initial: 0 }),
     });
 
     const shockGroup = fields.createFormGroup({
       label: game.i18n.localize('torgeternity.sheetLabels.modifyShocks'),
-      input: fields.createNumberInput({ name: 'ns', value: newDamages.shocks }),
+      input: fields.createNumberInput({ name: 'ns', value: newDamages.shocks, initial: 0 }),
     })
 
     const content = `<p>${game.i18n.localize('torgeternity.sheetLabels.modifyDamage')}</p> <hr>
@@ -423,9 +414,11 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
           icon: 'fas fa-check',
           label: 'torgeternity.submit.apply',
           callback: async (event, button, dialog) => {
-            newDamages.wounds = Number(dialog.element.querySelector('input[name=nw]').value);
-            newDamages.shocks = Number(dialog.element.querySelector('input[name=ns]').value);
-            applyDamages(newDamages, targetuuid);
+            const wounds = button.form.elements.nw.valueAsNumber;
+            const shock = button.form.elements.ns.valueAsNumber;
+            const actor = fromUuidSync(targetuuid)?.actor;
+            if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+            actor.applyDamages(shock, wounds);
           },
         },
       ],
@@ -433,42 +426,50 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     });
   }
 
-  static async #applyStym(event, target) {
+  static async #applyStymied(event, target) {
     event.preventDefault();
     const { test } = this.getMessage(target);
-    await applyStymiedState(test.target.uuid, test.actor);
+    const actor = fromUuidSync(test.target.uuid)?.actor;
+    if (actor) await actor.applyStymiedState(test.actor);
   }
 
-  static async #applyVul(event, target) {
+  static async #applyVulnerable(event, target) {
     event.preventDefault();
     const { test } = this.getMessage(target);
-    await applyVulnerableState(test.target.uuid, test.actor);
+    const actor = fromUuidSync(test.target.uuid)?.actor;
+    if (actor) await actor.applyVulnerableState(test.actor);
   }
 
   /**
-   * call backlash1 on targetuuid
+   * Inflict Backlash (2 shock)
    * @param event
    */
   static async #applyBacklash1(event, target) {
     event.preventDefault();
-    await backlash1(getMessage(target).test.actor);
+    const actor = fromUuidSync(this.getMessage(target).test.actor);
+    if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+    return actor.applyDamages(/*shock*/ 2, /*wounds*/ 0);
   }
 
   /**
-   * call backlash2 on targetuuid
+   * Inflict Minor Backlash (1 shock)
    * @param event
    */
   static async #applyBacklash2(event, target) {
     event.preventDefault();
-    await backlash2(getMessage(target).test.actor);
+    const actor = fromUuidSync(this.getMessage(target).test.actor);
+    if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+    return actor.applyDamages(/*shock*/ 1, /*wounds*/ 0);
   }
 
   /**
-   * call backlash3 on targetuuid
+   * Inflict Major Backlash (very stymied)
    * @param event
    */
   static async #applyBacklash3(event, target) {
     event.preventDefault();
-    await backlash3(getMessage(target).test.actor);
+    const actor = fromUuidSync(this.getMessage(target).test.actor);
+    if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+    return actor.setVeryStymied();
   }
 }

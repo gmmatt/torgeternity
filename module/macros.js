@@ -346,7 +346,7 @@ export class TorgeternityMacros {
             const targets = [];
             // build list of selected players ids for whispers target
             for (const user of users) {
-              if (dialog.element.querySelector(`[name="${user.id}"]`).checked) {
+              if (button.form.elements[user.id].checked) {
                 targets.push(user.id);
               }
             }
@@ -517,6 +517,9 @@ export class TorgeternityMacros {
       return;
     }
     const users = game.users.filter(user => user.active && !user.isGM);
+    if (!users.length) {
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noPlayers'));
+    }
     let checkOptions = '';
     const playerTokenIds = users.map(user => user.character?.id).filter((id) => id !== undefined);
     const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
@@ -544,7 +547,7 @@ export class TorgeternityMacros {
         {
           action: 'whisper',
           label: 'torgeternity.dialogWindow.showingDramaCards.apply',
-          callback: (event, button, dialog) => createMessage(event, button, dialog),
+          callback: createMessage,
         },
       ],
     });
@@ -553,7 +556,7 @@ export class TorgeternityMacros {
       let target;
       // build list of selected players ids for whispers target
       for (const user of users) {
-        if (dialog.element.querySelector(`[name="${user.id}"]`).checked) {
+        if (button.form.elements[user.id].checked) {
           target = user;
         }
       }

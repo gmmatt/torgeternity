@@ -371,4 +371,123 @@ export default class TorgeternityActor extends foundry.documents.Actor {
         break;
     }
   }
+
+  get isDisconnected() {
+    return this.statuses.has('disconnected') ?? false;
+  }
+
+  hasStatusEffect(statusId) {
+    return this.statuses.has(statusId) ?? false;
+  }
+
+  /**
+   *
+   * @param damageObject
+   * @param targetuuid
+   */
+  async applyDamages(shock, wounds) {
+    if (this.type !== 'vehicle') {
+      // computing new values
+      const newShock = this.system.shock.value + shock;
+      const newWound = this.system.wounds.value + wounds;
+      // updating the target token's  actor
+      await this.update({
+        'system.shock.value': newShock,
+        'system.wounds.value': newWound,
+      });
+      // too many wounds => apply defeat ? Ko ?
+      if (wounds && newWound > this.system.wounds.max) {
+        await this.toggleStatusEffect('dead', { active: true, overlay: true });
+      }
+      // too many shocks, apply KO if not dead
+      if (shock && newShock > this.system.shock.max &&
+        !this.hasStatusEffect('dead')) {
+        await this.toggleStatusEffect('unconscious', { active: true, overlay: true });
+      }
+    } else {
+      // computing new values
+      const newWound = this.system.wounds.value + wounds;
+      // updating the target token's  actor
+      await this.update({ 'system.wounds.value': newWound, });
+      // too many wounds => apply defeat ? Ko ?
+      if (newWound > this.system.wounds.max) {
+        await this.toggleStatusEffect('dead', { active: true, overlay: true });
+      }
+    }
+  }
+
+  async setVeryStymied() {
+    // apply Stymied, or veryStymied
+    if (this.hasStatusEffect('stymied')) {
+      await this.toggleStatusEffect('stymied', { active: false });
+    }
+
+    if (!this.hasStatusEffect('veryStymied')) {
+      let eff = await this.toggleStatusEffect('veryStymied', { active: true });
+      eff.update({
+        origin: this.uuid,
+        duration: { rounds: 1, turns: 1 }
+      })
+    }
+  }
+
+  /**
+   * Set Very Vulnerable when performing an All-Out attack
+   */
+  async setVeryVulnerable() {
+    // take away vulnerable effect
+    await this.toggleStatusEffect('vulnerable', { active: false });
+
+    let effect = this.appliedEffects.find((d) => d.statuses.find((e) => e === 'veryVulnerable'));
+    if (!effect) {
+      effect = await this.toggleStatusEffect('veryVulnerable', { active: true });
+    }
+    effect.update({ origin: this, duration: { rounds: 2, turns: 2 } })
+  }
+
+  async applyStymiedState(originid) {
+    // apply Stymied, or veryStymied
+    if (this.hasStatusEffect('veryStymied')) return;
+
+    let statusId;
+    if (this.hasStatusEffect('stymied')) {
+      await this.toggleStatusEffect('stymied', { active: false });
+      statusId = 'veryStymied';
+    } else {
+      statusId = 'stymied';
+    }
+
+    if (statusId) {
+      const effect = await this.toggleStatusEffect(statusId, { active: true });
+      effect.update({
+        origin: originid,
+        duration: { rounds: 1, turns: 1 }
+      })
+    }
+  }
+
+  /**
+   * increase Vulnerable effect one step, up to VeryVulnerable
+   * @param targetuuid
+   */
+  async applyVulnerableState(originid) {
+    // apply Vulnerable, or veryVulnerable
+    let statusId;
+    if (this.hasStatusEffect('veryVulnerable')) return;
+
+    if (this.hasStatusEffect('vulnerable')) {
+      await this.toggleStatusEffect('vulnerable', { active: false });
+      statusId = 'veryVulnerable';
+    } else {
+      statusId = 'vulnerable';
+    }
+    if (statusId) {
+      const effect = await this.toggleStatusEffect(statusId, { active: true });
+      effect.update({
+        origin: originid,
+        duration: { rounds: 1, turns: 1 }
+      })
+    }
+  }
+
 }

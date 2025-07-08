@@ -1,4 +1,4 @@
-import { oneTestTarget, TestDialog } from './test-dialog.js';
+import { TestDialog } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
 import { ChatMessageTorg } from './documents/chat/document.js';
 
@@ -39,6 +39,8 @@ export async function renderSkillChat(test) {
     test.ammoLabel = 'display:none';
   }
 
+  const testActor = fromUuidSync(test.actor);
+
   let first = true;
   for (const target of test.targetAll) {
     test.target = target;
@@ -52,18 +54,14 @@ export async function renderSkillChat(test) {
       switch (test.testType) {
         case 'attribute':
           test.chatTitle =
-            game.i18n.localize('torgeternity.attributes.' + test.skillName) +
-            ' ' +
-            game.i18n.localize('torgeternity.chatText.test') +
-            ' ';
+            game.i18n.localize('torgeternity.attributes.' + test.skillName) + ' ' +
+            game.i18n.localize('torgeternity.chatText.test') + ' ';
           break;
         case 'skill':
-          if (test.customSkill != 'true') {
+          if (test.customSkill !== 'true') {
             test.chatTitle =
-              game.i18n.localize('torgeternity.skills.' + test.skillName) +
-              ' ' +
-              game.i18n.localize('torgeternity.chatText.test') +
-              ' ';
+              game.i18n.localize('torgeternity.skills.' + test.skillName) + ' ' +
+              game.i18n.localize('torgeternity.chatText.test') + ' ';
             break;
           } else {
             test.chatTitle = test.skillName + ' ';
@@ -72,10 +70,8 @@ export async function renderSkillChat(test) {
         case 'interactionAttack':
         case 'attack':
           test.chatTitle =
-            game.i18n.localize('torgeternity.skills.' + test.skillName) +
-            ' ' +
-            game.i18n.localize('torgeternity.chatText.attack') +
-            ' ';
+            game.i18n.localize('torgeternity.skills.' + test.skillName) + ' ' +
+            game.i18n.localize('torgeternity.chatText.attack') + ' ';
           break;
         case 'soak':
           test.chatTitle = game.i18n.localize('torgeternity.sheetLabels.soakRoll') + ' ';
@@ -84,8 +80,7 @@ export async function renderSkillChat(test) {
           test.chatTitle = game.i18n.localize('torgeternity.sheetLabels.activeDefense') + ' ';
           break;
         case 'power':
-          test.chatTitle =
-            test.powerName + ' ' + game.i18n.localize('torgeternity.chatText.test') + ' ';
+          test.chatTitle = test.powerName + ' ' + game.i18n.localize('torgeternity.chatText.test') + ' ';
           break;
         case 'chase':
           test.chatTitle = game.i18n.localize('torgeternity.chatText.chase') + ' ';
@@ -100,8 +95,7 @@ export async function renderSkillChat(test) {
           test.chatTitle = test.skillName;
           break;
         default:
-          test.chatTitle =
-            test.skillName + ' ' + game.i18n.localize('torgeternity.chatText.test') + ' ';
+          test.chatTitle = test.skillName + ' ' + game.i18n.localize('torgeternity.chatText.test') + ' ';
       }
     }
 
@@ -119,9 +113,6 @@ export async function renderSkillChat(test) {
 
     // Do we display the unskilled label for a Storm Knight?
     let unskilledTest = false;
-    const testActor = test.actor.includes('Token')
-      ? fromUuidSync(test.actor)
-      : fromUuidSync(test.actor);
     if (
       (testActor.type === 'stormknight') &
       (test.testType != 'custom') &
@@ -338,29 +329,8 @@ export async function renderSkillChat(test) {
       test.modifierText += modifierString('torgeternity.chatText.check.modifier.allOutAttack');
 
       // if it's an all-out-attack, apply very vulnerable to attacker
-      const ownToken = canvas.tokens.placeables.find(token => test.actor.includes(token.document.actor.uuid));
-      if (ownToken && first) {
-        if (!ownToken.document.hasStatusEffect('veryVulnerable')) {
-          if (ownToken.document.hasStatusEffect('vulnerable')) {
-            // take away vulnerable effect
-            await ownToken.actor.toggleStatusEffect('vulnerable', { active: false });
-          }
-          const effect = await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: true });
-          effect.update({
-            origin: test.actor,
-            duration: { rounds: 2, turns: 2 }
-          })
-        } else if (
-          ownToken.actor.appliedEffects.find((d) => d.statuses.find((e) => e === 'veryVulnerable'))
-            .duration.turns != 2
-        ) {
-          await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: false });
-          const effect = await ownToken.actor.toggleStatusEffect('veryVulnerable', { active: true });
-          effect.update({
-            origin: test.actor,
-            duration: { rounds: 2, turns: 2 }
-          })
-        }
+      if (first) {
+        await testActor.setVeryVulnerable();
       }
     }
 
@@ -473,8 +443,7 @@ export async function renderSkillChat(test) {
     }
 
     // Choose Text to Display as Result
-    const myActor = fromUuidSync(test.actor);
-    if (isDisconnected(myActor)) {
+    if (testActor.isDisconnected) {
       test.possibilityStyle = 'display:none';
       test.heroStyle = 'display:none';
       test.dramaStyle = 'display:none';
@@ -528,14 +497,14 @@ export async function renderSkillChat(test) {
       // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === 'activeDefense') {
       // Click on defense
-      const oldAD = myActor.effects.find((a) => a.name === 'ActiveDefense'); // Search for an ActiveDefense effect
-      const shieldOn = myActor.items.filter((it) => it.type === 'shield' && it.system.equipped); // Search for an equipped shield (an array)
+      const oldAD = testActor.effects.find((a) => a.name === 'ActiveDefense'); // Search for an ActiveDefense effect
+      const shieldOn = testActor.items.filter((it) => it.type === 'shield' && it.system.equipped); // Search for an equipped shield (an array)
       let shieldBonus = 0; // set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
       if (
-        !myActor.effects.find(
+        !testActor.effects.find(
           (a) => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable')
         ) &&
-        !myActor.effects.find(
+        !testActor.effects.find(
           (a) => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')
         )
       ) {
@@ -547,7 +516,7 @@ export async function renderSkillChat(test) {
           name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
           icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
           duration: { rounds: 1 },
-          origin: myActor.uuid,
+          origin: testActor.uuid,
           changes: [
             {
               // Modify all existing "basic" defense in block
@@ -601,18 +570,14 @@ export async function renderSkillChat(test) {
           ],
           disabled: false,
         };
-        await fromUuid(test.actor).then(
-          async (a) => await a.createEmbeddedDocuments('ActiveEffect', [NewActiveDefense])
-        );
+        await testActor.createEmbeddedDocuments('ActiveEffect', [NewActiveDefense])
         test.testType = 'activeDefenseUpdate';
         test.resultText = '+ ' + test.bonus;
         test.actionTotalLabel = 'display:none';
       }
       if (oldAD) {
         // if present, reset by deleting
-        fromUuidSync(test.actor)
-          .effects.find((a) => a.name === 'ActiveDefense')
-          .delete();
+        testActor.effects.find((a) => a.name === 'ActiveDefense').delete();
         // //
         const RAD = {
           // Simple chat message for information
@@ -626,21 +591,19 @@ export async function renderSkillChat(test) {
     } else if (test.testType === 'activeDefenseUpdate') {
       // update bonus in case of bonus roll possibility / up
       // Delete Existing Active Effects
-      fromUuidSync(test.actor)
-        .effects.find((a) => a.name === 'ActiveDefense')
-        ?.delete();
+      testActor.effects.find((a) => a.name === 'ActiveDefense')?.delete();
       if (test.bonus < 1) {
         test.bonus = 1;
       }
       test.resultText = '+ ' + test.bonus;
       // Create new set of active effects
-      const shieldOn = myActor.items.filter((it) => it.type === 'shield' && it.system.equipped); // Search for an equipped shield (an array)
+      const shieldOn = testActor.items.filter((it) => it.type === 'shield' && it.system.equipped); // Search for an equipped shield (an array)
       let shieldBonus = 0;
       if (
-        !myActor.effects.find(
+        !testActor.effects.find(
           (a) => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable')
         ) &&
-        !myActor.effects.find(
+        !testActor.effects.find(
           (a) => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')
         )
       ) {
@@ -650,7 +613,7 @@ export async function renderSkillChat(test) {
         name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
         icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
         duration: { rounds: 1 },
-        origin: myActor.uuid,
+        origin: testActor.uuid,
         changes: [
           {
             // Modify all existing "basic" defense in block
@@ -704,7 +667,7 @@ export async function renderSkillChat(test) {
         ],
         disabled: false,
       };
-      fromUuidSync(test.actor).createEmbeddedDocuments('ActiveEffect', [NewActiveDefense]);
+      testActor.createEmbeddedDocuments('ActiveEffect', [NewActiveDefense]);
     } else {
       test.resultText = test.outcome;
       test.resultTextColor = test.outcomeColor;
@@ -917,17 +880,6 @@ export async function renderSkillChat(test) {
 
 /**
  *
- * @param {TorgeternityActor} actor
- * @returns
- */
-
-export function isDisconnected(actor) {
-  // just like TokenDocument.hasStatusEffect
-  return actor?.statuses.has('disconnected') ?? false;
-}
-
-/**
- *
  * @param rollTotal
  */
 function torgBonus(rollTotal) {
@@ -980,11 +932,8 @@ export function torgDamage(damage, toughness) {
     };
   } else if (damageDiff < 10) {
     damages = {
-      label:
-        '1 ' +
-        game.i18n.localize('torgeternity.stats.wounds') +
-        ', 2 ' +
-        game.i18n.localize('torgeternity.stats.shock'),
+      label: '1 ' + game.i18n.localize('torgeternity.stats.wounds') +
+        ', 2 ' + game.i18n.localize('torgeternity.stats.shock'),
       shocks: 2,
       wounds: 1,
     };
@@ -992,144 +941,13 @@ export function torgDamage(damage, toughness) {
     const wounds = Math.floor(damageDiff / 5);
     const shock = wounds * 2;
     damages = {
-      label:
-        wounds +
-        ' ' +
-        game.i18n.localize('torgeternity.stats.wounds') +
-        ' ' +
-        shock +
-        ' ' +
-        game.i18n.localize('torgeternity.stats.shock'),
+      label: wounds + ' ' + game.i18n.localize('torgeternity.stats.wounds') +
+        ' ' + shock + ' ' + game.i18n.localize('torgeternity.stats.shock'),
       shocks: shock,
       wounds: wounds,
     };
   }
   return damages;
-}
-/**
- *
- * @param damageObject
- * @param targetuuid
- */
-export async function applyDamages(damageObject, targetuuid) {
-  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.uuid));
-  // checking if user has target
-  if (targetToken) {
-    if (targetToken.actor.type !== 'vehicle') {
-      // computing new values
-      const newShock = targetToken.actor.system.shock.value + damageObject.shocks;
-      const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
-      // updating the target token's  actor
-      await targetToken.actor.update({
-        'system.shock.value': newShock,
-        'system.wounds.value': newWound,
-      });
-      // too many wounds => apply defeat ? Ko ?
-      if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.document.hasStatusEffect('dead')) {
-          await targetToken.actor.toggleStatusEffect('dead', { active: true, overlay: true });
-        }
-      }
-      // too many shocks, apply KO if not dead
-      if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.document.hasStatusEffect('unconscious')) {
-          if (!targetToken.document.hasStatusEffect('dead')) {
-            await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
-          }
-        }
-      }
-    } else {
-      // computing new values
-      const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
-      // updating the target token's  actor
-      await targetToken.actor.update({
-        'system.wounds.value': newWound,
-      });
-      // too many wounds => apply defeat ? Ko ?
-      if (newWound > targetToken.actor.system.wounds.max) {
-        if (!targetToken.document.hasStatusEffect('dead')) {
-          await targetToken.actor.toggleStatusEffect('dead', { active: true, overlay: true });
-        }
-      }
-    }
-  } else {
-    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
-  }
-}
-//
-/**
- *
- * Apply 1 shock on a targetuuid
- * @param targetuuid
- */
-export async function backlash1(targetuuid) {
-  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.actorId));
-  // checking if user has target
-  if (targetToken) {
-    if (targetToken.actor.type !== 'vehicle') {
-      // computing new values
-      const newShock = targetToken.actor.system.shock.value + 2;
-      // updating the target token's  actor
-      await targetToken.actor.update({
-        'system.shock.value': newShock,
-      });
-      // too many shocks, apply KO if not dead
-      if (newShock > targetToken.actor.system.shock.max) {
-        if (!targetToken.document.hasStatusEffect('unconscious')) {
-          if (!targetToken.document.hasStatusEffect('dead')) {
-            await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
-          }
-        }
-      }
-    }
-  } else {
-    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
-  }
-}
-/**
- * Apply 2 shocks on a targetuuid
- * @param targetuuid
- */
-export async function backlash2(targetuuid) {
-  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.actorId));
-  // checking if user has target
-  if (targetToken) {
-    if (targetToken.actor.type !== 'vehicle') {
-      // computing new values
-      const newShock = targetToken.actor.system.shock.value + 1;
-      // updating the target token's  actor
-      await targetToken.actor.update({
-        'system.shock.value': newShock,
-      });
-      // too many shocks, apply KO if not dead
-      if (newShock > targetToken.actor.system.shock.max &&
-        !targetToken.document.hasStatusEffect('unconscious') &&
-        !targetToken.document.hasStatusEffect('dead')) {
-        await targetToken.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
-      }
-    }
-  } else {
-    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
-  }
-}
-/**
- * Apply veryStymied on a targetuuid
- * @param targetuuid
- */
-export async function backlash3(targetuuid) {
-  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.actorId));
-  // apply Stymied, or veryStymied
-  if (targetToken.document.hasStatusEffect('stymied')) {
-    await targetToken.actor.toggleStatusEffect('stymied', { active: false });
-  }
-
-  if (!targetToken.document.hasStatusEffect('veryStymied')) {
-    let eff = await targetToken.actor.toggleStatusEffect('veryStymied', { active: true });
-    eff.update({
-      origin: targetuuid,
-      duration: { rounds: 1, turns: 1 }
-    })
-  }
 }
 //
 /**
@@ -1159,57 +977,6 @@ export async function soakDamages(soaker) {
     rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
   }, { useTargets: true });
   // do reality roll
-}
-
-/**
- * increase Stymied effect one step, up to VeryStymied
- * @param targetuuid
- */
-export async function applyStymiedState(targetuuid, sourceuuid) {
-  const targetToken = canvas.tokens.placeables.find(token => token.document.uuid.includes(targetuuid));
-  // apply Stymied, or veryStymied
-  let eff;
-  if (targetToken.document.hasStatusEffect('veryStymied')) {
-    //
-  } else if (targetToken.document.hasStatusEffect('stymied')) {
-    await targetToken.actor.toggleStatusEffect('stymied', { active: false });
-    eff = 'veryStymied';
-  } else {
-    eff = 'stymied';
-  }
-
-  if (eff) {
-    const effect = await targetToken.actor.toggleStatusEffect(eff, { active: true });
-    effect.update({
-      origin: sourceuuid,
-      duration: { rounds: 1, turns: 1 }
-    })
-  }
-}
-
-/**
- * increase Vulnerable effect one step, up to VeryVulnerable
- * @param targetuuid
- */
-export async function applyVulnerableState(targetuuid, sourceuuid) {
-  const targetToken = canvas.tokens.placeables.find(token => targetuuid.includes(token.document.uuid));
-  // apply Vulnerable, or veryVulnerable
-  let eff;
-  if (targetToken.document.hasStatusEffect('veryVulnerable')) {
-    //
-  } else if (targetToken.document.hasStatusEffect('vulnerable')) {
-    await targetToken.actor.toggleStatusEffect('vulnerable', { active: false });
-    eff = 'veryVulnerable';
-  } else {
-    eff = 'vulnerable';
-  }
-  if (eff) {
-    const effect = await targetToken.actor.toggleStatusEffect(eff, { active: true });
-    effect.update({
-      origin: sourceuuid,
-      duration: { rounds: 1, turns: 1 }
-    })
-  }
 }
 
 /**
@@ -1502,18 +1269,12 @@ async function manyDN(test, target) {
       break;
     case 'highestSpeed':
       // Find the fastest participant in the active combat
-      const combatants = game.combats.active.turns;
-      const combatantCount = game.combats.active.turns.length;
-      let combatantRun = 0;
-      let combatantSpeed = 0;
       let highestSpeed = 0;
-      for (let i = 0; i < combatantCount; i++) {
-        if (combatants[i].actor.type === 'vehicle') {
-          combatantSpeed = combatants[i].actor.system.topSpeed.value;
-        } else {
-          combatantRun = combatants[i].actor.system.other.run;
-          combatantSpeed = getTorgValue(combatantRun);
-        }
+      for (const combatant of game.combats.active.turns) {
+        const combatantSpeed =
+          (combatant.actor.type === 'vehicle') ?
+            combatantSpeed = combatant.actor.system.topSpeed.value :
+            combatantSpeed = getTorgValue(combatant.actor.system.other.run);
         if (combatantSpeed > highestSpeed) {
           highestSpeed = combatantSpeed;
         }

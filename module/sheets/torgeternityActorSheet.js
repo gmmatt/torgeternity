@@ -1,4 +1,4 @@
-import { isDisconnected, renderSkillChat } from '../torgchecks.js';
+import { renderSkillChat } from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { oneTestTarget, TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
@@ -458,7 +458,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
-    if (skillName === 'reality' && isDisconnected(this.actor)) {
+    if (skillName === 'reality' && this.actor.isDisconnected) {
       const d = await DialogV2.confirm({
         window: { title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title') },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
