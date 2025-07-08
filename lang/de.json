@@ -159,6 +159,9 @@
         "createChatCard": "Mache eine Chatkarte"
       }
     },
+    "core": {
+      "forceDarkModeHint": "TORG funktioniert nur, wenn Foundry auf den dunklen Modus eingestellt ist."
+    },
     "cosmDecks": {
       "aysle": "Aysle Cosm-Deck",
       "coreEarth": "Zentralerde Cosm-Deck",
@@ -269,7 +272,8 @@
         "recipient": "Zielperson zum flüstern",
         "whisper": "An markierte Spieler flüstern",
         "apply": "Anwenden",
-        "show": "Nächste Karte(n)"
+        "show": "Nächste Karte(n)",
+        "noMoreCards": "Es sind keine weiteren Dramakarten mehr verfügbar"
       },
       "cardRetour": {
         "cardBack": "Die Karte wandert nach einem Irrtum zurück",
@@ -447,7 +451,6 @@
       "beginningMigration": "Migration der Torg-Systemversion auf ",
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
-      "failureBDResolution": "Das System konnte die BW nicht berechnen.",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
       "migrationRunning": "Migriere Torg-Systemversion auf Version ",
       "moduleNotActive": "Modul muss aktiviert werden, um die Beschreibung anzeigen zu können.",
@@ -465,11 +468,13 @@
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
       "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
+      "failureBDResolution": "Das System konnte die BW nicht berechnen.",
       "ammoValueExceedsMax": "Der aktuelle Munitionswert der Waffe {a} übersteigt seinen Maximalwert. Der Wert wird auf sein Maximum reduziert.",
       "noPossibility": "Es sind keine Möglichkeiten mehr übrig.",
       "noCapacity": "{a} kann diese Art von Fahrzeug nicht steuern!",
       "noFight": "Kein aktiver Kampf, oder noch nicht gestartet",
       "raceExistent": "Du hast dich bereits für ein Volk entschieden.",
+      "noPlayers": "Keine aktiven Spieler",
       "notAPerkItem": "Du hast versucht, diesem Volk einen Vorteil aus der Kategorie {a} zuzuweisen, aber er muss zur Kategorie Volksfähigkeit gehören. Aktion wurde abgebrochen.",
       "addedRacePerkToActor": "{perkName}-Vorzug dem Charakter hinzugefügt.",
       "reachedMaximumAttr": "Du hast das Attributsmaximum, dass dein Volk vorgibt, erreicht. Eine weitere Erhöhung ist nicht möglich.",
@@ -482,7 +487,9 @@
     "partySheet": {
       "chooseParty": "<h3>Wenn du \"Ja\" auswählst, öffnet sich die Anzeige mit allen Charakteren.<br>Bei \"Nein\" werden dir nur die Spieler angezeigt, die auch online sind.</h3>",
       "noCharacter": "Dieser Spieler hat keinen zugeteilten Charakter",
-      "openParty": "Wähle die Gruppenanzeige"
+      "openParty": "Wähle die Gruppenanzeige",
+      "allPlayers": "Alle Spieler",
+      "activePlayers": "Nur aktive Spieler"
     },
     "perks": {
       "category": "Gruppe",
