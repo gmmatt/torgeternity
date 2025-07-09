@@ -212,8 +212,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   static async #onReloadWeapon(event, button) {
-    const button = button.closest('[data-item-id]');
-    const usedAmmo = this?.actor.items.get(button.dataset.itemId);
+    const item = button.closest('[data-item-id]');
+    const usedAmmo = this?.actor.items.get(item.dataset.itemId);
     await reloadAmmo(this.actor, this.item, usedAmmo, this);
   }
 

@@ -36,7 +36,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       itemAttackRoll: TorgeternityActorSheet.#onAttackRoll,
       interactionAttack: TorgeternityActorSheet.#onInteractionAttack,
       unarmedAttack: TorgeternityActorSheet.#onUnarmedAttack,
-      //itemBonusRoll: TorgeternityActorSheet.#onBonusRoll,
       itemPowerRoll: TorgeternityActorSheet.#onPowerRoll,
       itemEquip: TorgeternityActorSheet.#onItemEquip,
       itemCreateSa: TorgeternityActorSheet.#onCreateSa,
@@ -1029,9 +1028,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static #onDecreaseAttribute(event, button) {
     const concernedAttribute = button.dataset.concernedattribute;
     const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
-    this.actor.update({
-      [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1,
-    });
+    this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1 });
   }
   static #onItemEdit(event, button) {
     const li = button.closest('.item');
@@ -1059,8 +1056,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static #onReloadWeapon(event, button) {
-    const button = button.closest('[data-item-id]');
-    const weapon = this.actor.items.get(button.dataset.itemId);
+    const item = button.closest('[data-item-id]');
+    const weapon = this.actor.items.get(item.dataset.itemId);
     reloadAmmo(this.actor, weapon);
   }
 
@@ -1093,6 +1090,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       },
     });
   }
+
+
 }
 
 /**
