@@ -1,15 +1,7 @@
-{{#if source.flags.torgeternity.lifelike}}
-  {{> "systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs"}}
-{{else}}
+<div {{#if source.flags.torgeternity.lifelike}} style="display:none" {{/if}}>
   <header class="sheet-header flexrow">
     {{formInput fields.name value=source.name placeholder=fields.name.label aria=(object label=fields.name.label)}}
-    <span class="handdesign">
-      {{localize 'torgeternity.dialogPrompts.lifelike'}}
-      <input name="flags.torgeternity.lifelike" class="toggle" type="checkbox" id="lifelike"
-        {{checked source.flags.torgeternity.lifelike}} data-action="lifelike">
-    </span>
   </header>
-
   <div>
     <header class="cards-header flexrow">
       <span class="card-faces">{{localize "CARD.FIELDS.face.label"}}</span>
@@ -25,7 +17,7 @@
       </div>
     </header>
     <ol class="cards scrollable">
-      {{#each cards as |card|}}
+      {{#each document.cards as |card|}}
         <li class="card flexrow" data-card-id="{{card.id}}" data-cards>
           <div class="card-faces flexcol">
             <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
@@ -80,4 +72,4 @@
       {{/each}}
     </ol>
   </div>
-{{/if}}
+</div>

@@ -24,11 +24,8 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   }
 
   static PARTS = {
-    cards: {
-      template: 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs',
-      root: true,
-      scrollable: ["ol[data-cards]"]
-    },
+    normal: { template: 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs', scrollable: ["ol[data-cards]"] },
+    lifelike: { template: "systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs" },
     footer: { template: "templates/generic/form-footer.hbs" }
   }
 
@@ -49,6 +46,26 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       { type: 'button', icon: 'fas fa-plus', label: 'torgeternity.dialogPrompts.drawDestiny', cssClass: "card-control", action: "drawDestiny" },
       { type: 'button', icon: 'fas fa-plus', label: 'torgeternity.dialogPrompts.drawCosm', cssClass: "card-control", action: "drawCosm" },
     ]
+  }
+
+  async _renderFrame(options) {
+    const frame = await super._renderFrame(options);
+    const header = frame.querySelector('header.window-header');
+    const control = header.querySelector('button.header-control');
+
+    const newNode = document.createElement("span");
+    newNode.classList.add('handdesign');
+    newNode.innerHTML = game.i18n.localize('torgeternity.dialogPrompts.lifelike');
+    const input = foundry.applications.fields.createCheckboxInput({
+      name: 'flags.torgeternity.lifelike',
+      value: this.document.flags.torgeternity.lifelike,
+      classes: 'toggle',
+      id: 'lifelike',
+      dataset: { action: 'lifelike' },
+    })
+    newNode.appendChild(input);
+    header.insertBefore(newNode, control);
+    return frame;
   }
 
   _configureRenderOptions(options) {
