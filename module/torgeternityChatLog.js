@@ -1,5 +1,5 @@
 import { renderSkillChat } from './torgchecks.js';
-import { torgBD } from './torgchecks.js';
+import { rollBonusDie } from './torgchecks.js';
 import { torgDamage } from './torgchecks.js';
 import { soakDamages } from './torgchecks.js';
 import { TestDialog } from './test-dialog.js';
@@ -295,7 +295,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.unskilledLabel = 'display:none';
     test.bdDamageLabelStyle = 'display:block';
 
-    const finalValue = await torgBD(test.trademark, 1);
+    const finalValue = await rollBonusDie(test.trademark, 1);
 
     const newDamage = test.damage + finalValue.total;
 

@@ -217,22 +217,19 @@ export default class TorgeternityItem extends foundry.documents.Item {
    *
    */
   async roll() {
-    const cardData = {
-      ...this,
-      owner: this.actor._id,
-    };
-    const chatData = {
+    return ChatMessageTorg.create({
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
-        data: cardData,
+        data: {
+          ...this,
+          owner: this.actor._id,
+        },
         torgeternity: {
           template: TorgeternityItem.CHAT_TEMPLATE[this.type],
         }
       },
-    };
-
-    return ChatMessageTorg.create(chatData);
+    });
   }
 
   /**
@@ -300,22 +297,6 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     return ChatMessageTorg.create(chatData);
   }
-
-  // Commented that out because I don't think it's needed anymore but I don't know yet :D
-  /* async bonus() {
-    const rollResult = await new Roll('1d6x6max5').roll();
-
-    const chatData = {
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-      user: game.user.data._id,
-      roll: rollResult,
-      speaker: ChatMessage.getSpeaker(),
-    };
-
-    chatData.content = await rollResult.render();
-
-    return ChatMessage.create(chatData);
-  }*/
 
   /**
    *

@@ -232,13 +232,14 @@ export class TorgeternityMacros {
    * @param html
    */
   async _rollItBDs(event, button, dialog) {
+    const { localize } = game.i18n;
     try {
       const formElement = dialog.element.querySelector('form');
       const formData = new foundry.applications.ux.FormDataExtended(formElement);
       const diceAmount = parseInt(formData.object.inputValue);
 
       if (isNaN(diceAmount)) {
-        ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoValue'));
+        ui.notifications.error(localize('torgeternity.macros.commonMacroNoValue'));
         return;
       }
 
@@ -246,16 +247,10 @@ export class TorgeternityMacros {
 
       if (game.dice3d) await game.dice3d.showForRoll(diceroll);
 
-      let chatOutput = `<p>${game.i18n.localize(
-        'torgeternity.macros.bonusDieMacroResult1'
-      )} ${diceAmount} ${game.i18n.localize(
-        'torgeternity.chatText.bonusDice'
-      )} ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult2')} ${diceroll.total}.</p>`;
+      let chatOutput = `<p>${localize('torgeternity.macros.bonusDieMacroResult1')} ${diceAmount} ${localize('torgeternity.chatText.bonusDice')} ${localize('torgeternity.macros.bonusDieMacroResult2')} ${diceroll.total}.</p>`;
 
       if (game.user.targets.size === 0) {
-        chatOutput += `<p>${game.i18n.localize(
-          'torgeternity.macros.bonusDieMacroNoTokenTargeted'
-        )}</p>`;
+        chatOutput += `<p>${localize('torgeternity.macros.bonusDieMacroNoTokenTargeted')}</p>`;
         console.log('No targets, creating chat Message, leaving Macro.');
         ChatMessage.create({ content: chatOutput });
         return;
@@ -264,14 +259,11 @@ export class TorgeternityMacros {
       chatOutput += `<ul>`;
       for (const token of game.user.targets) {
         const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.defenses.toughness);
-        if (tokenDamage.shocks > 0) {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
-            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label
-            }.</li>`;
-        } else {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
-            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage')}.</li>`;
-        }
+        chatOutput += `<li>${localize('torgeternity.macros.bonusDieMacroResult3')}  ${token.document.name} `;
+        chatOutput += (tokenDamage.shocks > 0) ?
+          `${localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label}` :
+          localize('torgeternity.macros.bonusDieMacroResultNoDamage');
+        chatOutput += `.</li>`;
       }
       chatOutput += '</ul>';
 
@@ -351,7 +343,7 @@ export class TorgeternityMacros {
               }
             }
             if (!targets.length) return;
-            let msg = {
+            let chatOutput = {
               whisper: targets,
               content: `<div class="card-draw flexcol">${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.show')}`
             };
@@ -361,15 +353,15 @@ export class TorgeternityMacros {
                 ui.notifications.warn(game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.noMoreCards'));
                 break;;
               }
-              msg.content +=
+              chatOutput.content +=
                 `<div class="card-draw flexrow">
                 <span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/>
                 <span><img src="${card.img}"></span></span>
                 <span class="card-name">${card.name}</span>
                 </div>`;
             };
-            msg.content += `</div>`;
-            ChatMessage.create(msg);
+            chatOutput.content += `</div>`;
+            ChatMessage.create(chatOutput);
           }
         }
       ],
@@ -454,9 +446,7 @@ export class TorgeternityMacros {
     const dialog = await TestDialog.asPromise(test, { useTargets: true });
 
     if (!dialog) {
-      ui.notifications.error(
-        game.i18n.localize('torgeternity.macros.commonMacroNoChatMessageFound')
-      );
+      ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoChatMessageFound'));
       return;
     }
 
@@ -465,9 +455,7 @@ export class TorgeternityMacros {
       case game.i18n.localize('torgeternity.chatText.check.result.goodSuccess'):
       case game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess'):
         await _actor.toggleStatusEffect('disconnected', { active: false, overlay: false });
-        ui.notifications.info(
-          `${game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet')}</p>`
-        );
+        ui.notifications.info(game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet'));
         break;
       case game.i18n.localize('torgeternity.chatText.check.result.failure'):
         // ChatMessage.create({content: "<p>Fehlschlag</p>"});

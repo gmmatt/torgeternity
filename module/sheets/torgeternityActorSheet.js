@@ -453,40 +453,32 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const skillValue = target.dataset.value;
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
-    if (checkUnskilled(skillValue, skillName, this.actor)) {
-      return;
-    }
+    if (checkUnskilled(skillValue, skillName, this.actor)) return;
 
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
     if (skillName === 'reality' && this.actor.isDisconnected) {
-      const d = await DialogV2.confirm({
+      const confirmed = await DialogV2.confirm({
         window: { title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title') },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
       });
-      if (d === false) {
-        const cantRollData = {
-          user: game.user._id,
-          speaker: ChatMessage.getSpeaker(),
-          owner: this.actor,
-        };
 
-        const templateData = {
-          message: game.i18n.localize(
-            'torgeternity.chatText.check.cantUseRealityWhileDisconnected'
-          ),
-          actorPic: this.actor.img,
-          actorName: this.actor.name,
-        };
+      if (!confirmed) {
 
-        const templatePromise = foundry.applications.handlebars.renderTemplate(
+        foundry.applications.handlebars.renderTemplate(
           './systems/torgeternity/templates/chat/skill-error-card.hbs',
-          templateData
-        );
-
-        templatePromise.then((content) => {
-          cantRollData.content = content;
-          ChatMessage.create(cantRollData);
-        });
+          {
+            message: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
+            actorPic: this.actor.img,
+            actorName: this.actor.name,
+          }
+        ).then(content =>
+          ChatMessage.create({
+            user: game.user._id,
+            speaker: ChatMessage.getSpeaker(),
+            owner: this.actor,
+            content: content
+          })
+        )
         return;
       }
     }
@@ -527,9 +519,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         : target.dataset.value;
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
-    if (checkUnskilled(skillValue, skillName, this.actor)) {
-      return;
-    }
+    if (checkUnskilled(skillValue, skillName, this.actor)) return;
 
     new TestDialog({
       testType: target.dataset.testtype,
@@ -1120,34 +1110,22 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
  * @param actor
  */
 export function checkUnskilled(skillValue, skillName, actor) {
-  if (!skillValue) {
-    const cantRollData = {
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker(),
-      owner: actor,
-    };
+  if (skillValue) return false;
 
-    const templateData = {
-      message:
-        game.i18n.localize('torgeternity.skills.' + skillName) +
-        ' ' +
-        game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
+  foundry.applications.handlebars.renderTemplate(
+    './systems/torgeternity/templates/chat/skill-error-card.hbs',
+    {
+      message: game.i18n.localize('torgeternity.skills.' + skillName) + ' ' + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
       actorPic: actor.img,
       actorName: actor.name,
-    };
+    }).then(content =>
+      ChatMessage.create({
+        user: game.user._id,
+        speaker: ChatMessage.getSpeaker(),
+        owner: actor,
+        content: content
+      })
+    )
 
-    const templatePromise = foundry.applications.handlebars.renderTemplate(
-      './systems/torgeternity/templates/chat/skill-error-card.hbs',
-      templateData
-    );
-
-    templatePromise.then((content) => {
-      cantRollData.content = content;
-      ChatMessage.create(cantRollData);
-    });
-
-    return true;
-  } else {
-    return false;
-  }
+  return true;
 }
