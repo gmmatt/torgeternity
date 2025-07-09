@@ -74,35 +74,20 @@ export class TorgeternityMacros {
       if (token === undefined) {
         throw new Error('Exception, token is undefined');
       }
+      const actor = token.actor;
 
-      if (token.actor.system.shock.value === token.actor.system.shock.max) {
-        chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
-          'torgeternity.macros.fatigueMacroCharAlreadyKO'
-        )}</li>`;
+      if (actor.system.shock.value === actor.system.shock.max) {
+        chatOutput += `<li>${token.actor.name} ${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}</li>`;
         continue;
       }
 
-      const targetShockValue = token.actor.system.shock.value;
+      const shockIncrease = actor.fatigue;
+      const wasUnconscious = actor.hasStatusEffect('unconscious');
+      await token.actor.applyDamages(/*shock*/ shockIncrease, /*wounds*/ 0)
 
-      const shockIncrease = token.actor.fatigue;
-
-      const shockResult =
-        targetShockValue + shockIncrease >= token.actor.system.shock.max
-          ? token.actor.system.shock.max
-          : targetShockValue + shockIncrease;
-
-      await token.actor.update({ 'system.shock.value': shockResult });
-      chatOutput += `<li>${token.document.name}: ${shockIncrease} ${game.i18n.localize(
-        'torgeternity.sheetLabels.shock'
-      )}`;
-      if (
-        parseInt(token.actor.system.shock.value) >= parseInt(token.actor.system.shock.max) &&
-        !token.document.hasStatusEffect('unconscious')
-      ) {
-        token.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
-        chatOutput += `<br><strong>${token.document.name}${game.i18n.localize(
-          'torgeternity.macros.fatigueMacroCharKO'
-        )}</strong>`;
+      chatOutput += `<li>${actor.name}: ${shockIncrease} ${game.i18n.localize('torgeternity.sheetLabels.shock')}`;
+      if (!wasUnconscious && actor.hasStatusEffect('unconscious')) {
+        chatOutput += `<br><strong>${actor.name}${game.i18n.localize('torgeternity.macros.fatigueMacroCharKO')}</strong>`;
       }
       chatOutput += '</li>';
     }
@@ -188,7 +173,7 @@ export class TorgeternityMacros {
         }
 
         if (token.document.hasStatusEffect('unconscious')) {
-          token.actor.toggleStatusEffect('unconscious', { active: false, overlay: false });
+          token.actor.toggleStatusEffect('unconscious', { active: false });
           chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${token.actor.name}`;
         }
         chatOutput += '</li>';

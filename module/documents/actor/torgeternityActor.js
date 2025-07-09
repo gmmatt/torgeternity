@@ -416,6 +416,9 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
   }
 
+  /**
+   * Very Stymied - self-imposed by Backlash3
+   */
   async setVeryStymied() {
     // apply Stymied, or veryStymied
     if (this.hasStatusEffect('stymied')) {
@@ -432,7 +435,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   /**
-   * Set Very Vulnerable when performing an All-Out attack
+   * Very Vulnerable - Self-imposed by performing an All-Out attack
    */
   async setVeryVulnerable() {
     // take away vulnerable effect
