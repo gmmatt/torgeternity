@@ -497,7 +497,7 @@ export async function renderSkillChat(test) {
           test.targetAdjustedToughness = test.target.toughness - test.target.armor;
         }
         // Generate damage description and damage sublabel
-        if (test.result == TestResult.FAILURE || test.result == TestResult.MISHAP) {
+        if (test.result < TestResult.STANDARD) {
           test.damageDescription = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
           test.applyDamLabel = 'display:none';
           test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');
@@ -620,7 +620,7 @@ export async function renderSkillChat(test) {
       },
     }));
     first = false;
-  }
+  } // for each target
 
   if (game.settings.get('torgeternity', 'unTarget')) {
     // see leftClickRelease in Foundry code
