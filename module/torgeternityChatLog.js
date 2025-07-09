@@ -46,16 +46,9 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     ChatMessage.implementation.deleteDocuments(messageIds);
   }
 
-  static getMessage(target) {
-    const chatMessageId = target.closest('.chat-message').dataset.messageId;
-    const chatMessage = game.messages.get(chatMessageId);
-    const test = chatMessage.flags.torgeternity.test;
-    return { chatMessageId, chatMessage, test }
-  }
-
   static async #onFavored(event, target) {
     event.preventDefault();
-    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    const { chatMessageId, chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -78,7 +71,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onPossibility(event, target) {
     event.preventDefault();
-    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    const { chatMessageId, chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -172,7 +165,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onUp(event, target) {
     event.preventDefault();
-    const { chatMessage, test } = this.getMessage(target);
+    const { chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -199,7 +192,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onHero(event, target) {
     event.preventDefault();
-    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    const { chatMessageId, chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -229,7 +222,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onDrama(event, target) {
     event.preventDefault();
-    const { chatMessage, test } = this.getMessage(target);
+    const { chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -258,7 +251,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onPlus3(event, target) {
     event.preventDefault();
-    const { chatMessage, test } = this.getMessage(target);
+    const { chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -279,7 +272,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onBd(event, target) {
     event.preventDefault();
-    const { chatMessageId, chatMessage, test } = this.getMessage(target);
+    const { chatMessageId, chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -322,7 +315,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onModifier(event, target) {
     event.preventDefault();
-    const { chatMessage, test } = this.getMessage(target);
+    const { chatMessage, test } = getMessage(target);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
@@ -331,7 +324,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #applyDamage(event, target) {
     event.preventDefault();
-    const { test } = this.getMessage(target);
+    const { test } = getMessage(target);
     const actor = fromUuidSync(test.target.uuid)?.actor;
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
     const damage = torgDamage(test.damage, test.target.targetAdjustedToughness);
@@ -340,7 +333,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #soakDamage(event, target) {
     event.preventDefault();
-    const { test } = this.getMessage(target);
+    const { test } = getMessage(target);
 
     if (test.target.id !== game.user?.character?.id && !game.user.isGM) {
       return;
@@ -387,7 +380,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     // Prevent Foundry's normal contextmenu handler from doing anything
     event.preventDefault();
     event.stopImmediatePropagation();
-    const { test } = TorgeternityChatLog.getMessage(event.target);
+    const { test } = getMessage(event.target);
     const targetuuid = test.target.uuid;
     const newDamages = torgDamage(test.damage, test.targetAdjustedToughness);
 
@@ -428,14 +421,14 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #applyStymied(event, target) {
     event.preventDefault();
-    const { test } = this.getMessage(target);
+    const { test } = getMessage(target);
     const actor = fromUuidSync(test.target.uuid)?.actor;
     if (actor) await actor.applyStymiedState(test.actor);
   }
 
   static async #applyVulnerable(event, target) {
     event.preventDefault();
-    const { test } = this.getMessage(target);
+    const { test } = getMessage(target);
     const actor = fromUuidSync(test.target.uuid)?.actor;
     if (actor) await actor.applyVulnerableState(test.actor);
   }
@@ -446,7 +439,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
    */
   static async #applyBacklash1(event, target) {
     event.preventDefault();
-    const actor = fromUuidSync(this.getMessage(target).test.actor);
+    const actor = fromUuidSync(getMessage(target).test.actor);
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
     return actor.applyDamages(/*shock*/ 2, /*wounds*/ 0);
   }
@@ -457,7 +450,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
    */
   static async #applyBacklash2(event, target) {
     event.preventDefault();
-    const actor = fromUuidSync(this.getMessage(target).test.actor);
+    const actor = fromUuidSync(getMessage(target).test.actor);
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
     return actor.applyDamages(/*shock*/ 1, /*wounds*/ 0);
   }
@@ -468,8 +461,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
    */
   static async #applyBacklash3(event, target) {
     event.preventDefault();
-    const actor = fromUuidSync(this.getMessage(target).test.actor);
+    const actor = fromUuidSync(getMessage(target).test.actor);
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
     return actor.setVeryStymied();
   }
 }
+
+function getMessage(target) {
+  const chatMessageId = target.closest('.chat-message').dataset.messageId;
+  const chatMessage = game.messages.get(chatMessageId);
+  const test = chatMessage.flags.torgeternity.test;
+  return { chatMessageId, chatMessage, test }
+}
+
