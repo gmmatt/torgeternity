@@ -596,13 +596,15 @@ export class TorgeternityMacros {
         { action: 'cancel', label: 'torgeternity.dialogWindow.buffMacro.cancelEffects', },
       ],
     });
+    // If nothing selected, abort
+    if (!attr) return;
 
     if (attr === 'cancel') {
       ui.notifications.warn('MacroEffects removed');
-      for (const token of game.canvas.tokens.controlled && game.user.character) {
-        const delEffects = token.effects
-          .filter((e) => e.name.includes('rd(s)'))
-          .filter((e) => e.name.includes(' / '));
+      let tokens = game.canvas.tokens.controlled;
+      if (!tokens.length) tokens = game.user.character.getActiveTokens();
+      for (const token of tokens) {
+        const delEffects = token.effects.filter((e) => e.name.includes('rd(s)') && e.name.includes(' / '));
         delEffects.forEach((e) => e.delete());
       }
       return;
@@ -645,39 +647,39 @@ export class TorgeternityMacros {
         duration: { rounds: duration, turns: duration },
         changes: [
           {
-            key: 'system.dodgeDefenseMod',
+            key: 'defenses.dodge.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.meleeWeaponsDefenseMod',
+            key: 'defenses.meleeWeapons.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.unarmedCombatDefenseMod',
+            key: 'defenses.unarmedCombat.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.intimidationDefenseMod',
+            key: 'defenses.intimidation.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.maneuverDefenseMod',
+            key: 'defenses.maneuver.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.tauntDefenseMod',
+            key: 'defenses.taunt.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.trickDefenseMod',
+            key: 'defenses.trick.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
         ],
         disabled: false,
@@ -689,29 +691,23 @@ export class TorgeternityMacros {
     else if (attr === 'physicalDefense') {
       // only physical Defenses
       newEffect = {
-        name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses') +
-          ' / ' +
-          bonus +
-          ' / ' +
-          duration +
-          'rd(s)',
+        name: `${game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses')} / ${bonus} / ${duration} rd(s)`,
         duration: { rounds: duration, turns: duration },
         changes: [
           {
-            key: 'system.dodgeDefenseMod',
+            key: 'defenses.dodge.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.meleeWeaponsDefenseMod',
+            key: 'defenses.meleeWeapons.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.unarmedCombatDefenseMod',
+            key: 'defenses.unarmedCombat.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
         ],
         disabled: false,
@@ -723,39 +719,33 @@ export class TorgeternityMacros {
     else if (attr === 'all') {
       // preparation of attribute effect
       newEffect = {
-        name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes') +
-          ' / ' +
-          bonus +
-          ' / ' +
-          duration +
-          'rd(s)',
+        name: `${game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes')} / ${bonus} / ${duration} rd(s)`,
         duration: { rounds: duration, turns: duration },
         changes: [
           {
             key: 'system.attributes.mind.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.spirit.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.strength.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.dexterity.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.charisma.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
         ],
         disabled: false,
@@ -767,13 +757,7 @@ export class TorgeternityMacros {
       // One attribute
       // preparation of attribute effect
       newEffect = {
-        name:
-          game.i18n.localize('torgeternity.attributes.' + attr) +
-          ' / ' +
-          bonus +
-          ' / ' +
-          duration +
-          'rd(s)',
+        name: `${game.i18n.localize('torgeternity.attributes.' + attr)} / ${bonus} / ${duration} rd(s)`,
         duration: { rounds: duration, turns: duration },
         changes: [
           {
@@ -824,18 +808,18 @@ export class TorgeternityMacros {
     const info = await DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
-              <label>${game.i18n.localize('torgeternity.macros.periculumSourceName')}<br>
-              <input placeholder=${game.i18n.localize('torgeternity.macros.periculumSourcePlaceHolder')}
-               style="color:black" name="source" type="string" value="${source}"></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumDamageValue')}
-                  <input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumBds')}
-                  <input name="plusBD" type="number" value=${bds} style="width:35px"></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumArmor')}
-                  <input name="armor" type="checkbox" ${armored}></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumAp')}
-                  <input name="ap" type="number" style="width:35px" value=${ap}></label>
-                  `,
+          < label > ${game.i18n.localize('torgeternity.macros.periculumSourceName')} <br>
+            <input placeholder=${game.i18n.localize('torgeternity.macros.periculumSourcePlaceHolder')}
+              style="color:black" name="source" type="string" value="${source}"></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumDamageValue')}
+              <input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumBds')}
+              <input name="plusBD" type="number" value=${bds} style="width:35px"></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumArmor')}
+              <input name="armor" type="checkbox" ${armored}></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumAp')}
+              <input name="ap" type="number" style="width:35px" value=${ap}></label>
+            `,
       ok: {
         label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), // 'Submit Effect',
         callback: (event, button, dialog) => [

@@ -41,6 +41,7 @@ export async function renderSkillChat(test) {
 
   const testActor = fromUuidSync(test.actor);
 
+  const uniqueDN = game.settings.get('torgeternity', 'uniqueDN') ? await highestDN(test) : undefined;
   let first = true;
   for (const target of test.targetAll) {
     test.target = target;
@@ -102,46 +103,27 @@ export async function renderSkillChat(test) {
     //
     // Establish DN for this test based on test.DNDescriptor //
     //
-    if (game.settings.get('torgeternity', 'uniqueDN')) {
-      await oneDN(test);
-    } else {
-      await manyDN(test, target);
-    }
+    test.DN = uniqueDN ?? await individualDN(test, target);
 
     //
     // -----------------------Determine Bonus---------------------------- //
 
     // Do we display the unskilled label for a Storm Knight?
-    let unskilledTest = false;
-    if (
-      (testActor.type === 'stormknight') &
-      (test.testType != 'custom') &
-      (test.testType != 'attribute') &
-      (test.testType != 'activeDefense') &
-      (test.testType != 'activeDefenseUpdate') &
-      (test.customSkill != 'true')
-    ) {
-      if (
-        (testActor.system.skills[test.skillName].adds === 0) |
-        (testActor.system.skills[test.skillName].adds === null)
-      ) {
-        unskilledTest = true;
-      }
-    }
+    test.unskilledTest = (testActor.type === 'stormknight' &&
+      test.testType !== 'custom' &&
+      test.testType !== 'attribute' &&
+      test.testType !== 'activeDefense' &&
+      test.testType !== 'activeDefenseUpdate' &&
+      test.customSkill !== 'true' &&
+      !testActor.system.skills[test.skillName].adds);
 
-    if (unskilledTest) {
-      test.unskilledLabel = 'display:block';
-    } else {
-      test.unskilledLabel = 'display:none';
-    }
+    test.unskilledLabel = test.unskilledTest ? 'display:block' : 'display:none';
 
     // Generate roll, if needed
     if (test.rollTotal === 0 && !test.previousBonus) {
       // Generate dice roll
-      let dice = '1d20x10x20';
-      if (unskilledTest) {
-        dice = '1d20x10';
-      }
+      const dice = test.unskilledTest ? '1d20x10' : '1d20x10x20';
+
       test.diceroll = await new Roll(dice).evaluate();
       if (test.isFav && test.disfavored) {
         test.isFav = false;
@@ -161,21 +143,12 @@ export async function renderSkillChat(test) {
         }
       } else test.rollTotal = test.diceroll.total;
     }
-    test.unskilledTest = unskilledTest;
 
     // Add the dices list in test
-    if (first) {
-      // add the dices only once, not for each target
-      if (test.diceroll) {
-        // to avoid errors if +3 cards
-        if (test.diceList) {
-          // if the array exists, concat the new dices
-          test.diceList = test.diceList.concat(test.diceroll.dice[0].values);
-        } else {
-          // initialize it if not
-          test.diceList = test.diceroll.dice[0].values;
-        }
-      }
+    // add the dices only once, not for each target
+    if (first && test.diceroll) {
+      // to avoid errors if +3 cards
+      test.diceList = test.diceList ? test.diceList.concat(test.diceroll.dice[0].values) : test.diceroll.dice[0].values;
     }
 
     //
@@ -204,15 +177,10 @@ export async function renderSkillChat(test) {
     // Raise bonus to 1 if actively defending
     if (test.testType === 'activeDefense' || test.testType === 'activeDefenseUpdate') {
       if (test.bonus < 1) test.bonus = 1;
-
     }
 
     // Add plus label if number is positive
-    if (test.bonus >= 1) {
-      test.bonusPlusLabel = 'display:inline';
-    } else {
-      test.bonusPlusLabel = 'display:none';
-    }
+    test.bonusPlusLabel = (test.bonus >= 1) ? 'display:inline' : 'display:none';
 
     function modifierString(label, value) {
       let result = game.i18n.localize(label);
@@ -226,7 +194,6 @@ export async function renderSkillChat(test) {
     test.modifiers = 0;
     test.modifierText = '';
     if (test.testTtype === 'soak') test.vulnerableModifier = 0;
-
 
     if (test.woundModifier < 0) {
       test.displayModifiers = true;
@@ -329,9 +296,7 @@ export async function renderSkillChat(test) {
       test.modifierText += modifierString('torgeternity.chatText.check.modifier.allOutAttack');
 
       // if it's an all-out-attack, apply very vulnerable to attacker
-      if (first) {
-        await testActor.setVeryVulnerable();
-      }
+      if (first) await testActor.setVeryVulnerable();
     }
 
     if (test.aimedModifier) {
@@ -387,60 +352,40 @@ export async function renderSkillChat(test) {
 
     // Determine Outcome
     test.outcome = null;
-    test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal');
     const testDifference = test.rollResult - test.DN;
-    const dnLabel = 'torgeternity.dnTypes.' + test.DNDescriptor;
+
     test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') +
-      ' ' + test.rollResult + ' vs. ' + test.DN + ' ' +
-      game.i18n.localize(dnLabel);
+      ' ' + test.rollResult + ' vs. ' + test.DN + ' ' + game.i18n.localize('torgeternity.dnTypes.' + test.DNDescriptor);
+
+    const useColorBlind = game.settings.get('torgeternity', 'useColorBlindnessColors');
     if (testDifference < 0) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
       // test.outcomeColor = "color: red"
       if (test.testType === 'power') {
         test.backlashLabel = 'display:inline';
       }
-      if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
-        test.outcomeColor = 'color: red';
-      } else {
-        test.outcomeColor =
-          'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      }
+      test.outcomeColor = useColorBlind ? 'color: red' :
+        'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 0;
     } else if (testDifference > 9) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
-      if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
-        test.outcomeColor = 'color: rgb(44, 179, 44)';
-      } else {
-        test.outcomeColor =
-          'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      }
+      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
+        'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 'all';
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
-      if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
-        test.outcomeColor = 'color: rgb(44, 179, 44)';
-      } else {
-        test.outcomeColor =
-          'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      }
+      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
+        'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 2;
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
-      if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
-        test.outcomeColor = 'color: rgb(44, 179, 44)';
-      } else {
-        test.outcomeColor =
-          'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      }
+      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
+        'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 1;
     }
 
     // Turn on + sign for modifiers?
-    if (test.modifiers >= 1) {
-      test.modifierPlusLabel = 'display:';
-    } else {
-      test.modifierPlusLabel = 'display:none';
-    }
+    test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'display:none';
 
     // Choose Text to Display as Result
     if (testActor.isDisconnected) {
@@ -457,11 +402,9 @@ export async function renderSkillChat(test) {
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
       test.outcomeColor = 'color: purple';
       test.resultTextColor = 'color: purple';
-      if (!game.settings.get('torgeternity', 'useColorBlindnessColors')) {
-        test.outcomeColor +=
-          ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-        test.resultTextColor +=
-          ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+      if (!useColorBlind) {
+        test.outcomeColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+        test.resultTextColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
       test.actionTotalLabel = 'display:none';
       test.possibilityStyle = 'display:none';
@@ -476,6 +419,7 @@ export async function renderSkillChat(test) {
           game.i18n.localize('torgeternity.sheetLabels.soakNull') +
           game.i18n.localize('torgeternity.sheetLabels.possSpent');
       test.applyDamLabel = 'display:none';
+
     } else if (test.testType === 'soak') {
       test.applyDamLabel = 'display:none';
       test.resultText = test.outcome;
@@ -495,183 +439,39 @@ export async function renderSkillChat(test) {
           game.i18n.localize('torgeternity.sheetLabels.possSpent');
       }
       // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
+
     } else if (test.testType === 'activeDefense') {
       // Click on defense
       const oldAD = testActor.effects.find((a) => a.name === 'ActiveDefense'); // Search for an ActiveDefense effect
-      const shieldOn = testActor.items.filter((it) => it.type === 'shield' && it.system.equipped); // Search for an equipped shield (an array)
-      let shieldBonus = 0; // set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
-      if (
-        !testActor.effects.find(
-          (a) => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable')
-        ) &&
-        !testActor.effects.find(
-          (a) => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')
-        )
-      ) {
-        shieldBonus += shieldOn[0]?.system?.bonus || 0;
-      }
-      if (!oldAD) {
-        // Create it if not present (if it exists, will be deleted farther)
-        const NewActiveDefense = {
-          name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
-          icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
-          duration: { rounds: 1 },
-          origin: testActor.uuid,
-          changes: [
-            {
-              // Modify all existing "basic" defense in block
-              key: 'defenses.dodge.mod', // Should need other work for defense vs powers
-              value: test.bonus, // that don't target xxDefense
-              priority: 20, // Create a data.ADB that store the bonus ?
-              mode: 2,
-            },
-            {
-              key: 'defenses.intimidation.mod',
-              value: test.bonus,
-              priority: 20,
-              mode: 2,
-            },
-            {
-              key: 'defenses.maneuver.mod',
-              value: test.bonus,
-              priority: 20,
-              mode: 2,
-            },
-            {
-              key: 'defenses.meleeWeapons.mod',
-              value: test.bonus,
-              priority: 20,
-              mode: 2,
-            },
-            {
-              key: 'defenses.taunt.mod',
-              value: test.bonus,
-              priority: 20,
-              mode: 2,
-            },
-            {
-              key: 'defenses.trick.mod',
-              value: test.bonus,
-              priority: 20,
-              mode: 2,
-            },
-            {
-              key: 'defenses.unarmedCombat.mod',
-              value: test.bonus,
-              priority: 20,
-              mode: 2,
-            },
-            {
-              key: 'defenses.toughness',
-              value: shieldBonus,
-              priority: 20,
-              mode: 2,
-            },
-          ],
-          disabled: false,
-        };
-        await testActor.createEmbeddedDocuments('ActiveEffect', [NewActiveDefense])
+      if (oldAD) {
+        // if present, reset by deleting
+        oldAD.delete();
+        return ChatMessage.create({
+          // Simple chat message for information
+          speaker: ChatMessage.getSpeaker(),
+          content: game.i18n.localize('torgeternity.chatText.check.result.resetDefense'), // Need to be implemented if incorporated
+        });
+      } else {
+        await testActor.setActiveDefense(test.bonus);
         test.testType = 'activeDefenseUpdate';
         test.resultText = '+ ' + test.bonus;
         test.actionTotalLabel = 'display:none';
       }
-      if (oldAD) {
-        // if present, reset by deleting
-        testActor.effects.find((a) => a.name === 'ActiveDefense').delete();
-        // //
-        const RAD = {
-          // Simple chat message for information
-          speaker: ChatMessage.getSpeaker(),
-          content: game.i18n.localize('torgeternity.chatText.check.result.resetDefense'), // Need to be implemented if incorporated
-        };
-        await ChatMessage.create(RAD);
-        return;
-        // /
-      }
+
     } else if (test.testType === 'activeDefenseUpdate') {
       // update bonus in case of bonus roll possibility / up
       // Delete Existing Active Effects
       testActor.effects.find((a) => a.name === 'ActiveDefense')?.delete();
-      if (test.bonus < 1) {
-        test.bonus = 1;
-      }
+      if (test.bonus < 1) test.bonus = 1;
       test.resultText = '+ ' + test.bonus;
       // Create new set of active effects
-      const shieldOn = testActor.items.filter((it) => it.type === 'shield' && it.system.equipped); // Search for an equipped shield (an array)
-      let shieldBonus = 0;
-      if (
-        !testActor.effects.find(
-          (a) => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable')
-        ) &&
-        !testActor.effects.find(
-          (a) => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')
-        )
-      ) {
-        shieldBonus += shieldOn[0]?.system?.bonus || 0;
-      }
-      const NewActiveDefense = {
-        name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
-        icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
-        duration: { rounds: 1 },
-        origin: testActor.uuid,
-        changes: [
-          {
-            // Modify all existing "basic" defense in block
-            key: 'defenses.dodge.mod', // Should need other work for defense vs powers
-            value: test.bonus, // that don't target xxDefense
-            priority: 20, // Create a data.ADB that store the bonus ?
-            mode: 2,
-          },
-          {
-            key: 'defenses.intimidation.mod',
-            value: test.bonus,
-            priority: 20,
-            mode: 2,
-          },
-          {
-            key: 'defenses.maneuver.mod',
-            value: test.bonus,
-            priority: 20,
-            mode: 2,
-          },
-          {
-            key: 'defenses.meleeWeapons.mod',
-            value: test.bonus,
-            priority: 20,
-            mode: 2,
-          },
-          {
-            key: 'defenses.taunt.mod',
-            value: test.bonus,
-            priority: 20,
-            mode: 2,
-          },
-          {
-            key: 'defenses.trick.mod',
-            value: test.bonus,
-            priority: 20,
-            mode: 2,
-          },
-          {
-            key: 'defenses.unarmedCombat.mod',
-            value: test.bonus,
-            priority: 20,
-            mode: 2,
-          },
-          {
-            key: 'defenses.toughness',
-            value: shieldBonus,
-            priority: 20,
-            mode: 2,
-          },
-        ],
-        disabled: false,
-      };
-      testActor.createEmbeddedDocuments('ActiveEffect', [NewActiveDefense]);
+      testActor.setActiveDefense(test.bonus);
+
     } else {
       test.resultText = test.outcome;
       test.resultTextColor = test.outcomeColor;
     }
+
     // If an attack, calculate and display damage
     if (test.isAttack) {
       test.damageLabel = 'display: block';
@@ -735,19 +535,15 @@ export async function renderSkillChat(test) {
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
-            game.i18n.localize('torgeternity.chatText.check.result.damage') +
-            ' ' +
-            adjustedDamage +
-            ' vs. ' +
-            test.targetAdjustedToughness +
-            ' ' +
+            game.i18n.localize('torgeternity.chatText.check.result.damage') + ' ' +
+            adjustedDamage + ' vs. ' +
+            test.targetAdjustedToughness + ' ' +
             game.i18n.localize('torgeternity.chatText.check.result.toughness');
         }
       } else {
         // Basic roll
         test.damageSubLabel = 'display:none';
-        test.damageDescription =
-          adjustedDamage + ' ' + game.i18n.localize('torgeternity.chatText.check.result.damage');
+        test.damageDescription = adjustedDamage + ' ' + game.i18n.localize('torgeternity.chatText.check.result.damage');
       }
     } else {
       test.damageLabel = 'display:none';
@@ -755,11 +551,7 @@ export async function renderSkillChat(test) {
     }
 
     // Remind Player to Check for Disconnect?
-    if (test.rollTotal <= 4 && test.rollTotal != undefined) {
-      test.disconnectLabel = 'display:block';
-    } else {
-      test.disconnectLabel = 'display:none';
-    }
+    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal != undefined) ? 'display:block' : 'display:none';
 
     // Label as Skill vs Attribute Test and turn on BD option if needed
     if (
@@ -775,11 +567,7 @@ export async function renderSkillChat(test) {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')} `;
     } else if (test.testType === 'power') {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')} `;
-      if (test.isAttack) {
-        test.bdStyle = 'display:';
-      } else {
-        test.bdStyle = 'display:none';
-      }
+      test.bdStyle = test.isAttack ? 'display:' : 'display:none';
     } else if (test.testType === 'custom') {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')} `;
       test.outcomeColor = 'display:none;';
@@ -792,37 +580,24 @@ export async function renderSkillChat(test) {
     }
 
     // Display cards played label?
-    if (parseInt(test.cardsPlayed) > 0) {
-      test.cardsPlayedLabel = 'display:';
-    } else {
-      test.cardsPlayedLabel = 'display:none';
-    }
+    test.cardsPlayedLabel = (parseInt(test.cardsPlayed) > 0) ? 'display:' : 'display:none';
 
     // Disable unavailable menu options (Note: possibilities are always available)
 
     if (test.upTotal > 0) test.upStyle = 'pointer-events:none;color:gray';
+    if (test.heroTotal > 0) test.heroStyle = 'pointer-events:none;color:gray';
+    if (test.dramaTotal > 0) test.dramaStyle = 'pointer-events:none;color:gray';
 
-    if (test.heroTotal > 0) {
-      test.heroStyle = 'pointer-events:none;color:gray';
-    }
-
-    if (test.dramaTotal > 0) {
-      test.dramaStyle = 'pointer-events:none;color:gray';
-    }
 
     if (test.actorType === 'threat') {
-      (test.heroStyle = 'display:none'),
-        (test.dramaStyle = 'display:none'),
-        (test.plus3Style = 'display:none');
+      test.heroStyle = 'display:none';
+      test.dramaStyle = 'display:none';
+      test.plus3Style = 'display:none';
     }
 
     // Display chat notes label?
 
-    if (test.chatNote === '') {
-      test.notesLabel = 'display:none';
-    } else {
-      test.notesLabel = 'display:';
-    }
+    test.notesLabel = test.chatNote ? 'display:' : 'display:none';
 
     if (test.testType === 'interactionAttack') {
       if (test.rollResult - test.DN >= 0) {
@@ -838,24 +613,6 @@ export async function renderSkillChat(test) {
     // record adjustedToughness for each flagged target
     target.targetAdjustedToughness = test.targetAdjustedToughness;
 
-    const chatData = {
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker(),
-      owner: test.actor,
-    };
-    chatData.speaker.actor = test.actor.id;
-    chatData.speaker.alias = test.actor.name;
-
-    const messageDataIterated = {
-      ...chatData,
-      flags: {
-        torgeternity: {
-          test,
-          template: 'systems/torgeternity/templates/chat/skill-card.hbs',
-        },
-      },
-    };
-
     // roll Dice once, and handle the error if DSN is not installed
     if (game.dice3d) {
       if (i === 0) await game.dice3d.showForRoll(test.diceroll, game.user, true);
@@ -863,7 +620,17 @@ export async function renderSkillChat(test) {
     }
     iteratedRoll = undefined;
 
-    messages.push(await ChatMessageTorg.create(messageDataIterated));
+    messages.push(await ChatMessageTorg.create({
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker({ actor: testActor }),
+      owner: test.actor,
+      flags: {
+        torgeternity: {
+          test,
+          template: 'systems/torgeternity/templates/chat/skill-card.hbs',
+        },
+      },
+    }));
     first = false;
   }
 
@@ -896,8 +663,7 @@ function torgBonus(rollTotal) {
  * @param amount The amount of BDs that is ought to roll
  */
 export async function torgBD(isTrademark, amount = 1) {
-  const diceroll = await new Roll(`${amount}d6${isTrademark ? 'rr1' : ''}x6max5`).evaluate();
-  return diceroll;
+  return await new Roll(`${amount}d6${isTrademark ? 'rr1' : ''}x6max5`).evaluate();
 }
 
 /**
@@ -986,287 +752,142 @@ export async function soakDamages(soaker) {
  * @param myNumber
  */
 export function getTorgValue(myNumber) {
-  let myValue = 0;
-  if (myNumber <= 1) {
-    myValue = 0;
-  } else if (myNumber == 2) {
-    myValue = 1;
-  } else if (myNumber == 3) {
-    myValue = 2;
-  } else if (myNumber < 6) {
-    myValue = 3;
-  } else if (myNumber < 10) {
-    myValue = 4;
-  } else if (myNumber < 15) {
-    myValue = 5;
-  } else if (myNumber < 25) {
-    myValue = 6;
-  } else if (myNumber < 40) {
-    myValue = 7;
-  } else if (myNumber < 60) {
-    myValue = 8;
-  } else if (myNumber < 100) {
-    myValue = 9;
-  } else if (myNumber < 150) {
-    myValue = 10;
-  } else if (myNumber < 250) {
-    myValue = 11;
-  } else if (myNumber < 400) {
-    myValue = 12;
-  } else if (myNumber < 600) {
-    myValue = 13;
-  } else if (myNumber < 1000) {
-    myValue = 14;
-  } else if (myNumber < 1500) {
-    myValue = 15;
-  } else if (myNumber < 2500) {
-    myValue = 16;
-  } else if (myNumber < 4000) {
-    myValue = 17;
-  } else if (myNumber < 6000) {
-    myValue = 18;
-  } else if (myNumber < 10000) {
-    myValue = 19;
-  } else if (myNumber < 15000) {
-    myValue = 20;
-  } else if (myNumber < 25000) {
-    myValue = 21;
-  } else if (myNumber < 40000) {
-    myValue = 22;
-  } else if (myNumber < 60000) {
-    myValue = 23;
-  } else if (myNumber < 100000) {
-    myValue = 24;
-  } else if (myNumber < 150000) {
-    myValue = 25;
-  } else if (myNumber < 250000) {
-    myValue = 26;
-  } else if (myNumber < 400000) {
-    myValue = 27;
-  } else if (myNumber < 600000) {
-    myValue = 28;
-  } else if (myNumber < 1000000) {
-    myValue = 29;
-  } else if (myNumber < 1500000) {
-    myValue = 30;
-  } else if (myNumber < 2500000) {
-    myValue = 31;
-  } else if (myNumber < 4000000) {
-    myValue = 32;
-  } else if (myNumber < 6000000) {
-    myValue = 33;
-  } else if (myNumber < 10000000) {
-    myValue = 34;
-  } else if (myNumber < 15000000) {
-    myValue = 35;
-  } else if (myNumber < 25000000) {
-    myValue = 36;
-  } else if (myNumber < 40000000) {
-    myValue = 37;
-  } else if (myNumber < 60000000) {
-    myValue = 38;
-  } else if (myNumber < 100000000) {
-    myValue = 39;
-  } else if (myNumber < 150000000) {
-    myValue = 40;
-  } else if (myNumber < 250000000) {
-    myValue = 41;
-  } else if (myNumber < 400000000) {
-    myValue = 42;
-  } else if (myNumber < 600000000) {
-    myValue = 43;
-  } else if (myNumber < 1000000000) {
-    myValue = 44;
-  } else if (myNumber < 1500000000) {
-    myValue = 45;
-  } else if (myNumber < 2500000000) {
-    myValue = 46;
-  } else if (myNumber < 4000000000) {
-    myValue = 47;
-  } else if (myNumber < 6000000000) {
-    myValue = 48;
-  } else if (myNumber < 10000000000) {
-    myValue = 49;
-  } else if (myNumber < 15000000000) {
-    myValue = 50;
-  } else if (myNumber < 25000000000) {
-    myValue = 51;
-  } else if (myNumber < 40000000000) {
-    myValue = 52;
-  } else if (myNumber < 60000000000) {
-    myValue = 53;
-  } else if (myNumber < 100000000000) {
-    myValue = 54;
-  } else if (myNumber < 150000000000) {
-    myValue = 55;
-  } else if (myNumber < 250000000000) {
-    myValue = 56;
-  } else if (myNumber < 400000000000) {
-    myValue = 57;
-  } else if (myNumber < 600000000000) {
-    myValue = 58;
-  } else {
-    myValue = 59;
-  }
-  return myValue;
+  if (myNumber <= 1) return 0;
+  if (myNumber == 2) return 1;
+  if (myNumber == 3) return 2;
+  if (myNumber < 6) return 3;
+  if (myNumber < 10) return 4;
+  if (myNumber < 15) return 5;
+  if (myNumber < 25) return 6;
+  if (myNumber < 40) return 7;
+  if (myNumber < 60) return 8;
+  if (myNumber < 100) return 9;
+  if (myNumber < 150) return 10;
+  if (myNumber < 250) return 11;
+  if (myNumber < 400) return 12;
+  if (myNumber < 600) return 13;
+  if (myNumber < 1000) return 14;
+  if (myNumber < 1500) return 15;
+  if (myNumber < 2500) return 16;
+  if (myNumber < 4000) return 17;
+  if (myNumber < 6000) return 18;
+  if (myNumber < 10000) return 19;
+  if (myNumber < 15000) return 20;
+  if (myNumber < 25000) return 21;
+  if (myNumber < 40000) return 22;
+  if (myNumber < 60000) return 23;
+  if (myNumber < 100000) return 24;
+  if (myNumber < 150000) return 25;
+  if (myNumber < 250000) return 26;
+  if (myNumber < 400000) return 27;
+  if (myNumber < 600000) return 28;
+  if (myNumber < 1000000) return 29;
+  if (myNumber < 1500000) return 30;
+  if (myNumber < 2500000) return 31;
+  if (myNumber < 4000000) return 32;
+  if (myNumber < 6000000) return 33;
+  if (myNumber < 10000000) return 34;
+  if (myNumber < 15000000) return 35;
+  if (myNumber < 25000000) return 36;
+  if (myNumber < 40000000) return 37;
+  if (myNumber < 60000000) return 38;
+  if (myNumber < 100000000) return 39;
+  if (myNumber < 150000000) return 40;
+  if (myNumber < 250000000) return 41;
+  if (myNumber < 400000000) return 42;
+  if (myNumber < 600000000) return 43;
+  if (myNumber < 1000000000) return 44;
+  if (myNumber < 1500000000) return 45;
+  if (myNumber < 2500000000) return 46;
+  if (myNumber < 4000000000) return 47;
+  if (myNumber < 6000000000) return 48;
+  if (myNumber < 10000000000) return 49;
+  if (myNumber < 15000000000) return 50;
+  if (myNumber < 25000000000) return 51;
+  if (myNumber < 40000000000) return 52;
+  if (myNumber < 60000000000) return 53;
+  if (myNumber < 100000000000) return 54;
+  if (myNumber < 150000000000) return 55;
+  if (myNumber < 250000000000) return 56;
+  if (myNumber < 400000000000) return 57;
+  if (myNumber < 600000000000) return 58;
+  return 59;
 }
 
-async function manyDN(test, target) {
+function validValue(value, other) {
+  return (value && value != '-') ? value : other;
+}
+
+async function individualDN(test, target) {
   switch (test.DNDescriptor) {
     case 'veryEasy':
-      test.DN = 6;
-      break;
+      return 6;
     case 'easy':
-      test.DN = 8;
-      break;
+      return 8;
     case 'standard':
-      test.DN = 10;
-      break;
+      return 10;
     case 'challenging':
-      test.DN = 12;
-      break;
+      return 12;
     case 'hard':
-      test.DN = 14;
-      break;
+      return 14;
     case 'veryHard':
-      test.DN = 16;
-      break;
+      return 16;
     case 'heroic':
-      test.DN = 18;
-      break;
+      return 18;
     case 'nearImpossible':
-      test.DN = 20;
-      break;
+      return 20;
     case 'targetCharisma':
-      test.DN = target.attributes.charisma.value;
-      break;
+      return target.attributes.charisma.value;
     case 'targetDexterity':
-      test.DN = target.attributes.dexterity.value;
-      break;
+      return target.attributes.dexterity.value;
     case 'targetMind':
-      test.DN = target.attributes.mind.value;
-      break;
+      return target.attributes.mind.value;
     case 'targetSpirit':
-      test.DN = target.attributes.spirit.value;
-      break;
+      return target.attributes.spirit.value;
     case 'targetStrength':
-      test.DN = target.attributes.strength.value;
-      break;
+      return target.attributes.strength.value;
     case 'targetAlteration':
-      if (target.skills.alteration.value && target.skills.alteration.value != '-') {
-        test.DN = target.skills.alteration.value;
-      } else {
-        test.DN = target.attributes.mind.value;
-      }
-      break;
+      return validValue(target.skills.alteration.value, target.attributes.mind.value);
     case 'targetConjuration':
-      if (target.skills.conjuration.value && target.skills.conjuration.value != '-') {
-        test.DN = target.skills.conjuration.value;
-      } else {
-        test.DN = target.attributes.spirit.value;
-      }
-      break;
+      return validValue(target.skills.conjuration.value, target.attributes.spirit.value);
     case 'targetDivination':
-      if (target.skills.divination.value && target.skills.divination.value != '-') {
-        test.DN = target.skills.divination.value;
-      } else {
-        test.DN = target.attributes.mind.value;
-      }
-      break;
+      return validValue(target.skills.divination.value, target.attributes.mind.value);
     case 'targetDodge':
-      test.DN = target.defenses.dodge;
-      break;
+      return target.defenses.dodge;
     case 'targetFaith':
-      if (target.skills.faith.value) {
-        test.DN = target.skills.faith.value;
-      } else {
-        test.DN = target.attributes.spirit.value;
-      }
-      break;
+      return target.skills.faith.value || target.attributes.spirit.value;
     case 'targetFind':
-      if (target.skills.find.value && target.skills.find.value != '-') {
-        test.DN = target.skills.find.value;
-      } else {
-        test.DN = target.attributes.mind.value;
-      }
-      break;
+      return validValue(target.skills.find.value, target.attributes.mind.value);
     case 'targetIntimidation':
-      test.DN = target.defenses.intimidation;
-      break;
+      return target.defenses.intimidation;
     case 'targetKinesis':
-      if (target.skills.kinesis.value && target.skills.kinesis.value != '-') {
-        test.DN = target.skills.kinesis.value;
-      } else {
-        test.DN = target.attributes.spirit.value;
-      }
-      break;
+      return validValue(target.skills.kinesis.value, target.attributes.spirit.value);
     case 'targetManeuver':
-      test.DN = target.defenses.maneuver;
-      break;
+      return target.defenses.maneuver;
     case 'targetMeleeWeapons':
-      test.DN = target.defenses.meleeWeapons;
-      break;
+      return target.defenses.meleeWeapons;
     case 'targetPrecognition':
-      if (target.skills.precognition.value && target.skills.precognition.value != '-') {
-        test.DN = target.skills.precognition.value;
-      } else {
-        test.DN = target.attributes.mind.value;
-      }
-      break;
+      return validValue(target.skills.precognition.value, target.attributes.mind.value);
     case 'targetStealth':
-      if (target.skills.stealth.value) {
-        test.DN = target.skills.stealth.value;
-      } else {
-        test.DN = target.attributes.dexterity.value;
-      }
-      break;
+      return target.skills.stealth.value || target.attributes.dexterity.value;
     case 'targetTaunt':
-      test.DN = target.defenses.taunt;
-      break;
+      return target.defenses.taunt;
     case 'targetTrick':
-      test.DN = target.defenses.trick;
-      break;
+      return target.defenses.trick;
     case 'targetUnarmedCombat':
-      test.DN = target.defenses.unarmedCombat;
-      break;
+      return target.defenses.unarmedCombat;
     case 'targetWillpower':
-      if (target.skills.willpower.value) {
-        test.DN = target.skills.willpower.value;
-      } else {
-        test.DN = target.attributes.spirit.value;
-      }
-      break;
+      return target.skills.willpower.value || target.attributes.spirit.value;
     case 'targetWillpowerMind':
-      if (target.skills.willpower.value) {
-        test.DN =
-          target.skills.willpower.value -
-          target.attributes.spirit.value +
-          target.attributes.mind.value;
-      } else {
-        test.DN = target.attributes.mind.value;
-      }
-      break;
+      return target.skills.willpower.value
+        ? target.skills.willpower.value - target.attributes.spirit.value + target.attributes.mind.value
+        : target.attributes.mind.value;
     case 'targetLandVehicles':
-      if (target.skills.landVehicles.value) {
-        test.DN = target.skills.landVehicles.value;
-      } else {
-        test.DN = target.attributes.dexterity.value;
-      }
-      break;
+      return target.skills.landVehicles.value || target.attributes.dexterity.value;
     case 'targetAirVehicles':
-      if (target.skills.airVehicles.value) {
-        test.DN = target.skills.airVehicles.value;
-      } else {
-        test.DN = target.attributes.dexterity.value;
-      }
-      break;
+      return target.skills.airVehicles.value || target.attributes.dexterity.value;
     case 'targetWaterVehicles':
-      if (target.skills.waterVehicles.value) {
-        test.DN = target.skills.waterVehicles.value;
-      } else {
-        test.DN = target.attributes.dexterity.value;
-      }
-      break;
+      return target.skills.waterVehicles.value || target.attributes.dexterity.value;
     case 'highestSpeed':
       // Find the fastest participant in the active combat
       let highestSpeed = 0;
@@ -1279,147 +900,18 @@ async function manyDN(test, target) {
           highestSpeed = combatantSpeed;
         }
       }
-      test.DN = highestSpeed;
-      break;
+      return highestSpeed;
     case 'targetVehicleDefense':
-      test.DN = target.defenses.vehicle;
-      break;
+      return target.defenses?.vehicle ?? 0;
     default:
-      test.DN = 10;
+      return 10;
   }
 }
 
-async function oneDN(test) {
-
-  function validValue(value, other) {
-    return (value && value != '-') ? value : other;
-  }
-  function highest(func) {
-    let highestDN = test?.DN || 0;
-    for (const target of test.targetAll) {
-      highestDN = Math.max(highestDN, func(target));
-    }
-    test.DN = highestDN;
-  }
-
-  switch (test.DNDescriptor) {
-    case 'veryEasy':
-      test.DN = 6;
-      break;
-    case 'easy':
-      test.DN = 8;
-      break;
-    case 'standard':
-      test.DN = 10;
-      break;
-    case 'challenging':
-      test.DN = 12;
-      break;
-    case 'hard':
-      test.DN = 14;
-      break;
-    case 'veryHard':
-      test.DN = 16;
-      break;
-    case 'heroic':
-      test.DN = 18;
-      break;
-    case 'nearImpossible':
-      test.DN = 20;
-      break;
-    case 'targetCharisma':
-      highest(target => target.attributes.charisma.value)
-      break;
-    case 'targetDexterity':
-      highest(target => target.attributes.dexterity.value);
-      break;
-    case 'targetMind':
-      highest(target => target.attributes.mind.value);
-      break;
-    case 'targetSpirit':
-      highest(target => target.attributes.spirit.value);
-      break;
-    case 'targetStrength':
-      highest(target => target.attributes.strength.value);
-      break;
-    case 'targetAlteration':
-      highest(target => validValue(target.skills.alteration.value, target.attributes.mind.value));
-      break;
-    case 'targetConjuration':
-      highest(target => validValue(target.skills.conjuration.value, target.attributes.spirit.value));
-      break;
-    case 'targetDivination':
-      highest(target => validValue(target.skills.divination.value, target.attributes.mind.value));
-      break;
-    case 'targetDodge':
-      highest(target => target.defenses.dodge);
-      break;
-    case 'targetFaith':
-      highest(target => target.skills.faith.value || target.attributes.spirit.value);
-      break;
-    case 'targetFind':
-      highest(target => validValue(target.skills.find.value, target.attributes.mind.value));
-      break;
-    case 'targetIntimidation':
-      highest(target => target.defenses.intimidation);
-      break;
-    case 'targetKinesis':
-      highest(target => validValue(target.skills.kinesis.value, target.attributes.spirit.value));
-      break;
-    case 'targetManeuver':
-      highest(target => target.defenses.maneuver);
-      break;
-    case 'targetMeleeWeapons':
-      highest(target => target.defenses.meleeWeapons);
-      break;
-    case 'targetPrecognition':
-      highest(target => validValue(target.skills.precognition.value, target.attributes.mind.value));
-      break;
-    case 'targetStealth':
-      highest(target => target.skills.stealth.value || target.attributes.dexterity.value);
-      break;
-    case 'targetTaunt':
-      highest(target => target.defenses.taunt);
-      break;
-    case 'targetTrick':
-      highest(target => target.defenses.trick);
-      break;
-    case 'targetUnarmedCombat':
-      highest(target => target.defenses.unarmedCombat);
-      break;
-    case 'targetWillpower':
-      highest(target => target.skills.willpower.value || target.attributes.spirit.value);
-      break;
-    case 'targetWillpowerMind':
-      highest(target => target.skills.willpower.value
-        ? (target.skills.willpower.value - target.attributes.spirit.value + target.attributes.mind.value)
-        : target.attributes.mind.value);
-      break;
-    case 'targetLandVehicles':
-      highest(target => target.skills.landVehicles.value || target.attributes.dexterity.value);
-      break;
-    case 'targetAirVehicles':
-      highest(target => target.skills.airVehicles.value || target.attributes.dexterity.value);
-      break;
-    case 'targetWaterVehicles':
-      highest(target => target.skills.waterVehicles.value || target.attributes.dexterity.value);
-      break;
-    case 'highestSpeed':
-      // Find the fastest participant in the active combat
-      let highestSpeed = 0;
-      for (const combatant of game.combats.active.turns) {
-        highestSpeed = Math.max(highestSpeed,
-          (combatant.actor.type === 'vehicle')
-            ? combatant.actor.system.topSpeed.value
-            : getTorgValue(combatant.actor.system.other.run));
-      }
-      test.DN = highestSpeed;
-      break;
-    case 'targetVehicleDefense':
-      highest(target => target.defenses?.vehicle ?? 0);
-      break;
-    default:
-      test.DN = 10;
+async function highestDN(test) {
+  let highest = 0;
+  for (const target of test.targetAll) {
+    highest = Math.max(highest, singleDN(target));
   }
 }
 

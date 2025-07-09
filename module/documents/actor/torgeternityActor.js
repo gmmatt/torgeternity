@@ -490,4 +490,72 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
   }
 
+  /**
+   * Sets an Active Defense no an actor with the supplied bonus.
+   * @param {Number} bonus 
+   */
+  async setActiveDefense(bonus) {
+
+    const equippedShield = this.items.find(item => item.type === 'shield' && item.system.equipped); // Search for an equipped shield
+    let shieldBonus = (equippedShield && !this.hasStatusEffect('vulnerable') && !this.hasStatusEffect('veryVulnerable')) ? equippedShield.system.bonus : 0
+
+    return this.createEmbeddedDocuments('ActiveEffect', [{
+      name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
+      icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
+      duration: { rounds: 1 },
+      origin: this.uuid,
+      changes: [
+        {
+          // Modify all existing "basic" defense in block
+          key: 'defenses.dodge.mod', // Should need other work for defense vs powers
+          value: bonus, // that don't target xxDefense
+          priority: 20, // Create a data.ADB that store the bonus ?
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+        {
+          key: 'defenses.intimidation.mod',
+          value: bonus,
+          priority: 20,
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+        {
+          key: 'defenses.maneuver.mod',
+          value: bonus,
+          priority: 20,
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+        {
+          key: 'defenses.meleeWeapons.mod',
+          value: bonus,
+          priority: 20,
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+        {
+          key: 'defenses.taunt.mod',
+          value: bonus,
+          priority: 20,
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+        {
+          key: 'defenses.trick.mod',
+          value: bonus,
+          priority: 20,
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+        {
+          key: 'defenses.unarmedCombat.mod',
+          value: bonus,
+          priority: 20,
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+        {
+          key: 'defenses.toughness',
+          value: shieldBonus,
+          priority: 20,
+          mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+        },
+      ],
+      disabled: false,
+    }]);
+  }
 }
