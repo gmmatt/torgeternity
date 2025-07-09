@@ -100,7 +100,14 @@ export const preloadTemplates = async function () {
     `systems/torgeternity/templates/items/vehicleAddOn-sheet.hbs`,
 
     // Cards
+    "systems/torgeternity/templates/cards/torgeternityCard.hbs",
+    "systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs",
     "systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs",
+    "systems/torgeternity/templates/cards/settingMenu.hbs",
+    "systems/torgeternity/templates/cards/torgeternityDeck-details.hbs",
+    "systems/torgeternity/templates/cards/torgeternityDeck-cards.hbs",
+    "systems/torgeternity/templates/cards/torgeternityPile.hbs",
+
   ];
 
   // Load the template parts
