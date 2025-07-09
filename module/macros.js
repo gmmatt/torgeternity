@@ -1,4 +1,4 @@
-import * as torgchecks from './torgchecks.js';
+import { TestResult, renderSkillChat, torgDamage } from './torgchecks.js';
 import { oneTestTarget, TestDialog } from './test-dialog.js';
 
 const { DialogV2 } = foundry.applications.api;
@@ -243,7 +243,7 @@ export class TorgeternityMacros {
 
       chatOutput += `<ul>`;
       for (const token of game.user.targets) {
-        const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.defenses.toughness);
+        const tokenDamage = torgDamage(diceroll.total, token.actor.defenses.toughness);
         chatOutput += `<li>${localize('torgeternity.macros.bonusDieMacroResult3')}  ${token.document.name} `;
         chatOutput += (tokenDamage.shocks > 0) ?
           `${localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label}` :
@@ -435,17 +435,17 @@ export class TorgeternityMacros {
       return;
     }
 
-    switch (dialog.flags.torgeternity.test.resultText) {
-      case game.i18n.localize('torgeternity.chatText.check.result.standartSuccess'):
-      case game.i18n.localize('torgeternity.chatText.check.result.goodSuccess'):
-      case game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess'):
-        await _actor.toggleStatusEffect('disconnected', { active: false, overlay: false });
+    switch (dialog.flags.torgeternity.test.result) {
+      case TestResult.STANDARD:
+      case TestResult.GOOD:
+      case TestResult.OUTSTANDING:
+        await _actor.toggleStatusEffect('disconnected', { active: false });
         ui.notifications.info(game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet'));
         break;
-      case game.i18n.localize('torgeternity.chatText.check.result.failure'):
+      case TestResult.FAILURE:
         // ChatMessage.create({content: "<p>Fehlschlag</p>"});
         break;
-      case game.i18n.localize('torgeternity.chatText.check.result.mishape'):
+      case TestResult.MISHAP:
         break;
     }
   }
@@ -889,6 +889,6 @@ export class TorgeternityMacros {
       cardsPlayedLabel: 'display:none',
       notesLabel: 'display:none',
     };
-    await torgchecks.renderSkillChat(test);
+    await renderSkillChat(test);
   }
 }

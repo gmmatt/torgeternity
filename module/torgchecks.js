@@ -2,6 +2,13 @@ import { TestDialog } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
 import { ChatMessageTorg } from './documents/chat/document.js';
 
+export const TestResult = {
+  MISHAP: 0,
+  FAILURE: 1,
+  STANDARD: 2,
+  GOOD: 3,
+  OUTSTANDING: 4
+}
 /**
  *
  * @param test
@@ -341,7 +348,6 @@ export async function renderSkillChat(test) {
     test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
 
     // Determine Outcome
-    test.outcome = null;
     const testDifference = test.rollResult - test.DN;
 
     test.actionTotalContent = `${game.i18n.localize('torgeternity.chatText.check.result.actionTotal')} ${test.rollResult} vs. ${test.DN} ${game.i18n.localize('torgeternity.dnTypes.' + test.DNDescriptor)}`;
@@ -349,6 +355,7 @@ export async function renderSkillChat(test) {
     const useColorBlind = game.settings.get('torgeternity', 'useColorBlindnessColors');
     if (testDifference < 0) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
+      test.result = TestResult.FAILURE;
       if (test.testType === 'power') {
         test.backlashLabel = 'display:inline';
       }
@@ -357,16 +364,19 @@ export async function renderSkillChat(test) {
       test.soakWounds = 0;
     } else if (testDifference > 9) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
+      test.result = TestResult.OUTSTANDING;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 'all';
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
+      test.result = TestResult.GOOD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 2;
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
+      test.result = TestResult.STANDARD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 1;
@@ -386,7 +396,8 @@ export async function renderSkillChat(test) {
       test.rollTotal === 1 &&
       !(test.testType === 'activeDefenseUpdate' || test.testType === 'activeDefense')
     ) {
-      // Roll 1 and not defense = Mishape
+      // Roll 1 and not defense = Mishap
+      test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
       test.outcomeColor = 'color: purple';
       test.resultTextColor = 'color: purple';
@@ -486,10 +497,7 @@ export async function renderSkillChat(test) {
           test.targetAdjustedToughness = test.target.toughness - test.target.armor;
         }
         // Generate damage description and damage sublabel
-        if (
-          test.resultText === game.i18n.localize('torgeternity.chatText.check.result.failure') ||
-          test.resultText === game.i18n.localize('torgeternity.chatText.check.result.mishape')
-        ) {
+        if (test.result == TestResult.FAILURE || test.result == TestResult.MISHAP) {
           test.damageDescription = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
           test.applyDamLabel = 'display:none';
           test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');
