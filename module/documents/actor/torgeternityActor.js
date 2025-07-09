@@ -387,35 +387,50 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    */
   async applyDamages(shock, wounds) {
     if (this.type !== 'vehicle') {
-      // computing new values
+      // computing new values (need actual value for KO or Defeat)
       const newShock = this.system.shock.value + shock;
       const newWound = this.system.wounds.value + wounds;
-      // updating the target token's  actor
+      // updating the target token's actor (actual amount can't exceed max)
       await this.update({
-        'system.shock.value': newShock,
-        'system.wounds.value': newWound,
+        'system.shock.value': Math.min(newShock, this.system.shock.max),
+        'system.wounds.value': Math.min(newWound, this.system.wounds.max),
       });
       // too many wounds => apply defeat ? Ko ?
       if (wounds && newWound > this.system.wounds.max) {
+        // StormKnight tests for Defeat
         await this.toggleStatusEffect('dead', { active: true, overlay: true });
       }
       // too many shocks, apply KO if not dead
       if (shock && newShock > this.system.shock.max &&
         !this.hasStatusEffect('dead')) {
-        await this.toggleStatusEffect('unconscious', { active: true, overlay: true });
+        await this.toggleStatusEffect('unconscious', {
+          active: true,
+          overlay: true,
+          duration: {
+            startTime: game.time.worldTime,
+            seconds: 30 * 60 // 30 minutes
+          }
+        });
       }
     } else {
       // computing new values
       const newWound = this.system.wounds.value + wounds;
-      // updating the target token's  actor
-      await this.update({ 'system.wounds.value': newWound, });
-      // too many wounds => apply defeat ? Ko ?
+      // updating the target token's actor
+      await this.update({ 'system.wounds.value': Math.min(newWound, this.system.wounds.max) });
+      // too many wounds - vehicles don't test for defeat
       if (newWound > this.system.wounds.max) {
         await this.toggleStatusEffect('dead', { active: true, overlay: true });
       }
     }
   }
 
+  async attemptDefeat() {
+    // Make immediate DN 10 Strength or Spirit test (whichever is lowest!)
+    // Failure => death
+    // Standard => Knocked Out & suffer permanent injury
+    // Good => Knocked Out & suffer injury that last unil all wounds are healed
+    // Outstanding => Knocked Out
+  }
   /**
    * Very Stymied - self-imposed by Backlash3
    */
