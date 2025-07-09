@@ -2164,7 +2164,6 @@ a:hover {
 .application .window-header {
   background: url(../images/tab-header.webp);
   background-size: 100% 100%;
-  font-weight: bold;
   transform: scaleX(1.01);
   padding-left: 5%;
   padding-right: 5%;
