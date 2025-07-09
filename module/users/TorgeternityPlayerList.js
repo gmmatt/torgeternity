@@ -46,11 +46,11 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
    *
    * @param event
    */
-  static async #onAddPossibility(event, target) {
-    const targetActor = game.actors.get(target.dataset.targetId);
+  static async #onAddPossibility(event, button) {
+    const targetActor = game.actors.get(button.dataset.targetId);
     return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) + 1, });
   }
-  static async #onAddPossibilityGM(event, target) {
+  static async #onAddPossibilityGM(event, button) {
     const gmuser = game.users.activeGM;
     const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') + 1;
     gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
@@ -59,11 +59,11 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
    *
    * @param event
    */
-  static async #onMinusPossibility(event, target) {
-    const targetActor = game.actors.get(target.dataset.targetId);
+  static async #onMinusPossibility(event, button) {
+    const targetActor = game.actors.get(button.dataset.targetId);
     return targetActor.update({ "system.other.possibilities": parseInt(targetActor.system.other.possibilities) - 1, });
   }
-  static async #onMinusPossibilityGM(event, target) {
+  static async #onMinusPossibilityGM(event, button) {
     const gmuser = game.users.activeGM;
     const newVal = gmuser.getFlag('torgeternity', 'GMpossibilities') - 1;
     gmuser.setFlag('torgeternity', 'GMpossibilities', newVal);
@@ -86,7 +86,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
           action: 'submit',
           icon: 'fas fa-check',
           label: 'torgeternity.submit.apply',
-          callback: (event, target, dialog) => {
+          callback: (event, button, dialog) => {
             const newVal = parseInt(dialog.element.querySelector('[id=possibilitiesValue]').value);
             game.users.forEach((user) => {
               if (user.character) {

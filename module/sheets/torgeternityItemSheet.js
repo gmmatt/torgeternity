@@ -170,60 +170,60 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   /**
    * Actions
    * @param {} event 
-   * @param {*} target 
+   * @param {*} button 
    */
-  static #onEffectControl(event, target) {
+  static #onEffectControl(event, button) {
     if (this.item.isOwned)
       return ui.notifications.warn(
         game.i18n.localize('torgeternity.notifications.noActiveEffectInOwnedItem')
       );
-    onManageActiveEffect(event, target, this.document);
+    onManageActiveEffect(event, button, this.document);
   }
 
-  static #onConvertRsa(event, target) {
+  static #onConvertRsa(event, button) {
     this.item.update({
       type: 'specialability-rollable',
     });
   }
 
-  static #onAddEnhancement(event, target) {
+  static #onAddEnhancement(event, button) {
     const currentShown = this.document.system.pulpPowers.enhancementNumber;
     const newShown = currentShown < 15 ? currentShown + 1 : currentShown;
     this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
   }
 
 
-  static #onRemoveEnhancement(event, target) {
+  static #onRemoveEnhancement(event, button) {
     const currentShown = this.document.system.pulpPowers.enhancementNumber;
     const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
     this.item.update({ 'system.pulpPowers.enhancementNumber': newShown });
   }
 
-  static #onAddLimitation(event, target) {
+  static #onAddLimitation(event, button) {
     const currentShown = this.document.system.pulpPowers.limitationNumber;
     const newShown = currentShown < 10 ? currentShown + 1 : currentShown;
     this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
   }
 
-  static #onRemoveLimitation(event, target) {
+  static #onRemoveLimitation(event, button) {
     const currentShown = this.document.system.pulpPowers.limitationNumber;
     const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
     this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
   }
 
-  static async #onReloadWeapon(event, target) {
-    const button = target.closest('[data-item-id]');
+  static async #onReloadWeapon(event, button) {
+    const button = button.closest('[data-item-id]');
     const usedAmmo = this?.actor.items.get(button.dataset.itemId);
     await reloadAmmo(this.actor, this.item, usedAmmo, this);
   }
 
-  static #onSelectSecondaryAxiom(event, target) {
-    target.value === 'none' &&
+  static #onSelectSecondaryAxiom(event, button) {
+    button.value === 'none' &&
       this.item.update({ 'system.secondaryAxiom.value': null });
   }
 
-  static #onItemName(event, target) {
-    const section = target.closest('.item');
+  static #onItemName(event, button) {
+    const section = button.closest('.item');
     const detail = section.querySelector('.item-detail');
     if (!detail) return;
     detail.style.display =
@@ -231,10 +231,10 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         ? 'block' : 'none';
   }
 
-  static #onItemDelete(event, target) {
+  static #onItemDelete(event, button) {
     if (this.item.type === 'race') {
-      const inheritedType = target.closest('.item').dataset.inheritedtype;
-      const id = target.closest('.item').dataset.itemid;
+      const inheritedType = button.closest('.item').dataset.inheritedtype;
+      const id = button.closest('.item').dataset.itemid;
       const raceItem = this.item;
       const allThingsOfRaceItem =
         inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
