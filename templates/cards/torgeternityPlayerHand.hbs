@@ -17,7 +17,7 @@
       </div>
     </header>
     <ol class="cards scrollable">
-      {{#each document.cards as |card|}}
+      {{#each cards as |card|}}
         <li class="card flexrow" data-card-id="{{card.id}}" data-cards>
           <div class="card-faces flexcol">
             <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"

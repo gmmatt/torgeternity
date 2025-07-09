@@ -41,6 +41,13 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     return context;
   }
 
+  async _preparePartContext(partId, context, options) {
+    let tempPartId = partId;
+    // Ensure configuration for 'cards' is put into the context ( fields: cards, cardTypes, sortModeIcon })
+    if (partId === 'normal' || partId === 'lifelike') tempPartId = 'cards';
+    return super._preparePartContext(tempPartId, context, options);
+  }
+
   _prepareButtons() {
     return [
       { type: 'button', icon: 'fas fa-plus', label: 'torgeternity.dialogPrompts.drawDestiny', cssClass: "card-control", action: "drawDestiny" },
