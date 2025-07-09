@@ -2740,9 +2740,14 @@ nav#controls,
     color: white;
   }
 
-  nav.combat-controls button {
-    font-family: Alaska;
-    font-size: 20px;
+  nav.combat-controls {
+    border-top: 2px groove rgb(68, 68, 68);
+    padding: 10px;
+
+    button {
+      font-family: Alaska;
+      font-size: 20px;
+    }
   }
 
   button {
@@ -2898,10 +2903,6 @@ nav#controls,
 .combat-sidebar #combat-tracker {
   overflow-y: auto;
   flex: 2 !important;
-}
-
-#combat-controls {
-  max-height: 5%;
 }
 
 .party-sheet {
