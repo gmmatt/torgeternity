@@ -181,9 +181,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
  * @param event
  */
   static async #onLifelike(event, button) {
-    console.log({ event, button })
-    const isChecked = button.checked;
-    await this.document.setFlag('torgeternity', 'lifelike', isChecked);
+    await this.document.setFlag('torgeternity', 'lifelike', button.checked);
     return this.render({ force: true });
   }
   /**
