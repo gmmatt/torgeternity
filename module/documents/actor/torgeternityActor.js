@@ -262,6 +262,36 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     return super._preUpdate(changed, options, user);
   }
 
+  _onCreate(data, options, userId) {
+    super._onCreate(data, options, userId);
+    // by default creating a  hand for each stormknight
+    if (this.type === 'stormknight' && game.user.isActiveGM) {
+      this.createDefaultHand();
+    }
+  }
+
+  _onUpdate(changed, options, userId) {
+    super._onUpdate(changed, options, userId);
+
+    if (this.type === 'stormknight') {
+      const hand = this.getDefaultHand();
+      // If there is no hand for that SK, and a GM is online, create one
+      if (!hand && game.user.isActiveGM) {
+        this.createDefaultHand();
+      }
+      // If the update includes permissions, sync them to the hand
+      if (hand && changed['==ownership'] && game.userId === userId) {
+        // DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
+        hand.update({ ownership: this.getHandOwnership() }, { diff: false, recursive: false });
+      }
+    }
+  }
+
+  _onDelete() {
+    if (this.type === 'stormknight' && game.user.isActiveGM)
+      this.getDefaultHand()?.delete();
+  }
+
   /**
    * @returns {object|false} the Hand of the actor or false if no default hand is set
    */
@@ -274,16 +304,12 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    */
   async createDefaultHand() {
     // creating a card hand then render it
-    const cardData = {
+    return await Cards.create({
       name: this.name,
       type: 'hand',
       ownership: this.getHandOwnership(),
       flags: { torgeternity: { defaultHand: this.id } },
-    };
-    const characterHand = await Cards.create(cardData);
-
-    // return the hand
-    return characterHand;
+    });
   }
 
   /**

@@ -859,24 +859,6 @@ Hooks.on('changeSidebarTab', (tabDirectory) => {
   }
 });
 
-Hooks.on('updateActor', (actor, change, options, userId) => {
-  // updating playerList with users character up-to-date data
-  ui.players.render(true);
-
-  if (actor.type === 'stormknight') {
-    const hand = actor.getDefaultHand();
-    // If there is no hand for that SK, and a GM is online, create one
-    if (!hand && game.user.isActiveGM) {
-      actor.createDefaultHand();
-    }
-    // If the update includes permissions, sync them to the hand
-    if (hand && change['==ownership'] && game.userId === userId) {
-      // DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
-      hand.update({ ownership: actor.getHandOwnership() }, { diff: false, recursive: false });
-    }
-  }
-});
-
 // change the generic threat token to match the cosm's one if it's set in the scene
 Hooks.on('preCreateToken', async (...args) => {
   if (args[0].texture.src.includes('threat')) {
@@ -900,14 +882,6 @@ Hooks.on('preCreateToken', async (...args) => {
   }
 });
 
-// by default creating a  hand for each stormknight
-Hooks.on('createActor', async (actor, options, userId) => {
-  // run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
-  if (actor.type === 'stormknight' && game.user.isActiveGM) {
-    await actor.createDefaultHand();
-  }
-});
-
 // un-pool cards of SK when the GM ends the combat encounter
 Hooks.on('deleteCombat', async (combat, dataUpdate) => {
   if (!game.user.isActiveGM) return;
@@ -921,11 +895,6 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
     });
 
   await deleteActiveDefense(combat);
-});
-
-Hooks.on('deleteActor', async (actor, data1, data2) => {
-  if (game.user.isActiveGM && actor.type === 'stormknight')
-    actor.getDefaultHand()?.delete();
 });
 
 Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {

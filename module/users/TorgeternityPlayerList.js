@@ -104,3 +104,9 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
     });
   }
 }
+
+
+Hooks.on('updateActor', (actor, change, options, userId) => {
+  // updating playerList with users character up-to-date data
+  ui.players.render(true);
+});
