@@ -3843,8 +3843,11 @@ p.skill-chat-title.skilled {
   font-size: 12px;
   font-weight: bold;
 
-  .pool-tooltip {
+  span.pool-tooltip {
     text-decoration: none;
+    border: 1px solid black;
+    padding: 0px 3px;
+    white-space: nowrap;
 
     span {
       display: none;
