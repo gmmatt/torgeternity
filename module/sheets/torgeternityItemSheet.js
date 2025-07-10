@@ -9,7 +9,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   static DEFAULT_OPTIONS = {
     classes: ['torgeternity', 'sheet', 'item', 'themed', 'theme-light'],
     window: {
-      contentClasses: ['standard-form', 'scrollable'],
+      contentClasses: ['standard-form'],
       resizable: true,
     },
     position: {
@@ -19,13 +19,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     form: {
       submitOnChange: true
     },
-    tabs: [
-      {
-        navSelector: '.sheet-tabs',
-        contentSelector: '.sheet-body',
-        initial: 'stats',
-      },
-    ],
     actions: {
       effectControl: TorgeternityItemSheet.#onEffectControl,
       convertRsa: TorgeternityItemSheet.#onConvertRsa,

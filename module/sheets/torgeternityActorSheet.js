@@ -17,7 +17,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     classes: ['torgeternity', 'sheet', 'actor', 'themed', 'theme-light'],
     window: {
       contentTag: 'div',
-      contentClasses: ['standard-form', 'scrollable'],
+      contentClasses: ['standard-form'],
       resizable: true,
     },
     position: {
@@ -63,7 +63,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static PARTS = {
     tabs: { template: 'templates/generic/tab-navigation.hbs' },
 
-    //stormknight: { template: `systems/torgeternity/templates/actors/stormknight/main.hbs` },
     title: { template: "systems/torgeternity/templates/actors/stormknight/title.hbs" },
     stats: { template: "systems/torgeternity/templates/actors/stormknight/stats-details.hbs", scrollable: [""] },
     perks: { template: "systems/torgeternity/templates/actors/stormknight/perks-details.hbs", scrollable: [""] },
@@ -72,8 +71,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs", scrollable: [""] },
     background: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs", scrollable: [""] },
 
-    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: [""] },
-    vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs`, scrollable: [""] }
+    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: [".scrollable"] },
+    vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs`, scrollable: [".scrollable"] }
   }
 
   static TABS = {

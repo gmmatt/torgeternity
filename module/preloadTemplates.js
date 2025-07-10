@@ -8,7 +8,6 @@ export const preloadTemplates = async function () {
   // Define template paths to load
   const templatePaths = [
     // ACTOR--stormknights
-    'systems/torgeternity/templates/actors/stormknight/main.hbs',
     'systems/torgeternity/templates/actors/stormknight/attributes.hbs',
     'systems/torgeternity/templates/actors/stormknight/skills.hbs',
     'systems/torgeternity/templates/actors/stormknight/header.hbs',

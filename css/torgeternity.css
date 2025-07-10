@@ -149,16 +149,34 @@ form.torgeternity {
   }
 }
 
+div[data-application-part] {
+  height: 100%;
+
+  div.threat-sheet {
+    height: 100%;
+  }
+}
+
 /* Actor/Item/Journal sheet */
 .sheet.torgeternity .window-content {
 
+  background-image: url(../images/bg-sheet.webp);
+  background-size: cover;
+  padding: 8px 0px 8px 8px;
+
   /* Foundry DARK mode sets backdrop-filter, which breaks the side tabs in sheets */
   backdrop-filter: none;
+  margin-right: 0px;
 
   input[type="number"],
   input[type="text"] {
     font-family: Arial;
     font-size: 12px;
+  }
+
+  .sheet-body {
+    height: 100%;
+    width: 100%;
   }
 
   h1 input[name="name"] {
@@ -269,13 +287,9 @@ form.torgeternity {
   }
 }
 
-.scrollable {
+/*.scrollable {
   margin-right: 0px;
-}
-
-.window-content.scrollable {
-  overflow-y: auto;
-}
+}*/
 
 .groove-borders {
   border: 2px groove #eeede0;
@@ -383,8 +397,9 @@ form.torgeternity {
   .window-content {
     font-size: 13px;
     line-height: 14px;
-    background-image: url(../images/bg-sheet.webp);
+    /*background-image: url(../images/bg-sheet.webp);
     background-size: cover;
+    padding-right: 0px;*/
 
     h1 {
       border: none;
@@ -514,6 +529,10 @@ form.torgeternity {
       width: 100%;
       height: 100%;
       grid-gap: 0px 5px;
+
+      /*&.scrollable {
+        padding-right: 8px;
+      }*/
     }
 
     .block {
@@ -522,7 +541,7 @@ form.torgeternity {
       border-image-slice: 50;
       box-shadow: 2px 2px 15px #9e9686;
       transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-      padding: 0px;
+      /*padding: 0px inherit 0px 0px;*/
 
       &:hover,
       &:hover {
@@ -1417,7 +1436,7 @@ form.torgeternity {
       }
 
       .tab[data-tab="stats"].active {
-        display: flex;
+        display: block;
       }
 
       .vehicle-header-name {
@@ -1518,8 +1537,8 @@ form.torgeternity {
     }
 
     .tab[data-tab].active .editor {
-      width: 400px;
-      height: 400px;
+      /*width: 400px;
+      height: 400px;*/
       background: url(../images/bckg-hex.webp);
       background-size: 110% 110%;
       padding: 20px;
@@ -1616,10 +1635,6 @@ form.torgeternity {
       }
     }
 
-    .tab[data-tab="stats"].active {
-      display: block;
-    }
-
     .tab[data-tab].active {
       .list-section-heading {
         font-size: 18px;
@@ -1693,11 +1708,8 @@ form.torgeternity {
         padding: 20px;
         background-position: center;
         margin-top: 10%;
+        height: 500px;
       }
-    }
-
-    .sheet-body {
-      padding-right: 0px;
     }
 
     img.profile-img {
@@ -1721,7 +1733,7 @@ form.torgeternity {
       font-size: 13px;
       font-weight: bold;
 
-      .attributes {
+      &.attributes {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -1735,7 +1747,16 @@ form.torgeternity {
           display: flex;
           margin: 0;
           font: inherit;
+          color: white;
         }
+      }
+    }
+
+    div.attribut-list-edit span {
+      white-space: nowrap;
+
+      input {
+        width: 35px;
       }
     }
 
@@ -1743,15 +1764,6 @@ form.torgeternity {
       display: block;
       text-align: center;
       font-weight: bold;
-    }
-
-    section.sheet-body {
-      height: 100%;
-      width: 100%;
-
-      h1 {
-        margin-bottom: 0px;
-      }
     }
 
     .sub-header {
@@ -1861,7 +1873,6 @@ form.application.torgeternity.theme-dark {
 }
 
 .application.torgeternity .window-content {
-  padding: 8px;
 
   .notes,
   .hint {
@@ -3380,10 +3391,11 @@ p.skill-chat-title.skilled {
   }
 
   .window-content {
-    padding: 10px;
+    font-size: 0.9em;
+    /*padding: 10px;
     background-image: url(../images/bg-sheet.webp);
     background-size: cover;
-    font-size: 0.9em;
+    */
     max-height: 95%;
 
     .editor-content {
@@ -4161,9 +4173,8 @@ h4 {
   font-weight: normal;
 }
 
-dialog.torgeternity,
-.application.torgeternity,
-.application.torgeternity {
+dialog.torgeternity:not(.sheet),
+.application.torgeternity:not(.sheet) {
   background-image: url(../images/thunder.webp);
   background-size: cover;
 }
