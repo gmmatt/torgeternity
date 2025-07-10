@@ -1,62 +1,60 @@
 <section class="tab effects scrollable {{tabs.effects.cssClass}}" data-group="primary" data-tab="effects">
-  <div class="tabbody block">
-    <ol class="items-list effects-list">
-      {{#each effects as |section sid|}}
-        <li class="effects-heading flexrow" data-effect-type="{{section.type}}">
-          <div class="effect-section-title flexrow">{{localize section.label}}</div>
-          <div class="effect-source">{{localize "torgeternity.sheetLabels.source"}}</div>
-          <div class="effect-duration">{{localize "torgeternity.powers.duration"}}</div>
-          <div class="effect-controls flexrow">
-            <a
-              class="effect-control"
-              data-action="effectControl"
-              data-control="create"
-              data-tooltip="{{localize 'torgeternity.sheetLabels.effectCreate'}}">
-              <i class="fas fa-plus"></i>
-              {{localize "torgeternity.sheetLabels.add"}}
-            </a>
-          </div>
-        </li>
+  <ol class="items-list effects-list">
+    {{#each effects as |section sid|}}
+      <li class="effects-heading flexrow" data-effect-type="{{section.type}}">
+        <div class="effect-section-title flexrow">{{localize section.label}}</div>
+        <div class="effect-source">{{localize "torgeternity.sheetLabels.source"}}</div>
+        <div class="effect-duration">{{localize "torgeternity.powers.duration"}}</div>
+        <div class="effect-controls flexrow">
+          <a
+            class="effect-control"
+            data-action="effectControl"
+            data-control="create"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.effectCreate'}}">
+            <i class="fas fa-plus"></i>
+            {{localize "torgeternity.sheetLabels.add"}}
+          </a>
+        </div>
+      </li>
 
-        <ol class="item-list">
-          {{#each section.effects as |effect|}}
-            <li
-              class="item effect effects-item flexrow"
-              style="display: flex"
-              data-effect-id="{{effect._id}}">
-              <div class="effect-name flexrow">
-                <img class="effect-item-image" src="{{effect.img}}" />
-                {{effect.name}}
-              </div>
-              <div class="effect-source">{{effect.sourceName}}</div>
-              <div class="effect-duration">{{effect.duration.label}}</div>
-              <div class="effect-controls">
-                <a
-                  class="effect-control effect-toggle"
-                  data-action="effectControl"
-                  data-control="toggle"
-                  data-tooltip="{{localize 'torgeternity.iconeTitles.toggle'}}">
-                  <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
-                </a>
-                <a
-                  class="effect-control effect-edit"
-                  data-action="effectControl"
-                  data-control="edit"
-                  data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
-                  <i class="fas fa-edit"></i>
-                </a>
-                <a
-                  class="effect-control effect-delete"
-                  data-action="effectControl"
-                  data-control="delete"
-                  data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
-                  <i class="fas fa-trash"></i>
-                </a>
-              </div>
-            </li>
-          {{/each}}
-        </ol>
-      {{/each}}
-    </ol>
-  </div>
+      <ol class="item-list">
+        {{#each section.effects as |effect|}}
+          <li
+            class="item effect effects-item flexrow"
+            style="display: flex"
+            data-effect-id="{{effect._id}}">
+            <div class="effect-name flexrow">
+              <img class="effect-item-image" src="{{effect.img}}" />
+              {{effect.name}}
+            </div>
+            <div class="effect-source">{{effect.sourceName}}</div>
+            <div class="effect-duration">{{effect.duration.label}}</div>
+            <div class="effect-controls">
+              <a
+                class="effect-control effect-toggle"
+                data-action="effectControl"
+                data-control="toggle"
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggle'}}">
+                <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
+              </a>
+              <a
+                class="effect-control effect-edit"
+                data-action="effectControl"
+                data-control="edit"
+                data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+                <i class="fas fa-edit"></i>
+              </a>
+              <a
+                class="effect-control effect-delete"
+                data-action="effectControl"
+                data-control="delete"
+                data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                <i class="fas fa-trash"></i>
+              </a>
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+    {{/each}}
+  </ol>
 </section>

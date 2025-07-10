@@ -453,7 +453,7 @@ div[data-application-part] {
         background: url(../images/bckg-hex.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        min-height: 200px;
+        min-height: 400px;
         min-width: 150px;
         padding: 15% 10% 10% 10%;
         font-family: Palatino;
@@ -997,7 +997,6 @@ div[data-application-part] {
 
     .threat-block,
     .perks-details,
-    .perks-list,
     .gear,
     .powers {
       row-gap: 0px;
@@ -1384,26 +1383,8 @@ div[data-application-part] {
       }
     }
 
-    .tab[data-tab].active .editor {
-      background: url(../images/bckg-hex.webp);
-      background-size: 110% 110%;
-      padding: 20px;
-      background-position: center;
-      margin-top: 10%;
-    }
-
     div[data-tab] {
       display: none;
-    }
-
-    .tab.background .tabbody {
-      display: block;
-
-      .editor {
-        margin: 0% 5%;
-        height: 800px;
-        padding: 10%;
-      }
     }
 
     .window-content {
@@ -1519,15 +1500,6 @@ div[data-application-part] {
       }
     }
 
-    .tab[data-tab].active .editor {
-      /*width: 400px;
-      height: 400px;*/
-      background: url(../images/bckg-hex.webp);
-      background-size: 110% 110%;
-      padding: 20px;
-      background-position: center;
-    }
-
     span.vital-box span.light {
       font-family: "Signika";
       font-size: 13px;
@@ -1639,66 +1611,8 @@ div[data-application-part] {
         height: 30px;
       }
 
-      /*
-      ol.item-list {
-        padding: 0px;
-
-        li {
-          display: block;
-          overflow: hidden;
-          padding-bottom: 0px;
-
-          .item .effects .effects-item .flexrow {
-            display: flex;
-          }
-
-          img {
-            height: 30px;
-            width: 30px;
-            max-width: 30px;
-          }
-
-          .block {
-            border: 1px 0px 0px 0px black;
-            box-shadow: none;
-          }
-
-          .item-name {
-            text-align: center;
-            font-size: 13px;
-            display: inline;
-            max-width: 500px;
-          }
-
-          .item-controls {
-
-            .item-control {
-              margin-right: 5px;
-            }
-          }
-
-          .item-detail {
-            max-height: 0px;
-
-            .item-dropdown-description {
-              max-height: inherit;
-            }
-
-            .item-dropdown-extras {
-              font-style: italic;
-              text-align: center;
-            }
-          }
-        }
-      }
-*/
-      .editor {
-        background: url(../images/bckg-hex.webp);
-        background-size: 110% 110%;
-        padding: 10%;
-        background-position: center;
-        margin-top: 10%;
-        height: 500px;
+      &.background .editor {
+        max-width: 510px;
       }
     }
 

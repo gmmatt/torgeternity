@@ -1,84 +1,8 @@
 <section class="tab perks scrollable {{tab.cssClass}} perks-details" data-group="primary" data-tab="perks">
-  <div class="tabbody block">
-    <div class="list-section-heading">{{localize "torgeternity.sheetLabels.perks"}}</div>
-    <ol class="item-list">
-      {{#each perk as |item id|}}
-        {{#if (ne item.system.category "racial")}}
-          <li class="item block" data-item-id="{{item._id}}">
-            <div class="item-row flexrow">
-              <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-              <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
-              <div class="item-controls">
-                <a class="item-control item-tochat" data-action="itemToChat"
-                  data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-                  <i class="fas fa-comment"></i>
-                </a>
-                <a class="item-control item-edit" data-action="itemEdit"
-                  data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
-                  <i class="fas fa-edit"></i>
-                </a>
-                <a class="item-control item-delete" data-action="itemDelete"
-                  data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
-                  <i class="fas fa-trash"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="item-detail">
-              <div class="item-dropdown-description">
-                {{{item.description}}}
-              </div>
-              <div class="item-dropdown-extras">
-                {{localize (concat "torgeternity.cosms." item.system.cosm)}}
-              </div>
-              {{#if item.system.timestaken}}
-                <div class="item-dropdown-extras">
-                  {{item.system.timestaken}}x
-                </div>
-              {{/if}}
-            </div>
-          </li>
-        {{/if}}
-      {{/each}}
-    </ol>
-    <div class="list-section-heading">{{localize "torgeternity.sheetLabels.racialPerks"}}</div>
-    <ol class="item-list">
-      {{#each perk as |item id|}}
-        {{#if (eq item.system.category "racial")}}
-          <li class="item block" data-item-id="{{item._id}}">
-            <div class="item-row flexrow">
-              <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-              <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
-              <div class="item-controls">
-                <a class="item-control item-tochat" data-action="itemToChat"
-                  data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-                  <i class="fas fa-comment"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="item-detail">
-              <div class="item-dropdown-description">
-                {{{item.description}}}
-              </div>
-              <div class="item-dropdown-extras">
-                {{localize (concat "torgeternity.cosms." item.system.cosm)}}
-              </div>
-              {{#if item.system.timestaken}}
-                <div class="item-dropdown-extras">
-                  {{item.system.timestaken}}x
-                </div>
-              {{/if}}
-            </div>
-          </li>
-        {{/if}}
-      {{/each}}
-    </ol>
-
-    <div class="list-section-heading">{{localize "torgeternity.sheetLabels.customSkills"}}</div>
-    <ol class="item-list">
-      {{#each customSkill as |item id|}}
-
+  <div class="list-section-heading">{{localize "torgeternity.sheetLabels.perks"}}</div>
+  <ol class="item-list">
+    {{#each perk as |item id|}}
+      {{#if (ne item.system.category "racial")}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
@@ -103,10 +27,84 @@
             <div class="item-dropdown-description">
               {{{item.description}}}
             </div>
+            <div class="item-dropdown-extras">
+              {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+            </div>
+            {{#if item.system.timestaken}}
+              <div class="item-dropdown-extras">
+                {{item.system.timestaken}}x
+              </div>
+            {{/if}}
+          </div>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ol>
+  <div class="list-section-heading">{{localize "torgeternity.sheetLabels.racialPerks"}}</div>
+  <ol class="item-list">
+    {{#each perk as |item id|}}
+      {{#if (eq item.system.category "racial")}}
+        <li class="item block" data-item-id="{{item._id}}">
+          <div class="item-row flexrow">
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <div class="item-controls">
+              <a class="item-control item-tochat" data-action="itemToChat"
+                data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                <i class="fas fa-comment"></i>
+              </a>
+            </div>
           </div>
 
+          <div class="item-detail">
+            <div class="item-dropdown-description">
+              {{{item.description}}}
+            </div>
+            <div class="item-dropdown-extras">
+              {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+            </div>
+            {{#if item.system.timestaken}}
+              <div class="item-dropdown-extras">
+                {{item.system.timestaken}}x
+              </div>
+            {{/if}}
+          </div>
         </li>
-      {{/each}}
-    </ol>
-  </div>
+      {{/if}}
+    {{/each}}
+  </ol>
+
+  <div class="list-section-heading">{{localize "torgeternity.sheetLabels.customSkills"}}</div>
+  <ol class="item-list">
+    {{#each customSkill as |item id|}}
+
+      <li class="item block" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+          <img src="{{item.img}}" data-tooltip="{{item.name}}" />
+          <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+          <div class="item-controls">
+            <a class="item-control item-tochat" data-action="itemToChat"
+              data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+              <i class="fas fa-comment"></i>
+            </a>
+            <a class="item-control item-edit" data-action="itemEdit"
+              data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+              <i class="fas fa-edit"></i>
+            </a>
+            <a class="item-control item-delete" data-action="itemDelete"
+              data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="item-detail">
+          <div class="item-dropdown-description">
+            {{{item.description}}}
+          </div>
+        </div>
+
+      </li>
+    {{/each}}
+  </ol>
 </section>
