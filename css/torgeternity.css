@@ -38,10 +38,6 @@
   --torg-header-height: 35px;
 }
 
-form button {
-  border: 1px groove var(--color-border-light-highlight);
-}
-
 @keyframes colorchange {
   0% {
     color: var(--torgblue);
