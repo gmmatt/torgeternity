@@ -35,22 +35,7 @@ export function registerTorgSettings() {
     type: Boolean,
     default: true,
   });
-  /*
-        //------pause image
 
-        game.settings.register("torgeternity", "pauseMedia", {
-            // game.setting.register("NameOfTheModule", "VariableName",
-            name: "torgeternity.settingMenu.pauseMedia.name", // Register a module setting with checkbox
-            hint: "torgeternity.settingMenu.pauseMedia.hint", // Description of the settings
-            type: window.Azzu.SettingsTypes.FilePickerImage,
-            default: {},
-            scope: 'world',
-            config: true,
-            restricted: true,
-
-        });
-
-        */
   // GM Screen
   game.settings.register('torgeternity', 'gmScreen', {
     name: 'torgeternity.settingMenu.gmScreen.name', // Register a module setting with checkbox

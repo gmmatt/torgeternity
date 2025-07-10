@@ -1,5 +1,10 @@
 # TORG Eternity Changelog
 
+## v13.1.0
+
+- Lots of refactoring of code.
+- Consistent handling of **shock and wounds** exceeding max (set KO/Dead but keep sheet value at max).
+
 ## v13.0.2
 
 - **Dragging** items and skills to the Hotbar should now create the relevant macro.
