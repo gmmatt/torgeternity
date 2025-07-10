@@ -34,8 +34,6 @@
 :root {
   --torgblue: rgb(65, 90, 155);
   --torgred: rgb(150, 0, 0);
-  /*formally this was defined in #sidebar{width:380px}, but we need to alter the foundry style.css variable to affect on things like the new "to bottom" Button*/
-  --torg-header-height: 35px;
 }
 
 @keyframes colorchange {
@@ -163,10 +161,27 @@ form.torgeternity {
     font-size: 12px;
   }
 
+  h1 input[name="name"] {
+    border: none;
+    text-transform: uppercase;
+    text-shadow: 0px -2px 10px #0e0909;
+    font-family: Alaska;
+    font-size: 24px;
+    text-align: center;
+    color: #0e0909;
+    width: 100%;
+    box-shadow: none;
+    background-color: rgba(251, 251, 251, 0.286);
+
+    &:hover {
+      box-shadow: 0 0 15px #053075 inset;
+    }
+  }
+
   h3.left-tab {
     position: absolute;
     transform-origin: top left;
-    transform: rotate(-90deg) translate(calc(-100% - var(--torg-header-height)), -10px);
+    transform: rotate(-90deg) translate(calc(-100% - var(--header-height)), -10px);
     top: 0%;
     margin-bottom: 0px;
 
@@ -191,7 +206,7 @@ form.torgeternity {
     contain: content;
     left: 100%;
     transform-origin: bottom left;
-    transform: rotate(90deg) translate(calc(-1 * var(--torg-header-height)), 5px);
+    transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px);
     line-height: 14px;
     border-width: 0px;
     column-gap: 5px;
@@ -289,7 +304,7 @@ form.torgeternity {
     }
 
     nav.tabs.right-tab {
-      transform: rotate(90deg) translate(calc(-1 * var(--torg-header-height)), 5px) scale(0.7);
+      transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px) scale(0.7);
     }
 
     .tab[data-tab].active {
@@ -417,8 +432,6 @@ form.torgeternity {
       }
 
       .list-section-heading {
-        color-scheme: 'dark2';
-
         grid-column: 1/9;
         grid-row: 1/2;
         align-items: center;
@@ -779,6 +792,10 @@ form.torgeternity {
       &:focus {
         box-shadow: 0 0 5px #0062ff;
       }
+    }
+
+    span {
+      align-self: center;
     }
 
     .attributes {
@@ -1388,8 +1405,6 @@ form.torgeternity {
       }
 
       .background .list-section-heading {
-        color-scheme: 'dark3';
-
         grid-column: 1/9;
         grid-row: 1/2;
         align-items: center;
@@ -1598,7 +1613,7 @@ form.torgeternity {
         background-image: url(../images/separator.webp);
         background-size: cover;
         background-position: center;
-        color-scheme: 'dark4';
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1887,7 +1902,7 @@ form.application.torgeternity.theme-dark {
 .journal-sheet .window-content .editor:hover,
 .journal-sheet .window-content .editor:focus,
 .journal-sheet .window-content .editor:active {
-  box-shadow: 0 0 15px #053075;
+  box-shadow: 0 0 15px #053075 inset;
 }
 
 .journal-sheet .window-content .editor {
