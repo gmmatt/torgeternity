@@ -505,8 +505,9 @@ form.torgeternity {
     .tab.active .tabbody {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(6, minmax(100px, min-content));
       grid-gap: 0px 5px;
+      height: 100%;
+      width: 100%;
     }
 
     .tab[data-tab].active {
@@ -1393,9 +1394,14 @@ form.torgeternity {
       display: none;
     }
 
-    .background .editor-content {
-      height: 90%;
-      word-break: break-word;
+    .tab.background .tabbody {
+      display: block;
+
+      .editor {
+        margin: 0% 5%;
+        height: 800px;
+        padding: 10%;
+      }
     }
 
     .window-content {
@@ -1509,6 +1515,15 @@ form.torgeternity {
         font-family: Arial;
         margin-top: 5px;
       }
+    }
+
+    .tab[data-tab].active .editor {
+      width: 400px;
+      height: 400px;
+      background: url(../images/bckg-hex.webp);
+      background-size: 110% 110%;
+      padding: 20px;
+      background-position: center;
     }
 
     span.vital-box span.light {
