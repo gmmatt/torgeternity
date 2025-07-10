@@ -181,7 +181,7 @@ Hooks.once('setup', async function () {
 
   if (game.settings.get('core', 'language') === 'fr') {
     for (const effect of CONFIG.statusEffects) {
-      effect.icon = effect.icon.replace(
+      effect.img = effect.img.replace(
         'systems/torgeternity/images/status-markers',
         'systems/torgeternity/images/status-markers/fr'
       );
