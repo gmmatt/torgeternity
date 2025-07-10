@@ -37,34 +37,12 @@
         </span>
       </div>
 
-      <section class="tab stats scrollable {{tabs.stats.cssClass}}" data-group="primary"
-        data-tab="stats">
-        {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
-      </section>
-
-      <section class="tab perks scrollable perks-list {{tabs.perks.cssClass}}" data-group="primary" data-tab="perks">
-        {{> "systems/torgeternity/templates/actors/threat/perks-details.hbs"}}
-      </section>
-
-      <section class="tab gear scrollable {{tabs.gear.cssClass}}" data-group="primary" data-tab="gear">
-        {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
-      </section>
-
-      <section class="tab powers scrollable {{tabs.powers.cssClass}}" data-group="primary" data-tab="powers">
-        {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
-      </section>
-
+      {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
+      {{> "systems/torgeternity/templates/actors/threat/abilities.hbs"}}
+      {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
+      {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
       {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-
-      <section class="tab background scrollable block {{tabs.background.cssClass}}" data-group="primary"
-        data-tab="background">
-        <div class="tabbody">
-          <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
-          <prose-mirror toggled name="system.details.description" {{disabled (not editable)}}
-            value="{{ document.system.details.description }}">{{{ enrichedDetails }}}</prose-mirror>
-        </div>
-      </section>
+      {{> "systems/torgeternity/templates/actors/threat/background.hbs"}}
     </div>
-
   </div>
 </div>

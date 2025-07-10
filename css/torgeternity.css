@@ -325,11 +325,6 @@ div[data-application-part] {
       display: flex;
       flex-direction: column;
 
-      div.tabbody {
-        display: flex;
-        flex-direction: column;
-      }
-
       .sheet-header p {
         display: none;
       }
@@ -517,7 +512,7 @@ div[data-application-part] {
       width: 100px;
     }
 
-    .tab.active .tabbody {
+    .tab.stats.active .tabbody {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-gap: 0px 5px;
@@ -528,11 +523,7 @@ div[data-application-part] {
     .tab[data-tab].active {
       width: 100%;
       height: 100%;
-      grid-gap: 0px 5px;
-
-      /*&.scrollable {
-        padding-right: 8px;
-      }*/
+      /*grid-gap: 0px 5px;*/
     }
 
     .block {
@@ -676,34 +667,6 @@ div[data-application-part] {
     a.skill-roll:hover,
     a.skill-roll:active {
       text-shadow: 0px 0px 10px var(--torgblue);
-    }
-
-    .item-controls {
-      align-content: center;
-    }
-
-    ol.item-list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      img {
-        max-width: 60px;
-        max-height: 60px;
-      }
-
-      li {
-        margin: 5px;
-        padding-bottom: 5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-top: 1px solid black;
-
-        .fle div {
-          margin-right: 15px;
-        }
-      }
     }
 
     .char_image {
@@ -1028,29 +991,41 @@ div[data-application-part] {
       }
     }
 
+    .threat-block,
     .perks-details,
+    .perks-list,
     .gear,
     .powers {
+      row-gap: 0px;
 
       h2 {
         text-align: left;
         background: #37465438;
       }
 
-      ol {
+      ol.item-list {
         font-family: "Signika";
         font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         li {
-          position: relative;
           display: flex;
           flex-direction: column;
+          position: relative;
+          margin: 5px;
+          padding-bottom: 5px;
+          justify-content: space-between;
+          border-top: 1px solid black;
 
           .item-name {
             text-align: center;
           }
 
           img {
+            max-width: 60px;
+            max-height: 60px;
             margin: 5px;
           }
 
@@ -1064,6 +1039,7 @@ div[data-application-part] {
           .item-controls {
             align-content: center;
             justify-content: end;
+            max-width: 115px;
 
             a.item-control {
               float: right;
@@ -1083,7 +1059,9 @@ div[data-application-part] {
 
           .item-dropdown-extras {
             font-style: italic;
+            border: 1px solid grey;
             text-align: center;
+            background-color: #9e96868e;
           }
         }
       }
@@ -1640,12 +1618,23 @@ div[data-application-part] {
         font-size: 18px;
       }
 
+      div.threat-block ol.item-list {
+        padding: 0;
+      }
+
       .list-section-heading .item-create-rsa,
       .list-section-heading .item-create-sa {
         padding: 0px 5px 0px 5px;
         float: right;
       }
 
+      ol.item-list li img {
+        flex: 0 0 30px;
+        width: 30px;
+        height: 30px;
+      }
+
+      /*
       ol.item-list {
         padding: 0px;
 
@@ -1677,10 +1666,6 @@ div[data-application-part] {
           }
 
           .item-controls {
-            align-content: center;
-            justify-content: end;
-            max-width: 80px;
-            display: inline;
 
             .item-control {
               margin-right: 5px;
@@ -1701,7 +1686,7 @@ div[data-application-part] {
           }
         }
       }
-
+*/
       .editor {
         background: url(../images/bckg-hex.webp);
         background-size: 110% 110%;

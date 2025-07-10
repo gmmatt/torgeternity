@@ -201,7 +201,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.background);
         break;
       case 'threat':
-        context.enrichedDetails = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.description);
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.description);
         break;
       case 'vehicle':
         context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description);

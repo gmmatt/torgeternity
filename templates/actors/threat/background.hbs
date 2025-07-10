@@ -1,0 +1,10 @@
+<section class="tab background scrollable {{tab.cssClass}}" data-group="primary" data-tab="background">
+  <div class="tabbody">
+    <h1 class="list-section-heading" style="color: white">
+      {{localize "torgeternity.sheetLabels.backgroundAndNotes"}}
+    </h1>
+
+    <prose-mirror toggled name="system.details.description" {{disabled (not editable)}}
+      value="{{ document.system.details.description }}">{{{ enrichedDescription }}}</prose-mirror>
+  </div>
+</section>
