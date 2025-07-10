@@ -31,7 +31,7 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     context.self = game.user;
-    context.GMpossibilities = game.users.activeGM.getFlag('torgeternity', 'GMpossibilities');
+    context.GMpossibilities = game.users.activeGM?.getFlag('torgeternity', 'GMpossibilities') ?? 0;
 
     for (const user of [...context.active, ...context.inactive]) {
       const userdoc = game.users.get(user.id);
@@ -104,7 +104,6 @@ export default class TorgeternityPlayerList extends foundry.applications.ui.Play
     });
   }
 }
-
 
 Hooks.on('updateActor', (actor, change, options, userId) => {
   // updating playerList with users character up-to-date data
