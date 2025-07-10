@@ -1705,7 +1705,7 @@ div[data-application-part] {
       .editor {
         background: url(../images/bckg-hex.webp);
         background-size: 110% 110%;
-        padding: 20px;
+        padding: 10%;
         background-position: center;
         margin-top: 10%;
         height: 500px;
