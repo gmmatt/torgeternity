@@ -1,16 +1,6 @@
 <div>
-  <!-- type -->
   <h3 class="actor-type left-tab"><span>{{localize "torgeternity.sheetLabels.threat"}}</span></h3>
-  <!-- header -->
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    <a data-action="tab" data-group="primary" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="perks">{{localize "torgeternity.sheetLabels.abilities"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="background">{{localize "torgeternity.sheetLabels.notes"}}</a>
-  </nav>
+  {{> "templates/generic/tab-navigation.hbs"}}
 
   <div class="threat-sheet">
     <div class="threat-sidebar">

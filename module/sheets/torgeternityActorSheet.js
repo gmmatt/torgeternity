@@ -90,6 +90,19 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
   }
 
+  static VEHICLE_TABS = {
+    primary: {
+      tabs: [
+        { id: 'stats', },
+        { id: 'gear', },
+        { id: 'effects', },
+        { id: 'background', label: 'torgeternity.sheetLabels.notes' },
+      ],
+      initial: "stats",
+      labelPrefix: 'torgeternity.sheetLabels'
+    }
+  }
+
   tabGroups = {
     primary: "stats"
   }
@@ -123,6 +136,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         }
         break;
     }
+  }
+
+  _getTabsConfig(group) {
+    if (this.document.type === 'vehicle')
+      return this.constructor.VEHICLE_TABS[group] ?? null;
+    else
+      return this.constructor.TABS[group] ?? null;
   }
 
   async _preparePartContext(partId, context, options) {

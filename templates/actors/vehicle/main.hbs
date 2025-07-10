@@ -1,14 +1,7 @@
 <div>
   <h3 class="actor-type left-tab"> <span>{{localize "torgeternity.sheetLabels.vehicle"}}</span> </h3>
 
-  <nav class="sheet-tabs tabs" data-group="primary">
-    <a data-action="tab" data-group="primary" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-    <a data-action="tab" data-group="primary"
-      data-tab="background">{{localize "torgeternity.sheetLabels.description"}}</a>
-  </nav>
-
+  {{> "templates/generic/tab-navigation.hbs"}}
   {{> "systems/torgeternity/templates/actors/vehicle/header.hbs"}}
   {{> "systems/torgeternity/templates/actors/vehicle/stats.hbs"}}
   {{> "systems/torgeternity/templates/actors/vehicle/gear.hbs"}}
