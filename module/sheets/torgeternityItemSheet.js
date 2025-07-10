@@ -173,10 +173,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
    * @param {*} button 
    */
   static #onEffectControl(event, button) {
-    if (this.item.isOwned)
-      return ui.notifications.warn(
-        game.i18n.localize('torgeternity.notifications.noActiveEffectInOwnedItem')
-      );
     onManageActiveEffect(event, button, this.document);
   }
 

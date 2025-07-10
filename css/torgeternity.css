@@ -1622,16 +1622,7 @@ form.torgeternity {
 
     .tab[data-tab].active {
       .list-section-heading {
-        height: 40px;
         font-size: 18px;
-        text-align: center;
-        background-image: url(../images/separator.webp);
-        background-size: cover;
-        background-position: center;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       .list-section-heading .item-create-rsa,
@@ -3276,6 +3267,7 @@ p.skill-chat-title.skilled {
 }
 
 .window-content .list-section-heading {
+  color: white;
   height: 40px;
   line-height: 40px;
   font-size: 2em;
