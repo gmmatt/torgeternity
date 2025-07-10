@@ -870,7 +870,7 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
       actor.createDefaultHand();
     }
     // If the update includes permissions, sync them to the hand
-    if (hand && change.ownership && game.userId === userId) {
+    if (hand && change['==ownership'] && game.userId === userId) {
       // DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
       hand.update({ ownership: actor.getHandOwnership() }, { diff: false, recursive: false });
     }
