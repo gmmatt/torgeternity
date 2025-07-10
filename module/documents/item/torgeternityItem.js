@@ -196,15 +196,15 @@ export default class TorgeternityItem extends foundry.documents.Item {
     // for armors and shields, ensure that there is only one equipped at a time
     if (!wasEquipped && ['armor', 'shield'].includes(item.type)) {
       actor.items
-        .filter(item => item.id !== item.id && item.system.equipped && item.type === item.type)
-        .forEach(item => {
+        .filter(it => it.id !== item.id && it.system.equipped && it.type === item.type)
+        .forEach(it => {
           itemUpdates.push({
-            _id: item.id,
+            _id: it.id,
             'system.equipped': false,
           });
           effectUpdates.push(
             ...actor.effects
-              .filter((e) => e.origin && e.origin.endsWith('Item.' + item._id))
+              .filter((e) => e.origin && e.origin.endsWith('Item.' + it._id))
               .map((e) => ({ _id: e.id, disabled: true }))
           );
         });
