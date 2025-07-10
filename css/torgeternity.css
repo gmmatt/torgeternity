@@ -984,6 +984,10 @@ div[data-application-part] {
           align-self: center;
         }
 
+        .item-control {
+          margin-right: 2px;
+        }
+
         img {
           max-width: 30px;
           max-height: 30px;
@@ -1003,7 +1007,7 @@ div[data-application-part] {
         background: #37465438;
       }
 
-      ol.item-list {
+      .item-list {
         font-family: "Signika";
         font-size: 13px;
         display: flex;
@@ -1040,10 +1044,11 @@ div[data-application-part] {
             align-content: center;
             justify-content: end;
             max-width: 115px;
+            flex: none;
 
             a.item-control {
               float: right;
-              margin-right: 10px;
+              margin-right: 5px;
             }
 
             a.item-equip.item-equipped {
