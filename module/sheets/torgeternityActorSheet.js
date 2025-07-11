@@ -87,11 +87,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       ],
       initial: "stats",
       labelPrefix: 'torgeternity.sheetLabels'
-    }
-  }
-
-  static VEHICLE_TABS = {
-    primary: {
+    },
+    vehicle: {
       tabs: [
         { id: 'stats', },
         { id: 'gear', },
@@ -101,10 +98,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       initial: "stats",
       labelPrefix: 'torgeternity.sheetLabels'
     }
-  }
-
-  tabGroups = {
-    primary: "stats"
   }
 
   /**
@@ -138,13 +131,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
   }
 
-  _getTabsConfig(group) {
-    if (this.document.type === 'vehicle')
-      return this.constructor.VEHICLE_TABS[group] ?? null;
-    else
-      return this.constructor.TABS[group] ?? null;
-  }
-
   async _preparePartContext(partId, context, options) {
     const partContext = await super._preparePartContext(partId, context, options);
     if (partId in partContext.tabs) partContext.tab = partContext.tabs[partId];
@@ -156,6 +142,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
+
+    context.tabs = this._prepareTabs((this.actor.type === 'vehicle') ? 'vehicle' : 'primary');
     context.systemFields = context.document.system.schema.fields;
     context.items = Array.from(context.document.items);
     context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
@@ -216,21 +204,21 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     // Enrich Text Editors
-    switch (this.document.type) {
+    switch (this.actor.type) {
       case 'stormknight':
-        context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.background);
+        context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.background);
         break;
       case 'threat':
-        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.details.description);
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.description);
         break;
       case 'vehicle':
-        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description);
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.description);
     }
 
     // if (this.actor.system.editstate === undefined) 
     //        this.actor.system.editstate = "none";
 
-    context.effects = prepareActiveEffectCategories(this.document.effects);
+    context.effects = prepareActiveEffectCategories(this.actor.effects);
 
     context.config = CONFIG.torgeternity;
     context.disableXP = true;
@@ -346,7 +334,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   /** @inheritdoc */
   async _onDrop(event) {
-    if (this.document.type !== 'stormknight') {
+    if (this.actor.type !== 'stormknight') {
       await super._onDrop(event);
       return;
     }
@@ -423,12 +411,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onOpenHand(event, button) {
-    const characterHand = this.document.getDefaultHand();
+    const characterHand = this.actor.getDefaultHand();
     // if default hand => render it
     if (characterHand) {
       characterHand.sheet.render(true);
     } else {
-      await this.document.createDefaultHand();
+      await this.actor.createDefaultHand();
       characterHand.sheet.render(true);
     }
   }
@@ -1022,7 +1010,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static #onManageActiveEffect(event, button) {
-    onManageActiveEffect(event, button, this.document);
+    onManageActiveEffect(event, button, this.actor);
   }
 
   static #onApplyFatigue(event, button) {
@@ -1031,10 +1019,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static #onChangeAttributesToggle(event, button) {
-    this.document.setFlag(
+    this.actor.setFlag(
       'torgeternity',
       'editAttributes',
-      !this.document.getFlag('torgeternity', 'editAttributes')
+      !this.actor.getFlag('torgeternity', 'editAttributes')
     );
   }
   static #onIncreaseAttribute(event, button) {
