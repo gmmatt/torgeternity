@@ -4123,3 +4123,40 @@ dialog.externalLinks {
     color: var(--color-level-warning);
   }
 }
+
+a.torg-inline-check {
+  /* Just like core a.inline-roll */
+  background: #DDD;
+  padding: 1px 4px;
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 2px;
+  white-space: nowrap;
+  word-break: break-all;
+
+  &.disabled {
+    cursor: var(--cursor-default);
+    color: var(--color-text-dark-inactive);
+    border-color: var(--color-border-light-primary);
+  }
+
+  &disabled:hover {
+    text-shadow: unset;
+  }
+
+  &.blindroll {
+    color: var(--content-link-icon-color);
+    font-size: 0.8em;
+    margin-right: 0.25em;
+    background: var(--color-blind-bg);
+    border-color: var(--color-blind-border);
+  }
+
+  i {
+    color: var(--color-text-dark-inactive);
+    margin-right: 0.25em;
+  }
+
+  i.toChat {
+    margin-left: 10px;
+  }
+}

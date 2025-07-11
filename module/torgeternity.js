@@ -42,6 +42,7 @@ import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
+import InitEnrichers from './enrichers.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -176,6 +177,7 @@ Hooks.once('i18nInit', () => {
 
 Hooks.once('setup', async function () {
   modifyTokenBars();
+  InitEnrichers();
   // changing stutus marker
   // preparing status marker
 

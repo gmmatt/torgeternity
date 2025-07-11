@@ -9,6 +9,9 @@
 -- Automatically set threats/stormknights to **Unconscious (KO)** whenever their shock is exceeded.
 -- Automatically set threats/vehicles to **Dead** whenever their wounds are exceeded.
 -- Prompt the owner of a Stormknight to make a **Defeat test** when their wounds are exceeded.
+- **Inline Checks** can be added to journals, and those checks can also be posted to chat by GMs.
+-- The checks take the form `@Check[persuasion|dn=18]` or `@Check[taunt|dn=standard]{Taunt}` (the `{...}` label is optional), or any other sort of test using a slightly more complex syntax, such as the following which shows all the parameters that are normally passed to TestDialog (the first word is always the testType):
+-- `@Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true|interactionAttackType=intimidation]`
 
 ### Other changes
 - Lots of refactoring of code (to make further improvements easier).
