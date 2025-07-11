@@ -118,11 +118,6 @@ torgeternity.actionLawCosms = {
   other: 'torgeternity.cosms.other',
 };
 
-torgeternity.actionLawCosms = {
-  nileEmpire: 'torgeternity.cosms.nileEmpire',
-  other: 'torgeternity.cosms.other',
-};
-
 torgeternity.darknessModifiers = {
   none: 'torgeternity.sheetLabels.none',
   dim: 'torgeternity.darknessModifiers.dim',

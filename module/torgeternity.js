@@ -791,19 +791,7 @@ Hooks.on('changeSidebarTab', (tabDirectory) => {
 Hooks.on('preCreateToken', async (...args) => {
   if (args[0].texture.src.includes('threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
-    if (!cosm) return;
-    if (
-      [
-        'coreEarth',
-        'livingLand',
-        'nileEmpire',
-        'aysle',
-        'cyberpapacy',
-        'tharkold',
-        'panPacifica',
-        'orrorsh',
-      ].includes(cosm)
-    )
+    if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
       args[0].updateSource({
         'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp',
       });
