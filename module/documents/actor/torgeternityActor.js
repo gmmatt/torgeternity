@@ -308,14 +308,16 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       if (changed.system.shock.value > this.system.shock.max) {
         // value will be clamped in prepareDerivedData
         options.shockExceeded = true;
-      }
+      } else if (changed.system.shock.value < 0)
+        changed.system.shock.value = 0;
     }
     if (changed.system.wounds?.value !== undefined &&
       changed.system.wounds.max === undefined) {
       if (changed.system.wounds.value > this.system.wounds.max) {
         // value will be clamped in prepareDerivedData
         options.woundsExceeded = true;
-      }
+      } else if (changed.system.wounds.value < 0)
+        changed.system.wounds.value = 0;
     }
 
     return super._preUpdate(changed, options, user);
