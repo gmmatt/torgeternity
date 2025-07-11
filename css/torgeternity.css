@@ -437,25 +437,25 @@ div[data-application-part] {
     }
 
     .background {
+      row-gap: 0px;
+
       .editor-content {
         position: relative;
       }
 
       .list-section-heading {
-        grid-column: 1/9;
-        grid-row: 1/2;
-        align-items: center;
+        font-family: Alaska;
+        margin-bottom: 0px;
       }
 
       .editor {
-        grid-column: 1/9;
-        grid-row: 1/9;
         background: url(../images/bckg-hex.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         min-height: 400px;
         min-width: 150px;
-        padding: 15% 10% 10% 10%;
+        padding: 45px;
+        margin: 20px;
         font-family: Palatino;
         font-size: 14px;
       }
@@ -1393,12 +1393,6 @@ div[data-application-part] {
         max-width: 120px;
       }
 
-      .background .list-section-heading {
-        grid-column: 1/9;
-        grid-row: 1/2;
-        align-items: center;
-      }
-
       .tab[data-tab="stats"].active {
         display: block;
       }
@@ -1609,10 +1603,6 @@ div[data-application-part] {
         flex: 0 0 30px;
         width: 30px;
         height: 30px;
-      }
-
-      &.background .editor {
-        max-width: 510px;
       }
     }
 
