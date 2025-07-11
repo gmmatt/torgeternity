@@ -658,7 +658,7 @@ function rollItemMacro(itemName) {
  * @returns {Promise}
  */
 function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescriptor) {
-  if (DNDescriptor && torgChecks.validDNDescriptor(DNDescriptor) === false) {
+  if (DNDescriptor && !Object.hasOwn(CONFIG.torgeternity.dnTypes, DNDescriptor)) {
     ui.notifications.error('The DN-Descriptor is wrong. Exiting the macro.');
     return;
   }
