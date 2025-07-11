@@ -37,10 +37,10 @@ function InlineRuleEnricher(match, options) {
     anchor.append(span);
   }
   // Append a button to copy the link to chat (only when in Journal)
-  if (options.relativeTo && game.user.isGM) {
+  if (!parts.includes('fromchat') && game.user.isGM) {
     const icon = document.createElement("i");
     icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match.input;
+    icon.dataset.original = match.input.replace("]", "|fromchat]");
     anchor.append(icon);
   }
   return anchor;
