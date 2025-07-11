@@ -1,3 +1,6 @@
+import { TestResult } from '../../torgchecks.js';
+import { TestDialog } from '../../test-dialog.js';
+
 /**
  *
  */
@@ -339,15 +342,28 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       }
     }
 
+    /* Special check to prompt the OWNER for a Defeat check */
+    if (options.woundsExceeded &&
+      this.type === 'stormknight' &&
+      game.settings.get('torgeternity', 'autoPromptDefeat') &&
+      game.user.character === this) {
+      this.attemptDefeat();
+    }
+
     // No further if we didn't initiate the update
     if (game.userId !== userId) return;
 
     /* Check for exceeding shock and/or wounds */
+
     if (options.woundsExceeded) {
       // StormKnight tests for Defeat
-      this.toggleStatusEffect('dead', { active: true, overlay: true });
+      if (this.type !== 'stormknight') {
+        if (game.settings.get('torgeternity', 'autoWound'))
+          this.toggleStatusEffect('dead', { active: true, overlay: true });
+      }
+    }
 
-    } else if (options.shockExceeded && !this.hasStatusEffect('dead')) {
+    if (options.shockExceeded && !this.hasStatusEffect('dead') && game.settings.get('torgeternity', 'autoShock')) {
       this.toggleStatusEffect('unconscious', {
         active: true,
         overlay: true,
@@ -366,6 +382,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       this.update(updates);
     }
   }
+
 
   _onDelete() {
     if (this.type === 'stormknight' && game.user.isActiveGM)
@@ -518,6 +535,66 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     // Standard => Knocked Out & suffer permanent injury
     // Good => Knocked Out & suffer injury that last unil all wounds are healed
     // Outstanding => Knocked Out
+    const attribute = (this.system.attributes.spirit.value < this.system.attributes.strength.value) ? 'spirit' : 'strength';
+
+    const prompt = game.i18n.format('torgeternity.defeat.prompt', { name: this.name });
+    ui.notifications.warn(prompt);
+    ChatMessage.create({ content: prompt });
+
+    const response = await TestDialog.asPromise({
+      DNDescriptor: 'standard',
+
+      actor: this.uuid,
+      actorPic: this.img,
+      actorName: this.name,
+      actorType: this.type,
+
+      testType: 'attribute',
+      skillName: attribute,
+      skillValue: this.system.attributes[attribute].value,
+      rollTotal: 0,
+
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
+    });
+    if (!response) return;
+
+    const result = response.flags.torgeternity.test.result;
+
+    let message;
+
+    if (result < TestResult.STANDARD) {
+      message = 'torgeternity.defeat.failure';
+      this.toggleStatusEffect('dead', { active: true, overlay: true });
+    } else {
+
+      await this.toggleStatusEffect('unconscious', { active: true, overlay: true });
+
+      switch (result) {
+        case TestResult.OUTSTANDING:
+          message = 'torgeternity.defeat.outstanding';
+          break;
+
+        case TestResult.GOOD:
+          // Suffers an **Injury** lasting until all his Wounds are healed
+          message = 'torgeternity.defeat.good';
+          break;
+
+        case TestResult.STANDARD:
+          // Permanent **Injury**
+          message = 'torgeternity.defeat.standard';
+          break;
+      }
+    }
+
+    const formattedMessage = game.i18n.format(message, { name: this.name });
+    ui.notifications.info(formattedMessage);
+    ChatMessage.create({
+      user: game.user.id,
+      speaker: ChatMessage.getSpeaker(),
+      owner: this,
+      content: formattedMessage
+    })
   }
   /**
    * Very Stymied - self-imposed by Backlash3

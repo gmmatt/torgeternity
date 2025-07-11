@@ -215,4 +215,41 @@ export function registerTorgSettings() {
     default: false,
     requiresReload: true,
   });
+
+  game.settings.register('torgeternity', 'autoDefeat', {
+    name: 'torgeternity.settingMenu.autoDefeat.name',
+    hint: 'torgeternity.settingMenu.autoDefeat.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+    requiresReload: true,
+  });
+
+  game.settings.register('torgeternity', 'autoShock', {
+    name: 'torgeternity.settingMenu.autoShock.name',
+    hint: 'torgeternity.settingMenu.autoShock.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  game.settings.register('torgeternity', 'autoWound', {
+    name: 'torgeternity.settingMenu.autoWound.name',
+    hint: 'torgeternity.settingMenu.autoWound.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  game.settings.register('torgeternity', 'autoPromptDefeat', {
+    name: 'torgeternity.settingMenu.autoPromptDefeat.name',
+    hint: 'torgeternity.settingMenu.autoPromptDefeat.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
 }

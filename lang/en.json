@@ -212,6 +212,13 @@
       "spiritPlus": "Spirit +",
       "strengthPlus": "Strength +"
     },
+    "defeat": {
+      "prompt": "{name} must make a Defeat Test",
+      "outstanding": "<p><strong>{name} is Knocked Out</strong></p>",
+      "good": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer an Injury that lasts until all Wounds are healed</p>",
+      "standard": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer a permanent Injury</p>",
+      "failure": "<p><strong>{name} dies!</strong></p><p>They get one final, dramatic action before expiring (ignoring wound penalties)</p>"
+    },
     "dialogPrompts": {
       "cardPooled": "In Pool?",
       "cosmDeckDialogLabel": "Draw",
@@ -666,6 +673,18 @@
       "ignoreAmmo": {
         "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
         "name": "Ignore ammo mechanics"
+      },
+      "autoShock": {
+        "name": "Automatically Apply KO",
+        "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
+      },
+      "autoWound": {
+        "name": "Automatically Apply Wounds",
+        "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
+      },
+      "autoPromptDefeat": {
+        "name": "Prompt for Defeat",
+        "hint": "Automatically prompt for a Defeat Test for Stormknights when their wounds are exceeded"
       }
     },
     "sheetLabels": {
