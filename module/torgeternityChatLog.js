@@ -328,7 +328,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const actor = fromUuidSync(test.target.uuid)?.actor;
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
     const damage = torgDamage(test.damage, test.target.targetAdjustedToughness);
-    return actor.applyDamages(damage.shocks, damage.wounds);
+    actor.applyDamages(damage.shocks, damage.wounds);
   }
 
   static async #soakDamage(event, button) {
@@ -441,7 +441,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     event.preventDefault();
     const actor = fromUuidSync(getMessage(button).test.actor);
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
-    return actor.applyDamages(/*shock*/ 2, /*wounds*/ 0);
+    actor.applyDamages(/*shock*/ 2, /*wounds*/ 0);
   }
 
   /**
@@ -452,7 +452,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     event.preventDefault();
     const actor = fromUuidSync(getMessage(button).test.actor);
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
-    return actor.applyDamages(/*shock*/ 1, /*wounds*/ 0);
+    actor.applyDamages(/*shock*/ 1, /*wounds*/ 0);
   }
 
   /**

@@ -76,17 +76,16 @@ export class TorgeternityMacros {
       }
       const actor = token.actor;
 
-      if (actor.system.shock.value === actor.system.shock.max) {
+      if (actor.hasStatusEffect('unconscious')) {
         chatOutput += `<li>${token.actor.name} ${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}</li>`;
         continue;
       }
 
       const shockIncrease = actor.fatigue;
-      const wasUnconscious = actor.hasStatusEffect('unconscious');
-      await token.actor.applyDamages(/*shock*/ shockIncrease, /*wounds*/ 0)
+      const applyResult = token.actor.applyDamages(/*shock*/ shockIncrease, /*wounds*/ 0);
 
       chatOutput += `<li>${actor.name}: ${shockIncrease} ${game.i18n.localize('torgeternity.sheetLabels.shock')}`;
-      if (!wasUnconscious && actor.hasStatusEffect('unconscious')) {
+      if (applyResult.shockExceeded) {
         chatOutput += `<br><strong>${actor.name}${game.i18n.localize('torgeternity.macros.fatigueMacroCharKO')}</strong>`;
       }
       chatOutput += '</li>';
@@ -111,7 +110,7 @@ export class TorgeternityMacros {
       input: fields.createCheckboxInput({ name: 'wholeRevive' }),
     });
 
-    DialogV2.wait({
+    return DialogV2.wait({
       window: { title: 'torgeternity.macros.reviveMacroChatHeadline', },
       content: `${shockGroup.outerHTML}${checkGroup.outerHTML}`,
       buttons: [

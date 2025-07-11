@@ -88,6 +88,13 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   prepareDerivedData() {
     // Here Effects are applied, whatever follow cannot be directly affected by Effects
 
+    // When update() is called, shock.value or wounds.value might exceed the maximum,
+    // which will trigger adding the corresponding status (unconscious/dead) in _onUpdate.
+    // So we have to wait until prepareDerivedData to restore the actual max value.
+    if (this.type !== 'vehicle')
+      this.system.shock.value = Math.clamp(this.system.shock.value, 0, this.system.shock.max);
+    this.system.wounds.value = Math.clamp(this.system.wounds.value, 0, this.system.wounds.max);
+
     // apply status effects
     this.statusModifiers = {
       stymied: this.statuses.has('veryStymied') ? -4 : this.statuses.has('stymied') ? -2 : 0,
@@ -239,35 +246,84 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
   }
 
-  async _preUpdate(changed, options, user) {
-    const isFullReplace = !((options.diff ?? true) && (options.recursive ?? true));
-    if (!changed.system || isFullReplace || this.type !== 'stormknight') {
-      return super._preUpdate(changed, options, user);
-    }
-
-    // Apply attribute maximums
-    for (const [attribute, { maximum }] of Object.entries(this?.system?.attributes)) {
-      const changedAttribute = changed.system.attributes?.[attribute];
-      if (typeof changedAttribute?.base === 'number') {
-        const clampedAttribute = Math.clamp(changedAttribute.base, 0, maximum);
-        if (changedAttribute.base > clampedAttribute) {
-          changedAttribute.base = clampedAttribute;
-          ui.notifications.error(
-            game.i18n.localize('torgeternity.notifications.reachedMaximumAttr')
-          );
-        }
-      }
-    }
-
-    return super._preUpdate(changed, options, user);
-  }
-
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
     // by default creating a  hand for each stormknight
     if (this.type === 'stormknight' && game.user.isActiveGM) {
       this.createDefaultHand();
     }
+  }
+
+  /**
+   * As per core Actor#modifyTokenAttribute but do NOT clamp the value when modifying shock or wounds
+   * @param {*} attribute 
+   * @param {*} value 
+   * @param {*} isDelta 
+   * @param {*} isBar 
+   * @returns 
+   */
+  async modifyTokenAttribute(attribute, value, isDelta = false, isBar = true) {
+    if (attribute !== 'shock' && attribute !== 'wounds') {
+      return super.modifyTokenAttribute(attribute, value, isDelta, isBar);
+    }
+
+    // Mostly the same as core Foundry
+    const attr = foundry.utils.getProperty(this.system, attribute);
+    const current = isBar ? attr.value : attr;
+    const update = isDelta ? current + value : value;
+    if (update === current) return this;
+    let updates = { [`system.${attribute}.value`]: update };   // NO Math.clamp
+    const allowed = Hooks.call("modifyTokenAttribute", { attribute, value, isDelta, isBar }, updates, this);
+    return allowed !== false ? this.update(updates) : this;
+  }
+
+  /**
+   * 
+   * @param {*} changed 
+   * @param {*} options 
+   * @param {*} user 
+   * @returns 
+   */
+  async _preUpdate(changed, options, user) {
+    const isFullReplace = !((options.diff ?? true) && (options.recursive ?? true));
+    if (!changed.system || isFullReplace) {
+      return super._preUpdate(changed, options, user);
+    }
+
+    // Apply attribute maximums
+    if (this.type === 'stormknight') {
+      for (const [attribute, { maximum }] of Object.entries(this?.system?.attributes)) {
+        const changedAttribute = changed.system.attributes?.[attribute];
+        if (typeof changedAttribute?.base === 'number') {
+          const clampedAttribute = Math.clamp(changedAttribute.base, 0, maximum);
+          if (changedAttribute.base > clampedAttribute) {
+            changedAttribute.base = clampedAttribute;
+            ui.notifications.error(
+              game.i18n.localize('torgeternity.notifications.reachedMaximumAttr')
+            );
+          }
+        }
+      }
+    }
+
+    // Check for exceeding shock or wounds
+    if (this.type !== 'vehicle' &&
+      changed.system.shock?.value !== undefined &&
+      changed.system.shock?.max === undefined) {
+      if (changed.system.shock.value > this.system.shock.max) {
+        // value will be clamped in prepareDerivedData
+        options.shockExceeded = true;
+      }
+    }
+    if (changed.system.wounds?.value !== undefined &&
+      changed.system.wounds.max === undefined) {
+      if (changed.system.wounds.value > this.system.wounds.max) {
+        // value will be clamped in prepareDerivedData
+        options.woundsExceeded = true;
+      }
+    }
+
+    return super._preUpdate(changed, options, user);
   }
 
   _onUpdate(changed, options, userId) {
@@ -284,6 +340,25 @@ export default class TorgeternityActor extends foundry.documents.Actor {
         // DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
         hand.update({ ownership: this.getHandOwnership() }, { diff: false, recursive: false });
       }
+    }
+
+    // No further if we didn't initiate the update
+    if (game.userId !== userId) return;
+
+    /* Check for exceeding shock and/or wounds */
+    if (options.woundsExceeded) {
+      // StormKnight tests for Defeat
+      this.toggleStatusEffect('dead', { active: true, overlay: true });
+
+    } else if (options.shockExceeded && !this.hasStatusEffect('dead')) {
+      this.toggleStatusEffect('unconscious', {
+        active: true,
+        overlay: true,
+        duration: {
+          startTime: game.time.worldTime,
+          seconds: 30 * 60 // 30 minutes
+        }
+      });
     }
   }
 
@@ -407,47 +482,29 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   /**
-   *
-   * @param damageObject
-   * @param targetuuid
+   * Apply the supplied amount of shock and/or wound damage to this actor.
+   * Supplying a negative number will act as healing.
+   * 
+   * @param {number} shock The amount of shock to inflict on this actor.
+   * @param {number} wounds The number of wounds to inflict on this actor.
+   * @returns {Promise<this>}
    */
-  async applyDamages(shock, wounds) {
-    if (this.type !== 'vehicle') {
-      // computing new values (need actual value for KO or Defeat)
-      const newShock = this.system.shock.value + shock;
-      const newWound = this.system.wounds.value + wounds;
-      // updating the target token's actor (actual amount can't exceed max)
-      await this.update({
-        'system.shock.value': Math.min(newShock, this.system.shock.max),
-        'system.wounds.value': Math.min(newWound, this.system.wounds.max),
-      });
-      // too many wounds => apply defeat ? Ko ?
-      if (wounds && newWound > this.system.wounds.max) {
-        // StormKnight tests for Defeat
-        await this.toggleStatusEffect('dead', { active: true, overlay: true });
-      }
-      // too many shocks, apply KO if not dead
-      if (shock && newShock > this.system.shock.max &&
-        !this.hasStatusEffect('dead')) {
-        await this.toggleStatusEffect('unconscious', {
-          active: true,
-          overlay: true,
-          duration: {
-            startTime: game.time.worldTime,
-            seconds: 30 * 60 // 30 minutes
-          }
-        });
-      }
-    } else {
-      // computing new values
-      const newWound = this.system.wounds.value + wounds;
-      // updating the target token's actor
-      await this.update({ 'system.wounds.value': Math.min(newWound, this.system.wounds.max) });
-      // too many wounds - vehicles don't test for defeat
-      if (newWound > this.system.wounds.max) {
-        await this.toggleStatusEffect('dead', { active: true, overlay: true });
-      }
+  applyDamages(shock, wounds) {
+    let updates = {};
+    let result = {};
+    // No clamping of values
+    if (shock && this.type !== 'vehicle') {
+      const newvalue = this.system.shock.value + shock;
+      if (newvalue > this.system.shock.max) result.shockExceeded = true;
+      updates['system.shock.value'] = this.system.shock.value + shock;
     }
+    if (wounds) {
+      const newvalue = this.system.wounds.value + wounds;
+      if (newvalue > this.system.wounds.max) result.woundsExceeded = true;
+      updates['system.wounds.value'] = this.system.wounds.value + wounds;
+    }
+    this.update(updates);
+    return result;
   }
 
   async attemptDefeat() {
