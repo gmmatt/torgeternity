@@ -282,7 +282,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     // Put together Chat Data
     const chatData = {
-      user: game.user.data._id,
+      user: game.user.id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
@@ -342,7 +342,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     // Put together Chat Data
     const chatData = {
-      user: game.user.data._id,
+      user: game.user.id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
