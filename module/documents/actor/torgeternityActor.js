@@ -36,7 +36,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    */
   prepareBaseData() {
     // Here Effects are not yet applied
-    if (['threat', 'stormknight'].includes(this.type)) {
+    if (this.type != 'vehicle') {
       // initialize the worn armor bonus
       this.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
       this.system.other.maxDex = this.wornArmor?.system?.maxDex ?? 0;
@@ -59,7 +59,8 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       };
       this.unarmed = { damage: 0, damageMod: 0 };
     }
-    if (['stormknight'].includes(this.type)) {
+
+    if (this.type === 'stormknight') {
       if (this.race) {
         for (const attribute of Object.keys(this.race.system.attributeMaximum)) {
           this.system.attributes[attribute].maximum = this.race.system.attributeMaximum[attribute];
@@ -69,7 +70,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
         this.system.details.race = game.i18n.localize('torgeternity.sheetLabels.noRace');
       }
     }
-    if (['vehicle'].includes(this.type)) {
+    if (this.type === 'vehicle') {
       this.defenses = {
         toughness: this.system.toughness,
         armor: this.system.armor,
@@ -86,14 +87,8 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    * @inheritdoc
    */
   prepareDerivedData() {
+    super.prepareDerivedData();
     // Here Effects are applied, whatever follow cannot be directly affected by Effects
-
-    // When update() is called, shock.value or wounds.value might exceed the maximum,
-    // which will trigger adding the corresponding status (unconscious/dead) in _onUpdate.
-    // So we have to wait until prepareDerivedData to restore the actual max value.
-    if (this.type !== 'vehicle')
-      this.system.shock.value = Math.clamp(this.system.shock.value, 0, this.system.shock.max);
-    this.system.wounds.value = Math.clamp(this.system.wounds.value, 0, this.system.wounds.max);
 
     // apply status effects
     this.statusModifiers = {
@@ -109,7 +104,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     };
 
     // Skillsets
-    if (['threat', 'stormknight'].includes(this.type)) {
+    if (this.type != 'vehicle') {
       const skills = this.system.skills;
       const attributes = this.system.attributes;
       // by RAW, FIRST you checkout for maxDex, THEN minStr. Doing this into DerivedData means, it takes place after AE's were applied, making sure, this cannot get higher than armor's limitations.
@@ -359,6 +354,14 @@ export default class TorgeternityActor extends foundry.documents.Actor {
           seconds: 30 * 60 // 30 minutes
         }
       });
+    }
+
+    if (options.woundsExceeded || options.shockExceeded) {
+      const updates = {};
+      // Remove the exceeded Max values
+      if (options.shockExceeded) updates['system.shock.value'] = this.system.shock.max;
+      if (options.woundsExceeded) updates['system.wounds.value'] = this.system.wounds.max;
+      this.update(updates);
     }
   }
 
