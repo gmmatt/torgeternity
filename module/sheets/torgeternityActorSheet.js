@@ -218,7 +218,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     // if (this.actor.system.editstate === undefined) 
     //        this.actor.system.editstate = "none";
 
-    context.effects = prepareActiveEffectCategories(this.actor.effects);
+    context.effects = prepareActiveEffectCategories(this.actor.allApplicableEffects());
 
     context.config = CONFIG.torgeternity;
     context.disableXP = true;
