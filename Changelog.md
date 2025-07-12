@@ -5,6 +5,7 @@
 ### New Features
 - **Active Effects** can be edited on Items which are present on Actors.
 - Handle **shock and wounds** in a consistent manner, regardless of the source of the change.
+- Show selected **Enhancements** on the Perks tab of the SK sheet.
 - New system options (default enabled) to:
 -- Automatically set threats/stormknights to **Unconscious (KO)** whenever their shock is exceeded.
 -- Automatically set threats/vehicles to **Dead** whenever their wounds are exceeded.
@@ -15,6 +16,7 @@
 
 ### Other changes
 - Lots of refactoring of code (to make further improvements easier).
+- Show **all effects** on the Actor sheets, including effects from owned Items.
 
 ### Bug Fixes
 

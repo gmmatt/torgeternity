@@ -57,4 +57,12 @@ export default class TorgActiveEffect extends ActiveEffect {
     }
     return data;
   }
+
+  /**
+   * Our own version, since this.origin might not point to the correct thing.
+   */
+  get sourceName() {
+    if (!this.parent || this.parent instanceof Actor) return game.i18n.localize("None");
+    return this.parent.name;
+  }
 }
