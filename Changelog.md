@@ -3,9 +3,8 @@
 ## v13.1.0
 
 ### New Features
-- **Active Effects** can be edited on Items which are present on Actors.
 - Handle **shock and wounds** in a consistent manner, regardless of the source of the change.
-- Show selected **Enhancements** on the Perks tab of the SK sheet.
+- Show **Enhancements** on the Perks tab of the SK sheet.
 - New system options (default enabled) to:
 -- Automatically set threats/stormknights to **Unconscious (KO)** whenever their shock is exceeded.
 -- Automatically set threats/vehicles to **Dead** whenever their wounds are exceeded.
@@ -15,9 +14,10 @@
 -- `@Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true|interactionAttackType=intimidation]`
 
 ### Other changes
-- Lots of refactoring of code (to make further improvements easier).
+- **Active Effects** can be edited on Items which are present on Actors.
 - Show **all effects** on the Actor sheets, including effects from owned Items.
-- Enforce 'cosm' as a mandatory field ('none' is the default) and use `{{formInput}}` for it on all sheets.
+- Enforce `cosm` as a mandatory field (`none` is the default) and use `{{formInput}}` for it on all sheets.
+- Lots of refactoring of code (to make further improvements easier).
 
 ### Bug Fixes
 
