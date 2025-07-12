@@ -157,9 +157,15 @@ div[data-application-part] {
   }
 }
 
-/* Actor/Item/Journal sheet */
-.sheet.torgeternity .window-content {
+dialog.torgeternity:not(.actor, .item) .window-content,
+.application.torgeternity:not(.actor, .item) .window-content {
+  background-image: url(../images/thunder.webp);
+  background-size: cover;
+}
 
+/* Actor/Item/Journal sheet */
+.actor.sheet.torgeternity .window-content,
+item.sheet.torgeternity .window-content {
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   padding: 8px 0px 8px 8px;
@@ -4065,12 +4071,6 @@ h4 {
   margin: 0 0 0.5rem;
   padding: 0;
   font-weight: normal;
-}
-
-dialog.torgeternity:not(.sheet),
-.application.torgeternity:not(.sheet) {
-  background-image: url(../images/thunder.webp);
-  background-size: cover;
 }
 
 .sheet.item.miracle p.atkDmgAP {
