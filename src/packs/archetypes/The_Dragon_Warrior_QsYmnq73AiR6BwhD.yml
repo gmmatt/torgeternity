@@ -3,40 +3,6 @@ name: The Dragon Warrior
 type: stormknight
 img: systems/torgeternity/images/characters/Dragon_Warrior.Avatar.webp
 items:
-  - _id: kBiGdjd85DU1MtHd
-    name: Dragon Breath
-    type: enhancement
-    sort: 200001
-    flags:
-      core: {}
-    img: systems/torgeternity/images/icons/enhancement.webp
-    effects: []
-    folder: null
-    system:
-      perk: Dragon Warrior
-      description: >-
-        <p>One of the warrior’s bracers is lined with a long tube leading to a
-        chamber of compressed fuel hidden on his back armor. When activated with
-        missile weapons the tube spurts fire in a 10-meter-long stream as a
-        Small Blast. Everything within the blast suffers 16 fire damage. The
-        chamber holds enough fuel for three individual blasts.</p>
-
-        <p>The container magically recharges at the end of the scene or during a
-        long break in the action of a few hours or more (Game Master’s
-        discretion).</p>
-    ownership:
-      default: 0
-    _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: Item.HlSAJi0eR2q7UF8E
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
   - _id: U0CKtAHQmBDo9ZyF
     name: Dragon Breath (weapon)
     type: missileweapon
@@ -147,73 +113,6 @@ items:
       duplicateSource: null
       exportSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
-  - _id: W80yHGyLWk5wrLJW
-    name: Giant Strength
-    type: enhancement
-    sort: 500001
-    flags:
-      core: {}
-    img: systems/torgeternity/images/icons/enhancement.webp
-    effects:
-      - _id: 07KQJUY5nlOb5K7Q
-        flags: {}
-        changes:
-          - key: system.attributes.strength.value
-            value: '2'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.q3wDWkbSqbWYKVNB
-        tint: '#ffffff'
-        transfer: true
-        name: Giant Strength
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW.07KQJUY5nlOb5K7Q
-    folder: null
-    system:
-      perk: Dragon Warrior
-      description: >-
-        <p>A series of pneumatic compressors take in air and channel it to the
-        dwarf’s arms. Along with cleverly placed levers along the inside of the
-        armor, it increases his Strength by +2 for tests and determining damage.
-        Toughness remains unaffected.</p>
-    ownership:
-      default: 0
-    _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: Item.q3wDWkbSqbWYKVNB
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
   - _id: vvOcq2YtdmDi6tiY
     name: Great Axe
     type: meleeweapon
@@ -1016,87 +915,14 @@ items:
     effects: []
     folder: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.Rmja4NJZMvFXuQm0'
-effects:
-  - origin: Actor.QsYmnq73AiR6BwhD.Item.NTS9DWGhHsYfxJGC
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: false
-    name: Giant Strength (+2)
-    _id: hEeH10DtfU8wxI7z
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '2'
-        priority: null
-    description: ''
-    transfer: false
-    statuses: []
-    flags: {}
-    tint: '#ffffff'
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!QsYmnq73AiR6BwhD.hEeH10DtfU8wxI7z'
-  - origin: >-
-      Compendium.torgeternity.archetypes.Actor.QsYmnq73AiR6BwhD.Item.NKhj8CtGws6Adv8j
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: true
-    name: Maneuver Fav
-    _id: 51EL4wizIGdagglw
-    changes:
-      - key: system.skills.maneuver.isFav
-        mode: 5
-        value: '1'
-        priority: null
-    description: ''
-    transfer: false
-    statuses: []
-    flags: {}
-    tint: '#ffffff'
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: 1722357677036
-      modifiedTime: 1722357677036
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!QsYmnq73AiR6BwhD.51EL4wizIGdagglw'
+effects: []
 folder: null
 sort: 100001
 flags:
   core:
     sheetClass: torgeternity.torgeternityActorSheet
+  torgeternity:
+    editAttributes: false
 system:
   shock:
     max: 8
@@ -1539,11 +1365,11 @@ prototypeToken:
   movementAction: null
 _stats:
   systemId: torgeternity
-  systemVersion: 12.2.0
-  coreVersion: '13.345'
+  systemVersion: 13.0.0
+  coreVersion: '13.346'
   createdTime: 1693900608203
-  modifiedTime: 1729582101393
-  lastModifiedBy: d8YcfsxBOP7RAazk
+  modifiedTime: 1752318704327
+  lastModifiedBy: l8SVzn2293lAwvMC
   compendiumSource: null
   duplicateSource: null
   exportSource: null
