@@ -1,3 +1,5 @@
+import { torgeternity } from '../../config.js';
+
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
@@ -8,7 +10,7 @@ export class EternityShardItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      cosm: new fields.StringField({ initial: '' }),
+      cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
       description: new fields.HTMLField({ initial: '' }),
       possibilities: new fields.NumberField({ initial: 3, integer: true }),
       powers: new fields.StringField({ initial: '' }),

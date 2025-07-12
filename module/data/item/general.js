@@ -12,7 +12,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      cosm: new fields.StringField({ initial: '' }),
+      cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
       description: new fields.HTMLField({ initial: '' }),
       price: new fields.StringField({ initial: '' }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
@@ -35,6 +35,9 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
       return acc;
     }, {});
 
+    if (data?.cosm === '') {
+      data.cosm = 'none';
+    }
     if (data?.cosm && Object.values(translatedCosms).includes(data.cosm)) {
       for (const [key, value] of Object.entries(translatedCosms)) {
         if (value === data.cosm) {

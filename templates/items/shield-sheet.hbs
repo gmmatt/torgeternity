@@ -2,9 +2,7 @@
   <div class="sheet-content">
     <div class="asside">
       <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
-      <select name="system.cosm">
-        {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
-      </select>
+      {{formInput systemFields.cosm value=item.system.cosm name="system.cosm" localize=true sort=true}}
       <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
       <input
         name="system.techlevel"
