@@ -87,6 +87,10 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     }
   }
 
+  get title() {
+    return `${CONFIG.Item.typeLabels[this.item.type]}: ${this.item.name}`
+  }
+
   /** @inheritdoc */
   _canDragStart(selector) {
     return this.isEditable;
