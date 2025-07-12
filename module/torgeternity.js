@@ -24,7 +24,6 @@ import torgeternityDeck from './cards/torgeternityDeck.js';
 import torgeternityCardConfig from './cards/torgeternityCardConfig.js';
 import { torgeternityCards } from './cards/torgeternityCards.js';
 import { TestDialog } from './test-dialog.js';
-import { hideCompendium } from './hideCompendium.js';
 import initTorgControlButtons from './controlButtons.js';
 import createTorgShortcuts from './keybinding.js';
 import GMScreen from './GMScreen.js';
@@ -780,12 +779,6 @@ Hooks.on('renderCombatTracker', (combatTracker) => {
   const hands = game.cards;
   for (const hand of hands) {
     hand.apps[combatTracker.id] = combatTracker;
-  }
-});
-
-Hooks.on('changeSidebarTab', (tabDirectory) => {
-  if (game.settings.get('torgeternity', 'hideForeignCompendium') == true) {
-    hideCompendium(game.settings.get('core', 'language'), tabDirectory);
   }
 });
 

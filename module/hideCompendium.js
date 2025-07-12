@@ -3,34 +3,58 @@
  * @param defaultLang
  * @param tabDirectory
  */
-export function hideCompendium(defaultLang, tabDirectory) {
-  if (tabDirectory.tabName == 'compendium') {
-    const comps = tabDirectory.element.querySelectorAll('.directory-item');
-    let hiddingKeys = [];
+export async function hideCompendium() {
+  let langKeys;
+  switch (game.settings.get('core', 'language')) {
+    case 'en':
+    case 'es':
+      langKeys = ['(fr)', '(de)'];
+      break;
+    case 'de':
+      langKeys = ['(fr)', '(en)'];
+      break;
+    case 'fr':
+      langKeys = ['(en)', '(de)'];
+      break;
+    default:
+      langKeys = ['(en)', '(de)', '(fr)'];
+  }
 
-    switch (defaultLang) {
-      case 'en':
-      case 'es':
-        hiddingKeys = ['(fr)', '(de)'];
-        break;
-      case 'de':
-        hiddingKeys = ['(fr)', '(en)'];
+  const hidden_ownership = {
+    GAMEMASTER: "NONE",
+    ASSISTANT: "NONE",
+    PLAYER: "NONE"
+  }
+  const normal_ownership = {
+    ASSISTANT: "OWNER",
+    PLAYER: "OBSERVER"
+  }
 
-        break;
-      case 'fr':
-        hiddingKeys = ['(en)', '(de)'];
-        break;
-      default:
-        hiddingKeys = ['(en)', '(de)', '(fr)'];
-    }
+  const hiding = game.settings.get('torgeternity', 'hideForeignCompendium');
+  const ownership = hiding ? hidden_ownership : normal_ownership;
 
-    for (const key of hiddingKeys) {
-      for (const comp of comps) {
-        const indexForeign = comp.innerText.indexOf(key);
-        if (indexForeign !== -1) {
-          comp.style.display = 'none';
+  for (const pack of game.packs) {
+    for (const key of langKeys)
+      if (pack.metadata.label.includes(key)) {
+        let update = { ownership };
+        if (hiding) {
+          await pack.configure({
+            "originalOwnership": pack.ownership,
+            ownership: {
+              GAMEMASTER: "NONE",
+              ASSISTANT: "NONE",
+              PLAYER: "NONE"
+            },
+          });
+        } else {
+          await pack.configure({
+            ownership: pack.config.originalOwnership ?? {
+              ASSISTANT: "OWNER",
+              PLAYER: "OBSERVER"
+            }
+          });
         }
+        console.warn(`${pack.metadata.id} -> ${pack.metadata.label} -> `, ownership);
       }
-    }
   }
 }

@@ -1,4 +1,5 @@
 import deckSettingMenu from './cards/cardSettingMenu.js';
+import { hideCompendium } from './hideCompendium.js';
 
 /**
  *
@@ -55,6 +56,7 @@ export function registerTorgSettings() {
     config: true,
     type: Boolean,
     default: false,
+    onChange: hideCompendium,
     requiresReload: true,
   });
 
