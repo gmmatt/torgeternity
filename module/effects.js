@@ -3,12 +3,13 @@
  * @param event
  * @param owner
  */
-export function onManageActiveEffect(event, button, owner) {
+export async function onManageActiveEffect(event, button, owner) {
   event.preventDefault();
   const a = event.target;
   const li = button.closest('li');
   if (!li) return;
-  const effect = fromUuidSync(li.dataset.effectUuid);
+  // not fromUuidSync, in case we are editing a compendium document
+  const effect = await fromUuid(li.dataset.effectUuid);
   if (!effect) return;
 
   switch (button.dataset.control) {
