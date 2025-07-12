@@ -165,7 +165,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
 /* Actor/Item/Journal sheet */
 .actor.sheet.torgeternity .window-content,
-item.sheet.torgeternity .window-content {
+.item.sheet.torgeternity .window-content {
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   padding: 8px 0px 8px 8px;
