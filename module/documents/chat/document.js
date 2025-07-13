@@ -31,6 +31,8 @@ class ChatMessageTorg extends ChatMessage {
           `torgeternity.skills.${templateData.system?.skill}`
         );
 
+      templateData.isOpen = game.settings.get('torgeternity', 'showCheckDetails') ? "open" : "";
+
       const renderedTemplate = await foundry.applications.handlebars.renderTemplate(template, templateData);
       const enrichedHTML = await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate);
       html.querySelector('.message-content').innerHTML = enrichedHTML;
