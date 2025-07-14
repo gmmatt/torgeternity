@@ -317,7 +317,7 @@ Hooks.on("renderSettings", async (app, html) => {
   button.dataset.action = "showTorgLinks";
 
   const icon = document.createElement("img");
-  icon.setAttribute('src', '/systems/torgeternity/images/te-logo.webp');
+  icon.setAttribute('src', 'systems/torgeternity/images/te-logo.webp');
   icon.inert = true;
   button.append(icon);
   systemRow.insertAdjacentElement("afterend", button);
