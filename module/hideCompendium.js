@@ -1,9 +1,26 @@
+
 /**
- *
- * @param defaultLang
- * @param tabDirectory
+ * Monkey-patch the core CompendiumCollection.visible so that we can help control visibility.
  */
+export async function initHideCompendium() {
+  // Monkey-patch CompendiumCollection.visible getter
+  Object.defineProperty(foundry.documents.collections.CompendiumCollection.prototype, 'visible',
+    {
+      get() {
+        // Copy of CompendiumCollection.visible
+        if (this.getUserLevel() < CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER)
+          return false;
+        if (!game.settings.get('torgeternity', 'hideForeignCompendium'))
+          return true;
+        return !this.config.hideLanguage;
+      }
+    });
+}
+
+
 export async function hideCompendium() {
+
+  // Mark which compendiums are to be controlled.
   let langKeys;
   switch (game.settings.get('core', 'language')) {
     case 'en':
@@ -20,41 +37,11 @@ export async function hideCompendium() {
       langKeys = ['(en)', '(de)', '(fr)'];
   }
 
-  const hidden_ownership = {
-    GAMEMASTER: "NONE",
-    ASSISTANT: "NONE",
-    PLAYER: "NONE"
-  }
-  const normal_ownership = {
-    ASSISTANT: "OWNER",
-    PLAYER: "OBSERVER"
-  }
-
-  const hiding = game.settings.get('torgeternity', 'hideForeignCompendium');
-  const ownership = hiding ? hidden_ownership : normal_ownership;
-
-  for (const pack of game.packs) {
+  for (const pack of game.packs)
     for (const key of langKeys)
-      if (pack.metadata.label.includes(key)) {
-        let update = { ownership };
-        if (hiding) {
-          await pack.configure({
-            "originalOwnership": pack.ownership,
-            ownership: {
-              GAMEMASTER: "NONE",
-              ASSISTANT: "NONE",
-              PLAYER: "NONE"
-            },
-          });
-        } else {
-          await pack.configure({
-            ownership: pack.config.originalOwnership ?? {
-              ASSISTANT: "OWNER",
-              PLAYER: "OBSERVER"
-            }
-          });
-        }
-        console.warn(`${pack.metadata.id} -> ${pack.metadata.label} -> `, ownership);
-      }
-  }
+      if (pack.metadata.label.includes(key))
+        await pack.configure({ 'hideLanguage': true });
+
+  game.packs.initializeTree();
+  ui.compendium.render();
 }

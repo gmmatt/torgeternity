@@ -57,7 +57,6 @@ export function registerTorgSettings() {
     type: Boolean,
     default: false,
     onChange: hideCompendium,
-    requiresReload: true,
   });
 
   // Show always details in Chatcards or keep it tugged in

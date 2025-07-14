@@ -18,6 +18,7 @@
 - Show **all effects** on the Actor sheets, including effects from owned Items.
 - Enforce `cosm` as a mandatory field (`none` is the default) and use `{{formInput}}` for it on all sheets.
 - Lots of refactoring of code (to make further improvements easier).
+- Toggling 'Hide Foreign Compendiums' is more efficient and no longer requires a Foundry reload.
 
 ### Bug Fixes
 

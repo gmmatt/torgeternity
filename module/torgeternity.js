@@ -42,6 +42,7 @@ import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
 import InitEnrichers from './enrichers.js';
+import { initHideCompendium, hideCompendium } from './hideCompendium.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -136,6 +137,10 @@ Hooks.once('init', async function () {
   initTorgControlButtons();
   // create torg shortcuts
   createTorgShortcuts();
+
+  // Foundry#initializePacks is called just before the 'setup' hook
+  // But needs to be after 'ready' to set properties on compendiums.
+  initHideCompendium();
 });
 
 Hooks.once('i18nInit', () => {
@@ -175,6 +180,7 @@ Hooks.once('i18nInit', () => {
 })
 
 Hooks.once('setup', async function () {
+
   modifyTokenBars();
   InitEnrichers();
   // changing stutus marker
@@ -207,6 +213,10 @@ Hooks.on("renderUIConfig", (config, html, context, options) => {
 
 // -------------once everything ready
 Hooks.on('ready', async function () {
+
+  // Foundry#initializePacks is called just before the 'setup' hook
+  // But needs to be after 'ready' to set properties on compendiums.
+  hideCompendium();
 
   /*
   // Force DARK application colour scheme
