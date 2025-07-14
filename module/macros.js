@@ -216,14 +216,13 @@ export class TorgeternityMacros {
    * @param html
    */
   async _rollItBDs(event, button, dialog) {
-    const { localize } = game.i18n;
     try {
       const formElement = dialog.element.querySelector('form');
       const formData = new foundry.applications.ux.FormDataExtended(formElement);
       const diceAmount = parseInt(formData.object.inputValue);
 
       if (isNaN(diceAmount)) {
-        ui.notifications.error(localize('torgeternity.macros.commonMacroNoValue'));
+        ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoValue'));
         return;
       }
 
@@ -231,10 +230,12 @@ export class TorgeternityMacros {
 
       if (game.dice3d) await game.dice3d.showForRoll(diceroll);
 
-      let chatOutput = `<p>${localize('torgeternity.macros.bonusDieMacroResult1')} ${diceAmount} ${localize('torgeternity.chatText.bonusDice')} ${localize('torgeternity.macros.bonusDieMacroResult2')} ${diceroll.total}.</p>`;
+      let chatOutput = `<p>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult1')} 
+      ${diceAmount} ${game.i18n.localize('torgeternity.chatText.bonusDice')} 
+      ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult2')} ${diceroll.total}.</p>`;
 
       if (game.user.targets.size === 0) {
-        chatOutput += `<p>${localize('torgeternity.macros.bonusDieMacroNoTokenTargeted')}</p>`;
+        chatOutput += `<p>${game.i18n.localize('torgeternity.macros.bonusDieMacroNoTokenTargeted')}</p>`;
         console.log('No targets, creating chat Message, leaving Macro.');
         ChatMessage.create({ content: chatOutput });
         return;
@@ -243,10 +244,10 @@ export class TorgeternityMacros {
       chatOutput += `<ul>`;
       for (const token of game.user.targets) {
         const tokenDamage = torgDamage(diceroll.total, token.actor.defenses.toughness);
-        chatOutput += `<li>${localize('torgeternity.macros.bonusDieMacroResult3')}  ${token.document.name} `;
+        chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')}  ${token.document.name} `;
         chatOutput += (tokenDamage.shocks > 0) ?
-          `${localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label}` :
-          localize('torgeternity.macros.bonusDieMacroResultNoDamage');
+          `${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label}` :
+          game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage');
         chatOutput += `.</li>`;
       }
       chatOutput += '</ul>';
