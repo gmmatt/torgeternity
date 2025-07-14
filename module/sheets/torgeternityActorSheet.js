@@ -801,6 +801,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: item,
+        itemId: item.id,  // for Automated Animations module
         torgeternity: {
           template: TorgeternityItem.CHAT_TEMPLATE[item.type],
         }
@@ -921,7 +922,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       chatNote: weaponData.chatNote,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-      item: item,
+      itemId: item.id,
     }, { useTargets: true });
   }
 
@@ -966,6 +967,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       bdDamageLabelStyle: 'display:none',
       amountBD: 0,
       bdDamageSum: 0,
+      itemId: item.id,
     }, { useTargets: true });
   }
 

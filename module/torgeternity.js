@@ -589,7 +589,7 @@ function rollItemMacro(itemName) {
           testType: 'attack',
           actor: actor.uuid,
           actorType: actor.type,
-          item: item,
+          itemId: item.id,
           isAttack: true,
           amountBD: 0,
           isFav: skillData.isFav,

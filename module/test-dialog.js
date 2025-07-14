@@ -264,10 +264,12 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         // Add Burst Modifier
         this.test.burstModifier = fields.burstModifier;
 
+        const myActor = fromUuidSync(this.test.actor);
+        const myItem = this.test.itemId ? myActor.items.get(this.test.itemId) : null;
         if (
-          this.test.item?.weaponWithAmmo &&
+          myItem?.weaponWithAmmo &&
           this.test.burstModifier > 0 &&
-          !this.test.item.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
+          !myItem.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
         ) {
           ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
           return;

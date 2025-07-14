@@ -38,15 +38,17 @@ export async function renderSkillChat(test) {
     }
   }
 
+  const testActor = fromUuidSync(test.actor);
+  const testItem = test.itemId ? testActor.items.get(test.itemId) : null;
+
   // Handle ammo, if not opt-out. First, check if there is enough ammo, then reduce it.
-  if (test.item?.weaponWithAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
-    await test?.item.reduceAmmo(test.burstModifier, test.targetAll?.length);
+  if (testItem?.weaponWithAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
+    await testItem.reduceAmmo(test.burstModifier, test.targetAll?.length);
     test.ammoLabel = 'display:table-row';
   } else {
     test.ammoLabel = 'display:none';
   }
 
-  const testActor = fromUuidSync(test.actor);
 
   const uniqueDN = game.settings.get('torgeternity', 'uniqueDN') ? await highestDN(test) : undefined;
   let first = true;
@@ -615,6 +617,7 @@ export async function renderSkillChat(test) {
       flags: {
         torgeternity: {
           test,
+          itemId: test.itemId,  // for Automated Animations module
           template: 'systems/torgeternity/templates/chat/skill-card.hbs',
         },
       },
