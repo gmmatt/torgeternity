@@ -345,8 +345,8 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     /* Check for exceeding shock and/or wounds */
 
     if (options.woundsExceeded) {
-      if (this.type === 'stormknight' && game.settings.get('torgeternity', 'autoPromptDefeat'))
-        this.attemptDefeat();
+      if (this.type === 'stormknight')
+        this.notifyDefeat();
       else if (game.settings.get('torgeternity', 'autoWound'))
         this.toggleStatusEffect('dead', { active: true, overlay: true });
     }
@@ -517,7 +517,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     return result;
   }
 
-  async attemptDefeat() {
+  async notifyDefeat() {
     const attribute = (this.system.attributes.spirit.value < this.system.attributes.strength.value) ? 'spirit' : 'strength';
 
     const html = `<p>${game.i18n.format('torgeternity.defeat.prompt', { name: this.name })}

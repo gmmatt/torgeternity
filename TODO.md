@@ -3,7 +3,6 @@
 ### 13.1.0
 - `torgeternity.defeat.prompt` - for Defeat Test - appears before the test dialog (uses `{name}`)
 - `torgeternity.defeat.outstanding/good/standard/failure` - for Defeat message results (uses `{name}`)
-- `torgeternity.settingMenu.autoShock/autoWound/autoPromptDefeat.(name/hint)` - to configure whether KO/Death/Defeat are automated
 
 ### 13.0.2
 - `torgeternity.settingMenu.cardChatNotify` (name & hint)

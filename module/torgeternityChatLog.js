@@ -287,7 +287,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     chatMessage.unsetFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
     test.unskilledLabel = 'hidden';
-    test.bdDamageLabelStyle = 'display:block';
+    test.bdDamageLabelStyle = '';
 
     const finalValue = await rollBonusDie(test.trademark, 1);
 

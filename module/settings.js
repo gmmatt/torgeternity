@@ -244,13 +244,4 @@ export function registerTorgSettings() {
     type: Boolean,
     default: true
   });
-
-  game.settings.register('torgeternity', 'autoPromptDefeat', {
-    name: 'torgeternity.settingMenu.autoPromptDefeat.name',
-    hint: 'torgeternity.settingMenu.autoPromptDefeat.hint',
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true
-  });
 }

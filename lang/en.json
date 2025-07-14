@@ -681,10 +681,6 @@
       "autoWound": {
         "name": "Automatically Apply Wounds",
         "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
-      },
-      "autoPromptDefeat": {
-        "name": "Prompt for Defeat",
-        "hint": "Automatically prompt for a Defeat Test for Stormknights when their wounds are exceeded"
       }
     },
     "sheetLabels": {
