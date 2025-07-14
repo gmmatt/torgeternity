@@ -651,7 +651,7 @@ function torgBonus(rollTotal) {
  * @param amount The amount of BDs that is ought to roll
  */
 export async function rollBonusDie(isTrademark, amount = 1) {
-  return await new Roll(`${amount}d6${isTrademark ? 'rr1' : ''} x6max5`).evaluate();
+  return await new Roll(`${amount}d6${isTrademark ? 'rr1' : ''}x6max5`).evaluate();
 }
 
 /**
