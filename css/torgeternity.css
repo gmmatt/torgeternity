@@ -4112,7 +4112,7 @@ body {
   --sidebar-width: 380px;
 }
 
-.sidebar-tab.combat-sidebar {
+.sidebar-tab {
   background-image: url(../images/thunder.webp);
 }
 
