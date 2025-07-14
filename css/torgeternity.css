@@ -4114,6 +4114,10 @@ body {
 
 .sidebar-tab.combat-sidebar {
   background-image: url(../images/thunder.webp);
+
+  img.token-effect {
+    --token-effect-filter: none;
+  }
 }
 
 div#interface.theme-dark .sidebar-tab {
