@@ -18,17 +18,20 @@
 - Show **all effects** on the Actor sheets, including effects from owned Items.
 - Enforce `cosm` as a mandatory field (`none` is the default) and use `{{formInput}}` for it on all sheets.
 - Lots of refactoring of code (to make further improvements easier).
-- Toggling 'Hide Foreign Compendiums' is more efficient and no longer requires a Foundry reload.
-- provide basic integration for Automated Animations.
-- only store ItemId in test, not the full test object.
+- Toggling **Hide Foreign Compendiums** is more efficient and no longer requires a Foundry reload.
+- Provide basic integration for **Automated Animations**.
+- Only store ItemId in test, not the full test object.
 
 ### Bug Fixes
 
-- #520 Player List now displayed when on GM is logged in.
-- #521 for French language status markers.
-- #522 Equipping armour did not unequip other armour.
-- #523 Toggling equipped gear would jump scroll to start of list.
-- #524 to get correct colour in list banners.
+- #520 Player List now displayed when on GM is logged in
+- #521 for French language status markers
+- #522 Equipping armour did not unequip other armour
+- #523 Toggling equipped gear would jump scroll to start of list
+- #524 to get correct colour in list banners
+- #525 Dragon Warrior had too many buffs to Strength
+- #526 Get "Show Details in Checks" working
+- #527 Provide compatibility with Automated Animations
 
 ## v13.0.2
 
