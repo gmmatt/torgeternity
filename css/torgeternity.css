@@ -3013,6 +3013,10 @@ div.readme a.compendium {
     font-size: 12px;
   }
 
+  .skill-roll-menu a.button {
+    font-family: "Palatino Linotype";
+  }
+
   .skill-roll-damage-label {
     font-family: "Palatino Linotype";
     font-size: 18px;
@@ -3118,27 +3122,31 @@ p.skill-chat-title.skilled {
   justify-content: space-around;
 }
 
-.applyDam,
-.soakDam,
-.applyStymied,
-.applyVulnerable,
-.backlash1,
-.backlash2,
-.backlash3,
-.chat-message .roll-fav,
-.chat-message .roll-possibility,
-.chat-message .roll-up,
-.chat-message .roll-hero,
-.chat-message .roll-drama,
-.chat-message .add-plus3,
-.chat-message .add-bd {
+.chat-message .roll-button {
   border: black 1px solid;
   border-radius: 1rem;
-  text-align: center;
   padding: 4px;
+  font-size: 12px;
   font-weight: bold;
   white-space: nowrap;
   margin-bottom: 7px;
+
+  &.disabled {
+    pointer-events: none;
+    color: gray;
+  }
+}
+
+.chat-message .hidden {
+  display: none;
+}
+
+.chat-message h4 {
+  font-family: Alaska;
+}
+
+.chat-message .applyButtons a.button {
+  font-family: Alaska;
 }
 
 /* Styles limited to torg sheets */

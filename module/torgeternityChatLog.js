@@ -1,7 +1,7 @@
 import { renderSkillChat } from './torgchecks.js';
 import { rollBonusDie } from './torgchecks.js';
 import { torgDamage } from './torgchecks.js';
-import { soakDamages } from './torgchecks.js';
+import { TestResult, soakDamages } from './torgchecks.js';
 import { TestDialog } from './test-dialog.js';
 
 const { DialogV2 } = foundry.applications.api;
@@ -25,6 +25,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'backlash1': TorgeternityChatLog.#applyBacklash1,
       'backlash2': TorgeternityChatLog.#applyBacklash2,
       'backlash3': TorgeternityChatLog.#applyBacklash3,
+      'testDefeat': TorgeternityChatLog.#testDefeat,
     }
   }
 
@@ -56,14 +57,14 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     chatMessage.unsetFlag('torgeternity', 'test');
 
     // reRoll because favored
-    test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+    test.isFavStyle = 'hidden';
 
     const diceroll = await new Roll('1d20x10x20').evaluate();
     test.diceroll = diceroll;
     test.rollTotal = Math.max(test.diceroll.total, 1.1);
     test.isFav = false;
 
-    test.unskilledLabel = 'display:none';
+    test.unskilledLabel = 'hidden';
 
     await renderSkillChat(test);
     this.parentDeleteByTime(chatMessage);
@@ -117,12 +118,12 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     test.parentId = chatMessageId;
     chatMessage.setFlag('torgeternity', 'test');
-    test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+    test.isFavStyle = 'hidden';
 
     // Roll for Possibility
     // possibilities is allowed 2 times (case in Nile Empire)
     if (test.possibilityTotal > 0) {
-      test.possibilityStyle = 'pointer-events:none;color:gray';
+      test.possibilityStyle = 'disabled';
     } else {
       test.chatTitle += '*';
     }
@@ -142,7 +143,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
         currentCosms[0] === undefined
       )
     ) {
-      test.possibilityStyle = 'pointer-events:none;color:gray';
+      test.possibilityStyle = 'disabled';
     }
 
     this.parentDeleteByTime(chatMessage);
@@ -156,7 +157,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
     test.diceroll = diceroll;
 
-    test.unskilledLabel = 'display:none';
+    test.unskilledLabel = 'hidden';
     // add chat note "poss spent"
     test.chatNote += game.i18n.localize('torgeternity.sheetLabels.possSpent');
 
@@ -170,7 +171,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     chatMessage.setFlag('torgeternity', 'test');
-    test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+    test.isFavStyle = 'hidden';
 
     // Roll for Up
     this.parentDeleteByTime(chatMessage);
@@ -185,7 +186,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = diceroll;
 
     test.chatTitle += '*';
-    test.unskilledLabel = 'display:none';
+    test.unskilledLabel = 'hidden';
 
     await renderSkillChat(test);
   }
@@ -198,7 +199,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
     test.parentId = chatMessageId;
     chatMessage.setFlag('torgeternity', 'test');
-    test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+    test.isFavStyle = 'hidden';
 
     // Roll for Possibility
     this.parentDeleteByTime(chatMessage);
@@ -215,7 +216,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = diceroll;
 
     test.chatTitle += '*';
-    test.unskilledLabel = 'display:none';
+    test.unskilledLabel = 'hidden';
 
     await renderSkillChat(test);
   }
@@ -227,7 +228,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     chatMessage.setFlag('torgeternity', 'test');
-    test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+    test.isFavStyle = 'hidden';
 
     // Increase cards played by 1
     this.parentDeleteByTime(chatMessage);
@@ -244,7 +245,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = diceroll;
 
     test.chatTitle += '*';
-    test.unskilledLabel = 'display:none';
+    test.unskilledLabel = 'hidden';
 
     await renderSkillChat(test);
   }
@@ -256,7 +257,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     chatMessage.setFlag('torgeternity', 'test');
-    test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+    test.isFavStyle = 'hidden';
 
     // Add 1 to cards played
     test.cardsPlayed++;
@@ -264,7 +265,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     // Nullify Diceroll
     test.diceroll = null;
 
-    test.unskilledLabel = 'display:none';
+    test.unskilledLabel = 'hidden';
     this.parentDeleteByTime(chatMessage);
 
     await renderSkillChat(test);
@@ -277,15 +278,15 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     test.targetAll = [test.target];
-    test.possibilityStyle = 'display:none';
-    test.upStyle = 'display:none';
-    test.dramaStyle = 'display:none';
-    test.heroStyle = 'display:none';
-    test.isFavStyle = 'display:none';
-    test.plus3Style = 'display:none';
+    test.possibilityStyle = 'hidden';
+    test.upStyle = 'hidden';
+    test.dramaStyle = 'hidden';
+    test.heroStyle = 'hidden';
+    test.isFavStyle = 'hidden';
+    test.plus3Style = 'hidden';
     chatMessage.unsetFlag('torgeternity', 'test');
-    test.isFavStyle = 'pointer-events:none;color:gray;display:none';
-    test.unskilledLabel = 'display:none';
+    test.isFavStyle = 'hidden';
+    test.unskilledLabel = 'hidden';
     test.bdDamageLabelStyle = 'display:block';
 
     const finalValue = await rollBonusDie(test.trademark, 1);
@@ -464,6 +465,69 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const actor = fromUuidSync(getMessage(button).test.actor);
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
     return actor.setVeryStymied();
+  }
+
+  static async #testDefeat(event, button) {
+    event.preventDefault();
+    const attribute = button.dataset.control;
+    const chatMessageId = button.closest('.chat-message').dataset.messageId;
+    const chatMessage = game.messages.get(chatMessageId);
+    const actor = game.actors.get(chatMessage.speaker.actor);
+
+    const response = await TestDialog.asPromise({
+      DNDescriptor: 'standard',
+
+      actor: actor.uuid,
+      actorPic: actor.img,
+      actorName: actor.name,
+      actorType: actor.type,
+
+      testType: 'attribute',
+      skillName: attribute,
+      skillValue: actor.system.attributes[attribute].value,
+      rollTotal: 0,
+
+      bdDamageLabelStyle: 'hidden',
+      bdDamageSum: 0,
+    });
+    if (!response) return;
+
+    const result = response.flags.torgeternity.test.result;
+
+    let message;
+
+    if (result < TestResult.STANDARD) {
+      message = 'torgeternity.defeat.failure';
+      actor.toggleStatusEffect('dead', { active: true, overlay: true });
+    } else {
+
+      await actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
+
+      switch (result) {
+        case TestResult.OUTSTANDING:
+          message = 'torgeternity.defeat.outstanding';
+          break;
+
+        case TestResult.GOOD:
+          // Suffers an **Injury** lasting until all his Wounds are healed
+          message = 'torgeternity.defeat.good';
+          break;
+
+        case TestResult.STANDARD:
+          // Permanent **Injury**
+          message = 'torgeternity.defeat.standard';
+          break;
+      }
+    }
+
+    const formattedMessage = game.i18n.format(message, { name: actor.name });
+    ui.notifications.info(formattedMessage);
+    ChatMessage.create({
+      user: game.user.id,
+      speaker: ChatMessage.getSpeaker(),
+      owner: actor,
+      content: formattedMessage
+    })
   }
 }
 

@@ -1,6 +1,3 @@
-import { TestResult } from '../../torgchecks.js';
-import { TestDialog } from '../../test-dialog.js';
-
 /**
  *
  */
@@ -342,25 +339,16 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       }
     }
 
-    /* Special check to prompt the OWNER for a Defeat check */
-    if (options.woundsExceeded &&
-      this.type === 'stormknight' &&
-      game.settings.get('torgeternity', 'autoPromptDefeat') &&
-      game.user.character === this) {
-      this.attemptDefeat();
-    }
-
     // No further if we didn't initiate the update
     if (game.userId !== userId) return;
 
     /* Check for exceeding shock and/or wounds */
 
     if (options.woundsExceeded) {
-      // StormKnight tests for Defeat
-      if (this.type !== 'stormknight') {
-        if (game.settings.get('torgeternity', 'autoWound'))
-          this.toggleStatusEffect('dead', { active: true, overlay: true });
-      }
+      if (this.type === 'stormknight' && game.settings.get('torgeternity', 'autoPromptDefeat'))
+        this.attemptDefeat();
+      else if (game.settings.get('torgeternity', 'autoWound'))
+        this.toggleStatusEffect('dead', { active: true, overlay: true });
     }
 
     if (options.shockExceeded && !this.hasStatusEffect('dead') && game.settings.get('torgeternity', 'autoShock')) {
@@ -530,70 +518,23 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   async attemptDefeat() {
-    // Make immediate DN 10 Strength or Spirit test (whichever is lowest!)
-    // Failure => death
-    // Standard => Knocked Out & suffer permanent injury
-    // Good => Knocked Out & suffer injury that last unil all wounds are healed
-    // Outstanding => Knocked Out
     const attribute = (this.system.attributes.spirit.value < this.system.attributes.strength.value) ? 'spirit' : 'strength';
 
-    const prompt = game.i18n.format('torgeternity.defeat.prompt', { name: this.name });
-    ui.notifications.warn(prompt);
-    ChatMessage.create({ content: prompt });
+    const html = `<p>${game.i18n.format('torgeternity.defeat.prompt', { name: this.name })}
+    <div class="skill-roll-menu">
+     <a class="button roll-button roll-defeat ${(attribute === 'strength') && 'disabled'}"
+     data-action="testDefeat" data-control="spirit" }>
+     ${game.i18n.localize('torgeternity.attributes.spirit')}
+     </a>
+     <a class="button roll-button roll-defeat ${(attribute === 'spirit') && 'disabled'}" 
+     data-action="testDefeat" data-control="strength" >
+     ${game.i18n.localize('torgeternity.attributes.strength')}
+     </a>
+     </div>`;
 
-    const response = await TestDialog.asPromise({
-      DNDescriptor: 'standard',
-
-      actor: this.uuid,
-      actorPic: this.img,
-      actorName: this.name,
-      actorType: this.type,
-
-      testType: 'attribute',
-      skillName: attribute,
-      skillValue: this.system.attributes[attribute].value,
-      rollTotal: 0,
-
-      bdDamageLabelStyle: 'display:none',
-      bdDamageSum: 0,
-    });
-    if (!response) return;
-
-    const result = response.flags.torgeternity.test.result;
-
-    let message;
-
-    if (result < TestResult.STANDARD) {
-      message = 'torgeternity.defeat.failure';
-      this.toggleStatusEffect('dead', { active: true, overlay: true });
-    } else {
-
-      await this.toggleStatusEffect('unconscious', { active: true, overlay: true });
-
-      switch (result) {
-        case TestResult.OUTSTANDING:
-          message = 'torgeternity.defeat.outstanding';
-          break;
-
-        case TestResult.GOOD:
-          // Suffers an **Injury** lasting until all his Wounds are healed
-          message = 'torgeternity.defeat.good';
-          break;
-
-        case TestResult.STANDARD:
-          // Permanent **Injury**
-          message = 'torgeternity.defeat.standard';
-          break;
-      }
-    }
-
-    const formattedMessage = game.i18n.format(message, { name: this.name });
-    ui.notifications.info(formattedMessage);
     ChatMessage.create({
-      user: game.user.id,
-      speaker: ChatMessage.getSpeaker(),
-      owner: this,
-      content: formattedMessage
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      content: html
     })
   }
   /**

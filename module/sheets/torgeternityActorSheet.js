@@ -503,7 +503,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillName: (button.dataset.testtype === 'attribute') ? attributeName : skillName,
       skillValue: skillValue,
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
   }
@@ -541,7 +541,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillName: skillName,
       skillValue: skillValue,
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
   }
@@ -569,7 +569,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
   }
@@ -591,7 +591,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
   }
@@ -617,7 +617,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
   }
@@ -668,7 +668,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       DNDescriptor: dnDescriptor,
       type: 'interactionAttack',
       rollTotal: 0,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
   }
@@ -718,7 +718,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       applySize: true,
       attackOptions: true,
       rollTotal: 0,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'dishiddene',
       bdDamageSum: 0,
       amountBD: 0,
     }, { useTargets: true });
@@ -755,7 +755,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       unskilledUse: true,
       type: 'activeDefense',
       rollTotal: 0,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
   }
@@ -920,7 +920,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       attackOptions: true,
       rollTotal: 0,
       chatNote: weaponData.chatNote,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
       itemId: item.id,
     }, { useTargets: true });
@@ -964,7 +964,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       applySize: powerData.applySize,
       attackOptions: true,
       rollTotal: 0,
-      bdDamageLabelStyle: 'display:none',
+      bdDamageLabelStyle: 'dihiddene',
       amountBD: 0,
       bdDamageSum: 0,
       itemId: item.id,

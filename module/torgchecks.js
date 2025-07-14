@@ -22,11 +22,11 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
-  test.applyDebuffLabel = 'display:none';
-  test.applyDamLabel = 'display:none';
-  test.backlashLabel = 'display:none';
+  test.applyDebuffLabel = 'hidden';
+  test.applyDamLabel = 'hidden';
+  test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
-  test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
+  test.bdDamageLabelStyle = test.bdDamageSum ? '' : 'hidden';
   let iteratedRoll;
 
   for (const target of test.targetAll) {
@@ -46,7 +46,7 @@ export async function renderSkillChat(test) {
     await testItem.reduceAmmo(test.burstModifier, test.targetAll?.length);
     test.ammoLabel = 'display:table-row';
   } else {
-    test.ammoLabel = 'display:none';
+    test.ammoLabel = 'hidden';
   }
 
 
@@ -116,7 +116,7 @@ export async function renderSkillChat(test) {
       test.customSkill !== 'true' &&
       !testActor.system.skills[test.skillName].adds);
 
-    test.unskilledLabel = test.unskilledTest ? 'display:block' : 'display:none';
+    test.unskilledLabel = test.unskilledTest ? '' : 'hidden';
 
     // Generate roll, if needed
     if (test.rollTotal === 0 && !test.previousBonus) {
@@ -130,7 +130,7 @@ export async function renderSkillChat(test) {
         test.chatNote += game.i18n.localize('torgeternity.sheetLabels.favDis');
       }
       if (!test.isFav) {
-        test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+        test.isFavStyle = 'hidden';
       }
       if (test.disfavored) {
         // even if explosion occured, we keep first die
@@ -179,7 +179,7 @@ export async function renderSkillChat(test) {
     }
 
     // Add plus label if number is positive
-    test.bonusPlusLabel = (test.bonus >= 1) ? 'display:inline' : 'display:none';
+    test.bonusPlusLabel = (test.bonus >= 1) ? '' : 'hidden';
 
     function modifierString(label, value) {
       let result = game.i18n.localize(label);
@@ -335,10 +335,9 @@ export async function renderSkillChat(test) {
     }
 
     if (test.displayModifiers) {
-      test.modifierLabel = 'display:';
       test.modifierText = `<p>${test.modifierText}</p>`;
     } else {
-      test.modifierLabel = 'display:none';
+      test.modifierStyle = 'hidden';
     }
 
     // Add +3 cards to bonus
@@ -385,13 +384,13 @@ export async function renderSkillChat(test) {
     }
 
     // Turn on + sign for modifiers?
-    test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'display:none';
+    test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
 
     // Choose Text to Display as Result
     if (testActor.isDisconnected) {
-      test.possibilityStyle = 'display:none';
-      test.heroStyle = 'display:none';
-      test.dramaStyle = 'display:none';
+      test.possibilityStyle = 'hidden';
+      test.heroStyle = 'hidden';
+      test.dramaStyle = 'hidden';
     }
 
     if (
@@ -407,22 +406,22 @@ export async function renderSkillChat(test) {
         test.outcomeColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
         test.resultTextColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
-      test.actionTotalLabel = 'display:none';
-      test.possibilityStyle = 'display:none';
-      test.upStyle = 'display:none';
-      test.dramaStyle = 'display:none';
-      test.heroStyle = 'display:none';
-      test.isFavStyle = 'display:none';
-      test.bdStyle = 'display:none';
-      test.plus3Style = 'display:none';
+      test.actionTotalLabel = 'hidden';
+      test.possibilityStyle = 'hidden';
+      test.upStyle = 'hidden';
+      test.dramaStyle = 'hidden';
+      test.heroStyle = 'hidden';
+      test.isFavStyle = 'hidden';
+      test.bdStyle = 'hidden';
+      test.plus3Style = 'hidden';
       if (test.testType === 'soak')
         test.chatNote =
           game.i18n.localize('torgeternity.sheetLabels.soakNull') +
           game.i18n.localize('torgeternity.sheetLabels.possSpent');
-      test.applyDamLabel = 'display:none';
+      test.applyDamLabel = 'hidden';
 
     } else if (test.testType === 'soak') {
-      test.applyDamLabel = 'display:none';
+      test.applyDamLabel = 'hidden';
       test.resultText = test.outcome;
       test.resultTextColor = test.outcomeColor;
       if (test.soakWounds > 0) {
@@ -456,7 +455,7 @@ export async function renderSkillChat(test) {
         await testActor.setActiveDefense(test.bonus);
         test.testType = 'activeDefenseUpdate';
         test.resultText = '+ ' + test.bonus;
-        test.actionTotalLabel = 'display:none';
+        test.actionTotalLabel = 'hidden';
       }
 
     } else if (test.testType === 'activeDefenseUpdate') {
@@ -475,7 +474,6 @@ export async function renderSkillChat(test) {
 
     // If an attack, calculate and display damage
     if (test.isAttack) {
-      test.damageLabel = 'display: block';
       // Add damage modifier for vital area hits, if necessary
       let adjustedDamage = test.damage;
       if (test.vitalAreaDamageModifier) {
@@ -487,7 +485,6 @@ export async function renderSkillChat(test) {
       }
       // Check for whether a target is present and turn on display of damage sub-label
       if (test?.target?.present) {
-        test.damageSubLabel = 'display:block';
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor) {
           test.targetAdjustedToughness =
@@ -501,7 +498,7 @@ export async function renderSkillChat(test) {
         // Generate damage description and damage sublabel
         if (test.result < TestResult.STANDARD) {
           test.damageDescription = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
-          test.applyDamLabel = 'display:none';
+          test.applyDamLabel = 'hidden';
           test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
@@ -514,7 +511,7 @@ export async function renderSkillChat(test) {
 
             test.chatTitle += ` + ${test.amountBD} ${game.i18n.localize('torgeternity.chatText.bonusDice')}`;
 
-            test.bdDamageLabelStyle = 'display: block';
+            test.bdDamageLabelStyle = '';
             test.bdDamageSum += test.BDDamageInPromise;
 
             test.damage += test.BDDamageInPromise;
@@ -532,16 +529,16 @@ export async function renderSkillChat(test) {
         }
       } else {
         // Basic roll
-        test.damageSubLabel = 'display:none';
+        test.damageSubLabel = 'hidden';
         test.damageDescription = `${adjustedDamage} ${game.i18n.localize('torgeternity.chatText.check.result.damage')}`;
       }
     } else {
-      test.damageLabel = 'display:none';
-      test.damageSubLabel = 'display:none';
+      test.damageLabel = 'hidden';
+      test.damageSubLabel = 'hidden';
     }
 
     // Remind Player to Check for Disconnect?
-    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal != undefined) ? 'display:block' : 'display:none';
+    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal != undefined) ? '' : 'hidden';
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
     if (
@@ -552,50 +549,50 @@ export async function renderSkillChat(test) {
       test.testType === 'vehicleBase'
     ) {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
-      test.bdStyle = 'display:none';
+      test.bdStyle = 'hidden';
     } else if (test.testType === 'attack') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
     } else if (test.testType === 'power') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
-      test.bdStyle = test.isAttack ? 'display:' : 'display:none';
+      test.bdStyle = test.isAttack ? '' : 'hidden';
     } else if (test.testType === 'custom') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
-      test.outcomeColor = 'display:none;';
-      test.resultTextColor = 'display:none;';
-      test.bdStyle = 'display:block';
-      test.upStyle = 'display:none';
+      test.outcomeColor = 'hidden;';
+      test.resultTextColor = 'display:hidden;';
+      test.bdStyle = '';
+      test.upStyle = 'hidden';
     } else {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.attributeTestLabel');
-      test.bdStyle = 'display:none';
+      test.bdStyle = 'hidden';
     }
     test.typeLabel += ' ';
 
     // Display cards played label?
-    test.cardsPlayedLabel = (parseInt(test.cardsPlayed) > 0) ? 'display:' : 'display:none';
+    test.cardsPlayedLabel = (parseInt(test.cardsPlayed) > 0) ? '' : 'hidden';
 
     // Disable unavailable menu options (Note: possibilities are always available)
 
-    if (test.upTotal > 0) test.upStyle = 'pointer-events:none;color:gray';
-    if (test.heroTotal > 0) test.heroStyle = 'pointer-events:none;color:gray';
-    if (test.dramaTotal > 0) test.dramaStyle = 'pointer-events:none;color:gray';
+    if (test.upTotal > 0) test.upStyle = 'disabled';
+    if (test.heroTotal > 0) test.heroStyle = 'disabled';
+    if (test.dramaTotal > 0) test.dramaStyle = 'disabled';
 
     if (test.actorType === 'threat') {
-      test.heroStyle = 'display:none';
-      test.dramaStyle = 'display:none';
-      test.plus3Style = 'display:none';
+      test.heroStyle = 'hidden';
+      test.dramaStyle = 'hidden';
+      test.plus3Style = 'hidden';
     }
 
     // Display chat notes label?
 
-    test.notesLabel = test.chatNote ? 'display:' : 'display:none';
+    test.notesLabel = test.chatNote ? '' : 'hidden';
 
     if (test.testType === 'interactionAttack') {
       if (test.rollResult - test.DN >= 0) {
-        test.damageSubLabel = 'display:block';
-        test.applyDamLabel = 'display:none';
+        test.damageSubLabel = '';
+        test.applyDamLabel = 'hidden';
         if (test.target.present) test.applyDebuffLabel = 'display:inline';
       } else {
-        test.applyDebuffLabel = 'display:none';
+        test.applyDebuffLabel = 'hidden';
         // test.damageSubDescription = "Apply debuff";//localize('torgeternity.chatText.check.result.damage')
       }
     }

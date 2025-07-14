@@ -611,7 +611,7 @@ function rollItemMacro(itemName) {
           applySize: true,
           attackOptions: true,
           chatNote: weaponData.chatNote,
-          bdDamageLabelStyle: 'display:none',
+          bdDamageLabelStyle: 'hidden',
           bdDamageSum: 0,
         }, { useTargets: true });
       }
@@ -647,7 +647,7 @@ function rollItemMacro(itemName) {
           applySize: powerData.applySize,
           attackOptions: true,
           rollTotal: 0,
-          bdDamageLabelStyle: 'display:none',
+          bdDamageLabelStyle: 'hidden',
           bdDamageSum: 0,
         }, { useTargets: true });
       }
@@ -746,7 +746,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
-    bdDamageLabelStyle: 'display:none',
+    bdDamageLabelStyle: 'hidden',
     bdDamageSum: 0,
   };
 
