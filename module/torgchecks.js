@@ -1,4 +1,4 @@
-import { TestDialog } from './test-dialog.js';
+import { TestDialog, TestDialogLabel } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
 import { ChatMessageTorg } from './documents/chat/document.js';
 
@@ -61,42 +61,7 @@ export async function renderSkillChat(test) {
     // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
     //
     if (!test.chatTitle) {
-      switch (test.testType) {
-        case 'attribute':
-          test.chatTitle = `${game.i18n.localize('torgeternity.attributes.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.test')} `;
-          break;
-        case 'skill':
-          test.chatTitle = test.customSkill ? `${test.skillName} ` :
-            `${game.i18n.localize('torgeternity.skills.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.test')} `;
-          break;
-        case 'interactionAttack':
-        case 'attack':
-          test.chatTitle = `${game.i18n.localize('torgeternity.skills.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.attack')} `;
-          break;
-        case 'soak':
-          test.chatTitle = `${game.i18n.localize('torgeternity.sheetLabels.soakRoll')} `;
-          break;
-        case 'activeDefense':
-          test.chatTitle = `${game.i18n.localize('torgeternity.sheetLabels.activeDefense')} `;
-          break;
-        case 'power':
-          test.chatTitle = `${test.powerName} ${game.i18n.localize('torgeternity.chatText.test')} `;
-          break;
-        case 'chase':
-          test.chatTitle = `${game.i18n.localize('torgeternity.chatText.chase')} `;
-          break;
-        case 'stunt':
-          test.chatTitle = `${game.i18n.localize('torgeternity.chatText.stunt')} `;
-          break;
-        case 'vehicleBase':
-          test.chatTitle = `${game.i18n.localize('torgeternity.chatText.vehicleBase')}  `;
-          break;
-        case 'custom':
-          test.chatTitle = test.skillName;
-          break;
-        default:
-          test.chatTitle = `${test.skillName} ${game.i18n.localize('torgeternity.chatText.test')}  `;
-      }
+      test.chatTitle = TestDialogLabel(test);
     }
 
     //
