@@ -719,6 +719,12 @@ dialog.torgeternity:not(.actor, .item) .window-content,
         }
       }
 
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
       .axioms {
         background: url(../images/roundBack.webp);
         background-size: cover;
