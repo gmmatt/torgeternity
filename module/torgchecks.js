@@ -78,7 +78,7 @@ export async function renderSkillChat(test) {
       test.testType !== 'attribute' &&
       test.testType !== 'activeDefense' &&
       test.testType !== 'activeDefenseUpdate' &&
-      test.customSkill !== 'true' &&
+      !test.customSkill &&
       !testActor.system.skills[test.skillName].adds);
 
     test.unskilledLabel = test.unskilledTest ? '' : 'hidden';

@@ -12,6 +12,8 @@ const DEFAULT_TEST = {
   // favored
   isFav: false,
   disfavored: false,
+  skillName: '',
+  customSkill: false,
   // movement-penalty
   movementModifier: 0,
   // multi-action

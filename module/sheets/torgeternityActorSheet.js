@@ -558,7 +558,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'chase',
-      customSkill: 'false',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,
@@ -581,7 +580,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static async #onBaseRoll(event, button) {
     new TestDialog({
       testType: 'vehicleBase',
-      customSkill: 'false',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,
@@ -606,7 +604,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'stunt',
-      customSkill: 'false',
       actor: this.actor.uuid,
       actorPic: this.actor.img,
       actorName: this.actor.name,

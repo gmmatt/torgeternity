@@ -21,6 +21,8 @@
 - Toggling **Hide Foreign Compendiums** is more efficient and no longer requires a Foundry reload.
 - Provide basic integration for **Automated Animations**.
 - Only store ItemId in test, not the full test object.
+- Include **Item Name** in test result.
+- Show Test Type in the **Test Dialog window title**.
 
 ### Bug Fixes
 
