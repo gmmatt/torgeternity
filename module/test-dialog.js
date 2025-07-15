@@ -43,6 +43,7 @@ const DEFAULT_TEST = {
   sizeModifier: 0,
   speedModifier: 0,
   maneuverModifier: 0,
+  coverModifier: 0,
   // sheet flags
   attackOptions: false,
   isAttack: false,
