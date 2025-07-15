@@ -567,8 +567,17 @@ export async function renderSkillChat(test) {
 
     // roll Dice once, and handle the error if DSN is not installed
     if (game.dice3d) {
-      if (i === 0) await game.dice3d.showForRoll(test.diceroll, game.user, true);
-      game.dice3d.showForRoll(iteratedRoll);
+      // catch errors to prevent DSN from overly affecting our own behaviour.
+      if (first && test.diceroll) {
+        try {
+          await game.dice3d.showForRoll(test.diceroll, game.user, true);
+        } catch (e) { console.log('TORG CHECK: DSN reported', e) }
+      }
+      if (iteratedRoll) {
+        try {
+          await game.dice3d.showForRoll(iteratedRoll);
+        } catch (e) { console.log('TORG CHECK: DSN reported', e) }
+      }
     }
     iteratedRoll = undefined;
 

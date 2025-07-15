@@ -36,7 +36,12 @@
 - #527 Provide compatibility with Automated Animations
 - It is now possible to edit Threat skills again
 
-## v13.0.2
+## v13.0.4
+
+- No errors when used with Dice So Nice!
+- Card Editor Dialog should use the correct template on Forge.
+
+## v13.0.3
 
 ### New Features
 - **Token Ruler** changes walk icon to running when >move and warning when >3*move
