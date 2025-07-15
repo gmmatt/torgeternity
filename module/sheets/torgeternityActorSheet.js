@@ -327,8 +327,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     // compute adds from total for threats
     if (this.actor.type == 'threat') {
-      html.querySelectorAll('.skill-element-edit .inputsFav').forEach(elem =>
-        elem.addEventListener('change', ev => this.#setThreatAdds.bind(this)));
+      html.querySelectorAll('.skill-element-edit .inputsFav input').forEach(elem =>
+        elem.addEventListener('change', this.#setThreatAdds.bind(this)));
     }
   }
 
@@ -390,15 +390,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     if (['0', ''].includes(event.target.value)) {
       // reset the 'skill object' to hide any value (the zero)
-      await this.actor.update({
-        [`system.skills.${skill}.adds`]: '',
+      return this.actor.update({
+        [`system.skills.${skill}.adds`]: 0,
         [`system.skills.${skill}.value`]: '',
         [`system.skills.${skill}.isThreatSkill`]: false,
       });
     } else if (skill) {
       const skillObject = this.actor.system.skills[skill];
       const computedAdds = event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute].value;
-      await this.actor.update({
+      return this.actor.update({
         [`system.skills.${skill}.adds`]: computedAdds,
         [`system.skills.${skill}.isThreatSkill`]: true,
       });
