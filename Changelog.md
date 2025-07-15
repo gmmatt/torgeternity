@@ -34,6 +34,7 @@
 - #525 Dragon Warrior had too many buffs to Strength
 - #526 Get "Show Details in Checks" working
 - #527 Provide compatibility with Automated Animations
+- It is now possible to edit Threat skills again
 
 ## v13.0.2
 
