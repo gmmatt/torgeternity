@@ -46,6 +46,14 @@
   }
 }
 
+.window-app .window-content {
+  padding: 8px;
+}
+
+.application .window-content {
+  padding: 8px;
+}
+
 /* Global styles */
 
 .grid,
