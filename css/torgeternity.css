@@ -493,14 +493,15 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       height: 20px;
       text-align: center;
 
-      .long-text {
-        width: 200px;
-      }
 
       &[name="name"] {
         min-width: 150px;
         min-height: 45px;
         border-radius: 25%;
+      }
+
+      &.long-text {
+        width: 17em;
       }
 
       &.small-input {
