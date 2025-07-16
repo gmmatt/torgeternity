@@ -24,9 +24,9 @@ const DEFAULT_TEST = {
   calledShotModifier: 0,
   vitalAreaDamageModifier: false,
   burstModifier: 0,
-  allOutModifier: false,
-  aimedModifier: false,
-  blindFireModifier: false,
+  allOutFlag: false,
+  aimedFlag: false,
+  blindFireFlag: false,
   trademark: false,
   additionalDamage: null,   // Number or null
   addBDs: 0,  // 0-5
@@ -219,57 +219,29 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    */
   static async #onRoll(event, form, formData) {
     const fields = formData.object;
+    foundry.utils.mergeObject(this.test, fields, { inplace: true });
+
+    this.test.isOther1 = fields.other1Modifier != 0;
+    this.test.isOther2 = fields.other2Modifier != 0;
+    this.test.isOther3 = fields.other3Modifier != 0;
 
     if (this.mode === 'update') {
-      const fields = formData.object;
-
-      foundry.utils.mergeObject(this.test, fields, { inplace: true });
-
-      this.test.isOther1 = fields.other1Modifier != 0;
-      this.test.isOther2 = fields.other2Modifier != 0;
-      this.test.isOther3 = fields.other3Modifier != 0;
 
       this.test.diceroll = null;
 
     } else {
 
       // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
-      this.test.DNDescriptor =
-        this.test.testType === 'activeDefense'
-          ? 'standard'
-          : fields.DNDescriptor;
-
-      // Check for disfavored and flag if needed
-      this.test.disfavored = fields.disfavored;
-
-      // Check for favored and flag if needed
-      this.test.isFav = fields.isFav;
+      if (this.test.testType === 'activeDefense') this.test.DNDescriptor = 'standard';
 
       // Add bonus, if needed
       this.test.previousBonus = fields.previousBonus;
       this.test.bonus = this.test.previousBonus ? fields.bonus : null;
 
-      // Add movement modifier
-      this.test.movementModifier = fields.movementModifier;
-
-      // Add multi-action modifier
-      this.test.multiModifier = fields.multiModifier;
-
-      // Add multi-target modifier
-      this.test.targetsModifier = fields.targetsModifier;
-
       //
       // Add attack and target options if needed
       //
       if (this.test.attackOptions) {
-        // Add Called Shot Modifier
-        this.test.calledShotModifier = fields.calledShotModifier;
-
-        // Add Vital Hit Modifier
-        this.test.vitalAreaDamageModifier = fields.vitalAreaDamageModifier ?? 0;
-
-        // Add Burst Modifier
-        this.test.burstModifier = fields.burstModifier;
 
         const myActor = fromUuidSync(this.test.actor);
         const myItem = this.test.itemId ? myActor.items.get(this.test.itemId) : null;
@@ -282,41 +254,11 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
           return;
         }
 
-        // Add All-Out Attack
-        this.test.allOutModifier = fields.allOutModifier;
-
-        // Add Amied Shot
-        this.test.aimedModifier = fields.aimedModifier ?? 0;
-
-        // Add Blind Fire
-        this.test.blindFireModifier = fields.blindFireModifier ?? 0;
-
-        // Add Trademark Weapon
-        this.test.trademark = fields.trademark;
-
-        // Add Concealment Modifier
-        this.test.concealmentModifier = fields.concealmentModifier;
-
         // Add Cover Modifier
-        this.test.coverModifier = fields.coverModifier ?? 0;
-
-        // Add additional damage and BDs in promise. Null if not applicable
-        this.test.additionalDamage = fields.additionalDamage ?? 0;
-
-        this.test.addBDs = fields.addBDs ?? 0;
-      }
-
-      // Add other modifiers 1-3
-      for (let i = 1; i <= 3; i++) {
-        const modifier = fields[`other${i}Modifier`];
-        const isActive = modifier != 0;
-
-        this.test[`isOther${i}`] = isActive;
-
-        if (isActive) {
-          this.test[`other${i}Description`] = fields[`other${i}Description`];
-          this.test[`other${i}Modifier`] = modifier;
-        }
+        this.test.addBDs ??= 0;
+        this.test.additionalDamage ??= 0;
+        this.test.coverModifier ??= 0;
+        this.test.vitalAreaDamageModifier ??= 0;
       }
     }
 
@@ -357,6 +299,9 @@ export function oneTestTarget(token, applySize) {
       targetPic: actor.img,
       targetName: actor.name,
       sizeModifier: sizeModifier,
+      toughness: actor.defenses.toughness,
+      armor: actor.defenses.armor,
+      // then vehicle specifics
       defenses: {
         vehicle: actor.system.defense,
         dodge: actor.system.defense,
@@ -367,8 +312,6 @@ export function oneTestTarget(token, applySize) {
         taunt: actor.system.defense,
         trick: actor.system.defense,
       },
-      toughness: actor.defenses.toughness,
-      armor: actor.defenses.armor,
     };
   } else {
     return {
@@ -378,12 +321,13 @@ export function oneTestTarget(token, applySize) {
       uuid: token.document.uuid,
       targetPic: actor.img,
       targetName: actor.name,
-      skills: actor.system.skills,
-      attributes: actor.system.attributes,
+      sizeModifier: sizeModifier,
       toughness: actor.defenses.toughness,
       armor: actor.defenses.armor,
+      // then non-vehicle changes
+      skills: actor.system.skills,
+      attributes: actor.system.attributes,
       vulnerableModifier: actor.statusModifiers.vulnerable,
-      sizeModifier: sizeModifier,
       defenses: {
         dodge: actor.defenses.dodge.value,
         unarmedCombat: actor.defenses.unarmedCombat.value,

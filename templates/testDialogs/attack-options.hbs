@@ -40,17 +40,14 @@
   </span>
   <hr>
   <span class="skill-check-options">
-    <input type="checkbox" id="all-out" name="allOutModifier" data-dtype="Boolean"
-      data-tooltip="torgeternity.sheetLabels.allOutTooltip"
-      value="4" {{checked (eq test.allOutModifier 4)}} />
+    <input type="checkbox" id="all-out" name="allOutFlag" data-dtype="Boolean"
+      data-tooltip="torgeternity.sheetLabels.allOutTooltip" {{checked test.allOutFlag }} />
     <label for="all-out">{{localize "torgeternity.sheetLabels.allOut"}}</label>
-    <input type="checkbox" data-dtype="Number" id="aimed" name="aimedModifier"
-      data-tooltip="torgeternity.sheetLabels.aimedTooltip"
-      value="4" {{checked (eq test.aimedModifier 4)}} />
+    <input type="checkbox" data-dtype="Boolean" id="aimed" name="aimedFlag"
+      data-tooltip="torgeternity.sheetLabels.aimedTooltip" {{checked test.aimedFlag }} />
     <label for="aimed">{{localize "torgeternity.sheetLabels.aimed"}}</label>
-    <input type="checkbox" data-dtype="Number" id="blind-fire" name="blindFireModifier" ,
-      data-tooltip="torgeternity.sheetLabels.blindFireTooltip"
-      value="-6" {{checked (eq test.blindFireModifier -6)}} />
+    <input type="checkbox" data-dtype="Boolean" id="blind-fire" name="blindFireFlag" ,
+      data-tooltip="torgeternity.sheetLabels.blindFireTooltip" {{checked test.blindFireFlag }} />
     <label for="blind-fire">{{localize "torgeternity.sheetLabels.blindFire"}}</label>
     <input type="checkbox" data-dtype="Boolean" id="trademark-weapon" name="trademark"
       data-tooltip="torgeternity.sheetLabels.trademarkHint"
