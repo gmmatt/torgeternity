@@ -1,3 +1,5 @@
+import { torgeternity } from '../../config.js';
+
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
@@ -10,7 +12,7 @@ export class DramaCardData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       approvedActions: new fields.StringField({ initial: '' }),
-      cosm: new fields.StringField({ initial: '' }),
+      cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
       dsrLine: new fields.StringField({ initial: '' }),
       heroesConditionsDramatic: new fields.StringField({ initial: '' }),
       heroesConditionsStandard: new fields.StringField({ initial: '' }),

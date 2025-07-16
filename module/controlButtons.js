@@ -17,9 +17,6 @@ export default function initTorgControlButtons() {
       title: 'TORG',
       icon: 'torg',
       layer: 'torgeternity',
-      onToolChange: (event, tool) => {
-        console.log(`TORG SCENE controls, onToolChange", tool`);
-      },
       tools: {
         playerHand:
         {
@@ -41,9 +38,7 @@ export default function initTorgControlButtons() {
           title: 'torgeternity.gmScreen.toggle',
           icon: 'fa fa-book-open',
           button: true,
-          onChange: () => {
-            ui.GMScreen.toggleRender();
-          },
+          onChange: () => ui.GMScreen.toggleRender(),
           visible: game.user.isGM,
         },
         deckSettings:
@@ -52,9 +47,7 @@ export default function initTorgControlButtons() {
           title: 'torgeternity.settingMenu.deckSetting.name',
           icon: 'fa fa-cog',
           button: true,
-          onChange: () => {
-            new DeckSettingMenu().render(true);
-          },
+          onChange: () => new DeckSettingMenu().render(true),
           visible: game.user.isGM,
         },
         macroHub:
@@ -63,9 +56,7 @@ export default function initTorgControlButtons() {
           title: 'torgeternity.macros.macroHub.buttonTitle',
           icon: 'fa-solid fa-bottle-water',
           button: true,
-          onChange: () => {
-            ui.macroHub.toggleRender();
-          },
+          onChange: () => ui.macroHub.toggleRender(),
           visible: game.user.isGM,
         }
       }

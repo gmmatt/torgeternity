@@ -50,14 +50,19 @@ export default class TorgActiveEffect extends ActiveEffect {
       for (const change of data.changes) {
         if (change.key.includes('.isFav') && (change.value === '1' || change.value === '0')) {
           change.value = change.value === '1' ? 'true' : 'false';
-        } else if (
-          change.key.includes('.isFav') &&
-          (change.value === 'True' || change.value === 'False')
-        ) {
+        } else if (change.key.includes('.isFav') && (change.value === 'True' || change.value === 'False')) {
           change.value = change.value.toLowerCase();
         }
       }
     }
     return data;
+  }
+
+  /**
+   * Our own version, since this.origin might not point to the correct thing.
+   */
+  get sourceName() {
+    if (!this.parent || this.parent instanceof Actor) return game.i18n.localize("None");
+    return this.parent.name;
   }
 }

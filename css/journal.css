@@ -422,7 +422,8 @@ blockquote {
 /*Inline links are pretty boring in standard-style, let's pimp'em!*/
 a.entity-link,
 a.content-link,
-a.inline-roll {
+a.inline-roll,
+a.torg-inline-check {
   background-image: url(../images/lightning_bar.webp);
   background-repeat: repeat-x;
   background-size: auto 100%;

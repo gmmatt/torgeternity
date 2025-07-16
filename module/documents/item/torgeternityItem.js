@@ -196,15 +196,15 @@ export default class TorgeternityItem extends foundry.documents.Item {
     // for armors and shields, ensure that there is only one equipped at a time
     if (!wasEquipped && ['armor', 'shield'].includes(item.type)) {
       actor.items
-        .filter(item => item.id !== item.id && item.system.equipped && item.type === item.type)
-        .forEach(item => {
+        .filter(it => it.id !== item.id && it.system.equipped && it.type === item.type)
+        .forEach(it => {
           itemUpdates.push({
-            _id: item.id,
+            _id: it.id,
             'system.equipped': false,
           });
           effectUpdates.push(
             ...actor.effects
-              .filter((e) => e.origin && e.origin.endsWith('Item.' + item._id))
+              .filter((e) => e.origin && e.origin.endsWith('Item.' + it._id))
               .map((e) => ({ _id: e.id, disabled: true }))
           );
         });
@@ -217,22 +217,19 @@ export default class TorgeternityItem extends foundry.documents.Item {
    *
    */
   async roll() {
-    const cardData = {
-      ...this,
-      owner: this.actor._id,
-    };
-    const chatData = {
+    return ChatMessageTorg.create({
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
-        data: cardData,
+        data: {
+          ...this,
+          owner: this.actor._id,
+        },
         torgeternity: {
           template: TorgeternityItem.CHAT_TEMPLATE[this.type],
         }
       },
-    };
-
-    return ChatMessageTorg.create(chatData);
+    });
   }
 
   /**
@@ -285,7 +282,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     // Put together Chat Data
     const chatData = {
-      user: game.user.data._id,
+      user: game.user.id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
@@ -300,22 +297,6 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     return ChatMessageTorg.create(chatData);
   }
-
-  // Commented that out because I don't think it's needed anymore but I don't know yet :D
-  /* async bonus() {
-    const rollResult = await new Roll('1d6x6max5').roll();
-
-    const chatData = {
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-      user: game.user.data._id,
-      roll: rollResult,
-      speaker: ChatMessage.getSpeaker(),
-    };
-
-    chatData.content = await rollResult.render();
-
-    return ChatMessage.create(chatData);
-  }*/
 
   /**
    *
@@ -361,7 +342,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     // Put together Chat Data
     const chatData = {
-      user: game.user.data._id,
+      user: game.user.id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,

@@ -3,12 +3,16 @@
  * @param event
  * @param owner
  */
-export function onManageActiveEffect(event, target, owner) {
+export async function onManageActiveEffect(event, button, owner) {
   event.preventDefault();
   const a = event.target;
-  const li = target.closest('li');
-  const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
-  switch (target.dataset.control) {
+  const li = button.closest('li');
+  if (!li) return;
+  // not fromUuidSync, in case we are editing a compendium document
+  const effect = await fromUuid(li.dataset.effectUuid);
+  if (!effect) return;
+
+  switch (button.dataset.control) {
     case 'create':
       return owner.createEmbeddedDocuments('ActiveEffect', [
         {
@@ -55,6 +59,7 @@ export function prepareActiveEffectCategories(effects) {
   // Iterate over active effects, classifying them into categories
   for (const e of effects) {
     // e._getSourceName(); // Trigger a lookup for the source name
+    //if ( e.isSuppressed ) categories.suppressed.effects.push(e);
     if (e.disabled) categories.inactive.effects.push(e);
     else if (e.isTemporary) categories.temporary.effects.push(e);
     else categories.passive.effects.push(e);

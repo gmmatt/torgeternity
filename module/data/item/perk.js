@@ -1,3 +1,5 @@
+import { torgeternity } from '../../config.js';
+
 const fields = foundry.data.fields;
 
 /**
@@ -9,8 +11,8 @@ export class PerkItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      category: new fields.StringField({ initial: '' }),
-      cosm: new fields.StringField({ initial: '' }),
+      category: new fields.StringField({ initial: '', textSearch: true }),
+      cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
       description: new fields.HTMLField({ initial: '' }),
       prerequisites: new fields.StringField({ initial: '' }),
       generalContradiction: new fields.BooleanField({ initial: false }),

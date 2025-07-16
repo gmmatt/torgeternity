@@ -53,19 +53,19 @@ export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2
    *
    * @param ev
    */
-  static #onClickItem(event, target) {
-    const itemId = target.dataset.itemid;
-    const actorId = target.dataset.actorid;
+  static #onClickItem(event, button) {
+    const itemId = button.dataset.itemid;
+    const actorId = button.dataset.actorid;
     const item = game.actors.get(actorId).items.get(itemId);
     item.sheet.render(true);
   }
   /**
    * 
    * @param {*} event 
-   * @param {*} target 
+   * @param {*} button 
    */
-  static #onClickActor(event, target) {
-    const actorId = target.dataset.actorid;
+  static #onClickActor(event, button) {
+    const actorId = button.dataset.actorid;
     game.actors.get(actorId).sheet.render(true);
   }
   /**

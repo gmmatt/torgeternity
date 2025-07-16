@@ -12,7 +12,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   }
 
   static DEFAULT_OPTIONS = {
-    classes: ['torgeternity'],  // setting DARK theme doesn't work on CombatTracker
+    // token-effects ignore the themed setting below.
+    classes: ['torgeternity', 'themed', 'theme-dark'],
     actions: {
       'heroesFirst': torgeternityCombatTracker.#onHeroesFirst,
       'villainsFirst': torgeternityCombatTracker.#onVillainsFirst,

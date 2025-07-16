@@ -1,23 +1,13 @@
 <div>
-  <!-- type -->
   <h3 class="actor-type left-tab"><span>{{localize "torgeternity.sheetLabels.threat"}}</span></h3>
-  <!-- header -->
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    <a data-action="tab" data-group="primary" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="perks">{{localize "torgeternity.sheetLabels.abilities"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-    <a data-action="tab" data-group="primary" data-tab="background">{{localize "torgeternity.sheetLabels.notes"}}</a>
-  </nav>
+  {{> "templates/generic/tab-navigation.hbs"}}
 
   <div class="threat-sheet">
     <div class="threat-sidebar">
       {{> "systems/torgeternity/templates/actors/threat/sidebar.hbs"}}
     </div>
 
-    <section class="sheet-body sheet-content scrollable">
+    <div class="sheet-body">
       <h1><input name="name" type="text" value="{{document.name}}" placeholder="Threat Name" /></h1><br>
       <div class="sub-header">
         <span class="threat-edit">
@@ -37,37 +27,12 @@
         </span>
       </div>
 
-      <section class="tab threat-block-tab stats {{tabs.stats.cssClass}}" data-group="primary" data-tab="stats">
-        {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
-      </section>
-
-      <section class="tab perks perks-list {{tabs.perks.cssClass}}" data-group="primary" data-tab="perks">
-        {{> "systems/torgeternity/templates/actors/threat/perks-details.hbs"}}
-      </section>
-
-      <section class="tab gear {{tabs.gear.cssClass}}" data-group="primary" data-tab="gear">
-        {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
-      </section>
-
-      <section class="tab powers {{tabs.powers.cssClass}}" data-group="primary" data-tab="powers">
-        {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
-      </section>
-
+      {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
+      {{> "systems/torgeternity/templates/actors/threat/abilities.hbs"}}
+      {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
+      {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
       {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-
-      <section class="tab background block {{tabs.background.cssClass}}" data-group="primary" data-tab="background">
-        <div class="tabbody">
-          <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
-          <prose-mirror toggled name="system.details.description" {{disabled (not editable)}}
-            value="{{ document.system.details.description }}">{{{ enrichedDetails }}}</prose-mirror>
-        </div>
-      </section>
-
-    </section>
+      {{> "systems/torgeternity/templates/actors/threat/background.hbs"}}
+    </div>
   </div>
-
-  <h5 class="editable-tooltip">{{localize "torgeternity.sheetLabels.editableTooltip"}}
-    <i class="fas fa-chevron-double-down"></i>
-  </h5>
-
 </div>

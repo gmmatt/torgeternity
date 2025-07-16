@@ -10,19 +10,19 @@
           data-tooltip aria-label="{{ localize 'torgeternity.combat.nextKeep' }}">
           <i class="fa-solid fa-forward-step" inert></i>
           <span>{{localize 'torgeternity.sheetLabels.keep'}}</span></button>
-        <button type="button" class="combat-control combat-control-lg" data-action="endCombat">
+        <button type="button" class="inline-control combat-control combat-control-lg" data-action="endCombat">
           <i class="fa-solid fa-stop" inert></i>
           <span>{{ localize "COMBAT.End" }}</span>
         </button>
       {{else}}
-        <button type="button" class="combat-control combat-control-lg" data-action="startCombat">
+        <button type="button" class="inline-control combat-control combat-control-lg" data-action="startCombat">
           <i class="fa-solid fa-swords" inert></i>
           <span>{{ localize "COMBAT.Begin" }}</span>
         </button>
       {{/if}}
     {{else}}
       {{#if hasTurn}}
-        <button type="button" class="combat-control combat-control-lg" data-action="hasFinished">
+        <button type="button" class="inline-control combat-control combat-control-lg" data-action="hasFinished">
           <i class="fa-solid fa-check"></i>
           <span>{{ localize "torgeternity.combat.endMyTurn" }}</span>
         </button>

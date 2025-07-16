@@ -12,6 +12,8 @@ const DEFAULT_TEST = {
   // favored
   isFav: false,
   disfavored: false,
+  skillName: '',
+  customSkill: false,
   // movement-penalty
   movementModifier: 0,
   // multi-action
@@ -43,6 +45,7 @@ const DEFAULT_TEST = {
   sizeModifier: 0,
   speedModifier: 0,
   maneuverModifier: 0,
+  coverModifier: 0,
   // sheet flags
   attackOptions: false,
   isAttack: false,
@@ -57,7 +60,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     tag: 'form',
     classes: ['torgeternity', 'application', 'test-dialog', 'themed', 'theme-dark'],
     window: {
-      title: 'Skill Test',
       resizable: false,
       contentClasses: ['standard-form'],
     },
@@ -74,6 +76,11 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     footer: { template: "templates/generic/form-footer.hbs" },
   }
 
+  get title() {
+    let label = TestDialogLabel(this.test);
+    // if (this.itemId) label = fromUuidSync(this.actor)?.items.get(this.itemId)?.name;
+    return label ?? 'Skill Test';
+  }
   /**
    *
    * @param {TestData} test the test object
@@ -264,10 +271,12 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         // Add Burst Modifier
         this.test.burstModifier = fields.burstModifier;
 
+        const myActor = fromUuidSync(this.test.actor);
+        const myItem = this.test.itemId ? myActor.items.get(this.test.itemId) : null;
         if (
-          this.test.item?.weaponWithAmmo &&
+          myItem?.weaponWithAmmo &&
           this.test.burstModifier > 0 &&
-          !this.test.item.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
+          !myItem.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
         ) {
           ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
           return;
@@ -386,4 +395,52 @@ export function oneTestTarget(token, applySize) {
       },
     };
   }
+}
+
+
+export function TestDialogLabel(test) {
+  let result;
+
+  switch (test.testType) {
+    case 'attribute':
+      result = `${game.i18n.localize('torgeternity.attributes.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.test')} `;
+      break;
+    case 'skill':
+      result = test.customSkill ? `${test.skillName} ` :
+        `${game.i18n.localize('torgeternity.skills.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.test')} `;
+      break;
+    case 'interactionAttack':
+    case 'attack':
+      result = `${game.i18n.localize('torgeternity.skills.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.attack')}`;
+      break;
+    case 'soak':
+      result = `${game.i18n.localize('torgeternity.sheetLabels.soakRoll')} `;
+      break;
+    case 'activeDefense':
+      result = `${game.i18n.localize('torgeternity.sheetLabels.activeDefense')} `;
+      break;
+    case 'power':
+      result = `${test.powerName} ${game.i18n.localize('torgeternity.chatText.test')} `;
+      break;
+    case 'chase':
+      result = `${game.i18n.localize('torgeternity.chatText.chase')} `;
+      break;
+    case 'stunt':
+      result = `${game.i18n.localize('torgeternity.chatText.stunt')} `;
+      break;
+    case 'vehicleBase':
+      result = `${game.i18n.localize('torgeternity.chatText.vehicleBase')}  `;
+      break;
+    case 'custom':
+      result = test.skillName;
+      break;
+    default:
+      console.log(`--TestDialogLabel: Unknown Test type: ${test.testType}`);
+      result = `${test.skillName} ${game.i18n.localize('torgeternity.chatText.test')}  `;
+  }
+  if (test.itemId) {
+    const itemLabel = fromUuidSync(test.actor, { strict: false })?.items.get(test.itemId).name;
+    if (itemLabel) result += ` (${itemLabel})`;
+  }
+  return result;
 }

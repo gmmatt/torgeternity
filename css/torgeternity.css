@@ -34,12 +34,6 @@
 :root {
   --torgblue: rgb(65, 90, 155);
   --torgred: rgb(150, 0, 0);
-  /*formally this was defined in #sidebar{width:380px}, but we need to alter the foundry style.css variable to affect on things like the new "to bottom" Button*/
-  --torg-header-height: 35px;
-}
-
-form button {
-  border: 1px groove var(--color-border-light-highlight);
 }
 
 @keyframes colorchange {
@@ -50,6 +44,14 @@ form button {
   100% {
     color: var(--torgred);
   }
+}
+
+.window-app .window-content {
+  padding: 8px;
+}
+
+.application .window-content {
+  padding: 8px;
 }
 
 /* Global styles */
@@ -155,11 +157,30 @@ form.torgeternity {
   }
 }
 
+div[data-application-part] {
+  height: 100%;
+
+  div.threat-sheet {
+    height: 100%;
+  }
+}
+
+dialog.torgeternity:not(.actor, .item) .window-content,
+.application.torgeternity:not(.actor, .item) .window-content {
+  background-image: url(../images/thunder.webp);
+  background-size: cover;
+}
+
 /* Actor/Item/Journal sheet */
-.sheet.torgeternity .window-content {
+.actor.sheet.torgeternity .window-content,
+.item.sheet.torgeternity .window-content {
+  background-image: url(../images/bg-sheet.webp);
+  background-size: cover;
+  padding: 8px 0px 8px 8px;
 
   /* Foundry DARK mode sets backdrop-filter, which breaks the side tabs in sheets */
   backdrop-filter: none;
+  margin-right: 0px;
 
   input[type="number"],
   input[type="text"] {
@@ -167,10 +188,32 @@ form.torgeternity {
     font-size: 12px;
   }
 
+  .sheet-body {
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 input[name="name"] {
+    border: none;
+    text-transform: uppercase;
+    text-shadow: 0px -2px 10px #0e0909;
+    font-family: Alaska;
+    font-size: 24px;
+    text-align: center;
+    color: #0e0909;
+    width: 100%;
+    box-shadow: none;
+    background-color: rgba(251, 251, 251, 0.286);
+
+    &:hover {
+      box-shadow: 0 0 15px #053075 inset;
+    }
+  }
+
   h3.left-tab {
     position: absolute;
     transform-origin: top left;
-    transform: rotate(-90deg) translate(calc(-100% - var(--torg-header-height)), -10px);
+    transform: rotate(-90deg) translate(calc(-100% - var(--header-height)), -10px);
     top: 0%;
     margin-bottom: 0px;
 
@@ -195,7 +238,7 @@ form.torgeternity {
     contain: content;
     left: 100%;
     transform-origin: bottom left;
-    transform: rotate(90deg) translate(calc(-1 * var(--torg-header-height)), 5px);
+    transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px);
     line-height: 14px;
     border-width: 0px;
     column-gap: 5px;
@@ -258,13 +301,9 @@ form.torgeternity {
   }
 }
 
-.scrollable {
+/*.scrollable {
   margin-right: 0px;
-}
-
-.window-content.scrollable {
-  overflow-y: auto;
-}
+}*/
 
 .groove-borders {
   border: 2px groove #eeede0;
@@ -293,17 +332,12 @@ form.torgeternity {
     }
 
     nav.tabs.right-tab {
-      transform: rotate(90deg) translate(calc(-1 * var(--torg-header-height)), 5px) scale(0.7);
+      transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px) scale(0.7);
     }
 
     .tab[data-tab].active {
       display: flex;
       flex-direction: column;
-
-      div.tabbody {
-        display: flex;
-        flex-direction: column;
-      }
 
       .sheet-header p {
         display: none;
@@ -372,8 +406,9 @@ form.torgeternity {
   .window-content {
     font-size: 13px;
     line-height: 14px;
-    background-image: url(../images/bg-sheet.webp);
+    /*background-image: url(../images/bg-sheet.webp);
     background-size: cover;
+    padding-right: 0px;*/
 
     h1 {
       border: none;
@@ -416,27 +451,25 @@ form.torgeternity {
     }
 
     .background {
+      row-gap: 0px;
+
       .editor-content {
         position: relative;
       }
 
       .list-section-heading {
-        color-scheme: 'dark2';
-
-        grid-column: 1/9;
-        grid-row: 1/2;
-        align-items: center;
+        font-family: Alaska;
+        margin-bottom: 0px;
       }
 
       .editor {
-        grid-column: 1/9;
-        grid-row: 1/9;
         background: url(../images/bckg-hex.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        min-height: 200px;
+        min-height: 400px;
         min-width: 150px;
-        padding: 15% 10% 10% 10%;
+        padding: 45px;
+        margin: 20px;
         font-family: Palatino;
         font-size: 14px;
       }
@@ -493,17 +526,18 @@ form.torgeternity {
       width: 100px;
     }
 
-    .tab.active .tabbody {
+    .tab.stats.active .tabbody {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(6, minmax(100px, min-content));
       grid-gap: 0px 5px;
+      height: 100%;
+      width: 100%;
     }
 
     .tab[data-tab].active {
       width: 100%;
       height: 100%;
-      grid-gap: 0px 5px;
+      /*grid-gap: 0px 5px;*/
     }
 
     .block {
@@ -512,7 +546,7 @@ form.torgeternity {
       border-image-slice: 50;
       box-shadow: 2px 2px 15px #9e9686;
       transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-      padding: 0px;
+      /*padding: 0px inherit 0px 0px;*/
 
       &:hover,
       &:hover {
@@ -649,34 +683,6 @@ form.torgeternity {
       text-shadow: 0px 0px 10px var(--torgblue);
     }
 
-    .item-controls {
-      align-content: center;
-    }
-
-    ol.item-list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      img {
-        max-width: 60px;
-        max-height: 60px;
-      }
-
-      li {
-        margin: 5px;
-        padding-bottom: 5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-top: 1px solid black;
-
-        .fle div {
-          margin-right: 15px;
-        }
-      }
-    }
-
     .char_image {
       border: solid 5px;
       border-image: url(../images/separator.webp) 100 round;
@@ -711,6 +717,12 @@ form.torgeternity {
             transform: rotate(5deg) scale(1.2);
           }
         }
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .axioms {
@@ -783,6 +795,10 @@ form.torgeternity {
       &:focus {
         box-shadow: 0 0 5px #0062ff;
       }
+    }
+
+    span {
+      align-self: center;
     }
 
     .attributes {
@@ -988,6 +1004,10 @@ form.torgeternity {
           align-self: center;
         }
 
+        .item-control {
+          margin-right: 2px;
+        }
+
         img {
           max-width: 30px;
           max-height: 30px;
@@ -995,29 +1015,40 @@ form.torgeternity {
       }
     }
 
+    .threat-block,
     .perks-details,
     .gear,
     .powers {
+      row-gap: 0px;
 
       h2 {
         text-align: left;
         background: #37465438;
       }
 
-      ol {
+      .item-list {
         font-family: "Signika";
         font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         li {
-          position: relative;
           display: flex;
           flex-direction: column;
+          position: relative;
+          margin: 5px;
+          padding-bottom: 5px;
+          justify-content: space-between;
+          border-top: 1px solid black;
 
           .item-name {
             text-align: center;
           }
 
           img {
+            max-width: 60px;
+            max-height: 60px;
             margin: 5px;
           }
 
@@ -1031,10 +1062,12 @@ form.torgeternity {
           .item-controls {
             align-content: center;
             justify-content: end;
+            max-width: 115px;
+            flex: none;
 
             a.item-control {
               float: right;
-              margin-right: 10px;
+              margin-right: 5px;
             }
 
             a.item-equip.item-equipped {
@@ -1050,7 +1083,9 @@ form.torgeternity {
 
           .item-dropdown-extras {
             font-style: italic;
+            border: 1px solid grey;
             text-align: center;
+            background-color: #9e96868e;
           }
         }
       }
@@ -1368,21 +1403,8 @@ form.torgeternity {
       }
     }
 
-    .tab[data-tab].active .editor {
-      background: url(../images/bckg-hex.webp);
-      background-size: 110% 110%;
-      padding: 20px;
-      background-position: center;
-      margin-top: 10%;
-    }
-
     div[data-tab] {
       display: none;
-    }
-
-    .background .editor-content {
-      height: 90%;
-      word-break: break-word;
     }
 
     .window-content {
@@ -1391,16 +1413,8 @@ form.torgeternity {
         max-width: 120px;
       }
 
-      .background .list-section-heading {
-        color-scheme: 'dark3';
-
-        grid-column: 1/9;
-        grid-row: 1/2;
-        align-items: center;
-      }
-
       .tab[data-tab="stats"].active {
-        display: flex;
+        display: block;
       }
 
       .vehicle-header-name {
@@ -1590,22 +1604,13 @@ form.torgeternity {
       }
     }
 
-    .tab[data-tab="stats"].active {
-      display: block;
-    }
-
     .tab[data-tab].active {
       .list-section-heading {
-        height: 40px;
         font-size: 18px;
-        text-align: center;
-        background-image: url(../images/separator.webp);
-        background-size: cover;
-        background-position: center;
-        color-scheme: 'dark4';
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      }
+
+      div.threat-block ol.item-list {
+        padding: 0;
       }
 
       .list-section-heading .item-create-rsa,
@@ -1614,73 +1619,11 @@ form.torgeternity {
         float: right;
       }
 
-      ol.item-list {
-        padding: 0px;
-
-        li {
-          display: block;
-          overflow: hidden;
-          padding-bottom: 0px;
-
-          .item .effects .effects-item .flexrow {
-            display: flex;
-          }
-
-          img {
-            height: 30px;
-            width: 30px;
-            max-width: 30px;
-          }
-
-          .block {
-            border: 1px 0px 0px 0px black;
-            box-shadow: none;
-          }
-
-          .item-name {
-            text-align: center;
-            font-size: 13px;
-            display: inline;
-            max-width: 500px;
-          }
-
-          .item-controls {
-            align-content: center;
-            justify-content: end;
-            max-width: 80px;
-            display: inline;
-
-            .item-control {
-              margin-right: 5px;
-            }
-          }
-
-          .item-detail {
-            max-height: 0px;
-
-            .item-dropdown-description {
-              max-height: inherit;
-            }
-
-            .item-dropdown-extras {
-              font-style: italic;
-              text-align: center;
-            }
-          }
-        }
+      ol.item-list li img {
+        flex: 0 0 30px;
+        width: 30px;
+        height: 30px;
       }
-
-      .editor {
-        background: url(../images/bckg-hex.webp);
-        background-size: 110% 110%;
-        padding: 20px;
-        background-position: center;
-        margin-top: 10%;
-      }
-    }
-
-    .sheet-body {
-      padding-right: 0px;
     }
 
     img.profile-img {
@@ -1704,7 +1647,7 @@ form.torgeternity {
       font-size: 13px;
       font-weight: bold;
 
-      .attributes {
+      &.attributes {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -1718,7 +1661,16 @@ form.torgeternity {
           display: flex;
           margin: 0;
           font: inherit;
+          color: white;
         }
+      }
+    }
+
+    div.attribut-list-edit span {
+      white-space: nowrap;
+
+      input {
+        width: 35px;
       }
     }
 
@@ -1726,15 +1678,6 @@ form.torgeternity {
       display: block;
       text-align: center;
       font-weight: bold;
-    }
-
-    section.sheet-body {
-      height: 100%;
-      width: 100%;
-
-      h1 {
-        margin-bottom: 0px;
-      }
     }
 
     .sub-header {
@@ -1844,7 +1787,6 @@ form.application.torgeternity.theme-dark {
 }
 
 .application.torgeternity .window-content {
-  padding: 8px;
 
   .notes,
   .hint {
@@ -1891,7 +1833,7 @@ form.application.torgeternity.theme-dark {
 .journal-sheet .window-content .editor:hover,
 .journal-sheet .window-content .editor:focus,
 .journal-sheet .window-content .editor:active {
-  box-shadow: 0 0 15px #053075;
+  box-shadow: 0 0 15px #053075 inset;
 }
 
 .journal-sheet .window-content .editor {
@@ -2164,7 +2106,6 @@ a:hover {
 .application .window-header {
   background: url(../images/tab-header.webp);
   background-size: 100% 100%;
-  font-weight: bold;
   transform: scaleX(1.01);
   padding-left: 5%;
   padding-right: 5%;
@@ -2713,7 +2654,6 @@ german tent cards images
   &.inputField {
     text-align: center;
     width: 80px;
-    background: rgb(200, 200, 200);
   }
 }
 
@@ -2740,9 +2680,14 @@ nav#controls,
     color: white;
   }
 
-  nav.combat-controls button {
-    font-family: Alaska;
-    font-size: 20px;
+  nav.combat-controls {
+    border-top: 2px groove rgb(68, 68, 68);
+    padding: 10px;
+
+    button {
+      font-family: Alaska;
+      font-size: 20px;
+    }
   }
 
   button {
@@ -2898,10 +2843,6 @@ nav#controls,
 .combat-sidebar #combat-tracker {
   overflow-y: auto;
   flex: 2 !important;
-}
-
-#combat-controls {
-  max-height: 5%;
 }
 
 .party-sheet {
@@ -3085,6 +3026,10 @@ div.readme a.compendium {
     font-size: 12px;
   }
 
+  .skill-roll-menu a.button {
+    font-family: "Palatino Linotype";
+  }
+
   .skill-roll-damage-label {
     font-family: "Palatino Linotype";
     font-size: 18px;
@@ -3190,27 +3135,31 @@ p.skill-chat-title.skilled {
   justify-content: space-around;
 }
 
-.applyDam,
-.soakDam,
-.applyStymied,
-.applyVulnerable,
-.backlash1,
-.backlash2,
-.backlash3,
-.chat-message .roll-fav,
-.chat-message .roll-possibility,
-.chat-message .roll-up,
-.chat-message .roll-hero,
-.chat-message .roll-drama,
-.chat-message .add-plus3,
-.chat-message .add-bd {
+.chat-message .roll-button {
   border: black 1px solid;
   border-radius: 1rem;
-  text-align: center;
   padding: 4px;
+  font-size: 12px;
   font-weight: bold;
   white-space: nowrap;
   margin-bottom: 7px;
+
+  &.disabled {
+    pointer-events: none;
+    color: gray;
+  }
+}
+
+.chat-message .hidden {
+  display: none;
+}
+
+.chat-message h4 {
+  font-family: Alaska;
+}
+
+.chat-message .applyButtons a.button {
+  font-family: Alaska;
 }
 
 /* Styles limited to torg sheets */
@@ -3250,6 +3199,7 @@ p.skill-chat-title.skilled {
 }
 
 .window-content .list-section-heading {
+  color: white;
   height: 40px;
   line-height: 40px;
   font-size: 2em;
@@ -3362,10 +3312,11 @@ p.skill-chat-title.skilled {
   }
 
   .window-content {
-    padding: 10px;
+    font-size: 0.9em;
+    /*padding: 10px;
     background-image: url(../images/bg-sheet.webp);
     background-size: cover;
-    font-size: 0.9em;
+    */
     max-height: 95%;
 
     .editor-content {
@@ -3487,6 +3438,10 @@ p.skill-chat-title.skilled {
       align-items: center;
       justify-items: center;
       grid-template-columns: repeat(2, minmax(10px, 1fr));
+
+      select[name="system.cosm"] {
+        grid-column: 1/3
+      }
     }
 
     &.armor>* {
@@ -3751,8 +3706,7 @@ p.skill-chat-title.skilled {
 
   .otherModifiers {
     display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: repeat(4 1fr);
+    grid-template-columns: 1fr 3em;
     row-gap: 2px;
 
     &>label {
@@ -3817,8 +3771,11 @@ p.skill-chat-title.skilled {
   font-size: 12px;
   font-weight: bold;
 
-  .pool-tooltip {
+  span.pool-tooltip {
     text-decoration: none;
+    border: 1px solid black;
+    padding: 0px 3px;
+    white-space: nowrap;
 
     span {
       display: none;
@@ -4140,13 +4097,6 @@ h4 {
   font-weight: normal;
 }
 
-dialog.torgeternity,
-.application.torgeternity,
-.application.torgeternity {
-  background-image: url(../images/thunder.webp);
-  background-size: cover;
-}
-
 .sheet.item.miracle p.atkDmgAP {
   font-size: smaller;
 }
@@ -4176,6 +4126,14 @@ body {
 
 .sidebar-tab.combat-sidebar {
   background-image: url(../images/thunder.webp);
+
+  img.token-effect {
+    --token-effect-filter: none;
+  }
+}
+
+div#interface.theme-dark .sidebar-tab {
+  background-image: url(../images/thunder.webp);
 }
 
 dialog.externalLinks {
@@ -4195,5 +4153,42 @@ dialog.externalLinks {
 
   .moveFar {
     color: var(--color-level-warning);
+  }
+}
+
+a.torg-inline-check {
+  /* Just like core a.inline-roll */
+  background: #DDD;
+  padding: 1px 4px;
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 2px;
+  white-space: nowrap;
+  word-break: break-all;
+
+  &.disabled {
+    cursor: var(--cursor-default);
+    color: var(--color-text-dark-inactive);
+    border-color: var(--color-border-light-primary);
+  }
+
+  &disabled:hover {
+    text-shadow: unset;
+  }
+
+  &.blindroll {
+    color: var(--content-link-icon-color);
+    font-size: 0.8em;
+    margin-right: 0.25em;
+    background: var(--color-blind-bg);
+    border-color: var(--color-blind-border);
+  }
+
+  i {
+    color: var(--color-text-dark-inactive);
+    margin-right: 0.25em;
+  }
+
+  i.toChat {
+    margin-left: 10px;
   }
 }
