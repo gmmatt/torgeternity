@@ -625,7 +625,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static #onInteractionAttack(event, button) {
     let dnDescriptor = 'standard';
-    const attackType = button.dataset.attackType;
+    const attackType = button.dataset.name;
     if (game.user.targets.size) {
       switch (attackType) {
         case 'intimidation':
@@ -653,14 +653,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
-      interactionAttackType: button.dataset.attackType,
       skillName: button.dataset.name,
       skillBaseAttribute: game.i18n.localize(
         'torgeternity.skills.' + button.dataset.baseAttribute
       ),
       skillAdds: button.dataset.adds,
       skillValue: button.dataset.skillValue,
-      isFav: this.actor.system.skills[attackType].isFav,
+      isFav: this.actor.system.skills[button.dataset.name].isFav,
       unskilledUse: true,
       DNDescriptor: dnDescriptor,
       type: 'interactionAttack',

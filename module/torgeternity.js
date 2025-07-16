@@ -752,7 +752,6 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
 
   if (isInteractionAttack) {
     test.testType = 'interactionAttack';
-    test.interactionAttackType = skillName;
     // Darkness seems like it would be hard to determine if it should apply to
     //    skill/attribute tests or not, maybe should be option in dialog?
 
