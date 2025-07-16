@@ -25,7 +25,7 @@ const DEFAULT_TEST = {
   vitalAreaDamageModifier: false,
   burstModifier: 0,
   allOutModifier: false,
-  aimed: false,
+  aimedModifier: false,
   blindFireModifier: false,
   trademark: false,
   additionalDamage: null,   // Number or null
