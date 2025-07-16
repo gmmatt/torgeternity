@@ -30,21 +30,12 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
    */
   static migrateData(data) {
     super.migrateData(data);
-    const translatedCosms = Object.keys(torgeternity.cosmTypes).reduce((acc, key) => {
-      acc[key] = game.i18n.localize(torgeternity.cosmTypes[key]);
-      return acc;
-    }, {});
 
-    if (data?.cosm === '') {
+    if (!data.cosm) {  // undefined, or blank string
       data.cosm = 'none';
-    }
-    if (data?.cosm && Object.values(translatedCosms).includes(data.cosm)) {
-      for (const [key, value] of Object.entries(translatedCosms)) {
-        if (value === data.cosm) {
-          data.cosm = key;
-          break;
-        }
-      }
+    } else if (!torgeternity.cosmTypes[data.cosm]) {
+      data.cosm = CONFIG.torgeternity.cosmTypeFromLabel[data.cosm];
+      if (!data.cosm) data.cosm = 'none';
     }
   }
 

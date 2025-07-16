@@ -166,9 +166,7 @@ Hooks.once('i18nInit', () => {
     perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
     enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
     specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
-    'specialability-rollable': game.i18n.localize(
-      'torgeternity.itemSheetDescriptions.specialabilityRollable'
-    ),
+    'specialability-rollable': game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
     spell: game.i18n.localize('torgeternity.itemSheetDescriptions.spell'),
     miracle: game.i18n.localize('torgeternity.itemSheetDescriptions.miracle'),
     psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
@@ -177,6 +175,11 @@ Hooks.once('i18nInit', () => {
     race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
   };
 
+  // Mapping of translation to key (for cosm migration)
+  CONFIG.torgeternity.cosmTypeFromLabel = Object.keys(torgeternity.cosmTypes).reduce((acc, key) => {
+    acc[game.i18n.localize(torgeternity.cosmTypes[key])] = key;
+    return acc;
+  }, {});
 })
 
 Hooks.once('setup', async function () {
