@@ -24,7 +24,6 @@ import torgeternityDeck from './cards/torgeternityDeck.js';
 import torgeternityCardConfig from './cards/torgeternityCardConfig.js';
 import { torgeternityCards } from './cards/torgeternityCards.js';
 import { TestDialog } from './test-dialog.js';
-import { hideCompendium } from './hideCompendium.js';
 import initTorgControlButtons from './controlButtons.js';
 import createTorgShortcuts from './keybinding.js';
 import GMScreen from './GMScreen.js';
@@ -42,6 +41,8 @@ import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
+import InitEnrichers from './enrichers.js';
+import { initHideCompendium, hideCompendium } from './hideCompendium.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -136,6 +137,10 @@ Hooks.once('init', async function () {
   initTorgControlButtons();
   // create torg shortcuts
   createTorgShortcuts();
+
+  // Foundry#initializePacks is called just before the 'setup' hook
+  // But needs to be after 'ready' to set properties on compendiums.
+  initHideCompendium();
 });
 
 Hooks.once('i18nInit', () => {
@@ -175,13 +180,15 @@ Hooks.once('i18nInit', () => {
 })
 
 Hooks.once('setup', async function () {
+
   modifyTokenBars();
+  InitEnrichers();
   // changing stutus marker
   // preparing status marker
 
   if (game.settings.get('core', 'language') === 'fr') {
     for (const effect of CONFIG.statusEffects) {
-      effect.icon = effect.icon.replace(
+      effect.img = effect.img.replace(
         'systems/torgeternity/images/status-markers',
         'systems/torgeternity/images/status-markers/fr'
       );
@@ -206,6 +213,10 @@ Hooks.on("renderUIConfig", (config, html, context, options) => {
 
 // -------------once everything ready
 Hooks.on('ready', async function () {
+
+  // Foundry#initializePacks is called just before the 'setup' hook
+  // But needs to be after 'ready' to set properties on compendiums.
+  hideCompendium();
 
   /*
   // Force DARK application colour scheme
@@ -306,7 +317,7 @@ Hooks.on("renderSettings", async (app, html) => {
   button.dataset.action = "showTorgLinks";
 
   const icon = document.createElement("img");
-  icon.setAttribute('src', '/systems/torgeternity/images/te-logo.webp');
+  icon.setAttribute('src', 'systems/torgeternity/images/te-logo.webp');
   icon.inert = true;
   button.append(icon);
   systemRow.insertAdjacentElement("afterend", button);
@@ -414,78 +425,6 @@ Hooks.on('hotbarDrop', (bar, dropData, slot) => {
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
-
-Hooks.on('getMonarchHandComponents', (hand, components) => {
-  components.markers.push({
-    tooltip: `${game.i18n.localize('torgeternity.poolToggle.inPool')}`,
-    class: 'pool-marker',
-    icon: 'fas fa-tags',
-    color: '#FFFFFF',
-    show: (card) => card.getFlag('torgeternity', 'pooled'),
-  });
-  components.controls.push({
-    tooltip: `${game.i18n.localize('torgeternity.monarch.discard')}`,
-    class: 'discard-button',
-    icon: 'fas fa-inbox',
-    color: '#FFFFFF',
-    onclick: (event, card) => {
-      card.setFlag('torgeternity', 'pooled', false);
-      if (card.type == 'destiny') {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard), game.torgeternity.cardChatOptions);
-      } else {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard), game.torgeternity.cardChatOptions);
-      }
-      card.toMessage({
-        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-          }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-            'torgeternity.chatText.discardsCard'
-          )} ${card.name}</span></div>`,
-      });
-    },
-  });
-  components.controls.push({
-    tooltip: `${game.i18n.localize('torgeternity.monarch.broadcast')}`,
-    class: 'broadcast-button',
-    icon: 'fas fa-broadcast-tower',
-    color: '#FFFFFF',
-    onclick: (event, card) => {
-      const image = new foundry.applications.apps.ImagePopout({ src: card.img }, { title: card.name });
-      image.render(true, {
-        width: 425,
-        height: 650,
-      });
-      image.shareImage();
-    },
-  });
-  components.controls.push({
-    tooltip: `${game.i18n.localize('torgeternity.monarch.play')}`,
-    class: 'play-button',
-    icon: 'fas fa-play',
-    color: '#FFFFFF',
-    onclick: (event, card) => {
-      card.setFlag('torgeternity', 'pooled', false);
-      if (card.type == 'destiny') {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard), game.torgeternity.cardChatOptions);
-      } else {
-        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard), game.torgeternity.cardChatOptions);
-      }
-      card.toMessage({
-        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-          }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-            'torgeternity.chatText.playsCard'
-          )} ${card.name}</span></div>`,
-      });
-    },
-  });
-  components.controls.push({
-    class: 'pool-toggle',
-    tooltip: `${game.i18n.localize('torgeternity.poolToggle.toogle')}`,
-    icon: 'fas fa-tags',
-    color: '#FFFFFF',
-    onclick: (event, card) =>
-      card.setFlag('torgeternity', 'pooled', !card.getFlag('torgeternity', 'pooled')),
-  });
-});
 
 async function createTorgEternityMacro(dropData, slot) {
   const document = dropData.uuid ? fromUuidSync(dropData.uuid) : dropData.data;
@@ -650,7 +589,7 @@ function rollItemMacro(itemName) {
           testType: 'attack',
           actor: actor.uuid,
           actorType: actor.type,
-          item: item,
+          itemId: item.id,
           isAttack: true,
           amountBD: 0,
           isFav: skillData.isFav,
@@ -672,7 +611,7 @@ function rollItemMacro(itemName) {
           applySize: true,
           attackOptions: true,
           chatNote: weaponData.chatNote,
-          bdDamageLabelStyle: 'display:none',
+          bdDamageLabelStyle: 'hidden',
           bdDamageSum: 0,
         }, { useTargets: true });
       }
@@ -708,7 +647,7 @@ function rollItemMacro(itemName) {
           applySize: powerData.applySize,
           attackOptions: true,
           rollTotal: 0,
-          bdDamageLabelStyle: 'display:none',
+          bdDamageLabelStyle: 'hidden',
           bdDamageSum: 0,
         }, { useTargets: true });
       }
@@ -730,7 +669,7 @@ function rollItemMacro(itemName) {
  * @returns {Promise}
  */
 function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescriptor) {
-  if (DNDescriptor && torgChecks.validDNDescriptor(DNDescriptor) === false) {
+  if (DNDescriptor && !Object.hasOwn(CONFIG.torgeternity.dnTypes, DNDescriptor)) {
     ui.notifications.error('The DN-Descriptor is wrong. Exiting the macro.');
     return;
   }
@@ -807,7 +746,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
-    bdDamageLabelStyle: 'display:none',
+    bdDamageLabelStyle: 'hidden',
     bdDamageSum: 0,
   };
 
@@ -853,58 +792,14 @@ Hooks.on('renderCombatTracker', (combatTracker) => {
   }
 });
 
-Hooks.on('changeSidebarTab', (tabDirectory) => {
-  if (game.settings.get('torgeternity', 'hideForeignCompendium') == true) {
-    hideCompendium(game.settings.get('core', 'language'), tabDirectory);
-  }
-});
-
-Hooks.on('updateActor', (actor, change, options, userId) => {
-  // updating playerList with users character up-to-date data
-  ui.players.render(true);
-
-  if (actor.type === 'stormknight') {
-    const hand = actor.getDefaultHand();
-    // If there is no hand for that SK, and a GM is online, create one
-    if (!hand && game.user.isActiveGM) {
-      actor.createDefaultHand();
-    }
-    // If the update includes permissions, sync them to the hand
-    if (hand && change.ownership && game.userId === userId) {
-      // DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
-      hand.update({ ownership: actor.getHandOwnership() }, { diff: false, recursive: false });
-    }
-  }
-});
-
 // change the generic threat token to match the cosm's one if it's set in the scene
 Hooks.on('preCreateToken', async (...args) => {
   if (args[0].texture.src.includes('threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
-    if (!cosm) return;
-    if (
-      [
-        'coreEarth',
-        'livingLand',
-        'nileEmpire',
-        'aysle',
-        'cyberpapacy',
-        'tharkold',
-        'panPacifica',
-        'orrorsh',
-      ].includes(cosm)
-    )
+    if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
       args[0].updateSource({
         'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp',
       });
-  }
-});
-
-// by default creating a  hand for each stormknight
-Hooks.on('createActor', async (actor, options, userId) => {
-  // run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
-  if (actor.type === 'stormknight' && game.user.isActiveGM) {
-    await actor.createDefaultHand();
   }
 });
 
@@ -921,11 +816,6 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
     });
 
   await deleteActiveDefense(combat);
-});
-
-Hooks.on('deleteActor', async (actor, data1, data2) => {
-  if (game.user.isActiveGM && actor.type === 'stormknight')
-    actor.getDefaultHand()?.delete();
 });
 
 Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {

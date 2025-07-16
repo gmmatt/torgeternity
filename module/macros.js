@@ -1,4 +1,4 @@
-import * as torgchecks from './torgchecks.js';
+import { TestResult, renderSkillChat, torgDamage } from './torgchecks.js';
 import { oneTestTarget, TestDialog } from './test-dialog.js';
 
 const { DialogV2 } = foundry.applications.api;
@@ -74,35 +74,19 @@ export class TorgeternityMacros {
       if (token === undefined) {
         throw new Error('Exception, token is undefined');
       }
+      const actor = token.actor;
 
-      if (token.actor.system.shock.value === token.actor.system.shock.max) {
-        chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
-          'torgeternity.macros.fatigueMacroCharAlreadyKO'
-        )}</li>`;
+      if (actor.hasStatusEffect('unconscious')) {
+        chatOutput += `<li>${token.actor.name} ${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}</li>`;
         continue;
       }
 
-      const targetShockValue = token.actor.system.shock.value;
+      const shockIncrease = actor.fatigue;
+      const applyResult = token.actor.applyDamages(/*shock*/ shockIncrease, /*wounds*/ 0);
 
-      const shockIncrease = token.actor.fatigue;
-
-      const shockResult =
-        targetShockValue + shockIncrease >= token.actor.system.shock.max
-          ? token.actor.system.shock.max
-          : targetShockValue + shockIncrease;
-
-      await token.actor.update({ 'system.shock.value': shockResult });
-      chatOutput += `<li>${token.document.name}: ${shockIncrease} ${game.i18n.localize(
-        'torgeternity.sheetLabels.shock'
-      )}`;
-      if (
-        parseInt(token.actor.system.shock.value) >= parseInt(token.actor.system.shock.max) &&
-        !token.document.hasStatusEffect('unconscious')
-      ) {
-        token.actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
-        chatOutput += `<br><strong>${token.document.name}${game.i18n.localize(
-          'torgeternity.macros.fatigueMacroCharKO'
-        )}</strong>`;
+      chatOutput += `<li>${actor.name}: ${shockIncrease} ${game.i18n.localize('torgeternity.sheetLabels.shock')}`;
+      if (applyResult.shockExceeded) {
+        chatOutput += `<br><strong>${actor.name}${game.i18n.localize('torgeternity.macros.fatigueMacroCharKO')}</strong>`;
       }
       chatOutput += '</li>';
     }
@@ -126,7 +110,7 @@ export class TorgeternityMacros {
       input: fields.createCheckboxInput({ name: 'wholeRevive' }),
     });
 
-    DialogV2.wait({
+    return DialogV2.wait({
       window: { title: 'torgeternity.macros.reviveMacroChatHeadline', },
       content: `${shockGroup.outerHTML}${checkGroup.outerHTML}`,
       buttons: [
@@ -188,7 +172,7 @@ export class TorgeternityMacros {
         }
 
         if (token.document.hasStatusEffect('unconscious')) {
-          token.actor.toggleStatusEffect('unconscious', { active: false, overlay: false });
+          token.actor.toggleStatusEffect('unconscious', { active: false });
           chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${token.actor.name}`;
         }
         chatOutput += '</li>';
@@ -246,16 +230,12 @@ export class TorgeternityMacros {
 
       if (game.dice3d) await game.dice3d.showForRoll(diceroll);
 
-      let chatOutput = `<p>${game.i18n.localize(
-        'torgeternity.macros.bonusDieMacroResult1'
-      )} ${diceAmount} ${game.i18n.localize(
-        'torgeternity.chatText.bonusDice'
-      )} ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult2')} ${diceroll.total}.</p>`;
+      let chatOutput = `<p>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult1')} 
+      ${diceAmount} ${game.i18n.localize('torgeternity.chatText.bonusDice')} 
+      ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult2')} ${diceroll.total}.</p>`;
 
       if (game.user.targets.size === 0) {
-        chatOutput += `<p>${game.i18n.localize(
-          'torgeternity.macros.bonusDieMacroNoTokenTargeted'
-        )}</p>`;
+        chatOutput += `<p>${game.i18n.localize('torgeternity.macros.bonusDieMacroNoTokenTargeted')}</p>`;
         console.log('No targets, creating chat Message, leaving Macro.');
         ChatMessage.create({ content: chatOutput });
         return;
@@ -263,15 +243,12 @@ export class TorgeternityMacros {
 
       chatOutput += `<ul>`;
       for (const token of game.user.targets) {
-        const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.defenses.toughness);
-        if (tokenDamage.shocks > 0) {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
-            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label
-            }.</li>`;
-        } else {
-          chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${token.document.name
-            } ${game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage')}.</li>`;
-        }
+        const tokenDamage = torgDamage(diceroll.total, token.actor.defenses.toughness);
+        chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')}  ${token.document.name} `;
+        chatOutput += (tokenDamage.shocks > 0) ?
+          `${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label}` :
+          game.i18n.localize('torgeternity.macros.bonusDieMacroResultNoDamage');
+        chatOutput += `.</li>`;
       }
       chatOutput += '</ul>';
 
@@ -346,12 +323,12 @@ export class TorgeternityMacros {
             const targets = [];
             // build list of selected players ids for whispers target
             for (const user of users) {
-              if (dialog.element.querySelector(`[name="${user.id}"]`).checked) {
+              if (button.form.elements[user.id].checked) {
                 targets.push(user.id);
               }
             }
             if (!targets.length) return;
-            let msg = {
+            let chatOutput = {
               whisper: targets,
               content: `<div class="card-draw flexcol">${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.show')}`
             };
@@ -361,15 +338,15 @@ export class TorgeternityMacros {
                 ui.notifications.warn(game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.noMoreCards'));
                 break;;
               }
-              msg.content +=
+              chatOutput.content +=
                 `<div class="card-draw flexrow">
                 <span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/>
                 <span><img src="${card.img}"></span></span>
                 <span class="card-name">${card.name}</span>
                 </div>`;
             };
-            msg.content += `</div>`;
-            ChatMessage.create(msg);
+            chatOutput.content += `</div>`;
+            ChatMessage.create(chatOutput);
           }
         }
       ],
@@ -380,13 +357,10 @@ export class TorgeternityMacros {
     if (!game.user.isGM) {
       return;
     }
-    const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
-    const dramaDiscard = game.cards.get(
-      game.settings.get('torgeternity', 'deckSetting').dramaDiscard
-    );
-    const dramaActive = game.cards.get(
-      game.settings.get('torgeternity', 'deckSetting').dramaActive
-    );
+    const settings = game.settings.get('torgeternity', 'deckSetting');
+    const dramaDeck = game.cards.get(settings.dramaDeck);
+    const dramaDiscard = game.cards.get(settings.dramaDiscard);
+    const dramaActive = game.cards.get(settings.dramaActive);
     const restoreOldActive = Array.from(dramaDiscard.cards).pop();
     const removeActiveCard = Array.from(dramaActive.cards).pop();
     // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here
@@ -457,25 +431,21 @@ export class TorgeternityMacros {
     const dialog = await TestDialog.asPromise(test, { useTargets: true });
 
     if (!dialog) {
-      ui.notifications.error(
-        game.i18n.localize('torgeternity.macros.commonMacroNoChatMessageFound')
-      );
+      ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoChatMessageFound'));
       return;
     }
 
-    switch (dialog.flags.torgeternity.test.resultText) {
-      case game.i18n.localize('torgeternity.chatText.check.result.standartSuccess'):
-      case game.i18n.localize('torgeternity.chatText.check.result.goodSuccess'):
-      case game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess'):
-        await _actor.toggleStatusEffect('disconnected', { active: false, overlay: false });
-        ui.notifications.info(
-          `${game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet')}</p>`
-        );
+    switch (dialog.flags.torgeternity.test.result) {
+      case TestResult.STANDARD:
+      case TestResult.GOOD:
+      case TestResult.OUTSTANDING:
+        await _actor.toggleStatusEffect('disconnected', { active: false });
+        ui.notifications.info(game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet'));
         break;
-      case game.i18n.localize('torgeternity.chatText.check.result.failure'):
+      case TestResult.FAILURE:
         // ChatMessage.create({content: "<p>Fehlschlag</p>"});
         break;
-      case game.i18n.localize('torgeternity.chatText.check.result.mishape'):
+      case TestResult.MISHAP:
         break;
     }
   }
@@ -517,6 +487,9 @@ export class TorgeternityMacros {
       return;
     }
     const users = game.users.filter(user => user.active && !user.isGM);
+    if (!users.length) {
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noPlayers'));
+    }
     let checkOptions = '';
     const playerTokenIds = users.map(user => user.character?.id).filter((id) => id !== undefined);
     const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
@@ -544,7 +517,7 @@ export class TorgeternityMacros {
         {
           action: 'whisper',
           label: 'torgeternity.dialogWindow.showingDramaCards.apply',
-          callback: (event, button, dialog) => createMessage(event, button, dialog),
+          callback: createMessage,
         },
       ],
     });
@@ -553,7 +526,7 @@ export class TorgeternityMacros {
       let target;
       // build list of selected players ids for whispers target
       for (const user of users) {
-        if (dialog.element.querySelector(`[name="${user.id}"]`).checked) {
+        if (button.form.elements[user.id].checked) {
           target = user;
         }
       }
@@ -596,13 +569,15 @@ export class TorgeternityMacros {
         { action: 'cancel', label: 'torgeternity.dialogWindow.buffMacro.cancelEffects', },
       ],
     });
+    // If nothing selected, abort
+    if (!attr) return;
 
     if (attr === 'cancel') {
       ui.notifications.warn('MacroEffects removed');
-      for (const token of game.canvas.tokens.controlled && game.user.character) {
-        const delEffects = token.effects
-          .filter((e) => e.name.includes('rd(s)'))
-          .filter((e) => e.name.includes(' / '));
+      let tokens = game.canvas.tokens.controlled;
+      if (!tokens.length) tokens = game.user.character.getActiveTokens();
+      for (const token of tokens) {
+        const delEffects = token.effects.filter((e) => e.name.includes('rd(s)') && e.name.includes(' / '));
         delEffects.forEach((e) => e.delete());
       }
       return;
@@ -645,39 +620,39 @@ export class TorgeternityMacros {
         duration: { rounds: duration, turns: duration },
         changes: [
           {
-            key: 'system.dodgeDefenseMod',
+            key: 'defenses.dodge.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.meleeWeaponsDefenseMod',
+            key: 'defenses.meleeWeapons.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.unarmedCombatDefenseMod',
+            key: 'defenses.unarmedCombat.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.intimidationDefenseMod',
+            key: 'defenses.intimidation.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.maneuverDefenseMod',
+            key: 'defenses.maneuver.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.tauntDefenseMod',
+            key: 'defenses.taunt.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.trickDefenseMod',
+            key: 'defenses.trick.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
         ],
         disabled: false,
@@ -689,29 +664,23 @@ export class TorgeternityMacros {
     else if (attr === 'physicalDefense') {
       // only physical Defenses
       newEffect = {
-        name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses') +
-          ' / ' +
-          bonus +
-          ' / ' +
-          duration +
-          'rd(s)',
+        name: `${game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses')} / ${bonus} / ${duration} rd(s)`,
         duration: { rounds: duration, turns: duration },
         changes: [
           {
-            key: 'system.dodgeDefenseMod',
+            key: 'defenses.dodge.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.meleeWeaponsDefenseMod',
+            key: 'defenses.meleeWeapons.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
-            key: 'system.unarmedCombatDefenseMod',
+            key: 'defenses.unarmedCombat.mod',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
         ],
         disabled: false,
@@ -723,39 +692,33 @@ export class TorgeternityMacros {
     else if (attr === 'all') {
       // preparation of attribute effect
       newEffect = {
-        name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes') +
-          ' / ' +
-          bonus +
-          ' / ' +
-          duration +
-          'rd(s)',
+        name: `${game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes')} / ${bonus} / ${duration} rd(s)`,
         duration: { rounds: duration, turns: duration },
         changes: [
           {
             key: 'system.attributes.mind.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.spirit.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.strength.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.dexterity.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
           {
             key: 'system.attributes.charisma.value',
             value: bonus,
-            mode: 2,
+            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
           },
         ],
         disabled: false,
@@ -767,13 +730,7 @@ export class TorgeternityMacros {
       // One attribute
       // preparation of attribute effect
       newEffect = {
-        name:
-          game.i18n.localize('torgeternity.attributes.' + attr) +
-          ' / ' +
-          bonus +
-          ' / ' +
-          duration +
-          'rd(s)',
+        name: `${game.i18n.localize('torgeternity.attributes.' + attr)} / ${bonus} / ${duration} rd(s)`,
         duration: { rounds: duration, turns: duration },
         changes: [
           {
@@ -824,18 +781,18 @@ export class TorgeternityMacros {
     const info = await DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
-              <label>${game.i18n.localize('torgeternity.macros.periculumSourceName')}<br>
-              <input placeholder=${game.i18n.localize('torgeternity.macros.periculumSourcePlaceHolder')}
-               style="color:black" name="source" type="string" value="${source}"></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumDamageValue')}
-                  <input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumBds')}
-                  <input name="plusBD" type="number" value=${bds} style="width:35px"></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumArmor')}
-                  <input name="armor" type="checkbox" ${armored}></label>
-                  <label>${game.i18n.localize('torgeternity.macros.periculumAp')}
-                  <input name="ap" type="number" style="width:35px" value=${ap}></label>
-                  `,
+          < label > ${game.i18n.localize('torgeternity.macros.periculumSourceName')} <br>
+            <input placeholder=${game.i18n.localize('torgeternity.macros.periculumSourcePlaceHolder')}
+              style="color:black" name="source" type="string" value="${source}"></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumDamageValue')}
+              <input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumBds')}
+              <input name="plusBD" type="number" value=${bds} style="width:35px"></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumArmor')}
+              <input name="armor" type="checkbox" ${armored}></label>
+            <label>${game.i18n.localize('torgeternity.macros.periculumAp')}
+              <input name="ap" type="number" style="width:35px" value=${ap}></label>
+            `,
       ok: {
         label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), // 'Submit Effect',
         callback: (event, button, dialog) => [
@@ -847,6 +804,8 @@ export class TorgeternityMacros {
         ],
       },
     });
+
+    const tokens = game.user.targets.map(token => oneTestTarget(token));
 
     const test = {
       testType: 'custom',
@@ -877,13 +836,13 @@ export class TorgeternityMacros {
       stymiedModifier: 0,
       sizeModifier: 0,
       vulnerableModifier: 0,
-      targetAll: game.user.targets.map(token => oneTestTarget(token)), // for renderSkillChat
+      targetAll: tokens, // for renderSkillChat
       disfavored: false,
       previousBonus: false,
       bonus: 0,
-      bdStyle: 'display:block',
-      upStyle: 'display:none',
-      possibilityStyle: 'display:none',
+      bdStyle: '',
+      upStyle: 'hidden',
+      possibilityStyle: 'hidden',
       movementModifier: 0,
       multiModifier: 0,
       targetsModifier: 0,
@@ -900,38 +859,34 @@ export class TorgeternityMacros {
       isOther1: false,
       isOther2: false,
       isOther3: false,
-      applyDebuffLabel: 'display:none',
+      applyDebuffLabel: 'hidden',
       applyDamLabel: 'display:inline',
       backlashLabel: 'display:true',
-      ammoLabel: 'display:none',
+      ammoLabel: 'hidden',
       target: tokens[0],
       chatTitle: '',
       DN: 9,
-      unskilledLabel: 'display:none',
+      unskilledLabel: 'hidden',
       diceroll: null,
-      isFavStyle: 'pointer-events:none;color:gray;display:none',
+      isFavStyle: 'hidden',
       unskilledTest: false,
       diceList: [10],
       combinedRollTotal: 10,
-      bonusPlusLabel: 'display:none',
+      bonusPlusLabel: 'hidden',
       displayModifiers: true,
       modifiers: 0,
       modifierText: '',
-      modifierLabel: 'display:',
       cardsPlayed: 0,
       rollResult: 11,
       outcome: '',
       actionTotalContent: '',
-      modifierPlusLabel: 'display:none',
+      modifierPlusLabel: 'hidden',
       resultText: '',
-      resultTextColor:
-        'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
-      damageLabel: 'display: block',
-      damageSubLabel: 'display:block',
-      disconnectLabel: 'display:none',
-      cardsPlayedLabel: 'display:none',
-      notesLabel: 'display:none',
+      resultTextColor: 'display:none',
+      disconnectLabel: 'hidden',
+      cardsPlayedLabel: 'hidden',
+      notesLabel: 'hidden',
     };
-    await torgchecks.renderSkillChat(test);
+    await renderSkillChat(test);
   }
 }

@@ -1,5 +1,9 @@
 ## New Translations Required
 
+### 13.1.0
+- `torgeternity.defeat.prompt` - for Defeat Test - appears before the test dialog (uses `{name}`)
+- `torgeternity.defeat.outstanding/good/standard/failure` - for Defeat message results (uses `{name}`)
+
 ### 13.0.2
 - `torgeternity.settingMenu.cardChatNotify` (name & hint)
 

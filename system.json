@@ -32,9 +32,6 @@
   "esmodules": [
     "module/torgeternity.js"
   ],
-  "scripts": [
-    "module/lib/setting-extender.js"
-  ],
   "styles": [
     "css/torgeternity.css",
     "css/journal.css",

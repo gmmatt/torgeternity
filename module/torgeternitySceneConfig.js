@@ -64,7 +64,7 @@ export default class torgeternitySceneConfig extends foundry.applications.sheets
           // More efficient than three calls to this.document.setFlag
           this.document.update({
             "flags.torgeternity.zone": zone,
-            "flags.torgeternity.displayCosm2": (zone === 'mixed' || zone === 'dominant'),
+            "flags.torgeternity.displayCosm2": (zone === 'mixed' || zone === 'dominant'), // i.e. not 'pure'
             "flags.torgeternity.isMixed": (zone === 'mixed')
           })
         }

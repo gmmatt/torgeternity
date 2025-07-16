@@ -7,9 +7,10 @@ export default class TorgCombat extends Combat {
    */
   async nextRound() {
     if (game.user.isGM) {
-      const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
-      const dramaDiscard = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDiscard);
-      const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
+      const settings = game.settings.get('torgeternity', 'deckSetting');
+      const dramaDeck = game.cards.get(settings.dramaDeck);
+      const dramaDiscard = game.cards.get(settings.dramaDiscard);
+      const dramaActive = game.cards.get(settings.dramaActive);
       for (const combatant of this.combatants) {
         await combatant.setFlag('world', 'turnTaken', false);
       }
@@ -40,8 +41,9 @@ export default class TorgCombat extends Combat {
    */
   _onCreate(data, options, userId) {
     if (game.user.isGM) {
-      const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
-      const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
+      const settings = game.settings.get('torgeternity', 'deckSetting');
+      const dramaDeck = game.cards.get(settings.dramaDeck);
+      const dramaActive = game.cards.get(settings.dramaActive);
       if (dramaDeck.availableCards.length > 0) {
         /*await*/ dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
       } else {
@@ -58,8 +60,9 @@ export default class TorgCombat extends Combat {
    */
   _onDelete(options, userId) {
     if (game.user.isGM) {
-      const dramaDiscard = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDiscard);
-      const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
+      const settings = game.settings.get('torgeternity', 'deckSetting');
+      const dramaDiscard = game.cards.get(settings.dramaDiscard);
+      const dramaActive = game.cards.get(settings.dramaActive);
       if (dramaActive.cards.size > 0) {
         dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
       }

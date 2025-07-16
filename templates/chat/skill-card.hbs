@@ -5,7 +5,7 @@
     <div class="message-header torgeternity-skill-description">
       {{#if unskilledTest}}
         <p class="skill-chat-title unskilled">{{chatTitle}}</p>
-        <p class="skill-unskilled-label" style="{{unskilledLabel}}">{{localize "torgeternity.chatText.unskilled"}}</p>
+        <p class="skill-unskilled-label {{unskilledLabel}}">{{localize 'torgeternity.chatText.unskilled'}}</p>
       {{else}}
         <p class="skill-chat-title skilled">{{chatTitle}}</p>
       {{/if}}
@@ -20,95 +20,92 @@
     <p class="skill-roll-result" style="{{resultTextColor}}">
       {{resultText}}
     </p>
-    <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">
-      {{localize "torgeternity.chatText.possibleDisconnect"}},{{localize "torgeternity.chatText.rolled"}}
+    <p class="skill-roll-disconnect-label {{disconnectLabel}}">
+      {{localize 'torgeternity.chatText.possibleDisconnect'}},{{localize 'torgeternity.chatText.rolled'}}
       {{diceList.[0]}}
     </p>
-    <p class="skill-roll-damage-label" style="{{damageLabel}}">
+    <p class="skill-roll-damage-label {{damageLabel}}">
       {{damageDescription}}
     </p>
     <p class="applyButtons">
-      <a class="applyDam" data-action="applyDam" style="{{applyDamLabel}}"
+      <a class="button roll-button {{applyDamLabel}}" data-action="applyDam"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
-        {{localize "torgeternity.sheetLabels.applyDamage"}}</a>
-      <!--<span style="{{applyDamLabel}}">&nbsp;&bull;&nbsp;</span>-->
-      <a class="soakDam" data-action="soakDam" style="{{applyDamLabel}}"
+        {{localize 'torgeternity.sheetLabels.applyDamage'}}</a>
+      <a class="button roll-button {{applyDamLabel}}" data-action="soakDam"
         data-tooltip="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
-        {{localize "torgeternity.sheetLabels.soakDamage"}}</a>
-      <a class="applyStymied" data-action="applyStymied" style="{{applyDebuffLabel}}"
+        {{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
+      <a class="button roll-button {{applyDebuffLabel}}" data-action="applyStymied"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
         {{localize 'torgeternity.sheetLabels.applyStymied'}}</a>
-      <!--<span style="{{applyDebuffLabel}}">&nbsp;&bull;&nbsp;</span>-->
-      <a class="applyVulnerable" data-action="applyVulnerable" style="{{applyDebuffLabel}}"
+      <a class="button roll-button {{applyDebuffLabel}}" data-action="applyVulnerable"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
         {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
-      <a class="backlash1" data-action="backlash1" style="{{backlashLabel}}"
+      <a class="button roll-button {{backlashLabel}}" data-action="backlash1"
         data-tooltip="{{localize 'torgeternity.sheetLabels.backlash1Tooltip'}}">
-        {{localize "torgeternity.sheetLabels.backlash1"}}</a>
-      <a class="backlash2" data-action="backlash2" style="{{backlashLabel}}"
+        {{localize 'torgeternity.sheetLabels.backlash1'}}</a>
+      <a class="button roll-button {{backlashLabel}}" data-action="backlash2"
         data-tooltip="{{localize 'torgeternity.sheetLabels.backlash2Tooltip'}}">
-        {{localize "torgeternity.sheetLabels.backlash2"}}</a>
-      <a class="backlash3" data-action="backlash3" style="{{backlashLabel}}"
+        {{localize 'torgeternity.sheetLabels.backlash2'}}</a>
+      <a class="button roll-button {{backlashLabel}}" data-action="backlash3"
         data-tooltip="{{localize 'torgeternity.sheetLabels.backlash3Tooltip'}}">
-        {{localize "torgeternity.sheetLabels.backlash3"}}</a>
+        {{localize 'torgeternity.sheetLabels.backlash3'}}</a>
     </p>
-    <details class="chatCardDetailsElement">
+    <details class="chatCardDetailsElement" {{isOpen}}>
       <summary class="skillcardSummaryElement"
         data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
         data-close="{{localize 'torgeternity.chatText.showDetails'}}">
         <p class="skill-roll-action-label">{{localize 'torgeternity.chatText.check.result.diceTotal'}}
           {{combinedRollTotal}}
         </p>
-        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
+        <p class="skill-roll-action-label {{actionTotalLabel}}">{{actionTotalContent}}</p>
       </summary>
-      <p class="skill-roll-action-label" style="{{damageSubLabel}}">{{damageSubDescription}}</p>
-      <p class="skill-roll-action-label" style="{{bdDamageLabelStyle}}">
-        {{localize "torgeternity.chatText.check.result.BDDamageSum"}}: {{bdDamageSum}}
-      </p>
-      <table class="skill-roll-table">
+      <p class="skill-roll-action-label {{damageSubLabel}}">{{damageSubDescription}}</p>
+      <p class="skill-roll-action-label {{bdDamageLabelStyle}}" ">
+        {{localize 'torgeternity.chatText.check.result.BDDamageSum'}}: {{bdDamageSum}}
+        </p>
+      <table class=" skill-roll-table">
         <tr>
           <td>{{typeLabel}}:</td>
           <td>{{skillValue}}</td>
         </tr>
         <tr style="border:1px solid black">
-          <td>{{localize "torgeternity.chatText.dieTotal"}}</td>
+          <td>{{localize 'torgeternity.chatText.dieTotal'}}</td>
           <td>{{combinedRollTotal}}</td>
         </tr>
         <tr>
-          <td>{{localize "torgeternity.chatText.bonus"}}:</td>
+          <td>{{localize 'torgeternity.chatText.bonus'}}:</td>
           <td>
-            <div><span style="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
+            <div><span class="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
           </td>
         </tr>
-        <tr style="{{modifierLabel}}">
+        <tr class="{{modifierStyle}}">
           <td>
-            <a class="modifier-label" data-action="modifierLabel">{{localize "torgeternity.chatText.modifiers"}}</a>:
+            <a class="modifier-label" data-action="modifierLabel">{{localize 'torgeternity.chatText.modifiers'}}</a>:
           </td>
           <td>
-            <div data-tooltip-html="{{modifierText}}" style="display:block"><span
-                style="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
+            <div data-tooltip-html="{{modifierText}}"><span class="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
           </td>
         </tr>
-        <tr style="{{cardsPlayedLabel}}">
+        <tr class="{{cardsPlayedLabel}}">
           <td>
-            {{localize "torgeternity.chatText.bonusCard"}}:
+            {{localize 'torgeternity.chatText.bonusCard'}}:
           </td>
           <td>
             <div>{{cardsPlayed}}</div>
           </td>
         </tr>
 
-        <tr style="{{notesLabel}}">
+        <tr class="{{notesLabel}}">
           <td>
-            {{localize "torgeternity.chatText.notes"}}:
+            {{localize 'torgeternity.chatText.notes'}}:
           </td>
           <td>
             <div>{{chatNote}}</div>
           </td>
         </tr>
-        <tr style="{{ammoLabel}}">
+        <tr class="{{ammoLabel}}">
           <td>
-            {{localize "torgeternity.chatText.ammoLabel"}}:
+            {{localize 'torgeternity.chatText.ammoLabel'}}:
           </td>
           <td>
             <div>{{item.system.ammo.value}}</div>
@@ -116,8 +113,8 @@
         </tr>
 
 
-      </table>
-      <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
+        </table>
+        <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
       <div class="message-content">
         <div class="dice-roll-torg">
           <div class="dice-result">
@@ -144,22 +141,17 @@
     </details>
 
     <div class="skill-roll-menu">
-      <a class="roll-fav" data-action="rollFav" style="{{isFavStyle}}">{{localize "torgeternity.chatText.favored"}}</a>
-      <!--<span style="{{isFavStyle}}">&bull;</span>-->
-      <a class="roll-possibility" data-action="rollPossibility"
-        style="{{possibilityStyle}}">{{localize "torgeternity.chatText.possibility"}}</a>
-      <!--<span style="{{possibilityStyle}}">&bull;</span>-->
-      <a class="roll-up" data-action="rollUp" style="{{upStyle}}">{{localize "torgeternity.chatText.up"}}</a>
-      <!--<span style="{{upStyle}}">&bull;</span>-->
-      <a class="roll-hero" data-action="rollHero" style="{{heroStyle}}">{{localize "torgeternity.chatText.hero"}}</a>
-      <!--<span style="{{heroStyle}}">&bull;</span>-->
-      <a class="roll-drama" data-action="rollDrama"
-        style="{{dramaStyle}}">{{localize "torgeternity.chatText.drama"}}</a>
-      <!--<span style="{{dramaStyle}}">&bull;</span>-->
-      <a class="add-plus3" data-action="addPlus3"
-        style="{{plus3Style}}">{{localize "torgeternity.chatText.bonusCard"}}</a>
-      <!--{{#if isAttack}}<span style="{{plus3Style}}">&bull;</span>{{/if}}-->
-      <a class="add-bd" data-action="addBd" style="{{bdStyle}}">{{localize "torgeternity.chatText.bonusDice"}}</a>
+      <a class="button roll-button {{isFavStyle}}"
+        data-action="rollFav">{{localize 'torgeternity.chatText.favored'}}</a>
+      <a class="button roll-button {{possibilityStyle}}"
+        data-action="rollPossibility">{{localize 'torgeternity.chatText.possibility'}}</a>
+      <a class="button roll-button {{upStyle}}" data-action="rollUp">{{localize 'torgeternity.chatText.up'}}</a>
+      <a class="button roll-button {{heroStyle}}" data-action="rollHero">{{localize 'torgeternity.chatText.hero'}}</a>
+      <a class="button roll-button {{dramaStyle}}"
+        data-action="rollDrama">{{localize 'torgeternity.chatText.drama'}}</a>
+      <a class="button roll-button {{plus3Style}}"
+        data-action="addPlus3">{{localize 'torgeternity.chatText.bonusCard'}}</a>
+      <a class="button roll-button {{bdStyle}}" data-action="addBd">{{localize 'torgeternity.chatText.bonusDice'}}</a>
     </div>
   </div>
 </div>

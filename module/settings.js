@@ -1,4 +1,5 @@
 import deckSettingMenu from './cards/cardSettingMenu.js';
+import { hideCompendium } from './hideCompendium.js';
 
 /**
  *
@@ -35,22 +36,7 @@ export function registerTorgSettings() {
     type: Boolean,
     default: true,
   });
-  /*
-        //------pause image
 
-        game.settings.register("torgeternity", "pauseMedia", {
-            // game.setting.register("NameOfTheModule", "VariableName",
-            name: "torgeternity.settingMenu.pauseMedia.name", // Register a module setting with checkbox
-            hint: "torgeternity.settingMenu.pauseMedia.hint", // Description of the settings
-            type: window.Azzu.SettingsTypes.FilePickerImage,
-            default: {},
-            scope: 'world',
-            config: true,
-            restricted: true,
-
-        });
-
-        */
   // GM Screen
   game.settings.register('torgeternity', 'gmScreen', {
     name: 'torgeternity.settingMenu.gmScreen.name', // Register a module setting with checkbox
@@ -70,7 +56,7 @@ export function registerTorgSettings() {
     config: true,
     type: Boolean,
     default: false,
-    requiresReload: true,
+    onChange: hideCompendium,
   });
 
   // Show always details in Chatcards or keep it tugged in
@@ -229,5 +215,33 @@ export function registerTorgSettings() {
     type: Boolean,
     default: false,
     requiresReload: true,
+  });
+
+  game.settings.register('torgeternity', 'autoDefeat', {
+    name: 'torgeternity.settingMenu.autoDefeat.name',
+    hint: 'torgeternity.settingMenu.autoDefeat.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+    requiresReload: true,
+  });
+
+  game.settings.register('torgeternity', 'autoShock', {
+    name: 'torgeternity.settingMenu.autoShock.name',
+    hint: 'torgeternity.settingMenu.autoShock.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
+  game.settings.register('torgeternity', 'autoWound', {
+    name: 'torgeternity.settingMenu.autoWound.name',
+    hint: 'torgeternity.settingMenu.autoWound.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
   });
 }

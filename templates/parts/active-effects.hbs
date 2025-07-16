@@ -1,4 +1,5 @@
-<section class="tab {{tabs.effects.cssClass}} effects block" data-group="primary" data-tab="effects">
+<section class="tab effects scrollable {{tabs.effects.cssClass}}" data-group="{{tabs.effects.group}}"
+  data-tab="{{tabs.effects.id}}">
   <ol class="items-list effects-list">
     {{#each effects as |section sid|}}
       <li class="effects-heading flexrow" data-effect-type="{{section.type}}">
@@ -22,7 +23,7 @@
           <li
             class="item effect effects-item flexrow"
             style="display: flex"
-            data-effect-id="{{effect._id}}">
+            data-effect-uuid="{{effect.uuid}}">
             <div class="effect-name flexrow">
               <img class="effect-item-image" src="{{effect.img}}" />
               {{effect.name}}
@@ -48,7 +49,8 @@
                 class="effect-control effect-delete"
                 data-action="effectControl"
                 data-control="delete"
-                data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}"
+                {{disabled effect.transfer}}>
                 <i class="fas fa-trash"></i>
               </a>
             </div>

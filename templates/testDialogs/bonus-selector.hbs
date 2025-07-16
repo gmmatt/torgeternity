@@ -1,16 +1,15 @@
 <fieldset>
-  <legend
-    data-tooltip="{{localize " torgeternity.sheetLabels.inputExistingTooltip"}}">Bonus</legend>
+  <legend data-tooltip="{{localize 'torgeternity.sheetLabels.inputExistingTooltip'}}">Bonus</legend>
   <span class="skill-check-options">
     <input type="radio" id="roll" data-dtype="Boolean" name="previousBonus"
       value=false {{checked (not test.previousBonus)}} />
-    <label for="roll">{{localize "torgeternity.sheetLabels.roll"}}</label>
+    <label for="roll">{{localize 'torgeternity.sheetLabels.roll'}}</label>
     <input type="radio" data-dtype="Boolean" id="previous-bonus" name="previousBonus"
-      data-tooltip="{{localize " torgeternity.sheetLabels.inputExistingRdbTitle"}}"
+      data-tooltip="{{localize 'torgeternity.sheetLabels.inputExistingRdbTitle'}}"
       value=true {{checked test.previousBonus}} />
-    <label for="previous-bonus">{{localize "torgeternity.sheetLabels.inputExisting"}}</label>
+    <label for="previous-bonus">{{localize 'torgeternity.sheetLabels.inputExisting'}}</label>
     <input type="number" data-dtype="Number" id="bonus-text" name="bonus"
-      data-tooltip="{{localize " torgeternity.sheetLabels.inputExistingTitle"}}"
-      placeholder="???" value={{test.bonus}} />
+      data-tooltip="{{localize 'torgeternity.sheetLabels.inputExistingTitle'}}"
+      placeholder="???" value="{{test.bonus}}" />
   </span>
 </fieldset>

@@ -1,0 +1,39 @@
+<header class="sheet-header">
+  <div class="vehicle-header-image">
+    <img src="{{document.img}}" data-edit="img" data-tooltip="{{document.name}}"
+      {{#if editable}}data-action="editImage" {{/if}} />
+  </div>
+  <div class="vehicle-header-name">
+    <input name="name" type="text" value="{{document.name}}" placeholder="Vehicle Name" size="50" />
+  </div>
+</header>
+<header class="sheet-header vehicle-stats">
+  <div>
+    <p>{{localize "torgeternity.sheetLabels.type"}}:</p>
+    <select name="system.type">
+      {{selectOptions config.vehicleTypes selected=document.system.type localize=true sort=true}}
+    </select>
+  </div>
+
+  <div>
+    <p>{{localize "torgeternity.sheetLabels.size"}}:</p>
+    <select name="system.details.sizeBonus">
+      {{selectOptions config.sizes selected=document.system.details.sizeBonus localize=true sort=true}}
+    </select>
+  </div>
+
+  <div>
+    <p>{{localize "torgeternity.stats.wounds"}}:</p>
+    <input
+      name="system.wounds.value"
+      type="number"
+      value="{{document.system.wounds.value}}"
+      data-dtype="Number" />
+    /
+    <input
+      name="system.wounds.max"
+      type="number"
+      value="{{document.system.wounds.max}}"
+      data-dtye="Number" />
+  </div>
+</header>
