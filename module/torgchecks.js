@@ -66,7 +66,7 @@ export async function renderSkillChat(test) {
     //
     // Establish DN for this test based on test.DNDescriptor //
     //
-    test.DN = uniqueDN ?? await individualDN(test, target);
+    test.DN = uniqueDN ?? individualDN(test, target);
 
     //
     // -----------------------Determine Bonus---------------------------- //
@@ -747,7 +747,7 @@ function validValue(value, other) {
   return (value && value != '-') ? value : other;
 }
 
-async function individualDN(test, target) {
+function individualDN(test, target) {
   switch (test.DNDescriptor) {
     case 'veryEasy':
       return 6;
@@ -839,6 +839,7 @@ async function individualDN(test, target) {
 async function highestDN(test) {
   let highest = 0;
   for (const target of test.targetAll) {
-    highest = Math.max(highest, singleDN(target));
+    highest = Math.max(highest, individualDN(test, target));
   }
+  return highest;
 }
