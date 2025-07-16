@@ -157,12 +157,8 @@ form.torgeternity {
   }
 }
 
-div[data-application-part] {
+form.sheet.actor div.threat-sheet {
   height: 100%;
-
-  div.threat-sheet {
-    height: 100%;
-  }
 }
 
 dialog.torgeternity:not(.actor, .item) .window-content,
