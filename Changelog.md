@@ -10,6 +10,8 @@
 - Don't hide the **playlists**!
 - Get Card Deck **+ Add** button working.
 - Attempt better migration of **cosm** field of Items.
+- Fix display issues with **Card Deck Configuration** window.
+- Move **Actor left tab** slightly further away from window contents.
 
 ## v13.1.0
 

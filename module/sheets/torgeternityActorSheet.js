@@ -416,8 +416,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (characterHand) {
       characterHand.sheet.render(true);
     } else {
-      await this.actor.createDefaultHand();
-      characterHand.sheet.render(true);
+      const hand = await this.actor.createDefaultHand();
+      hand.sheet.render(true);
     }
   }
 

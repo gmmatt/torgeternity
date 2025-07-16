@@ -74,7 +74,7 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
       ]
     };
     for (const sk of data.stormknights) {
-      data.stormknights[sk.id] = sk.getDefaultHand().id;
+      data.stormknights[sk.id] = sk.getDefaultHand()?.id;
     }
     return foundry.utils.mergeObject(await super._prepareContext(options), data);
   }
@@ -106,7 +106,7 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
     if (elem.nodeName !== 'SELECT') return;
     if (elem.classList.contains("selectDeck"))
       this.#onChangeDeck(html, event);
-    else if (elem.classList.contains("stormknightHand"))
+    if (elem.classList.contains("stormknightHand"))
       this.#onChangeHand(html, event);
   }
 

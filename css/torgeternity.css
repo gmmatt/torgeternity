@@ -209,7 +209,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   h3.left-tab {
     position: absolute;
     transform-origin: top left;
-    transform: rotate(-90deg) translate(calc(-100% - var(--header-height)), -10px);
+    transform: rotate(-90deg) translate(calc(-100% - var(--header-height)), -15px);
     top: 0%;
     margin-bottom: 0px;
 
@@ -3834,8 +3834,31 @@ ol.chat-log {
   width: 150px;
 }
 
-form.deckSetting div.flexrow {
-  align-items: normal;
+form.deckSetting .window-content {
+  div.flexrow {
+    align-items: normal;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--color-underline-header);
+  }
+
+  label {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  select.doubled {
+    background-color: rgb(238, 148, 148);
+    color: black;
+    border: 1px solid red;
+  }
+
+  .form-group>label {
+    line-height: 25px;
+  }
 }
 
 .actor-icon {
