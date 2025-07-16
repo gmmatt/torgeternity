@@ -9,6 +9,7 @@
 - Use better method to **hide Compendiums**.
 - Don't hide the **playlists**!
 - Get Card Deck **+ Add** button working.
+- Attempt better migration of **cosm** field of Items.
 
 ## v13.1.0
 
