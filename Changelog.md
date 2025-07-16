@@ -2,11 +2,13 @@
 
 ## v13.1.1
 
-- Fixes the "aimed" option not working in Tests.
-- Remove autoDefeat entry from game settings.
-- Allow effects to be created.
-- Fix dice rolling when "Unique DN" is selected in Game Settings.
-- Use better method to hide Compendiums.
+- Fixes the **aimed** option not working in Tests.
+- Remove **autoDefeat entry** from game settings.
+- Allow **Create Effects** to work.
+- Fix dice rolling when **Unique DN** is selected in Game Settings.
+- Use better method to **hide Compendiums**.
+- Don't hide the **playlists**!
+- Get Card Deck **+ Add** button working.
 
 ## v13.1.0
 
