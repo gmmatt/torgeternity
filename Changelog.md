@@ -6,6 +6,7 @@
 - Remove autoDefeat entry from game settings.
 - Allow effects to be created.
 - Fix dice rolling when "Unique DN" is selected in Game Settings.
+- Use better method to hide Compendiums.
 
 ## v13.1.0
 

@@ -42,7 +42,7 @@ import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
 import InitEnrichers from './enrichers.js';
-import { initHideCompendium, hideCompendium } from './hideCompendium.js';
+import { initHideCompendium } from './hideCompendium.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -213,10 +213,6 @@ Hooks.on("renderUIConfig", (config, html, context, options) => {
 
 // -------------once everything ready
 Hooks.on('ready', async function () {
-
-  // Foundry#initializePacks is called just before the 'setup' hook
-  // But needs to be after 'ready' to set properties on compendiums.
-  hideCompendium();
 
   /*
   // Force DARK application colour scheme
