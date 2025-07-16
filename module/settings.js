@@ -217,16 +217,6 @@ export function registerTorgSettings() {
     requiresReload: true,
   });
 
-  game.settings.register('torgeternity', 'autoDefeat', {
-    name: 'torgeternity.settingMenu.autoDefeat.name',
-    hint: 'torgeternity.settingMenu.autoDefeat.hint',
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: false,
-    requiresReload: true,
-  });
-
   game.settings.register('torgeternity', 'autoShock', {
     name: 'torgeternity.settingMenu.autoShock.name',
     hint: 'torgeternity.settingMenu.autoShock.hint',
