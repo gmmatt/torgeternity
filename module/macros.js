@@ -402,7 +402,6 @@ export class TorgeternityMacros {
       actorType: _actor.type,
       skillName: 'reality',
       testType: 'skill',
-      skillBaseAttribute: 'spirit',
       skillAdds: realitySkill.adds,
       skillValue: realitySkill.value,
       isFav: realitySkill.isFav,

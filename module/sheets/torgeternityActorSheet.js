@@ -654,9 +654,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorName: this.actor.name,
       actorType: this.actor.type,
       skillName: button.dataset.name,
-      skillBaseAttribute: game.i18n.localize(
-        'torgeternity.skills.' + button.dataset.baseAttribute
-      ),
       skillAdds: button.dataset.adds,
       skillValue: button.dataset.skillValue,
       isFav: this.actor.system.skills[button.dataset.name].isFav,
@@ -745,7 +742,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: this.actor.type,
       isActiveDefenseRoll: true,
       skillName: 'activeDefense',
-      skillBaseAttribute: 0,
       skillAdds: null,
       skillValue: null,
       unskilledUse: true,
@@ -771,7 +767,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: this.actor.type,
       isAttack: false,
       skillName: 'activeDefense',
-      skillBaseAttribute: 0,
       skillAdds: null,
       skillValue: null,
       unskilledUse: true,
@@ -949,7 +944,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       isAttack: powerData.isAttack,
       isFav: skillData.isFav,
       skillName: skillName,
-      skillBaseAttribute: game.i18n.localize('torgeternity.skills.' + button.dataset.baseAttribute),
       skillAdds: skillData.adds,
       skillValue: Math.max(skillData.value, this.actor.system.attributes[skillData.baseAttribute].value),
       unskilledUse: false,
