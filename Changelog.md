@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v13.1.1
+
+- Fixes the "aimed" option not working in Tests.
+
 ## v13.1.0
 
 ### New Features
