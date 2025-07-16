@@ -2141,82 +2141,29 @@ button[data-control="torg"] {
   transition: 0.3s;
 }
 
-li.scene-control.active i.torg,
-i.torg:hover {
-  filter: grayscale(0);
-}
+aside#scene-controls2 {
+  width: 80px;
 
-nav#controls {
-  position: relative;
-  top: 6vh;
-}
+  li .ui-control {
+    --control-size: 36px;
+    background: url(../images/resizerRound.webp);
+    background-size: 100% 100%;
+    border-radius: 18px;
 
-nav#controls ol .scene-control,
-nav#controls ol .control-tool,
-nav#controls ol .scene-control:hover,
-nav#controls ol .control-tool:hover {
-  transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  background: url(../images/resizerRound.webp);
-  background-size: 100% 100%;
-  border: none;
-  border-radius: 50% 50%;
-  box-shadow: 0px 0px 15px black inset;
-}
+    &[aria-pressed="true"] {
+      background: url(../images/resizerRound.webp);
+      backdrop-filter: invert(70%);
+    }
 
-nav#controls ol .scene-control i.fa,
-nav#controls ol .scene-control i.fas,
-nav#controls ol .control-tool i.fa,
-nav#controls ol .control-tool i.fas,
-nav#controls ol .scene-control:hover i.fa,
-nav#controls ol .scene-control:hover i.fas,
-nav#controls ol .control-tool:hover i.fa,
-nav#controls ol .control-tool:hover i.fas {
-  font-weight: 600;
-  font-size: 16px;
-}
+    &:before {
+      font-size: 20px;
+    }
 
-nav#controls ol .scene-control i.fa::before,
-nav#controls ol .scene-control i.fas:before,
-nav#controls ol .control-tool i.fa::before,
-nav#controls ol .control-tool i.fas:before,
-nav#controls ol .scene-control:hover i.fa::before,
-nav#controls ol .scene-control:hover i.fas:before,
-nav#controls ol .control-tool:hover i.fa::before,
-nav#controls ol .control-tool:hover i.fas:before {
-  position: relative;
-  top: -2px;
-}
-
-nav#controls ol .control-tool.toggle {
-  border: 1px solid #000000;
-  filter: grayscale(1);
-}
-
-nav#controls ol .control-tool.toggle.active {
-  border: 1px solid #ffffff;
-  filter: grayscale(0);
-  opacity: 1;
-  background: url(../images/resizerRound.webp);
-  background-size: 100% 100%;
-}
-
-nav#controls ol .torgHand {
-  position: relative;
-  width: 100%;
-  height: 25px;
-}
-
-nav#controls ol .torgHand:before {
-  content: "";
-  background-image: url(../images/icons/cardhand.webp);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: -5px;
+    &:hover {
+      background: url(../images/resizerRound.webp);
+      backdrop-filter: hue-rotate(90deg);
+    }
+  }
 }
 
 .flexrow .scrollable {
