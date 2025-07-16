@@ -14,10 +14,19 @@ export const TestResult = {
  * @param test
  */
 export async function renderSkillChat(test) {
+
+  // Check for targeting a vehicle which doesn't have an operator.
+  for (const target of test.targetAll) {
+    if (target.type === 'vehicle' && isNaN(target.defenses.dodge)) {
+      ui.notifications.error(game.i18n.format('torgeternity.notifications.noVehicleOperator', { a: target.targetName }));
+      return;
+    }
+  }
+
   const messages = [];
 
   // For non-targeted tests, ensure we iterate through the loop at least once
-  if (!test.targetAll.length) test.targetAll = [{}];
+  if (!test.targetAll.length) test.targetAll = [{ dummyTarget: true }];
 
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
@@ -28,13 +37,6 @@ export async function renderSkillChat(test) {
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   test.bdDamageLabelStyle = test.bdDamageSum ? '' : 'hidden';
   let iteratedRoll;
-
-  for (const target of test.targetAll) {
-    if (target.present && target.type === 'vehicle' && isNaN(target.defenses.dodge)) {
-      ui.notifications.error(game.i18n.format('torgeternity.notifications.noVehicleOperator', { a: target.targetName }));
-      return;
-    }
-  }
 
   const testActor = fromUuidSync(test.actor);
   const testItem = test.itemId ? testActor.items.get(test.itemId) : null;
@@ -47,11 +49,10 @@ export async function renderSkillChat(test) {
     test.ammoLabel = 'hidden';
   }
 
-
   const uniqueDN = game.settings.get('torgeternity', 'uniqueDN') ? await highestDN(test) : undefined;
   let first = true;
   for (const target of test.targetAll) {
-    test.target = target;
+    if (!target.dummyTarget) test.target = target;
     test.sizeModifier = target.sizeModifier;
     test.vulnerableModifier = target.vulnerableModifier;
 
@@ -208,7 +209,7 @@ export async function renderSkillChat(test) {
     }
 
     // Apply target-related modifiers
-    if (target?.present) {
+    if (!target.dummyTarget) {
       // Apply the size modifier in appropriate circumstances
       if (test.applySize && test.sizeModifier) {
         test.modifiers += parseInt(test.sizeModifier);
@@ -290,8 +291,7 @@ export async function renderSkillChat(test) {
     // Add +3 cards to bonus
     // Initialize cardsPlayed if null
     test.cardsPlayed ??= 0;
-    const tempBonus = parseInt(test.bonus);
-    test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
+    test.bonus = parseInt(test.bonus) + parseInt(test.cardsPlayed) * 3;
 
     test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
 
@@ -305,7 +305,7 @@ export async function renderSkillChat(test) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
       test.result = TestResult.FAILURE;
       if (test.testType === 'power') {
-        test.backlashLabel = 'display:inline';
+        test.backlashLabel = '';
       }
       test.outcomeColor = useColorBlind ? 'color: red' :
         'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
@@ -431,16 +431,16 @@ export async function renderSkillChat(test) {
         adjustedDamage += test?.additionalDamage;
       }
       // Check for whether a target is present and turn on display of damage sub-label
-      if (test?.target?.present) {
+      if (!target.dummyTarget) {
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor) {
           test.targetAdjustedToughness =
-            test.target.toughness -
-            Math.min(parseInt(test.weaponAP), test.target.armor) +
+            target.toughness -
+            Math.min(parseInt(test.weaponAP), target.armor) +
             parseInt(test.coverModifier);
           // Ignore armor and cover
         } else {
-          test.targetAdjustedToughness = test.target.toughness - test.target.armor;
+          test.targetAdjustedToughness = target.toughness - target.armor;
         }
         // Generate damage description and damage sublabel
         if (test.result < TestResult.STANDARD) {
@@ -469,7 +469,7 @@ export async function renderSkillChat(test) {
           // then modify test.damage for following future computation, and modify the adjustedDamage
           // then the test.BDDamageInPromise is reset
 
-          test.applyDamLabel = 'display:inline';
+          test.applyDamLabel = '';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
@@ -537,7 +537,7 @@ export async function renderSkillChat(test) {
       if (test.rollResult - test.DN >= 0) {
         test.damageSubLabel = '';
         test.applyDamLabel = 'hidden';
-        if (test.target.present) test.applyDebuffLabel = 'display:inline';
+        if (!target.dummyTarget) test.applyDebuffLabel = '';
       } else {
         test.applyDebuffLabel = 'hidden';
         // test.damageSubDescription = "Apply debuff";//localize('torgeternity.chatText.check.result.damage')
@@ -821,10 +821,9 @@ async function individualDN(test, target) {
       // Find the fastest participant in the active combat
       let highestSpeed = 0;
       for (const combatant of game.combats.active.turns) {
-        const combatantSpeed =
-          (combatant.actor.type === 'vehicle') ?
-            combatantSpeed = combatant.actor.system.topSpeed.value :
-            combatantSpeed = getTorgValue(combatant.actor.system.other.run);
+        const combatantSpeed = (combatant.actor.type === 'vehicle') ?
+          combatant.actor.system.topSpeed.value :
+          getTorgValue(combatant.actor.system.other.run);
         if (combatantSpeed > highestSpeed) {
           highestSpeed = combatantSpeed;
         }

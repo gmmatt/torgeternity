@@ -292,7 +292,6 @@ export function oneTestTarget(token, applySize) {
   // Set vehicle defense if needed
   if (actor.type === 'vehicle') {
     return {
-      present: true,
       type: actor.type,
       id: actor.id,
       uuid: token.document.uuid,
@@ -315,7 +314,6 @@ export function oneTestTarget(token, applySize) {
     };
   } else {
     return {
-      present: true,
       type: actor.type,
       id: actor.id,
       uuid: token.document.uuid,
