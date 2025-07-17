@@ -876,44 +876,7 @@ items:
     effects: []
     folder: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.99I93QMkOyDEUng1'
-effects:
-  - origin: Actor.hcdhRCs56U5JrAl4.Item.yAe9TWoKpqHEnno9
-    duration:
-      rounds: null
-      startTime: 0
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: false
-    name: Unarmed Combat is Fav
-    img: icons/svg/aura.svg
-    _id: I1ZQfHgB1zhqV1it
-    type: base
-    system: {}
-    changes:
-      - key: ystem.skills.unarmedCombat.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-    description: ''
-    tint: '#ffffff'
-    transfer: false
-    statuses: []
-    sort: 0
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      exportSource: null
-    _key: '!actors.effects!hcdhRCs56U5JrAl4.I1ZQfHgB1zhqV1it'
+effects: []
 folder: null
 sort: 100001
 flags: {}

@@ -726,45 +726,7 @@ items:
     _id: 4XelAqgy7s6Z1mNx
     sort: 100000
     _key: '!actors.items!6ThunRV3sj9ZSMQW.4XelAqgy7s6Z1mNx'
-effects:
-  - origin: >-
-      Compendium.torgeternity.archetypes.Actor.6ThunRV3sj9ZSMQW.Item.16w2fwrhuFzIJGuv
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: true
-    name: Maneuver Fav
-    _id: x4np6n6DU0aGriji
-    changes:
-      - key: system.skills.maneuver.isFav
-        mode: 5
-        value: '1'
-        priority: null
-    description: ''
-    transfer: false
-    statuses: []
-    flags: {}
-    tint: '#ffffff'
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: 1722357050923
-      modifiedTime: 1722357050923
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!6ThunRV3sj9ZSMQW.x4np6n6DU0aGriji'
+effects: []
 folder: null
 sort: 100001
 flags: {}

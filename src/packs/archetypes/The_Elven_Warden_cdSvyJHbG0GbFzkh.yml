@@ -1217,47 +1217,6 @@ items:
     folder: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.nmHMp4N1KLo9RdnC'
 effects:
-  - origin: Actor.cdSvyJHbG0GbFzkh.Item.zLqqXAUExJoLHgji
-    duration:
-      rounds: null
-      startTime: 0
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: false
-    name: Stealth/Tracking Favored
-    img: icons/svg/aura.svg
-    _id: cV8YXWqajAED1Car
-    type: base
-    system: {}
-    changes:
-      - key: system.skills.stealth.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-      - key: system.skills.tracking.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-    description: ''
-    tint: '#ffffff'
-    transfer: false
-    statuses: []
-    sort: 0
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      exportSource: null
-    _key: '!actors.effects!cdSvyJHbG0GbFzkh.cV8YXWqajAED1Car'
   - origin: Actor.cdSvyJHbG0GbFzkh.Item.yUrDm5bnBMSFn1e9
     duration:
       rounds: null
