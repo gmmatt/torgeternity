@@ -1,4 +1,5 @@
 import { torgeternity } from '../../config.js';
+import { migrateCosm } from '../shared.js';
 
 const fields = foundry.data.fields;
 
@@ -112,6 +113,14 @@ export class PerkItemData extends foundry.abstract.TypeDataModel {
       }),
       transferenceID: new fields.DocumentIdField({ initial: null }), // necessary for saving perks data in race items
     };
+  }
+
+  /**
+   * @inheritdoc
+   * @param {object} data delivered data from the constructor
+   */
+  static migrateData(data) {
+    data.cosm = migrateCosm(data.cosm);
   }
 
   /**

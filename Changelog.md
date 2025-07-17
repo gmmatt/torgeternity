@@ -1,5 +1,21 @@
 # TORG Eternity Changelog
 
+## v13.1.1
+
+- Fixes the **aimed** option not working in Tests.
+- Remove **autoDefeat entry** from game settings.
+- Allow **Create Effects** to work.
+- Fix dice rolling when **Unique DN** is selected in Game Settings.
+- Use better method to **hide Compendiums**.
+- Don't hide the **playlists**!
+- Get Card Deck **+ Add** button working.
+- Attempt better migration of **cosm** field of Items.
+- Fix display issues with **Card Deck Configuration** window.
+- Move **Actor left tab** slightly further away from window contents.
+- Fix some **localization** issues.
+- UI Controls, the **torg button states** reflect currently open windows.
+- **Target Vulnerability** displayed in Test Dialog Status Effects panel.
+
 ## v13.1.0
 
 ### New Features
@@ -11,7 +27,7 @@
 - Displays a Chat Prompt to **check for Defeat** when a stormknight's max wounds are exceeded.
 - **Inline Checks** can be added to journals, and those checks can also be posted to chat by GMs to provide a clickable links for players.
 -- The checks take the form `@Check[persuasion|dn=18]` or `@Check[taunt|dn=standard]{Taunt}` (the `{...}` label is optional), or any other sort of test using a slightly more complex syntax, such as the following which shows all the parameters that are normally passed to TestDialog (the first word is always the testType):
--- `@Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true|interactionAttackType=intimidation]`
+-- `@Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true]`
 
 ### Other changes
 - **Active Effects** can be edited on Items which are present on Actors.

@@ -1,5 +1,4 @@
 import deckSettingMenu from './cards/cardSettingMenu.js';
-import { hideCompendium } from './hideCompendium.js';
 
 /**
  *
@@ -56,7 +55,7 @@ export function registerTorgSettings() {
     config: true,
     type: Boolean,
     default: false,
-    onChange: hideCompendium,
+    requiresReload: true
   });
 
   // Show always details in Chatcards or keep it tugged in
@@ -210,16 +209,6 @@ export function registerTorgSettings() {
   game.settings.register('torgeternity', 'ignoreAmmo', {
     name: 'torgeternity.settingMenu.ignoreAmmo.name',
     hint: 'torgeternity.settingMenu.ignoreAmmo.hint',
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: false,
-    requiresReload: true,
-  });
-
-  game.settings.register('torgeternity', 'autoDefeat', {
-    name: 'torgeternity.settingMenu.autoDefeat.name',
-    hint: 'torgeternity.settingMenu.autoDefeat.hint',
     scope: 'world',
     config: true,
     type: Boolean,

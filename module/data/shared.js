@@ -20,3 +20,14 @@ export function makeSkillFields(unskilledUse, baseAttribute, groupName) {
     }),
   };
 }
+
+export function migrateCosm(cosm) {
+  if (!cosm)
+    return 'none'
+  else if (Object.hasOwn(CONFIG.torgeternity.cosmTypeFromLabel, cosm))
+    return CONFIG.torgeternity.cosmTypeFromLabel[cosm];
+  else if (!Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm)) {
+    console.log(`Invalid Cosm: ${cosm}`);
+    return 'none';
+  }
+}

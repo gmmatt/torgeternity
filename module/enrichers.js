@@ -108,7 +108,6 @@ function _onClickInlineCheck(event) {
   // Add Skill/Attribute values from the actor
   if (test.skillName && actor.system.skills[test.skillName]) {
     const skill = actor.system.skills[test.skillName];
-    test.skillBaseAttribute ??= 'torgeternity.skills.' + skill.baseAttribute;
     test.skillAdds ??= skill.adds;
     test.skillValue ??= skill.value;
   }

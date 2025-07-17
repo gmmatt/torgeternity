@@ -416,8 +416,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (characterHand) {
       characterHand.sheet.render(true);
     } else {
-      await this.actor.createDefaultHand();
-      characterHand.sheet.render(true);
+      const hand = await this.actor.createDefaultHand();
+      hand.sheet.render(true);
     }
   }
 
@@ -625,7 +625,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static #onInteractionAttack(event, button) {
     let dnDescriptor = 'standard';
-    const attackType = button.dataset.attackType;
+    const attackType = button.dataset.name;
     if (game.user.targets.size) {
       switch (attackType) {
         case 'intimidation':
@@ -653,14 +653,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
-      interactionAttackType: button.dataset.attackType,
       skillName: button.dataset.name,
-      skillBaseAttribute: game.i18n.localize(
-        'torgeternity.skills.' + button.dataset.baseAttribute
-      ),
       skillAdds: button.dataset.adds,
       skillValue: button.dataset.skillValue,
-      isFav: this.actor.system.skills[attackType].isFav,
+      isFav: this.actor.system.skills[button.dataset.name].isFav,
       unskilledUse: true,
       DNDescriptor: dnDescriptor,
       type: 'interactionAttack',
@@ -746,7 +742,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: this.actor.type,
       isActiveDefenseRoll: true,
       skillName: 'activeDefense',
-      skillBaseAttribute: 0,
       skillAdds: null,
       skillValue: null,
       unskilledUse: true,
@@ -772,7 +767,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: this.actor.type,
       isAttack: false,
       skillName: 'activeDefense',
-      skillBaseAttribute: 0,
       skillAdds: null,
       skillValue: null,
       unskilledUse: true,
@@ -950,7 +944,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       isAttack: powerData.isAttack,
       isFav: skillData.isFav,
       skillName: skillName,
-      skillBaseAttribute: game.i18n.localize('torgeternity.skills.' + button.dataset.baseAttribute),
       skillAdds: skillData.adds,
       skillValue: Math.max(skillData.value, this.actor.system.attributes[skillData.baseAttribute].value),
       unskilledUse: false,
