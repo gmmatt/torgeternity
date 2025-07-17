@@ -180,6 +180,8 @@ Hooks.once('i18nInit', () => {
     acc[game.i18n.localize(torgeternity.cosmTypes[key])] = key;
     return acc;
   }, {});
+  // Explicit foreign key present in data.
+  CONFIG.torgeternity.cosmTypeFromLabel["(Keins)"] = "none";
 })
 
 Hooks.once('setup', async function () {
