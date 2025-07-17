@@ -1,9 +1,14 @@
 # TORG Eternity Changelog
 
 ## v13.1.2
-- **Compact SK sheet** working again
-- No broken image links for Cyberwitch or Scrapper on case-sensitive servers.
-- Remove blank lines at bottom of Power details.
+
+- #534: **Compact SK sheet** working again
+- #535: Active Effects toggle and delete buttons honour editable state of the effect.
+- #536: Compact SK sheet view is working again.
+- #537: **NaN damage** appeared when rolling from dragged weapon attack.
+- #538: Remove blank lines at bottom of Power details.
+- #539 No **broken image links** for Cyberwitch or Scrapper on case-sensitive servers.
+
 
 ## v13.1.1
 
