@@ -163,7 +163,7 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
     const oldHand = actor.getDefaultHand();
 
     for (const elem of html.querySelectorAll(`select:not([data-actor-id="${actorId}"])`)) {
-      if ([handId, oldHand.id].includes(elem.value)) {
+      if (elem.value == handId || (oldHand && elem.value == oldHand.id)) {
         return;
       }
     }
