@@ -32,7 +32,7 @@ export default class MacroHub extends HandlebarsApplicationMixin(ApplicationV2) 
   async _prepareContext(options) {
     const data = await super._prepareContext(options);
 
-    const macros = await game.packs.get('torgeternity.macros').index;
+    const macros = await game.packs.get('torgeternity.macros').index.filter(p => !p.name.startsWith('+'));
     const sortable = [];
 
     for (const macro of macros) {
