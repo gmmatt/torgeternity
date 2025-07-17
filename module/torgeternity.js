@@ -958,5 +958,4 @@ Hooks.on('renderSceneControls', (sceneControls, html, context, options) => {
   image.classList.add('torgIcon');
   image.src = 'systems/torgeternity/images/te-logo.webp';
   parent.appendChild(image);
-  console.log({ sceneControls, html, context, options });
 })
