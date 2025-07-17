@@ -1,5 +1,10 @@
 # TORG Eternity Changelog
 
+## v13.1.2
+- **Compact SK sheet** working again
+- No broken image links for Cyberwitch or Scrapper on case-sensitive servers.
+- Remove blank lines at bottom of Power details.
+
 ## v13.1.1
 
 - Fixes the **aimed** option not working in Tests.

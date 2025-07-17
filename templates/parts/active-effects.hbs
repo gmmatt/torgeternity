@@ -35,7 +35,8 @@
                 class="effect-control effect-toggle"
                 data-action="effectControl"
                 data-control="toggle"
-                data-tooltip="{{localize 'torgeternity.iconeTitles.toggle'}}">
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggle'}}"
+                {{disabled (not @root.editable)}}>
                 <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
               </a>
               <a
@@ -50,7 +51,7 @@
                 data-action="effectControl"
                 data-control="delete"
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}"
-                {{disabled effect.transfer}}>
+                {{disabled (or effect.transfer (not @root.editable))}}>
                 <i class="fas fa-trash"></i>
               </a>
             </div>
