@@ -116,9 +116,11 @@
             <div class="item-dropdown-description">
               {{{item.description}}}
               <p></p>
-              <div class="item-dropdown-extras">
-                {{item.system.cosm}}
-              </div>
+              {{#if item.system.cosm}}
+                <div class="item-dropdown-extras">
+                  {{item.system.cosm}}
+                </div>
+              {{/if}}
               {{#if item.system.timestaken}}
                 <div class="item-dropdown-extras">
                   {{item.system.timestaken}}x
