@@ -1,0 +1,78 @@
+name: +Fix Invalid Cosm
+type: script
+command: |-
+  // This macro will look for invalid cosm names on Items.
+  // It will also check for them on Items marked as invalid Documents
+
+  const labels = CONFIG.torgeternity.cosmTypeFromLabel;
+
+  function patchCosm(cosm) {
+    return Object.hasOwn(labels, cosm) ? labels[cosm] : cosm;
+  }
+
+  for (const id of game.actors.invalidDocumentIds) {
+    const actor = game.actors.getInvalid(id);
+    console.log(actor);
+    const data = actor.toObject();
+    const newcosm = patchCosm(data.system.other.cosm);
+    console.log(`Actor ${data.name}: ${data.system.other.cosm} => ${newcosm}`)
+    if (data.system.other.cosm != newcosm) {
+      data.system.other.cosm = newcosm;
+      await actor.update(data, {diff: false, recursive: false})
+    }
+  }
+  /*
+  for (const actor of game.actors) {
+    for (const id of actor.items.invalidDocumentIds) {
+      const item = actor.items.get(id, {invalid:true})
+      await item.update({"system.cosm": patchCosm[item.cosm]})
+    }  
+  }
+  */
+
+  /*
+  for (const actor of game.actors) {
+    let updates = [];
+
+    for (const item of actor.items) {
+      if (item.system.cosm === '(None)' || item.system.cosm === '(Keins)' ) {
+        console.log(`fixed ${item.name} on ${actor.name}`)
+        updates.push({_id: item.id, 'system.cosm': 'none'})
+      }
+    }
+
+    for (const id of actor.items.invalidDocumentIds) {
+      console.log(`..${id}`)
+      const item = actor.items.get(id, {invalid:true});
+      console.log(`....${item.name} = '${item.system.cosm}'`, item)
+      if (item.system.cosm === '(None)' || item.system.cosm === '(Keins)') {
+        console.log(`fixed ${item.name} on ${actor.name}`)
+        updates.push({_id: item.id, 'system.cosm': 'none'})
+      }
+    }
+
+    if (updates.length) actor.updateEmbeddedDocuments('Item', updates);
+  }
+  */
+img: icons/svg/biohazard.svg
+author: l8SVzn2293lAwvMC
+scope: global
+folder: null
+ownership:
+  default: 0
+  l8SVzn2293lAwvMC: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: torgeternity
+  systemVersion: 13.1.0
+  createdTime: 1752742089093
+  modifiedTime: 1752746656864
+  lastModifiedBy: l8SVzn2293lAwvMC
+_id: I4zF4FM6Xp0u2B7p
+sort: 0
+_key: '!macros!I4zF4FM6Xp0u2B7p'
+
