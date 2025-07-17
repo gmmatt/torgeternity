@@ -43,6 +43,7 @@ import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
 import InitEnrichers from './enrichers.js';
 import { initHideCompendium } from './hideCompendium.js';
+import DeckSettingMenu from './cards/cardSettingMenu.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -93,9 +94,10 @@ Hooks.once('init', async function () {
   CONFIG.Cards.documentClass = torgeternityCards;
   CONFIG.cardTypes = torgeternity.cardTypes;
 
-
-  ui.GMScreen = new GMScreen();
   ui.macroHub = new MacroHub();
+  ui.GMScreen = new GMScreen();
+  ui.deckSettings = new DeckSettingMenu();
+
   // all settings after config
   registerTorgSettings();
   // ---register items and actors

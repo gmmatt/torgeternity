@@ -13,6 +13,7 @@
 - Fix display issues with **Card Deck Configuration** window.
 - Move **Actor left tab** slightly further away from window contents.
 - Fix some **localization** issues.
+- UI Controls, the **torg button states** reflect currently open windows.
 
 ## v13.1.0
 
