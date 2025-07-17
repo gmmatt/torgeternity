@@ -42,7 +42,8 @@ import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import MacroHub from './MacroHub.js';
 import InitEnrichers from './enrichers.js';
-import { initHideCompendium, hideCompendium } from './hideCompendium.js';
+import { initHideCompendium } from './hideCompendium.js';
+import DeckSettingMenu from './cards/cardSettingMenu.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -93,9 +94,10 @@ Hooks.once('init', async function () {
   CONFIG.Cards.documentClass = torgeternityCards;
   CONFIG.cardTypes = torgeternity.cardTypes;
 
-
-  ui.GMScreen = new GMScreen();
   ui.macroHub = new MacroHub();
+  ui.GMScreen = new GMScreen();
+  ui.deckSettings = new DeckSettingMenu();
+
   // all settings after config
   registerTorgSettings();
   // ---register items and actors
@@ -166,9 +168,7 @@ Hooks.once('i18nInit', () => {
     perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
     enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
     specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
-    'specialability-rollable': game.i18n.localize(
-      'torgeternity.itemSheetDescriptions.specialabilityRollable'
-    ),
+    'specialability-rollable': game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
     spell: game.i18n.localize('torgeternity.itemSheetDescriptions.spell'),
     miracle: game.i18n.localize('torgeternity.itemSheetDescriptions.miracle'),
     psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
@@ -177,6 +177,13 @@ Hooks.once('i18nInit', () => {
     race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
   };
 
+  // Mapping of translation to key (for cosm migration)
+  CONFIG.torgeternity.cosmTypeFromLabel = Object.keys(torgeternity.cosmTypes).reduce((acc, key) => {
+    acc[game.i18n.localize(torgeternity.cosmTypes[key])] = key;
+    return acc;
+  }, {});
+  // Explicit foreign key present in data.
+  CONFIG.torgeternity.cosmTypeFromLabel["(Keins)"] = "none";
 })
 
 Hooks.once('setup', async function () {
@@ -213,10 +220,6 @@ Hooks.on("renderUIConfig", (config, html, context, options) => {
 
 // -------------once everything ready
 Hooks.on('ready', async function () {
-
-  // Foundry#initializePacks is called just before the 'setup' hook
-  // But needs to be after 'ready' to set properties on compendiums.
-  hideCompendium();
 
   /*
   // Force DARK application colour scheme
@@ -596,7 +599,6 @@ function rollItemMacro(itemName) {
           actorPic: actor.img,
           actorName: actor.name,
           skillName: attackWith,
-          skillBaseAttribute: skillData.baseAttribute,
           skillValue: skillData?.value || skillData?.skillValue,
           skillAdds: skillData.adds,
           unskilledUse: true,
@@ -637,7 +639,6 @@ function rollItemMacro(itemName) {
           isAttack: powerData.isAttack,
           amountBD: 0,
           skillName: skillName,
-          skillBaseAttribute: game.i18n.localize('torgeternity.skills.' + skillData.baseAttribute),
           skillAdds: skillData.adds,
           skillValue: skillData.value,
           unskilledUse: false,
@@ -734,7 +735,6 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     actorName: actor.name,
     actorType: actor.type,
     skillName: isAttributeTest ? attributeName : skillName,
-    skillBaseAttribute: game.i18n.localize('torgeternity.attributes.' + attributeName),
     skillAdds: skill.adds,
     skillValue: skillValue,
     isFav: skill.isFav,
@@ -752,7 +752,6 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
 
   if (isInteractionAttack) {
     test.testType = 'interactionAttack';
-    test.interactionAttackType = skillName;
     // Darkness seems like it would be hard to determine if it should apply to
     //    skill/attribute tests or not, maybe should be option in dialog?
 
@@ -952,3 +951,15 @@ function showWelcomeMessage() {
     }
   });
 }
+
+Hooks.on('renderSceneControls', (sceneControls, html, context, options) => {
+  //if (!options.isFirstRender) return;
+
+  const parent = html.querySelector('button[data-control="torg"]');
+  if (!parent || parent.hasChildNodes()) return;
+
+  const image = document.createElement('img');
+  image.classList.add('torgIcon');
+  image.src = 'systems/torgeternity/images/te-logo.webp';
+  parent.appendChild(image);
+})

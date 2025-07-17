@@ -10,7 +10,6 @@ export async function onManageActiveEffect(event, button, owner) {
   if (!li) return;
   // not fromUuidSync, in case we are editing a compendium document
   const effect = await fromUuid(li.dataset.effectUuid);
-  if (!effect) return;
 
   switch (button.dataset.control) {
     case 'create':
@@ -24,10 +23,13 @@ export async function onManageActiveEffect(event, button, owner) {
         },
       ]);
     case 'edit':
+      if (!effect) return;
       return effect.sheet.render(true);
     case 'delete':
+      if (!effect) return;
       return effect.delete();
     case 'toggle':
+      if (!effect) return;
       return effect.update({ disabled: !effect.disabled });
   }
 }

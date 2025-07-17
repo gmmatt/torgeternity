@@ -1,4 +1,4 @@
-import { makeSkillFields } from '../shared.js';
+import { migrateCosm, makeSkillFields } from '../shared.js';
 import { torgeternity } from '../../config.js';
 
 const fields = foundry.data.fields;
@@ -92,12 +92,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
    * @param {object} data the data object to migrate
    */
   static migrateData(data) {
-    super.migrateData(data);
-    if (data?.other && Object.hasOwn(data?.other, 'cosm')) {
-      data.other.cosm = Object.keys(torgeternity.cosmTypes).includes(data.other.cosm)
-        ? data.other.cosm
-        : 'none';
-    }
+    if (data.other) data.other.cosm = migrateCosm(data.other.cosm);
 
     for (const attribute of Object.keys(data.attributes ?? {})) {
       if (typeof data?.attributes?.[attribute] === 'number') {
@@ -112,6 +107,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         skill.adds = skillAdd;
       }
     }
+    return data;
   }
 
   /**

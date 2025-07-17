@@ -2,25 +2,26 @@
   <legend>{{localize "torgeternity.sheetLabels.statusEffects"}}</legend>
   <div class="skill-check-dialog-status-effects">
     {{#if test.stymiedModifier}}
-      {{localize "torgeternity.statusEffects.stymied"}}: {{test.stymiedModifier}}<br>
+      {{localize "torgeternity.statusEffects.stymied"}}: {{numberFormat test.stymiedModifier sign=true}}<br>
     {{/if}}
     {{#if test.darknessModifier}}
-      {{localize "torgeternity.statusEffects.darkness"}}: {{test.darknessModifier}}<br>
+      {{localize "torgeternity.statusEffects.darkness"}}: {{numberFormat test.darknessModifier sign=true}}<br>
     {{/if}}
     {{#if test.woundModifier}}
-      {{localize "torgeternity.stats.wounds"}}: {{test.woundModifier}}<br>
+      {{localize "torgeternity.stats.wounds"}}: {{numberFormat test.woundModifier sign=true}}<br>
     {{/if}}
     {{#if test.sizeModifier}}
-      {{localize "torgeternity.statusEffects.targetSize"}}: {{test.sizeModifier}}<br>
+      {{localize "torgeternity.statusEffects.targetSize"}}: {{numberFormat test.sizeModifier sign=true}}<br>
     {{/if}}
     {{#if test.vulnerableModifier}}
-      {{localize "torgeternity.statusEffects.targetVulnerability"}}: +{{test.vulnerableModifier}}<br>
+      {{localize "torgeternity.statusEffects.targetVulnerability"}}:
+      {{numberFormat test.vulnerableModifier sign=true}}<br>
     {{/if}}
     {{#if test.speedModifier}}
-      {{localize "torgeternity.stats.speedModifier"}}: {{test.speedModifier}}<br>
+      {{localize "torgeternity.stats.speedModifier"}}: {{numberFormat test.speedModifier sign=true}}<br>
     {{/if}}
     {{#if test.maneuverModifier}}
-      {{localize "torgeternity.stats.maneuverModifier"}}: {{test.maneuverModifier}}<br>
+      {{localize "torgeternity.stats.maneuverModifier"}}: {{numberFormat test.maneuverModifier sign=true}}<br>
     {{/if}}
   </div>
 </fieldset>

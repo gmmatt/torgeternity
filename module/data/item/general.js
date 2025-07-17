@@ -1,5 +1,6 @@
 import { torgeternity } from '../../config.js';
 import { getTorgValue } from '../../torgchecks.js';
+import { migrateCosm } from '../shared.js';
 
 const fields = foundry.data.fields;
 /**
@@ -29,23 +30,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
    * @param {object} data delivered data from the constructor
    */
   static migrateData(data) {
-    super.migrateData(data);
-    const translatedCosms = Object.keys(torgeternity.cosmTypes).reduce((acc, key) => {
-      acc[key] = game.i18n.localize(torgeternity.cosmTypes[key]);
-      return acc;
-    }, {});
-
-    if (data?.cosm === '') {
-      data.cosm = 'none';
-    }
-    if (data?.cosm && Object.values(translatedCosms).includes(data.cosm)) {
-      for (const [key, value] of Object.entries(translatedCosms)) {
-        if (value === data.cosm) {
-          data.cosm = key;
-          break;
-        }
-      }
-    }
+    data.cosm = migrateCosm(data.cosm);
   }
 
   /**

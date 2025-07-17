@@ -1,4 +1,5 @@
 import { torgeternity } from '../../config.js';
+import { migrateCosm } from '../shared.js';
 
 const fields = foundry.data.fields;
 /**
@@ -32,5 +33,14 @@ export class EternityShardItemData extends foundry.abstract.TypeDataModel {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
+  }
+
+
+  /**
+   * @inheritdoc
+   * @param {object} data delivered data from the constructor
+   */
+  static migrateData(data) {
+    data.cosm = migrateCosm(data.cosm);
   }
 }
