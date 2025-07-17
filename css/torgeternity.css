@@ -316,10 +316,9 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 /*                                             */
 .sheet.actor.torgeternity {
 
-  &.compact {
-    .window-content {
-      padding: 1px;
-    }
+  &.compact .window-content {
+
+    padding: 1px;
 
     .block {
       border: none;
@@ -331,9 +330,12 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px) scale(0.7);
     }
 
-    .tab[data-tab].active {
+    .tab.stats.active .tabbody {
       display: flex;
       flex-direction: column;
+    }
+
+    .tab[data-tab].active .tabbody {
 
       .sheet-header p {
         display: none;
