@@ -530,7 +530,8 @@ function rollItemMacro(itemName) {
       {
         // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
-        const { attackWith, damageType, weaponDamage } = weaponData;
+        const { attackWith, damageType } = weaponData;
+        const weaponDamage = parseInt(weaponData.damage);
         const skillData = actor.system.skills?.[attackWith] || item.system?.gunner;
         let dnDescriptor = 'standard';
         let adjustedDamage;
@@ -566,26 +567,24 @@ function rollItemMacro(itemName) {
 
         // Calculate damage caused by weapon
         switch (damageType) {
-          case 'flat':
-            adjustedDamage = weaponDamage;
-            break;
           case 'strengthPlus':
-            adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.strength.value + weaponDamage;
             break;
           case 'charismaPlus':
-            adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.charisma.value + weaponDamage;
             break;
           case 'dexterityPlus':
-            adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.dexterity.value + weaponDamage;
             break;
           case 'mindPlus':
-            adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.mind.value + weaponDamage;
             break;
           case 'spiritPlus':
-            adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.spirit.value + weaponDamage;
             break;
+          case 'flat':
           default:
-            adjustedDamage = parseInt(weaponDamage);
+            adjustedDamage = weaponDamage;
         }
 
         new TestDialog({
@@ -606,7 +605,7 @@ function rollItemMacro(itemName) {
           DNDescriptor: dnDescriptor,
           weaponName: item.name,
           weaponDamageType: damageType,
-          weaponDamage: weaponData.damage,
+          weaponDamage: weaponDamage,
           damage: adjustedDamage,
           weaponAP: weaponData.ap,
           applyArmor: true,
