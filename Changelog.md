@@ -14,6 +14,7 @@
 - Move **Actor left tab** slightly further away from window contents.
 - Fix some **localization** issues.
 - UI Controls, the **torg button states** reflect currently open windows.
+- **Target Vulnerability** displayed in Test Dialog Status Effects panel.
 
 ## v13.1.0
 

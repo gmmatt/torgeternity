@@ -166,6 +166,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     if (context.test.targetPresent && context.test.testType !== 'soak') {
       context.test.targetAll = targets.map(token => oneTestTarget(token, this.test.applySize));
       context.test.sizeModifier = context.test.targetAll[0].sizeModifier;
+      context.test.vulnerableModifier = context.test.targetAll[0].vulnerableModifier;
     } else {
       context.test.targetAll = [];
     }
