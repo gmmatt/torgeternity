@@ -40,6 +40,7 @@ import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
+import TorgEternityToken from './canvas/torgeternityToken.js';
 import MacroHub from './MacroHub.js';
 import InitEnrichers from './enrichers.js';
 import { initHideCompendium } from './hideCompendium.js';
@@ -69,6 +70,7 @@ Hooks.once('init', async function () {
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
   CONFIG.Token.rulerClass = TorgEternityTokenRuler;
+  CONFIG.Token.objectClass = TorgEternityToken;
 
   // --------combats
   CONFIG.Combat.initiative.formula = '1';
