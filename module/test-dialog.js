@@ -7,8 +7,9 @@ const DEFAULT_TEST = {
   // difficulty-selector
   DNDescriptor: "standard",    // number or string
   // bonus-selector
-  previousBonus: null,
+  previousBonus: false,
   bonus: null,      // null or number
+  rollTotal: 0,   // 0 = force a manual dice roll
   // favored
   isFav: false,
   disfavored: false,
@@ -31,7 +32,7 @@ const DEFAULT_TEST = {
   additionalDamage: null,   // Number or null
   addBDs: 0,  // 0-5
   // modifiers
-  concealment: 0,
+  concealmentModifier: 0,
   other1Description: "",
   other1Modifier: 0,
   other2Description: "",
@@ -106,6 +107,13 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     super(options);
     this.mode = test.mode ?? 'create';
     this.test = foundry.utils.mergeObject(DEFAULT_TEST, test, { inplace: false });
+
+    // Ensure all relevant fields are Number
+    for (const key of Object.keys(DEFAULT_TEST))
+      if (typeof DEFAULT_TEST[key] === 'number' && typeof this.test[key] !== 'number')
+        this.test[key] = Number(this.test[key]);
+
+    // Immediately display the dialog
     this.render(true);
   }
 
@@ -115,6 +123,8 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
+    // various choice lists
+    context.choices = CONFIG.torgeternity.choices;
     context.test = this.test;
     context.config = CONFIG.torgeternity;
 
