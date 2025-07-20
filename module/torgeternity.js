@@ -135,6 +135,47 @@ Hooks.once('init', async function () {
     makeDefault: true,
   });
 
+  // All choices must use strings, since number 0 will be treated as undefined by {{radioBoxes}}
+  CONFIG.torgeternity.choices = {
+    calledShot: {
+      [0]: 'torgeternity.sheetLabels.none',
+      [-2]: '-2',
+      [-4]: '-4',
+      [-6]: '-6',
+    },
+    burst: {
+      [0]: 'torgeternity.sheetLabels.none',
+      [2]: 'torgeternity.sheetLabels.shortBurst',
+      [4]: 'torgeternity.sheetLabels.longBurst',
+      [6]: 'torgeternity.sheetLabels.heavyBurst',
+    },
+    addBDs: [0, 1, 2, 3, 4, 5],
+    movement: {
+      [0]: 'torgeternity.sheetLabels.walking',
+      [-2]: 'torgeternity.sheetLabels.running',
+    },
+    multipleActions: {
+      [0]: '1',
+      [-2]: '2 (-2)',
+      [-4]: '3 (-4)',
+      [-6]: '4 (-6)',
+    },
+    targets: {
+      [0]: '1',
+      [-2]: '2 (-2)',
+      [-4]: '3 (-4)',
+      [-6]: '4 (-6)',
+      [-8]: '5 (-8)',
+      [-10]: '6 (-10)',
+    },
+    concealment: {
+      [0]: 'torgeternity.sheetLabels.none',
+      [-2]: '-2',
+      [-4]: '-4',
+      [-6]: '-6',
+    }
+  }
+
   // ----------preloading handlebars templates
   preloadTemplates();
   // adding special torg buttons
@@ -203,6 +244,8 @@ Hooks.once('setup', async function () {
       );
     }
   }
+
+  Handlebars.registerHelper({ radioBoxesNumber })
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {
@@ -603,7 +646,6 @@ function rollItemMacro(itemName) {
           skillValue: skillData?.value || skillData?.skillValue,
           skillAdds: skillData.adds,
           unskilledUse: true,
-          rollTotal: 0,
           DNDescriptor: dnDescriptor,
           weaponName: item.name,
           weaponDamageType: damageType,
@@ -648,7 +690,6 @@ function rollItemMacro(itemName) {
           applyArmor: powerData.applyArmor,
           applySize: powerData.applySize,
           attackOptions: true,
-          rollTotal: 0,
           bdDamageLabelStyle: 'hidden',
           bdDamageSum: 0,
         }, { useTargets: true });
@@ -740,9 +781,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     skillValue: skillValue,
     isFav: skill.isFav,
     DNDescriptor: DNDescriptor ?? 'standard',
-    rollTotal: 0,
     unskilledUse: skill.unskilledUse,
-    chatNote: '',
     woundModifier: parseInt(-actor.system.wounds.value),
     stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
@@ -964,3 +1003,27 @@ Hooks.on('renderSceneControls', (sceneControls, html, context, options) => {
   image.src = 'systems/torgeternity/images/te-logo.webp';
   parent.appendChild(image);
 })
+
+
+
+function radioBoxesNumber(name, choices, options) {
+  const checked = options.hash.checked ?? null;
+  const isNumber = typeof checked === 'number';
+  const isChecked = checked !== null;
+  const localize = options.hash.localize || false;
+  let html = "";
+  for (let [key, label] of Object.entries(choices)) {
+    if (localize) label = game.i18n.localize(label);
+    const element = document.createElement("label");
+    element.classList.add("checkbox");
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = name;
+    input.value = key;
+    if (isChecked) input.defaultChecked = (checked == key);
+    if (isNumber) input.dataset.dtype = "Number";
+    element.append(input, " ", label);
+    html += element.outerHTML;
+  }
+  return new Handlebars.SafeString(html);
+}

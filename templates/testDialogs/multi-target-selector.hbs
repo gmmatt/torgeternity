@@ -1,24 +1,7 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.multiTargetPenalty"}}</legend>
   <span class="skill-check-options">
-    {{localize "torgeternity.sheetLabels.targets"}}:
-    <input type="radio" data-dtype="Number" id="targets1-radio" name="targetsModifier" value="0"
-      checked />
-    <label for="targets1-radio">1</label>
-    <input type="radio" data-dtype="Number" id="targets2-radio" name="targetsModifier" value="-2"
-      {{checked (eq test.targetsModifier -2)}} />
-    <label for="targets2-radio">2 (-2)</label>
-    <input type="radio" data-dtype="Number" id="targets3-radio" name="targetsModifier" value="-4"
-      {{checked (eq test.targetsModifier -4)}} />
-    <label for="targets3-radio">3 (-4)</label>
-    <input type="radio" data-dtype="Number" id="targets4-radio" name="targetsModifier" value="-6"
-      {{checked (eq test.targetsModifier -6)}} />
-    <label for="targets4-radio">4 (-6)</label>
-    <input type="radio" data-dtype="Number" id="targets5-radio" name="targetsModifier" value="-8"
-      {{checked (eq test.targetsModifier -8)}} />
-    <label for="targets5-radio">5 (-8)</label>
-    <input type="radio" data-dtype="Number" id="targets6-radio" name="targetsModifier" value="-10"
-      {{checked (eq test.targetsModifier -10)}} />
-    <label for="targets6-radio">6 (-10)</label>
+    <span>{{localize "torgeternity.sheetLabels.targets"}}:</span>
+    {{radioBoxesNumber "targetsModifier" choices.targets checked=test.targetsModifier localize=true}}
   </span>
 </fieldset>

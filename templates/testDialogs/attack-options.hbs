@@ -1,42 +1,18 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.attackOptions"}}</legend>
   <span class="skill-check-options">
-    {{localize "torgeternity.sheetLabels.calledShot"}}:
-    <input type="radio" data-dtype="Number" id="called-shot-none" name="calledShotModifier" value="0"
-      checked />
-    <label for="called-shot-none">{{localize "torgeternity.sheetLabels.none"}}</label>
-    <input type="radio" data-dtype="Number" id="called-shot-2" name="calledShotModifier" value="-2"
-      {{checked (eq test.calledShotModifier -2)}} />
-    <label for="called-shot-1">-2</label>
-    <input type="radio" data-dtype="Number" id="called-shot-4" name="calledShotModifier" value="-4"
-      {{checked (eq test.calledShotModifier -4)}} />
-    <label for="called-shot-4">-4</label>
-    <input type="radio" data-dtype="Number" id="called-shot-6" name="calledShotModifier" value="-6"
-      {{checked (eq test.calledShotModifier -6)}} />
-    <label for="called-shot-6">-6</label>
+    <span>{{localize "torgeternity.sheetLabels.calledShot"}}:</span>
+    {{radioBoxesNumber "calledShotModifier" choices.calledShot checked=test.calledShotModifier localize=true}}
+
     <input type="checkbox" data-dtype="Number" id="vital-area"
       data-tooltip='torgeternity.sheetLabels.vitalAreaTooltip' name="vitalAreaDamageModifier" value="4"
       {{checked (eq test.vitalAreaDamageModifier 4)}} />
-    <label for="called-shot-damage">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br />
+    <label for="vital-area">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br />
   </span>
   <hr>
   <span class="skill-check-options">
-    {{localize "torgeternity.sheetLabels.burst"}}:
-    <input type="radio" data-dtype="Number" id="burst-none" name="burstModifier" value="0"
-      {{checked (eq test.burstModifier 0)}} />
-    <label for="burst-none">{{localize "torgeternity.sheetLabels.none"}}</label>
-    <input type="radio" data-dtype="Number" id="burst-short" name="burstModifier"
-      data-tooltip="torgeternity.sheetLabels.burstTooltip" value="2"
-      {{checked (eq test.burstModifier 2)}} />
-    <label for="burst-short">{{localize "torgeternity.sheetLabels.shortBurst"}}</label>
-    <input type="radio" data-dtype="Number" id="burst-long" name="burstModifier"
-      data-tooltip="torgeternity.sheetLabels.burstTooltip" value="4"
-      {{checked (eq test.burstModifier 4)}} />
-    <label for="burst-long">{{localize "torgeternity.sheetLabels.longBurst"}}</label>
-    <input type="radio" data-dtype="Number" id="burst-heavy" name="burstModifier"
-      data-tooltip="torgeternity.sheetLabels.burstTooltip" value="6"
-      {{checked (eq test.burstModifier 6)}} />
-    <label for="burst-heavy">{{localize "torgeternity.sheetLabels.heavyBurst"}}</label><br />
+    <span>{{localize "torgeternity.sheetLabels.burst"}}:</span>
+    {{radioBoxesNumber "burstModifier" choices.burst checked=test.burstModifier localize=true}}
   </span>
   <hr>
   <span class="skill-check-options">
@@ -61,12 +37,7 @@
     <label for="additional-damage">{{localize "torgeternity.sheetLabels.additionalDamage"}}</label>
 
     <select id="addBDs" data-dtype="Number" name="addBDs">
-      <option value="0" {{checked (eq test.addBDs 0)}}>0</option>
-      <option value="1" {{checked (eq test.addBDs 1)}}>1</option>
-      <option value="2" {{checked (eq test.addBDs 2)}}>2</option>
-      <option value="3" {{checked (eq test.addBDs 3)}}>3</option>
-      <option value="4" {{checked (eq test.addBDs 4)}}>4</option>
-      <option value="5" {{checked (eq test.addBDs 5)}}>5</option>
+      {{selectOptions choices.addBDs selected=test.addBDs}}
     </select>
     <label for="addBDs">{{localize "torgeternity.sheetLabels.bonusDice"}}</label>
   </span>
