@@ -19,7 +19,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     TorgEternityToken.drawLabel();
 
     // Ensure it is visible
-    TorgEternityToken.#getLabelElement().classList.toggle("hidden", false);
+    TorgEternityToken.#getLabelElement().classList.toggle('hidden', false);
     return result;
   }
 
@@ -30,7 +30,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     Hooks.off('refreshToken', TorgEternityToken.drawLabel);
     if (!game.settings.get('torgeternity', 'hoverDistance') || !this.visible) return result;
     //console.log(`hide distance from ${game.user.character.name} to ${this.name}`)
-    TorgEternityToken.#getLabelElement().classList.toggle("hidden", true);
+    TorgEternityToken.#getLabelElement().classList.toggle('hidden', true);
     return result;
   }
 
@@ -64,7 +64,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
       if (!label) {
         label = document.createElement("div");
         label.classList.add("ruler-labels", "token-ruler-labels");
-        if (!TorgEternityToken.#hoverToken.visible) label.classList.add("hidden");
+        if (!TorgEternityToken.#hoverToken.visible) label.classList.add('hidden');
         label.id = rulerId;
       }
       TorgEternityToken.#label = label;
