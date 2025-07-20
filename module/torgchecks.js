@@ -654,10 +654,8 @@ export async function soakDamages(soaker) {
 
   new TestDialog({
     testType: 'soak',
-    actor: soaker.uuid,
-    actorPic: soaker.img,
-    actorName: soaker.name,
-    actorType: soaker.system.type,
+    actor: soaker,
+    //actorType: soaker.system.type,
     isFav:
       soaker.system.skills[skillName]?.isFav ||
       soaker.system.attributes[skillName + 'IsFav'] ||

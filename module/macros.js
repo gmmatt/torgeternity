@@ -396,10 +396,7 @@ export class TorgeternityMacros {
     };
 
     const test = {
-      actor: _actor.uuid,
-      actorPic: _actor.img,
-      actorName: _actor.name,
-      actorType: _actor.type,
+      actor: _actor,
       skillName: 'reality',
       testType: 'skill',
       skillAdds: realitySkill.adds,

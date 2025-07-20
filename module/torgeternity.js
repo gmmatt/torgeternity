@@ -634,14 +634,11 @@ function rollItemMacro(itemName) {
 
         new TestDialog({
           testType: 'attack',
-          actor: actor.uuid,
-          actorType: actor.type,
+          actor: actor,
           itemId: item.id,
           isAttack: true,
           amountBD: 0,
           isFav: skillData.isFav,
-          actorPic: actor.img,
-          actorName: actor.name,
           skillName: attackWith,
           skillValue: skillData?.value || skillData?.skillValue,
           skillAdds: skillData.adds,
@@ -673,10 +670,7 @@ function rollItemMacro(itemName) {
         new TestDialog({
           testType: 'power',
           DNDescriptor: game.user.targets.size ? powerData.dn : 'standard',
-          actor: actor.uuid,
-          actorPic: actor.img,
-          actorName: actor.name,
-          actorType: actor.type,
+          actor: actor,
           powerName: item.name,
           powerModifier: item.system.modifier || 0,
           isAttack: powerData.isAttack,
@@ -772,10 +766,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
   // This code needs to be centrally located!!!
   const test = {
     testType: isAttributeTest ? 'attribute' : 'skill',
-    actor: actor.uuid,
-    actorPic: actor.img,
-    actorName: actor.name,
-    actorType: actor.type,
+    actor: actor,
     skillName: isAttributeTest ? attributeName : skillName,
     skillAdds: skill.adds,
     skillValue: skillValue,

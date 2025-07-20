@@ -1,5 +1,6 @@
 import { ChatMessageTorg } from './documents/chat/document.js';
 import * as torgchecks from './torgchecks.js';
+import TorgeternityActor from './documents/actor/torgeternityActor.js';
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
 // Default values for all the fields in the dialog template
@@ -92,11 +93,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     return new Promise(resolve => new TestDialog(test, { ...options, callback: resolve }));
   }
 
-  static renderUpdate(testData) {
-    testData.mode = 'update';
-    new TestDialog(testData);
-  }
-
   /**
    *
    * @param {TestData} test The test object
@@ -108,6 +104,13 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     this.mode = test.mode ?? 'create';
     this.test = foundry.utils.mergeObject(DEFAULT_TEST, test, { inplace: false });
 
+    if (this.test.actor instanceof TorgeternityActor) {
+      const actor = this.test.actor;
+      this.test.actor = actor.uuid;
+      this.test.actorPic ??= actor.img;
+      this.test.actorName ??= actor.name;
+      this.test.actorType ??= actor.type;
+    }
     // Ensure all relevant fields are Number
     for (const key of Object.keys(DEFAULT_TEST))
       if (typeof DEFAULT_TEST[key] === 'number' && typeof this.test[key] !== 'number')

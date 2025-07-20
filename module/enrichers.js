@@ -93,10 +93,7 @@ function _onClickInlineCheck(event) {
   // Not rollSkillMacro, so anything can be set in the test.
 
   // Add Actor information
-  test.actor = actor.uuid;
-  test.actorPic = actor.img;
-  test.actorType = actor.type;
-  test.actorName = actor.name;
+  test.actor = actor;
   test.DNDescriptor = test.dn;
   if (!Object.hasOwn(CONFIG.torgeternity.dnTypes, test.DNDescriptor)) {
     ui.notifications.warn('Unrecognized DN in check', { field: test.DNDescriptor });

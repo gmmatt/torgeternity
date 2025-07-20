@@ -320,7 +320,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    TestDialog.renderUpdate(test);
+    test.mode = 'update';
+    new TestDialog(test);
   }
 
   static async #applyDamage(event, button) {
@@ -476,16 +477,10 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     const response = await TestDialog.asPromise({
       DNDescriptor: 'standard',
-
-      actor: actor.uuid,
-      actorPic: actor.img,
-      actorName: actor.name,
-      actorType: actor.type,
-
+      actor: actor,
       testType: 'attribute',
       skillName: attribute,
       skillValue: actor.system.attributes[attribute].value,
-
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     });

@@ -491,10 +491,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     new TestDialog({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       isFav:
         this.actor.system.skills[skillName]?.isFav ||
         this.actor.system.attributes?.[skillName + 'IsFav'] ||
@@ -528,10 +525,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     new TestDialog({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       isFav:
         this.actor.system.skills[skillName]?.isFav ||
         this.actor.system.attributes?.[skillName + 'IsFav'] ||
@@ -555,10 +549,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'chase',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: 'vehicle',
+      actor: this.actor,
       skillName: 'Vehicle Chase',
       skillValue: button.dataset.skillValue,
       DNDescriptor: 'highestSpeed',
@@ -576,10 +567,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static async #onBaseRoll(event, button) {
     new TestDialog({
       testType: 'vehicleBase',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: 'vehicle',
+      actor: this.actor,
       skillName: 'Vehicle Operation',
       skillValue: button.dataset.skillValue,
       vehicleSpeed: button.dataset.speed,
@@ -599,10 +587,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'stunt',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: 'vehicle',
+      actor: this.actor,
       skillName: 'Vehicle Stunt',
       skillValue: button.dataset.skillValue,
       DNDescriptor: dnDescriptor,
@@ -643,10 +628,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'interactionAttack',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       skillName: button.dataset.name,
       skillAdds: button.dataset.adds,
       skillValue: button.dataset.skillValue,
@@ -686,10 +668,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'attack',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       amountBD: 0,
       isAttack: true,
       skillName: 'unarmedCombat',
@@ -728,10 +707,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     new TestDialog({
       testType: 'activeDefense',
       activelyDefending: false,
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       isActiveDefenseRoll: true,
       skillName: 'activeDefense',
       skillAdds: null,
@@ -882,10 +858,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'attack',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       amountBD: 0,
       isAttack: true,
       isFav: skillData?.isFav || false,
@@ -924,10 +897,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'power',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       powerName: item.name,
       powerModifier: powerModifier,
       isAttack: powerData.isAttack,
