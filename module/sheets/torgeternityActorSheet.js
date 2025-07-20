@@ -266,7 +266,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         unskilledUse: event.target.dataset.unskilleduse,
         attackType: '',
         DNDescriptor: 'standard',
-        rollTotal: 0,
       },
     };
     event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
@@ -502,7 +501,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         button.dataset.isfav,
       skillName: (button.dataset.testtype === 'attribute') ? attributeName : skillName,
       skillValue: skillValue,
-      rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -540,7 +538,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         !!button.dataset.isfav,
       skillName: skillName,
       skillValue: skillValue,
-      rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -565,7 +562,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillName: 'Vehicle Chase',
       skillValue: button.dataset.skillValue,
       DNDescriptor: 'highestSpeed',
-      rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -586,7 +582,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actorType: 'vehicle',
       skillName: 'Vehicle Operation',
       skillValue: button.dataset.skillValue,
-      rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -611,7 +606,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillName: 'Vehicle Stunt',
       skillValue: button.dataset.skillValue,
       DNDescriptor: dnDescriptor,
-      rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -660,7 +654,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       unskilledUse: true,
       DNDescriptor: dnDescriptor,
       type: 'interactionAttack',
-      rollTotal: 0,
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -710,7 +703,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       type: 'attack',
       applySize: true,
       attackOptions: true,
-      rollTotal: 0,
       bdDamageLabelStyle: 'dishiddene',
       bdDamageSum: 0,
       amountBD: 0,
@@ -746,7 +738,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillValue: null,
       unskilledUse: true,
       type: 'activeDefense',
-      rollTotal: 0,
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -776,7 +767,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       targetAll: game.user.targets.map(token => oneTestTarget(token)), // for renderSkillChat
       applySize: false,
       attackOptions: false,
-      rollTotal: 0,
     });
   }
 
@@ -909,7 +899,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       type: 'attack',
       applySize: true,
       attackOptions: true,
-      rollTotal: 0,
       chatNote: weaponData.chatNote,
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
@@ -953,7 +942,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       DNDescriptor: powerData.dn,
       applySize: powerData.applySize,
       attackOptions: true,
-      rollTotal: 0,
       bdDamageLabelStyle: 'dihiddene',
       amountBD: 0,
       bdDamageSum: 0,
