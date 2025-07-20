@@ -5,6 +5,7 @@
 ## Improvements
 
 - #543: Hovering over a token shows the distance from your controlled token to that token (game setting).
+- Further optimisations to TestDialog.
 
 ### Bug Fixes
 

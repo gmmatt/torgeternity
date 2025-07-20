@@ -38,11 +38,12 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     let distance = canvas.grid.measurePath([TorgEternityToken.#originToken.object.center, TorgEternityToken.#hoverToken.center]).distance;
     // Account for distance needing to be from edge to edge of token, with touching tokens having a distance of 1.
     distance -= (TorgEternityToken.#originToken.height + TorgEternityToken.#hoverToken.document.height) / 2 - 1;
+    if (distance < 0) distance = 0;
 
     //console.log(`show distance from ${TorgEternityToken.#originToken.name} to ${TorgEternityToken.#hoverToken.name}`, distance)
 
     // Create the label HTML
-    const distLabel = distance.toNearest(0.01).toLocaleString(game.i18n.lang);
+    const distLabel = distance.toNearest(0.1).toLocaleString(game.i18n.lang);
     let html = `<div class="waypoint-label token-distance last"><span class="total-measurement">${distLabel} ${canvas.grid.units}</span></div>`;
     html = foundry.utils.parseHTML(html);
     html.style.setProperty("--position-x", `${TorgEternityToken.#hoverToken.center.x}px`);
