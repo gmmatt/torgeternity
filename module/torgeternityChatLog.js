@@ -485,7 +485,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       testType: 'attribute',
       skillName: attribute,
       skillValue: actor.system.attributes[attribute].value,
-      rollTotal: 0,
 
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
