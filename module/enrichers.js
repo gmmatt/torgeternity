@@ -112,7 +112,7 @@ function _onClickInlineCheck(event) {
     test.skillValue ??= skill.value;
   }
 
-  (new TestDialog(test, { useTargets: true })).render(true);
+  new TestDialog(test, { useTargets: true });
 }
 
 const enrichers = [

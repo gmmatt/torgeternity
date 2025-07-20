@@ -94,7 +94,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static renderUpdate(testData) {
     testData.mode = 'update';
-    (new TestDialog(testData)).render(true);
+    new TestDialog(testData);
   }
 
   /**
