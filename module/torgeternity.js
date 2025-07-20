@@ -833,20 +833,6 @@ Hooks.on('preCreateToken', async (...args) => {
   }
 });
 
-// un-pool cards of SK when the GM ends the combat encounter
-Hooks.on('deleteCombat', async (combat, dataUpdate) => {
-  if (!game.user.isActiveGM) return;
-
-  // listing of hands' actors in closing combat
-  combat.combatants.filter(combatant => combatant.actor.type === 'stormknight')
-    .forEach(combatant => {
-      const hand = game.actors.get(combatant.actorId).getDefaultHand();
-      // delete the flag that give the pooled condition in each card of each hand
-      if (hand) hand.cards.forEach(card => card.unsetFlag('torgeternity', 'pooled'))
-    });
-
-  await deleteActiveDefense(combat);
-});
 
 Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
   // When a "non-vehicle actor" is dropped on a "vehicle actor", proposes to replace the driver and his skill value
@@ -890,22 +876,6 @@ Hooks.on('updateCombatant', async (combatant, changes, options, userId) => {
     }
   }
 });
-
-// deactivate active defense when the combat round is progressed. End of combat is in the hook above, 'deleteCombat'
-Hooks.on('combatRound', await deleteActiveDefense);
-
-async function deleteActiveDefense(...args) {
-  if (!game.user.isGM) return;
-
-  const combatants = args[0].combatants;
-
-  for (const combatant of combatants) {
-    const activeDefenseEffect = combatant.actor.appliedEffects.find(
-      (eff) => eff.name === 'ActiveDefense'
-    );
-    if (activeDefenseEffect) await activeDefenseEffect.delete();
-  }
-}
 
 Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 
