@@ -12,6 +12,12 @@
 -- `@Condition[status|toggle]` will toggle the current state of that status on the token,
 -- `@Condition[status|active=false]` will remove the status if it is on the token.
 -- `stymied` and `vulnerable` will promote an existing condition to `veryStymied` or `veryVulnerable`.
+- Add `@Buff[stat1=num|stat2=num]` to buff/debuff attributes and skills:
+-- Set `stat` to the name of the attribute of ability (either the key [strength] or the localized string).
+-- Set `num` to either a fixed value to replace the actor's current value, or a `+X` or `-X` to modify the existing value.
+-- Adding `|duration=x` can set the duration of the effect to x turns/rounds (x = number)
+-- Other fields in the ActiveEffect can be overridden such as the following which will set the active effect to have a barrel icon:
+--- `@Buff[strength=+2|img=icons/svg/barrel.svg]`
 
 ### Bug Fixes
 
