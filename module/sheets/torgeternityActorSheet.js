@@ -56,7 +56,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       itemDelete: TorgeternityActorSheet.#onItemDelete,
       reloadWeapon: TorgeternityActorSheet.#onReloadWeapon,
       itemName: TorgeternityActorSheet.#onitemName,
-      deleteRaceButton: TorgeternityActorSheet.#onDeleteRaceButton,
+      deleteRace: TorgeternityActorSheet.#onDeleteRace,
     }
   }
 
@@ -333,6 +333,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   /** @inheritdoc */
   async _onDrop(event) {
+    if (!this.actor.isOwner) return super._onDrop(event);
+
     const data = foundry.applications.ux.TextEditor.getDragEventData(event);
     const document = await fromUuid(data.uuid);
 
@@ -352,13 +354,16 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
               .map(item => item.id),
           ]);
         }
-        // Add new race item now
-        await super._onDrop(event);
 
-        // Add new racial abilities
-        await this.actor.createEmbeddedDocuments('Item', [...document.system.perksData, ...document.system.customAttackData]);
+        // Add new race and racial abilities
+        await this.actor.createEmbeddedDocuments('Item', [
+          document.toObject(),
+          ...document.system.perksData,
+          ...document.system.customAttackData
+        ]);
 
         // Enforce attribute maximums
+        const updates = {};
         for (const [key, value] of Object.entries(document.system.attributeMaximum)) {
           if (this.actor.system.attributes[key].base <= value) continue;
 
@@ -484,7 +489,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
     if (skillName === 'reality' && this.actor.isDisconnected) {
       const confirmed = await DialogV2.confirm({
-        window: { title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title') },
+        window: { title: 'torgeternity.dialogWindow.realityCheck.title' },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
       });
 
@@ -1046,27 +1051,23 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     detail.style.maxHeight = detail.style.maxHeight ? null : (detail.scrollHeight + 'px');
   }
 
-  static async #onDeleteRaceButton(event, button) {
+  static async #onDeleteRace(event, button) {
     const raceItem = this.actor.items.find(item => item.type === 'race');
     if (!raceItem) {
       ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
       return;
     }
-    await DialogV2.confirm({
-      window: { title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title') },
+    if (await DialogV2.confirm({
+      window: { title: 'torgeternity.dialogWindow.raceDeletion.title' },
       content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
-      yes: async () => {
-        await this.actor.deleteEmbeddedDocuments('Item', [
-          raceItem.id,
-          ...this.actor.items
-            .filter(item => item.type === 'perk' && item.system.category === 'racial')
-            .map(item => item.id),
-        ]);
-      },
-      no: () => {
-        return;
-      },
-    });
+    })) {
+      await this.actor.deleteEmbeddedDocuments('Item', [
+        raceItem.id,
+        ...this.actor.items
+          .filter(item => item.type === 'perk' && item.system.category === 'racial')
+          .map(item => item.id),
+      ]);
+    }
   }
 
 
