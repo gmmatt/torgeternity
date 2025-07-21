@@ -4134,7 +4134,8 @@ dialog.externalLinks {
   }
 }
 
-a.torg-inline-check {
+a.torg-inline-check,
+a.torg-inline-condition {
   /* Just like core a.inline-roll */
   background: #DDD;
   padding: 1px 4px;

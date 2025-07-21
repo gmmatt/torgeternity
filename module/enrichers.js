@@ -1,5 +1,9 @@
 import { TestDialog } from './test-dialog.js';
 
+/**
+ * INLINE CHECKS
+ */
+
 // @Check[thing|dn:difficulty]{label}
 const InlineRulePattern = /@Check\[(.+?)\](?:\{(.+?)\}){0,1}/g;
 
@@ -112,11 +116,90 @@ function _onClickInlineCheck(event) {
   new TestDialog(test, { useTargets: true });
 }
 
-const enrichers = [
-  {
-    pattern: InlineRulePattern,
-    enricher: InlineRuleEnricher
+
+/**
+ * INLINE CONDITIONS
+ * 
+ * @Condition[status]{label}
+ */
+const InlineConditionPattern = /@Condition\[(.+?)\](?:\{(.+?)\}){0,1}/g;
+
+function InlineConditionEnricher(match, options) {
+  const parts = match[1].split('|');
+  let label = match[2];
+  const status = parts.shift();
+
+  // Decode each of the parameters
+  const dataset = { status };
+  for (const elem of parts) {
+    const [key, value] = elem.split("=");
+    dataset[key] = value ?? true;
   }
+
+  // Create the base anchor
+  const anchor = foundry.applications.ux.TextEditor.createAnchor({
+    //attrs: null, 
+    dataset,
+    name: label ?? game.i18n.localize(`torgeternity.statusEffects.${status}`),
+    classes: ['torg-inline-condition'],
+    icon: "fa-solid fa-circle-plus"
+  });
+  // Append a button to copy the link to chat (only when in Journal)
+  if (!parts.includes('fromchat') && game.user.isGM) {
+    const icon = document.createElement("i");
+    icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
+    icon.dataset.original = match.input.replace("]", "|fromchat]");
+    anchor.append(icon);
+  }
+  return anchor;
+}
+
+/**
+ * The click handler to trigger the Test Dialog when the button is clicked.
+ * @param {*} event 
+ */
+async function _onClickInlineCondition(event) {
+  const target = event.target.closest('a.torg-inline-condition');
+  // Firstly check for clicking on the "post to chat" button
+  if (event.target.dataset.original) {
+    ChatMessage.create({ content: event.target.dataset.original })
+    return;
+  }
+
+  const data = { ...target.dataset };
+
+  const options = { active: true };
+  if (Object.hasOwn(data, "toggle")) delete options.active;
+  if (Object.hasOwn(data, "active")) options.active = data.active;
+  if (Object.hasOwn(data, "overlay")) options.overlay = data.overlay;
+
+  // Special case of stymied/vulnerable stacking
+  for (const actor of getActors()) {
+    const status = data.status;
+    if (status === 'stymied' && options.active) {
+      if (actor.hasStatusEffect('stymied')) {
+        actor.setVeryStymied();
+        continue;
+      } else if (actor.hasStatusEffect('veryStymied'))
+        continue;
+    } else if (status === 'vulnerable' && options.active) {
+      if (actor.hasStatusEffect('vulnerable')) {
+        actor.setVeryVulnerable();
+        continue;
+      } else if (actor.hasStatusEffect('veryVulnerable'))
+        continue;
+    }
+    console.log(`Setting '${actor.name}' = '${status}'`);
+    await actor.toggleStatusEffect(status, options);
+  }
+}
+
+/**
+ * COMMON INITIALISATION
+ */
+const enrichers = [
+  { pattern: InlineRulePattern, enricher: InlineRuleEnricher },
+  { pattern: InlineConditionPattern, enricher: InlineConditionEnricher }
 ];
 
 export default function InitEnrichers() {
@@ -124,5 +207,14 @@ export default function InitEnrichers() {
   // Global listener, for any place: journals or chat
   document.body.addEventListener('click', event => {
     if (event.target?.closest("a.torg-inline-check")) _onClickInlineCheck(event);
+    if (event.target?.closest("a.torg-inline-condition")) _onClickInlineCondition(event);
   })
+}
+
+
+function getActors() {
+  if (!canvas.ready || canvas.tokens.controlled.length === 0)
+    return game.user.character ? [game.user.character] : [];
+  else
+    return canvas.tokens.controlled.filter(token => token.isOwner).map(token => token.actor);
 }
