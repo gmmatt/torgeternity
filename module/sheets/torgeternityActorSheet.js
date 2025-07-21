@@ -76,13 +76,25 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static TABS = {
-    primary: {
+    stormknight: {
       tabs: [
         { id: 'stats', },
         { id: 'perks', },
         { id: 'gear', },
         { id: 'powers', },
-        { id: 'effects', },
+        { id: 'effects', cssClass: 'scrollable' },
+        { id: 'background', label: 'torgeternity.sheetLabels.notes' },
+      ],
+      initial: "stats",
+      labelPrefix: 'torgeternity.sheetLabels'
+    },
+    threat: {
+      tabs: [
+        { id: 'stats', },
+        { id: 'perks', },
+        { id: 'gear', },
+        { id: 'powers', },
+        { id: 'effects', }, // not scrollable
         { id: 'background', label: 'torgeternity.sheetLabels.notes' },
       ],
       initial: "stats",
@@ -92,7 +104,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       tabs: [
         { id: 'stats', },
         { id: 'gear', },
-        { id: 'effects', },
+        { id: 'effects', cssClass: 'scrollable' },
         { id: 'background', label: 'torgeternity.sheetLabels.notes' },
       ],
       initial: "stats",
@@ -143,7 +155,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
-    context.tabs = this._prepareTabs((this.actor.type === 'vehicle') ? 'vehicle' : 'primary');
+    context.tabs = this._prepareTabs(this.actor.type);
     context.systemFields = context.document.system.schema.fields;
     context.items = Array.from(context.document.items);
     context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
