@@ -7,12 +7,12 @@
 - #543: Hovering over a token shows the distance from your controlled token to that token (game setting).
 - Further optimisations to TestDialog.
 - Adding/Deleting/Changing the race of a stormknight should work properly now.
-- Add `@Condition[status]` to apply a new effect to the selected actors (or the player's controlled actor). One or more options can be added to the condition, such as:
+- Add **`@Condition[status]`** to apply a new effect to the selected actors (or the player's controlled actor). One or more options can be added to the condition, such as:
 -- `@Condition[status|overlay]` will set the status as overlay,
 -- `@Condition[status|toggle]` will toggle the current state of that status on the token,
 -- `@Condition[status|active=false]` will remove the status if it is on the token.
 -- `stymied` and `vulnerable` will promote an existing condition to `veryStymied` or `veryVulnerable`.
-- Add `@Buff[stat1=num|stat2=num]` to buff/debuff attributes and skills:
+- Add **`@Buff[stat1=num|stat2=num]`** to buff/debuff attributes and skills:
 -- Set `stat` to the name of the attribute of ability (either the key [strength] or the localized string).
 -- Set `num` to either a fixed value to replace the actor's current value, or a `+X` or `-X` to modify the existing value.
 -- Adding `|duration=x` can set the duration of the effect to x turns/rounds (x = number)

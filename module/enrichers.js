@@ -258,7 +258,7 @@ function InlineBuffEnricher(match, options) {
     dataset,
     name: label ?? createLabel(),
     classes: ['torg-inline-buff'],
-    icon: "fa-solid fa-circle-plus"
+    icon: "fa-solid fa-bolt-lightning"
   });
   // Append a button to copy the link to chat (only when in Journal)
   if (!parts.includes('fromchat') && game.user.isGM) {
