@@ -423,7 +423,7 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
       dialogContent += '</form></div>';
 
       await DialogV2.confirm({
-        window: { title: game.i18n.localize('torgeternity.dialogWindow.chooseAmmo.windowTitle') },
+        window: { title: 'torgeternity.dialogWindow.chooseAmmo.windowTitle' },
         content: dialogContent,
         yes: {
           label: `${game.i18n.localize('torgeternity.submit.OK')}`,

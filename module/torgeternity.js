@@ -845,9 +845,7 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
       DialogV2.wait({
         classes: ['torgeternity', 'themed', 'theme-dark', 'charInfoOutput'],
         window: {
-          title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
-            a: actor.name,
-          }),
+          title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', { a: actor.name, }),
           contentClasses: ['scrollable'],
         },
         position: {
