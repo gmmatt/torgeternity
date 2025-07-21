@@ -167,6 +167,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   background-size: cover;
 }
 
+.item.sheet.torgeternity .tab {
+  font-family: Palatino;
+}
+
 /* Actor/Item/Journal sheet */
 .actor.sheet.torgeternity .window-content,
 .item.sheet.torgeternity .window-content {
@@ -251,7 +255,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       padding: 8px 1px;
       text-align: center;
       text-transform: capitalize;
-      font-size: 13px;
+      font-size: 0.9em;
 
       &:hover,
       &:active {
@@ -3198,7 +3202,12 @@ p.skill-chat-title.skilled {
     padding: 0 0 0 0;
   }
 
-  ol.race.perks-list {
+  .tab.racePerks {
+    row-gap: 0px;
+  }
+
+  ol.race.perks-list,
+  .racePerks ol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -3369,7 +3378,7 @@ p.skill-chat-title.skilled {
     }
   }
 
-  .window-content .raceHardcode {
+  .window-content .racePerks {
     min-height: 200px;
     margin-top: 10px;
   }

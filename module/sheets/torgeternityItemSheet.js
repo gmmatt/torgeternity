@@ -68,7 +68,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     //actionCard: { template: `systems/torgeternity/templates/items/actionCard-sheet.hbs`, scrollable: [""] },
     //cosmCard: { template: `systems/torgeternity/templates/items/cosmCard-sheet.hbs`, scrollable: [""] },
     //destinyCard: { template: `systems/torgeternity/templates/items/destinyCard-sheet.hbs`, scrollable: [""] },
-    //racePerks: { template: `systems/torgeternity/templates/items/race-perks-sheet.hbs`, scrollable: [""] }, // TODO
+    racePerks: { template: `systems/torgeternity/templates/items/race-perks-sheet.hbs`, scrollable: [""] }, // TODO
     //vehicleHeader: { template: `systems/torgeternity/templates/items/vehicle-header-sheet.hbs`, scrollable: [""] },
 
     //powers: { template: `systems/torgeternity/templates/parts/active-effects.hbs`, scrollable: [""] }
@@ -80,6 +80,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         { id: 'stats' },
         { id: 'perkEnhancements' },  // perks only
         { id: 'perkLimitations' },   // perks only
+        { id: 'racePerks' },   // perks only
         { id: 'effects' },
       ],
       initial: 'stats',
@@ -257,6 +258,9 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       case 'perk':
         options.parts = ['header', 'tabs', 'perk', 'perkEnhancements', 'perkLimitations', 'effects'];
         break;
+      case 'race':
+        options.parts = ['header', 'tabs', 'race', 'racePerks'];
+        break;
       default:
         options.parts = ['header', 'tabs', this.document.type, 'effects'];
         break;
@@ -362,6 +366,12 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
             stats: { group: "primary", id: "stats", label: 'torgeternity.sheetLabels.stats' },
             effects: { group: "primary", id: "effects", label: 'torgeternity.sheetLabels.effects' },
           };
+        break;
+      case 'race':
+        context.tabs = {
+          stats: { group: "primary", id: "stats", label: 'torgeternity.sheetLabels.stats' },
+          racePerks: { group: "primary", id: "racePerks", label: 'torgeternity.sheetLabels.racialPerks' },
+        }
         break;
       default:
         context.tabs = {

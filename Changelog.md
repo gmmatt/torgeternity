@@ -16,6 +16,7 @@
 - #537: **NaN damage** appeared when rolling from dragged weapon attack.
 - #538: Remove blank lines at bottom of Power details.
 - #539: No **broken image links** for Cyberwitch or Scrapper on case-sensitive servers.
+- Adds back the **Racial Perks** tab to the Race Item sheet.
 
 ## v13.1.1
 
