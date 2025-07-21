@@ -344,16 +344,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         // Check for dropping race onto SK
         if (!(document instanceof TorgeternityItem) || document.type !== 'race') break;
 
-        const oldRace = this.actor.items.find(item => item.type === 'race');
-        if (oldRace) {
-          // Remove old racial abilities
-          await this.actor.deleteEmbeddedDocuments('Item', [
-            oldRace.id,
-            ...this.actor.items
-              .filter(item => item.type === 'perk' && item.system.category === 'racial')
-              .map(item => item.id),
-          ]);
-        }
+        await this.deleteRace();
 
         // Add new race and racial abilities
         await this.actor.createEmbeddedDocuments('Item', [
@@ -1061,16 +1052,25 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       window: { title: 'torgeternity.dialogWindow.raceDeletion.title' },
       content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
     })) {
-      await this.actor.deleteEmbeddedDocuments('Item', [
-        raceItem.id,
+      return this.deleteRace();
+    }
+  }
+
+  async deleteRace() {
+    const oldRace = this.actor.items.find(item => item.type === 'race');
+    if (oldRace) {
+      // Remove old racial abilities.
+      // It doesn't remove custom attacks!
+      return this.actor.deleteEmbeddedDocuments('Item', [
+        oldRace.id,
         ...this.actor.items
-          .filter(item => item.type === 'perk' && item.system.category === 'racial')
+          .filter(item =>
+            (item.type === 'perk' && item.system.category === 'racial') ||
+            (item.type === 'customAttack' && item.name.includes(oldRace.name)))
           .map(item => item.id),
       ]);
     }
   }
-
-
 }
 
 /**
