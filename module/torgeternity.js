@@ -827,7 +827,7 @@ Hooks.on('renderCombatTracker', (combatTracker) => {
 
 // change the generic threat token to match the cosm's one if it's set in the scene
 Hooks.on('preCreateToken', async (document, data, options, userId) => {
-  if (document.texture.src.includes('threat')) {
+  if (document.texture.src.includes('systems/torgeternity/images/characters/threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
     if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
       document.updateSource({ 'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp' });
