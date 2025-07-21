@@ -333,51 +333,72 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   /** @inheritdoc */
   async _onDrop(event) {
-    if (this.actor.type !== 'stormknight') {
-      await super._onDrop(event);
-      return;
-    }
     const data = foundry.applications.ux.TextEditor.getDragEventData(event);
-    const droppedDocument = await fromUuid(data.uuid);
-    if (droppedDocument instanceof TorgeternityItem && droppedDocument.type === 'race') {
-      const raceItem = this.actor.items.find(item => item.type === 'race');
-      if (raceItem) {
-        await this.actor.deleteEmbeddedDocuments('Item', [
-          raceItem.id,
-          ...this.actor.items
-            .filter(item => item.type === 'perk' && item.system.category === 'racial')
-            .map(item => item.id),
-        ]);
-      }
-      await super._onDrop(event);
+    const document = await fromUuid(data.uuid);
 
-      await this.actor.createEmbeddedDocuments('Item', [...droppedDocument.system.perksData]);
+    switch (this.actor.type) {
 
-      await this.actor.createEmbeddedDocuments('Item', [...droppedDocument.system.customAttackData]);
+      case 'stormknight':
+        // Check for dropping race onto SK
+        if (!(document instanceof TorgeternityItem) || document.type !== 'race') break;
 
-      for (const [key, value] of Object.entries(droppedDocument.system.attributeMaximum)) {
-        if (this.actor.system.attributes[key].base <= value) continue;
+        const oldRace = this.actor.items.find(item => item.type === 'race');
+        if (oldRace) {
+          // Remove old racial abilities
+          await this.actor.deleteEmbeddedDocuments('Item', [
+            oldRace.id,
+            ...this.actor.items
+              .filter(item => item.type === 'perk' && item.system.category === 'racial')
+              .map(item => item.id),
+          ]);
+        }
+        // Add new race item now
+        await super._onDrop(event);
 
-        const proceed = await DialogV2.confirm({
-          window: { title: 'torgeternity.dialogWindow.raceDiminishAttribute.title' },
-          content: await game.i18n.format(
-            'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
-            { attribute: await game.i18n.localize('torgeternity.attributes.' + key), }
-          ),
-          rejectClose: false,
-          modal: true,
-        });
-        if (!proceed) continue;
+        // Add new racial abilities
+        await this.actor.createEmbeddedDocuments('Item', [...document.system.perksData, ...document.system.customAttackData]);
 
-        await this.actor.update({ [`system.attributes.${key}.base`]: value });
-      }
-      await this.actor.update({ 'system.details.sizeBonus': droppedDocument.system.size });
+        // Enforce attribute maximums
+        for (const [key, value] of Object.entries(document.system.attributeMaximum)) {
+          if (this.actor.system.attributes[key].base <= value) continue;
 
-      if (droppedDocument.system.darkvision)
-        await this.actor.update({ 'prototypeToken.sight.visionMode': 'darkvision' });
-    } else {
-      await super._onDrop(event);
+          const proceed = await DialogV2.confirm({
+            window: { title: 'torgeternity.dialogWindow.raceDiminishAttribute.title' },
+            content: game.i18n.format(
+              'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
+              { attribute: game.i18n.localize('torgeternity.attributes.' + key), }
+            ),
+            rejectClose: false,
+            modal: true,
+          });
+          if (proceed) updates[`system.attributes.${key}.base`] = value;
+        }
+        updates['system.details.sizeBonus'] = document.system.size;
+
+        if (document.system.darkvision)
+          updates['prototypeToken.sight.visionMode'] = 'darkvision';
+
+        await this.actor.update(updates);
+        return;
+
+      case 'vehicle':
+        if (document instanceof Actor && (document.type === 'stormknight' || document.type === 'threat')) {
+          // dropped document = driver
+          const skill = this.actor.system.type.toLowerCase();
+          const skillValue = document?.system?.skills[skill + 'Vehicles']?.value ?? 0;
+          if (skillValue === 0) {
+            ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
+            return;
+          }
+          this.actor.update({
+            'system.operator.name': document.name,
+            'system.operator.skillValue': skillValue,
+          });
+          return;
+        }
     }
+
+    return super._onDrop(event);
   }
 
   /**

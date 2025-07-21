@@ -823,39 +823,11 @@ Hooks.on('renderCombatTracker', (combatTracker) => {
 });
 
 // change the generic threat token to match the cosm's one if it's set in the scene
-Hooks.on('preCreateToken', async (...args) => {
-  if (args[0].texture.src.includes('threat')) {
+Hooks.on('preCreateToken', async (document, data, options, userId) => {
+  if (document.texture.src.includes('threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
     if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
-      args[0].updateSource({
-        'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp',
-      });
-  }
-});
-
-
-Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
-  // When a "non-vehicle actor" is dropped on a "vehicle actor", proposes to replace the driver and his skill value
-  if (
-    (myActor.type === 'vehicle' && (await fromUuidSync(dropItem.uuid)?.type) === 'stormknight') ||
-    ((await fromUuidSync(dropItem.uuid)?.type) === 'threat' &&
-      (await fromUuidSync(dropItem.uuid)?.type) !== 'vehicle')
-  ) {
-    const myVehicle = myActor;
-    const driver = fromUuidSync(dropItem.uuid);
-    const skill = myVehicle.system.type.toLowerCase();
-    const skillValue = driver?.system?.skills[skill + 'Vehicles']?.value ?? 0;
-    if (skillValue > 0) {
-      myVehicle.update({
-        'system.operator.name': driver.name,
-        'system.operator.skillValue': skillValue,
-      });
-    } else if (skillValue === 0) {
-      ui.notifications.warn(
-        await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
-      );
-    }
-    return;
+      document.updateSource({ 'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp' });
   }
 });
 
