@@ -1,0 +1,44 @@
+name: +Fix Actor Duplicate Effects
+type: script
+_id: 0kcsOuip4WAIhENQ
+author: l8SVzn2293lAwvMC
+img: icons/svg/biohazard.svg
+scope: global
+command: |-
+  // This macro will remove all effects which are directly owned
+  // by an actor if that effect was previously transferred from
+  // an owned Item.
+  // (transferral would have happened in Foundry V11 and earlier)
+
+  for (const actor of game.actors) {
+      for (const effect of actor.effects) {
+        if (!effect.origin) continue;
+
+        if (effect.origin.startsWith('Item.')) {
+          console.log('${actor.name} - local Item ${item.name}')
+          await effect.update({origin: parent.uuid})
+        }
+        if (effect.origin?.includes(".Item.")) {
+          console.log(`${actor.name} ==> ${effect.name} ('${effect.origin}'`)
+          await effect.delete();
+        }
+      }
+  }
+folder: null
+sort: 1000000
+ownership:
+  default: 0
+  l8SVzn2293lAwvMC: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: torgeternity
+  systemVersion: 13.1.0
+  createdTime: 1752741728700
+  modifiedTime: 1752742550743
+  lastModifiedBy: l8SVzn2293lAwvMC
+_key: '!macros!0kcsOuip4WAIhENQ'
+

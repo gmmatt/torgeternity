@@ -423,7 +423,9 @@ blockquote {
 a.entity-link,
 a.content-link,
 a.inline-roll,
-a.torg-inline-check {
+a.torg-inline-check,
+a.torg-inline-condition,
+a.torg-inline-buff {
   background-image: url(../images/lightning_bar.webp);
   background-repeat: repeat-x;
   background-size: auto 100%;

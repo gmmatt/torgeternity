@@ -233,4 +233,14 @@ export function registerTorgSettings() {
     type: Boolean,
     default: true
   });
+
+  game.settings.register('torgeternity', 'hoverDistance', {
+    name: 'torgeternity.settingMenu.hoverDistance.name',
+    hint: 'torgeternity.settingMenu.hoverDistance.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
 }

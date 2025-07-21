@@ -674,6 +674,10 @@
         "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
         "name": "Ignore ammo mechanics"
       },
+      "hoverDistance": {
+        "hint": "If checked, hovering the mouse over a token will display the distance to that token from the user's controlled character",
+        "name": "Show Distance to Token"
+      },
       "autoShock": {
         "name": "Automatically Apply KO",
         "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"

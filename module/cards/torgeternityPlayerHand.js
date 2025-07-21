@@ -256,7 +256,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     // Display the prompt
     return DialogV2.prompt({
       classes: ['torgeternity', 'themed', 'theme-dark'],
-      window: { title: game.i18n.localize('torgeternity.dialogPrompts.playerPassTitle') },
+      window: { title: 'torgeternity.dialogPrompts.playerPassTitle' },
       content: html,
       ok: {
         label: game.i18n.localize('torgeternity.dialogPrompts.playerPassLabel'),
@@ -294,7 +294,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
 
     return DialogV2.prompt({
       classes: ['torgeternity', 'themed', 'theme-dark'],
-      window: { title: game.i18n.localize('torgeternity.dialogPrompts.cosmDialogTitle'), },
+      window: { title: 'torgeternity.dialogPrompts.cosmDialogTitle' },
       content: html,
       ok: {
         label: game.i18n.localize('torgeternity.dialogPrompts.cosmDeckDialogLabel'),

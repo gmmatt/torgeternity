@@ -56,7 +56,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       itemDelete: TorgeternityActorSheet.#onItemDelete,
       reloadWeapon: TorgeternityActorSheet.#onReloadWeapon,
       itemName: TorgeternityActorSheet.#onitemName,
-      deleteRaceButton: TorgeternityActorSheet.#onDeleteRaceButton,
+      deleteRace: TorgeternityActorSheet.#onDeleteRace,
     }
   }
 
@@ -266,7 +266,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         unskilledUse: event.target.dataset.unskilleduse,
         attackType: '',
         DNDescriptor: 'standard',
-        rollTotal: 0,
       },
     };
     event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
@@ -334,51 +333,68 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   /** @inheritdoc */
   async _onDrop(event) {
-    if (this.actor.type !== 'stormknight') {
-      await super._onDrop(event);
-      return;
-    }
+    if (!this.actor.isOwner) return super._onDrop(event);
+
     const data = foundry.applications.ux.TextEditor.getDragEventData(event);
-    const droppedDocument = await fromUuid(data.uuid);
-    if (droppedDocument instanceof TorgeternityItem && droppedDocument.type === 'race') {
-      const raceItem = this.actor.items.find(item => item.type === 'race');
-      if (raceItem) {
-        await this.actor.deleteEmbeddedDocuments('Item', [
-          raceItem.id,
-          ...this.actor.items
-            .filter(item => item.type === 'perk' && item.system.category === 'racial')
-            .map(item => item.id),
+    const document = await fromUuid(data.uuid);
+
+    switch (this.actor.type) {
+
+      case 'stormknight':
+        // Check for dropping race onto SK
+        if (!(document instanceof TorgeternityItem) || document.type !== 'race') break;
+
+        await this.deleteRace();
+
+        // Add new race and racial abilities
+        await this.actor.createEmbeddedDocuments('Item', [
+          document.toObject(),
+          ...document.system.perksData,
+          ...document.system.customAttackData
         ]);
-      }
-      await super._onDrop(event);
 
-      await this.actor.createEmbeddedDocuments('Item', [...droppedDocument.system.perksData]);
+        // Enforce attribute maximums
+        const updates = {};
+        for (const [key, value] of Object.entries(document.system.attributeMaximum)) {
+          if (this.actor.system.attributes[key].base <= value) continue;
 
-      await this.actor.createEmbeddedDocuments('Item', [...droppedDocument.system.customAttackData]);
+          const proceed = await DialogV2.confirm({
+            window: { title: 'torgeternity.dialogWindow.raceDiminishAttribute.title' },
+            content: game.i18n.format(
+              'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
+              { attribute: game.i18n.localize('torgeternity.attributes.' + key), }
+            ),
+            rejectClose: false,
+            modal: true,
+          });
+          if (proceed) updates[`system.attributes.${key}.base`] = value;
+        }
+        updates['system.details.sizeBonus'] = document.system.size;
 
-      for (const [key, value] of Object.entries(droppedDocument.system.attributeMaximum)) {
-        if (this.actor.system.attributes[key].base <= value) continue;
+        if (document.system.darkvision)
+          updates['prototypeToken.sight.visionMode'] = 'darkvision';
 
-        const proceed = await DialogV2.confirm({
-          window: { title: 'torgeternity.dialogWindow.raceDiminishAttribute.title' },
-          content: await game.i18n.format(
-            'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
-            { attribute: await game.i18n.localize('torgeternity.attributes.' + key), }
-          ),
-          rejectClose: false,
-          modal: true,
-        });
-        if (!proceed) continue;
+        await this.actor.update(updates);
+        return;
 
-        await this.actor.update({ [`system.attributes.${key}.base`]: value });
-      }
-      await this.actor.update({ 'system.details.sizeBonus': droppedDocument.system.size });
-
-      if (droppedDocument.system.darkvision)
-        await this.actor.update({ 'prototypeToken.sight.visionMode': 'darkvision' });
-    } else {
-      await super._onDrop(event);
+      case 'vehicle':
+        if (document instanceof Actor && (document.type === 'stormknight' || document.type === 'threat')) {
+          // dropped document = driver
+          const skill = this.actor.system.type.toLowerCase();
+          const skillValue = document?.system?.skills[skill + 'Vehicles']?.value ?? 0;
+          if (skillValue === 0) {
+            ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
+            return;
+          }
+          this.actor.update({
+            'system.operator.name': document.name,
+            'system.operator.skillValue': skillValue,
+          });
+          return;
+        }
     }
+
+    return super._onDrop(event);
   }
 
   /**
@@ -464,7 +480,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
     if (skillName === 'reality' && this.actor.isDisconnected) {
       const confirmed = await DialogV2.confirm({
-        window: { title: game.i18n.localize('torgeternity.dialogWindow.realityCheck.title') },
+        window: { title: 'torgeternity.dialogWindow.realityCheck.title' },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
       });
 
@@ -492,17 +508,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     new TestDialog({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       isFav:
         this.actor.system.skills[skillName]?.isFav ||
         this.actor.system.attributes?.[skillName + 'IsFav'] ||
         button.dataset.isfav,
       skillName: (button.dataset.testtype === 'attribute') ? attributeName : skillName,
       skillValue: skillValue,
-      rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -530,17 +542,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     new TestDialog({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       isFav:
         this.actor.system.skills[skillName]?.isFav ||
         this.actor.system.attributes?.[skillName + 'IsFav'] ||
         !!button.dataset.isfav,
       skillName: skillName,
       skillValue: skillValue,
-      rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -558,14 +566,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'chase',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: 'vehicle',
+      actor: this.actor,
       skillName: 'Vehicle Chase',
       skillValue: button.dataset.skillValue,
       DNDescriptor: 'highestSpeed',
-      rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -580,13 +584,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static async #onBaseRoll(event, button) {
     new TestDialog({
       testType: 'vehicleBase',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: 'vehicle',
+      actor: this.actor,
       skillName: 'Vehicle Operation',
       skillValue: button.dataset.skillValue,
-      rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -604,14 +604,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'stunt',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: 'vehicle',
+      actor: this.actor,
       skillName: 'Vehicle Stunt',
       skillValue: button.dataset.skillValue,
       DNDescriptor: dnDescriptor,
-      rollTotal: 0,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -649,10 +645,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'interactionAttack',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       skillName: button.dataset.name,
       skillAdds: button.dataset.adds,
       skillValue: button.dataset.skillValue,
@@ -660,7 +653,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       unskilledUse: true,
       DNDescriptor: dnDescriptor,
       type: 'interactionAttack',
-      rollTotal: 0,
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -693,10 +685,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'attack',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       amountBD: 0,
       isAttack: true,
       skillName: 'unarmedCombat',
@@ -710,7 +699,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       type: 'attack',
       applySize: true,
       attackOptions: true,
-      rollTotal: 0,
       bdDamageLabelStyle: 'dishiddene',
       bdDamageSum: 0,
       amountBD: 0,
@@ -736,17 +724,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     new TestDialog({
       testType: 'activeDefense',
       activelyDefending: false,
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       isActiveDefenseRoll: true,
       skillName: 'activeDefense',
       skillAdds: null,
       skillValue: null,
       unskilledUse: true,
       type: 'activeDefense',
-      rollTotal: 0,
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
@@ -776,7 +760,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       targetAll: game.user.targets.map(token => oneTestTarget(token)), // for renderSkillChat
       applySize: false,
       attackOptions: false,
-      rollTotal: 0,
     });
   }
 
@@ -892,10 +875,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'attack',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       amountBD: 0,
       isAttack: true,
       isFav: skillData?.isFav || false,
@@ -909,7 +889,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       type: 'attack',
       applySize: true,
       attackOptions: true,
-      rollTotal: 0,
       chatNote: weaponData.chatNote,
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
@@ -935,10 +914,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new TestDialog({
       testType: 'power',
-      actor: this.actor.uuid,
-      actorPic: this.actor.img,
-      actorName: this.actor.name,
-      actorType: this.actor.type,
+      actor: this.actor,
       powerName: item.name,
       powerModifier: powerModifier,
       isAttack: powerData.isAttack,
@@ -953,7 +929,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       DNDescriptor: powerData.dn,
       applySize: powerData.applySize,
       attackOptions: true,
-      rollTotal: 0,
       bdDamageLabelStyle: 'dihiddene',
       amountBD: 0,
       bdDamageSum: 0,
@@ -1067,30 +1042,35 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     detail.style.maxHeight = detail.style.maxHeight ? null : (detail.scrollHeight + 'px');
   }
 
-  static async #onDeleteRaceButton(event, button) {
+  static async #onDeleteRace(event, button) {
     const raceItem = this.actor.items.find(item => item.type === 'race');
     if (!raceItem) {
       ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
       return;
     }
-    await DialogV2.confirm({
-      window: { title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title') },
+    if (await DialogV2.confirm({
+      window: { title: 'torgeternity.dialogWindow.raceDeletion.title' },
       content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
-      yes: async () => {
-        await this.actor.deleteEmbeddedDocuments('Item', [
-          raceItem.id,
-          ...this.actor.items
-            .filter(item => item.type === 'perk' && item.system.category === 'racial')
-            .map(item => item.id),
-        ]);
-      },
-      no: () => {
-        return;
-      },
-    });
+    })) {
+      return this.deleteRace();
+    }
   }
 
-
+  async deleteRace() {
+    const oldRace = this.actor.items.find(item => item.type === 'race');
+    if (oldRace) {
+      // Remove old racial abilities.
+      // It doesn't remove custom attacks!
+      return this.actor.deleteEmbeddedDocuments('Item', [
+        oldRace.id,
+        ...this.actor.items
+          .filter(item =>
+            (item.type === 'perk' && item.system.category === 'racial') ||
+            (item.type === 'customAttack' && item.name.includes(oldRace.name)))
+          .map(item => item.id),
+      ]);
+    }
+  }
 }
 
 /**

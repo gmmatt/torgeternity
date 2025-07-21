@@ -40,6 +40,7 @@ import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
+import TorgEternityToken from './canvas/torgeternityToken.js';
 import MacroHub from './MacroHub.js';
 import InitEnrichers from './enrichers.js';
 import { initHideCompendium } from './hideCompendium.js';
@@ -69,6 +70,7 @@ Hooks.once('init', async function () {
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
   CONFIG.Token.rulerClass = TorgEternityTokenRuler;
+  CONFIG.Token.objectClass = TorgEternityToken;
 
   // --------combats
   CONFIG.Combat.initiative.formula = '1';
@@ -132,6 +134,47 @@ Hooks.once('init', async function () {
     types: ['destiny', 'drama', 'cosm'],
     makeDefault: true,
   });
+
+  // All choices must use strings, since number 0 will be treated as undefined by {{radioBoxes}}
+  CONFIG.torgeternity.choices = {
+    calledShot: {
+      [0]: 'torgeternity.sheetLabels.none',
+      [-2]: '-2',
+      [-4]: '-4',
+      [-6]: '-6',
+    },
+    burst: {
+      [0]: 'torgeternity.sheetLabels.none',
+      [2]: 'torgeternity.sheetLabels.shortBurst',
+      [4]: 'torgeternity.sheetLabels.longBurst',
+      [6]: 'torgeternity.sheetLabels.heavyBurst',
+    },
+    addBDs: [0, 1, 2, 3, 4, 5],
+    movement: {
+      [0]: 'torgeternity.sheetLabels.walking',
+      [-2]: 'torgeternity.sheetLabels.running',
+    },
+    multipleActions: {
+      [0]: '1',
+      [-2]: '2 (-2)',
+      [-4]: '3 (-4)',
+      [-6]: '4 (-6)',
+    },
+    targets: {
+      [0]: '1',
+      [-2]: '2 (-2)',
+      [-4]: '3 (-4)',
+      [-6]: '4 (-6)',
+      [-8]: '5 (-8)',
+      [-10]: '6 (-10)',
+    },
+    concealment: {
+      [0]: 'torgeternity.sheetLabels.none',
+      [-2]: '-2',
+      [-4]: '-4',
+      [-6]: '-6',
+    }
+  }
 
   // ----------preloading handlebars templates
   preloadTemplates();
@@ -201,6 +244,8 @@ Hooks.once('setup', async function () {
       );
     }
   }
+
+  Handlebars.registerHelper({ radioBoxesNumber })
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {
@@ -530,7 +575,8 @@ function rollItemMacro(itemName) {
       {
         // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
-        const { attackWith, damageType, weaponDamage } = weaponData;
+        const { attackWith, damageType } = weaponData;
+        const weaponDamage = parseInt(weaponData.damage);
         const skillData = actor.system.skills?.[attackWith] || item.system?.gunner;
         let dnDescriptor = 'standard';
         let adjustedDamage;
@@ -566,47 +612,41 @@ function rollItemMacro(itemName) {
 
         // Calculate damage caused by weapon
         switch (damageType) {
-          case 'flat':
-            adjustedDamage = weaponDamage;
-            break;
           case 'strengthPlus':
-            adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.strength.value + weaponDamage;
             break;
           case 'charismaPlus':
-            adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.charisma.value + weaponDamage;
             break;
           case 'dexterityPlus':
-            adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.dexterity.value + weaponDamage;
             break;
           case 'mindPlus':
-            adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.mind.value + weaponDamage;
             break;
           case 'spiritPlus':
-            adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
+            adjustedDamage = attributes.spirit.value + weaponDamage;
             break;
+          case 'flat':
           default:
-            adjustedDamage = parseInt(weaponDamage);
+            adjustedDamage = weaponDamage;
         }
 
         new TestDialog({
           testType: 'attack',
-          actor: actor.uuid,
-          actorType: actor.type,
+          actor: actor,
           itemId: item.id,
           isAttack: true,
           amountBD: 0,
           isFav: skillData.isFav,
-          actorPic: actor.img,
-          actorName: actor.name,
           skillName: attackWith,
           skillValue: skillData?.value || skillData?.skillValue,
           skillAdds: skillData.adds,
           unskilledUse: true,
-          rollTotal: 0,
           DNDescriptor: dnDescriptor,
           weaponName: item.name,
           weaponDamageType: damageType,
-          weaponDamage: weaponData.damage,
+          weaponDamage: weaponDamage,
           damage: adjustedDamage,
           weaponAP: weaponData.ap,
           applyArmor: true,
@@ -630,10 +670,7 @@ function rollItemMacro(itemName) {
         new TestDialog({
           testType: 'power',
           DNDescriptor: game.user.targets.size ? powerData.dn : 'standard',
-          actor: actor.uuid,
-          actorPic: actor.img,
-          actorName: actor.name,
-          actorType: actor.type,
+          actor: actor,
           powerName: item.name,
           powerModifier: item.system.modifier || 0,
           isAttack: powerData.isAttack,
@@ -647,7 +684,6 @@ function rollItemMacro(itemName) {
           applyArmor: powerData.applyArmor,
           applySize: powerData.applySize,
           attackOptions: true,
-          rollTotal: 0,
           bdDamageLabelStyle: 'hidden',
           bdDamageSum: 0,
         }, { useTargets: true });
@@ -730,18 +766,13 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
   // This code needs to be centrally located!!!
   const test = {
     testType: isAttributeTest ? 'attribute' : 'skill',
-    actor: actor.uuid,
-    actorPic: actor.img,
-    actorName: actor.name,
-    actorType: actor.type,
+    actor: actor,
     skillName: isAttributeTest ? attributeName : skillName,
     skillAdds: skill.adds,
     skillValue: skillValue,
     isFav: skill.isFav,
     DNDescriptor: DNDescriptor ?? 'standard',
-    rollTotal: 0,
     unskilledUse: skill.unskilledUse,
-    chatNote: '',
     woundModifier: parseInt(-actor.system.wounds.value),
     stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
@@ -792,89 +823,13 @@ Hooks.on('renderCombatTracker', (combatTracker) => {
 });
 
 // change the generic threat token to match the cosm's one if it's set in the scene
-Hooks.on('preCreateToken', async (...args) => {
-  if (args[0].texture.src.includes('threat')) {
+Hooks.on('preCreateToken', async (document, data, options, userId) => {
+  if (document.texture.src.includes('threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
     if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
-      args[0].updateSource({
-        'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp',
-      });
+      document.updateSource({ 'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp' });
   }
 });
-
-// un-pool cards of SK when the GM ends the combat encounter
-Hooks.on('deleteCombat', async (combat, dataUpdate) => {
-  if (!game.user.isActiveGM) return;
-
-  // listing of hands' actors in closing combat
-  combat.combatants.filter(combatant => combatant.actor.type === 'stormknight')
-    .forEach(combatant => {
-      const hand = game.actors.get(combatant.actorId).getDefaultHand();
-      // delete the flag that give the pooled condition in each card of each hand
-      if (hand) hand.cards.forEach(card => card.unsetFlag('torgeternity', 'pooled'))
-    });
-
-  await deleteActiveDefense(combat);
-});
-
-Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
-  // When a "non-vehicle actor" is dropped on a "vehicle actor", proposes to replace the driver and his skill value
-  if (
-    (myActor.type === 'vehicle' && (await fromUuidSync(dropItem.uuid)?.type) === 'stormknight') ||
-    ((await fromUuidSync(dropItem.uuid)?.type) === 'threat' &&
-      (await fromUuidSync(dropItem.uuid)?.type) !== 'vehicle')
-  ) {
-    const myVehicle = myActor;
-    const driver = fromUuidSync(dropItem.uuid);
-    const skill = myVehicle.system.type.toLowerCase();
-    const skillValue = driver?.system?.skills[skill + 'Vehicles']?.value ?? 0;
-    if (skillValue > 0) {
-      myVehicle.update({
-        'system.operator.name': driver.name,
-        'system.operator.skillValue': skillValue,
-      });
-    } else if (skillValue === 0) {
-      ui.notifications.warn(
-        await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
-      );
-    }
-    return;
-  }
-});
-
-// When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
-Hooks.on('updateCombatant', async (combatant, changes, options, userId) => {
-  if (game.user.hasRole(CONST.USER_ROLES.GAMEMASTER) && changes.flags?.world?.turnTaken) {
-    const myActor = combatant.actor;
-    for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
-      if (ef.name === 'ActiveDefense') continue;
-      await myActor.updateEmbeddedDocuments('ActiveEffect', [
-        {
-          _id: ef.id,
-          'duration.turns': ef.duration.turns - 1,
-          'duration.rounds': ef.duration.rounds - 1,
-        },
-      ]);
-      if (!ef.duration.remaining) await ef.delete();
-    }
-  }
-});
-
-// deactivate active defense when the combat round is progressed. End of combat is in the hook above, 'deleteCombat'
-Hooks.on('combatRound', await deleteActiveDefense);
-
-async function deleteActiveDefense(...args) {
-  if (!game.user.isGM) return;
-
-  const combatants = args[0].combatants;
-
-  for (const combatant of combatants) {
-    const activeDefenseEffect = combatant.actor.appliedEffects.find(
-      (eff) => eff.name === 'ActiveDefense'
-    );
-    if (activeDefenseEffect) await activeDefenseEffect.delete();
-  }
-}
 
 Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 
@@ -890,9 +845,7 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
       DialogV2.wait({
         classes: ['torgeternity', 'themed', 'theme-dark', 'charInfoOutput'],
         window: {
-          title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
-            a: actor.name,
-          }),
+          title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', { a: actor.name, }),
           contentClasses: ['scrollable'],
         },
         position: {
@@ -963,3 +916,27 @@ Hooks.on('renderSceneControls', (sceneControls, html, context, options) => {
   image.src = 'systems/torgeternity/images/te-logo.webp';
   parent.appendChild(image);
 })
+
+
+
+function radioBoxesNumber(name, choices, options) {
+  const checked = options.hash.checked ?? null;
+  const isNumber = typeof checked === 'number';
+  const isChecked = checked !== null;
+  const localize = options.hash.localize || false;
+  let html = "";
+  for (let [key, label] of Object.entries(choices)) {
+    if (localize) label = game.i18n.localize(label);
+    const element = document.createElement("label");
+    element.classList.add("checkbox");
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = name;
+    input.value = key;
+    if (isChecked) input.defaultChecked = (checked == key);
+    if (isNumber) input.dataset.dtype = "Number";
+    element.append(input, " ", label);
+    html += element.outerHTML;
+  }
+  return new Handlebars.SafeString(html);
+}

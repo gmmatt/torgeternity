@@ -1,5 +1,5 @@
-<section class="tab {{tab.cssClass}}" data-group="primary" , data-tab="racialPerks">
-  {{#if (ne item.system.perksData.size 0)}}
+<section class="tab racePerks scrollable {{tab.cssClass}}" data-group="{{tab.group}}" , data-tab="{{tab.id}}">
+  {{#if item.system.perksData.size}}
     <div class="list-section-heading">{{localize "torgeternity.sheetLabels.perks"}}</div>
     <ol class="race perks-list">
       {{#each item.system.perksData as |perk|}}
@@ -28,7 +28,7 @@
   {{else}}
     <div class="list-section-heading">{{localize "torgeternity.sheetLabels.noPerksAdded"}}</div>
   {{/if}}
-  {{#if (ne item.system.customAttackData.size 0)}}
+  {{#if item.system.customAttackData.size}}
     <div class="list-section-heading">{{localize "torgeternity.sheetLabels.customAttacks"}}</div>
     <ol class="race perks-list">
       {{#each item.system.customAttackData as |attack|}}
