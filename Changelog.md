@@ -7,7 +7,7 @@
 - #543: Hovering over a token shows the distance from your controlled token to that token (game setting).
 - Further optimisations to TestDialog.
 - Adding/Deleting/Changing the race of a stormknight should work properly now.
-- Add `@Condition[status]` to apply a new effect to the selected actors (or the player's actor). One or more options can be added to the condition, such as:
+- Add `@Condition[status]` to apply a new effect to the selected actors (or the player's controlled actor). One or more options can be added to the condition, such as:
 -- `@Condition[status|overlay]` will set the status as overlay,
 -- `@Condition[status|toggle]` will toggle the current state of that status on the token,
 -- `@Condition[status|active=false]` will remove the status if it is on the token.

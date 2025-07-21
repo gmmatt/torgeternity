@@ -44,7 +44,7 @@ function InlineRuleEnricher(match, options) {
   if (!parts.includes('fromchat') && game.user.isGM) {
     const icon = document.createElement("i");
     icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match.input.replace("]", "|fromchat]");
+    icon.dataset.original = match[0].replace("]", "|fromchat]");
     anchor.append(icon);
   }
   return anchor;
@@ -148,7 +148,7 @@ function InlineConditionEnricher(match, options) {
   if (!parts.includes('fromchat') && game.user.isGM) {
     const icon = document.createElement("i");
     icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match.input.replace("]", "|fromchat]");
+    icon.dataset.original = match[0].replace("]", "|fromchat]");
     anchor.append(icon);
   }
   return anchor;
