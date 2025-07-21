@@ -859,24 +859,6 @@ Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
   }
 });
 
-// When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
-Hooks.on('updateCombatant', async (combatant, changes, options, userId) => {
-  if (game.user.hasRole(CONST.USER_ROLES.GAMEMASTER) && changes.flags?.world?.turnTaken) {
-    const myActor = combatant.actor;
-    for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
-      if (ef.name === 'ActiveDefense') continue;
-      await myActor.updateEmbeddedDocuments('ActiveEffect', [
-        {
-          _id: ef.id,
-          'duration.turns': ef.duration.turns - 1,
-          'duration.rounds': ef.duration.rounds - 1,
-        },
-      ]);
-      if (!ef.duration.remaining) await ef.delete();
-    }
-  }
-});
-
 Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 
   menuItems.unshift({
