@@ -3,96 +3,6 @@ name: Die Drachenkriegerin
 type: stormknight
 img: systems/torgeternity/images/characters/Dragon_Warrior.Avatar.webp
 items:
-  - _id: 3KPh7gkb97UOb3Ek
-    name: Drachenodem
-    type: enhancement
-    img: systems/torgeternity/images/icons/enhancement.webp
-    effects: []
-    folder: LyasDNAhbLqYWU56
-    sort: 0
-    flags:
-      core: {}
-    system:
-      perk: Drachenkrieger
-      description: "<p><span style=\"font-family:'Palatino Linotype'\">An einer der Armschienen der Rüstung ist eine lange Röhre befestigt, die zu einer verstecken Kammer mit komprimiertem Brennstoff auf dem Rücken führt. Wenn sie mit </span><em style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\">Projektilwaffen\_</em><span style=\"font-family:'Palatino Linotype'\">eingesetzt wird, verschießt die Röhre einen Feuerstrahl mit einer Reichweite von 10 Metern und einem kleinen Explosionsradius (siehe Seite 120). Alle getroffenen Ziele erleidet 16 Punkte Feuerschaden (siehe Seite 136). Die Kammer enthält genug Brennstoff für drei Angriffe.\_</span><br style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\" /><span style=\"font-family:'Palatino Linotype'\">Der Behälter lädt sich am Ende jeder Szene oder während einer langen Rast, die mindestens einige Stunden dauert (Spielleiterentscheidung), automatisch auf.</span></p>"
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: Item.IFfIxQewwnxkWg6m
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!4maHTlnkLTHmuYpB.3KPh7gkb97UOb3Ek'
-  - _id: c66bzP2ZNUUu5WBa
-    name: Riesenstärke
-    type: enhancement
-    img: systems/torgeternity/images/icons/enhancement.webp
-    effects:
-      - _id: 8FWHopcsJXmoM3Ce
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.y2OJLdEpjDrwNjfl
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Riesenstärke (+2)
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!4maHTlnkLTHmuYpB.c66bzP2ZNUUu5WBa.8FWHopcsJXmoM3Ce
-    folder: LyasDNAhbLqYWU56
-    sort: 0
-    flags:
-      core: {}
-    system:
-      perk: Drachenkrieger
-      description: "<p><span style=\"font-family:'Palatino Linotype'\">Eine Reihe von Druckluftkompressoren saugen die Luft an und leiten sie zu den Armen der Rüstung. Zusammen mit geschickt platzierten Hebeln entlang der Innenseite der Rüstung erhöht dies seine\_</span><em style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\">Stärke\_</em><span style=\"font-family:'Palatino Linotype'\">bei Proben und für die Ermittlung von Schaden um +2. Die Robustheit wird dadurch nicht beeinflusst.\_</span></p>"
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: Item.y2OJLdEpjDrwNjfl
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!4maHTlnkLTHmuYpB.c66bzP2ZNUUu5WBa'
   - _id: IajpoVCzUSfcdAIq
     name: Zweihandaxt
     type: meleeweapon
@@ -450,7 +360,7 @@ items:
             eingebaut werden (einschließlich eines weiteren zusätzlichen
             Munitionsfachs), wenn der Zwerg diese Verbesserung ein zweites Mal
             auswählt.
-          taken: true
+          taken: false
           title: Bolzenwerfer
         enhancement02:
           description: >-
@@ -467,7 +377,7 @@ items:
             Der Behälter lädt sich am Ende jeder Szene oder während einer langen
             Rast, die mindestens einige Stunden dauert
             (Spielleiterentscheidung), automatisch auf.
-          taken: false
+          taken: true
           title: Drachenodem
         enhancement03:
           description: >-
@@ -566,12 +476,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.nFFJqamKJz86Yrig
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.1.1
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753104926180
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.rWgkIw6gm37tEUAA'
   - name: Zwerg
@@ -1065,81 +975,7 @@ items:
     effects: []
     folder: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.gkeZPqeruKfC0DVZ'
-effects:
-  - _id: bu5b1s7EBLwA1DXY
-    changes:
-      - key: system.skills.maneuver.isFav
-        mode: 5
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: Actor.4maHTlnkLTHmuYpB.Item.GLGvMUxF3Aydcn8g
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Fertigkeitsbegünstigung
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!4maHTlnkLTHmuYpB.bu5b1s7EBLwA1DXY'
-  - origin: Actor.4maHTlnkLTHmuYpB.Item.rWgkIw6gm37tEUAA
-    duration:
-      rounds: null
-      startTime: 0
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: false
-    name: Riesenstärke (+2)
-    img: icons/svg/aura.svg
-    _id: 7HWVbiQCr8G0cZFO
-    type: base
-    system: {}
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '2'
-        priority: null
-    description: ''
-    tint: '#ffffff'
-    transfer: false
-    statuses: []
-    sort: 0
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      exportSource: null
-    _key: '!actors.effects!4maHTlnkLTHmuYpB.7HWVbiQCr8G0cZFO'
+effects: []
 folder: null
 sort: 0
 flags:

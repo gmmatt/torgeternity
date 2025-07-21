@@ -648,44 +648,7 @@ items:
     _id: WxWrR6snWWc7GRAE
     sort: 100000
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.WxWrR6snWWc7GRAE'
-effects:
-  - origin: Actor.Aq6ZhdfGe9SMQxwv.Item.BioSWECX8OLQhqht
-    duration:
-      rounds: null
-      startTime: 0
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: false
-    name: First Aid Favored
-    img: icons/svg/aura.svg
-    _id: mQorDXPsnkJYGih3
-    type: base
-    system: {}
-    changes:
-      - key: system.skills.firstAid.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-    description: ''
-    tint: '#ffffff'
-    transfer: false
-    statuses: []
-    sort: 0
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      exportSource: null
-    _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.mQorDXPsnkJYGih3'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -818,7 +781,7 @@ system:
     firstAid:
       baseAttribute: mind
       adds: 1
-      isFav: false
+      isFav: true
       groupName: other
       unskilledUse: 1
       isThreatSkill: false
@@ -1213,11 +1176,11 @@ prototypeToken:
   movementAction: null
 _stats:
   systemId: torgeternity
-  systemVersion: 12.2.0
-  coreVersion: '13.345'
+  systemVersion: 13.1.1
+  coreVersion: '13.346'
   createdTime: 1693901061941
-  modifiedTime: 1729013413073
-  lastModifiedBy: d8YcfsxBOP7RAazk
+  modifiedTime: 1753104257641
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: null
   duplicateSource: null
   exportSource: null

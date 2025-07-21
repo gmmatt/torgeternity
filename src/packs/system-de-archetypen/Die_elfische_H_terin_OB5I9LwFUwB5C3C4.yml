@@ -1239,47 +1239,6 @@ items:
     folder: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.yRS2fqlwwnUeidQi'
 effects:
-  - _id: lsRuxTTgXeAUrfnk
-    changes:
-      - key: system.skills.stealth.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-      - key: system.skills.tracking.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: Actor.OB5I9LwFUwB5C3C4.Item.e6cZvGjHUiIJPlPn
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Heimlichkeit/Spurenlesen begünstigt
-    description: ''
-    statuses: []
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!OB5I9LwFUwB5C3C4.lsRuxTTgXeAUrfnk'
   - origin: Actor.OB5I9LwFUwB5C3C4.Item.Sh5CR5qpJTAzjQsC
     duration:
       rounds: null

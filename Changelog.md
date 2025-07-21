@@ -1,5 +1,35 @@
 # TORG Eternity Changelog
 
+## v13.1.2
+
+## Improvements
+
+- #543: Hovering over a token shows the distance from your controlled token to that token (game setting).
+- Further optimisations to TestDialog.
+- Adding/Deleting/Changing the race of a stormknight should work properly now.
+- Add **`@Condition[status]`** to apply a new effect to the selected actors (or the player's controlled actor). One or more options can be added to the condition, such as:
+-- `@Condition[status|overlay]` will set the status as overlay,
+-- `@Condition[status|toggle]` will toggle the current state of that status on the token,
+-- `@Condition[status|active=false]` will remove the status if it is on the token.
+-- `stymied` and `vulnerable` will promote an existing condition to `veryStymied` or `veryVulnerable`.
+- Add **`@Buff[stat1=num|stat2=num]`** to buff/debuff attributes and skills:
+-- Set `stat` to the name of the attribute of ability (either the key [strength] or the localized string).
+-- Set `num` to either a fixed value to replace the actor's current value, or a `+X` or `-X` to modify the existing value.
+-- Adding `|duration=x` can set the duration of the effect to x turns/rounds (x = number)
+-- Other fields in the ActiveEffect can be overridden such as the following which will set the active effect to have a barrel icon:
+--- `@Buff[strength=+2|img=icons/svg/barrel.svg]`
+
+### Bug Fixes
+
+- #534: **Compact SK sheet** working again
+- #535: Active Effects toggle and delete buttons honour editable state of the effect.
+- #536: Compact SK sheet view is working again.
+- #537: **NaN damage** appeared when rolling from dragged weapon attack.
+- #538: Remove blank lines at bottom of Power details.
+- #539: No **broken image links** for Cyberwitch or Scrapper on case-sensitive servers.
+- Adds back the **Racial Perks** tab to the Race Item sheet.
+- Allow cosm to be changed on Stormknights.
+
 ## v13.1.1
 
 - Fixes the **aimed** option not working in Tests.

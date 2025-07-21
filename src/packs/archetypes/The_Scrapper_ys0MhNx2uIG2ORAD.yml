@@ -630,81 +630,7 @@ items:
     _id: hhVPF9K1d6OKbb5o
     sort: 100000
     _key: '!actors.items!ys0MhNx2uIG2ORAD.hhVPF9K1d6OKbb5o'
-effects:
-  - origin: Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: false
-    name: Strength +2 (Arm)
-    _id: hJopDtTRygZm4OjO
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '2'
-        priority: null
-    description: ''
-    transfer: false
-    statuses: []
-    flags: {}
-    tint: '#ffffff'
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!ys0MhNx2uIG2ORAD.hJopDtTRygZm4OjO'
-  - origin: Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: true
-    name: Armor +3 (Arm)
-    _id: tfdPfqnwELylRgKR
-    changes:
-      - key: defenses.armor
-        mode: 2
-        value: '3'
-        priority: null
-    description: ''
-    transfer: false
-    statuses: []
-    flags: {}
-    tint: '#ffffff'
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!ys0MhNx2uIG2ORAD.tfdPfqnwELylRgKR'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -1188,7 +1114,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/scrapper.Token.webp
+    src: systems/torgeternity/images/characters/Scrapper.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

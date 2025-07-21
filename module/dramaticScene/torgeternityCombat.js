@@ -6,7 +6,7 @@ export default class TorgCombat extends Combat {
    *
    */
   async nextRound() {
-    if (game.user.isGM) {
+    if (game.user.isActiveGM) {
       const settings = game.settings.get('torgeternity', 'deckSetting');
       const dramaDeck = game.cards.get(settings.dramaDeck);
       const dramaDiscard = game.cards.get(settings.dramaDiscard);
@@ -29,8 +29,11 @@ export default class TorgCombat extends Combat {
         this.combatants.map((combatant) => ({ _id: combatant.id, 'flags.world.turnTaken': false })),
         { updateAll: true }
       );
+
+      // deactivate active defense when the combat round is progressed. End of combat is in the hook above, 'deleteCombat'
+      await this.#deleteActiveDefense();
     }
-    await super.nextRound();
+    return super.nextRound();
   }
 
   /**
@@ -53,13 +56,27 @@ export default class TorgCombat extends Combat {
     super._onCreate(data, options, userId);
   }
 
+  async _preDelete(options, user) {
+    if (!super._preDelete(options, user)) return false;
+    // listing of hands' actors in closing combat
+    this.combatants.filter(combatant => combatant.actor.type === 'stormknight')
+      .forEach(combatant => {
+        const hand = game.actors.get(combatant.actorId).getDefaultHand();
+        // delete the flag that give the pooled condition in each card of each hand
+        if (hand) hand.cards.forEach(card => card.unsetFlag('torgeternity', 'pooled'))
+      });
+
+    this.#deleteActiveDefense();
+    return true;
+  }
+
   /**
    *
    * @param options
    * @param userId
    */
   _onDelete(options, userId) {
-    if (game.user.isGM) {
+    if (game.user.isActiveGM) {
       const settings = game.settings.get('torgeternity', 'deckSetting');
       const dramaDiscard = game.cards.get(settings.dramaDiscard);
       const dramaActive = game.cards.get(settings.dramaActive);
@@ -93,5 +110,16 @@ export default class TorgCombat extends Combat {
         (dramaActive.cards.size > 0) ? dramaActive.cards.contents[0].faces[0].img : '');
     }
     super._onUpdate(changed, options, userId);
+  }
+
+  /**
+   * 
+   * @param {*} combatants Passed explicitly, for when called from onDelete
+   */
+  async #deleteActiveDefense() {
+    for (const combatant of this.combatants) {
+      const activeDefenseEffect = combatant.actor.appliedEffects.find((eff) => eff.name === 'ActiveDefense');
+      if (activeDefenseEffect) await activeDefenseEffect.delete();
+    }
   }
 }

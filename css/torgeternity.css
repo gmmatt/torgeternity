@@ -167,6 +167,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   background-size: cover;
 }
 
+.item.sheet.torgeternity .tab {
+  font-family: Palatino;
+}
+
 /* Actor/Item/Journal sheet */
 .actor.sheet.torgeternity .window-content,
 .item.sheet.torgeternity .window-content {
@@ -251,7 +255,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       padding: 8px 1px;
       text-align: center;
       text-transform: capitalize;
-      font-size: 13px;
+      font-size: 0.9em;
 
       &:hover,
       &:active {
@@ -316,10 +320,9 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 /*                                             */
 .sheet.actor.torgeternity {
 
-  &.compact {
-    .window-content {
-      padding: 1px;
-    }
+  &.compact .window-content {
+
+    padding: 1px;
 
     .block {
       border: none;
@@ -331,9 +334,12 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px) scale(0.7);
     }
 
-    .tab[data-tab].active {
+    .tab.stats.active .tabbody {
       display: flex;
       flex-direction: column;
+    }
+
+    .tab[data-tab].active .tabbody {
 
       .sheet-header p {
         display: none;
@@ -3196,7 +3202,12 @@ p.skill-chat-title.skilled {
     padding: 0 0 0 0;
   }
 
-  ol.race.perks-list {
+  .tab.racePerks {
+    row-gap: 0px;
+  }
+
+  ol.race.perks-list,
+  .racePerks ol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -3367,7 +3378,7 @@ p.skill-chat-title.skilled {
     }
   }
 
-  .window-content .raceHardcode {
+  .window-content .racePerks {
     min-height: 200px;
     margin-top: 10px;
   }
@@ -4123,7 +4134,9 @@ dialog.externalLinks {
   }
 }
 
-a.torg-inline-check {
+a.torg-inline-check,
+a.torg-inline-condition,
+a.torg-inline-buff {
   /* Just like core a.inline-roll */
   background: #DDD;
   padding: 1px 4px;

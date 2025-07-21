@@ -32,13 +32,16 @@
               <div class="item-dropdown-description">
                 {{{item.description}}}
               </div>
-
-              <div class="item-dropdown-extras">
-                {{item.system.category}}
-              </div>
-              <div class="item-dropdown-extras">
-                {{item.system.cosm}}
-              </div>
+              {{#if item.system.category}}
+                <div class="item-dropdown-extras">
+                  {{item.system.category}}
+                </div>
+              {{/if}}
+              {{#if item.system.cosm}}
+                <div class="item-dropdown-extras">
+                  {{item.system.cosm}}
+                </div>
+              {{/if}}
               {{#if item.system.timestaken}}
                 <div class="item-dropdown-extras">
                   {{item.system.timestaken}}x
@@ -82,12 +85,16 @@
                 {{{item.description}}}
               </div>
 
-              <div class="item-dropdown-extras">
-                {{item.system.category}}
-              </div>
-              <div class="item-dropdown-extras">
-                {{item.system.cosm}}
-              </div>
+              {{#if item.system.category}}
+                <div class="item-dropdown-extras">
+                  {{item.system.category}}
+                </div>
+              {{/if}}
+              {{#if item.system.cosm}}
+                <div class="item-dropdown-extras">
+                  {{item.system.cosm}}
+                </div>
+              {{/if}}
               {{#if item.system.timestaken}}
                 <div class="item-dropdown-extras">
                   {{item.system.timestaken}}x
@@ -131,13 +138,16 @@
               <div class="item-dropdown-description">
                 {{{item.description}}}
               </div>
-
-              <div class="item-dropdown-extras">
-                {{item.system.category}}
-              </div>
-              <div class="item-dropdown-extras">
-                {{item.system.cosm}}
-              </div>
+              {{#if item.system.category}}
+                <div class="item-dropdown-extras">
+                  {{item.system.category}}
+                </div>
+              {{/if}}
+              {{#if item.system.cosm}}
+                <div class="item-dropdown-extras">
+                  {{item.system.cosm}}
+                </div>
+              {{/if}}
               {{#if item.system.timestaken}}
                 <div class="item-dropdown-extras">
                   {{item.system.timestaken}}x

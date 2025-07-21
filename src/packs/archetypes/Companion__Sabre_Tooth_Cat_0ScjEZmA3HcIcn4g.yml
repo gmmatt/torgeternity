@@ -31,7 +31,48 @@ items:
       duplicateSource: null
       exportSource: null
     _key: '!actors.items!0ScjEZmA3HcIcn4g.ePmcuxIjZItJ2qOb'
-effects: []
+effects:
+  - name: Move +4
+    origin: Compendium.torgeternity.archetypes.Actor.0ScjEZmA3HcIcn4g
+    duration:
+      startTime: 0
+      combat: null
+      seconds: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    img: icons/svg/aura.svg
+    _id: JqOZFQ01W0jSyGHY
+    type: base
+    system: {}
+    changes:
+      - key: system.other.moveMod
+        mode: 2
+        value: '4'
+        priority: null
+      - key: system.other.runMod
+        mode: 2
+        value: '12'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.1.1
+      createdTime: 1753103373282
+      modifiedTime: 1753103404762
+      lastModifiedBy: W32Zl65V9atvPk8o
+    _key: '!actors.effects!0ScjEZmA3HcIcn4g.JqOZFQ01W0jSyGHY'
 folder: null
 sort: 100001
 flags: {}

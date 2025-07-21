@@ -734,44 +734,7 @@ items:
     _id: 9PEHZHPvqUIopsV2
     sort: 100000
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.9PEHZHPvqUIopsV2'
-effects:
-  - origin: Actor.tbqGzMeQeCA3n1Mt.Item.KgPr4gJpKrjSjjIj
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: false
-    _id: sLA9F9GQy1j6PpQ9
-    changes:
-      - key: system.skills.survival.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-    tint: '#ffffff'
-    transfer: false
-    flags: {}
-    name: Survival Favored
-    description: ''
-    statuses: []
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!tbqGzMeQeCA3n1Mt.sLA9F9GQy1j6PpQ9'
+effects: []
 folder: null
 sort: 100001
 flags: {}

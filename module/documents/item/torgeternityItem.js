@@ -233,7 +233,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 
   /**
-   *
+   * NOT USED
    */
   async weaponAttack() {
     // Roll those dice!
@@ -255,8 +255,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     const messageContent =
       diceroll > 4
-        ? `Bonus: ${bonus >= 0 ? '+' : '-'}${bonus}`
-        : (diceroll = 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
+        ? `Bonus: ${bonus.signedString()}`
+        : (diceroll === 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
 
     const baseDamage =
       this.system.damageType == 'strengthPlus'
@@ -299,7 +299,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 
   /**
-   *
+   * NOT USED
    */
   async power() {
     // Roll those dice!
@@ -320,8 +320,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     const messageContent =
       diceroll > 4
-        ? `Bonus: ${bonus >= 0 ? '+' : '-'}${bonus}`
-        : (diceroll = 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
+        ? `Bonus: ${bonus.signedString()}`
+        : (diceroll === 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
 
     // Retrieve the applicable skill value from the current actor
     const skillToUse = this.actor.system.skills[this.system.skill];
@@ -402,15 +402,9 @@ export default class TorgeternityItem extends foundry.documents.Item {
    */
   _estimateBulletLoss(burstModifier) {
     switch (burstModifier) {
-      case 2:
-        return 3;
-
-      case 4:
-        return 7;
-
-      case 6:
-        return 50;
-
+      case 2: return 3;
+      case 4: return 7;
+      case 6: return 50;
       case 0:
       default:
         return 1;

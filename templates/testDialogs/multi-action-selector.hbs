@@ -1,17 +1,8 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.multiActionPenalty"}}</legend>
-  <span class="skill-check-options">{{localize "torgeternity.sheetLabels.actions"}}:
-    <input type="radio" data-dtype="Number" id="multi1-radio" name="multiModifier" value="0"
-      checked />
-    <label for="multi1-radio">1</label>
-    <input type="radio" data-dtype="Number" id="multi2-radio" name="multiModifier" value="-2"
-      {{checked (eq test.multiModifier -2 )}} />
-    <label for="multi2-radio">2 (-2)</label>
-    <input type="radio" data-dtype="Number" id="multi3-radio" name="multiModifier" value="-4"
-      {{checked (eq test.multiModifier -4 )}} />
-    <label for="multi3-radio">3 (-4)</label>
-    <input type="radio" data-dtype="Number" id="multi4-radio" name="multiModifier" value="-6"
-      {{checked (eq test.multiModifier -6 )}} />
-    <label for="multi4-radio">4 (-6)</label>
+
+  <span class="skill-check-options">
+    <span>{{localize "torgeternity.sheetLabels.actions"}}:</span>
+    {{radioBoxesNumber "multiModifier" choices.multipleActions checked=test.multiModifier localize=true}}
   </span>
 </fieldset>
