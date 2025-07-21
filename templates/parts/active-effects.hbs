@@ -51,7 +51,7 @@
                 data-action="effectControl"
                 data-control="delete"
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}"
-                {{disabled (or effect.transfer (not @root.editable))}}>
+                {{disabled (or (and @root.noDeleteTxFx effect.transfer) (not @root.editable))}}>
                 <i class="fas fa-trash"></i>
               </a>
             </div>

@@ -219,6 +219,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     //        this.actor.system.editstate = "none";
 
     context.effects = prepareActiveEffectCategories(this.actor.allApplicableEffects());
+    context.noDeleteTxFx = true; // Don't allow transferred effects to be deleted
 
     context.config = CONFIG.torgeternity;
     context.disableXP = true;
