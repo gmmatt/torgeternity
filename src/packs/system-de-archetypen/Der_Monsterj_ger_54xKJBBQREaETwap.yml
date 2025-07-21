@@ -784,44 +784,7 @@ items:
       default: 0
       d8YcfsxBOP7RAazk: 3
     _key: '!actors.items!54xKJBBQREaETwap.WxvuyXqLKAiJm7Ru'
-effects:
-  - _id: tR4EzLKHTSRgSVVO
-    changes:
-      - key: system.skills.maneuver.isFav
-        mode: 5
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: Actor.54xKJBBQREaETwap.Item.lntlAp4VUb9lNjTJ
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Fertigkeitsbegünstigung
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!54xKJBBQREaETwap.tR4EzLKHTSRgSVVO'
+effects: []
 folder: null
 sort: 0
 flags:
