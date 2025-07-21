@@ -285,6 +285,33 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       return super._preUpdate(changed, options, user);
     }
 
+    if (changed.img && !changed.prototypeToken?.texture?.src) {
+      const oldtok = this.prototypeToken.texture.src;
+      let updateToken;
+      if (changed.img == oldtok || this.img == oldtok) {
+        updateToken = true;
+      } else {
+        // Check for default image
+        switch (this.type) {
+          case 'stormknight':
+            updateToken = (oldtok === 'icons/svg/mystery-man.svg');
+            break;
+          case 'threat':
+            // Threats might have been changed to show a cosm-specific ring.
+            updateToken = oldtok.startsWith('systems/torgeternity/images/characters/threat');
+            break;
+          case 'vehicle':
+            updateToken = (oldtok === 'systems/torgeternity/images/characters/vehicle-land.webp');
+            break;
+        }
+      }
+      if (updateToken) {
+        if (this.isToken)
+          this.token.update({ texture: { src: changed.img } });
+        else
+          this.updateSource({ prototypeToken: { texture: { src: changed.img } } })
+      }
+    }
     // Apply attribute maximums
     if (this.type === 'stormknight') {
       for (const [attribute, { maximum }] of Object.entries(this?.system?.attributes)) {
@@ -428,6 +455,10 @@ export default class TorgeternityActor extends foundry.documents.Actor {
             displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
             lockRotation: true,
             rotation: 0,
+            texture: {
+              src: data.img ?? 'icons/svg/mystery-man.svg',
+              rotation: 0,
+            },
             displayBars: CONST.TOKEN_DISPLAY_MODES.OWNER,
             bar1: { attribute: 'wounds' },
             bar2: { attribute: 'shock' },
@@ -437,7 +468,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 
       case 'threat':
         await this.updateSource({
-          img: 'systems/torgeternity/images/characters/threat.webp',
+          img: data.img ?? 'systems/torgeternity/images/characters/threat.webp',
           prototypeToken: {
             sight: { enabled: true },
             //actorLink: false,
@@ -471,7 +502,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
             lockRotation: true,
             rotation: 0,
             texture: {
-              src: 'systems/torgeternity/images/characters/vehicle-land-Token.webp',
+              src: data.img ?? 'systems/torgeternity/images/characters/vehicle-land-Token.webp',
               rotation: 0,
             },
             displayBars: CONST.TOKEN_DISPLAY_MODES.HOVER,

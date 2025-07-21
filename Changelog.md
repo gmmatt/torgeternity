@@ -6,6 +6,11 @@
 
 - For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
 
+### Bug Fixes
+
+- It is possible to edit the text numeric value of the attributes of Threats.
+- Effects can be deleted on embedded Items once again.
+
 ## v13.1.2
 
 ### Improvements
