@@ -1,8 +1,14 @@
 # TORG Eternity Changelog
 
+## v13.1.3
+
+### Improvements
+
+- For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
+
 ## v13.1.2
 
-## Improvements
+### Improvements
 
 - #543: Hovering over a token shows the distance from your controlled token to that token (game setting).
 - Further optimisations to TestDialog.

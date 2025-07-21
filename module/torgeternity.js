@@ -231,6 +231,9 @@ Hooks.once('i18nInit', () => {
 
 Hooks.once('setup', async function () {
 
+  // Choose the best document type for creation (minimise clicks)
+  CONFIG.Actor.defaultType = (game.user.isGM) ? "threat" : "stormknight";
+
   modifyTokenBars();
   InitEnrichers();
   // changing stutus marker
