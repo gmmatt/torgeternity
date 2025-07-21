@@ -781,7 +781,7 @@ system:
     firstAid:
       baseAttribute: mind
       adds: 1
-      isFav: false
+      isFav: true
       groupName: other
       unskilledUse: 1
       isThreatSkill: false
@@ -1176,11 +1176,11 @@ prototypeToken:
   movementAction: null
 _stats:
   systemId: torgeternity
-  systemVersion: 12.2.0
-  coreVersion: '13.345'
+  systemVersion: 13.1.1
+  coreVersion: '13.346'
   createdTime: 1693901061941
-  modifiedTime: 1729013413073
-  lastModifiedBy: d8YcfsxBOP7RAazk
+  modifiedTime: 1753104257641
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: null
   duplicateSource: null
   exportSource: null

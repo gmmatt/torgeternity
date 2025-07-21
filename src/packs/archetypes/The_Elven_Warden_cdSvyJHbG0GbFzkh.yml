@@ -100,7 +100,7 @@ items:
       chatNote: ''
       damage: 3
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: ''
       secondaryAxiom:
         selected: none
@@ -112,11 +112,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.1.1
+      coreVersion: '13.346'
       createdTime: 1693910157203
-      modifiedTime: 1722156233872
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753104029573
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.qbarQFM2pTUrRfsB
       duplicateSource: null
       exportSource: null

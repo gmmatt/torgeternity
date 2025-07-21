@@ -674,44 +674,7 @@ items:
       default: 0
       d8YcfsxBOP7RAazk: 3
     _key: '!actors.items!tzZ99BGG1WkwkQMO.kaMNHmJ3zNYegG7L'
-effects:
-  - _id: NUb8BR6LolLrKlNY
-    changes:
-      - key: system.skills.survival.isFav
-        mode: 5
-        value: 'true'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: Actor.tzZ99BGG1WkwkQMO.Item.y1UR3kyIL5JTouJL
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Begünstigung Überleben
-    description: ''
-    statuses: []
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!tzZ99BGG1WkwkQMO.NUb8BR6LolLrKlNY'
+effects: []
 folder: null
 sort: 0
 flags:
@@ -736,7 +699,7 @@ system:
       base: 8
   other:
     cosm: coreEarth
-    possibilities: 4
+    possibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
@@ -1158,11 +1121,11 @@ prototypeToken:
   movementAction: null
 _stats:
   systemId: torgeternity
-  systemVersion: 12.2.0
-  coreVersion: '13.345'
+  systemVersion: 13.1.1
+  coreVersion: '13.346'
   createdTime: 1694868498745
-  modifiedTime: 1729013564459
-  lastModifiedBy: d8YcfsxBOP7RAazk
+  modifiedTime: 1753104789345
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Compendium.torgeternity.archetypes.BpClx5rBCesWUzIN
   duplicateSource: null
   exportSource: null

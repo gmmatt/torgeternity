@@ -481,7 +481,7 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Thrown
       secondaryAxiom:
         selected: none
@@ -495,12 +495,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.ammMtd4GDTZAbVQx
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.1.1
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753103996693
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.dhZt4ogIENT8UrvV'
   - name: Hrockt Shoot Spear
