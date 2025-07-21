@@ -28,6 +28,7 @@
 - #538: Remove blank lines at bottom of Power details.
 - #539: No **broken image links** for Cyberwitch or Scrapper on case-sensitive servers.
 - Adds back the **Racial Perks** tab to the Race Item sheet.
+- Allow cosm to be changed on Stormknights.
 
 ## v13.1.1
 
