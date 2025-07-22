@@ -8,6 +8,7 @@
 - When changing an Actor's portrait, if the old portrait matches the token image then the token image
 is replaced by the new portrait. (For unlinked Actors, this will directly affect the displayed token.)
 - Add a field to add traits to Items - at the moment only a predefined list of traits is available.
+-- Apply 'stagger' and 'painful' to combat results (if the attack Item has those traits).
 
 ### Bug Fixes
 

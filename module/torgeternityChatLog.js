@@ -329,7 +329,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const { test } = getMessage(button);
     const actor = fromUuidSync(test.target.uuid)?.actor;
     if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
-    const damage = torgDamage(test.damage, test.target.targetAdjustedToughness);
+    const damage = torgDamage(test.damage, test.target.targetAdjustedToughness, test.attackTraits);
     actor.applyDamages(damage.shocks, damage.wounds);
   }
 
@@ -384,7 +384,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     event.stopImmediatePropagation();
     const { test } = getMessage(event.target);
     const targetuuid = test.target.uuid;
-    const newDamages = torgDamage(test.damage, test.targetAdjustedToughness);
+    const newDamages = torgDamage(test.damage, test.targetAdjustedToughness, test.attackTraits);
 
     const fields = foundry.applications.fields;
     const woundsGroup = fields.createFormGroup({

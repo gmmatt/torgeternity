@@ -31,6 +31,7 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
+  test.applyStaggerLabel = test.attackTraits?.includes('stagger') ? '' : 'hidden';
   test.applyDebuffLabel = 'hidden';
   test.applyDamLabel = 'hidden';
   test.backlashLabel = 'hidden';
@@ -360,10 +361,8 @@ export async function renderSkillChat(test) {
         test.chatNote =
           game.i18n.localize('torgeternity.sheetLabels.soakNull') +
           game.i18n.localize('torgeternity.sheetLabels.possSpent');
-      test.applyDamLabel = 'hidden';
 
     } else if (test.testType === 'soak') {
-      test.applyDamLabel = 'hidden';
       test.resultText = test.outcome;
       test.resultTextColor = test.outcomeColor;
       if (test.soakWounds > 0) {
@@ -440,7 +439,6 @@ export async function renderSkillChat(test) {
         // Generate damage description and damage sublabel
         if (test.result < TestResult.STANDARD) {
           test.damageDescription = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
-          test.applyDamLabel = 'hidden';
           test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
@@ -465,7 +463,7 @@ export async function renderSkillChat(test) {
           // then the test.BDDamageInPromise is reset
 
           test.applyDamLabel = '';
-          test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
+          test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits).label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
         }
@@ -528,14 +526,11 @@ export async function renderSkillChat(test) {
 
     test.notesLabel = test.chatNote ? '' : 'hidden';
 
-    if (test.testType === 'interactionAttack') {
-      if (test.rollResult - test.DN >= 0) {
-        test.damageSubLabel = '';
-        test.applyDamLabel = 'hidden';
-        if (!target.dummyTarget) test.applyDebuffLabel = '';
-      } else {
-        test.applyDebuffLabel = 'hidden';
-        // test.damageSubDescription = "Apply debuff";//localize('torgeternity.chatText.check.result.damage')
+    if (test.testType === 'interactionAttack' && test.rollResult >= test.DN) {
+      test.damageSubLabel = '';
+      test.applyDamLabel = 'hidden';
+      if (!target.dummyTarget) {
+        test.applyDebuffLabel = '';
       }
     }
 
@@ -610,35 +605,34 @@ export async function rollBonusDie(isTrademark, amount = 1) {
  * @param damage
  * @param toughness
  */
-export function torgDamage(damage, toughness) {
+export function torgDamage(damage, toughness, attackTraits) {
   const damageDiff = Number(damage) - Number(toughness);
+  let result;
   if (damageDiff < -5) {
-    return {
-      label: game.i18n.localize('torgeternity.chatText.check.result.noDamage'),
-      shocks: 0,
-      wounds: 0,
-    };
+    result = { shocks: 0, wounds: 0 }
   } else if (damageDiff < 0) {
-    return {
-      label: `1 ${game.i18n.localize('torgeternity.stats.shock')}`,
-      shocks: 1,
-      wounds: 0,
-    };
+    result = { shocks: 1, wounds: 0 }
   } else if (damageDiff < 5) {
-    return {
-      label: `2 ${game.i18n.localize('torgeternity.stats.shock')}`,
-      shocks: 2,
-      wounds: 0,
-    };
+    result = { shocks: 2, wounds: 0 }
   } else {
     const wounds = Math.floor(damageDiff / 5);
-    const shock = wounds * 2;
-    return {
-      label: `${wounds} ${game.i18n.localize('torgeternity.stats.wounds')}, ${shock} ${game.i18n.localize('torgeternity.stats.shock')}`,
-      shocks: shock,
-      wounds: wounds,
-    };
+    result = { shocks: wounds * 2, wounds: wounds }
   }
+
+  if (result.shocks > 0) {
+    result.label = (result.wounds > 0) ? `${result.wounds} ${game.i18n.localize('torgeternity.stats.wounds')}, ` : '';
+
+    const painful = attackTraits?.includes('painful');
+    if (painful) result.shocks += 1;
+    result.label += `${result.shocks} ${game.i18n.localize('torgeternity.stats.shock')}`;
+    const flags = [];
+    if (painful) flags.push(game.i18n.localize('torgeternity.traits.painful'));
+    if (attackTraits?.includes('stagger')) flags.push(game.i18n.localize('torgeternity.traits.stagger'));
+    if (flags.length) result.label += ` (${flags.join(', ')})`;
+  } else {
+    result.label = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
+  }
+  return result;
 }
 
 //
