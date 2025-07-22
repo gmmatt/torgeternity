@@ -31,8 +31,9 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
-  test.applyStaggerLabel = test.attackTraits?.includes('stagger') ? '' : 'hidden';
-  test.applyDebuffLabel = 'hidden';
+  test.applyStymiedLabel = test.attackTraits?.includes('stagger') ? '' : 'hidden';
+  test.applyVulnerableLabel = 'hidden';
+  test.applyActorVulnerableLabel = 'hidden';
   test.applyDamLabel = 'hidden';
   test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
@@ -440,6 +441,11 @@ export async function renderSkillChat(test) {
         if (test.result < TestResult.STANDARD) {
           test.damageDescription = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
           test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');
+          if (test.attackTraits.includes('unwieldy')) {
+            test.damageDescription += ` (${game.i18n.localize('torgeternity.traits.unwieldy')})`;
+            test.applyActorVulnerableLabel = '';
+          }
+
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
           if (test.addBDs && !test.previousBonus) {
@@ -530,7 +536,8 @@ export async function renderSkillChat(test) {
       test.damageSubLabel = '';
       test.applyDamLabel = 'hidden';
       if (!target.dummyTarget) {
-        test.applyDebuffLabel = '';
+        test.applyStymiedLabel = '';
+        test.applyVulnerableLabel = '';
       }
     }
 

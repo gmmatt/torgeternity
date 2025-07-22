@@ -22,6 +22,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'soakDam': TorgeternityChatLog.#soakDamage,
       'applyStymied': TorgeternityChatLog.#applyStymied,
       'applyVulnerable': TorgeternityChatLog.#applyVulnerable,
+      'applyActorVulnerable': TorgeternityChatLog.#applyActorVulnerable,
       'backlash1': TorgeternityChatLog.#applyBacklash1,
       'backlash2': TorgeternityChatLog.#applyBacklash2,
       'backlash3': TorgeternityChatLog.#applyBacklash3,
@@ -433,6 +434,13 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const { test } = getMessage(button);
     const actor = fromUuidSync(test.target.uuid)?.actor;
     if (actor) await actor.applyVulnerableState(test.actor);
+  }
+
+  static async #applyActorVulnerable(event, button) {
+    event.preventDefault();
+    const { test } = getMessage(button);
+    const actor = fromUuidSync(test.actor);
+    if (actor) actor.applyVulnerableState(test.actor);
   }
 
   /**

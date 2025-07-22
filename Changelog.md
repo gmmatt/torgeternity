@@ -8,7 +8,9 @@
 - When changing an Actor's portrait, if the old portrait matches the token image then the token image
 is replaced by the new portrait. (For unlinked Actors, this will directly affect the displayed token.)
 - Add a field to add traits to Items - at the moment only a predefined list of traits is available.
--- Apply 'stagger' and 'painful' to combat results (if the attack Item has those traits).
+-- 'painful' trait will add +1 soak if any damage is caused.
+-- 'stagger' trait will display button to apply Stymied to target if any damage is caused.
+-- 'unwieldy' trait will display button to apply Vulnerable to attacker on a miss.
 
 ### Bug Fixes
 
