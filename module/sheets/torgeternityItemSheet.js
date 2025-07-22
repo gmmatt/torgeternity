@@ -164,7 +164,15 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     }).bind(this.element);
 
     this.element.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
+  }
 
+  /**
+   * Only triggered when the window is first rendered.
+   * @param {*} context 
+   * @param {*} options 
+   */
+  async _onFirstRender(context, options) {
+    // When the window is first opened, collapse the traits editor
     const toggleButton = this.element.querySelector('a.toggleTraits');
     if (toggleButton) TorgeternityItemSheet.#onToggleTraitEdit.call(this, null, toggleButton);
   }
