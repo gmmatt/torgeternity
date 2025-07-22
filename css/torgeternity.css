@@ -198,7 +198,18 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       white-space: nowrap;
     }
 
-    multi-select#traits {
+    string-tags:has(input:disabled) {
+      input {
+        display: none;
+      }
+
+      button {
+        display: none;
+      }
+    }
+
+    multi-select#traits,
+    string-tags#traits {
       div.input-element-tags {
         justify-content: start;
       }
