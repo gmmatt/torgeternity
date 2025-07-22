@@ -11,6 +11,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 -- **'painful'** trait will add +1 shock if any damage is caused.
 -- **'stagger'** trait will display button to apply Stymied to target if any damage is caused.
 -- **'unwieldy'** trait will display button to apply Vulnerable to attacker on a miss.
+-- **'trademark'** trait will auto-set the "Trademark Weapon" button in the Test Dialog.
 
 ### Bug Fixes
 

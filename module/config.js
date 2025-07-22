@@ -532,11 +532,12 @@ torgeternity.validItemTraits = {
     'longBurst': 'torgeternity.traits.longBurst',
     'shortBurst': 'torgeternity.traits.shortBurst',
     'smallBlast': 'torgeternity.traits.smallBlast',
-    'mediumBlast': 'torgeternity.traits.mediumBlase',
+    'mediumBlast': 'torgeternity.traits.mediumBlast',
     'largeBlast': 'torgeternity.traits.largeBlast',
     'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
     'hugeBlast': 'torgeternity.traits.hugeBlast',
     'nonLethal': 'torgeternity.traits.nonLethal',
+    "trademark": "torgeternity.sheetLabels.trademark",
   },
   meleeweapon: {
     'fragile': 'torgeternity.traits.fragile',
@@ -547,6 +548,7 @@ torgeternity.validItemTraits = {
     'twoHanded': 'torgeternity.traits.twoHanded',
     'unwieldy': 'torgeternity.traits.unwieldy',
     'nonLethal': 'torgeternity.traits.nonLethal',
+    "trademark": "torgeternity.sheetLabels.trademark",
   },
   missileweapon: {
     'painful': 'torgeternity.traits.painful',
@@ -554,11 +556,12 @@ torgeternity.validItemTraits = {
     'small': 'torgeternity.traits.small',
     'stagger': 'torgeternity.traits.stagger',
     'smallBlast': 'torgeternity.traits.smallBlast',
-    'mediumBlast': 'torgeternity.traits.mediumBlase',
+    'mediumBlast': 'torgeternity.traits.mediumBlast',
     'largeBlast': 'torgeternity.traits.largeBlast',
     'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
     'hugeBlast': 'torgeternity.traits.hugeBlast',
     'nonLethal': 'torgeternity.traits.nonLethal',
+    "trademark": "torgeternity.sheetLabels.trademark",
   },
   firearm: {
     'bulky': 'torgeternity.traits.bulky',
@@ -568,10 +571,11 @@ torgeternity.validItemTraits = {
     'reload': 'torgeternity.traits.reload',
     'small': 'torgeternity.traits.small',
     'smallBlast': 'torgeternity.traits.smallBlast',
-    'mediumBlase': 'torgeternity.traits.mediumBlase',
+    'mediumBlast': 'torgeternity.traits.mediumBlast',
     'largeBlast': 'torgeternity.traits.largeBlast',
     'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
     'hugeBlast': 'torgeternity.traits.hugeBlast',
     'nonLethal': 'torgeternity.traits.nonLethal',
+    "trademark": "torgeternity.sheetLabels.trademark",
   }
 }

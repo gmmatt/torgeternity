@@ -110,6 +110,9 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       this.test.actorPic ??= actor.img;
       this.test.actorName ??= actor.name;
       this.test.actorType ??= actor.type;
+
+      const myItem = this.test.itemId ? actor.items.get(this.test.itemId) : null;
+      if (myItem) this.test.trademark = myItem.system.traits.has('trademark');
     }
     // Ensure all relevant fields are Number
     for (const key of Object.keys(DEFAULT_TEST))
