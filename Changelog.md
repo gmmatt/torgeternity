@@ -17,6 +17,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - It is possible to edit the text numeric value of the attributes of Threats.
 - Effects can be deleted on embedded Items once again.
 - Threat sheet can be scrolled again.
+- Hide foreign language compendiums properly.
 
 ### Translations
 

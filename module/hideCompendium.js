@@ -22,7 +22,7 @@ export function initHideCompendium() {
       for (const key of langKeys) {
         if (element.innerText.includes(key)) {
           //console.log(`hiding entry`)
-          element.hidden = true;
+          element.parentElement.hidden = true;
         }
       }
     }
@@ -30,16 +30,14 @@ export function initHideCompendium() {
     // Any folder with at least one hidden entry will be hidden if it doesn't
     // still have some visible entries.
     for (const list of html.querySelectorAll('li.folder')) {
-      //const name = list.querySelector('header span')?.innerText;
-      if (list.querySelector('a.compendium-name:not([hidden])')) {
-        //console.log(`li has NOT hidden: ${name}`, list)
+      // Maybe has a compendium which is not hidden?
+      if (list.querySelector('li.compendium:not([hidden])')) {
         continue;
       }
-      if (!list.querySelector('a.compendium-name[hidden]')) {
-        //console.log(`li has NO hidden: ${name}`, list)
+      // Does it have at least one hidden folder?
+      if (!list.querySelector('li.compendium[hidden]')) {
         continue;
       }
-      //console.log(`found hidden li: ${name}`);
       list.hidden = true;
     }
   });
