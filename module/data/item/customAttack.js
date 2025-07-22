@@ -1,3 +1,5 @@
+import { newTraitsField } from './general.js';
+
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
@@ -16,6 +18,7 @@ export class CustomAttackItemData extends foundry.abstract.TypeDataModel {
       description: new fields.HTMLField({ initial: '' }),
       notes: new fields.StringField({ initial: '' }),
       transferenceID: new fields.DocumentIdField({ initial: null }), // necessary for saving perks data in race items
+      traits: newTraitsField('customAttack'),
     };
   }
 

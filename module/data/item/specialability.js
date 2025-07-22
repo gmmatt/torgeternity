@@ -1,3 +1,5 @@
+import { newTraitsField } from './general.js';
+
 const fields = foundry.data.fields;
 
 /**
@@ -10,6 +12,7 @@ export class SpecialAbilityItemData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       description: new fields.HTMLField({ initial: '' }),
+      traits: newTraitsField('specialability'),
     };
   }
 

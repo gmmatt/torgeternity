@@ -489,3 +489,70 @@ torgeternity.statusEffects = [
   },
   // TODO : create KO and defeat status
 ];
+
+torgeternity.validItemTraits = {
+  // ammunition
+  // armor
+  // customAttack
+  // customSkill
+  // enhancement
+  // eternityshard
+  // firearm
+  // gear
+  // heavyweapon
+  // implant
+  // meleeweapon
+  // miracle (power)
+  // missileweapon
+  // perk
+  // psionicpower (power)
+  // race
+  // shield
+  // specialability
+  // specialability-rollable
+  // spell (power)
+  // vehicle
+  // vehicleAddOn
+
+  armor: {
+    'fatigues': 'torgeternity.traits.fatigues',
+    'fullBody': 'torgeternity.traits.fullBody',
+    'torso': 'torgeternity.traits.torso',
+  },
+  meleeweapon: {
+    'fragile': 'torgeternity.traits.fragile',
+    'painful': 'torgeternity.traits.painful',
+    'small': 'torgeternity.traits.small',
+    'stagger': 'torgeternity.traits.stagger',
+    'thrown': 'torgeternity.traits.thrown',
+    'twoHanded': 'torgeternity.traits.twoHanded',
+    'unwieldy': 'torgeternity.traits.unwieldy',
+    'nonLethal': 'torgeternity.traits.nonLethal',
+  },
+  missileweapon: {
+    'painful': 'torgeternity.traits.painful',
+    'reload': 'torgeternity.traits.reload',
+    'small': 'torgeternity.traits.small',
+    'stagger': 'torgeternity.traits.stagger',
+    'smallBlast': 'torgeternity.traits.smallBlast',
+    'mediumBlase': 'torgeternity.traits.mediumBlase',
+    'largeBlast': 'torgeternity.traits.largeBlast',
+    'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
+    'hugeBlast': 'torgeternity.traits.hugeBlast',
+    'nonLethal': 'torgeternity.traits.nonLethal',
+  },
+  firearm: {
+    'bulky': 'torgeternity.traits.bulky',
+    'heavyBurst': 'torgeternity.traits.heavyBurst',
+    'longBurst': 'torgeternity.traits.longBurst',
+    'shortBurst': 'torgeternity.traits.shortBurst',
+    'reload': 'torgeternity.traits.reload',
+    'small': 'torgeternity.traits.small',
+    'smallBlast': 'torgeternity.traits.smallBlast',
+    'mediumBlase': 'torgeternity.traits.mediumBlase',
+    'largeBlast': 'torgeternity.traits.largeBlast',
+    'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
+    'hugeBlast': 'torgeternity.traits.hugeBlast',
+    'nonLethal': 'torgeternity.traits.nonLethal',
+  }
+}

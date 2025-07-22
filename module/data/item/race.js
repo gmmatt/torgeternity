@@ -1,6 +1,7 @@
 import { torgeternity } from '../../config.js';
 import { PerkItemData } from './perk.js';
 import { CustomAttackItemData } from './customAttack.js';
+import { newTraitsField } from './general.js';
 
 /**
  * @inheritdoc
@@ -10,8 +11,9 @@ export class RaceItemData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
     return {
-      name: new fields.StringField({ initial: '' }),
+      name: new fields.StringField({ initial: '' }), // TODO
       description: new fields.StringField({ initial: '' }),
+      traits: newTraitsField('race'),
       attributeMaximum: new fields.SchemaField({
         charisma: new fields.NumberField({ initial: 13, integer: true, nullable: false }),
         dexterity: new fields.NumberField({ initial: 13, integer: true, nullable: false }),

@@ -171,6 +171,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   font-family: Palatino;
 }
 
+.item.sheet.torgeternity .window-content header.sheet-header {
+  margin-right: 12px;
+}
+
 /* Actor/Item/Journal sheet */
 .actor.sheet.torgeternity .window-content,
 .item.sheet.torgeternity .window-content {
@@ -186,6 +190,23 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   input[type="text"] {
     font-family: Arial;
     font-size: 12px;
+  }
+
+  header {
+    div.form-group label {
+      flex: 0;
+      white-space: nowrap;
+    }
+
+    multi-select#traits {
+      div.input-element-tags {
+        justify-content: start;
+      }
+
+      select:disabled {
+        display: none;
+      }
+    }
   }
 
   .sheet-body {
@@ -2062,8 +2083,9 @@ a:hover {
   cursor: pointer;
 }
 
-.app.torgeternity div.form-group,
-.application.torgeternity div.form-group {
+.application.torgeternity.cards-config div.form-group,
+.application.torgeternity.card-config div.form-group,
+.application.torgeternity.deckSetting div.form-group {
   margin: 10px;
   padding-bottom: 5px;
   border-bottom: 2px solid #777777;

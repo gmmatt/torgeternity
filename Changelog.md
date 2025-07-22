@@ -7,12 +7,17 @@
 - For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
 - When changing an Actor's portrait, if the old portrait matches the token image then the token image
 is replaced by the new portrait. (For unlinked Actors, this will directly affect the displayed token.)
+- Add a field to add traits to Items - at the moment only a predefined list of traits is available.
 
 ### Bug Fixes
 
 - It is possible to edit the text numeric value of the attributes of Threats.
 - Effects can be deleted on embedded Items once again.
 - Threat sheet can be scrolled again.
+
+### Translations
+
+- New translations required, in particular for the new "traits" section.
 
 ## v13.1.2
 

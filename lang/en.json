@@ -355,6 +355,12 @@
       "enhances": "Enhances",
       "perk": "Related Perk"
     },
+    "fieldLabels": {
+      "itemTraits": {
+        "label": "Item Traits",
+        "hint": "The specific abilities of this item"
+      }
+    },
     "gear": {
       "ammo": "Ammo",
       "ammunition": "Ammunition",
@@ -440,6 +446,7 @@
       "specialability": "Special Ability",
       "specialabilityRollable": "Special Ability Rollable",
       "spell": "Spell",
+      "traits": "Traits",
       "vehicle": "Vehicle",
       "vehicleAddOn": "Vehicle Add-On"
     },
@@ -1094,6 +1101,29 @@
       "d": " D",
       "noDSR": "No DSR",
       "step": "Step"
+    },
+    "traits": {
+      "fatigues": "Fatigues",
+      "fullBody": "Full Body",
+      "torso": "Torso",
+      "fragile": "Fragile",
+      "painful": "Painful",
+      "small": "Small",
+      "stagger": "Stagger",
+      "thrown": "Thrown",
+      "twoHanded": "Two-Handed",
+      "unwieldy": "Unwieldy",
+      "reload": "Reload",
+      "bulky": "Bulky",
+      "heavyBurst": "Heavy Burst",
+      "longBurst": "Long Burst",
+      "shortBurst": "Short Burst",
+      "smallBlast": "Small Blast",
+      "mediumBlast": "Medium Blast",
+      "largeBlast": "Large Blast",
+      "veryLargeBlast": "Very Large Blast",
+      "hugeBlast": "Huge Blast",
+      "nonLethal": "Non-Lethal"
     },
     "vehicleTypes": {
       "air": "Air",

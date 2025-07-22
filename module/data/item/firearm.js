@@ -10,7 +10,7 @@ export class FirearmItemData extends GeneralItemData {
    */
   static defineSchema() {
     return {
-      ...super.defineSchema(),
+      ...super.defineSchema('firearm'),
       ammo: new fields.SchemaField({
         max: new fields.NumberField({ initial: 1, integer: true }),
         value: new fields.NumberField({ initial: 1, integer: true }),

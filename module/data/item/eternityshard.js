@@ -1,5 +1,6 @@
 import { torgeternity } from '../../config.js';
 import { migrateCosm } from '../shared.js';
+import { newTraitsField } from './general.js';
 
 const fields = foundry.data.fields;
 /**
@@ -18,6 +19,7 @@ export class EternityShardItemData extends foundry.abstract.TypeDataModel {
       purpose: new fields.StringField({ initial: '' }),
       restrictions: new fields.StringField({ initial: '' }),
       tappingDifficulty: new fields.NumberField({ initial: 18, integer: true }),
+      traits: newTraitsField('eternityshard'),
     };
   }
 
