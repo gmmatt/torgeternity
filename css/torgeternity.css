@@ -198,6 +198,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       white-space: nowrap;
     }
 
+    a.toggleTraits {
+      margin-left: 0.5em;
+    }
+
     string-tags:has(input:disabled) {
       input {
         display: none;
