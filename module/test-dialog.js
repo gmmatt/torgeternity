@@ -267,6 +267,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
           ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
           return;
         }
+        this.test.attackTraits = Array.from(myItem.system.traits);
 
         // Add Cover Modifier
         this.test.addBDs ??= 0;
@@ -314,6 +315,7 @@ export function oneTestTarget(token, applySize) {
       sizeModifier: sizeModifier,
       toughness: actor.defenses.toughness,
       armor: actor.defenses.armor,
+      armorTraits: [],
       // then vehicle specifics
       defenses: {
         vehicle: actor.system.defense,
@@ -336,6 +338,7 @@ export function oneTestTarget(token, applySize) {
       sizeModifier: sizeModifier,
       toughness: actor.defenses.toughness,
       armor: actor.defenses.armor,
+      defenseTraits: Array.from(actor.items.find(it => it.type === 'armor' && it.system.equipped)?.system.traits ?? []),
       // then non-vehicle changes
       skills: actor.system.skills,
       attributes: actor.system.attributes,
