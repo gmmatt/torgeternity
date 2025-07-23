@@ -67,8 +67,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     test.unskilledLabel = 'hidden';
 
-    await renderSkillChat(test);
     this.parentDeleteByTime(chatMessage);
+    await renderSkillChat(test);
   }
 
   static async #onPossibility(event, button) {
@@ -147,7 +147,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       test.possibilityStyle = 'disabled';
     }
 
-    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.possibilityTotal = 0.1;
@@ -162,6 +161,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     // add chat note "poss spent"
     test.chatNote += game.i18n.localize('torgeternity.sheetLabels.possSpent');
 
+    this.parentDeleteByTime(chatMessage);
     await renderSkillChat(test);
   }
 
@@ -175,7 +175,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.isFavStyle = 'hidden';
 
     // Roll for Up
-    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.upTotal = 0.1;
@@ -189,6 +188,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.chatTitle += '*';
     test.unskilledLabel = 'hidden';
 
+    this.parentDeleteByTime(chatMessage);
     await renderSkillChat(test);
   }
 
@@ -203,7 +203,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.isFavStyle = 'hidden';
 
     // Roll for Possibility
-    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.heroTotal = 0.1;
@@ -219,7 +218,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.chatTitle += '*';
     test.unskilledLabel = 'hidden';
 
-    await renderSkillChat(test);
+    this.parentDeleteByTime(chatMessage);
+    return renderSkillChat(test);
   }
 
   static async #onDrama(event, button) {
@@ -232,7 +232,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.isFavStyle = 'hidden';
 
     // Increase cards played by 1
-    this.parentDeleteByTime(chatMessage);
     const diceroll = await new Roll('1d20x10x20').evaluate();
     if (test.disfavored) {
       test.dramaTotal = 0.1;
@@ -248,7 +247,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.chatTitle += '*';
     test.unskilledLabel = 'hidden';
 
-    await renderSkillChat(test);
+    this.parentDeleteByTime(chatMessage);
+    return renderSkillChat(test);
   }
 
   static async #onPlus3(event, button) {
@@ -267,9 +267,9 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = null;
 
     test.unskilledLabel = 'hidden';
-    this.parentDeleteByTime(chatMessage);
 
-    await renderSkillChat(test);
+    this.parentDeleteByTime(chatMessage);
+    return renderSkillChat(test);
   }
 
   static async #onBd(event, button) {
@@ -312,7 +312,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.bdDamageSum += finalValue.total;
     game.messages.get(chatMessageId).delete();
 
-    await renderSkillChat(test);
+    // No parentDeleteByTime?
+    return renderSkillChat(test);
   }
 
   static async #onModifier(event, button) {
@@ -532,19 +533,29 @@ function getMessage(button) {
   return { chatMessageId, chatMessage, test }
 }
 
+/**
+ * 
+ * @param {HTMLElement} button The button pressed to initiate this action
+ * @returns {Actor} The actor that initiated this chat message
+ */
 function getChatActor(button) {
   const test = getMessage(button)?.test;
   if (!test) return null;
-  const actor = fromUuidSync(test.actor);
+  const actor = fromUuidSync(test.actor, { strict: false });
   if (actor) return { test, actor };
   ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
   return null;
 }
 
+/**
+ * 
+ * @param {HTMLElement} button The button pressed to initiate this action
+ * @returns {Actor} The Actor of the target token of this chat message.
+ */
 function getChatTarget(button) {
   const test = getMessage(button)?.test;
   if (!test) return null;
-  const target = fromUuidSync(test.target?.uuid)?.actor;
+  const target = fromUuidSync(test.target?.uuid, { strict: false })?.actor;
   if (target) return { test, target }
   ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
   return null;
