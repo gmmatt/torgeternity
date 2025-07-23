@@ -1,6 +1,6 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.movementPenalty"}}</legend>
-  <span class="skill-check-options">
-    {{radioBoxesNumber "movementModifier" choices.movement checked=test.movementModifier localize=true}}
-  </span>
+  <div class="skill-check-options flexrow">
+    {{radioBoxesNumber "movementModifier" choices.movement checked=test.movementModifier localize=true tooltip=true}}
+  </div>
 </fieldset>

@@ -1,8 +1,8 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.dn"}}</legend>
-  <span class="skill-check-options">
+  <div class="skill-check-options flexrow">
     <select id="difficulty" name="DNDescriptor" data-dtype="String">
       {{selectOptions (ifThen test.targetPresent config.dnTypes config.dnTypesBasic) selected=test.DNDescriptor localize=true}}
     </select>
-  </span>
+  </div>
 </fieldset>

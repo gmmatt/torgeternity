@@ -1,12 +1,15 @@
-<fieldset>
+<fieldset class="flexrow">
   <legend>{{localize 'torgeternity.sheetLabels.targetOptions'}}</legend>
-  <span class="skill-check-options">
-    <span>{{localize 'torgeternity.sheetLabels.concealment'}}:</span>
-    {{radioBoxesNumber "concealmentModifier" choices.concealment checked=test.concealmentModifier localize=true}}
-    |
-    {{localize 'torgeternity.sheetLabels.coverBonus'}}
-    <input type="number" data-dtype="Number" id="cover" name="coverModifier"
-      data-tooltip="{{localize 'torgeternity.sheetLabels.coverBonusTooltip'}}" placeholder="0"
-      value={{test.coverModifier}} />
-  </span>
+  <div class="skill-check-options flexrow flex1">
+    <fieldset>
+      <legend>{{localize 'torgeternity.sheetLabels.concealment'}}:</legend>
+      {{radioBoxesNumber "concealmentModifier" choices.concealment checked=test.concealmentModifier localize=true}}
+    </fieldset>
+    <fieldset>
+      <legend>{{localize 'torgeternity.sheetLabels.coverBonus'}}</legend>
+      <input type="number" data-dtype="Number" id="cover" name="coverModifier"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.coverBonusTooltip'}}" placeholder="0"
+        value={{test.coverModifier}} />
+    </fieldset>
+  </div>
 </fieldset>

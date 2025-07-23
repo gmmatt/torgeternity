@@ -1,7 +1,7 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.multiTargetPenalty"}}</legend>
-  <span class="skill-check-options">
+  <div class="skill-check-options flexrow">
     <span>{{localize "torgeternity.sheetLabels.targets"}}:</span>
-    {{radioBoxesNumber "targetsModifier" choices.targets checked=test.targetsModifier localize=true}}
-  </span>
+    {{radioBoxesNumber "targetsModifier" choices.targets checked=test.targetsModifier localize=true tooltip=true}}
+  </div>
 </fieldset>

@@ -1,6 +1,6 @@
 <fieldset>
   <legend data-tooltip="{{localize 'torgeternity.sheetLabels.inputExistingTooltip'}}">Bonus</legend>
-  <span class="skill-check-options">
+  <div class="skill-check-options flexrow">
     <input type="radio" id="roll" data-dtype="Boolean" name="previousBonus"
       value=false {{checked (not test.previousBonus)}} />
     <label for="roll">{{localize 'torgeternity.sheetLabels.roll'}}</label>
@@ -11,5 +11,5 @@
     <input type="number" data-dtype="Number" id="bonus-text" name="bonus"
       data-tooltip="{{localize 'torgeternity.sheetLabels.inputExistingTitle'}}"
       placeholder="???" value="{{test.bonus}}" />
-  </span>
+  </div>
 </fieldset>

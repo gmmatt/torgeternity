@@ -1,44 +1,49 @@
-<fieldset>
+<fieldset class="flexcol">
   <legend>{{localize "torgeternity.sheetLabels.attackOptions"}}</legend>
-  <span class="skill-check-options">
-    <span>{{localize "torgeternity.sheetLabels.calledShot"}}:</span>
-    {{radioBoxesNumber "calledShotModifier" choices.calledShot checked=test.calledShotModifier localize=true}}
+  <div class="flexrow" style="flex-wrap: nowrap">
+    <fieldset class="skill-check-options flexrow">
+      <legend>{{localize "torgeternity.sheetLabels.calledShot"}}:</legend>
+      {{radioBoxesNumber "calledShotModifier" choices.calledShot checked=test.calledShotModifier localize=true}}
 
-    <input type="checkbox" data-dtype="Number" id="vital-area"
-      data-tooltip='torgeternity.sheetLabels.vitalAreaTooltip' name="vitalAreaDamageModifier" value="4"
-      {{checked (eq test.vitalAreaDamageModifier 4)}} />
-    <label for="vital-area">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br />
-  </span>
-  <hr>
-  <span class="skill-check-options">
-    <span>{{localize "torgeternity.sheetLabels.burst"}}:</span>
-    {{radioBoxesNumber "burstModifier" choices.burst checked=test.burstModifier localize=true}}
-  </span>
-  <hr>
-  <span class="skill-check-options">
-    <input type="checkbox" id="all-out" name="allOutFlag" data-dtype="Boolean"
-      data-tooltip="torgeternity.sheetLabels.allOutTooltip" {{checked test.allOutFlag }} />
-    <label for="all-out">{{localize "torgeternity.sheetLabels.allOut"}}</label>
-    <input type="checkbox" data-dtype="Boolean" id="aimed" name="aimedFlag"
-      data-tooltip="torgeternity.sheetLabels.aimedTooltip" {{checked test.aimedFlag }} />
-    <label for="aimed">{{localize "torgeternity.sheetLabels.aimed"}}</label>
-    <input type="checkbox" data-dtype="Boolean" id="blind-fire" name="blindFireFlag" ,
-      data-tooltip="torgeternity.sheetLabels.blindFireTooltip" {{checked test.blindFireFlag }} />
-    <label for="blind-fire">{{localize "torgeternity.sheetLabels.blindFire"}}</label>
-    <input type="checkbox" data-dtype="Boolean" id="trademark-weapon" name="trademark"
-      data-tooltip="torgeternity.sheetLabels.trademarkHint"
-      value="trademark" {{checked test.trademark }} />
-    <label for="trademark-weapon">{{localize "torgeternity.sheetLabels.trademark"}}</label>
-  </span>
-  <hr>
-  <span class="skill-check-options">
-    <input type="number" id="additional-damage" name="additionalDamage"
-      data-dtype="Number" placeholder="0" value="{{test.additionalDamage}}">
-    <label for="additional-damage">{{localize "torgeternity.sheetLabels.additionalDamage"}}</label>
+      <input type="checkbox" data-dtype="Number" id="vital-area"
+        data-tooltip='torgeternity.sheetLabels.vitalAreaTooltip' name="vitalAreaDamageModifier" value="4"
+        {{checked (eq test.vitalAreaDamageModifier 4)}} />
+      <label for="vital-area">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br />
+    </fieldset>
 
-    <select id="addBDs" data-dtype="Number" name="addBDs">
-      {{selectOptions choices.addBDs selected=test.addBDs}}
-    </select>
-    <label for="addBDs">{{localize "torgeternity.sheetLabels.bonusDice"}}</label>
-  </span>
+    <fieldset class="skill-check-options flexrow">
+      <legend>{{localize "torgeternity.sheetLabels.burst"}}:</legend>
+      {{radioBoxesNumber "burstModifier" choices.burst checked=test.burstModifier localize=true tooltip=true}}
+    </fieldset>
+  </div>
+  <div class="flexrow flex1">
+    <fieldset class="skill-check-options flexrow" style="flex-wrap: wrap">
+      <input type="checkbox" id="all-out" name="allOutFlag" data-dtype="Boolean"
+        data-tooltip="torgeternity.sheetLabels.allOutTooltip" {{checked test.allOutFlag }} />
+      <label for="all-out">{{localize "torgeternity.sheetLabels.allOut"}}</label>
+      <input type="checkbox" data-dtype="Boolean" id="aimed" name="aimedFlag"
+        data-tooltip="torgeternity.sheetLabels.aimedTooltip" {{checked test.aimedFlag }} />
+      <label for="aimed">{{localize "torgeternity.sheetLabels.aimed"}}</label>
+      <input type="checkbox" data-dtype="Boolean" id="blind-fire" name="blindFireFlag" ,
+        data-tooltip="torgeternity.sheetLabels.blindFireTooltip" {{checked test.blindFireFlag }} />
+      <label for="blind-fire">{{localize "torgeternity.sheetLabels.blindFire"}}</label>
+      <input type="checkbox" data-dtype="Boolean" id="trademark-weapon" name="trademark"
+        data-tooltip="torgeternity.sheetLabels.trademarkHint"
+        value="trademark" {{checked test.trademark }} />
+      <label for="trademark-weapon">{{localize "torgeternity.sheetLabels.trademark"}}</label>
+    </fieldset>
+    <fieldset class="skill-check-options flexcol">
+      <div class="flexrow">
+        <input type="number" id="additional-damage" name="additionalDamage"
+          data-dtype="Number" placeholder="0" value="{{test.additionalDamage}}">
+        <label for="additional-damage">{{localize "torgeternity.sheetLabels.additionalDamage"}}</label>
+      </div>
+      <div class="flexrow">
+        <select id="addBDs" data-dtype="Number" name="addBDs">
+          {{selectOptions choices.addBDs selected=test.addBDs}}
+        </select>
+        <label for="addBDs">{{localize "torgeternity.sheetLabels.bonusDice"}}</label>
+      </div>
+    </fieldset>
+  </div>
 </fieldset>

@@ -156,17 +156,17 @@ Hooks.once('init', async function () {
     },
     multipleActions: {
       [0]: '1',
-      [-2]: '2 (-2)',
-      [-4]: '3 (-4)',
-      [-6]: '4 (-6)',
+      [-2]: '2',
+      [-4]: '3',
+      [-6]: '4',
     },
     targets: {
       [0]: '1',
-      [-2]: '2 (-2)',
-      [-4]: '3 (-4)',
-      [-6]: '4 (-6)',
-      [-8]: '5 (-8)',
-      [-10]: '6 (-10)',
+      [-2]: '2',
+      [-4]: '3',
+      [-6]: '4',
+      [-8]: '5',
+      [-10]: '6',
     },
     concealment: {
       [0]: 'torgeternity.sheetLabels.none',
@@ -938,6 +938,7 @@ function radioBoxesNumber(name, choices, options) {
     input.value = key;
     if (isChecked) input.defaultChecked = (checked == key);
     if (isNumber) input.dataset.dtype = "Number";
+    if (options.hash.tooltip) element.dataset.tooltip = key;
     element.append(input, " ", label);
     html += element.outerHTML;
   }

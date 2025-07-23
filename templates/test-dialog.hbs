@@ -1,16 +1,18 @@
 <div class="test-dialog">
-  <div>
+  <div class="flexrow">
     {{#unless test.isActiveDefenseRoll}}
       {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
     {{/unless}}
     {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}
   </div>
-  <div>
+  <div class="flexrow">
     {{> "systems/torgeternity/templates/testDialogs/favored.hbs"}}
     {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
   </div>
-  <div> {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}} </div>
-  <div> {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}} </div>
+  <div class="flexrow">
+    <div style="flex-grow: 1"> {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}} </div>
+    <div style="flex-grow: 1"> {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}} </div>
+  </div>
   {{#if test.attackOptions}}
     <div> {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}} </div>
     <div> {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}} </div>
