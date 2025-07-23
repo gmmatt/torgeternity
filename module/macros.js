@@ -534,7 +534,7 @@ export class TorgeternityMacros {
         const lastMessage = found.pop();
         // don't use game.torgeternity.cardChatOptions, since no other messages put in chat
         lastCard.pass(parentHand);
-        ChatMessage.deleteDocuments([lastMessage.id]);
+        ChatMessage.implementation.deleteDocuments([lastMessage.id]);
       }
     }
   }
