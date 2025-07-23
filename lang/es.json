@@ -339,6 +339,16 @@
       "veryEasy": "Very Easy (6)",
       "veryHard": "Very Hard (16)"
     },
+    "drama": {
+      "flurry": "FLURRY: Heroes or Villains get an extra turn this round",
+      "inspiration": "INSPIRATION: All characters on this side immediately recover 2 shock",
+      "up": "UP: Add an additional roll to the first roll",
+      "confused": "CONFUSED: Players are unable to play cards from their pool",
+      "fatigued": "FATIGUED: Two shock inflicted at the end of each character's turn",
+      "setback": "SETBACK: GM decides a suitable setback",
+      "stymied": "STYMIED: All characters on this side are stymied until the end of the their turn",
+      "surge": "SURGE: Everyone on this side must check for Contradications"
+    },
     "enhancements": {
       "description": "Descripción",
       "enhances": "Mejora",

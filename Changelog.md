@@ -15,8 +15,13 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 -- **'stagger'** trait will display button to apply Stymied to target if any damage is caused.
 -- **'unwieldy'** trait will display button to apply Vulnerable to attacker on a miss.
 -- **'trademark'** trait will auto-set the "Trademark Weapon" button in the Test Dialog.
-- Allow cosms to be marked as unused in the Deck Configuration window.
+- #162: Allow cosms to be marked as unused in the Deck Configuration window.
 -- Cosm decks marked as not available will not be available in the "Draw Cosm Card" dialog.
+- #296: First iteration of supporting the **Conflict Line of Drama Cards**, providing buttons in the Combat Tracker.
+-- **Inspiration** - immediately recovers 2 shock for each actor on that faction's side.
+-- **Confused** - disables the Play button in card Hands
+-- **Fatigued** - when each player ends their turn (or GM presses end-turn-tick) the character suffers their fatigue.
+-- **Stymied** - all actors on that faction's side are immediately given the Stymied (stacking) effect.
 
 ### Bug Fixes
 

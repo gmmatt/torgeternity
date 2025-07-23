@@ -2682,11 +2682,13 @@ nav#controls,
     height: 24px;
   }
 
-  .heros-first {
+  .heros-first,
+  div.drama-heroes button {
     color: rgb(132, 132, 255);
   }
 
-  .vilains-first {
+  .vilains-first,
+  div.drama-villains button {
     color: rgb(253, 148, 148);
   }
 

@@ -37,6 +37,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
+    context.disablePlay = context?.document.getFlag('torgeternity', 'disablePlayCards');
     for (const card of context?.document.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
     }
