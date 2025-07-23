@@ -51,6 +51,8 @@ export async function renderSkillChat(test) {
     test.ammoLabel = 'hidden';
   }
 
+  const newRoll = (test.bonus === null);
+
   const uniqueDN = game.settings.get('torgeternity', 'uniqueDN') ? await highestDN(test) : undefined;
   let first = true;
   for (const target of test.targetAll) {
@@ -85,7 +87,7 @@ export async function renderSkillChat(test) {
     test.unskilledLabel = test.unskilledTest ? '' : 'hidden';
 
     // Generate roll, if needed
-    if (test.rollTotal === 0 && !test.previousBonus) {
+    if (test.rollTotal === 0 && newRoll) {
       // Generate dice roll
       const dice = test.unskilledTest ? '1d20x10' : '1d20x10x20';
 
@@ -126,7 +128,7 @@ export async function renderSkillChat(test) {
     test.dramaTotal ??= 0;
 
     // Calculate combinedRollTotal
-    if (test.previousBonus != true) {
+    if (newRoll) {
       test.combinedRollTotal = test.rollTotal + test.upTotal + test.possibilityTotal + test.heroTotal + test.dramaTotal;
       test.bonus = torgBonus(test.combinedRollTotal);
     } else {
@@ -150,7 +152,6 @@ export async function renderSkillChat(test) {
     }
 
     // Set Modifiers and Chat Content Relating to Modifiers
-    test.displayModifiers = false;
     test.modifiers = 0;
     test.modifierText = '';
     if (test.testTtype === 'soak') test.vulnerableModifier = 0;
@@ -281,14 +282,13 @@ export async function renderSkillChat(test) {
     }
 
     if (test.modifierText.length) {
-      test.displayModifiers = true;
       test.modifierText = `<p>${test.modifierText}</p>`;
     }
 
     // Add +3 cards to bonus
     // Initialize cardsPlayed if null
     test.cardsPlayed ??= 0;
-    test.bonus = test.bonus + test.cardsPlayed * 3;
+    test.bonus += test.cardsPlayed * 3;
 
     test.rollResult = test.skillValue + test.bonus + test.modifiers;
 
@@ -422,7 +422,7 @@ export async function renderSkillChat(test) {
         adjustedDamage = test.damage + test.vitalAreaDamageModifier;
       }
       // add additional Damage from roll dialogue
-      if (test?.additionalDamage && !test.previousBonus) {
+      if (test?.additionalDamage && newRoll) {
         adjustedDamage += test?.additionalDamage;
       }
       // Check for whether a target is present and turn on display of damage sub-label
@@ -448,7 +448,7 @@ export async function renderSkillChat(test) {
 
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
-          if (test.addBDs && !test.previousBonus) {
+          if (test.addBDs && newRoll) {
             iteratedRoll = await rollBonusDie(test.trademark, test.addBDs);
             test.BDDamageInPromise = iteratedRoll.total;
             test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);

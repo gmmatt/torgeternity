@@ -8,7 +8,6 @@ const DEFAULT_TEST = {
   // difficulty-selector
   DNDescriptor: "standard",    // number or string
   // bonus-selector
-  previousBonus: false,
   bonus: null,      // null or number
   rollTotal: 0,   // 0 = force a manual dice roll
   // favored
@@ -211,26 +210,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   /**
    *
-   * @param html
-   */
-  async _onRender(context, options) {
-    await super._onRender(context, options);
-
-    this.element.querySelector('#bonus-text')?.addEventListener('change', this.onChangeBonusText.bind(this));
-  }
-
-  /**
-   * Ensure the correct radio button is selected.
-   * @param {*} event 
-   * 
-   */
-  onChangeBonusText(event) {
-    const input = event.target;
-    input.parentElement.querySelector(input.value.length ? '#previous-bonus' : '#roll').checked = true;
-  }
-
-  /**
-   *
    * @param event
    * @param html
    */
@@ -250,10 +229,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
       // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
       if (this.test.testType === 'activeDefense') this.test.DNDescriptor = 'standard';
-
-      // Add bonus, if needed
-      this.test.previousBonus = fields.previousBonus;
-      this.test.bonus = this.test.previousBonus ? fields.bonus : null;
 
       //
       // Add attack and target options if needed

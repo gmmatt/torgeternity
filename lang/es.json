@@ -753,7 +753,6 @@
       "inputExisting": "Valor Directo",
       "inputExistingTooltip": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
       "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
-      "inputExistingRdbTitle": "Cuando participe en multiacciones, marque esta casilla para introducir el número de bonificación de una prueba anterior.",
       "interactionAttacks": "Ataque Interacción",
       "interactionSkills": "Interaction",
       "keep": "Misma",

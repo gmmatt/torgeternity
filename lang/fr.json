@@ -754,7 +754,6 @@
       "inputExisting": "Saisie existante",
       "inputExistingTooltip": "Choisir entre (1) lancer le dé pour obtenir un bonus ou (2) saisir un bonus déjà généré pour résoudre une action multiple.",
       "inputExistingTitle": "Saisir la valeur BONUS du jet précédent, pas la valeur du dé total.",
-      "inputExistingRdbTitle": "Pour résoudre une action multiple, cocher la case pour sasir le bonus du test précédent.",
       "interactionAttacks": "Interactions offensives",
       "interactionSkills": "Interactions",
       "keep": "Poursuivre",

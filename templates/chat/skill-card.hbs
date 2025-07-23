@@ -81,16 +81,14 @@
             <div><span class="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
           </td>
         </tr>
-        {{#if displayModifiers}}
-          <tr>
-            <td>
-              <a class="modifier-label" data-action="modifierLabel">{{localize 'torgeternity.chatText.modifiers'}}</a>:
-            </td>
-            <td>
-              <div data-tooltip-html="{{modifierText}}"><span class="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
-            </td>
-          </tr>
-        {{/if}}
+        <tr>
+          <td>
+            <a class="modifier-label" data-action="modifierLabel">{{localize 'torgeternity.chatText.modifiers'}}</a>:
+          </td>
+          <td>
+            <div data-tooltip-html="{{modifierText}}"><span class="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
+          </td>
+        </tr>
         <tr class="{{cardsPlayedLabel}}">
           <td>
             {{localize 'torgeternity.chatText.bonusCard'}}:
