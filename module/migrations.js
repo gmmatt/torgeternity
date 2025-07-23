@@ -52,7 +52,7 @@ export async function torgMigration() {
       const deckSetting = game.settings.get('torgeternity', 'deckSetting');
       const deckKeys = Object.keys(deckSetting);
       for (const key of deckKeys) {
-        if (key === 'stormknights' || key === 'stormknightsHands') continue;
+        if (key === 'stormknights' || key === 'stormknightsHands' || key === '-unused-') continue;
         let deck = game.cards.getName(deckSetting[key]);
         if (!deck) {
           deck = game.cards.get(deckSetting[key]);

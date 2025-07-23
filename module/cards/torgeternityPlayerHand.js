@@ -287,6 +287,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   async drawCosmDialog() {
     const data = {};
     data.decks = game.settings.get('torgeternity', 'deckSetting');
+    data.unused = '-unused-';
     const html = await foundry.applications.handlebars.renderTemplate(
       'systems/torgeternity/templates/cards/drawCosmDialog.hbs',
       data
