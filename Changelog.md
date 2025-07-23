@@ -15,6 +15,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 -- **'stagger'** trait will display button to apply Stymied to target if any damage is caused.
 -- **'unwieldy'** trait will display button to apply Vulnerable to attacker on a miss.
 -- **'trademark'** trait will auto-set the "Trademark Weapon" button in the Test Dialog.
+- Allow cosms to be marked as unused in the Deck Configuration window.
 
 ### Bug Fixes
 
