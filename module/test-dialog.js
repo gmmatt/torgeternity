@@ -111,8 +111,8 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       this.test.actorName ??= actor.name;
       this.test.actorType ??= actor.type;
 
-      const myItem = this.test.itemId ? actor.items.get(this.test.itemId) : null;
-      if (myItem) this.test.trademark = myItem.system.traits.has('trademark');
+      const item = this.test.itemId ? actor.items.get(this.test.itemId) : null;
+      if (item) this.test.trademark = item.system.traits.has('trademark');
     }
     // Ensure all relevant fields are Number
     for (const key of Object.keys(DEFAULT_TEST))
@@ -401,8 +401,8 @@ export function TestDialogLabel(test) {
       result = `${test.skillName} ${game.i18n.localize('torgeternity.chatText.test')}  `;
   }
   if (test.itemId) {
-    const itemLabel = fromUuidSync(test.actor, { strict: false })?.items.get(test.itemId).name;
-    if (itemLabel) result += ` (${itemLabel})`;
+    const itemName = fromUuidSync(test.actor, { strict: false })?.items.get(test.itemId).name;
+    if (itemName) result += ` (${itemName})`;
   }
   return result;
 }
