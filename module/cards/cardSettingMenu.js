@@ -4,7 +4,6 @@ import torgeternityDeck from './torgeternityDeck.js';
  */
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
-const NOT_SELECTED_ID = torgeternityDeck.UNUSED_DECK_ID;
 const NOT_SELECTED_LABEL = '----';
 export default class DeckSettingMenu extends HandlebarsApplicationMixin(ApplicationV2) {
 
@@ -57,19 +56,19 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
         .reduce((acc, pile) => {
           acc[pile.id] = pile.name;
           return acc;
-        }, { [NOT_SELECTED_ID]: NOT_SELECTED_LABEL }),
+        }, { [torgeternityDeck.UNUSED_DECK_ID]: NOT_SELECTED_LABEL }),
       decks: game.cards
         .filter((c) => c.type === 'deck')
         .reduce((acc, pile) => {
           acc[pile.id] = pile.name;
           return acc;
-        }, { [NOT_SELECTED_ID]: NOT_SELECTED_LABEL }),
+        }, { [torgeternityDeck.UNUSED_DECK_ID]: NOT_SELECTED_LABEL }),
       hands: game.cards
         .filter((c) => c.type === 'hand')
         .reduce((acc, pile) => {
           acc[pile.id] = pile.name;
           return acc;
-        }, { [NOT_SELECTED_ID]: NOT_SELECTED_LABEL }),
+        }, { [torgeternityDeck.UNUSED_DECK_ID]: NOT_SELECTED_LABEL }),
       buttons: [
         { type: "button", action: "createCards", icon: "fa-solid fa-plus", label: "DOCUMENT.Cards" },
         { type: "submit", action: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" },
