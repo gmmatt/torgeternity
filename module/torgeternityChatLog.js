@@ -471,9 +471,9 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #testDefeat(event, button) {
     event.preventDefault();
+    // No test in the chat message that display Defeat prompt
+    const { chatMessage } = getMessage(button);
     const attribute = button.dataset.control;
-    const chatMessageId = button.closest('.chat-message').dataset.messageId;
-    const chatMessage = game.messages.get(chatMessageId);
     const actor = game.actors.get(chatMessage.speaker.actor);
 
     const response = await TestDialog.asPromise({
@@ -516,7 +516,9 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
 
     const formattedMessage = game.i18n.format(message, { name: actor.name });
-    ui.notifications.info(formattedMessage);
+
+    ui.notifications.info(formattedMessage, { escape: false, clean: false });
+
     ChatMessage.create({
       user: game.user.id,
       speaker: ChatMessage.getSpeaker(),
@@ -529,7 +531,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 function getMessage(button) {
   const chatMessageId = button.closest('.chat-message').dataset.messageId;
   const chatMessage = game.messages.get(chatMessageId);
-  const test = chatMessage.flags.torgeternity.test;
+  const test = chatMessage.flags.torgeternity?.test;
   return { chatMessageId, chatMessage, test }
 }
 

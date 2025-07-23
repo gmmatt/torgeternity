@@ -642,9 +642,8 @@ export function torgDamage(damage, toughness, attackTraits) {
   return result;
 }
 
-//
 /**
- *@param soaker
+ *@param {Actor} soaker The Actor which is attempting to soak some damage
  */
 export async function soakDamages(soaker) {
   const skillName = 'reality';
