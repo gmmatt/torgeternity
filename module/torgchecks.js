@@ -147,62 +147,62 @@ export async function renderSkillChat(test) {
     function modifierString(label, value) {
       let result = game.i18n.localize(label);
       if (typeof value === 'number') result += ` (${value.signedString()})`
-      result += '<br>';
       return result;
     }
 
     // Set Modifiers and Chat Content Relating to Modifiers
+    let modifiers = [];
     test.modifiers = 0;
     test.modifierText = '';
     if (test.testTtype === 'soak') test.vulnerableModifier = 0;
 
     if (test.woundModifier < 0) {
-      test.modifierText = modifierString('torgeternity.chatText.check.modifier.wounds', test.woundModifier);
-      test.modifiers = test.woundModifier;
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.wounds', test.woundModifier));
+      test.modifiers += test.woundModifier;
     }
 
     if (test.stymiedModifier < 0) {
       if (test.stymiedModifier == -2) {
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.stymied');
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.stymied', -2));
         test.modifiers += -2;
       } else if (test.stymiedModifier == -4) {
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.veryStymied');
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.veryStymied', -4));
         test.modifiers += -4;
       }
     }
 
     if (test.darknessModifier < 0) {
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.darkness', test.darknessModifier);
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.darkness', test.darknessModifier));
       test.modifiers += test.darknessModifier;
     }
 
     if (test.movementModifier < 0) {
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.running');
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.running', test.movementModifier));
       test.modifiers += -2;
     }
 
     if (test.multiModifier < 0) {
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.multiAction', test.multiModifier);
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.multiAction', test.multiModifier));
       test.modifiers += test.multiModifier;
     }
 
     if (test.targetsModifier < 0) {
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.multiTarget', test.targetsModifier);
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.multiTarget', test.targetsModifier));
       test.modifiers += test.targetsModifier;
     }
 
     if (test.isOther1) {
-      test.modifierText += modifierString(test.other1Description, test.other1Modifier);
+      modifiers.push(modifierString(test.other1Description, test.other1Modifier));
       test.modifiers += test.other1Modifier;
     }
 
     if (test.isOther2) {
-      test.modifierText += modifierString(test.other2Description, test.other2Modifier);
+      modifiers.push(modifierString(test.other2Description, test.other2Modifier));
       test.modifiers += test.other2Modifier;
     }
 
     if (test.isOther3) {
-      test.modifierText += modifierString(test.other3Description, test.other3Modifier);
+      modifiers.push(modifierString(test.other3Description, test.other3Modifier));
       test.modifiers += test.other3Modifier;
     }
 
@@ -211,38 +211,38 @@ export async function renderSkillChat(test) {
       // Apply the size modifier in appropriate circumstances
       if (test.applySize && test.sizeModifier) {
         test.modifiers += test.sizeModifier;
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetSize', test.sizeModifier);
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.targetSize', test.sizeModifier));
       }
 
       // Apply target vulnerability modifier
       if (test.vulnerableModifier === 2) {
         test.modifiers += test.vulnerableModifier;
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetVulnerable');
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.targetVulnerable', test.vulnerableModifier));
       } else if (test.vulnerableModifier === 4) {
         test.modifiers += test.vulnerableModifier;
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetVeryVulnerable');
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.targetVeryVulnerable', test.vulnerableModifier));
       }
     }
 
     if (test.calledShotModifier) {
       test.modifiers += test.calledShotModifier;
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.calledShot', test.calledShotModifier);
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.calledShot', test.calledShotModifier));
     }
 
     if (test.burstModifier) {
       test.modifiers += test.burstModifier;
       if (test.burstModifier === 2) {
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.shortBurst');
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.shortBurst', test.burstModifier));
       } else if (test.burstModifier === 4) {
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.longBurst');
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.longBurst', test.burstModifier));
       } else if (test.burstModifier === 6) {
-        test.modifierText += modifierString('torgeternity.chatText.check.modifier.heavyBurst');
+        modifiers.push(modifierString('torgeternity.chatText.check.modifier.heavyBurst', test.burstModifier));
       }
     }
 
     if (test.allOutFlag) {
       test.modifiers += 4;
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.allOutAttack');
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.allOutAttack', 4));
 
       // if it's an all-out-attack, apply very vulnerable to attacker
       if (first) await testActor.setVeryVulnerable();
@@ -250,39 +250,39 @@ export async function renderSkillChat(test) {
 
     if (test.aimedFlag) {
       test.modifiers += 4;
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.aimedShot');
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.aimedShot', 4));
     }
 
     if (test.blindFireFlag) {
       test.modifiers += -6;
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.blindFire');
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.blindFire', -6));
     }
 
     if (test.concealmentModifier) {
       test.modifiers += test.concealmentModifier;
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.targetConcealment', test.concealmentModifier);
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.targetConcealment', test.concealmentModifier));
     }
 
     if (test.testType === 'power' && test.powerModifier) {
       test.modifiers += test.powerModifier;
-      test.modifierText += modifierString('torgeternity.chatText.check.modifier.powerModifier', test.powerModifier);
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.powerModifier', test.powerModifier));
     }
 
     // Apply vehicle-related modifiers
     if (test.testType === 'chase' || test.testType === 'stunt' || test.testType === 'vehicleBase') {
       if (test.maneuverModifier) {
         test.modifiers += test.maneuverModifier;
-        test.modifierText += modifierString('torgeternity.stats.maneuverModifier', test.maneuverModifier);
+        modifiers.push(modifierString('torgeternity.stats.maneuverModifier', test.maneuverModifier));
       }
     }
 
     if (test.testType === 'chase' && test.speedModifier) {
       test.modifiers += test.speedModifier;
-      test.modifierText += modifierString('torgeternity.stats.speedModifier', test.speedModifier);
+      modifiers.push(modifierString('torgeternity.stats.speedModifier', test.speedModifier));
     }
 
-    if (test.modifierText.length) {
-      test.modifierText = `<p>${test.modifierText}</p>`;
+    if (modifiers.length) {
+      test.modifierText = `<p>${modifiers.sort().join('<br>')}</p>`;
     }
 
     // Add +3 cards to bonus
