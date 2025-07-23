@@ -340,14 +340,32 @@
       "veryHard": "Very Hard (16)"
     },
     "drama": {
-      "flurry": "FLURRY: Heroes or Villains get an extra turn this round",
-      "inspiration": "INSPIRATION: All characters on this side immediately recover 2 shock",
-      "up": "UP: Add an additional roll to the first roll",
-      "confused": "CONFUSED: Players are unable to play cards from their pool",
-      "fatigued": "FATIGUED: Two shock inflicted at the end of each character's turn",
-      "setback": "SETBACK: GM decides a suitable setback",
-      "stymied": "STYMIED: All characters on this side are stymied until the end of the their turn",
-      "surge": "SURGE: Everyone on this side must check for Contradications"
+      "none": "---",
+      "flurry": "Flurry",
+      "inspiration": "Inspiration",
+      "up": "Up",
+      "confused": "Confused",
+      "fatigued": "Fatigued",
+      "setback": "Setback",
+      "stymied": "Stymied",
+      "surge": "Surge",
+      "flurryDesc": "FLURRY: Heroes or Villains get an extra turn this round",
+      "inspirationDesc": "INSPIRATION: All characters on this side immediately recover 2 shock",
+      "upDesc": "UP: Add an additional roll to the first roll",
+      "confusedDesc": "CONFUSED: Players are unable to play cards from their pool",
+      "fatiguedDesc": "FATIGUED: Two shock inflicted at the end of each character's turn",
+      "setbackDesc": "SETBACK: GM decides a suitable setback",
+      "stymiedDesc": "STYMIED: All characters on this side are stymied until the end of the their turn",
+      "surgeDesc": "SURGE: Everyone on this side must check for Contradications"
+    },
+    "dramaCard": {
+      "heroesFirst": "Heroes First?",
+      "heroesCondition": "H:",
+      "villainsCondition": "V:",
+      "dsrLine": "DSR:",
+      "approvedActions": "Actions",
+      "standard": "Standard",
+      "dramatic": "Dramatic"
     },
     "enhancements": {
       "description": "Descripción",

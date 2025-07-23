@@ -2106,6 +2106,31 @@ a:hover {
   border-bottom: 2px solid #777777;
 }
 
+.application.torgeternity.card-config .drama {
+  label {
+    white-space: nowrap;
+    flex: 0;
+  }
+
+  fieldset.flexrow {
+    gap: 2em;
+
+    div.form-group {
+      margin: 0px;
+      border-bottom: none;
+
+      div.form-fields {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  div.form-group>div.form-group {
+    margin: 0px;
+    border-bottom: none;
+  }
+}
+
 .application.torgeternity .window-resize-handle {
   width: 30px;
   height: 30px;

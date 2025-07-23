@@ -25,6 +25,18 @@ torgeternity.cosmDecks = {
   tharkold: 'torgeternity.cosmDecks.tharkold',
 };
 
+torgeternity.dramaConflicts = {
+  none: 'torgeternity.drama.none',
+  flurry: 'torgeternity.drama.flurry',
+  inspiration: 'torgeternity.drama.inspiration',
+  up: 'torgeternity.drama.up',
+  confused: 'torgeternity.drama.confused',
+  fatigued: 'torgeternity.drama.fatigued',
+  setback: 'torgeternity.drama.setback',
+  stymied: 'torgeternity.drama.stymied',
+  surge: 'torgeternity.drama.surge',
+};
+
 torgeternity.viewMode = {
   UI: true,
 };

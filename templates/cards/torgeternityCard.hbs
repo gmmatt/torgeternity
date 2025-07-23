@@ -13,6 +13,26 @@
       {{formInput fields.rotation value=source.rotation id=(concat rootId "-rotation")}}
     </div>
   </div>
+  {{#if (eq source.type "drama")}}
+    <div class="drama">
+      <fieldset class="flexrow">
+        <legend>{{localize 'torgeternity.dramaCard.standard'}} : </legend>
+        {{formGroup systemFields.heroesFirstStandard value=source.system.heroesFirstStandard  localize=true }}
+        {{formGroup systemFields.heroesConditionsStandard value=source.system.heroesConditionsStandard localize=true}}
+        {{formGroup systemFields.villainsConditionsStandard value=source.system.villainsConditionsStandard  localize=true}}
+      </fieldset>
+      <fieldset class="flexrow">
+        <legend>{{localize 'torgeternity.dramaCard.dramatic'}} : </legend>
+        {{formGroup systemFields.heroesFirstDramatic value=source.system.heroesFirstDramatic  localize=true }}
+        {{formGroup systemFields.heroesConditionsDramatic value=source.system.heroesConditionsDramatic  localize=true}}
+        {{formGroup systemFields.villainsConditionsDramatic value=source.system.villainsConditionsDramatic localize=true }}
+      </fieldset>
+      <div class="form-group">
+        {{formGroup systemFields.dsrLine value=source.system.dsrLine localize=true}}
+        {{formGroup systemFields.approvedActions value=source.system.approvedActions localize=true}}
+      </div>
+    </div>
+  {{/if}}
 
   {{formGroup fields.description value=source.description rootId=rootId elementType="textarea"}}
 

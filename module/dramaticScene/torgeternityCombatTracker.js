@@ -75,11 +75,13 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   }
 
   /**
-   *
+   * A player has pressed the button at the bottom of the combat tracker to end "their" turn.
    * @param event
    */
   static async #onHasFinished(event, button) {
     const combatant = this.viewed?.combatants.find(combatant => combatant.actorId === game.user.character.id);
+    if (!combatant) return;
+
     await combatant.setFlag('world', 'turnTaken', true);
     this.viewed.dramaEndOfTurn(combatant);
   }
