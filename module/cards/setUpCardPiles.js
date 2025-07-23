@@ -1,3 +1,5 @@
+import torgeternityDeck from './torgeternityDeck.js';
+
 /**
  *
  */
@@ -37,7 +39,7 @@ export async function setUpCardPiles() {
   const deckIndex = await deckPack.getIndex({ fields: ['flags.torgeternity.usage'] });
 
   for (const deckKey of deckKeys) {
-    if (deckKey === '-unused-') continue;
+    if (deckKey === torgeternityDeck.UNUSED_DECK_ID) continue;
     if (!game.cards.get(deckSetting[deckKey])) {
       // if the deck defined by the current setting does not exist
       const deckId = deckIndex.find((deck) => deck.flags?.torgeternity?.usage === deckKey)._id; // find the ID of the deck with the appropriate flag

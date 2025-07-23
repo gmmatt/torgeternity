@@ -1,5 +1,6 @@
 import { RaceItemData } from './data/item/race.js';
 import TorgeternityItem from './documents/item/torgeternityItem.js';
+import torgeternityDeck from './cards/torgeternityDeck.js';
 
 /**
  *
@@ -52,7 +53,7 @@ export async function torgMigration() {
       const deckSetting = game.settings.get('torgeternity', 'deckSetting');
       const deckKeys = Object.keys(deckSetting);
       for (const key of deckKeys) {
-        if (key === 'stormknights' || key === 'stormknightsHands' || key === '-unused-') continue;
+        if (key === 'stormknights' || key === 'stormknightsHands' || key === torgeternityDeck.UNUSED_DECK_ID) continue;
         let deck = game.cards.getName(deckSetting[key]);
         if (!deck) {
           deck = game.cards.get(deckSetting[key]);

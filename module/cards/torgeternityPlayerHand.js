@@ -1,3 +1,5 @@
+import torgeternityDeck from './torgeternityDeck.js';
+
 const { DialogV2 } = foundry.applications.api;
 
 /**
@@ -287,7 +289,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   async drawCosmDialog() {
     const data = {};
     data.decks = game.settings.get('torgeternity', 'deckSetting');
-    data.unused = '-unused-';
+    data.unused = torgeternityDeck.UNUSED_DECK_ID;
     const html = await foundry.applications.handlebars.renderTemplate(
       'systems/torgeternity/templates/cards/drawCosmDialog.hbs',
       data

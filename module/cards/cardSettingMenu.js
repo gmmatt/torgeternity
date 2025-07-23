@@ -1,9 +1,10 @@
+import torgeternityDeck from './torgeternityDeck.js';
 /**
  *
  */
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
-const NOT_SELECTED_ID = '-unused-';
+const NOT_SELECTED_ID = torgeternityDeck.UNUSED_DECK_ID;
 const NOT_SELECTED_LABEL = '----';
 export default class DeckSettingMenu extends HandlebarsApplicationMixin(ApplicationV2) {
 

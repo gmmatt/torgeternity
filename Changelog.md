@@ -16,6 +16,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 -- **'unwieldy'** trait will display button to apply Vulnerable to attacker on a miss.
 -- **'trademark'** trait will auto-set the "Trademark Weapon" button in the Test Dialog.
 - Allow cosms to be marked as unused in the Deck Configuration window.
+-- Cosm decks marked as not available will not be available in the "Draw Cosm Card" dialog.
 
 ### Bug Fixes
 
