@@ -5,7 +5,9 @@
 ### Improvements
 
 - For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
-- Rework Check Dialog to make selected options clearer (actual numeric modifiers hidden in tooltips).
+- Rework Check Dialog to make selected options clearer.
+-- New layout, with actual modifier shown in tooltip rather than permanently on display.
+-- Modifiers in chat tooltip are sorted alphabetically
 - When changing an Actor's portrait, if the old portrait matches the token image then the token image
 is replaced by the new portrait. (For unlinked Actors, this will directly affect the displayed token.)
 - #336: Add a field to add **traits** to Items - at the moment only a predefined list of traits is available.
