@@ -39,6 +39,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Fix issue with hovering over tokens.
 - Prevent error in Card Deck Configuration when player has no hand assigned.
 - Allow drag/drop of cards from Decks to Hands.
+- Only hide foreign language compendiums on first render, so they don't disappear as soon as they are created.
 
 ### Translations
 
