@@ -355,7 +355,7 @@ export class TorgeternityMacros {
   }
 
   async dramaFlashback() {
-    ui.combat.viewed.restorePreviousDrama();
+    game.combats.active?.restorePreviousDrama();
   }
 
   // #endregion
