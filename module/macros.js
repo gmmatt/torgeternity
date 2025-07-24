@@ -408,7 +408,7 @@ export class TorgeternityMacros {
       });
     }
 
-    const dialog = await TestDialog.asPromise(test, { useTargets: true });
+    const dialog = await TestDialog.wait(test, { useTargets: true });
 
     if (!dialog) {
       ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoChatMessageFound'));

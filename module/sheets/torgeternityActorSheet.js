@@ -517,7 +517,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       }
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
       actor: this.actor,
@@ -551,7 +551,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, this.actor)) return;
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
       actor: this.actor,
@@ -576,7 +576,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       return;
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'chase',
       actor: this.actor,
       skillName: 'Vehicle Chase',
@@ -594,7 +594,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onBaseRoll(event, button) {
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'vehicleBase',
       actor: this.actor,
       skillName: 'Vehicle Operation',
@@ -614,7 +614,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const dnDescriptor = (game.user.targets.first()?.actor.type === 'vehicle')
       ? 'targetVehicleDefense' : 'standard';
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'stunt',
       actor: this.actor,
       skillName: 'Vehicle Stunt',
@@ -654,7 +654,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       dnDescriptor = 'standard';
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'interactionAttack',
       actor: this.actor,
       skillName: button.dataset.name,
@@ -694,7 +694,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       ? this.actor.system.attributes.dexterity.value
       : Number(button.dataset.skillValue);
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'attack',
       actor: this.actor,
       amountBD: 0,
@@ -732,7 +732,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static #onActiveDefenseRoll(event, button) {
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'activeDefense',
       activelyDefending: false,
       actor: this.actor,
@@ -884,7 +884,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         adjustedDamage = parseInt(weaponDamage);
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'attack',
       actor: this.actor,
       amountBD: 0,
@@ -923,7 +923,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     if (checkUnskilled(skillData.value, skillName, this.actor)) return;
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'power',
       actor: this.actor,
       powerName: item.name,

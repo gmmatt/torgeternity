@@ -660,7 +660,7 @@ export async function soakDamages(soaker) {
   // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
   if (checkUnskilled(skillValue, skillName, soaker)) return;
 
-  new TestDialog({
+  return TestDialog.wait({
     testType: 'soak',
     actor: soaker,
     //actorType: soaker.system.type,

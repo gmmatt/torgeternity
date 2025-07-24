@@ -558,7 +558,7 @@ async function createTorgEternityMacro(dropData, slot) {
  * @param {string} itemName
  * @returns {Promise}
  */
-function rollItemMacro(itemName) {
+async function rollItemMacro(itemName) {
   const speaker = ChatMessage.getSpeaker();
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
@@ -636,7 +636,7 @@ function rollItemMacro(itemName) {
             adjustedDamage = weaponDamage;
         }
 
-        new TestDialog({
+        return TestDialog.wait({
           testType: 'attack',
           actor: actor,
           itemId: item.id,
@@ -671,7 +671,7 @@ function rollItemMacro(itemName) {
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
 
-        new TestDialog({
+        return TestDialog.wait({
           testType: 'power',
           DNDescriptor: game.user.targets.size ? powerData.dn : 'standard',
           actor: actor,
@@ -709,7 +709,7 @@ function rollItemMacro(itemName) {
  * @param {boolean} isInteractionAttack
  * @returns {Promise}
  */
-function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescriptor) {
+async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescriptor) {
   if (DNDescriptor && !Object.hasOwn(CONFIG.torgeternity.dnTypes, DNDescriptor)) {
     ui.notifications.error('The DN-Descriptor is wrong. Exiting the macro.');
     return;
@@ -816,7 +816,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     test.unskilledUse = true;
   }
 
-  new TestDialog(test, { useTargets: true });
+  return TestDialog.wait(test, { useTargets: true });
 }
 
 Hooks.on('renderCombatTracker', (combatTracker) => {

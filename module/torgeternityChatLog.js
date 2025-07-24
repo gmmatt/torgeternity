@@ -323,7 +323,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     test.mode = 'update';
-    new TestDialog(test);
+    return TestDialog.wait(test);
   }
 
   static async #applyDamage(event, button) {
@@ -476,7 +476,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const attribute = button.dataset.control;
     const actor = game.actors.get(chatMessage.speaker.actor);
 
-    const response = await TestDialog.asPromise({
+    const response = await TestDialog.wait({
       DNDescriptor: 'standard',
       actor: actor,
       testType: 'attribute',
