@@ -40,8 +40,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     await super._prepareCombatContext(context, options);
     context.firstFaction = this.firstFaction;
     context.secondFaction = this.secondFaction;
-    context.isDramatic = this.viewed.isDramatic;
-    context.conflictLine = this.viewed.conflictLineText;
+    context.isDramatic = this.viewed?.isDramatic;
+    context.conflictLine = this.viewed?.conflictLineText;
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
   }
@@ -181,8 +181,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    */
   static #toggleDramatic(event, button) {
     const newstate = !this.viewed.isDramatic;
-    console.log(`COMBAT MODE = ${newstate ? "DRAMATIC" : "STANDARD"}`)
     this.viewed.setIsDramatic(newstate);
+    console.log(`COMBAT MODE = ${newstate ? "DRAMATIC" : "STANDARD"} ==> ${this.viewed.conflictLineText}`)
   }
   static #onDramaFlurry(event, button) {
     this.viewed.dramaFlurry(button.dataset.faction);

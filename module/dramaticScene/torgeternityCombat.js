@@ -1,9 +1,13 @@
+import { torgeternity } from '../config.js';
+
+const FATIGUED_FACTION_FLAG = 'fatiguedFaction';
+const IS_DRAMATIC_FLAG = 'isDramatic';
+
 /**
  *
  */
 export default class TorgCombat extends Combat {
 
-  #fatiguedFaction = null;
 
   /**
    *
@@ -13,9 +17,6 @@ export default class TorgCombat extends Combat {
    */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
-
-    // Active GM draws the next available drama card
-    if (game.user.isActiveGM) this.drawDramaCard();
   }
 
   async _preDelete(options, user) {
@@ -67,11 +68,20 @@ export default class TorgCombat extends Combat {
     super._onUpdate(changed, options, userId);
   }
 
-  setIsDramatic(value) {
-    this.setFlag('torgeternity', 'isDramatic', value)
+  async setIsDramatic(value) {
+    const result = await this.setFlag('torgeternity', IS_DRAMATIC_FLAG, value)
+    if (!result) return;
+
+    // Update combat effects
+    const settings = game.settings.get('torgeternity', 'deckSetting');
+    const dramaActive = game.cards.get(settings.dramaActive);
+    if (dramaActive.cards.size) {
+      this.setDramaEffects(dramaActive.cards.contents[0]);
+    }
   }
+
   get isDramatic() {
-    return this.getFlag('torgeternity', 'isDramatic') ?? false;
+    return this.getFlag('torgeternity', IS_DRAMATIC_FLAG) ?? false;
   }
 
   /**
@@ -98,19 +108,15 @@ export default class TorgCombat extends Combat {
 
     const [card] = await dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
 
-    // Look at the details on the new card.
-    if (this.isDramatic) {
-      if (card.system.heroesFirstDramatic)
-        console.log(`Dramatic: H ${card.system.heroesConditionsDramatic}   V ${card.system.villainsConditionsDramatic}`)
-      else
-        console.log(`Dramatic: V ${card.system.villainsConditionsDramatic}   H ${card.system.heroesConditionsDramatic}`)
-    } else {
-      if (card.system.heroesFirstStandard)
-        console.log(`Standard: H ${card.system.heroesConditionsStandard}   V ${card.system.villainsConditionsStandard}`)
-      else
-        console.log(`Standard: V ${card.system.villainsConditionsStandard}   H ${card.system.heroesConditionsStandard}`)
-    }
-    console.log(`DSR: '${card.system.dsrLine.trim()}'   Actions: '${card.system.approvedActions.trim()}'`);
+    this.setDramaEffects(card);
+  }
+
+  /**
+   * Set the effects of the current drama card
+   */
+  async setDramaEffects(card) {
+    console.log(this.conflictLineText)
+    console.log(`DSR: '${this.dsrText}'   Actions: '${this.approvedActionsText}'`);
   }
 
   get conflictLineText() {
@@ -118,17 +124,48 @@ export default class TorgCombat extends Combat {
     const dramaActive = game.cards.get(settings.dramaActive);
     if (!dramaActive.cards.size) return "No Drama Card Active";
     const card = dramaActive.cards.contents[0];
+    const lookup = (a) => game.i18n.localize(torgeternity.dramaConflicts[a]);
+    const H = game.i18n.localize('torgeternity.dramaCard.heroesCondition');
+    const V = game.i18n.localize('torgeternity.dramaCard.villainsCondition');
     if (this.isDramatic) {
       if (card.system.heroesFirstDramatic)
-        return `Dramatic: H ${card.system.heroesConditionsDramatic}   V ${card.system.villainsConditionsDramatic} - ${card.system.approvedActions}`
+        return `${game.i18n.localize('torgeternity.dramaCard.dramatic')}: ${H} ${lookup(card.system.heroesConditionsDramatic)}   ${V} ${lookup(card.system.villainsConditionsDramatic)} - ${this.approvedActionsText} - ${this.dsrText}`
       else
-        return `Dramatic: V ${card.system.villainsConditionsDramatic}   H ${card.system.heroesConditionsDramatic} - ${card.system.approvedActions}`
+        return `${game.i18n.localize('torgeternity.dramaCard.dramatic')}: ${V} ${lookup(card.system.villainsConditionsDramatic)}   ${H} ${lookup(card.system.heroesConditionsDramatic)} - ${this.approvedActionsText} - ${this.dsrText}`
     } else {
       if (card.system.heroesFirstStandard)
-        return `Standard: H ${card.system.heroesConditionsStandard}   V ${card.system.villainsConditionsStandard} - ${card.system.approvedActions}`
+        return `${game.i18n.localize('torgeternity.dramaCard.standard')}: ${H} ${lookup(card.system.heroesConditionsStandard)}   ${V} ${lookup(card.system.villainsConditionsStandard)} - ${this.approvedActionsText} - ${this.dsrText}`
       else
-        return `Standard: V ${card.system.villainsConditionsStandard}   H ${card.system.heroesConditionsStandard} - ${card.system.approvedActions}`
+        return `${game.i18n.localize('torgeternity.dramaCard.standard')}: ${V} ${lookup(card.system.villainsConditionsStandard)}   ${H} ${lookup(card.system.heroesConditionsStandard)} - ${this.approvedActionsText} - ${this.dsrText}`
     }
+  }
+
+  get approvedActionsText() {
+    const settings = game.settings.get('torgeternity', 'deckSetting');
+    const dramaActive = game.cards.get(settings.dramaActive);
+    if (!dramaActive.cards.size) return "No Drama Card Active";
+    const card = dramaActive.cards.contents[0];
+
+    return card.system.approvedActions.split(' ').map(one => game.i18n.localize(torgeternity.dramaActions[one])).join('/');
+  }
+
+  get dsrText() {
+    const settings = game.settings.get('torgeternity', 'deckSetting');
+    const dramaActive = game.cards.get(settings.dramaActive);
+    if (!dramaActive.cards.size) return "No Drama Card Active";
+    const dsr = dramaActive.cards.contents[0].system.dsrLine;
+    const first = dsr.at(0);
+
+    return (first === first.toUpperCase()) ? dsr.split('').join(' ') : game.i18n.localize(torgeternity.dramaActions[dsr]);
+  }
+
+  /**
+   * 
+   */
+  async startCombat() {
+    // Active GM draws the next available drama card
+    if (game.user.isActiveGM) await this.drawDramaCard();
+    return super.startCombat();
   }
   /**
    *
@@ -153,7 +190,7 @@ export default class TorgCombat extends Combat {
       this.combatants.map((combatant) => ({ _id: combatant.id, 'flags.world.turnTaken': false })),
       { updateAll: true });
     this.setCardsPlayable(true);
-    this.#fatiguedFaction = null;
+    this.unsetFlag('torgeternity', FATIGUED_FACTION_FLAG);
     await super.nextRound();
   }
 
@@ -229,7 +266,7 @@ export default class TorgCombat extends Combat {
   async dramaFatigued(faction) {
     // At the end of an Actor's turn, they take 2 points of shock
     console.log('Drama Fatigued', faction)
-    this.#fatiguedFaction = faction;
+    this.setFlag('torgeternity', FATIGUED_FACTION_FLAG, faction);
   }
 
   async dramaSetback(faction) {
@@ -253,7 +290,7 @@ export default class TorgCombat extends Combat {
    * General end-of-character turn processing
    */
   dramaEndOfTurn(combatant) {
-    if (this.#fatiguedFaction === this.getCombatantFaction(combatant)) {
+    if (this.getFlag('torgeternity', FATIGUED_FACTION_FLAG) === this.getCombatantFaction(combatant)) {
       const actor = combatant.actor;
 
       let chatOutput = `<h2>${game.i18n.localize(
@@ -276,5 +313,26 @@ export default class TorgCombat extends Combat {
       chatOutput += '</ul>';
       ChatMessage.create({ content: chatOutput });
     }
+  }
+  /**
+   * Restore the previous Drama Card
+   */
+  async dramaFlashback() {
+    if (!game.user.isGM) return;
+
+    const settings = game.settings.get('torgeternity', 'deckSetting');
+    const dramaDeck = game.cards.get(settings.dramaDeck);
+    const dramaDiscard = game.cards.get(settings.dramaDiscard);
+    const dramaActive = game.cards.get(settings.dramaActive);
+    const currActiveCard = Array.from(dramaActive.cards).pop();
+    const prevActiveCard = Array.from(dramaDiscard.cards).pop();
+    // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here
+    await currActiveCard.pass(dramaDeck);
+    await prevActiveCard.pass(dramaActive);
+    const activeImage = prevActiveCard.faces[0].img;
+    game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
+
+    // Cancel effects from previous card (if any)
+    await this.setDramaEffects(prevActiveCard);
   }
 }
