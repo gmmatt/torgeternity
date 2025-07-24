@@ -157,42 +157,44 @@
         class="{{TorgHidden (eq condition 'none')}}">{{localize (concat 'torgeternity.dramaCard.' faction 'Condition')}}</span>
       <button type="button"
         class="ui-control toggle icon fa-solid fa-person-running-fast {{TorgHidden (ne condition 'flurry')}}"
-        data-action="dramaFlurry" data-tooltip="{{localize 'torgeternity.drama.flurryDesc'}}"
-        data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaFlurry"
+        data-tooltip="{{localize 'torgeternity.drama.flurryDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
         class="ui-control toggle icon fa-solid fa-heart-circle-plus {{TorgHidden (ne condition 'inspiration')}}"
-        data-action="dramaInspiration" data-tooltip="{{localize 'torgeternity.drama.inspirationDesc'}}"
-        data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaInspiration"
+        data-tooltip="{{localize 'torgeternity.drama.inspirationDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button" class="ui-control toggle icon fa-solid fa-up {{TorgHidden (ne condition 'up')}}"
-        data-action="dramaUp" data-tooltip="{{localize 'torgeternity.drama.upDesc'}}" data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaUp"
+        data-tooltip="{{localize 'torgeternity.drama.upDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
 
       <button type="button"
         class="ui-control toggle icon fa-solid fa-face-confused {{TorgHidden (ne condition 'confused')}}"
-        data-action="dramaConfused" data-tooltip="{{localize 'torgeternity.drama.confusedDesc'}}"
-        data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaConfused"
+        data-tooltip="{{localize 'torgeternity.drama.confusedDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
         class="ui-control toggle icon fa-solid fa-face-tired {{TorgHidden (ne condition 'fatigued')}}"
-        data-action="dramaFatigued" data-tooltip="{{localize 'torgeternity.drama.fatiguedDesc'}}"
-        data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaFatigued"
+        data-tooltip="{{localize 'torgeternity.drama.fatiguedDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
         class="ui-control toggle icon fa-solid fa-stocking {{TorgHidden (ne condition 'setback')}}"
-        data-action="dramaSetback" data-tooltip="{{localize 'torgeternity.drama.setbackDesc'}}"
-        data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaSetback"
+        data-tooltip="{{localize 'torgeternity.drama.setbackDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
         class="ui-control toggle icon fa-solid fa-triangle-exclamation {{TorgHidden (ne condition 'stymied')}}"
-        data-action="dramaStymied" data-tooltip="{{localize 'torgeternity.drama.stymiedDesc'}}"
-        data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaStymied"
+        data-tooltip="{{localize 'torgeternity.drama.stymiedDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
         class="ui-control toggle icon fa-solid fa-water {{TorgHidden (ne condition 'surge')}}"
-        data-action="dramaSurge" data-tooltip="{{localize 'torgeternity.drama.surgeDesc'}}" data-faction="{{faction}}"
-        {{disabled (not combat.turns)}} />
+        data-action="dramaSurge"
+        data-tooltip="{{localize 'torgeternity.drama.surgeDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
+        data-faction="{{faction}}" {{disabled (not combat.turns)}} />
     </div>
   {{/inline}}
 

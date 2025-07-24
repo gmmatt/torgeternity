@@ -363,14 +363,14 @@
       "setback": "Setback",
       "stymied": "Stymied",
       "surge": "Surge",
-      "flurryDesc": "FLURRY: Heroes or Villains get an extra turn this round",
-      "inspirationDesc": "INSPIRATION: All characters on this side immediately recover 2 shock",
-      "upDesc": "UP: Add an additional roll to the first roll",
+      "flurryDesc": "FLURRY: {faction} get an extra turn this round",
+      "inspirationDesc": "INSPIRATION: All {faction} immediately recover 2 shock",
+      "upDesc": "UP: Add an additional roll to the first roll for {faction}",
       "confusedDesc": "CONFUSED: Players are unable to play cards from their pool",
-      "fatiguedDesc": "FATIGUED: Two shock inflicted at the end of each character's turn",
-      "setbackDesc": "SETBACK: GM decides a suitable setback",
-      "stymiedDesc": "STYMIED: All characters on this side are stymied until the end of the their turn",
-      "surgeDesc": "SURGE: Everyone on this side must check for Contradications"
+      "fatiguedDesc": "FATIGUED: Two shock inflicted at the end of each {faction} turn",
+      "setbackDesc": "SETBACK: GM decides a suitable setback for {faction}",
+      "stymiedDesc": "STYMIED: All {faction} are stymied until the end of the their turn",
+      "surgeDesc": "SURGE: All {faction} must check for Contradications"
     },
     "dramaCard": {
       "heroesFirst": "Heroes First?",

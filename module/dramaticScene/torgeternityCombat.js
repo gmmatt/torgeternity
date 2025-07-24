@@ -261,13 +261,22 @@ export default class TorgCombat extends Combat {
     }
   }
 
+  #sendDramaChat(action) {
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ alias: game.user.name }),
+      content: game.i18n.localize(`torgeternity.drama.${action}Desc`)
+    });
+  }
+
   async dramaFlurry(faction) {
     // extra turn
     console.log('Drama Flurry', faction)
+    this.#sendDramaChat('flurry');
   }
 
   async dramaInspiration(faction) {
     console.log('Drama Inspiration', faction)
+    this.#sendDramaChat('inspiration');
 
     // immediately recover 2 shock (see macros.js:reviveShock)
     let chatOutput = `<h2>${game.i18n.localize(
@@ -292,35 +301,41 @@ export default class TorgCombat extends Combat {
   async dramaUp(faction) {
     // UP on first roll for each actor
     console.log('Drama Up', faction)
+    this.#sendDramaChat('up');
   }
 
   async dramaConfused(faction) {
     // unable to play Cards from their pool
     console.log('Drama Confused', faction)
     this.setCardsPlayable(false);
+    this.#sendDramaChat('confused');
   }
 
   async dramaFatigued(faction) {
     // At the end of an Actor's turn, they take 2 points of shock
     console.log('Drama Fatigued', faction)
     this.setFlag('torgeternity', FATIGUED_FACTION_FLAG, faction);
+    this.#sendDramaChat('fatigued');
   }
 
   async dramaSetback(faction) {
     // GM decides a likely setback
     console.log('Drama Setback', faction)
+    this.#sendDramaChat('setback');
   }
 
   async dramaStymied(faction) {
     // All Actors become Stymied until the end of their next turn
     console.log('Drama Stymied', faction)
+    this.#sendDramaChat(msg);
     for (const actor of this.getFactionActors(faction))
-      actor.applyStymiedState(this);
+      actor.applyStymiedState('stymied');
   }
 
   async dramaSurge(faction) {
     // All Actors must check for Contradictions
     console.log('Drama Surge', faction)
+    this.#sendDramaChat('surge');
   }
 
   /**
