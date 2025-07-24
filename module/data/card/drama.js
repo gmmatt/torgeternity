@@ -15,6 +15,9 @@ export class DramaCardData extends foundry.abstract.TypeDataModel {
 
   static defineSchema() {
     return {
+      // approvedActions = maneuver trick taunt intimidate any attack defend multiAction (one or two)
+      // dsrLine = ABCD, complication, criticalProblem, possibleSetback
+      // *Condition = none fatigued surge stymied confused inspiration flurry up setback
       approvedActions: new fields.StringField({ initial: '', label: 'torgeternity.dramaCard.approvedActions' }),
       cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
       dsrLine: new fields.StringField({ initial: '', label: 'torgeternity.dramaCard.dsrLine' }),

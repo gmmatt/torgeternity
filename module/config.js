@@ -37,6 +37,20 @@ torgeternity.dramaConflicts = {
   surge: 'torgeternity.drama.surge',
 };
 
+torgeternity.dramaActions = {
+  maneuver: "torgeternity.skills.maneuver",
+  trick: "torgeternity.skills.trick",
+  taunt: "torgeternity.skills.taunt",
+  intimidate: "torgeternity.skills.intimidation",
+  any: "torgeternity.dramaCard.any",
+  attack: "torgeternity.dramaCard.attack",
+  defend: "torgeternity.dramaCard.defend",
+  multiAction: "torgeternity.dramaCard.multiAction",
+  complication: "torgeternity.dramaCard.complication",
+  criticalProblem: "torgeternity.dramaCard.criticalProblem",
+  possibleSetback: "torgeternity.dramaCard.possibleSetback"
+}
+
 torgeternity.viewMode = {
   UI: true,
 };

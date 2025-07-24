@@ -379,7 +379,14 @@
       "dsrLine": "DSR:",
       "approvedActions": "Actions",
       "standard": "Standard",
-      "dramatic": "Dramatic"
+      "dramatic": "Dramatic",
+      "attack": "Attack",
+      "defend": "Defend",
+      "multiAction": "Multi-Action",
+      "any": "Any",
+      "complication": "Complication",
+      "criticalProblem": "Critical Problem",
+      "possibleSetback": "Possible Setback"
     },
     "enhancements": {
       "description": "Description",
