@@ -248,7 +248,8 @@ Hooks.once('setup', async function () {
     }
   }
 
-  Handlebars.registerHelper({ radioBoxesNumber })
+  Handlebars.registerHelper({ TorgRadioBoxesNumber })
+  Handlebars.registerHelper({ TorgHidden })
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {
@@ -922,7 +923,7 @@ Hooks.on('renderSceneControls', (sceneControls, html, context, options) => {
 
 
 
-function radioBoxesNumber(name, choices, options) {
+function TorgRadioBoxesNumber(name, choices, options) {
   const checked = options.hash.checked ?? null;
   const isNumber = typeof checked === 'number';
   const isChecked = checked !== null;
@@ -943,4 +944,8 @@ function radioBoxesNumber(name, choices, options) {
     html += element.outerHTML;
   }
   return new Handlebars.SafeString(html);
+}
+
+function TorgHidden(value) {
+  return value ? "disabled" : "";
 }

@@ -3,7 +3,7 @@
   <div class="flexrow" style="flex-wrap: nowrap">
     <fieldset class="skill-check-options flexrow">
       <legend>{{localize "torgeternity.sheetLabels.calledShot"}}:</legend>
-      {{radioBoxesNumber "calledShotModifier" choices.calledShot checked=test.calledShotModifier localize=true}}
+      {{TorgRadioBoxesNumber "calledShotModifier" choices.calledShot checked=test.calledShotModifier localize=true}}
 
       <input type="checkbox" data-dtype="Number" id="vital-area"
         data-tooltip='torgeternity.sheetLabels.vitalAreaTooltip' name="vitalAreaDamageModifier" value="4"
@@ -13,7 +13,7 @@
 
     <fieldset class="skill-check-options flexrow">
       <legend>{{localize "torgeternity.sheetLabels.burst"}}:</legend>
-      {{radioBoxesNumber "burstModifier" choices.burst checked=test.burstModifier localize=true tooltip=true}}
+      {{TorgRadioBoxesNumber "burstModifier" choices.burst checked=test.burstModifier localize=true tooltip=true}}
     </fieldset>
   </div>
   <div class="flexrow flex1">
