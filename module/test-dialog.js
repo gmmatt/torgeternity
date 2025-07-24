@@ -100,6 +100,15 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    */
   constructor(test, options = {}) {
     super(options);
+
+    for (const key of Object.keys(test)) {
+      if (!(test[key] instanceof String)) continue;
+      const num = Number(test[key]);
+      if (isNaN(num)) continue;
+      console.error(`TestDialog passed a number as a String! (${key} = ${test[key]})`)
+      test[key] = num;
+    }
+
     this.mode = test.mode ?? 'create';
     this.test = foundry.utils.mergeObject(DEFAULT_TEST, test, { inplace: false });
 

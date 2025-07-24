@@ -15,6 +15,14 @@ export const TestResult = {
  */
 export async function renderSkillChat(test) {
 
+  for (const key of Object.keys(test)) {
+    if (!(test[key] instanceof String)) continue;
+    const num = Number(test[key]);
+    if (isNaN(num)) continue;
+    console.error(`renderSkillChat passed a number as a String! (${key} = ${test[key]})`)
+    test[key] = num;
+  }
+
   // Check for targeting a vehicle which doesn't have an operator.
   for (const target of test.targetAll) {
     if (target.type === 'vehicle' && isNaN(target.defenses.dodge)) {
