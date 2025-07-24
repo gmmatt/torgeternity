@@ -19,9 +19,9 @@
           Actions
         </div>
       </header>
-      <ol class="cards scrollable">
+      <ol class="cards scrollable" data-cards>
         {{#each cards as |card|}}
-          <li class="card flexrow" data-card-id="{{card.id}}" data-cards>
+          <li class="card flexrow" data-card-id="{{card.id}}">
             <div class="card-faces flexcol">
               <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
                 data-control="nextFace"

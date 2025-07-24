@@ -1,6 +1,6 @@
 {{#if source.flags.torgeternity.lifelike}}
   <div id="handedCards">
-    <ol class=" cards destinyCards">
+    <ol class="cards destinyCards" data-cards>
       {{#each cards as |card|}}
         {{#if (eq card.type "destiny")}}
           <li class="card flexrow {{#if card.flags.torgeternity.pooled}}pooled{{/if}}"
@@ -51,7 +51,7 @@
 
     </ol>
 
-    <ol class="cards cosmCards">
+    <ol class="cards cosmCards" data-cards>
       {{#each cards as |card|}}
         {{#if (eq card.type "cosm")}}
 

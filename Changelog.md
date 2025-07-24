@@ -5,7 +5,7 @@
 ### Improvements
 
 - For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
-- Rework Check Dialog to make selected options clearer.
+- Rework Check Dialog to make selected options appear clearer.
 -- New layout, with actual modifier shown in tooltip rather than permanently on display.
 -- Modifiers in chat tooltip are sorted alphabetically
 - When changing an Actor's portrait, if the old portrait matches the token image then the token image
@@ -38,6 +38,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Skill Checks should use Numbers properly, rather than doing string concatenation.
 - Fix issue with hovering over tokens.
 - Prevent error in Card Deck Configuration when player has no hand assigned.
+- Allow drag/drop of cards from Decks to Hands.
 
 ### Translations
 
