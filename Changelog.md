@@ -7,6 +7,7 @@
 - Don't create a new 'Active Drama Card' deck every time that 'Setup the Cards Directory' is used.
 - Extra protection to prevent errors if card decks don't exist.
 - Ensure that the Possibility/Up/Hero/Drama/+3 buttons add to the bonus properly.
+- Prevent error from BD button when chat card has no target.
 
 ## 13.2.1
 
