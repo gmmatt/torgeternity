@@ -277,7 +277,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         adds: Number(event.target.dataset.adds),
         value: Number(event.target.dataset.value),
         unskilledUse: event.target.dataset.unskilleduse,
-        attackType: '',
         DNDescriptor: 'standard',
       },
     };
@@ -301,7 +300,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         adds: skill.adds,
         value: value,
         unskilledUse: skill.unskilledUse,
-        attackType: event.target.dataset.attackType.value,
       },
     };
     event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
@@ -635,9 +633,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static #onInteractionAttack(event, button) {
     let dnDescriptor = 'standard';
-    const attackType = button.dataset.name;
     if (game.user.targets.size) {
-      switch (attackType) {
+      switch (button.dataset.name) {
         case 'intimidation':
           dnDescriptor = 'targetIntimidation';
           break;
