@@ -374,7 +374,8 @@
       "complication": "Complication",
       "criticalProblem": "Critical Problem",
       "possibleSetback": "Possible Setback",
-      "shuffleDeck": "Shuffle Drama Deck"
+      "shuffleDeck": "Shuffle Drama Deck",
+      "getPreviousDrama": "Recall Previous Drama Card"
     },
     "enhancements": {
       "description": "Descripción",

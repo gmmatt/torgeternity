@@ -150,6 +150,8 @@ export default class TorgCombat extends Combat {
     //console.log(this.conflictLineText)
     //console.log(`DSR: '${this.dsrText}'   Actions: '${this.approvedActionsText}'`);
 
+    this.setFlag('torgeternity', 'activeCard', card ? card.faces[0].img : '');
+
     // Sort combatants based on which faction is first
     const whoFirst = (this.isDramatic ? card.system.heroesFirstDramatic : card.system.heroesFirstStandard) ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
     const updates = [];
@@ -352,7 +354,7 @@ export default class TorgCombat extends Combat {
   /**
    * Restore the previous Drama Card
    */
-  async dramaFlashback() {
+  async restorePreviousDrama() {
     if (!game.user.isGM) return;
 
     const settings = game.settings.get('torgeternity', 'deckSetting');

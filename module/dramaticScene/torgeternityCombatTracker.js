@@ -94,11 +94,16 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   _getCombatContextOptions() {
     const options = super._getCombatContextOptions();
     options.unshift({
+      name: "torgeternity.dramaCard.getPreviousDrama",
+      icon: '<i class="fa-solid fa-up-down"></i>',
+      condition: game.user.isGM && !!this.viewed,
+      callback: () => this.viewed.restorePreviousDrama()
+    }, {
       name: "torgeternity.dramaCard.shuffleDeck",
       icon: '<i class="fa-solid fa-random"></i>',
       condition: game.user.isGM && !!this.viewed,
       callback: () => this.viewed.resetDramaDeck()
-    })
+    });
     return options;
   }
   /**
