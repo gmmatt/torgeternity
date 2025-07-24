@@ -22,6 +22,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 -- **Confused** - disables the Play button in card Hands
 -- **Fatigued** - when each player ends their turn (or GM presses end-turn-tick) the character suffers their fatigue.
 -- **Stymied** - all actors on that faction's side are immediately given the Stymied (stacking) effect.
+-- **Other Options** - No automation supplied (or not easily possible).
 - Drawing a Drama Card will auto-sort the combatants based on the new card and the Standard/Dramatic setting.
 - Drama Deck can be shuffled from the Combat Tracker's context menu (three dots to the right of the Round counter).
 - Combat Context Menu option to recall previous Drama Card.
