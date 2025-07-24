@@ -26,6 +26,8 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Drawing a Drama Card will auto-sort the combatants based on the new card and the Standard/Dramatic setting.
 - Drama Deck can be shuffled from the Combat Tracker's context menu (three dots to the right of the Round counter).
 - Combat Context Menu option to recall previous Drama Card.
+- `rollSkillMacro` now returns a Promise which can be awaited, and the result can be found in `result.flags.torgeternity.test.resultText` (when `result` is the return value from the Promise)
+- All occurrences of `TestDialog.asPromise` have been renamed to `TestDialog.wait` (and is used exclusively throughout the code now).
 
 ### Bug Fixes
 
