@@ -39,20 +39,21 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   async _prepareCombatContext(context, options) {
     // for HEADER and FOOTER
     await super._prepareCombatContext(context, options);
-    const heroesFirst = this.viewed.areHeroesFirst;
+    const combat = this.viewed;
+    const heroesFirst = combat?.areHeroesFirst;
     context.firstFaction = heroesFirst ? 'heroes' : 'villains';
     context.secondFaction = !heroesFirst ? 'heroes' : 'villains';
-    context.isDramatic = this.viewed?.isDramatic;
-    context.conflictLine = this.viewed?.conflictLineText;
-    context.approvedActions = this.viewed?.approvedActionsText;
-    context.dsrLine = this.viewed?.dsrText;
+    context.isDramatic = combat?.isDramatic;
+    context.conflictLine = combat?.conflictLineText;
+    context.approvedActions = combat?.approvedActionsText;
+    context.dsrLine = combat?.dsrText;
 
     context.approved = {};
-    if (this.viewed)
-      for (const action of this.viewed?.approvedActions)
+    if (combat)
+      for (const action of combat.approvedActions)
         context.approved[action] = true;
-    context.firstCondition = heroesFirst ? this.viewed?.heroCondition : this.viewed?.villainCondition;
-    context.secondCondition = !heroesFirst ? this.viewed?.heroCondition : this.viewed?.villainCondition;
+    context.firstCondition = !combat ? 'none' : heroesFirst ? combat.heroCondition : combat.villainCondition;
+    context.secondCondition = !combat ? 'none' : !heroesFirst ? combat.heroCondition : combat.villainCondition;
 
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);

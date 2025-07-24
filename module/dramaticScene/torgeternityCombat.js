@@ -92,13 +92,13 @@ export default class TorgCombat extends Combat {
 
   get heroCondition() {
     const card = this.currentDrama;
-    if (!card) return "";
+    if (!card) return 'none';
     return this.isDramatic ? card.system.heroesConditionsDramatic : card.system.heroesConditionsStandard;
   }
 
   get villainCondition() {
     const card = this.currentDrama;
-    if (!card) return "";
+    if (!card) return 'none';
     return this.isDramatic ? card.system.villainsConditionsDramatic : card.system.villainsConditionsStandard;
   }
 
