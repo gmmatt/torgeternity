@@ -81,15 +81,18 @@
   <nav class="encounters flexrow">
     <button type="button" class="toggleDramatic icon fa-solid {{ifThen isDramatic 'fa-people-robbery' 'fa-person'}}"
       data-action="toggleDramatic"
-      data-tooltip="{{localize 'torgeternity.combat.toggleDramatic'}}" {{disabled (not combat.turns)}}>
+      data-tooltip="{{localize 'torgeternity.combat.toggleDramatic'}}"
+      {{disabled (not (and @root.user.isGM combat.turns))}}>
     </button>
     {{#if user.isGM}}
-      <button type="button" class="heros-first icon fa-solid fa-users" data-action="heroesFirst"
+      <!--<button type="button" class="heros-first icon fa-solid fa-users" data-action="heroesFirst"
         data-tooltip="{{localize 'torgeternity.combat.herosTooltip'}}" {{disabled (not combat.turns)}}>
       </button>
       <button type="button" class="vilains-first icon fa-solid fa-users" data-action="villainsFirst"
         data-tooltip="{{localize 'torgeternity.combat.vilainsTooltip'}}" {{disabled (not combat.turns)}}>
-      </button>
+      </button>-->
+      {{> dramaButtons faction=firstFaction condition=firstCondition}}
+      {{> dramaButtons faction=secondFaction condition=secondCondition}}
     {{/if}}
     <button type="button" class="dsr-counter" data-action="dsrCounter"
       {{disabled (not (and @root.user.isGM combat.turns))}}>
@@ -149,11 +152,13 @@
   </nav>
 
   {{#*inline "dramaButtons"}}
-    <div class="control-buttons right flexrow drama-{{faction}}">
-      <span>{{localize (concat 'torgeternity.combat.' faction)}}</span>
+    <div class="control-buttons right flexrow drama-{{faction}} {{TorgHidden (eq condition 'none')}}">
+      <span
+        class="{{TorgHidden (eq condition 'none')}}">{{localize (concat 'torgeternity.dramaCard.' faction 'Condition')}}</span>
       <button type="button"
         class="ui-control toggle icon fa-solid fa-person-running-fast {{TorgHidden (ne condition 'flurry')}}"
-        data-action="dramaFlurry" data-tooltip="{{localize 'torgeternity.drama.flurryDesc'}}" data-faction="{{faction}}"
+        data-action="dramaFlurry" data-tooltip="{{localize 'torgeternity.drama.flurryDesc'}}"
+        data-faction="{{faction}}"
         {{disabled (not combat.turns)}} />
       <button type="button"
         class="ui-control toggle icon fa-solid fa-heart-circle-plus {{TorgHidden (ne condition 'inspiration')}}"
@@ -191,16 +196,12 @@
     </div>
   {{/inline}}
 
-  <p>{{#if conflictLine}}
-      {{conflictLine}}<br>
-    {{/if}}
+  <div class="flexrow">
     {{#if approvedActions}}
-      {{localize 'torgeternity.dramaCard.approvedActions'}}: {{approvedActions}}<br>
+      <p>{{localize 'torgeternity.dramaCard.approvedActions'}}: {{approvedActions}}</p>
     {{/if}}
     {{#if dsrLine}}
-      {{localize 'torgeternity.dramaCard.dsrLine'}} {{dsrLine}}
+      <p>{{localize 'torgeternity.dramaCard.dsrLine'}} {{dsrLine}}</p>
     {{/if}}
-  </p>
-  {{> dramaButtons faction=firstFaction condition=firstCondition}}
-  {{> dramaButtons faction=secondFaction condition=secondCondition}}
+  </div>
 </header>
