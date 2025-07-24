@@ -31,6 +31,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Effects can be deleted on embedded Items once again.
 - Threat sheet can be scrolled again.
 - Hide foreign language compendiums properly.
+- Skill Checks should use Numbers properly, rather than doing string concatenation.
 
 ### Translations
 

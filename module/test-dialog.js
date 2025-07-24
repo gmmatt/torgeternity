@@ -254,7 +254,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
           ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
           return;
         }
-        this.test.attackTraits = Array.from(myItem.system.traits);
+        this.test.attackTraits = myItem ? Array.from(myItem.system.traits) : [];
 
         // Add Cover Modifier
         this.test.addBDs ??= 0;
