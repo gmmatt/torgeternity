@@ -24,7 +24,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
   }
 
   _onHoverOut(event, options) {
-    const result = super._onHoverIn(event, options);
+    const result = super._onHoverOut(event, options);
     if (!TorgEternityToken.#label) return result;
 
     Hooks.off('refreshToken', TorgEternityToken.drawLabel);
