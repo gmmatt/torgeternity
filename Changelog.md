@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## 13.2.2
+## v13.2.2
 
 - Prevent crash of Combat Tracker when actor for a combatant has been deleted.
 - Chat messages for Drama conditions show proper text instead of `{faction}`.
@@ -9,7 +9,7 @@
 - Ensure that the Possibility/Up/Hero/Drama/+3 buttons add to the bonus properly.
 - Prevent error from BD button when chat card has no target.
 
-## 13.2.1
+## v13.2.1
 
 - Fix an issue with the Combat Tracker generating errors with unsupported cards.
 
