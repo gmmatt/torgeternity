@@ -23,7 +23,7 @@ export default class TorgCombat extends Combat {
     if (!super._preDelete(options, user)) return false;
 
     // listing of hands' actors in closing combat
-    this.combatants.filter(combatant => combatant.actor.type === 'stormknight')
+    this.combatants.filter(combatant => combatant.actor?.type === 'stormknight')
       .forEach(combatant => {
         const hand = game.actors.get(combatant.actorId).getDefaultHand();
         // delete the flag that give the pooled condition in each card of each hand
@@ -235,7 +235,7 @@ export default class TorgCombat extends Combat {
    */
   async #deleteActiveDefense() {
     for (const combatant of this.combatants) {
-      const activeDefenseEffect = combatant.actor.appliedEffects.find((eff) => eff.name === 'ActiveDefense');
+      const activeDefenseEffect = combatant.actor?.appliedEffects.find((eff) => eff.name === 'ActiveDefense');
       if (activeDefenseEffect) await activeDefenseEffect.delete();
     }
   }
@@ -249,7 +249,7 @@ export default class TorgCombat extends Combat {
   }
   getFactionActors(faction) {
     const disposition = (faction === 'heroes') ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
-    return this.turns.filter(combatant => combatant.token.disposition === disposition).map(combatant => combatant.actor);
+    return this.turns.filter(combatant => combatant.token?.disposition === disposition && combatant.actor).map(combatant => combatant.actor);
   }
   setCardsPlayable(value) {
     for (const actor of this.getFactionActors('heroes')) {
@@ -343,13 +343,14 @@ export default class TorgCombat extends Combat {
   dramaEndOfTurn(combatant) {
     if (this.getFlag('torgeternity', FATIGUED_FACTION_FLAG) === this.getCombatantFaction(combatant)) {
       const actor = combatant.actor;
+      if (!actor) return;
 
       let chatOutput = `<h2>${game.i18n.localize(
         'torgeternity.sheetLabels.fatigue'
       )}!</h2><p>${game.i18n.localize('torgeternity.macros.fatigueMacroDealtDamage')}</p><ul>`;
 
       if (actor.hasStatusEffect('unconscious')) {
-        chatOutput += `<li>${combatant.actor.name} ${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}</li>`;
+        chatOutput += `<li>${actor.name} ${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}</li>`;
       }
 
       const shockIncrease = actor.fatigue;

@@ -821,6 +821,7 @@ function individualDN(test, target) {
       // Find the fastest participant in the active combat
       let highestSpeed = 0;
       for (const combatant of game.combats.active.turns) {
+        if (!combatant.actor) continue;
         const combatantSpeed = (combatant.actor.type === 'vehicle') ?
           combatant.actor.system.topSpeed.value :
           getTorgValue(combatant.actor.system.other.run);
