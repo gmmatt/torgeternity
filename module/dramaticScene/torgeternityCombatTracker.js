@@ -62,7 +62,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   async _prepareTurnContext(combat, combatant, index) {
     const context = await super._prepareTurnContext(combat, combatant, index);
 
-    const hand = combatant.actor.getDefaultHand();
+    // If actor has been deleted, then combatant.actor will be null
+    const hand = combatant.actor?.getDefaultHand();
     context.noHand = !hand;
     if (hand) {
       context.cardpool = hand.cards
@@ -70,7 +71,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
         .map(card => { return { name: card.name, img: card.img } }) ?? [];
     }
     context.turnTaken = combatant.turnTaken;
-    context.actorType = combatant.actor.type;
+    context.actorType = combatant.actor?.type;
     const dispositions = {
       [CONST.TOKEN_DISPOSITIONS.SECRET]: "secret",
       [CONST.TOKEN_DISPOSITIONS.HOSTILE]: "hostile",

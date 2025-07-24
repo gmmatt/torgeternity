@@ -4,7 +4,7 @@ export default class TorgEternityTokenRuler extends foundry.canvas.placeables.to
 
   _getWaypointLabelContext(waypoint, state) {
     const context = super._getWaypointLabelContext(waypoint, state);
-    if (!context || !context.cost.total || this.token.actor.type === 'vehicle') return context;
+    if (!context || !context.cost.total || !this.token.actor || this.token.actor.type === 'vehicle') return context;
     const cost = context.cost.total;
     const move = this.token?.actor.system.other.move;
     const walking = this.token.document.movementAction === 'walk';

@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## 13.2.2
+
+- Prevent crash of Combat Tracker when actor for a combatant has been deleted.
+
 ## 13.2.1
 
 - Fix an issue with the Combat Tracker generating errors with unsupported cards.
