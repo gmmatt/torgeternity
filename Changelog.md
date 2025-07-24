@@ -37,6 +37,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Hide foreign language compendiums properly.
 - Skill Checks should use Numbers properly, rather than doing string concatenation.
 - Fix issue with hovering over tokens.
+- Prevent error in Card Deck Configuration when player has no hand assigned.
 
 ### Translations
 
