@@ -18,6 +18,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     // token-effects ignore the themed setting below.
     classes: ['torgeternity', 'themed', 'theme-dark'],
     actions: {
+      'toggleDramatic': torgeternityCombatTracker.#toggleDramatic,
       'heroesFirst': torgeternityCombatTracker.#onHeroesFirst,
       'villainsFirst': torgeternityCombatTracker.#onVillainsFirst,
       'hasPlayed': torgeternityCombatTracker.#onHasPlayed,
@@ -39,6 +40,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     await super._prepareCombatContext(context, options);
     context.firstFaction = this.firstFaction;
     context.secondFaction = this.secondFaction;
+    context.isDramatic = this.viewed.isDramatic;
+    context.conflictLine = this.viewed.conflictLineText;
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
   }
@@ -176,6 +179,11 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   /*
    * DRAMA DECK HANDLING
    */
+  static #toggleDramatic(event, button) {
+    const newstate = !this.viewed.isDramatic;
+    console.log(`COMBAT MODE = ${newstate ? "DRAMATIC" : "STANDARD"}`)
+    this.viewed.setIsDramatic(newstate);
+  }
   static #onDramaFlurry(event, button) {
     this.viewed.dramaFlurry(button.dataset.faction);
   }

@@ -145,6 +145,7 @@
     },
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp",
+      "toggleDramatic": "Toggle between Standard and Dramatic Combat Resolution",
       "endMyTurn": "Terminé",
       "nextKeep": "Nouveau round (garder la carte actuelle)",
       "nextNew": "Nouveau round (nouvelle carte Action)",

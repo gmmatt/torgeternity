@@ -145,6 +145,7 @@
     },
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
+      "toggleDramatic": "Toggle between Standard and Dramatic Combat Resolution",
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
       "nextNew": "neue Runde (neue Dramakarte)",

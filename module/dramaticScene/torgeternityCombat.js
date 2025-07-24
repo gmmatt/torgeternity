@@ -12,21 +12,15 @@ export default class TorgCombat extends Combat {
    * @param userId
    */
   _onCreate(data, options, userId) {
-    if (game.user.isGM) {
-      const settings = game.settings.get('torgeternity', 'deckSetting');
-      const dramaDeck = game.cards.get(settings.dramaDeck);
-      const dramaActive = game.cards.get(settings.dramaActive);
-      if (dramaDeck.availableCards.length > 0) {
-        /*await*/ dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
-      } else {
-        ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
-      }
-    }
     super._onCreate(data, options, userId);
+
+    // Active GM draws the next available drama card
+    if (game.user.isActiveGM) this.drawDramaCard();
   }
 
   async _preDelete(options, user) {
     if (!super._preDelete(options, user)) return false;
+
     // listing of hands' actors in closing combat
     this.combatants.filter(combatant => combatant.actor.type === 'stormknight')
       .forEach(combatant => {
@@ -73,12 +67,21 @@ export default class TorgCombat extends Combat {
     super._onUpdate(changed, options, userId);
   }
 
-  /**
-   *
-   */
-  async nextRound() {
-    if (!game.user.isActiveGM) return super.nextRound();
+  setIsDramatic(value) {
+    this.setFlag('torgeternity', 'isDramatic', value)
+  }
+  get isDramatic() {
+    return this.getFlag('torgeternity', 'isDramatic') ?? false;
+  }
 
+  /**
+   * Discard the old drama card
+   */
+  /**
+   * Extra work when a drama card is drawn
+   */
+
+  async drawDramaCard() {
     const settings = game.settings.get('torgeternity', 'deckSetting');
     const dramaDeck = game.cards.get(settings.dramaDeck);
     const dramaDiscard = game.cards.get(settings.dramaDiscard);
@@ -88,11 +91,52 @@ export default class TorgCombat extends Combat {
     if (dramaActive.cards.size > 0)
       await dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
 
-    // Draw the next available Drama Card (if any)
-    if (dramaDeck.availableCards.length > 0)
-      await dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
-    else
+    if (!dramaDeck.availableCards.length) {
       ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
+      return;
+    }
+
+    const [card] = await dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
+
+    // Look at the details on the new card.
+    if (this.isDramatic) {
+      if (card.system.heroesFirstDramatic)
+        console.log(`Dramatic: H ${card.system.heroesConditionsDramatic}   V ${card.system.villainsConditionsDramatic}`)
+      else
+        console.log(`Dramatic: V ${card.system.villainsConditionsDramatic}   H ${card.system.heroesConditionsDramatic}`)
+    } else {
+      if (card.system.heroesFirstStandard)
+        console.log(`Standard: H ${card.system.heroesConditionsStandard}   V ${card.system.villainsConditionsStandard}`)
+      else
+        console.log(`Standard: V ${card.system.villainsConditionsStandard}   H ${card.system.heroesConditionsStandard}`)
+    }
+    console.log(`DSR: '${card.system.dsrLine.trim()}'   Actions: '${card.system.approvedActions.trim()}'`);
+  }
+
+  get conflictLineText() {
+    const settings = game.settings.get('torgeternity', 'deckSetting');
+    const dramaActive = game.cards.get(settings.dramaActive);
+    if (!dramaActive.cards.size) return "No Drama Card Active";
+    const card = dramaActive.cards.contents[0];
+    if (this.isDramatic) {
+      if (card.system.heroesFirstDramatic)
+        return `Dramatic: H ${card.system.heroesConditionsDramatic}   V ${card.system.villainsConditionsDramatic} - ${card.system.approvedActions}`
+      else
+        return `Dramatic: V ${card.system.villainsConditionsDramatic}   H ${card.system.heroesConditionsDramatic} - ${card.system.approvedActions}`
+    } else {
+      if (card.system.heroesFirstStandard)
+        return `Standard: H ${card.system.heroesConditionsStandard}   V ${card.system.villainsConditionsStandard} - ${card.system.approvedActions}`
+      else
+        return `Standard: V ${card.system.villainsConditionsStandard}   H ${card.system.heroesConditionsStandard} - ${card.system.approvedActions}`
+    }
+  }
+  /**
+   *
+   */
+  async nextRound() {
+    if (!game.user.isActiveGM) return super.nextRound();
+
+    this.drawDramaCard();
 
     // Perform end-of-faction's turn processing
     await this.nextRoundKeep();

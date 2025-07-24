@@ -79,6 +79,10 @@
   {{/if}}
   <!-- <img src="systems/torgeternity/images/cards/drama-back.jpg" id="active-drama-card" style="object-fit:contain"> -->
   <nav class="encounters flexrow">
+    <button type="button" class="toggleDramatic icon fa-solid {{ifThen isDramatic 'fa-people-robbery' 'fa-person'}}"
+      data-action="toggleDramatic"
+      data-tooltip="{{localize 'torgeternity.combat.toggleDramatic'}}" {{disabled (not combat.turns)}}>
+    </button>
     {{#if user.isGM}}
       <button type="button" class="heros-first icon fa-solid fa-users" data-action="heroesFirst"
         data-tooltip="{{localize 'torgeternity.combat.herosTooltip'}}" {{disabled (not combat.turns)}}>
@@ -175,6 +179,7 @@
     </div>
   {{/inline}}
 
+  <p>{{conflictLine}}</p>
   {{> dramaButtons faction=firstFaction}}
   {{> dramaButtons faction=secondFaction}}
 </header>
