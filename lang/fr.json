@@ -8,6 +8,11 @@
       "destiny": "Destin",
       "drama": "Action",
       "cosm": "Cosm"
+    },
+    "Actor": {
+      "stormknight": "Stormknight",
+      "threat": "Threat",
+      "vehicle": "Vehicle"
     }
   },
   "torgeternity": {

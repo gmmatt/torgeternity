@@ -105,27 +105,29 @@ Hooks.once('init', async function () {
   // ---register items and actors
   foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
   foundry.documents.collections.Items.registerSheet('torgeternity', TorgeternityItemSheet, {
+    label: "Torg Eternity Item Sheet",
     makeDefault: true,
   });
 
   foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
   foundry.documents.collections.Actors.registerSheet('torgeternity', TorgeternityActorSheet, {
+    label: "Torg Eternity Actor Sheet",
     makeDefault: true,
   });
 
   // ---register cards
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
-    label: 'Torg Player Hand',
+    label: 'Torg Eternity Player Hand',
     types: ['hand'],
     makeDefault: true,
   });
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
-    label: 'Torg Pile',
+    label: 'Torg Eternity Pile',
     types: ['pile'],
     makeDefault: true,
   });
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
-    label: 'Torg Deck',
+    label: 'Torg Eternity Deck',
     types: ['deck'],
     makeDefault: true,
   });
