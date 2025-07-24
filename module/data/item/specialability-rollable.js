@@ -1,3 +1,5 @@
+import { newTraitsField } from './general.js';
+
 const fields = foundry.data.fields;
 
 /**
@@ -14,6 +16,7 @@ export class SpecialAbilityRollableItemData extends foundry.abstract.TypeDataMod
       chatNote: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
       description: new fields.HTMLField({ initial: '' }),
+      traits: newTraitsField('specialability-rollable'),
     };
   }
 

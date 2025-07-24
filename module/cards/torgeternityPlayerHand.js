@@ -1,3 +1,5 @@
+import torgeternityDeck from './torgeternityDeck.js';
+
 const { DialogV2 } = foundry.applications.api;
 
 /**
@@ -35,6 +37,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
+    context.disablePlay = context?.document.getFlag('torgeternity', 'disablePlayCards');
     for (const card of context?.document.cards) {
       card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
     }
@@ -96,7 +99,38 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     if (this.document.getFlag('torgeternity', 'lifelike')) {
       this.rotateCards(this.element);
     }
+    // The following is required to get drag/drop working
+    if (options.parts.includes('normal') || options.parts.includes('lifelike'))
+      options.parts.push('cards');
+
+    // An extra drag-drop for Lifelike
+    new foundry.applications.ux.DragDrop.implementation({
+      //dragSelector: "div#handedCards",
+      dropSelector: "div#handedCards",
+      permissions: {
+        dragstart: () => this.isEditable,
+        drop: () => this.isEditable
+      },
+      callbacks: {
+        dragstart: this._onDragStart.bind(this),
+        dragover: this._onDragOver.bind(this),
+        drop: this._onDrop.bind(this)
+      }
+    }).bind(this.element);
+
     await super._onRender(context, options);
+  }
+
+  /**
+   * Our own drag/drop handler copes with dropping into the blank area of the lifelike hand,
+   * but we must prevent the drop handler being called twice when a card is dropped onto one
+   * the two piles of cards in that window.
+   * @param {*} event 
+   */
+  _onDrop(event) {
+    super._onDrop(event);
+    event.preventDefault();
+    event.stopImmediatePropagation();
   }
 
   /**
@@ -287,6 +321,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   async drawCosmDialog() {
     const data = {};
     data.decks = game.settings.get('torgeternity', 'deckSetting');
+    data.unused = torgeternityDeck.UNUSED_DECK_ID;
     const html = await foundry.applications.handlebars.renderTemplate(
       'systems/torgeternity/templates/cards/drawCosmDialog.hbs',
       data

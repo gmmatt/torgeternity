@@ -1,3 +1,5 @@
+import { newTraitsField } from './general.js';
+
 const fields = foundry.data.fields;
 
 /**
@@ -11,6 +13,7 @@ export class EnhancementItemData extends foundry.abstract.TypeDataModel {
     return {
       description: new fields.HTMLField({ initial: '' }),
       perk: new fields.StringField({ initial: '' }),
+      traits: newTraitsField('enhancement'),
     };
   }
 

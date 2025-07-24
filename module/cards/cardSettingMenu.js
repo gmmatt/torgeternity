@@ -1,8 +1,10 @@
+import torgeternityDeck from './torgeternityDeck.js';
 /**
  *
  */
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
+const NOT_SELECTED_LABEL = '----';
 export default class DeckSettingMenu extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
@@ -54,19 +56,19 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
         .reduce((acc, pile) => {
           acc[pile.id] = pile.name;
           return acc;
-        }, {}),
+        }, { [torgeternityDeck.UNUSED_DECK_ID]: NOT_SELECTED_LABEL }),
       decks: game.cards
         .filter((c) => c.type === 'deck')
         .reduce((acc, pile) => {
           acc[pile.id] = pile.name;
           return acc;
-        }, {}),
+        }, { [torgeternityDeck.UNUSED_DECK_ID]: NOT_SELECTED_LABEL }),
       hands: game.cards
         .filter((c) => c.type === 'hand')
         .reduce((acc, pile) => {
           acc[pile.id] = pile.name;
           return acc;
-        }, {}),
+        }, { [torgeternityDeck.UNUSED_DECK_ID]: NOT_SELECTED_LABEL }),
       buttons: [
         { type: "button", action: "createCards", icon: "fa-solid fa-plus", label: "DOCUMENT.Cards" },
         { type: "submit", action: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" },
@@ -171,12 +173,12 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
       return;
     }
 
-    const actorsPerm = actor.getHandOwnership();
     // assigning same permissions from actor to hand
-    hand.update({
-      ownership: actorsPerm,
-      flags: { torgeternity: { defaultHand: actor.id } },
-    });
+    if (hand)
+      hand.update({
+        ownership: actor.getHandOwnership(),
+        flags: { torgeternity: { defaultHand: actor.id } },
+      });
     if (oldHand) oldHand.setFlag('torgeternity', 'defaultHand', null);
   }
   /**
@@ -187,6 +189,8 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
 
     for (const select of this.element.querySelectorAll('select')) {
       const value = select.options[select.selectedIndex].value;
+      if (value === NOT_SELECTED_LABEL) continue;
+
       selectedValues.push(value);
       const valueCount = selectedValues.filter((val) => val === value).length;
 
@@ -200,6 +204,8 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
     }
     for (const select of this.element.querySelectorAll('select')) {
       const value = select.options[select.selectedIndex].value;
+      if (value === NOT_SELECTED_LABEL) continue;
+
       if (this.doubledValues.indexOf(value) > -1) {
         select.classList.add('doubled');
       } else {

@@ -7,7 +7,7 @@ const fields = foundry.data.fields;
 export class AmmunitionItemData extends GeneralItemData {
   static defineSchema() {
     return {
-      ...super.defineSchema(),
+      ...super.defineSchema('ammunition'),
       type: new fields.StringField({ initial: '' }),
       quantity: new fields.NumberField({ initial: 1 }),
       damageMod: new fields.NumberField({ integer: true, initial: 0 }),

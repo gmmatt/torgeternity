@@ -10,7 +10,7 @@ export class ArmorItemData extends GeneralItemData {
    */
   static defineSchema() {
     return {
-      ...super.defineSchema(),
+      ...super.defineSchema('armor'),
       bonus: new fields.NumberField({ initial: 1, integer: true }),
       equipped: new fields.BooleanField({ initial: false }),
       maxDex: new fields.NumberField({ initial: 12, integer: true }),

@@ -3,6 +3,8 @@
  */
 export default class torgeternityDeck extends foundry.applications.sheets.CardDeckConfig {
 
+  static UNUSED_DECK_ID = '-unused-';
+
   static DEFAULT_OPTIONS = {
     type: "deck",
     classes: ['torgeternity', 'themed', 'theme-dark'],

@@ -8,7 +8,6 @@ const DEFAULT_TEST = {
   // difficulty-selector
   DNDescriptor: "standard",    // number or string
   // bonus-selector
-  previousBonus: false,
   bonus: null,      // null or number
   rollTotal: 0,   // 0 = force a manual dice roll
   // favored
@@ -89,7 +88,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    * @param {object} options Foundry base options for the Application
    * @returns {Promise<ChatMessageTorg|undefined>} The ChatMessage of the Roll
    */
-  static asPromise(test, options) {
+  static wait(test, options) {
     return new Promise(resolve => new TestDialog(test, { ...options, callback: resolve }));
   }
 
@@ -101,6 +100,15 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    */
   constructor(test, options = {}) {
     super(options);
+
+    for (const key of Object.keys(test)) {
+      if (!(test[key] instanceof String)) continue;
+      const num = Number(test[key]);
+      if (isNaN(num)) continue;
+      console.error(`TestDialog passed a number as a String! (${key} = ${test[key]})`)
+      test[key] = num;
+    }
+
     this.mode = test.mode ?? 'create';
     this.test = foundry.utils.mergeObject(DEFAULT_TEST, test, { inplace: false });
 
@@ -110,6 +118,9 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       this.test.actorPic ??= actor.img;
       this.test.actorName ??= actor.name;
       this.test.actorType ??= actor.type;
+
+      const item = this.test.itemId ? actor.items.get(this.test.itemId) : null;
+      if (item) this.test.trademark = item.system.traits.has('trademark');
     }
     // Ensure all relevant fields are Number
     for (const key of Object.keys(DEFAULT_TEST))
@@ -208,26 +219,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
   /**
    *
-   * @param html
-   */
-  async _onRender(context, options) {
-    await super._onRender(context, options);
-
-    this.element.querySelector('#bonus-text')?.addEventListener('change', this.onChangeBonusText.bind(this));
-  }
-
-  /**
-   * Ensure the correct radio button is selected.
-   * @param {*} event 
-   * 
-   */
-  onChangeBonusText(event) {
-    const input = event.target;
-    input.parentElement.querySelector(input.value.length ? '#previous-bonus' : '#roll').checked = true;
-  }
-
-  /**
-   *
    * @param event
    * @param html
    */
@@ -248,10 +239,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
       if (this.test.testType === 'activeDefense') this.test.DNDescriptor = 'standard';
 
-      // Add bonus, if needed
-      this.test.previousBonus = fields.previousBonus;
-      this.test.bonus = this.test.previousBonus ? fields.bonus : null;
-
       //
       // Add attack and target options if needed
       //
@@ -267,6 +254,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
           ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
           return;
         }
+        this.test.attackTraits = myItem ? Array.from(myItem.system.traits) : [];
 
         // Add Cover Modifier
         this.test.addBDs ??= 0;
@@ -314,6 +302,7 @@ export function oneTestTarget(token, applySize) {
       sizeModifier: sizeModifier,
       toughness: actor.defenses.toughness,
       armor: actor.defenses.armor,
+      armorTraits: [],
       // then vehicle specifics
       defenses: {
         vehicle: actor.system.defense,
@@ -336,6 +325,7 @@ export function oneTestTarget(token, applySize) {
       sizeModifier: sizeModifier,
       toughness: actor.defenses.toughness,
       armor: actor.defenses.armor,
+      defenseTraits: Array.from(actor.items.find(it => it.type === 'armor' && it.system.equipped)?.system.traits ?? []),
       // then non-vehicle changes
       skills: actor.system.skills,
       attributes: actor.system.attributes,
@@ -395,8 +385,8 @@ export function TestDialogLabel(test) {
       result = `${test.skillName} ${game.i18n.localize('torgeternity.chatText.test')}  `;
   }
   if (test.itemId) {
-    const itemLabel = fromUuidSync(test.actor, { strict: false })?.items.get(test.itemId).name;
-    if (itemLabel) result += ` (${itemLabel})`;
+    const itemName = fromUuidSync(test.actor, { strict: false })?.items.get(test.itemId).name;
+    if (itemName) result += ` (${itemName})`;
   }
   return result;
 }

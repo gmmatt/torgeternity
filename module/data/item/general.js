@@ -11,7 +11,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
    *
    * @returns {object} Schema fragment for an item
    */
-  static defineSchema() {
+  static defineSchema(itemType) {
     return {
       cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
       description: new fields.HTMLField({ initial: '' }),
@@ -22,6 +22,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
         selected: new fields.StringField({ initial: 'none' }),
         value: new fields.NumberField({ initial: null, integer: true }),
       }),
+      traits: newTraitsField(itemType),
     };
   }
 
@@ -47,4 +48,21 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
   prepareDerivedData() {
     super.prepareDerivedData();
   }
+}
+
+
+export function newTraitsField(itemType) {
+  return new fields.SetField(
+    new fields.StringField({
+      blank: false,
+      choices: itemType ? CONFIG.torgeternity.validItemTraits[itemType] : undefined,
+      textSearch: true,
+      trim: true,
+    }),
+    {
+      nullable: false,
+      required: true,
+      label: 'torgeternity.fieldLabels.itemTraits.label',
+      hint: 'torgeternity.fieldLabels.itemTraits.hint',
+    });
 }

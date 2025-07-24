@@ -1,6 +1,6 @@
 {{#if source.flags.torgeternity.lifelike}}
   <div id="handedCards">
-    <ol class=" cards destinyCards">
+    <ol class="cards destinyCards" data-cards>
       {{#each cards as |card|}}
         {{#if (eq card.type "destiny")}}
           <li class="card flexrow {{#if card.flags.torgeternity.pooled}}pooled{{/if}}"
@@ -20,7 +20,7 @@
                 </a>
               </div>
               <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}"
-                data-action="controlCard" data-control="play">
+                data-action="controlCard" data-control="play" {{disabled @root.disablePlay}}>
                 <i class="fas fa-play-circle" style="color:white"></i>
               </a>
               <!-- <a class="card-control" data-tooltip="View Card" data-action="controlCard" data-control="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
@@ -51,7 +51,7 @@
 
     </ol>
 
-    <ol class="cards cosmCards">
+    <ol class="cards cosmCards" data-cards>
       {{#each cards as |card|}}
         {{#if (eq card.type "cosm")}}
 

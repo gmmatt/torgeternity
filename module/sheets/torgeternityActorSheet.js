@@ -76,13 +76,25 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static TABS = {
-    primary: {
+    stormknight: {
       tabs: [
         { id: 'stats', },
         { id: 'perks', },
         { id: 'gear', },
         { id: 'powers', },
-        { id: 'effects', },
+        { id: 'effects', cssClass: 'scrollable' },
+        { id: 'background', label: 'torgeternity.sheetLabels.notes' },
+      ],
+      initial: "stats",
+      labelPrefix: 'torgeternity.sheetLabels'
+    },
+    threat: {
+      tabs: [
+        { id: 'stats', },
+        { id: 'perks', },
+        { id: 'gear', },
+        { id: 'powers', },
+        { id: 'effects', }, // not scrollable
         { id: 'background', label: 'torgeternity.sheetLabels.notes' },
       ],
       initial: "stats",
@@ -92,7 +104,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       tabs: [
         { id: 'stats', },
         { id: 'gear', },
-        { id: 'effects', },
+        { id: 'effects', cssClass: 'scrollable' },
         { id: 'background', label: 'torgeternity.sheetLabels.notes' },
       ],
       initial: "stats",
@@ -143,7 +155,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
-    context.tabs = this._prepareTabs((this.actor.type === 'vehicle') ? 'vehicle' : 'primary');
+    context.tabs = this._prepareTabs(this.actor.type);
     context.systemFields = context.document.system.schema.fields;
     context.items = Array.from(context.document.items);
     context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
@@ -219,6 +231,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     //        this.actor.system.editstate = "none";
 
     context.effects = prepareActiveEffectCategories(this.actor.allApplicableEffects());
+    context.noDeleteTxFx = true; // Don't allow transferred effects to be deleted
 
     context.config = CONFIG.torgeternity;
     context.disableXP = true;
@@ -261,10 +274,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       data: {
         name: event.target.dataset.name,
         attribute: event.target.dataset.baseattribute,
-        adds: event.target.dataset.adds,
-        value: event.target.dataset.value,
+        adds: Number(event.target.dataset.adds),
+        value: Number(event.target.dataset.value),
         unskilledUse: event.target.dataset.unskilleduse,
-        attackType: '',
         DNDescriptor: 'standard',
       },
     };
@@ -288,7 +300,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         adds: skill.adds,
         value: value,
         unskilledUse: skill.unskilledUse,
-        attackType: event.target.dataset.attackType.value,
       },
     };
     event.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
@@ -316,6 +327,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (this.actor.isOwner) {
       html.querySelectorAll('.attributeValueField').forEach(elem =>
         elem.addEventListener('change', event => {
+          const target = event.target;
           const concernedAttribute = target.dataset.baseattributeinput;
           this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: parseInt(target.value) });
         }));
@@ -472,7 +484,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static async #onSkillRoll(event, button) {
     const skillName = button.dataset.name;
     const attributeName = button.dataset.baseattribute;
-    const skillValue = button.dataset.value;
+    const skillValue = Number(button.dataset.value);
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, this.actor)) return;
@@ -505,7 +517,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       }
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
       actor: this.actor,
@@ -534,12 +546,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         ? isUnskilledTest
           ? '-'
           : this.actor.system.attributes[attributeName].value
-        : button.dataset.value;
+        : Number(button.dataset.value);
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, this.actor)) return;
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
       actor: this.actor,
@@ -564,11 +576,11 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       return;
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'chase',
       actor: this.actor,
       skillName: 'Vehicle Chase',
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       DNDescriptor: 'highestSpeed',
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
@@ -582,11 +594,11 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onBaseRoll(event, button) {
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'vehicleBase',
       actor: this.actor,
       skillName: 'Vehicle Operation',
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -602,11 +614,11 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const dnDescriptor = (game.user.targets.first()?.actor.type === 'vehicle')
       ? 'targetVehicleDefense' : 'standard';
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'stunt',
       actor: this.actor,
       skillName: 'Vehicle Stunt',
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       DNDescriptor: dnDescriptor,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
@@ -621,9 +633,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static #onInteractionAttack(event, button) {
     let dnDescriptor = 'standard';
-    const attackType = button.dataset.name;
     if (game.user.targets.size) {
-      switch (attackType) {
+      switch (button.dataset.name) {
         case 'intimidation':
           dnDescriptor = 'targetIntimidation';
           break;
@@ -643,12 +654,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       dnDescriptor = 'standard';
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'interactionAttack',
       actor: this.actor,
       skillName: button.dataset.name,
       skillAdds: button.dataset.adds,
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       isFav: this.actor.system.skills[button.dataset.name].isFav,
       unskilledUse: true,
       DNDescriptor: dnDescriptor,
@@ -681,9 +692,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     const skillValue = isNaN(button.dataset.skillValue)
       ? this.actor.system.attributes.dexterity.value
-      : button.dataset.skillValue;
+      : Number(button.dataset.skillValue);
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'attack',
       actor: this.actor,
       amountBD: 0,
@@ -721,7 +732,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static #onActiveDefenseRoll(event, button) {
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'activeDefense',
       activelyDefending: false,
       actor: this.actor,
@@ -873,7 +884,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         adjustedDamage = parseInt(weaponDamage);
     }
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'attack',
       actor: this.actor,
       amountBD: 0,
@@ -912,7 +923,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     if (checkUnskilled(skillData.value, skillName, this.actor)) return;
 
-    new TestDialog({
+    return TestDialog.wait({
       testType: 'power',
       actor: this.actor,
       powerName: item.name,
