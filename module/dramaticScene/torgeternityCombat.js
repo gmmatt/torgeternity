@@ -117,6 +117,16 @@ export default class TorgCombat extends Combat {
   async setDramaEffects(card) {
     console.log(this.conflictLineText)
     console.log(`DSR: '${this.dsrText}'   Actions: '${this.approvedActionsText}'`);
+
+    // Sort combatants based on which faction is first
+    const whoFirst = (this.isDramatic ? card.system.heroesFirstDramatic : card.system.heroesFirstStandard) ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
+    await this.resetAll();
+    const updates = [];
+    for (const combatant of this.turns) {
+      const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
+      updates.push({ _id: combatant.id, initiative });
+    }
+    if (updates.length) this.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
   }
 
   get conflictLineText() {
