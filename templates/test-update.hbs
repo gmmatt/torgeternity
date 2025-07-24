@@ -1,8 +1,12 @@
 <div class="test-dialog">
-  <div> {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}} </div>
-  <div> {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}} </div>
-  <div> {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}} </div>
-  <div> {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}} </div>
+  <div class="flexrow">
+    <div> {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}} </div>
+    <div> {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}} </div>
+  </div>
+  <div class="flexrow">
+    <div> {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}} </div>
+    <div> {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}} </div>
+  </div>
   <div> {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}} </div>
   {{#if test.hasModifiers}}
     <div> {{> "systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs"}} </div>

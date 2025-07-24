@@ -354,20 +354,7 @@ export class TorgeternityMacros {
   }
 
   async dramaFlashback() {
-    if (!game.user.isGM) {
-      return;
-    }
-    const settings = game.settings.get('torgeternity', 'deckSetting');
-    const dramaDeck = game.cards.get(settings.dramaDeck);
-    const dramaDiscard = game.cards.get(settings.dramaDiscard);
-    const dramaActive = game.cards.get(settings.dramaActive);
-    const restoreOldActive = Array.from(dramaDiscard.cards).pop();
-    const removeActiveCard = Array.from(dramaActive.cards).pop();
-    // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here
-    removeActiveCard.pass(dramaDeck);
-    restoreOldActive.pass(dramaActive);
-    const activeImage = restoreOldActive.faces[0].img;
-    game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
+    ui.combat.viewed.restorePreviousDrama();
   }
 
   // #endregion
@@ -421,7 +408,7 @@ export class TorgeternityMacros {
       });
     }
 
-    const dialog = await TestDialog.asPromise(test, { useTargets: true });
+    const dialog = await TestDialog.wait(test, { useTargets: true });
 
     if (!dialog) {
       ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoChatMessageFound'));
@@ -534,7 +521,7 @@ export class TorgeternityMacros {
         const lastMessage = found.pop();
         // don't use game.torgeternity.cardChatOptions, since no other messages put in chat
         lastCard.pass(parentHand);
-        ChatMessage.deleteDocuments([lastMessage.id]);
+        ChatMessage.implementation.deleteDocuments([lastMessage.id]);
       }
     }
   }

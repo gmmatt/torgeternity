@@ -10,7 +10,7 @@ export class MeleeWeaponItemData extends GeneralItemData {
    */
   static defineSchema() {
     return {
-      ...super.defineSchema(),
+      ...super.defineSchema('meleeweapon'),
       ap: new fields.NumberField({ initial: 0, integer: true }),
       attackWith: new fields.StringField({ initial: 'meleeWeapons' }),
       bonus: new fields.NumberField({ initial: 2, integer: true }),

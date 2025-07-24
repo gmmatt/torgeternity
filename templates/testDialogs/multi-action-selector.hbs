@@ -1,8 +1,8 @@
 <fieldset>
   <legend>{{localize "torgeternity.sheetLabels.multiActionPenalty"}}</legend>
 
-  <span class="skill-check-options">
+  <div class="skill-check-options flexrow">
     <span>{{localize "torgeternity.sheetLabels.actions"}}:</span>
-    {{radioBoxesNumber "multiModifier" choices.multipleActions checked=test.multiModifier localize=true}}
-  </span>
+    {{TorgRadioBoxesNumber "multiModifier" choices.multipleActions checked=test.multiModifier localize=true tooltip=true}}
+  </div>
 </fieldset>

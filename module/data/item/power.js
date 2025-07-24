@@ -1,4 +1,5 @@
 import { torgeternity } from '../../config.js';
+import { newTraitsField } from './general.js';
 
 const fields = foundry.data.fields;
 /**
@@ -28,6 +29,7 @@ export class PowerItemData extends foundry.abstract.TypeDataModel {
       skill: new fields.StringField({ initial: '' }),
       skilllevel: new fields.StringField({ initial: '' }),
       targetDefense: new fields.StringField({ initial: '' }),
+      traits: newTraitsField('power'),
     };
   }
 

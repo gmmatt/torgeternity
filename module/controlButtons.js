@@ -79,7 +79,7 @@ function setControlsToggle(name, active) {
   const controls = foundry.ui.controls
   controls.controls.torg.tools[name].active = active;
   const button = controls.element.querySelector(`button.tool[data-tool="${name}"]`);
-  button.setAttribute("aria-pressed", active ? "true" : "false");
+  button?.setAttribute("aria-pressed", active ? "true" : "false");
 }
 
 Hooks.on('renderDeckSettingMenu', () => setControlsToggle("deckSettings", true))

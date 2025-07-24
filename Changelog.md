@@ -1,8 +1,53 @@
 # TORG Eternity Changelog
 
+## v13.2.0
+
+### Improvements
+
+- For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
+- Rework Check Dialog to make selected options appear clearer.
+-- New layout, with actual modifier shown in tooltip rather than permanently on display.
+-- Modifiers in chat tooltip are sorted alphabetically
+- When changing an Actor's portrait, if the old portrait matches the token image then the token image
+is replaced by the new portrait. (For unlinked Actors, this will directly affect the displayed token.)
+- #336: Add a field to add **traits** to Items - at the moment only a predefined list of traits is available.
+-- **'painful'** trait will add +1 shock if any damage is caused.
+-- **'stagger'** trait will display button to apply Stymied to target if any damage is caused.
+-- **'unwieldy'** trait will display button to apply Vulnerable to attacker on a miss.
+-- **'trademark'** trait will auto-set the "Trademark Weapon" button in the Test Dialog.
+- #162: Allow cosms to be marked as unused in the Deck Configuration window.
+-- Cosm decks marked as not available will not be available in the "Draw Cosm Card" dialog.
+- #296: First iteration of supporting the **Conflict Line of Drama Cards**, providing buttons in the Combat Tracker. Pressing the presented button will put a message into chat about the effect, and in the following cases will perform the appropriate action:
+-- **Inspiration** - immediately recovers 2 shock for each actor on that faction's side.
+-- **Confused** - disables the Play button in card Hands (until the end of the round).
+-- **Fatigued** - when each player ends their turn (or GM presses end-turn-tick on the combatant) the character suffers their fatigue.
+-- **Stymied** - all actors on that faction's side are immediately given the Stymied (stacking) effect.
+-- **Other Options** - No automation supplied (or not easily possible).
+- Drawing a Drama Card will auto-sort the combatants based on the new card and the Standard/Dramatic setting.
+- Drama Deck can be shuffled from the Combat Tracker's context menu (three dots to the right of the Round counter).
+- Combat Context Menu option to recall previous Drama Card.
+- `rollSkillMacro` now returns a Promise which can be awaited, and the result can be found in `result.flags.torgeternity.test.resultText` (when `result` is the return value from the Promise)
+- All occurrences of `TestDialog.asPromise` have been renamed to `TestDialog.wait` (and is used exclusively throughout the code now).
+
+### Bug Fixes
+
+- It is possible to edit the text numeric value of the attributes of Threats.
+- Effects can be deleted on embedded Items once again.
+- Threat sheet can be scrolled again.
+- Hide foreign language compendiums properly.
+- Skill Checks should use Numbers properly, rather than doing string concatenation.
+- Fix issue with hovering over tokens.
+- Prevent error in Card Deck Configuration when player has no hand assigned.
+- Allow drag/drop of cards from Decks to Hands.
+- Only hide foreign language compendiums on first render, so they don't disappear as soon as they are created.
+
+### Translations
+
+- New translations required, in particular for the new "traits" section.
+
 ## v13.1.2
 
-## Improvements
+### Improvements
 
 - #543: Hovering over a token shows the distance from your controlled token to that token (game setting).
 - Further optimisations to TestDialog.

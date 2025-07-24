@@ -1,5 +1,6 @@
 import { torgeternity } from '../../config.js';
 import { migrateCosm } from '../shared.js';
+import { newTraitsField } from './general.js';
 
 const fields = foundry.data.fields;
 
@@ -17,6 +18,7 @@ export class PerkItemData extends foundry.abstract.TypeDataModel {
       description: new fields.HTMLField({ initial: '' }),
       prerequisites: new fields.StringField({ initial: '' }),
       generalContradiction: new fields.BooleanField({ initial: false }),
+      traits: newTraitsField('perk'),
       pulpPowers: new fields.SchemaField({
         enhancement01: new fields.SchemaField({
           description: new fields.StringField({ initial: '' }),

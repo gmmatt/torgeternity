@@ -113,7 +113,7 @@ function _onClickInlineCheck(event) {
     test.skillValue ??= skill.value;
   }
 
-  new TestDialog(test, { useTargets: true });
+  return TestDialog.wait(test, { useTargets: true });
 }
 
 

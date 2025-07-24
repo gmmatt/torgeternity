@@ -105,27 +105,29 @@ Hooks.once('init', async function () {
   // ---register items and actors
   foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
   foundry.documents.collections.Items.registerSheet('torgeternity', TorgeternityItemSheet, {
+    label: "Torg Eternity Item Sheet",
     makeDefault: true,
   });
 
   foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
   foundry.documents.collections.Actors.registerSheet('torgeternity', TorgeternityActorSheet, {
+    label: "Torg Eternity Actor Sheet",
     makeDefault: true,
   });
 
   // ---register cards
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
-    label: 'Torg Player Hand',
+    label: 'Torg Eternity Player Hand',
     types: ['hand'],
     makeDefault: true,
   });
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
-    label: 'Torg Pile',
+    label: 'Torg Eternity Pile',
     types: ['pile'],
     makeDefault: true,
   });
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
-    label: 'Torg Deck',
+    label: 'Torg Eternity Deck',
     types: ['deck'],
     makeDefault: true,
   });
@@ -156,17 +158,17 @@ Hooks.once('init', async function () {
     },
     multipleActions: {
       [0]: '1',
-      [-2]: '2 (-2)',
-      [-4]: '3 (-4)',
-      [-6]: '4 (-6)',
+      [-2]: '2',
+      [-4]: '3',
+      [-6]: '4',
     },
     targets: {
       [0]: '1',
-      [-2]: '2 (-2)',
-      [-4]: '3 (-4)',
-      [-6]: '4 (-6)',
-      [-8]: '5 (-8)',
-      [-10]: '6 (-10)',
+      [-2]: '2',
+      [-4]: '3',
+      [-6]: '4',
+      [-8]: '5',
+      [-10]: '6',
     },
     concealment: {
       [0]: 'torgeternity.sheetLabels.none',
@@ -231,6 +233,9 @@ Hooks.once('i18nInit', () => {
 
 Hooks.once('setup', async function () {
 
+  // Choose the best document type for creation (minimise clicks)
+  CONFIG.Actor.defaultType = (game.user.isGM) ? "threat" : "stormknight";
+
   modifyTokenBars();
   InitEnrichers();
   // changing stutus marker
@@ -245,7 +250,8 @@ Hooks.once('setup', async function () {
     }
   }
 
-  Handlebars.registerHelper({ radioBoxesNumber })
+  Handlebars.registerHelper({ TorgRadioBoxesNumber })
+  Handlebars.registerHelper({ TorgHidden })
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {
@@ -554,7 +560,7 @@ async function createTorgEternityMacro(dropData, slot) {
  * @param {string} itemName
  * @returns {Promise}
  */
-function rollItemMacro(itemName) {
+async function rollItemMacro(itemName) {
   const speaker = ChatMessage.getSpeaker();
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
@@ -632,7 +638,7 @@ function rollItemMacro(itemName) {
             adjustedDamage = weaponDamage;
         }
 
-        new TestDialog({
+        return TestDialog.wait({
           testType: 'attack',
           actor: actor,
           itemId: item.id,
@@ -667,7 +673,7 @@ function rollItemMacro(itemName) {
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
 
-        new TestDialog({
+        return TestDialog.wait({
           testType: 'power',
           DNDescriptor: game.user.targets.size ? powerData.dn : 'standard',
           actor: actor,
@@ -705,7 +711,7 @@ function rollItemMacro(itemName) {
  * @param {boolean} isInteractionAttack
  * @returns {Promise}
  */
-function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescriptor) {
+async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescriptor) {
   if (DNDescriptor && !Object.hasOwn(CONFIG.torgeternity.dnTypes, DNDescriptor)) {
     ui.notifications.error('The DN-Descriptor is wrong. Exiting the macro.');
     return;
@@ -812,7 +818,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack, DNDescrip
     test.unskilledUse = true;
   }
 
-  new TestDialog(test, { useTargets: true });
+  return TestDialog.wait(test, { useTargets: true });
 }
 
 Hooks.on('renderCombatTracker', (combatTracker) => {
@@ -824,7 +830,7 @@ Hooks.on('renderCombatTracker', (combatTracker) => {
 
 // change the generic threat token to match the cosm's one if it's set in the scene
 Hooks.on('preCreateToken', async (document, data, options, userId) => {
-  if (document.texture.src.includes('threat')) {
+  if (document.texture.src.includes('systems/torgeternity/images/characters/threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
     if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
       document.updateSource({ 'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp' });
@@ -919,7 +925,7 @@ Hooks.on('renderSceneControls', (sceneControls, html, context, options) => {
 
 
 
-function radioBoxesNumber(name, choices, options) {
+function TorgRadioBoxesNumber(name, choices, options) {
   const checked = options.hash.checked ?? null;
   const isNumber = typeof checked === 'number';
   const isChecked = checked !== null;
@@ -935,8 +941,13 @@ function radioBoxesNumber(name, choices, options) {
     input.value = key;
     if (isChecked) input.defaultChecked = (checked == key);
     if (isNumber) input.dataset.dtype = "Number";
+    if (options.hash.tooltip) element.dataset.tooltip = key;
     element.append(input, " ", label);
     html += element.outerHTML;
   }
   return new Handlebars.SafeString(html);
+}
+
+function TorgHidden(value) {
+  return value ? "hidden" : "";
 }

@@ -1,3 +1,5 @@
+import { newTraitsField } from './general.js';
+
 const fields = foundry.data.fields;
 
 /**
@@ -11,6 +13,7 @@ export class VehicleAddOnItemData extends foundry.abstract.TypeDataModel {
     return {
       description: new fields.HTMLField({ initial: '' }),
       'short-description': new fields.StringField({ initial: '' }),
+      traits: newTraitsField('vehicleAddOn'),
     };
   }
 

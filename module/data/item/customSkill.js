@@ -1,3 +1,5 @@
+import { newTraitsField } from './general.js';
+
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
@@ -13,6 +15,7 @@ export class CustomSkillItemData extends foundry.abstract.TypeDataModel {
       value: new fields.NumberField({ initial: 1 }),
       description: new fields.HTMLField({ initial: '' }),
       isFav: new fields.BooleanField({ initial: false }),
+      traits: newTraitsField('customSkill'),
     };
   }
 

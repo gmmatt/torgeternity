@@ -10,7 +10,7 @@ export class ShieldItemData extends GeneralItemData {
    */
   static defineSchema() {
     return {
-      ...super.defineSchema(),
+      ...super.defineSchema('shield'),
       bonus: new fields.NumberField({ initial: 1, integer: true }),
       equipped: new fields.BooleanField({ initial: false }),
       minStrength: new fields.StringField({ initial: '' }),

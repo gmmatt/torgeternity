@@ -30,6 +30,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       selectSecondaryAxiom: TorgeternityItemSheet.#onSelectSecondaryAxiom,
       itemName: TorgeternityItemSheet.#onItemName,
       itemDelete: TorgeternityItemSheet.#onItemDelete,
+      toggleTraitEdit: TorgeternityItemSheet.#onToggleTraitEdit,
     },
   }
 
@@ -166,6 +167,17 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   /**
+   * Only triggered when the window is first rendered.
+   * @param {*} context 
+   * @param {*} options 
+   */
+  async _onFirstRender(context, options) {
+    // When the window is first opened, collapse the traits editor
+    const toggleButton = this.element.querySelector('a.toggleTraits');
+    if (toggleButton) TorgeternityItemSheet.#onToggleTraitEdit.call(this, null, toggleButton);
+  }
+
+  /**
    * Actions
    * @param {} event 
    * @param {*} button 
@@ -214,6 +226,16 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   static #onSelectSecondaryAxiom(event, button) {
     button.value === 'none' &&
       this.item.update({ 'system.secondaryAxiom.value': null });
+  }
+
+  static #onToggleTraitEdit(event, button) {
+    const traits = button.parentElement.querySelectorAll('string-tags input, string-tags button, multi-select select');
+    console.log({ event, button, traits })
+    if (!traits) return;
+    const hidden = !traits[0].disabled;
+    for (const elem of traits) elem.disabled = hidden;
+    button.classList.remove('fa-square-caret-up', 'fa-square-caret-down');
+    button.classList.add(hidden ? 'fa-square-caret-down' : 'fa-square-caret-up');
   }
 
   static #onItemName(event, button) {

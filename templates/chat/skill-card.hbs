@@ -34,10 +34,13 @@
       <a class="button roll-button {{applyDamLabel}}" data-action="soakDam"
         data-tooltip="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
         {{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
-      <a class="button roll-button {{applyDebuffLabel}}" data-action="applyStymied"
+      <a class="button roll-button {{applyStymiedLabel}}" data-action="applyStymied"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
         {{localize 'torgeternity.sheetLabels.applyStymied'}}</a>
-      <a class="button roll-button {{applyDebuffLabel}}" data-action="applyVulnerable"
+      <a class="button roll-button {{applyVulnerableLabel}}" data-action="applyVulnerable"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
+        {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
+      <a class="button roll-button {{applyActorVulnerableLabel}}" data-action="applyActorVulnerable"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
         {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
       <a class="button roll-button {{backlashLabel}}" data-action="backlash1"
@@ -78,16 +81,14 @@
             <div><span class="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
           </td>
         </tr>
-        {{#if displayModifiers}}
-          <tr>
-            <td>
-              <a class="modifier-label" data-action="modifierLabel">{{localize 'torgeternity.chatText.modifiers'}}</a>:
-            </td>
-            <td>
-              <div data-tooltip-html="{{modifierText}}"><span class="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
-            </td>
-          </tr>
-        {{/if}}
+        <tr>
+          <td>
+            <a class="modifier-label" data-action="modifierLabel">{{localize 'torgeternity.chatText.modifiers'}}</a>:
+          </td>
+          <td>
+            <div data-tooltip-html="{{modifierText}}"><span class="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
+          </td>
+        </tr>
         <tr class="{{cardsPlayedLabel}}">
           <td>
             {{localize 'torgeternity.chatText.bonusCard'}}:

@@ -5,6 +5,9 @@ import TorgCombatant from './torgeternityCombatant.js';
 
 export default class torgeternityCombatTracker extends foundry.applications.sidebar.tabs.CombatTracker {
 
+  firstFaction = 'heroes';
+  secondFaction = 'villains';
+
   static PARTS = {
     header: { template: "systems/torgeternity/templates/sidebar/combat-tracker-header.hbs" },
     tracker: { template: 'systems/torgeternity/templates/sidebar/combat-tracker.hbs' },
@@ -15,17 +18,43 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     // token-effects ignore the themed setting below.
     classes: ['torgeternity', 'themed', 'theme-dark'],
     actions: {
+      'toggleDramatic': torgeternityCombatTracker.#toggleDramatic,
       'heroesFirst': torgeternityCombatTracker.#onHeroesFirst,
       'villainsFirst': torgeternityCombatTracker.#onVillainsFirst,
-      'hasPlayed': torgeternityCombatTracker.#onToggleTurn,
+      'hasPlayed': torgeternityCombatTracker.#onHasPlayed,
       'dsrCounter': torgeternityCombatTracker.#incStage,
       'playerDsrCounter': torgeternityCombatTracker.#incPlayerStage,
-      'hasFinished': torgeternityCombatTracker.#onHasFinished
+      'hasFinished': torgeternityCombatTracker.#onHasFinished,
+      "dramaFlurry": torgeternityCombatTracker.#onDramaFlurry,
+      "dramaInspiration": torgeternityCombatTracker.#onDramaInspiration,
+      "dramaUp": torgeternityCombatTracker.#onDramaUp,
+      "dramaConfused": torgeternityCombatTracker.#onDramaConfused,
+      "dramaFatigued": torgeternityCombatTracker.#onDramaFatigued,
+      "dramaSetback": torgeternityCombatTracker.#onDramaSetback,
+      "dramaStymied": torgeternityCombatTracker.#onDramaStymied,
+      "dramaSurge": torgeternityCombatTracker.#onDramaSurge,
     }
   }
 
   async _prepareCombatContext(context, options) {
+    // for HEADER and FOOTER
     await super._prepareCombatContext(context, options);
+    const combat = this.viewed;
+    const heroesFirst = combat?.areHeroesFirst;
+    context.firstFaction = heroesFirst ? 'heroes' : 'villains';
+    context.secondFaction = !heroesFirst ? 'heroes' : 'villains';
+    context.isDramatic = combat?.isDramatic;
+    context.conflictLine = combat?.conflictLineText;
+    context.approvedActions = combat?.approvedActionsText;
+    context.dsrLine = combat?.dsrText;
+
+    context.approved = {};
+    if (combat)
+      for (const action of combat.approvedActions)
+        context.approved[action] = true;
+    context.firstCondition = !combat ? 'none' : heroesFirst ? combat.heroCondition : combat.villainCondition;
+    context.secondCondition = !combat ? 'none' : !heroesFirst ? combat.heroCondition : combat.villainCondition;
+
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
   }
@@ -60,26 +89,47 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   }
 
   /**
-   *
+   * Add an option to Shuffle the Drama Deck
+   */
+  _getCombatContextOptions() {
+    const options = super._getCombatContextOptions();
+    options.unshift({
+      name: "torgeternity.dramaCard.getPreviousDrama",
+      icon: '<i class="fa-solid fa-up-down"></i>',
+      condition: game.user.isGM && !!this.viewed,
+      callback: () => this.viewed.restorePreviousDrama()
+    }, {
+      name: "torgeternity.dramaCard.shuffleDeck",
+      icon: '<i class="fa-solid fa-random"></i>',
+      condition: game.user.isGM && !!this.viewed,
+      callback: () => this.viewed.resetDramaDeck()
+    });
+    return options;
+  }
+  /**
+   * A player has pressed the button at the bottom of the combat tracker to end "their" turn.
    * @param event
    */
   static async #onHasFinished(event, button) {
-    await this.viewed?.combatants
-      .find(combatant => combatant.actorId === game.user.character.id)
-      .setFlag('world', 'turnTaken', true);
+    const combatant = this.viewed?.combatants.find(combatant => combatant.actorId === game.user.character.id);
+    if (!combatant) return;
+
+    await combatant.setFlag('world', 'turnTaken', true);
+    this.viewed.dramaEndOfTurn(combatant);
   }
 
   /**
-   *
+   * A player has finished their turn.
    * @param event
    */
-  static async #onToggleTurn(event, button) {
+  static async #onHasPlayed(event, button) {
     const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
     const combatant = this.viewed?.combatants.get(combatantId);
     if (!combatant) return;
 
-    const turnTaken = combatant.getFlag('world', 'turnTaken');
-    await combatant.setFlag('world', 'turnTaken', !turnTaken);
+    const turnTaken = !combatant.getFlag('world', 'turnTaken');
+    await combatant.setFlag('world', 'turnTaken', turnTaken);
+    if (turnTaken) this.viewed.dramaEndOfTurn(combatant);
   }
 
   /**
@@ -87,6 +137,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
  */
   static async #onVillainsFirst() {
     if (!this.viewed) return;
+    this.firstFaction = 'villains';
+    this.secondFaction = 'heroes';
     await this.viewed.resetAll();
     const updates = [];
     for (const combatant of this.viewed.turns) {
@@ -102,6 +154,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   static async #onHeroesFirst() {
     if (!this.viewed) return;
     await this.viewed.resetAll();
+    this.firstFaction = 'heroes';
+    this.secondFaction = 'villains';
     const updates = [];
     for (const combatant of this.viewed.turns) {
       const initiative = (combatant.token.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY) ? 2 : 1;
@@ -147,6 +201,40 @@ export default class torgeternityCombatTracker extends foundry.applications.side
 
   finishTurn() {
     const combatant = this.viewed?.combatants.find(combatant.turnTaken && combatant.isOwner);
+    // Check for Fatigued on Drama Conflict Line (see macros.js)
     combatant.setFlag('world', 'turnTaken', true);
+  }
+
+  /*
+   * DRAMA DECK HANDLING
+   */
+  static #toggleDramatic(event, button) {
+    const newstate = !this.viewed.isDramatic;
+    this.viewed.setIsDramatic(newstate);
+    console.log(`COMBAT MODE = ${newstate ? "DRAMATIC" : "STANDARD"} ==> ${this.viewed.conflictLineText}`)
+  }
+  static #onDramaFlurry(event, button) {
+    this.viewed.dramaFlurry(button.dataset.faction);
+  }
+  static async #onDramaInspiration(event, button) {
+    this.viewed.dramaInspiration(button.dataset.faction);
+  }
+  static #onDramaUp(event, button) {
+    this.viewed.dramaUp(button.dataset.faction)
+  }
+  static #onDramaConfused(event, button) {
+    this.viewed.dramaConfused(button.dataset.faction)
+  }
+  static #onDramaFatigued(event, button) {
+    this.viewed.dramaFatigued(button.dataset.faction)
+  }
+  static #onDramaSetback(event, button) {
+    this.viewed.dramaSetback(button.dataset.faction)
+  }
+  static #onDramaStymied(event, button) {
+    this.viewed.dramaStymied(button.dataset.faction)
+  }
+  static #onDramaSurge(event, button) {
+    this.viewed.dramaSurge(button.dataset.faction)
   }
 }
