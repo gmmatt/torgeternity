@@ -2,6 +2,15 @@
 
 ## v13.2.0
 
+## IMPORTANT
+
+You need to use the Destiny deck:
+
+- Delete your existing Destiny Deck
+- Import the latest version of the Destiny Deck from the System compendium
+- In the Card Deck Configuration, choose the new Destiny Deck
+- Restart the world (or use F5 to refresh everything)
+
 ### Improvements
 
 - For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
