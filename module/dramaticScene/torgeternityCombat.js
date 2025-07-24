@@ -46,7 +46,7 @@ export default class TorgCombat extends Combat {
       const dramaDiscard = game.cards.get(settings.dramaDiscard);
       const dramaActive = game.cards.get(settings.dramaActive);
       // Discard the current Drama Card
-      if (dramaActive.cards.size > 0) {
+      if (dramaDiscard && dramaActive?.cards.size > 0) {
         dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
       }
     }
@@ -111,6 +111,7 @@ export default class TorgCombat extends Combat {
    */
   async resetDramaDeck() {
     const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    if (!dramaDeck) return;
     await dramaDeck.recall();
     await dramaDeck.shuffle();
     // Mark no active drama card
@@ -129,10 +130,10 @@ export default class TorgCombat extends Combat {
     const dramaActive = game.cards.get(settings.dramaActive);
 
     // Discard the current Drama Card
-    if (dramaActive.cards.size > 0)
+    if (dramaDiscard && dramaActive?.cards.size > 0)
       await dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
 
-    if (!dramaDeck.availableCards.length) {
+    if (!dramaDeck?.availableCards.length) {
       ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
       return;
     }
@@ -374,6 +375,8 @@ export default class TorgCombat extends Combat {
     const dramaDeck = game.cards.get(settings.dramaDeck);
     const dramaDiscard = game.cards.get(settings.dramaDiscard);
     const dramaActive = game.cards.get(settings.dramaActive);
+    if (!dramaDeck || !dramaDiscard || !dramaActive) return;
+
     const currActiveCard = Array.from(dramaActive.cards).pop();
     const prevActiveCard = Array.from(dramaDiscard.cards).pop();
     // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here

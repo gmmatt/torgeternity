@@ -309,6 +309,7 @@ export class TorgeternityMacros {
     const dramaDeck = game.cards.get(setting.dramaDeck);
     // Find ?? the index of the Active Drama Card in the Drama Deck
     const activeDeck = game.cards.get(setting.dramaActive);
+    if (!dramaDeck || !activeDeck) return;
     const cardSort = (activeDeck.cards.size === 0) ? dramaDeck.size :
       dramaDeck.cards.get(activeDeck._source.cards[0]._id).sort + 1;
 
@@ -513,7 +514,7 @@ export class TorgeternityMacros {
       if (target) {
         const userid = target.id;
         const destinyDiscard = game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard);
-        const lastCard = destinyDiscard.cards.contents.pop();
+        const lastCard = destinyDiscard?.cards.contents.pop();
         if (!lastCard) return;
         const parentHand = target.character.getDefaultHand();
         const found = game.messages.contents.filter(m => m.author.id === userid);

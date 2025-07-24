@@ -90,6 +90,6 @@ export async function setUpCardPiles() {
       await sk.createDefaultHand();
     }
   }
-  game.settings.set('torgeternity', 'deckSetting', deckSetting);
-  game.settings.set('torgeternity', 'setUpCards', false);
+  await game.settings.set('torgeternity', 'deckSetting', deckSetting);
+  await game.settings.set('torgeternity', 'setUpCards', false);
 }
