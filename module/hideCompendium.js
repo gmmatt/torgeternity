@@ -1,6 +1,7 @@
 export function initHideCompendium() {
   Hooks.on('renderCompendiumDirectory', (tabDirectory, html, user, options) => {
     if (!game.settings.get('torgeternity', 'hideForeignCompendium')) return;
+    if (!options.isFirstRender) return;
 
     let langKeys;
     switch (game.settings.get('core', 'language')) {
