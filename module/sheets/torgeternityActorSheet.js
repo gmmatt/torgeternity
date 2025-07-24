@@ -274,8 +274,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       data: {
         name: event.target.dataset.name,
         attribute: event.target.dataset.baseattribute,
-        adds: event.target.dataset.adds,
-        value: event.target.dataset.value,
+        adds: Number(event.target.dataset.adds),
+        value: Number(event.target.dataset.value),
         unskilledUse: event.target.dataset.unskilleduse,
         attackType: '',
         DNDescriptor: 'standard',
@@ -486,7 +486,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static async #onSkillRoll(event, button) {
     const skillName = button.dataset.name;
     const attributeName = button.dataset.baseattribute;
-    const skillValue = button.dataset.value;
+    const skillValue = Number(button.dataset.value);
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, this.actor)) return;
@@ -548,7 +548,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         ? isUnskilledTest
           ? '-'
           : this.actor.system.attributes[attributeName].value
-        : button.dataset.value;
+        : Number(button.dataset.value);
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, this.actor)) return;
@@ -582,7 +582,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       testType: 'chase',
       actor: this.actor,
       skillName: 'Vehicle Chase',
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       DNDescriptor: 'highestSpeed',
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
@@ -600,7 +600,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       testType: 'vehicleBase',
       actor: this.actor,
       skillName: 'Vehicle Operation',
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
       bdDamageLabelStyle: 'hidden',
@@ -620,7 +620,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       testType: 'stunt',
       actor: this.actor,
       skillName: 'Vehicle Stunt',
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       DNDescriptor: dnDescriptor,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
@@ -662,7 +662,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       actor: this.actor,
       skillName: button.dataset.name,
       skillAdds: button.dataset.adds,
-      skillValue: button.dataset.skillValue,
+      skillValue: Number(button.dataset.skillValue),
       isFav: this.actor.system.skills[button.dataset.name].isFav,
       unskilledUse: true,
       DNDescriptor: dnDescriptor,
@@ -695,7 +695,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     const skillValue = isNaN(button.dataset.skillValue)
       ? this.actor.system.attributes.dexterity.value
-      : button.dataset.skillValue;
+      : Number(button.dataset.skillValue);
 
     new TestDialog({
       testType: 'attack',
