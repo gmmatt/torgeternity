@@ -129,14 +129,14 @@ export default class TorgCombat extends Combat {
     const V = game.i18n.localize('torgeternity.dramaCard.villainsCondition');
     if (this.isDramatic) {
       if (card.system.heroesFirstDramatic)
-        return `${game.i18n.localize('torgeternity.dramaCard.dramatic')}: ${H} ${lookup(card.system.heroesConditionsDramatic)}   ${V} ${lookup(card.system.villainsConditionsDramatic)} - ${this.approvedActionsText} - ${this.dsrText}`
+        return `${game.i18n.localize('torgeternity.dramaCard.dramatic')}: ${H} ${lookup(card.system.heroesConditionsDramatic)}   ${V} ${lookup(card.system.villainsConditionsDramatic)}`
       else
-        return `${game.i18n.localize('torgeternity.dramaCard.dramatic')}: ${V} ${lookup(card.system.villainsConditionsDramatic)}   ${H} ${lookup(card.system.heroesConditionsDramatic)} - ${this.approvedActionsText} - ${this.dsrText}`
+        return `${game.i18n.localize('torgeternity.dramaCard.dramatic')}: ${V} ${lookup(card.system.villainsConditionsDramatic)}   ${H} ${lookup(card.system.heroesConditionsDramatic)}`
     } else {
       if (card.system.heroesFirstStandard)
-        return `${game.i18n.localize('torgeternity.dramaCard.standard')}: ${H} ${lookup(card.system.heroesConditionsStandard)}   ${V} ${lookup(card.system.villainsConditionsStandard)} - ${this.approvedActionsText} - ${this.dsrText}`
+        return `${game.i18n.localize('torgeternity.dramaCard.standard')}: ${H} ${lookup(card.system.heroesConditionsStandard)}   ${V} ${lookup(card.system.villainsConditionsStandard)}`
       else
-        return `${game.i18n.localize('torgeternity.dramaCard.standard')}: ${V} ${lookup(card.system.villainsConditionsStandard)}   ${H} ${lookup(card.system.heroesConditionsStandard)} - ${this.approvedActionsText} - ${this.dsrText}`
+        return `${game.i18n.localize('torgeternity.dramaCard.standard')}: ${V} ${lookup(card.system.villainsConditionsStandard)}   ${H} ${lookup(card.system.heroesConditionsStandard)}`
     }
   }
 

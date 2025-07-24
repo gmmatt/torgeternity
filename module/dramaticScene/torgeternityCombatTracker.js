@@ -42,6 +42,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     context.secondFaction = this.secondFaction;
     context.isDramatic = this.viewed?.isDramatic;
     context.conflictLine = this.viewed?.conflictLineText;
+    context.approvedActions = this.viewed?.approvedActionsText;
+    context.dsrLine = this.viewed?.dsrText;
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
   }

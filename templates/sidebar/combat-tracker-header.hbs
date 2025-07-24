@@ -179,7 +179,16 @@
     </div>
   {{/inline}}
 
-  <p>{{conflictLine}}</p>
+  <p>{{#if conflictLine}}
+      {{conflictLine}}<br>
+    {{/if}}
+    {{#if approvedActions}}
+      {{localize 'torgeternity.dramaCard.approvedActions'}}: {{approvedActions}}<br>
+    {{/if}}
+    {{#if dsrLine}}
+      {{localize 'torgeternity.dramaCard.dsrLine'}} {{dsrLine}}
+    {{/if}}
+  </p>
   {{> dramaButtons faction=firstFaction}}
   {{> dramaButtons faction=secondFaction}}
 </header>
