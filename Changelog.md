@@ -36,6 +36,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Threat sheet can be scrolled again.
 - Hide foreign language compendiums properly.
 - Skill Checks should use Numbers properly, rather than doing string concatenation.
+- Fix issue with hovering over tokens.
 
 ### Translations
 
