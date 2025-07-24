@@ -85,9 +85,7 @@ export default class TorgCombat extends Combat {
   }
 
   get approvedActions() {
-    const card = this.currentDrama;
-    if (!card) return [];
-    return card.system.approvedActions.split(' ');
+    return this.currentDrama?.system.approvedActions?.split(' ') ?? [];
   }
 
   get heroCondition() {
@@ -185,13 +183,12 @@ export default class TorgCombat extends Combat {
   get approvedActionsText() {
     const card = this.currentDrama;
     if (!card) return "No Drama Card Active";
-    return card.system.approvedActions.split(' ').map(one => game.i18n.localize(torgeternity.dramaActions[one])).join('/');
+    return this.approvedActions.map(one => game.i18n.localize(torgeternity.dramaActions[one])).join('/');
   }
 
   get dsrText() {
-    const card = this.currentDrama;
-    if (!card) return "No Drama Card Active";
-    const dsr = card.system.dsrLine;
+    const dsr = this.currentDrama?.system.dsrLine;
+    if (!dsr) return "No Drama Card Active";
     const first = dsr.at(0);
     return (first === first.toUpperCase()) ? dsr.split('').join(' ') : game.i18n.localize(torgeternity.dramaActions[dsr]);
   }

@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## 13.2.1
+
+- Fix an issue with the Combat Tracker generating errors with unsupported cards.
+
 ## v13.2.0
 
 ### Improvements
