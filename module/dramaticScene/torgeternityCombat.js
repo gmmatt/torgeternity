@@ -62,31 +62,64 @@ export default class TorgCombat extends Combat {
   _onUpdate(changed, options, userId) {
     if (game.user.isGM) {
       const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
-      this.setFlag('torgeternity', 'activeCard',
-        (dramaActive.cards.size > 0) ? dramaActive.cards.contents[0].faces[0].img : '');
+      this.setFlag('torgeternity', 'activeCard', (dramaActive.cards.size > 0) ? dramaActive.cards.contents[0].faces[0].img : '');
     }
     super._onUpdate(changed, options, userId);
   }
 
+  get currentDrama() {
+    const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
+    return dramaActive.cards.size ? dramaActive.cards.contents[0] : null;
+  }
   async setIsDramatic(value) {
     const result = await this.setFlag('torgeternity', IS_DRAMATIC_FLAG, value)
     if (!result) return;
 
     // Update combat effects
-    const settings = game.settings.get('torgeternity', 'deckSetting');
-    const dramaActive = game.cards.get(settings.dramaActive);
-    if (dramaActive.cards.size) {
-      this.setDramaEffects(dramaActive.cards.contents[0]);
-    }
+    const card = this.currentDrama;
+    if (card) this.setDramaEffects(card);
   }
 
   get isDramatic() {
     return this.getFlag('torgeternity', IS_DRAMATIC_FLAG) ?? false;
   }
 
+  get approvedActions() {
+    const card = this.currentDrama;
+    if (!card) return [];
+    return card.system.approvedActions.split(' ');
+  }
+
+  get heroCondition() {
+    const card = this.currentDrama;
+    if (!card) return "";
+    return this.isDramatic ? card.system.heroesConditionsDramatic : card.system.heroesConditionsStandard;
+  }
+
+  get villainCondition() {
+    const card = this.currentDrama;
+    if (!card) return "";
+    return this.isDramatic ? card.system.villainsConditionsDramatic : card.system.villainsConditionsStandard;
+  }
+
+  get areHeroesFirst() {
+    const card = this.currentDrama;
+    if (!card) return false;
+    return this.isDramatic ? card.system.heroesFirstDramatic : card.system.heroesFirstStandard;
+  }
+
   /**
-   * Discard the old drama card
+   * 
    */
+  async resetDramaDeck() {
+    const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    await dramaDeck.recall();
+    await dramaDeck.shuffle();
+    // Mark no active drama card
+    this.setFlag('torgeternity', 'activeCard', '');
+    this.setCardsPlayable(true);
+  }
+
   /**
    * Extra work when a drama card is drawn
    */
@@ -107,7 +140,6 @@ export default class TorgCombat extends Combat {
     }
 
     const [card] = await dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
-
     this.setDramaEffects(card);
   }
 
@@ -115,12 +147,11 @@ export default class TorgCombat extends Combat {
    * Set the effects of the current drama card
    */
   async setDramaEffects(card) {
-    console.log(this.conflictLineText)
-    console.log(`DSR: '${this.dsrText}'   Actions: '${this.approvedActionsText}'`);
+    //console.log(this.conflictLineText)
+    //console.log(`DSR: '${this.dsrText}'   Actions: '${this.approvedActionsText}'`);
 
     // Sort combatants based on which faction is first
     const whoFirst = (this.isDramatic ? card.system.heroesFirstDramatic : card.system.heroesFirstStandard) ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
-    await this.resetAll();
     const updates = [];
     for (const combatant of this.turns) {
       const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
@@ -130,10 +161,9 @@ export default class TorgCombat extends Combat {
   }
 
   get conflictLineText() {
-    const settings = game.settings.get('torgeternity', 'deckSetting');
-    const dramaActive = game.cards.get(settings.dramaActive);
-    if (!dramaActive.cards.size) return "No Drama Card Active";
-    const card = dramaActive.cards.contents[0];
+    const card = this.currentDrama;
+    if (!card) return "No Drama Card Active";
+
     const lookup = (a) => game.i18n.localize(torgeternity.dramaConflicts[a]);
     const H = game.i18n.localize('torgeternity.dramaCard.heroesCondition');
     const V = game.i18n.localize('torgeternity.dramaCard.villainsCondition');
@@ -151,21 +181,16 @@ export default class TorgCombat extends Combat {
   }
 
   get approvedActionsText() {
-    const settings = game.settings.get('torgeternity', 'deckSetting');
-    const dramaActive = game.cards.get(settings.dramaActive);
-    if (!dramaActive.cards.size) return "No Drama Card Active";
-    const card = dramaActive.cards.contents[0];
-
+    const card = this.currentDrama;
+    if (!card) return "No Drama Card Active";
     return card.system.approvedActions.split(' ').map(one => game.i18n.localize(torgeternity.dramaActions[one])).join('/');
   }
 
   get dsrText() {
-    const settings = game.settings.get('torgeternity', 'deckSetting');
-    const dramaActive = game.cards.get(settings.dramaActive);
-    if (!dramaActive.cards.size) return "No Drama Card Active";
-    const dsr = dramaActive.cards.contents[0].system.dsrLine;
+    const card = this.currentDrama;
+    if (!card) return "No Drama Card Active";
+    const dsr = card.system.dsrLine;
     const first = dsr.at(0);
-
     return (first === first.toUpperCase()) ? dsr.split('').join(' ') : game.i18n.localize(torgeternity.dramaActions[dsr]);
   }
 
@@ -339,8 +364,6 @@ export default class TorgCombat extends Combat {
     // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here
     await currActiveCard.pass(dramaDeck);
     await prevActiveCard.pass(dramaActive);
-    const activeImage = prevActiveCard.faces[0].img;
-    game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
 
     // Cancel effects from previous card (if any)
     await this.setDramaEffects(prevActiveCard);

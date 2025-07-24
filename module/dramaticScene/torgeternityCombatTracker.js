@@ -37,21 +37,29 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   }
 
   async _prepareCombatContext(context, options) {
+    // for HEADER and FOOTER
     await super._prepareCombatContext(context, options);
-    context.firstFaction = this.firstFaction;
-    context.secondFaction = this.secondFaction;
+    const heroesFirst = this.viewed.areHeroesFirst;
+    context.firstFaction = heroesFirst ? 'heroes' : 'villains';
+    context.secondFaction = !heroesFirst ? 'heroes' : 'villains';
     context.isDramatic = this.viewed?.isDramatic;
     context.conflictLine = this.viewed?.conflictLineText;
     context.approvedActions = this.viewed?.approvedActionsText;
     context.dsrLine = this.viewed?.dsrText;
+
+    context.approved = {};
+    if (this.viewed)
+      for (const action of this.viewed?.approvedActions)
+        context.approved[action] = true;
+    context.firstCondition = heroesFirst ? this.viewed?.heroCondition : this.viewed?.villainCondition;
+    context.secondCondition = !heroesFirst ? this.viewed?.heroCondition : this.viewed?.villainCondition;
+
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
   }
 
   async _prepareTurnContext(combat, combatant, index) {
     const context = await super._prepareTurnContext(combat, combatant, index);
-    //context.firstFaction = this.firstFaction;
-    //context.secondFaction = this.secondFaction;
 
     const hand = combatant.actor.getDefaultHand();
     context.noHand = !hand;
@@ -79,6 +87,19 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     return context;
   }
 
+  /**
+   * Add an option to Shuffle the Drama Deck
+   */
+  _getCombatContextOptions() {
+    const options = super._getCombatContextOptions();
+    options.unshift({
+      name: "torgeternity.dramaCard.shuffleDeck",
+      icon: '<i class="fa-solid fa-random"></i>',
+      condition: game.user.isGM && !!this.viewed,
+      callback: () => this.viewed.resetDramaDeck()
+    })
+    return options;
+  }
   /**
    * A player has pressed the button at the bottom of the combat tracker to end "their" turn.
    * @param event

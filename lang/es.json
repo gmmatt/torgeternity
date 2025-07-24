@@ -373,7 +373,8 @@
       "any": "Any",
       "complication": "Complication",
       "criticalProblem": "Critical Problem",
-      "possibleSetback": "Possible Setback"
+      "possibleSetback": "Possible Setback",
+      "shuffleDeck": "Shuffle Drama Deck"
     },
     "enhancements": {
       "description": "Descripción",

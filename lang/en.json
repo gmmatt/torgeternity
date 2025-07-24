@@ -150,7 +150,7 @@
       "nextKeep": "Next Round (Keep Current Card)",
       "nextNew": "Next Round (Draw New Card)",
       "heroes": "Heroes",
-      "villains": "Villans",
+      "villains": "Villains",
       "herosTooltip": "Heroes first",
       "vilainsTooltip": "Villains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
@@ -386,7 +386,8 @@
       "any": "Any",
       "complication": "Complication",
       "criticalProblem": "Critical Problem",
-      "possibleSetback": "Possible Setback"
+      "possibleSetback": "Possible Setback",
+      "shuffleDeck": "Shuffle Drama Deck"
     },
     "enhancements": {
       "description": "Description",

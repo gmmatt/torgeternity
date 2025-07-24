@@ -947,5 +947,5 @@ function TorgRadioBoxesNumber(name, choices, options) {
 }
 
 function TorgHidden(value) {
-  return value ? "disabled" : "";
+  return value ? "hidden" : "";
 }
