@@ -68,7 +68,7 @@ export async function setUpCardPiles() {
   }
 
   // Add Active Drama
-  if (!game.cards.get(deckSetting.activeDrama)) {
+  if (!game.cards.get(deckSetting.dramaActive)) {
     const cardData = {
       name: game.i18n.localize('torgeternity.cardTypes.activeDrama'),
       type: 'pile',

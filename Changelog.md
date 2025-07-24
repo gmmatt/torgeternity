@@ -3,6 +3,8 @@
 ## 13.2.2
 
 - Prevent crash of Combat Tracker when actor for a combatant has been deleted.
+- Chat messages for Drama conditions show proper text instead of `{faction}`.
+- Don't create a new 'Active Drama Card' deck every time that 'Setup the Cards Directory' is used.
 
 ## 13.2.1
 
