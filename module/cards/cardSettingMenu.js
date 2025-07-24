@@ -173,12 +173,12 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
       return;
     }
 
-    const actorsPerm = actor.getHandOwnership();
     // assigning same permissions from actor to hand
-    hand.update({
-      ownership: actorsPerm,
-      flags: { torgeternity: { defaultHand: actor.id } },
-    });
+    if (hand)
+      hand.update({
+        ownership: actor.getHandOwnership(),
+        flags: { torgeternity: { defaultHand: actor.id } },
+      });
     if (oldHand) oldHand.setFlag('torgeternity', 'defaultHand', null);
   }
   /**
