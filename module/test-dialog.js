@@ -226,6 +226,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     const fields = formData.object;
     foundry.utils.mergeObject(this.test, fields, { inplace: true });
 
+    this.test.explicitBonus = fields.bonus !== null;
     this.test.isOther1 = fields.other1Modifier != 0;
     this.test.isOther2 = fields.other2Modifier != 0;
     this.test.isOther3 = fields.other3Modifier != 0;

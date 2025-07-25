@@ -182,34 +182,32 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         {
           await card.unsetFlag('torgeternity', 'pooled');
           const settings = game.settings.get('torgeternity', 'deckSetting');
-          const pile = (card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard;
-          await card.pass(game.cards.get(pile), game.torgeternity.cardChatOptions);
+          const discardPile = game.cards.get((card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard);
+          if (!discardPile) return;
+          await card.pass(discardPile, game.torgeternity.cardChatOptions);
           card.toMessage({
-            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-              }"/><span><img src="${card.img
-              }"></span></span><span class="card-name">${game.i18n.localize(
-                'torgeternity.chatText.discardsCard'
-              )} ${card.name}</span>
-              </div>`,
+            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip">
+            <img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span>
+            <span class="card-name">${game.i18n.localize('torgeternity.chatText.discardsCard')} ${card.name}</span>
+            </div>`,
           });
           return;
         }
       case 'play':
-        await card.unsetFlag('torgeternity', 'pooled');
-        if (card.type == 'destiny') {
-          await card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard), game.torgeternity.cardChatOptions);
-        } else {
-          await card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard, game.torgeternity.cardChatOptions));
-        }
-        card.toMessage({
-          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img
-            }"/><span><img src="${card.img
-            }"></span></span><span class="card-name">${game.i18n.localize(
-              'torgeternity.chatText.playsCard'
-            )} ${card.name}</span>
+        {
+          await card.unsetFlag('torgeternity', 'pooled');
+          const settings = game.settings.get('torgeternity', 'deckSetting');
+          const discardPile = game.cards.get((card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard);
+          if (!discardPile) return;
+          await card.pass(discardPile, game.torgeternity.cardChatOptions);
+          card.toMessage({
+            content: `<div class="card-draw flexrow"><span class="card-chat-tooltip">
+            <img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span>
+            <span class="card-name">${game.i18n.localize('torgeternity.chatText.playsCard')} ${card.name}</span>
             </div>`,
-        });
-        return;
+          });
+          return;
+        }
     }
   }
 
@@ -218,18 +216,15 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   }
 
   static #onDrawDestiny() {
-    const destinyDeck = game.cards.get(
-      game.settings.get('torgeternity', 'deckSetting').destinyDeck
-    );
+    const destinyDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDeck);
+    if (!destinyDeck) return;
     if (destinyDeck.cards.size) {
       const [firstCardKey] = destinyDeck.cards.keys(); // need to grab a card to get toMessage access
       const card = destinyDeck.cards.get(firstCardKey);
       card.toMessage({
-        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.img
-          }"/><span><img src="${destinyDeck.img
-          }"></span></span><h4 class="card-name">${game.i18n.localize(
-            'torgeternity.chatText.drawsCard'
-          )} ${destinyDeck.name}.</h4></div>`,
+        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip">
+        <img class="card-face" src="${destinyDeck.img}"/><span><img src="${destinyDeck.img}"></span></span>
+        <h4 class="card-name">${game.i18n.localize('torgeternity.chatText.drawsCard')} ${destinyDeck.name}.</h4></div>`
       });
     }
     return this.document.draw(destinyDeck, 1, { face: 1, ...game.torgeternity.cardChatOptions });
