@@ -23,7 +23,7 @@ export default class TorgCombat extends Combat {
     if (!super._preDelete(options, user)) return false;
 
     // listing of hands' actors in closing combat
-    this.combatants.filter(combatant => combatant.actor.type === 'stormknight')
+    this.combatants.filter(combatant => combatant.actor?.type === 'stormknight')
       .forEach(combatant => {
         const hand = game.actors.get(combatant.actorId).getDefaultHand();
         // delete the flag that give the pooled condition in each card of each hand
@@ -46,7 +46,7 @@ export default class TorgCombat extends Combat {
       const dramaDiscard = game.cards.get(settings.dramaDiscard);
       const dramaActive = game.cards.get(settings.dramaActive);
       // Discard the current Drama Card
-      if (dramaActive.cards.size > 0) {
+      if (dramaDiscard && dramaActive?.cards.size > 0) {
         dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
       }
     }
@@ -111,6 +111,7 @@ export default class TorgCombat extends Combat {
    */
   async resetDramaDeck() {
     const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    if (!dramaDeck) return;
     await dramaDeck.recall();
     await dramaDeck.shuffle();
     // Mark no active drama card
@@ -129,10 +130,10 @@ export default class TorgCombat extends Combat {
     const dramaActive = game.cards.get(settings.dramaActive);
 
     // Discard the current Drama Card
-    if (dramaActive.cards.size > 0)
+    if (dramaDiscard && dramaActive?.cards.size > 0)
       await dramaActive.cards.contents[0].pass(dramaDiscard, game.torgeternity.cardChatOptions);
 
-    if (!dramaDeck.availableCards.length) {
+    if (!dramaDeck?.availableCards.length) {
       ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
       return;
     }
@@ -234,7 +235,7 @@ export default class TorgCombat extends Combat {
    */
   async #deleteActiveDefense() {
     for (const combatant of this.combatants) {
-      const activeDefenseEffect = combatant.actor.appliedEffects.find((eff) => eff.name === 'ActiveDefense');
+      const activeDefenseEffect = combatant.actor?.appliedEffects.find((eff) => eff.name === 'ActiveDefense');
       if (activeDefenseEffect) await activeDefenseEffect.delete();
     }
   }
@@ -248,7 +249,7 @@ export default class TorgCombat extends Combat {
   }
   getFactionActors(faction) {
     const disposition = (faction === 'heroes') ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
-    return this.turns.filter(combatant => combatant.token.disposition === disposition).map(combatant => combatant.actor);
+    return this.turns.filter(combatant => combatant.token?.disposition === disposition && combatant.actor).map(combatant => combatant.actor);
   }
   setCardsPlayable(value) {
     for (const actor of this.getFactionActors('heroes')) {
@@ -258,22 +259,23 @@ export default class TorgCombat extends Combat {
     }
   }
 
-  #sendDramaChat(action) {
+  #sendDramaChat(action, faction) {
     ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ alias: game.user.name }),
-      content: game.i18n.localize(`torgeternity.drama.${action}Desc`)
+      content: game.i18n.format(`torgeternity.drama.${action}Desc`,
+        { faction: game.i18n.localize(`torgeternity.combat.${faction}`) })
     });
   }
 
   async dramaFlurry(faction) {
     // extra turn
     console.log('Drama Flurry', faction)
-    this.#sendDramaChat('flurry');
+    this.#sendDramaChat('flurry', faction);
   }
 
   async dramaInspiration(faction) {
     console.log('Drama Inspiration', faction)
-    this.#sendDramaChat('inspiration');
+    this.#sendDramaChat('inspiration', faction);
 
     // immediately recover 2 shock (see macros.js:reviveShock)
     let chatOutput = `<h2>${game.i18n.localize(
@@ -298,41 +300,41 @@ export default class TorgCombat extends Combat {
   async dramaUp(faction) {
     // UP on first roll for each actor
     console.log('Drama Up', faction)
-    this.#sendDramaChat('up');
+    this.#sendDramaChat('up', faction);
   }
 
   async dramaConfused(faction) {
     // unable to play Cards from their pool
     console.log('Drama Confused', faction)
     this.setCardsPlayable(false);
-    this.#sendDramaChat('confused');
+    this.#sendDramaChat('confused', faction);
   }
 
   async dramaFatigued(faction) {
     // At the end of an Actor's turn, they take 2 points of shock
     console.log('Drama Fatigued', faction)
     this.setFlag('torgeternity', FATIGUED_FACTION_FLAG, faction);
-    this.#sendDramaChat('fatigued');
+    this.#sendDramaChat('fatigued', faction);
   }
 
   async dramaSetback(faction) {
     // GM decides a likely setback
     console.log('Drama Setback', faction)
-    this.#sendDramaChat('setback');
+    this.#sendDramaChat('setback', faction);
   }
 
   async dramaStymied(faction) {
     // All Actors become Stymied until the end of their next turn
     console.log('Drama Stymied', faction)
-    this.#sendDramaChat(msg);
+    this.#sendDramaChat('surge');
     for (const actor of this.getFactionActors(faction))
-      actor.applyStymiedState('stymied');
+      actor.applyStymiedState('stymied', faction);
   }
 
   async dramaSurge(faction) {
     // All Actors must check for Contradictions
     console.log('Drama Surge', faction)
-    this.#sendDramaChat('surge');
+    this.#sendDramaChat('surge', faction);
   }
 
   /**
@@ -341,13 +343,14 @@ export default class TorgCombat extends Combat {
   dramaEndOfTurn(combatant) {
     if (this.getFlag('torgeternity', FATIGUED_FACTION_FLAG) === this.getCombatantFaction(combatant)) {
       const actor = combatant.actor;
+      if (!actor) return;
 
       let chatOutput = `<h2>${game.i18n.localize(
         'torgeternity.sheetLabels.fatigue'
       )}!</h2><p>${game.i18n.localize('torgeternity.macros.fatigueMacroDealtDamage')}</p><ul>`;
 
       if (actor.hasStatusEffect('unconscious')) {
-        chatOutput += `<li>${combatant.actor.name} ${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}</li>`;
+        chatOutput += `<li>${actor.name} ${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}</li>`;
       }
 
       const shockIncrease = actor.fatigue;
@@ -373,6 +376,8 @@ export default class TorgCombat extends Combat {
     const dramaDeck = game.cards.get(settings.dramaDeck);
     const dramaDiscard = game.cards.get(settings.dramaDiscard);
     const dramaActive = game.cards.get(settings.dramaActive);
+    if (!dramaDeck || !dramaDiscard || !dramaActive) return;
+
     const currActiveCard = Array.from(dramaActive.cards).pop();
     const prevActiveCard = Array.from(dramaDiscard.cards).pop();
     // Ignore game.torgeternity.cardChatOptions, since no explicit chat message sent here

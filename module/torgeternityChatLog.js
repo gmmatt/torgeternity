@@ -278,7 +278,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    test.targetAll = [test.target];
+    // Pick the specific target from the chat card to receive the BD
+    if (test.target) test.targetAll = [test.target];
     test.possibilityStyle = 'hidden';
     test.upStyle = 'hidden';
     test.dramaStyle = 'hidden';
