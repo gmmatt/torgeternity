@@ -2238,12 +2238,8 @@ aside#scene-controls2 {
   flex: 1
 }
 
-#scene-navigation {
-  opacity: 1;
-
-  .scene-players {
-    padding-left: 30px;
-  }
+#scene-navigation .scene-players {
+  padding-left: 30px;
 }
 
 #scene-navigation .scene-navigation-menu .scene.active::after,

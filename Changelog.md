@@ -3,6 +3,7 @@
 ## Next Release
 
 - Scene Navigation returned to Torg styling.
+- Add option to disable fading of Scene Navigation menu.
 
 ## v13.2.2
 

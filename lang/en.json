@@ -737,6 +737,10 @@
       "autoWound": {
         "name": "Automatically Apply Wounds",
         "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
+      },
+      "sceneNavOpaque": {
+        "name": "Disable Faded Scene Nav",
+        "hint": "Disables core Foundry's fading of the Scene Navigation menu"
       }
     },
     "sheetLabels": {
