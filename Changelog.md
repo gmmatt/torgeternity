@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## Next Release
+
+- Scene Navigation returned to Torg styling.
+
 ## v13.2.2
 
 - Ensure that the **Possibility/Up/Hero/Drama/+3** buttons add to the bonus properly.
