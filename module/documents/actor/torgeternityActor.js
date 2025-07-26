@@ -399,9 +399,10 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
 
-  _onDelete() {
+  _onDelete(options, userId) {
     if (this.type === 'stormknight' && game.user.isActiveGM)
       this.getDefaultHand()?.delete();
+    super._onDelete(options, userId)
   }
 
   /**

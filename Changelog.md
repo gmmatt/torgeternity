@@ -4,6 +4,7 @@
 
 - Scene Navigation returned to Torg styling.
 - Add option to disable fading of Scene Navigation menu.
+- Combat Tracker no longer disappears when a card Hand is deleted (which would occur when an Actor is deleted).
 
 ## v13.2.2
 
