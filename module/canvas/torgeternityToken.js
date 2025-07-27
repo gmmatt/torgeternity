@@ -12,7 +12,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     const originActor = game.user.character;
     if (!originActor) return result;
     TorgEternityToken.#originToken = canvas.scene.tokens.find(t => t.actor === originActor);
-    if (TorgEternityToken.#originToken.object === this) return;
+    if (!TorgEternityToken.#originToken || TorgEternityToken.#originToken.object === this) return;
 
     TorgEternityToken.#hoverToken = this;
     Hooks.on('refreshToken', TorgEternityToken.drawLabel);
