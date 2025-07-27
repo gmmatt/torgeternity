@@ -14,7 +14,7 @@ import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
 import torgeternitySceneConfig from './torgeternitySceneConfig.js';
 import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
-import * as torgChecks from './torgchecks.js';
+import { rollAttack, rollPower } from './torgchecks.js';
 import { modifyTokenBars } from './tokenBars.js';
 import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
@@ -579,120 +579,13 @@ async function rollItemMacro(itemName) {
     case 'firearm':
     case 'heavyweapon':
     case 'specialability-rollable':
-      {
-        // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
-        const weaponData = item.system;
-        const { attackWith, damageType } = weaponData;
-        const weaponDamage = parseInt(weaponData.damage);
-        const skillData = actor.system.skills?.[attackWith] || item.system?.gunner;
-        let dnDescriptor = 'standard';
-        let adjustedDamage;
-        const attributes = actor.system.attributes;
-
-        // Modify dnDecriptor if target exists
-        if (game.user.targets.size) {
-          const firstTarget = game.user.targets.find(token => token.actor.type !== 'vehicle')?.actor ||
-            game.user.targets.first().actor;
-
-          switch (attackWith) {
-            case 'meleeWeapons':
-            case 'unarmedCombat':
-              dnDescriptor = firstTarget.items.filter(it => it.type === 'meleeweapon' && it.system.equipped).length === 0
-                ? 'targetUnarmedCombat'
-                : 'targetMeleeWeapons';
-              break;
-            case 'fireCombat':
-            case 'energyWeapons':
-            case 'heavyWeapons':
-            case 'missileWeapons':
-              dnDescriptor = 'targetDodge';
-              break;
-            default:
-              dnDescriptor = 'targetMeleeWeapons';
-          }
-          if (firstTarget.type === 'vehicle') {
-            dnDescriptor = 'targetVehicleDefense';
-          }
-        }
-
-        // Calculate damage caused by weapon
-        switch (damageType) {
-          case 'strengthPlus':
-            adjustedDamage = attributes.strength.value + weaponDamage;
-            break;
-          case 'charismaPlus':
-            adjustedDamage = attributes.charisma.value + weaponDamage;
-            break;
-          case 'dexterityPlus':
-            adjustedDamage = attributes.dexterity.value + weaponDamage;
-            break;
-          case 'mindPlus':
-            adjustedDamage = attributes.mind.value + weaponDamage;
-            break;
-          case 'spiritPlus':
-            adjustedDamage = attributes.spirit.value + weaponDamage;
-            break;
-          case 'flat':
-          default:
-            adjustedDamage = weaponDamage;
-        }
-
-        return TestDialog.wait({
-          testType: 'attack',
-          actor: actor,
-          itemId: item.id,
-          isAttack: true,
-          amountBD: 0,
-          isFav: skillData.isFav,
-          skillName: attackWith,
-          skillValue: skillData?.value || skillData?.skillValue,
-          skillAdds: skillData.adds,
-          unskilledUse: true,
-          DNDescriptor: dnDescriptor,
-          weaponName: item.name,
-          weaponDamageType: damageType,
-          weaponDamage: weaponDamage,
-          damage: adjustedDamage,
-          weaponAP: weaponData.ap,
-          applyArmor: true,
-          applySize: true,
-          attackOptions: true,
-          chatNote: weaponData.chatNote,
-          bdDamageLabelStyle: 'hidden',
-          bdDamageSum: 0,
-        }, { useTargets: true });
-      }
+      rollAttack(actor, item);
       break;
 
     case 'psionicpower':
     case 'miracle':
     case 'spell':
-      {
-        const powerData = item.system;
-        const skillName = powerData.skill;
-        const skillData = actor.system.skills[skillName];
-
-        return TestDialog.wait({
-          testType: 'power',
-          DNDescriptor: game.user.targets.size ? powerData.dn : 'standard',
-          actor: actor,
-          powerName: item.name,
-          powerModifier: item.system.modifier || 0,
-          isAttack: powerData.isAttack,
-          amountBD: 0,
-          skillName: skillName,
-          skillAdds: skillData.adds,
-          skillValue: skillData.value,
-          unskilledUse: false,
-          damage: powerData.damage,
-          weaponAP: powerData.ap,
-          applyArmor: powerData.applyArmor,
-          applySize: powerData.applySize,
-          attackOptions: true,
-          bdDamageLabelStyle: 'hidden',
-          bdDamageSum: 0,
-        }, { useTargets: true });
-      }
+      rollPower(actor, item);
       break;
 
     default:
