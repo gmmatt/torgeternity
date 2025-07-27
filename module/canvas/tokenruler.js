@@ -20,4 +20,16 @@ export default class TorgEternityTokenRuler extends foundry.canvas.placeables.to
     }
     return context;
   }
+
+  _getGridHighlightStyle(waypoint, offset) {
+    const result = super._getGridHighlightStyle(waypoint, offset);
+    if (waypoint.action !== 'walk') return result;
+    const move = this.token?.actor.system.other.move;
+    const cost = waypoint.measurement.cost;
+    if (cost > 3 * move)
+      result.color = 0xce0707;  // color-level-error
+    else if (cost > move)
+      result.color = 0xee9b3a;  // color-level-warning
+    return result;
+  }
 }
