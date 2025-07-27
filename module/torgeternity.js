@@ -22,6 +22,7 @@ import torgeternityPlayerHand from './cards/torgeternityPlayerHand.js';
 import torgeternityPile from './cards/torgeternityPile.js';
 import torgeternityDeck from './cards/torgeternityDeck.js';
 import torgeternityCardConfig from './cards/torgeternityCardConfig.js';
+import { torgeternityCard } from './cards/torgeternityCard.js';
 import { torgeternityCards } from './cards/torgeternityCards.js';
 import { TestDialog } from './test-dialog.js';
 import initTorgControlButtons from './controlButtons.js';
@@ -93,6 +94,7 @@ Hooks.once('init', async function () {
   CONFIG.ui.chat = TorgeternityChatLog;
 
   // ---cards
+  CONFIG.Card.documentClass = torgeternityCard;
   CONFIG.Cards.documentClass = torgeternityCards;
   CONFIG.cardTypes = torgeternity.cardTypes;
 

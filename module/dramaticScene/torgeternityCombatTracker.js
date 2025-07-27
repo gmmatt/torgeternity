@@ -67,7 +67,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     context.noHand = !hand;
     if (hand) {
       context.cardpool = hand.cards
-        ?.filter(card => card.flags?.torgeternity?.pooled)
+        ?.filter(card => card.system.pooled)
         .map(card => { return { name: card.name, img: card.img } }) ?? [];
     }
     context.turnTaken = combatant.turnTaken;

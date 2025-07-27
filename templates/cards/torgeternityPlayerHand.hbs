@@ -41,8 +41,8 @@
             <span class="card-type">{{card.typeLoc}}</span>
             {{#if (eq card.type "destiny")}}
               <span class="card-pooled">
-                <input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle"
-                  type="checkbox" id="pooled" {{checked card.flags.torgeternity.pooled}}>
+                <input name="data.system.pooled" class="toggle" data-action="poolToggle"
+                  type="checkbox" id="pooled" {{checked card.system.pooled}}>
               </span>
             {{else}}
               <span class="card-pooled"></span>

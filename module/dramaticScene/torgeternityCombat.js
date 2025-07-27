@@ -27,7 +27,7 @@ export default class TorgCombat extends Combat {
       .forEach(combatant => {
         const hand = game.actors.get(combatant.actorId).getDefaultHand();
         // delete the flag that give the pooled condition in each card of each hand
-        if (hand) hand.cards.forEach(card => card.unsetFlag('torgeternity', 'pooled'))
+        if (hand) hand.cards.forEach(async card => await card.update({ "system.pooled": false }))
       });
 
     this.#deleteActiveDefense();

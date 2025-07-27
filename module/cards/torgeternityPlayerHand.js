@@ -189,7 +189,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         break;
       case 'discard':
         {
-          await card.unsetFlag('torgeternity', 'pooled');
+          await card.update({ "system.pooled": false });
           const settings = game.settings.get('torgeternity', 'deckSetting');
           const discardPile = game.cards.get((card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard);
           if (!discardPile) break;
@@ -204,7 +204,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         }
       case 'play':
         {
-          await card.unsetFlag('torgeternity', 'pooled');
+          await card.update({ "system.pooled": false });
           const settings = game.settings.get('torgeternity', 'deckSetting');
           const discardPile = game.cards.get((card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard);
           if (!discardPile) break;
@@ -263,11 +263,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     // Handle the control action
     switch (input.dataset.action) {
       case 'poolToggle':
-        if (card.getFlag('torgeternity', 'pooled'))
-          await card.unsetFlag('torgeternity', 'pooled');
-        else
-          await card.setFlag('torgeternity', 'pooled', true);
-        ui.combat.render({ parts: ["tracker"] });
+        await card.update({ "system.pooled": !card.system.pooled });
         return;
     }
   }
