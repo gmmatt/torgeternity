@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/NZZR%C3%BCckseite.webp
 cards:
-  - _id: SY6JVJZLXwWFGbKs
+  - _id: LhQpMt0FtTJccDV0
     name: Abschiedsgruß
     description: ''
     type: cosm
@@ -26,24 +26,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.SY6JVJZLXwWFGbKs'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.LhQpMt0FtTJccDV0'
     cards: []
-  - _id: uvHdyvHUDq8DSuo5
+  - _id: NkU4QxNX4B86IGFr
     name: Im Kreuzfeuer
     description: ''
     type: cosm
@@ -64,24 +62,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.uvHdyvHUDq8DSuo5'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.NkU4QxNX4B86IGFr'
     cards: []
-  - _id: Z16Cj6bd6bRN4pdU
+  - _id: AVmVDtSDIJ6fiY9C
     name: Gefangen!
     description: ''
     type: cosm
@@ -102,24 +98,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.Z16Cj6bd6bRN4pdU'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.AVmVDtSDIJ6fiY9C'
     cards: []
-  - _id: pZbKy3zyHEAe5Rkl
+  - _id: LrYHaa5WDYhOhu21
     name: In die Verlängerung
     description: ''
     type: cosm
@@ -140,24 +134,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.pZbKy3zyHEAe5Rkl'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.LrYHaa5WDYhOhu21'
     cards: []
-  - _id: Mo50Wz4H7Wg7tUnu
+  - _id: PrL7h9APHfI4NMhU
     name: Plötzlich...
     description: ''
     type: cosm
@@ -178,24 +170,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.Mo50Wz4H7Wg7tUnu'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.PrL7h9APHfI4NMhU'
     cards: []
-  - _id: hvEtnMfprOp0VcJ2
+  - _id: U2sdVdn9JCdU0rPd
     name: Dramatische Offenbarung
     description: ''
     type: cosm
@@ -216,24 +206,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.hvEtnMfprOp0VcJ2'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.U2sdVdn9JCdU0rPd'
     cards: []
-  - _id: mjbfcxAoiVj3YAMk
+  - _id: dOWBVGbrwEtSLy5O
     name: Vorzeitiger Rückzug
     description: ''
     type: cosm
@@ -254,24 +242,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.mjbfcxAoiVj3YAMk'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.dOWBVGbrwEtSLy5O'
     cards: []
-  - _id: WJRfHGz8fLtHFDqa
+  - _id: QbabcJBkENdLwTWa
     name: Triumphierende Rede
     description: ''
     type: cosm
@@ -292,24 +278,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.WJRfHGz8fLtHFDqa'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.QbabcJBkENdLwTWa'
     cards: []
-  - _id: FhaqRHDn7h5Dn5SN
+  - _id: OoRm9HGExGwizDdQ
     name: Unvermeidbare Rückkehr
     description: ''
     type: cosm
@@ -330,24 +314,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.FhaqRHDn7h5Dn5SN'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.OoRm9HGExGwizDdQ'
     cards: []
-  - _id: hjYDzFSHVBChEyHo
+  - _id: J6IJmxvpzInhxtPG
     name: Gesetz der Action
     description: ''
     type: cosm
@@ -368,27 +350,25 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!AxMXoHGtz82Uty9w.hjYDzFSHVBChEyHo'
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.J6IJmxvpzInhxtPG'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 300000
 flags:
   core: {}
   torgeternity:
@@ -402,11 +382,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812048
-  modifiedTime: 1716827812048
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598355970
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.VPYV2jqR3aAc2Mzj
   duplicateSource: null
   exportSource: null

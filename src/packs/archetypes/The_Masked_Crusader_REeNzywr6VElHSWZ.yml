@@ -139,7 +139,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: nileEmpire
+      cosm: none
       description: "<p>An often-copied design that features a high muzzle velocity and excellent penetration and a distinctive box magazine in front of the trigger. It remains extremely popular in the Nile Empire, where knock-offs are still manufactured.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 20
@@ -152,7 +152,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: flat
-      equipped: false
+      equipped: true
       notes: ''
       range: 10 / 25 / 40
       secondaryAxiom:
@@ -164,11 +164,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693911089244
-      modifiedTime: 1722156447519
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599198698
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.IM84bwdaJWaAVAIj
       duplicateSource: null
       exportSource: null
@@ -229,17 +229,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722156497255
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599192360
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
       exportSource: null

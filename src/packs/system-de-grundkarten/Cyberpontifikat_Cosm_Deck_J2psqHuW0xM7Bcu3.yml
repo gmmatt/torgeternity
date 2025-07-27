@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Cyberpontifikat/CZZR%C3%BCckseite.webp
 cards:
-  - _id: XPucKSp7au12JpqD
+  - _id: IariNdfTQi038YZV
     name: Gott in der Maschine
     description: ''
     type: cosm
@@ -26,24 +26,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.XPucKSp7au12JpqD'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.IariNdfTQi038YZV'
     cards: []
-  - _id: FQu8AW7yWs4cdUsC
+  - _id: fiDZBEQ3A7pbz95s
     name: La Resistance!
     description: ''
     type: cosm
@@ -64,24 +62,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.FQu8AW7yWs4cdUsC'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.fiDZBEQ3A7pbz95s'
     cards: []
-  - _id: mWQZSdhe3TIwBJOI
+  - _id: jm1moEZ2vT5Aw3Uj
     name: Konstallation
     description: ''
     type: cosm
@@ -102,24 +98,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.mWQZSdhe3TIwBJOI'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.jm1moEZ2vT5Aw3Uj'
     cards: []
-  - _id: fz8z85msFlFVwo7N
+  - _id: CnstxSMFcjC8OIs7
     name: Magische Ketzerei
     description: ''
     type: cosm
@@ -140,24 +134,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.fz8z85msFlFVwo7N'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.CnstxSMFcjC8OIs7'
     cards: []
-  - _id: pyNwAmX1fmx2oddZ
+  - _id: 5qgZ7RJY88r2jB4g
     name: Malrauxs Zorn
     description: ''
     type: cosm
@@ -178,24 +170,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.pyNwAmX1fmx2oddZ'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.5qgZ7RJY88r2jB4g'
     cards: []
-  - _id: Q79UOZlhCTL0dU6p
+  - _id: qN5eyc47YjQocSqe
     name: Erhöhte Paranoia
     description: ''
     type: cosm
@@ -216,24 +206,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.Q79UOZlhCTL0dU6p'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.qN5eyc47YjQocSqe'
     cards: []
-  - _id: u9ZfNA929HVI4GZn
+  - _id: WxRR6tR4OeJ10O5m
     name: Denunziert
     description: ''
     type: cosm
@@ -254,24 +242,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.u9ZfNA929HVI4GZn'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.WxRR6tR4OeJ10O5m'
     cards: []
-  - _id: ro7jlBJZfeQszr8W
+  - _id: DNXgkuk1yq5o1O2l
     name: Gesucht
     description: ''
     type: cosm
@@ -292,24 +278,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.ro7jlBJZfeQszr8W'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.DNXgkuk1yq5o1O2l'
     cards: []
-  - _id: UEqxbbi8SqDiFR3C
+  - _id: dRRT5jw4USUZS7or
     name: Pflicht-Upgrade
     description: ''
     type: cosm
@@ -330,24 +314,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.UEqxbbi8SqDiFR3C'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.dRRT5jw4USUZS7or'
     cards: []
-  - _id: 7BV93Imaj2DG1p3J
+  - _id: JAdOM9cffZeJNjsW
     name: Zorn
     description: ''
     type: cosm
@@ -368,27 +350,25 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!J2psqHuW0xM7Bcu3.7BV93Imaj2DG1p3J'
+    _key: '!cards.cards!J2psqHuW0xM7Bcu3.JAdOM9cffZeJNjsW'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 287500
 flags:
   core: {}
   torgeternity:
@@ -402,11 +382,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812133
-  modifiedTime: 1716827812133
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598364776
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.l1fDhrCsUMFLX2ez
   duplicateSource: null
   exportSource: null

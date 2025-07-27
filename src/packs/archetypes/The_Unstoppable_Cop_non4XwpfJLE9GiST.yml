@@ -56,7 +56,7 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: May use to grapple
       secondaryAxiom:
         selected: none
@@ -66,11 +66,11 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: null
-      modifiedTime: 1722158438088
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599466281
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Item.NwUEzGCgHe2GgC6N
       duplicateSource: null
       exportSource: null
@@ -312,7 +312,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: flat
-      equipped: false
+      equipped: true
       notes: ''
       range: 10 / 25 / 40
       secondaryAxiom:
@@ -324,11 +324,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693914872301
-      modifiedTime: 1722158381211
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599460931
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
       duplicateSource: null
       exportSource: null
@@ -456,17 +456,20 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146882
-      modifiedTime: 1722158364507
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599451788
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
       duplicateSource: null
       exportSource: null

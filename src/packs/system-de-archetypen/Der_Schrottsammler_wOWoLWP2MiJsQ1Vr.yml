@@ -55,7 +55,7 @@ items:
         Stärke von Digan Cyberarm</em></p>
       price: '300'
       techlevel: 25
-      value: 13
+      value: 12
       ap: 0
       attackWith: meleeWeapons
       bonus: 2
@@ -68,17 +68,20 @@ items:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - stagger
+        - twoHanded
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694868208996
-      modifiedTime: 1722163632879
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598623477
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UnO4Ubrqpn348wrx
       duplicateSource: null
       exportSource: null
@@ -93,7 +96,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: tharkold
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Flächenangriffe}</p>
 
@@ -121,24 +124,26 @@ items:
       chatNote: ''
       damage: 5
       damageType: flat
-      equipped: false
+      equipped: true
       minStrength: ''
       notes: Kleine Explosion
       range: 5/10/15
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - smallBlast
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694868215692
-      modifiedTime: 1722163453575
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598613135
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ZoLSdDqVUue06Zsh
       duplicateSource: null
       exportSource: null
@@ -620,17 +625,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366193
-      modifiedTime: 1722163446600
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598601464
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.lAjH7TpknFEg0r9V
       duplicateSource: null
       exportSource: null

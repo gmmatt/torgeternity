@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/OZZR%C3%BCckseite.webp
 cards:
-  - _id: S9w9uqcjPGwGotZe
+  - _id: rtraFyLw2tvz5VgL
     name: Verdammt
     description: ''
     type: cosm
@@ -25,24 +25,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.S9w9uqcjPGwGotZe'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.rtraFyLw2tvz5VgL'
     cards: []
-  - _id: hTs3wbke0E89YnQl
+  - _id: gUcrON1lJmKeaLkX
     name: Versuchung
     description: ''
     type: cosm
@@ -62,24 +60,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.hTs3wbke0E89YnQl'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.gUcrON1lJmKeaLkX'
     cards: []
-  - _id: 6VGwzGaAsk61R86J
+  - _id: mcAiIFtLZ2cDnTGS
     name: Ominöse Vorzeichen
     description: ''
     type: cosm
@@ -99,24 +95,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.6VGwzGaAsk61R86J'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.mcAiIFtLZ2cDnTGS'
     cards: []
-  - _id: csgLfMsBdfA9J8De
+  - _id: xK5UJMPDqDLh4ZdE
     name: Schockmoment
     description: ''
     type: cosm
@@ -136,24 +130,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.csgLfMsBdfA9J8De'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.xK5UJMPDqDLh4ZdE'
     cards: []
-  - _id: Ict0us0TvDhXP5JX
+  - _id: XoqSOX92v9uNboWv
     name: Vom Tod Gezeichnet
     description: ''
     type: cosm
@@ -173,24 +165,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.Ict0us0TvDhXP5JX'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.XoqSOX92v9uNboWv'
     cards: []
-  - _id: yRxan7yxw5rNjj2w
+  - _id: 6Sn0CmwSwYV988vx
     name: Sonnenuntergang?
     description: ''
     type: cosm
@@ -210,24 +200,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.yRxan7yxw5rNjj2w'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.6Sn0CmwSwYV988vx'
     cards: []
-  - _id: G0dlejV9m42ijhpm
+  - _id: QdelHWw5JTMA8a0S
     name: Dunkle Geheimnisse
     description: ''
     type: cosm
@@ -247,24 +235,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.G0dlejV9m42ijhpm'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.QdelHWw5JTMA8a0S'
     cards: []
-  - _id: OCr5sWIfgYumM3b7
+  - _id: EPMANYcpd8pI6pC8
     name: Unheiliges Interesse
     description: ''
     type: cosm
@@ -284,24 +270,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.OCr5sWIfgYumM3b7'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.EPMANYcpd8pI6pC8'
     cards: []
-  - _id: FoPTfR6Ve6lTbKYC
+  - _id: blsL3y9p7u7N5Csz
     name: Zeichen der Furcht
     description: ''
     type: cosm
@@ -321,24 +305,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.FoPTfR6Ve6lTbKYC'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.blsL3y9p7u7N5Csz'
     cards: []
-  - _id: cjZ1ZjmQujLWlb5m
+  - _id: udLE7mL0ykTLAM4N
     name: Licht aus!
     description: ''
     type: cosm
@@ -358,27 +340,25 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.cjZ1ZjmQujLWlb5m'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.udLE7mL0ykTLAM4N'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 700000
 flags:
   core: {}
   torgeternity:
@@ -392,11 +372,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812278
-  modifiedTime: 1716827812278
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598355970
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.lheO8UJGbFYwM7W5
   duplicateSource: null
   exportSource: null

@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/TZZR%C3%BCckseite.webp
 cards:
-  - _id: 6sOlpEMYZg1XSLtY
+  - _id: 0g2uPZqO8rWs6DOi
     name: Sieht nach Ärger aus
     description: ''
     type: cosm
@@ -22,27 +22,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 100000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.6sOlpEMYZg1XSLtY'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.0g2uPZqO8rWs6DOi'
     cards: []
-  - _id: CKd6JMY0YtmAWNER
+  - _id: Y82VDhBeewkjYWzW
     name: Überlegenheit
     description: ''
     type: cosm
@@ -59,27 +58,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 200000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.CKd6JMY0YtmAWNER'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.Y82VDhBeewkjYWzW'
     cards: []
-  - _id: 9VGxkUYYVI2S9VNi
+  - _id: xzckSnbdbQpoM8Q8
     name: Geissel
     description: ''
     type: cosm
@@ -96,27 +94,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 300000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.9VGxkUYYVI2S9VNi'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.xzckSnbdbQpoM8Q8'
     cards: []
-  - _id: uF1lXhd939N5lUXJ
+  - _id: iC5gSKYO6LKUOlwi
     name: Verstrahlt
     description: ''
     type: cosm
@@ -133,27 +130,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 400000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.uF1lXhd939N5lUXJ'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.iC5gSKYO6LKUOlwi'
     cards: []
-  - _id: nC9KUOy1IW0wYEUj
+  - _id: R2EHqAIWtaXQ9pib
     name: Cyberpsychose
     description: ''
     type: cosm
@@ -170,27 +166,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 500000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.nC9KUOy1IW0wYEUj'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.R2EHqAIWtaXQ9pib'
     cards: []
-  - _id: ftRKLfuPxFF3fzHL
+  - _id: z1avjtDz4XbwgT9R
     name: Kniet nieder!
     description: ''
     type: cosm
@@ -207,27 +202,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 600000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.ftRKLfuPxFF3fzHL'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.z1avjtDz4XbwgT9R'
     cards: []
-  - _id: m924uNNYuy3ZGj7f
+  - _id: 2QhWlslKPpaRnj4T
     name: Du arbeitest jetzt für mich!
     description: ''
     type: cosm
@@ -244,27 +238,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: -100000
+    sort: 700000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.m924uNNYuy3ZGj7f'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.2QhWlslKPpaRnj4T'
     cards: []
-  - _id: Q6b1FOiKcYzZK7s8
+  - _id: U7gg2iUGlKne9npk
     name: Erzürnt
     description: ''
     type: cosm
@@ -281,27 +274,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 800000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.Q6b1FOiKcYzZK7s8'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.U7gg2iUGlKne9npk'
     cards: []
-  - _id: Tokw9r5aqy734dHC
+  - _id: L38BPAv2Ot6hN2u0
     name: Beute!
     description: ''
     type: cosm
@@ -318,27 +310,26 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 900000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.Tokw9r5aqy734dHC'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.L38BPAv2Ot6hN2u0'
     cards: []
-  - _id: XixQ6nJjZ7JoIe01
+  - _id: HPY0CSE08oN1Kubj
     name: Quälende Visionen
     description: ''
     type: cosm
@@ -355,30 +346,29 @@ cards:
     drawn: false
     origin: 9isgXoIiiGWQHBx0
     rotation: 0
-    sort: 0
+    sort: 1000000
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.XixQ6nJjZ7JoIe01'
+      modifiedTime: 1753598242584
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.HPY0CSE08oN1Kubj'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 950000
 flags:
   core: {}
   torgeternity:
@@ -392,11 +382,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812019
-  modifiedTime: 1716827812019
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598374765
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.edY8yNxMl2PYXsUf
   duplicateSource: null
   exportSource: null

@@ -13,7 +13,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: nileEmpire
+      cosm: none
       description: >-
         <p>If energy weapons test is a Mishap device stops functioning for the
         scene.</p>
@@ -28,7 +28,7 @@ items:
       chatNote: +2 damage if target wet or +4 if soaked
       damage: 15
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Requires Electro-Ray perk, Replinishes 1 ammo per round
       range: 10/25/50
       secondaryAxiom:
@@ -38,11 +38,11 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: null
-      modifiedTime: 1722154981890
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599074606
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Item.W8ZARSxZdHHv4JZN
       duplicateSource: null
       exportSource: null
@@ -521,17 +521,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722155014075
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599078251
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
       exportSource: null

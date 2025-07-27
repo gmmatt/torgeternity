@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Aysle/AZZR%C3%BCckseite.webp
 cards:
-  - _id: mKWzHnVvV1MEKYfb
+  - _id: 5vdo4xW8oNs8h94d
     name: Glücklicher Fund
     description: ''
     type: cosm
@@ -25,24 +25,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.mKWzHnVvV1MEKYfb'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.5vdo4xW8oNs8h94d'
     cards: []
-  - _id: z0amJFSuOrPcyiZT
+  - _id: ayXeWRBNnlh5B5CK
     name: Stell dich mir!
     description: ''
     type: cosm
@@ -62,24 +60,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.z0amJFSuOrPcyiZT'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.ayXeWRBNnlh5B5CK'
     cards: []
-  - _id: Cd61yQTdY6UGjbCb
+  - _id: i4QHlwRbteVtML9j
     name: Falle!
     description: ''
     type: cosm
@@ -99,24 +95,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.Cd61yQTdY6UGjbCb'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.i4QHlwRbteVtML9j'
     cards: []
-  - _id: KaenbfVmrvf7Yyrh
+  - _id: QLMFW3VrgGQLFZYh
     name: Intrige bei Hofe
     description: ''
     type: cosm
@@ -136,24 +130,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.KaenbfVmrvf7Yyrh'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.QLMFW3VrgGQLFZYh'
     cards: []
-  - _id: mfjpkgcHpnw0Bc9X
+  - _id: tV8sJiGa0zRgG5j9
     name: Minne
     description: ''
     type: cosm
@@ -173,24 +165,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.mfjpkgcHpnw0Bc9X'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.tV8sJiGa0zRgG5j9'
     cards: []
-  - _id: tFgqZ7lK0nvh5Kx4
+  - _id: IO9Ymeo4BiSrQxHi
     name: Wütendes Monster
     description: ''
     type: cosm
@@ -210,24 +200,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.tFgqZ7lK0nvh5Kx4'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.IO9Ymeo4BiSrQxHi'
     cards: []
-  - _id: waKSj1yrSqPpKGuU
+  - _id: NxqI1Tjk9IU75wb6
     name: Launenhafte Magie
     description: ''
     type: cosm
@@ -247,24 +235,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.waKSj1yrSqPpKGuU'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.NxqI1Tjk9IU75wb6'
     cards: []
-  - _id: AC1YuA9EsCwazXVg
+  - _id: WNr19wHAHV8RTvdB
     name: Plündert die Leiche!
     description: ''
     type: cosm
@@ -284,24 +270,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.AC1YuA9EsCwazXVg'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.WNr19wHAHV8RTvdB'
     cards: []
-  - _id: QePgJmjn8eSTzoj7
+  - _id: LcyIug15Af5LQB1u
     name: Manawelle
     description: ''
     type: cosm
@@ -321,24 +305,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.QePgJmjn8eSTzoj7'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.LcyIug15Af5LQB1u'
     cards: []
-  - _id: G9z6cbNqZyZvS8uq
+  - _id: uxXF7E6jn2wqWdqI
     name: Finderlohn
     description: ''
     type: cosm
@@ -358,27 +340,25 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.G9z6cbNqZyZvS8uq'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.uxXF7E6jn2wqWdqI'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 275000
 flags:
   core: {}
   torgeternity:
@@ -392,11 +372,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812079
-  modifiedTime: 1716827812079
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598362583
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.ZnUPWPvCJNMdUHmm
   duplicateSource: null
   exportSource: null

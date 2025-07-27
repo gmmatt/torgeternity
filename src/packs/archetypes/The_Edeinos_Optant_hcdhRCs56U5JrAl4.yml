@@ -191,17 +191,19 @@ items:
       secondaryAxiom:
         selected: spirit
         value: 11
+      traits:
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146924
-      modifiedTime: 1722155790760
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599091182
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
       duplicateSource: null
       exportSource: null
@@ -487,6 +489,8 @@ items:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - thrown
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -497,9 +501,9 @@ items:
       duplicateSource: null
       coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 13.1.1
+      systemVersion: 13.2.2
       createdTime: null
-      modifiedTime: 1753103996693
+      modifiedTime: 1753599103178
       lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.dhZt4ogIENT8UrvV'
@@ -507,7 +511,7 @@ items:
     type: missileweapon
     img: systems/torgeternity/images/icons/missile-weapon-icon.webp
     system:
-      cosm: livingLand
+      cosm: none
       description: >-
         <p>For use as melee weapon see
         @UUID[Actor.hcdhRCs56U5JrAl4.Item.dhZt4ogIENT8UrvV]{Hrockt Shoot
@@ -528,7 +532,7 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       minStrength: ''
       notes: ''
       range: 10/20/40
@@ -541,12 +545,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.6Pb5rtY0QdIMTbRF
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.2.2
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753599097933
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _id: GQGV7PufpwLZ9DdV
     sort: 0
