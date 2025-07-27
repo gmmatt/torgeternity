@@ -4214,6 +4214,10 @@ dialog.externalLinks {
   }
 }
 
+div.token-distance {
+  background-color: #000060;
+}
+
 a.torg-inline-check,
 a.torg-inline-condition,
 a.torg-inline-buff {
