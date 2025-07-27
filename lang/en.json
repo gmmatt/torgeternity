@@ -730,6 +730,18 @@
         "hint": "If checked, hovering the mouse over a token will display the distance to that token from the user's controlled character",
         "name": "Show Distance to Token"
       },
+      "rulerGridWalk": {
+        "hint": "The tint colour for grid cells when a token has not reached its move distance (default: --color-level-success)",
+        "name": "Grid Highlight (Walk)"
+      },
+      "rulerGridRun": {
+        "hint": "The tint colour for grid cells when a token has exceeded its move, but not its max move (default: --color-level-info)",
+        "name": "Grid Highlight (Run)"
+      },
+      "rulerGridMax": {
+        "hint": "The tint colour for grid cells when a token has exceeded its max move (default: --color-level-error)",
+        "name": "Grid Highlight (> Run)"
+      },
       "autoShock": {
         "name": "Automatically Apply KO",
         "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
