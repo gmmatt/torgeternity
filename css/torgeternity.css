@@ -2246,6 +2246,7 @@ aside#scene-controls2 {
 #scene-navigation .scene-navigation-menu .scene.view::after,
 #scene-navigation .scene-navigation-menu .scene.gm::after {
   color: white;
+  right: 0rem;
 }
 
 #scene-navigation #scene-navigation-expand {
