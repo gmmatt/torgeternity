@@ -577,7 +577,6 @@ async function rollItemMacro(itemName) {
     case 'meleeweapon':
     case 'missileweapon':
     case 'firearm':
-    case 'energyweapon':
     case 'heavyweapon':
     case 'specialability-rollable':
       {
@@ -598,11 +597,9 @@ async function rollItemMacro(itemName) {
           switch (attackWith) {
             case 'meleeWeapons':
             case 'unarmedCombat':
-              firstTarget.items
-                .filter((it) => it.type === 'meleeweapon')
-                .filter((it) => it.system.equipped).length === 0
-                ? (dnDescriptor = 'targetUnarmedCombat')
-                : (dnDescriptor = 'targetMeleeWeapons');
+              dnDescriptor = firstTarget.items.filter(it => it.type === 'meleeweapon' && it.system.equipped).length === 0
+                ? 'targetUnarmedCombat'
+                : 'targetMeleeWeapons';
               break;
             case 'fireCombat':
             case 'energyWeapons':

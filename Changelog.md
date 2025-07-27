@@ -6,6 +6,8 @@
 - Add option to disable fading of Scene Navigation menu.
 - Combat Tracker no longer disappears when a card Hand is deleted (which would occur when an Actor is deleted).
 - Token Ruler grid highlight is coloured according to move/max move of the token (if any).
+- #565: No errors during hover distance.
+- Make the `attackWith` field visible in the Melee Weapon, Missile Weapon and Heavy Weapon Item sheets, so that things like Pain Gauntlet can be built directly as a Melee Weapon rather than a Gear item with a separate customAttack item.
 
 ## v13.2.2
 

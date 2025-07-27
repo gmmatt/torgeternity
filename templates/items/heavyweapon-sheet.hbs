@@ -29,6 +29,10 @@
         name="system.value"
         type="number"
         value="{{item.system.value}}" />
+      <p class="item-data-label">{{localize "torgeternity.gear.attackWith"}}</p>
+      <select name="system.attackWith">
+        {{selectOptions config.attackTypes selected=item.system.attackWith localize=true}}
+      </select>
       <p class="item-data-label">{{localize "torgeternity.gear.range"}}</p>
       <input name="system.range" type="text" value="{{item.system.range}}" />
       <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
