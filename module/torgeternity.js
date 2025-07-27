@@ -821,17 +821,6 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
   return TestDialog.wait(test, { useTargets: true });
 }
 
-Hooks.on('renderCombatTracker', (combatTracker) => {
-  const hands = game.cards;
-  for (const hand of hands) {
-    // This causes the combat tracker to be "close()"d when the hand is deleted,
-    // but is required to update the CombatTracker when a hand is changed so that
-    // the "pooled" cards can be displayed.
-    // torgeternityCards._onDelete will remove the combat tracker from hand.apps
-    hand.apps[combatTracker.id] = combatTracker;
-  }
-});
-
 // change the generic threat token to match the cosm's one if it's set in the scene
 Hooks.on('preCreateToken', async (document, data, options, userId) => {
   if (document.texture.src.includes('systems/torgeternity/images/characters/threat')) {
