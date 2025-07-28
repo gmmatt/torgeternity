@@ -77,6 +77,15 @@ export default class TorgeternityItem extends foundry.documents.Item {
     customAttack: 'melee-weapon-icon.webp',
   };
 
+  static migrateData(source) {
+    super.migrateData(source);
+    // For better support, convert the old damaging abilities into custom attacks with a flat damage modifier.
+    if (source.type === 'specialability-rollable' && source.system.damage && source.system.attackWith) {
+      source.type = 'customAttack';
+      source.system.damageType = 'flat'
+    }
+    return source;
+  }
   /**
    * Getter for a weapon that might have ammo or not (meelee weapons don't have ammo)
    *  @returns true/false
