@@ -13,6 +13,7 @@
 - Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
 - The Rule on a Drama Card can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
 - Change background colour of hover distance function to distinguish it from the waypoint display during turns.
+- When rolling Reailty skill from Actor sheet, remove `disconnected` state if the Reconnection is successful.
 
 ## v13.2.2
 
