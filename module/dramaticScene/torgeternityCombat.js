@@ -194,6 +194,10 @@ export default class TorgCombat extends Combat {
     return (first === first.toUpperCase()) ? dsr.split('').join(' ') : game.i18n.localize(torgeternity.dramaActions[dsr]);
   }
 
+  get dramaRule() {
+    return this.currentDrama?.system.rule;
+  }
+
   /**
    * 
    */

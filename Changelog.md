@@ -11,6 +11,7 @@
 - Use common code for performing Attack/Power rolls from the Actor sheet and from `rollItemMacro`.
 - Expand list of traits to cover the cosm books, and force all Item types to use the drop-down list.
 - Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
+- The Rule on a Drama Card can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
 
 ## v13.2.2
 
