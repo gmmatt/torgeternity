@@ -224,13 +224,41 @@ Hooks.once('i18nInit', () => {
     race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
   };
 
-  // Mapping of translation to key (for cosm migration)
-  CONFIG.torgeternity.cosmTypeFromLabel = Object.keys(torgeternity.cosmTypes).reduce((acc, key) => {
-    acc[game.i18n.localize(torgeternity.cosmTypes[key])] = key;
-    return acc;
-  }, {});
-  // Explicit foreign key present in data.
-  CONFIG.torgeternity.cosmTypeFromLabel["(Keins)"] = "none";
+  // Hard-coded, so that we are guaranteed to have it available immediately
+  CONFIG.torgeternity.cosmTypeFromLabel = {
+    "(Keins)": "none",
+    "(Ninguno)": "none",
+    "(Non)": "none",
+    "(None)": "none",
+    "(Sans cosm)": "none",
+    "Andere": "other",
+    "Autre": "other",
+    "Aysle": "aysle",
+    "Ciberpapado": "cyberpapacy",
+    "Core Earth": "coreEarth",
+    "Cyberpapacy": "cyberpapacy",
+    "Cyberpapauté": "cyberpapacy",
+    "Cyberpontifikat": "cyberpapacy",
+    "Das Lebende Land": "livingLand",
+    "Empire du Nil": "nileEmpire",
+    "Imperio Nilo": "nileEmpire",
+    "Living Land": "livingLand",
+    "Nil Imperium": "nileEmpire",
+    "Nil-Imperium": "nileEmpire",
+    "Nile Empire": "nileEmpire",
+    "Orrorsh": "orrorsh",
+    "Other": "other",
+    "Otro": "other",
+    "Pan Pacifica": "panPacifica",
+    "Prime Terre": "coreEarth",
+    "Terre-Vivante": "livingLand",
+    "Terre vivante": "livingLand",
+    "Terre Vivante": "livingLand",
+    "Tharkold": "tharkold",
+    "Tierra Base": "coreEarth",
+    "Tierra Viviente": "livingLand",
+    "Zentralerde": "coreEarth",
+  }
 })
 
 Hooks.once('setup', async function () {
