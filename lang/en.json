@@ -402,7 +402,7 @@
     },
     "fieldLabels": {
       "itemTraits": {
-        "label": "Item Traits",
+        "label": "Traits",
         "hint": "The specific abilities of this item"
       }
     },
@@ -1200,16 +1200,16 @@
       "forceDamage": "Force Damage",
       "iceDamage": "Ice Damage",
       "lightningDamage": "Lightning Damage",
-      "energyArmor": "Energy Resistance",
-      "fireArmor": "Fire Resistance",
-      "forceArmor": "Force Resistance",
-      "iceArmor": "Ice Resistance",
-      "lightningArmor": "Lightning Resistance",
-      "energyDefense": "Energy Resistant",
-      "fireDefense": "Fire Resistant",
-      "forceDefense": "Force Resistant",
-      "iceDefense": "Ice Resistant",
-      "lightningDefense": "Lightning Resistant"
+      "energyArmor": "Armor vs Energy",
+      "fireArmor": "Armor vs Fire",
+      "forceArmor": "Armor vs Force",
+      "iceArmor": "Armor vs Ice",
+      "lightningArmor": "Armor vs Lightning",
+      "energyDefense": "Defense vs Energy",
+      "fireDefense": "Defense vs Fire",
+      "forceDefense": "Defense vs Force",
+      "iceDefense": "Defense vs Ice",
+      "lightningDefense": "Defense vs Lightning"
     },
     "traitGroup": {
       "defense": "Defense",
