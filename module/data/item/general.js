@@ -55,7 +55,7 @@ export function newTraitsField(itemType) {
   return new fields.SetField(
     new fields.StringField({
       blank: false,
-      choices: itemType ? CONFIG.torgeternity.validItemTraits[itemType] : undefined,
+      choices: (itemType && torgeternity.specificItemTraits[itemType]) ?? CONFIG.torgeternity.allItemTraits,
       textSearch: true,
       trim: true,
     }),

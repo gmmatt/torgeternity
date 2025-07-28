@@ -91,7 +91,7 @@ function _onClickInlineCheck(event) {
   if (actor.system.skills[test.testType]) {  // CONFIG.torgeternity.skills
     const isInteractionAttack = test.attack ?? interactionAttacks[choice] ?? false;
     return game.torgeternity.rollSkillMacro(choice, test.attr ?? actor.system.skills[test.testType].baseAttribute, isInteractionAttack, test.dn ?? 'standard');
-  } else if ((actor.system.attributes[test.testType])) { // CONFIG.torgeternity.attributeTypes
+  } else if (actor.system.attributes[test.testType]) { // CONFIG.torgeternity.attributeTypes
     return game.torgeternity.rollSkillMacro(choice, choice, test.attack ?? false, test.dn ?? 'standard');
   }
   // Not rollSkillMacro, so anything can be set in the test.
