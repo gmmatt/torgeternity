@@ -10,10 +10,13 @@
 - Make the `attackWith` field visible in the Melee Weapon, Missile Weapon and Heavy Weapon Item sheets, so that things like Pain Gauntlet can be built directly as a Melee Weapon rather than a Gear item with a separate customAttack item.
 - Use common code for performing Attack/Power rolls from the Actor sheet and from `rollItemMacro`.
 - Expand list of traits to cover the cosm books, and force all Item types to use the drop-down list.
-- Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
-- The Rule on a Drama Card can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
+- #551: Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
+- #563: The Rule on a Drama Card can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
 - Change background colour of hover distance function to distinguish it from the waypoint display during turns.
-- When rolling Reailty skill from Actor sheet, remove `disconnected` state if the Reconnection is successful.
+- When rolling Reality skill from Actor sheet, remove `disconnected` state if the Reconnection is successful.
+- #567: Item traits apepar in expanded view of gear list.
+- When Threat window is closed while Notes tab is selected, on reopening the Notes tab will be shown correctly.
+- Reduce flickering of Combat Tracker on "New" round.
 
 ## v13.2.2
 
