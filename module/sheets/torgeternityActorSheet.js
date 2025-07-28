@@ -1,4 +1,4 @@
-import { renderSkillChat, rollAttack, rollPower } from '../torgchecks.js';
+import { TestResult, renderSkillChat, rollAttack, rollPower } from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { oneTestTarget, TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
@@ -490,7 +490,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (checkUnskilled(skillValue, skillName, this.actor)) return;
 
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
+    let reconnection_attempt = false;
     if (skillName === 'reality' && this.actor.isDisconnected) {
+      reconnection_attempt = true;
       const confirmed = await DialogV2.confirm({
         window: { title: 'torgeternity.dialogWindow.realityCheck.title' },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
@@ -517,7 +519,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       }
     }
 
-    return TestDialog.wait({
+    const dialog = TestDialog.wait({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
       actor: this.actor,
@@ -530,6 +532,22 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
+
+    if (!reconnection_attempt) return dialog;
+
+    switch ((await dialog).flags.torgeternity.test.result) {
+      case TestResult.STANDARD:
+      case TestResult.GOOD:
+      case TestResult.OUTSTANDING:
+        await this.actor.toggleStatusEffect('disconnected', { active: false });
+        ui.notifications.info(game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet'));
+        break;
+      case TestResult.FAILURE:
+        // ChatMessage.create({content: "<p>Fehlschlag</p>"});
+        break;
+      case TestResult.MISHAP:
+        break;
+    }
   }
 
   // Adapted from above, with event targetting in edit skills list
