@@ -43,6 +43,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -97,6 +100,9 @@
                 TL
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -160,6 +166,9 @@
                 TL
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -224,6 +233,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -279,6 +291,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -340,6 +355,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.bonus'}}
                 {{item.system.bonus}}
@@ -398,6 +416,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.bonus'}}
                 {{item.system.bonus}}
@@ -450,7 +471,9 @@
               {{localize 'torgeternity.gear.tl'}}
               {{item.system.techlevel}}
             </div>
-
+            {{#if item.traitDesc}}
+              <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+            {{/if}}
           </div>
         </li>
       {{/each}}
@@ -496,6 +519,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
             </div>
           </div>
         </li>
@@ -534,6 +560,9 @@
               <div class="item-dropdown-extras">
                 {{localize (concat "torgeternity.cosms." item.system.cosm)}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tappingDifficulty'}} :
                 {{item.system.tappingDifficulty}}

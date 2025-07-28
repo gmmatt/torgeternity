@@ -212,6 +212,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     ]) {
       for (const item of context[type]) {
         item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description);
+        item.traitDesc = Array.from(item.system.traits.map(trait => game.i18n.localize(`torgeternity.traits.${trait}`))).join(' / ');
       }
     }
 
