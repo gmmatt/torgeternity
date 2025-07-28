@@ -1211,6 +1211,11 @@
       "iceDefense": "Ice Resistant",
       "lightningDefense": "Lightning Resistant"
     },
+    "traitGroup": {
+      "defense": "Defense",
+      "melee": "Melee",
+      "ranged": "Ranged"
+    },
     "vehicleTypes": {
       "air": "Air",
       "land": "Land",

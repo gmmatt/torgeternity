@@ -583,11 +583,19 @@ const rangedWeaponTraits = {
   'lightningDamage': 'torgeternity.traits.lightningDamage',
 }
 
+/*
 torgeternity.allItemTraits = {
   ...defenseTraits,
   ...meleeWeaponTraits,
-  ...rangedWeaponTraits
+  ...rangedWeaponTraits,
+}*/
+
+torgeternity.allItemTraits = {
+  ...Object.entries(defenseTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.defense' }; return acc }, {}),
+  ...Object.entries(meleeWeaponTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.melee' }; return acc }, {}),
+  ...Object.entries(rangedWeaponTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.ranged' }; return acc }, {})
 }
+
 
 torgeternity.specificItemTraits = {
   // ammunition
