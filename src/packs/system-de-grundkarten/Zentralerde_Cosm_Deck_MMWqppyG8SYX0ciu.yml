@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/ZZZR%C3%BCckseite.webp
 cards:
-  - _id: krwUNS4x6RTktjTi
+  - _id: dkI7xt1TOs3ei4CT
     name: Angetrieben
     description: ''
     type: cosm
@@ -26,24 +26,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.krwUNS4x6RTktjTi'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.dkI7xt1TOs3ei4CT'
     cards: []
-  - _id: KpSErnbH03mvw2Df
+  - _id: yo7zIZDedGL6M7l4
     name: Weiterkämpfen
     description: ''
     type: cosm
@@ -64,24 +62,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.KpSErnbH03mvw2Df'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.yo7zIZDedGL6M7l4'
     cards: []
-  - _id: YgdpQLs6de17owmn
+  - _id: TxWmy4g47GiZowIF
     name: Inspirierende Rede
     description: ''
     type: cosm
@@ -102,24 +98,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.YgdpQLs6de17owmn'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.TxWmy4g47GiZowIF'
     cards: []
-  - _id: LXBm6QHoQiCc30mR
+  - _id: 5x24eHVbEek56BAx
     name: Gesetz der Hoffnung
     description: ''
     type: cosm
@@ -140,24 +134,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.LXBm6QHoQiCc30mR'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.5x24eHVbEek56BAx'
     cards: []
-  - _id: ENSDyxD4NgJnDnSa
+  - _id: 0z6TXqIhqN6V8M6b
     name: Willkommen auf der Erde!
     description: ''
     type: cosm
@@ -178,24 +170,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.ENSDyxD4NgJnDnSa'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.0z6TXqIhqN6V8M6b'
     cards: []
-  - _id: T6nOw7lKEW92RJIC
+  - _id: 7o9TLjbKCx22NtPv
     name: Eskalation!
     description: ''
     type: cosm
@@ -216,24 +206,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.T6nOw7lKEW92RJIC'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.7o9TLjbKCx22NtPv'
     cards: []
-  - _id: ZIi8vHlRQoAhIus4
+  - _id: ecaeB4uEiZexr6UJ
     name: Es gibt immer Hoffnung
     description: ''
     type: cosm
@@ -254,24 +242,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.ZIi8vHlRQoAhIus4'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.ecaeB4uEiZexr6UJ'
     cards: []
-  - _id: HrrF5tEmHUCryebf
+  - _id: jRX3c2PvrcgtLfOJ
     name: Nutze den Tag!
     description: ''
     type: cosm
@@ -292,24 +278,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.HrrF5tEmHUCryebf'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.jRX3c2PvrcgtLfOJ'
     cards: []
-  - _id: z4aTMLfe5Ljn2hPq
+  - _id: 2RO6VwcOJdRyPRYu
     name: Aufbäumen
     description: ''
     type: cosm
@@ -330,24 +314,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.z4aTMLfe5Ljn2hPq'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.2RO6VwcOJdRyPRYu'
     cards: []
-  - _id: 8dDbYNSqVVtsHo12
+  - _id: KVH9DBEe2oELf4DB
     name: Glückliche Fügung
     description: ''
     type: cosm
@@ -368,27 +350,25 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.8dDbYNSqVVtsHo12'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.KVH9DBEe2oELf4DB'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 1000000
 flags:
   core: {}
   torgeternity:
@@ -402,11 +382,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812181
-  modifiedTime: 1716827812181
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598366633
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.CjBKZB7BtLzhKOiJ
   duplicateSource: null
   exportSource: null

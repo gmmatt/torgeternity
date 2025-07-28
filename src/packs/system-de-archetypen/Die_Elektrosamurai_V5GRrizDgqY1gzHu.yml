@@ -120,7 +120,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: panPacifica
+      cosm: none
       description: >-
         <p>Die in der Klinge untergebrachte Ionenschaltung leuchtet bei der
         Aktivierung mit Energie. Das Feld, das direkt über der Oberfläche der
@@ -136,7 +136,7 @@ items:
       chatNote: ''
       damage: 4
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: ''
       secondaryAxiom:
         selected: none
@@ -148,11 +148,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694866320665
-      modifiedTime: 1722164918416
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598755153
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.blwojapRBKk4M4Xg
       duplicateSource: null
       exportSource: null
@@ -203,7 +203,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: panPacifica
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#kurzer-fs:]{Kurzer
         Feuerstoß}</p>
@@ -224,23 +224,25 @@ items:
       chatNote: ''
       damage: 13
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Kurzer FS, Pistole
       range: 20/40/80
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - shortBurst
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694866439177
-      modifiedTime: 1722164912883
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598765166
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.HM1hHISeFvyErmvU
       duplicateSource: null
       exportSource: null

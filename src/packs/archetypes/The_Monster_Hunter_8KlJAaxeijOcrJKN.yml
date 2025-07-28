@@ -13,7 +13,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: orrorsh
+      cosm: none
       description: >-
         <p>@UUID[Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.d9Bzjb00u4cjYSiu]{Bulletsmith}</p><p>@UUID[Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.wbWDSIYhAgGrPHBz]{Slayer's
         Bandoleer}</p>
@@ -28,7 +28,7 @@ items:
       chatNote: ''
       damage: 14
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Uses special shells
       range: 50/100/200
       secondaryAxiom:
@@ -38,11 +38,11 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: null
-      modifiedTime: 1722156872255
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599205348
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Item.fW9IrnHVWRXgCWEx
       duplicateSource: null
       exportSource: null
@@ -57,7 +57,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: aysle
+      cosm: none
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#small:]{Small}</p><p>A short-bladed weapon between 15 and 30 centimeters in length. Daggers can be easily concealed and drawn in close quarters.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       price: '25'
       techlevel: 8
@@ -68,21 +68,23 @@ items:
       chatNote: ''
       damage: 1
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Small
       secondaryAxiom:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - small
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: null
-      modifiedTime: 1722157017118
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599213414
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -453,17 +455,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146791
-      modifiedTime: 1722156861270
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599230732
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.RMjiwdeeAr3kBkLK
       duplicateSource: null
       exportSource: null

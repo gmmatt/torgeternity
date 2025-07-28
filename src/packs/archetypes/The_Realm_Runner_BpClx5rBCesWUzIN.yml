@@ -140,17 +140,20 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - mediumBlast
+        - nonLethal
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693912407562
-      modifiedTime: 1722157170262
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599281318
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.gcwGTAcBHXmDUney
       duplicateSource: null
       exportSource: null
@@ -429,17 +432,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722157209806
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599291078
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
       exportSource: null

@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/LZZR%C3%BCckseite.webp
 cards:
-  - _id: sDZXmtmx3n9wCDHY
+  - _id: QyFeRt1wrbrowKGo
     name: Dino-Angriff!
     description: ''
     type: cosm
@@ -26,24 +26,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.sDZXmtmx3n9wCDHY'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.QyFeRt1wrbrowKGo'
     cards: []
-  - _id: RIDThDvZ9nlukhe3
+  - _id: J5gxredIOpXkDTsv
     name: Gesetz des Verfalls
     description: ''
     type: cosm
@@ -64,24 +62,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.RIDThDvZ9nlukhe3'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.J5gxredIOpXkDTsv'
     cards: []
-  - _id: 4jiRCfW7OwJtwdsK
+  - _id: uA8N0ZLM5WtVa2cb
     name: Die beste Verteidigung
     description: ''
     type: cosm
@@ -102,24 +98,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.4jiRCfW7OwJtwdsK'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.uA8N0ZLM5WtVa2cb'
     cards: []
-  - _id: qwef43shBO8UWoWr
+  - _id: fs6Vhn03UcjNOtd3
     name: Überleben des Tüchtigsten
     description: ''
     type: cosm
@@ -140,24 +134,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.qwef43shBO8UWoWr'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.fs6Vhn03UcjNOtd3'
     cards: []
-  - _id: fDrlgNSblVRVwMJI
+  - _id: akklt17PLqcIjMUJ
     name: Gefahren des Landes
     description: ''
     type: cosm
@@ -178,24 +170,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.fDrlgNSblVRVwMJI'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.akklt17PLqcIjMUJ'
     cards: []
-  - _id: RZO2VleOyDzwDIrn
+  - _id: GTqKBhhwkUtUTep2
     name: Der tiefe Nebel
     description: ''
     type: cosm
@@ -216,24 +206,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.RZO2VleOyDzwDIrn'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.GTqKBhhwkUtUTep2'
     cards: []
-  - _id: 1xWXwGJ4RzdNnFJ4
+  - _id: BJ8F7FeH22SUFEUW
     name: Gesetz des Lebens
     description: ''
     type: cosm
@@ -254,24 +242,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.1xWXwGJ4RzdNnFJ4'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.BJ8F7FeH22SUFEUW'
     cards: []
-  - _id: zv2lW1HoumT7UTnQ
+  - _id: scCUOlCEf59b01wz
     name: Urinstinkte
     description: ''
     type: cosm
@@ -292,24 +278,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.zv2lW1HoumT7UTnQ'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.scCUOlCEf59b01wz'
     cards: []
-  - _id: JbVLbqNeBG1l4uZ2
+  - _id: 1Nc2OcDCEeBUU7Z2
     name: Verlorene Schätze
     description: ''
     type: cosm
@@ -330,24 +314,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.JbVLbqNeBG1l4uZ2'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.1Nc2OcDCEeBUU7Z2'
     cards: []
-  - _id: bQFqRwHUyceO8c9h
+  - _id: GNU1bsdkIJ6I4N5C
     name: Gesetz des Verfalls
     description: ''
     type: cosm
@@ -368,27 +350,25 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.bQFqRwHUyceO8c9h'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.GNU1bsdkIJ6I4N5C'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 293750
 flags:
   core: {}
   torgeternity:
@@ -402,11 +382,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812320
-  modifiedTime: 1716827812320
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598371148
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.xDKnUQ4micom96hn
   duplicateSource: null
   exportSource: null

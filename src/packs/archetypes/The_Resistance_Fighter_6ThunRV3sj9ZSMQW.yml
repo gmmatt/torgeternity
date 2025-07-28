@@ -120,7 +120,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: tharkold
+      cosm: none
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short Burst}</p>\n<p>A standard submachine gun design used in Tharkold. Sophisticated muzzle brake design prevents <q>climbing</q> problems when fired on Long Burst.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '500'
       techlevel: 25
@@ -133,23 +133,25 @@ items:
       chatNote: ''
       damage: 13
       damageType: flat
-      equipped: false
+      equipped: true
       notes: Short Burst
       range: 25 / 50 / 100
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - shortBurst
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693913890908
-      modifiedTime: 1722158040021
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599369485
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
       duplicateSource: null
       exportSource: null
@@ -272,7 +274,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: coreEarth
+      cosm: none
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>Lighter and more comfortable than a ballistic vest, and designed more to stop slashing and piercing weapons. Still somewhat effective against bullets.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '200'
       techlevel: 23
@@ -286,17 +288,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146747
-      modifiedTime: 1722157722733
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599395583
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.G9m8o4kbueF7EWdt
       duplicateSource: null
       exportSource: null
@@ -311,7 +315,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: aysle
+      cosm: none
       description: "<p>Animal hides tanned or boiled to a stiffer, more durable finish, then reinforced with studs or stitched seams. Found in some form in every cosm.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '150'
       techlevel: 8
@@ -331,11 +335,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722157716477
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599395583
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.6GTnNpLUtydDJVi1
       duplicateSource: null
       exportSource: null

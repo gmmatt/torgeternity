@@ -4,7 +4,7 @@ type: deck
 description: ''
 img: systems/torgeternity/images/deutsch/cards/Dramakarten/ZZR%C3%BCckseite.webp
 cards:
-  - _id: GdLLGihUE7qFq1mJ
+  - _id: PRFUgLUcVM0Pdshn
     name: Ihr versucht sie zu umgehen!
     description: ''
     type: drama
@@ -18,39 +18,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/01.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: maneuver trick
+      cosm: none
+      dsrLine: AC
+      heroesConditionsDramatic: fatigued
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: null
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: fatigued
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.GdLLGihUE7qFq1mJ'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.PRFUgLUcVM0Pdshn'
     cards: []
-  - _id: TKexH5nvv9xdYpPL
+  - _id: c0BnygFadJHETzlF
     name: Ihr findet eine Schwäche!
     description: ''
     type: drama
@@ -64,39 +62,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/02.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: maneuver taunt
+      cosm: none
+      dsrLine: ABD
+      heroesConditionsDramatic: surge
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 2
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: stymied
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.TKexH5nvv9xdYpPL'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.c0BnygFadJHETzlF'
     cards: []
-  - _id: 4tx3H1ex4Qz4sJHy
+  - _id: KMdRaROs511HLZGp
     name: Ihr werdet zurückgeworfen!
     description: ''
     type: drama
@@ -110,39 +106,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/03.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: taunt trick
+      cosm: none
+      dsrLine: AB
+      heroesConditionsDramatic: surge
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 3
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: flurry
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.4tx3H1ex4Qz4sJHy'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.KMdRaROs511HLZGp'
     cards: []
-  - _id: R2KdsYnOYKagS094
+  - _id: V8ObERekDM1nyGeo
     name: Ihr sucht einen Vorteil!
     description: ''
     type: drama
@@ -156,39 +150,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/04.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: maneuver trick
+      cosm: none
+      dsrLine: AC
+      heroesConditionsDramatic: fatigued
+      heroesConditionsStandard: surge
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 4
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.R2KdsYnOYKagS094'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.V8ObERekDM1nyGeo'
     cards: []
-  - _id: n777Ka7kp01GaxFh
+  - _id: gtbWcB5smaXvOf3S
     name: Sie zögern!
     description: ''
     type: drama
@@ -202,39 +194,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/05.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: trick
+      cosm: none
+      dsrLine: AD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 5
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: fatigued
+      villainsConditionsStandard: fatigued
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.n777Ka7kp01GaxFh'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.gtbWcB5smaXvOf3S'
     cards: []
-  - _id: z56qJvWVbf5V2KnF
+  - _id: 7aYTudcxexUOwEqE
     name: Sie sammeln sich!
     description: ''
     type: drama
@@ -248,39 +238,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/06.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: taunt
+      cosm: none
+      dsrLine: ABC
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 6
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: inspiration
+      villainsConditionsStandard: inspiration
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.z56qJvWVbf5V2KnF'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.7aYTudcxexUOwEqE'
     cards: []
-  - _id: 3cWdYNIifpzMHCqF
+  - _id: R6uTDmyZao080e70
     name: Sie schlagen zu!
     description: ''
     type: drama
@@ -294,39 +282,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/07.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: maneuver
+      cosm: none
+      dsrLine: BC
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: fatigued
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 7
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: up
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.3cWdYNIifpzMHCqF'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.R6uTDmyZao080e70'
     cards: []
-  - _id: RJOvM9wj8kDAx0AB
+  - _id: Xkfr1yfLXiRsbGVd
     name: Es wird hart!
     description: ''
     type: drama
@@ -340,39 +326,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/08.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: intimidate
+      cosm: none
+      dsrLine: BD
+      heroesConditionsDramatic: surge
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 8
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: inspiration
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.RJOvM9wj8kDAx0AB'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.Xkfr1yfLXiRsbGVd'
     cards: []
-  - _id: 1kFB1EGalKsT498N
+  - _id: nWjeKXx6w0fflWKb
     name: Diese olle Kamelle!
     description: ''
     type: drama
@@ -386,39 +370,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/09.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: taunt trick
+      cosm: none
+      dsrLine: BC
+      heroesConditionsDramatic: surge
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 9
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: fatigued
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.1kFB1EGalKsT498N'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.nWjeKXx6w0fflWKb'
     cards: []
-  - _id: BlSycb257ArNpnnu
+  - _id: Ur9sLYBu8Pa2ZUVj
     name: Ich bin noch nicht fertig!
     description: ''
     type: drama
@@ -432,39 +414,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/10.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: any
+      cosm: none
+      dsrLine: complication
+      heroesConditionsDramatic: stymied
+      heroesConditionsStandard: inspiration
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 10
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.BlSycb257ArNpnnu'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.Ur9sLYBu8Pa2ZUVj'
     cards: []
-  - _id: mabOUPVfZFOjeUlb
+  - _id: 23m1nP5g9a3avIRG
     name: Ihr geht vorsichtig voran!
     description: ''
     type: drama
@@ -478,39 +458,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/11.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: attack defend
+      cosm: none
+      dsrLine: AB
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: fatigued
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 11
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: fatigued
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.mabOUPVfZFOjeUlb'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.23m1nP5g9a3avIRG'
     cards: []
-  - _id: Uuwzz5AzfsBrRtwt
+  - _id: hdzmvjqYMI051HzW
     name: Es wird hektisch!
     description: ''
     type: drama
@@ -524,39 +502,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/12.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: multiAction
+      cosm: none
+      dsrLine: ABCD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: up
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 12
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: flurry
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.Uuwzz5AzfsBrRtwt'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.hdzmvjqYMI051HzW'
     cards: []
-  - _id: 1NiP2L450feeWncG
+  - _id: pyvpw2C1KAiXru87
     name: Überwältigender Einsatz!
     description: ''
     type: drama
@@ -570,39 +546,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/13.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: intimidate taunt
+      cosm: none
+      dsrLine: AD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: up
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 13
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: fatigued
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.1NiP2L450feeWncG'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.pyvpw2C1KAiXru87'
     cards: []
-  - _id: MUaj72lgvb3T35yx
+  - _id: VHBEKc4zhjEKwZor
     name: Das gefällt mir nicht!
     description: ''
     type: drama
@@ -616,39 +590,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/14.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: intimidate maneuver
+      cosm: none
+      dsrLine: ABC
+      heroesConditionsDramatic: fatigued
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 14
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: setback
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.MUaj72lgvb3T35yx'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.VHBEKc4zhjEKwZor'
     cards: []
-  - _id: cshcQHWqxnMnwFFh
+  - _id: 3opGIE8nvA9VNT4n
     name: Vorsicht!
     description: ''
     type: drama
@@ -662,39 +634,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/15.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: attack
+      cosm: none
+      dsrLine: possibleSetback
+      heroesConditionsDramatic: confused
+      heroesConditionsStandard: surge
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 15
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.cshcQHWqxnMnwFFh'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.3opGIE8nvA9VNT4n'
     cards: []
-  - _id: 5GNP0ptkNwe113Zt
+  - _id: x6xkz34SB8bga46F
     name: Dann eben mit Gewalt!
     description: ''
     type: drama
@@ -708,39 +678,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/16.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: multiAction
+      cosm: none
+      dsrLine: criticalProblem
+      heroesConditionsDramatic: inspiration
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 16
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.5GNP0ptkNwe113Zt'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.x6xkz34SB8bga46F'
     cards: []
-  - _id: RyJueQHXguf3kXpH
+  - _id: n0dhucUlO7h6rzs0
     name: Ihr könnt mich nicht stoppen!
     description: ''
     type: drama
@@ -754,39 +722,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/17.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: intimidate trick
+      cosm: none
+      dsrLine: ABD
+      heroesConditionsDramatic: confused
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 17
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: fatigued
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.RyJueQHXguf3kXpH'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.n0dhucUlO7h6rzs0'
     cards: []
-  - _id: d7I7ss0kybhQ2SaX
+  - _id: nIkYciouMAYuSChC
     name: Mitten ins Feuer
     description: ''
     type: drama
@@ -800,39 +766,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/18.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: intimidate taunt
+      cosm: none
+      dsrLine: AB
+      heroesConditionsDramatic: surge
+      heroesConditionsStandard: flurry
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 18
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.d7I7ss0kybhQ2SaX'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.nIkYciouMAYuSChC'
     cards: []
-  - _id: gjXtFbaLMNX9bcgG
+  - _id: ijDDeywEV87t5H4L
     name: Zeit zu Handeln!
     description: ''
     type: drama
@@ -846,39 +810,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/19.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
+      approvedActions: attack trick
+      cosm: none
+      dsrLine: AC
+      heroesConditionsDramatic: flurry
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
       heroesFirstStandard: true
-      number: ''
+      number: 19
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.gjXtFbaLMNX9bcgG'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.ijDDeywEV87t5H4L'
     cards: []
-  - _id: vW5OK0h5zL6S5ULD
+  - _id: DKm0aXjfRuenvZiB
     name: Hier kommen sie!
     description: ''
     type: drama
@@ -892,39 +854,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/20.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: intimidate maneuver
+      cosm: none
+      dsrLine: AD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      heroesFirstStandard: false
+      number: 20
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: flurry
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.vW5OK0h5zL6S5ULD'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.DKm0aXjfRuenvZiB'
     cards: []
-  - _id: qkyvvELBQw1B8Nok
+  - _id: uvTq3QJzY4JoAPBc
     name: Sie sind auf der Flucht!
     description: ''
     type: drama
@@ -938,39 +898,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/21.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: intimidate
+      cosm: none
+      dsrLine: ABCD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: up
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 21
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: setback
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.qkyvvELBQw1B8Nok'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.uvTq3QJzY4JoAPBc'
     cards: []
-  - _id: 0mLNrNO0UieL7lnw
+  - _id: 7pwz6qlT8n5NFbUe
     name: Die Rückkehr!
     description: ''
     type: drama
@@ -984,39 +942,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/22.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: any
+      cosm: none
+      dsrLine: ABC
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: inspiration
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 22
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.0mLNrNO0UieL7lnw'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.7pwz6qlT8n5NFbUe'
     cards: []
-  - _id: torvB2864X6msaTq
+  - _id: bvbBU0hK7W6r4iU5
     name: Dem Sieg einen Schritt näher!
     description: ''
     type: drama
@@ -1030,39 +986,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/23.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
       approvedActions: ''
-      cosm: ''
+      cosm: none
       dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 23
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: setback
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.torvB2864X6msaTq'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.bvbBU0hK7W6r4iU5'
     cards: []
-  - _id: KGgHFHKGWF0xQayn
+  - _id: zDNWtSC9716A8vDS
     name: Tragt den Kampf zu ihnen!
     description: ''
     type: drama
@@ -1076,39 +1030,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/24.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: attack maneuver
+      cosm: none
+      dsrLine: ABCD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 24
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: setback
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.KGgHFHKGWF0xQayn'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.zDNWtSC9716A8vDS'
     cards: []
-  - _id: 9E6tc4T3gQisW2OK
+  - _id: b5u7XfEUxuoQjVdo
     name: Durchbruch!
     description: ''
     type: drama
@@ -1122,39 +1074,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/25.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: taunt
+      cosm: none
+      dsrLine: ABCD
+      heroesConditionsDramatic: up
+      heroesConditionsStandard: flurry
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 25
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.9E6tc4T3gQisW2OK'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.b5u7XfEUxuoQjVdo'
     cards: []
-  - _id: x0YiyW36gtj0qjxP
+  - _id: HB0DRcw9ZoMGG25R
     name: Verflucht!
     description: ''
     type: drama
@@ -1168,39 +1118,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/26.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: intimidate trick
+      cosm: none
+      dsrLine: ABD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 26
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: stymied
+      villainsConditionsStandard: fatigued
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.x0YiyW36gtj0qjxP'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.HB0DRcw9ZoMGG25R'
     cards: []
-  - _id: PT00boCgOlDgY4TU
+  - _id: ObMh228lA48Kxbdu
     name: Die Wende!
     description: ''
     type: drama
@@ -1214,39 +1162,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/27.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: maneuver taunt
+      cosm: none
+      dsrLine: AB
+      heroesConditionsDramatic: inspiration
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 27
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: fatigued
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.PT00boCgOlDgY4TU'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.ObMh228lA48Kxbdu'
     cards: []
-  - _id: 8Qq9mrWqAJdYbZhw
+  - _id: XMHqSCWzFSB0kqvu
     name: Gebt es ihnen!
     description: ''
     type: drama
@@ -1260,39 +1206,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/28.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: attack intimidate
+      cosm: none
+      dsrLine: ABC
+      heroesConditionsDramatic: flurry
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 28
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.8Qq9mrWqAJdYbZhw'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.XMHqSCWzFSB0kqvu'
     cards: []
-  - _id: VzHxO429OHrFnp26
+  - _id: IIf2Q5qNnm8d5PhZ
     name: Glücklicher Zufall!
     description: ''
     type: drama
@@ -1306,39 +1250,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/29.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: attack taunt
+      cosm: none
+      dsrLine: AD
+      heroesConditionsDramatic: inspiration
+      heroesConditionsStandard: none
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 29
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.VzHxO429OHrFnp26'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.IIf2Q5qNnm8d5PhZ'
     cards: []
-  - _id: cQ0E8Crj0K1o0K70
+  - _id: U7izONxHyhbYc6GC
     name: Kraftprobe!
     description: ''
     type: drama
@@ -1352,39 +1294,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/30.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
+      approvedActions: trick
+      cosm: none
+      dsrLine: AB
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: flurry
       heroesFirstDramatic: true
       heroesFirstStandard: true
-      number: ''
+      number: 30
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.cQ0E8Crj0K1o0K70'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.U7izONxHyhbYc6GC'
     cards: []
-  - _id: WpEieS3xgnKDkbkM
+  - _id: P2BljniKPo4Vx88J
     name: Ihr verliert an Boden!
     description: ''
     type: drama
@@ -1398,39 +1338,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/31.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend
+      cosm: none
+      dsrLine: BD
+      heroesConditionsDramatic: surge
+      heroesConditionsStandard: fatigued
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 31
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.WpEieS3xgnKDkbkM'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.P2BljniKPo4Vx88J'
     cards: []
-  - _id: WNPeeIrOLvmoDPNW
+  - _id: x3dCyR8uhPANP7AB
     name: Ihr werdet zurückgedrängt!
     description: ''
     type: drama
@@ -1444,39 +1382,37 @@ cards:
         text: ''
         img: systems/torgeternity/images/deutsch/cards/Dramakarten/32.webp
     face: 0
-    drawn: false
+    drawn: true
     origin: QtmEUT5o3MBuwmfJ
     rotation: 0
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend maneuver
+      cosm: none
+      dsrLine: AC
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: surge
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 32
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: inspiration
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.WNPeeIrOLvmoDPNW'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.x3dCyR8uhPANP7AB'
     cards: []
-  - _id: YBjYeNREfzX3HugQ
+  - _id: WMhnRyyIsw9rS0Xp
     name: Jetzt hab ich euch!
     description: ''
     type: drama
@@ -1496,33 +1432,31 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend taunt
+      cosm: none
+      dsrLine: complication
+      heroesConditionsDramatic: stymied
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 33
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.YBjYeNREfzX3HugQ'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.WMhnRyyIsw9rS0Xp'
     cards: []
-  - _id: gVM8f20h11TQ2lVz
+  - _id: fVsxcILYZQq0ELSv
     name: Die Schlacht ist mein!
     description: ''
     type: drama
@@ -1542,33 +1476,31 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend trick
+      cosm: none
+      dsrLine: BC
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: setback
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 34
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: inspiration
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.gVM8f20h11TQ2lVz'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.fVsxcILYZQq0ELSv'
     cards: []
-  - _id: 5AI8XIhBaTYQwrwb
+  - _id: 7JuouW9nltCwjfsK
     name: Ich werde triumphieren!
     description: ''
     type: drama
@@ -1588,33 +1520,31 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend
+      cosm: none
+      dsrLine: BD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 35
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: up
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.5AI8XIhBaTYQwrwb'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.7JuouW9nltCwjfsK'
     cards: []
-  - _id: okQbjjCXvKwEwTPx
+  - _id: 7JNXK1VqQuzBfuG4
     name: Torg!
     description: ''
     type: drama
@@ -1634,33 +1564,31 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend taunt
+      cosm: none
+      dsrLine: possibleSetback
+      heroesConditionsDramatic: confused
+      heroesConditionsStandard: stymied
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 36
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.okQbjjCXvKwEwTPx'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.7JNXK1VqQuzBfuG4'
     cards: []
-  - _id: mtmO7U2J2Mm71nxC
+  - _id: F2uowS46e830oOmm
     name: Oh nein!
     description: ''
     type: drama
@@ -1680,33 +1608,31 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend intimidate
+      cosm: none
+      dsrLine: BC
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: surge
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 37
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: up
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.mtmO7U2J2Mm71nxC'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.F2uowS46e830oOmm'
     cards: []
-  - _id: 8alhcbK60BNH7hYL
+  - _id: t56wa8rNlgzcDUpf
     name: Lauft, ihr Narren!
     description: ''
     type: drama
@@ -1726,33 +1652,31 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend maneuver
+      cosm: none
+      dsrLine: BD
+      heroesConditionsDramatic: none
+      heroesConditionsStandard: none
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 38
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: inspiration
+      villainsConditionsStandard: up
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.8alhcbK60BNH7hYL'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.t56wa8rNlgzcDUpf'
     cards: []
-  - _id: cGju5HX0mIkG7tZL
+  - _id: baI97eGxutp176uI
     name: Knall auf Fall!
     description: ''
     type: drama
@@ -1772,33 +1696,31 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend intimidate
+      cosm: none
+      dsrLine: AB
+      heroesConditionsDramatic: setback
+      heroesConditionsStandard: confused
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: 39
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.cGju5HX0mIkG7tZL'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.baI97eGxutp176uI'
     cards: []
-  - _id: LPnDIlO7SrHLHtu9
+  - _id: 9gdpcYbkTyCaFbkD
     name: Hoppla!
     description: ''
     type: drama
@@ -1818,36 +1740,34 @@ cards:
     sort: 0
     flags: {}
     system:
-      approvedActions: ''
-      cosm: ''
-      dsrLine: ''
-      heroesConditionsDramatic: ''
-      heroesConditionsStandard: ''
-      heroesFirstDramatic: true
-      heroesFirstStandard: true
-      number: ''
+      approvedActions: defend trick
+      cosm: none
+      dsrLine: criticalProblem
+      heroesConditionsDramatic: setback
+      heroesConditionsStandard: setback
+      heroesFirstDramatic: false
+      heroesFirstStandard: false
+      number: null
       rule: ''
-      villainsConditionsDramatic: ''
-      villainsConditionsStandard: ''
+      villainsConditionsDramatic: none
+      villainsConditionsStandard: none
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.LPnDIlO7SrHLHtu9'
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.9gdpcYbkTyCaFbkD'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 200000
 flags:
   core: {}
   torgeternity:
@@ -1861,11 +1781,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812222
-  modifiedTime: 1716827812222
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598355970
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.cmBgKk32JInJOXmg
   duplicateSource: null
   exportSource: null

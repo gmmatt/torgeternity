@@ -353,34 +353,37 @@ items:
     flags:
       core: {}
     system:
-      cosm: livingLand
+      cosm: none
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fragile:]{Fragile}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#small:]{Small}</p>\n<p>The simplest stabbing weapon, usually little more than a handhold and a short shaft with a sharpened point.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '5'
       techlevel: 3
-      value: 4
+      value: 3
       ap: 0
       attackWith: meleeWeapons
       bonus: 2
       chatNote: ''
       damage: 1
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Fragile, Small
       secondaryAxiom:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - fragile
+        - small
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693912255642
-      modifiedTime: 1722157083414
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599262670
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.9AgUL9MMDkCf2WT9
       duplicateSource: null
       exportSource: null
@@ -409,17 +412,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722157061222
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599242456
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.1KCcsTDnBSqBMA8h
       duplicateSource: null
       exportSource: null
@@ -445,12 +450,14 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Thrown
       secondaryAxiom:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - thrown
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -459,19 +466,19 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.ammMtd4GDTZAbVQx
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.2.2
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753599256749
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.e9xaMsAeSysyibki'
   - name: Hrockt Shoot Spear
     type: missileweapon
     img: systems/torgeternity/images/icons/missile-weapon-icon.webp
     system:
-      cosm: livingLand
+      cosm: none
       description: >-
         <p>For use as melee weapon see
         @UUID[Actor.sPLt8RBL1hieic6p.Item.e9xaMsAeSysyibki]{Hrockt Shoot
@@ -492,7 +499,7 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       minStrength: ''
       notes: ''
       range: 10/20/40
@@ -505,12 +512,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.6Pb5rtY0QdIMTbRF
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.2.2
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753599250428
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _id: sUwjzPc7YwVZ31dC
     sort: 0

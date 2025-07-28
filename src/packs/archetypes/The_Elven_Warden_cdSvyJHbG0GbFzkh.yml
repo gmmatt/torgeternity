@@ -44,7 +44,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: aysle
+      cosm: none
       description: "<p>A more powerful version of the long bow, this weapon is made up of three different materials, combined to enhance the elastic properties of each. While actually closer in size to the short bow, the composite bow fires arrows at a greater velocity.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '200'
       techlevel: 13
@@ -57,7 +57,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: flat
-      equipped: false
+      equipped: true
       minStrength: '7'
       notes: ''
       range: 20 / 40 / 80
@@ -70,11 +70,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693910151043
-      modifiedTime: 1722156241312
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599151726
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.RXXesFyswYwzjRCS
       duplicateSource: null
       exportSource: null
@@ -285,17 +285,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722156189944
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599157134
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
       exportSource: null
