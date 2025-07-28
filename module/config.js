@@ -516,7 +516,88 @@ torgeternity.statusEffects = [
   // TODO : create KO and defeat status
 ];
 
-torgeternity.validItemTraits = {
+const defenseTraits = {
+  'fatigues': 'torgeternity.traits.fatigues',
+  'fullBody': 'torgeternity.traits.fullBody',
+  'torso': 'torgeternity.traits.torso',
+  'head': 'torgeternity.traits.head',
+  'energyArmor': 'torgeternity.traits.energyArmor',
+  'fireArmor': 'torgeternity.traits.fireArmor',
+  'forceArmor': 'torgeternity.traits.forceArmor',
+  'iceArmor': 'torgeternity.traits.iceArmor',
+  'lightningArmor': 'torgeternity.traits.lightningArmor',
+  'painful': 'torgeternity.traits.painful',
+  'energyDefense': 'torgeternity.traits.energyDefense',
+  'fireDefense': 'torgeternity.traits.fireDefense',
+  'forceDefense': 'torgeternity.traits.forceDefense',
+  'iceDefense': 'torgeternity.traits.iceDefense',
+  'lightningDefense': 'torgeternity.traits.lightningDefense',
+}
+
+const meleeWeaponTraits = {
+  "trademark": "torgeternity.sheetLabels.trademark",
+  'nonLethal': 'torgeternity.traits.nonLethal',
+  'painful': 'torgeternity.traits.painful',
+  'stagger': 'torgeternity.traits.stagger',
+  'small': 'torgeternity.traits.small',
+  'quick': 'torgeternity.traits.quick',
+  'wounding': 'torgeternity.traits.wounding',
+  'dazing': 'torgeternity.traits.dazing',
+  'fragile': 'torgeternity.traits.fragile',
+  'thrown': 'torgeternity.traits.thrown',
+  'twoHanded': 'torgeternity.traits.twoHanded',
+  'unwieldy': 'torgeternity.traits.unwieldy',
+  'grapple': 'torgeternity.traits.grapple',
+  //'bob': 'torgeternity.traits.bob',
+}
+
+const rangedWeaponTraits = {
+  "trademark": "torgeternity.sheetLabels.trademark",
+  'painful': 'torgeternity.traits.painful',
+  'nonLethal': 'torgeternity.traits.nonLethal',
+  'stagger': 'torgeternity.traits.stagger',
+  'small': 'torgeternity.traits.small',
+  'quick': 'torgeternity.traits.quick',
+  'wounding': 'torgeternity.traits.wounding',
+  'dazing': 'torgeternity.traits.dazing',
+  'shortBurst': 'torgeternity.traits.shortBurst',
+  'longBurst': 'torgeternity.traits.longBurst',
+  'heavyBurst': 'torgeternity.traits.heavyBurst',
+  'bulky': 'torgeternity.traits.bulky',
+  'reload': 'torgeternity.traits.reload',
+  'blackPowder': 'torgeternity.traits.reload',
+  'smallBlast': 'torgeternity.traits.smallBlast',
+  'mediumBlast': 'torgeternity.traits.mediumBlast',
+  'largeBlast': 'torgeternity.traits.largeBlast',
+  'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
+  'hugeBlast': 'torgeternity.traits.hugeBlast',
+  'shotgun': 'torgeternity.traits.shotgun',
+  'pistol': 'torgeternity.traits.pistol',
+  'carbine': 'torgeternity.traits.carbine',
+  'lowestArmor': 'torgeternity.traits.lowestArmor',
+  'ignoresArmor': 'torgeternity.traits.ignoresArmor',
+  'energyDamage': 'torgeternity.traits.energyDamage',
+  'fireDamage': 'torgeternity.traits.fireDamage',
+  'forceDamage': 'torgeternity.traits.forceDamage',
+  'iceDamage': 'torgeternity.traits.iceDamage',
+  'lightningDamage': 'torgeternity.traits.lightningDamage',
+}
+
+/*
+torgeternity.allItemTraits = {
+  ...defenseTraits,
+  ...meleeWeaponTraits,
+  ...rangedWeaponTraits,
+}*/
+
+torgeternity.allItemTraits = {
+  ...Object.entries(defenseTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.defense' }; return acc }, {}),
+  ...Object.entries(meleeWeaponTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.melee' }; return acc }, {}),
+  ...Object.entries(rangedWeaponTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.ranged' }; return acc }, {})
+}
+
+
+torgeternity.specificItemTraits = {
   // ammunition
   // armor
   // customAttack
@@ -539,69 +620,11 @@ torgeternity.validItemTraits = {
   // spell (power)
   // vehicle
   // vehicleAddOn
-
-  armor: {
-    'fatigues': 'torgeternity.traits.fatigues',
-    'fullBody': 'torgeternity.traits.fullBody',
-    'torso': 'torgeternity.traits.torso',
-  },
-  customAttack: {
-    'bulky': 'torgeternity.traits.bulky',
-    'fragile': 'torgeternity.traits.fragile',
-    'painful': 'torgeternity.traits.painful',
-    'small': 'torgeternity.traits.small',
-    'stagger': 'torgeternity.traits.stagger',
-    'thrown': 'torgeternity.traits.thrown',
-    'twoHanded': 'torgeternity.traits.twoHanded',
-    'unwieldy': 'torgeternity.traits.unwieldy',
-    'heavyBurst': 'torgeternity.traits.heavyBurst',
-    'longBurst': 'torgeternity.traits.longBurst',
-    'shortBurst': 'torgeternity.traits.shortBurst',
-    'smallBlast': 'torgeternity.traits.smallBlast',
-    'mediumBlast': 'torgeternity.traits.mediumBlast',
-    'largeBlast': 'torgeternity.traits.largeBlast',
-    'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
-    'hugeBlast': 'torgeternity.traits.hugeBlast',
-    'nonLethal': 'torgeternity.traits.nonLethal',
-    "trademark": "torgeternity.sheetLabels.trademark",
-  },
-  meleeweapon: {
-    'fragile': 'torgeternity.traits.fragile',
-    'painful': 'torgeternity.traits.painful',
-    'small': 'torgeternity.traits.small',
-    'stagger': 'torgeternity.traits.stagger',
-    'thrown': 'torgeternity.traits.thrown',
-    'twoHanded': 'torgeternity.traits.twoHanded',
-    'unwieldy': 'torgeternity.traits.unwieldy',
-    'nonLethal': 'torgeternity.traits.nonLethal',
-    "trademark": "torgeternity.sheetLabels.trademark",
-  },
-  missileweapon: {
-    'painful': 'torgeternity.traits.painful',
-    'reload': 'torgeternity.traits.reload',
-    'small': 'torgeternity.traits.small',
-    'stagger': 'torgeternity.traits.stagger',
-    'smallBlast': 'torgeternity.traits.smallBlast',
-    'mediumBlast': 'torgeternity.traits.mediumBlast',
-    'largeBlast': 'torgeternity.traits.largeBlast',
-    'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
-    'hugeBlast': 'torgeternity.traits.hugeBlast',
-    'nonLethal': 'torgeternity.traits.nonLethal',
-    "trademark": "torgeternity.sheetLabels.trademark",
-  },
-  firearm: {
-    'bulky': 'torgeternity.traits.bulky',
-    'heavyBurst': 'torgeternity.traits.heavyBurst',
-    'longBurst': 'torgeternity.traits.longBurst',
-    'shortBurst': 'torgeternity.traits.shortBurst',
-    'reload': 'torgeternity.traits.reload',
-    'small': 'torgeternity.traits.small',
-    'smallBlast': 'torgeternity.traits.smallBlast',
-    'mediumBlast': 'torgeternity.traits.mediumBlast',
-    'largeBlast': 'torgeternity.traits.largeBlast',
-    'veryLargeBlast': 'torgeternity.traits.veryLargeBlast',
-    'hugeBlast': 'torgeternity.traits.hugeBlast',
-    'nonLethal': 'torgeternity.traits.nonLethal',
-    "trademark": "torgeternity.sheetLabels.trademark",
-  }
+  armor: defenseTraits,
+  shield: defenseTraits,
+  meleeweapon: meleeWeaponTraits,
+  missileweapon: rangedWeaponTraits,
+  heavyweapon: rangedWeaponTraits,
+  firearm: rangedWeaponTraits,
+  customAttack: { ...meleeWeaponTraits, ...rangedWeaponTraits }
 }

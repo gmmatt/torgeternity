@@ -1,4 +1,4 @@
 /**
  *
  */
-export class torgeternityCards extends Cards {}
+export class torgeternityCards extends Cards { }
