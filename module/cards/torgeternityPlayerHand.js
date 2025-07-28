@@ -218,8 +218,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
           break;
         }
     }
-    // Ensure the Combat Tracker shows the correct set of Pooled cards.
-    ui.combat.render({ parts: ["tracker"] });
   }
 
   static #onDrawCosm() {
