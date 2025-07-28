@@ -106,6 +106,9 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         skillAdd = isNaN(skillAdd) ? 0 : skillAdd;
         skill.adds = skillAdd;
       }
+      if (Object.hasOwn(skill, 'unskilledUse') && typeof skill.unskilledUse === 'number') {
+        skill.unskilledUse = (skill.unskilledUse === 1);
+      }
     }
     return data;
   }
@@ -132,7 +135,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
     this.other.run = this.attributes.dexterity.value * 3;
     // Derive Skill values for Storm Knights and Threats
     for (const [name, skill] of Object.entries(this.skills)) {
-      const trained = skill.unskilledUse === 1 || this._source.skills[name].adds;
+      const trained = skill.unskilledUse || this._source.skills[name].adds;
       skill.value = trained ? this.attributes[skill.baseAttribute].value + skill.adds : '';
     }
   }

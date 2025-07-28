@@ -121,7 +121,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       // Calculate Move and Run base values
       // Derive Skill values for Storm Knights and Threats
       for (const [name, skill] of Object.entries(skills)) {
-        const trained = skill.unskilledUse === 1 || this._source.system.skills[name].adds;
+        const trained = skill.unskilledUse || this._source.system.skills[name].adds;
         skill.value = trained ? this.system.attributes[skill.baseAttribute].value + skill.adds : '';
       }
 
