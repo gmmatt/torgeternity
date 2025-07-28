@@ -117,7 +117,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   async dropPerkOnRace(perk) {
-    if (perk.system.category != 'racial') {
+    if (perk.system.category !== 'racial') {
       ui.notifications.error(
         game.i18n.format('torgeternity.notifications.notAPerkItem', {
           a: game.i18n.localize('torgeternity.perkTypes.' + perk.system.category),

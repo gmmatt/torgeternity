@@ -331,7 +331,7 @@ Hooks.on('ready', async function () {
 
   // ----load template for welcome message depending on supported languages
   let lang = game.settings.get('core', 'language');
-  torgeternity.supportedLanguages.indexOf(lang) == -1 ? (lang = 'en') : (lang = lang);
+  if (torgeternity.supportedLanguages.indexOf(lang) === -1) lang = 'en';
 
   torgeternity.welcomeMessage = await foundry.applications.handlebars.renderTemplate(
     `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
@@ -346,7 +346,7 @@ Hooks.on('ready', async function () {
 
   // ------Ask about hiding nonlocal compendium
   if (
-    game.settings.get('torgeternity', 'welcomeMessage') == true &&
+    game.settings.get('torgeternity', 'welcomeMessage') === true &&
     !game.settings.get('torgeternity', 'hideForeignCompendium')
   ) {
     DialogV2.confirm({
@@ -682,7 +682,7 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
   if (!isAttributeTest) {
     if (actor.type === 'stormknight') {
       skillValue += skill.adds;
-    } else if (actor.type == 'threat') {
+    } else if (actor.type === 'threat') {
       const otherAttribute = actor.system.attributes[skill.baseAttribute];
       skillValue = Math.max(skill.value, otherAttribute.value);
     }
@@ -852,7 +852,7 @@ function TorgRadioBoxesNumber(name, choices, options) {
     input.type = "radio";
     input.name = name;
     input.value = key;
-    if (isChecked) input.defaultChecked = (checked == key);
+    if (isChecked) input.defaultChecked = (checked === key);
     if (isNumber) input.dataset.dtype = "Number";
     if (options.hash.tooltip) element.dataset.tooltip = key;
     element.append(input, " ", label);

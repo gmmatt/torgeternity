@@ -32,7 +32,7 @@ export async function torgMigration() {
     if (foundry.utils.isNewerVersion('2.4.0', migrationVersion)) {
       // code to migrate missile weappon groupName
       game.actors.forEach(async (act) => {
-        if (act.data.data.skills.missileWeapons.groupName != 'combat') {
+        if (act.data.data.skills.missileWeapons.groupName !== 'combat') {
           await act.update({ 'data.skills.missileWeapons.groupName': 'combat' });
           ui.notifications.info(act.name + ' : migrated');
         }
@@ -87,13 +87,13 @@ export async function torgMigration() {
     if (foundry.utils.isNewerVersion('3.3.0', migrationVersion)) {
       // code to migrate heavy weapon groupName
       game.actors.forEach(async (act) => {
-        if (act.system.skills.missileWeapons.groupName != 'combat') {
+        if (act.system.skills.missileWeapons.groupName !== 'combat') {
           await act.update({ 'system.skills.missileWeapons.groupName': 'combat' });
           ui.notifications.info(act.name + ' missile : migrated');
         }
       });
       game.actors.forEach(async (act) => {
-        if (act.system.skills.heavyWeapons.groupName != 'combat') {
+        if (act.system.skills.heavyWeapons.groupName !== 'combat') {
           await act.update({ 'system.skills.heavyWeapons.groupName': 'combat' });
           ui.notifications.info(act.name + 'heavy : migrated');
         }

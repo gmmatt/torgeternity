@@ -9,7 +9,7 @@ export async function setUpCardPiles() {
   let deckFolder =
     game.folders.find((folder) => folder.flags?.torgeternity?.usage === 'coreCards') ||
     game.folders.getName(deckPack.title);
-  if (!deckFolder || deckFolder.type != 'Cards') {
+  if (!deckFolder || deckFolder.type !== 'Cards') {
     deckFolder = await Folder.create({
       name: deckPack.title,
       type: 'Cards',
@@ -84,7 +84,7 @@ export async function setUpCardPiles() {
         await game.journal.importFromCompendium(basicRulesPack, journalId)
     }*/
 
-  const stormknights = game.actors.filter((act) => act.type == 'stormknight');
+  const stormknights = game.actors.filter((act) => act.type === 'stormknight');
   for (const sk of stormknights) {
     if (!sk.getDefaultHand()) {
       await sk.createDefaultHand();

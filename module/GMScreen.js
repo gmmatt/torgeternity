@@ -63,10 +63,10 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
     let lang = game.settings.get('core', 'language');
 
     // setting english as default
-    if (lang != 'en' && lang != 'de' && lang != 'fr') {
+    if (lang !== 'en' && lang !== 'de' && lang !== 'fr') {
       lang = 'en';
     }
-    if (path == 'none') {
+    if (path === 'none') {
       data.noScreen = true;
       data.background = false;
     } else {

@@ -168,10 +168,10 @@ export async function renderSkillChat(test) {
     }
 
     if (test.stymiedModifier < 0) {
-      if (test.stymiedModifier == -2) {
+      if (test.stymiedModifier === -2) {
         modifiers.push(modifierString('torgeternity.chatText.check.modifier.stymied', -2));
         test.modifiers += -2;
-      } else if (test.stymiedModifier == -4) {
+      } else if (test.stymiedModifier === -4) {
         modifiers.push(modifierString('torgeternity.chatText.check.modifier.veryStymied', -4));
         test.modifiers += -4;
       }
@@ -490,7 +490,7 @@ export async function renderSkillChat(test) {
     }
 
     // Remind Player to Check for Disconnect?
-    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal != undefined) ? '' : 'hidden';
+    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal !== undefined) ? '' : 'hidden';
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
     if (
@@ -680,8 +680,8 @@ export async function soakDamages(soaker) {
  */
 export function getTorgValue(myNumber) {
   if (myNumber <= 1) return 0;
-  if (myNumber == 2) return 1;
-  if (myNumber == 3) return 2;
+  if (myNumber === 2) return 1;
+  if (myNumber === 3) return 2;
   if (myNumber < 6) return 3;
   if (myNumber < 10) return 4;
   if (myNumber < 15) return 5;
@@ -742,7 +742,7 @@ export function getTorgValue(myNumber) {
 }
 
 function validValue(value, other) {
-  return (value && value != '-') ? value : other;
+  return (value && value !== '-') ? value : other;
 }
 
 function individualDN(test, target) {

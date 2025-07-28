@@ -36,7 +36,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    */
   prepareBaseData() {
     // Here Effects are not yet applied
-    if (this.type != 'vehicle') {
+    if (this.type !== 'vehicle') {
       // initialize the worn armor bonus
       this.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
       this.system.other.maxDex = this.wornArmor?.system?.maxDex ?? 0;
@@ -104,7 +104,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     };
 
     // Skillsets
-    if (this.type != 'vehicle') {
+    if (this.type !== 'vehicle') {
       const skills = this.system.skills;
       const attributes = this.system.attributes;
       // by RAW, FIRST you checkout for maxDex, THEN minStr. Doing this into DerivedData means, it takes place after AE's were applied, making sure, this cannot get higher than armor's limitations.
@@ -286,22 +286,22 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
 
     if (changed.img && !changed.prototypeToken?.texture?.src) {
-      const oldtok = this.prototypeToken.texture.src;
+      const oldimg = this.prototypeToken.texture.src;
       let updateToken;
-      if (changed.img == oldtok || this.img == oldtok) {
+      if (changed.img === oldimg || this.img === oldimg) {
         updateToken = true;
       } else {
         // Check for default image
         switch (this.type) {
           case 'stormknight':
-            updateToken = (oldtok === 'icons/svg/mystery-man.svg');
+            updateToken = (oldimg === 'icons/svg/mystery-man.svg');
             break;
           case 'threat':
             // Threats might have been changed to show a cosm-specific ring.
-            updateToken = oldtok.startsWith('systems/torgeternity/images/characters/threat');
+            updateToken = oldimg.startsWith('systems/torgeternity/images/characters/threat');
             break;
           case 'vehicle':
-            updateToken = (oldtok === 'systems/torgeternity/images/characters/vehicle-land.webp');
+            updateToken = (oldimg === 'systems/torgeternity/images/characters/vehicle-land.webp');
             break;
         }
       }

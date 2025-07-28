@@ -338,7 +338,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (!context.editable) return;
 
     // compute adds from total for threats
-    if (this.actor.type == 'threat') {
+    if (this.actor.type === 'threat') {
       html.querySelectorAll('.skill-element-edit .inputsFav input').forEach(elem =>
         elem.addEventListener('change', this.#setThreatAdds.bind(this)));
     }

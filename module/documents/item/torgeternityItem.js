@@ -268,7 +268,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
         : (diceroll === 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
 
     const baseDamage =
-      this.system.damageType == 'strengthPlus'
+      this.system.damageType === 'strengthPlus'
         ? this.actor.system.attributes.strength.value + parseInt(this.system.damage)
         : this.system.damage;
 

@@ -279,7 +279,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       cards = game.users
         .filter(user => user.active && !user.isGM && !user.isSelf)
         .map(user => user.character.getDefaultHand())
-        .filter(cards => cards.type == 'hand' && cards.testUserPermission(game.user, 'LIMITED'));
+        .filter(cards => cards.type === 'hand' && cards.testUserPermission(game.user, 'LIMITED'));
     }
     if (!cards.length)
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'));
