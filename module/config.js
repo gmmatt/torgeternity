@@ -565,7 +565,7 @@ const rangedWeaponTraits = {
   'heavyBurst': 'torgeternity.traits.heavyBurst',
   'bulky': 'torgeternity.traits.bulky',
   'reload': 'torgeternity.traits.reload',
-  'blackPowder': 'torgeternity.traits.reload',
+  'blackPowder': 'torgeternity.traits.blackPowder',
   'smallBlast': 'torgeternity.traits.smallBlast',
   'mediumBlast': 'torgeternity.traits.mediumBlast',
   'largeBlast': 'torgeternity.traits.largeBlast',
