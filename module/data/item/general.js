@@ -54,12 +54,13 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
 export function newTraitsField(itemType) {
   return new fields.SetField(
     new fields.StringField({
+      // StringField options
       blank: false,
       choices: (itemType && torgeternity.specificItemTraits[itemType]) ?? CONFIG.torgeternity.allItemTraits,
       textSearch: true,
       trim: true,
     }),
-    {
+    { // SetField options
       nullable: false,
       required: true,
       label: 'torgeternity.fieldLabels.itemTraits.label',
