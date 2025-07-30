@@ -284,10 +284,10 @@ async function _onClickInlineBuff(event) {
 
   // Convert dataset into a set of active effect rules
   const effectdata = {
-    name: 'FromBuff',
+    name: target.text || 'FromBuff',
     img: 'icons/svg/aura.svg',
-    disabled: false,
-    transfer: true,
+    //disabled: false,
+    //transfer: false,  // Placed directly on Actor, so not transferred
     changes: []
   };
 
