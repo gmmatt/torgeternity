@@ -17,6 +17,8 @@
 - #567: Item traits apepar in expanded view of gear list.
 - When Threat window is closed while Notes tab is selected, on reopening the Notes tab will be shown correctly.
 - Reduce flickering of Combat Tracker on "New" round.
+- Create Actor/Item dialogs now have translated Types again.
+- Get item delete buttons working in the Threat and Vehicle sheets.
 
 ## v13.2.2
 

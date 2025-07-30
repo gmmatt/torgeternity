@@ -8,7 +8,8 @@
             <img src="{{perk.img}}" data-tooltip="{{perk.name}}">
             <a class="item-name" data-drag="true">{{perk.name}}</a>
             <div class="item-controls">
-              <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+              <a class="item-control item-delete" data-action="itemDelete"
+                data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
             </div>
@@ -37,7 +38,8 @@
             <img src="{{attack.img}}" data-tooltip="{{attack.name}}">
             <a class="item-name" data-drag="true">{{attack.name}}</a>
             <div class="item-controls">
-              <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+              <a class="item-control item-delete" data-action="itemDelete"
+                data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
             </div>
