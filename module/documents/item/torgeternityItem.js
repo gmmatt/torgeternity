@@ -80,7 +80,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
   static migrateData(source) {
     super.migrateData(source);
     // For better support, convert the old damaging abilities into custom attacks with a flat damage modifier.
-    if (source.type === 'specialability-rollable' && source.system.damage && source.system.attackWith) {
+    if (source.type === 'specialability-rollable' && source.system?.damage && source.system.attackWith) {
       source.type = 'customAttack';
       source.system.damageType = 'flat'
     }
