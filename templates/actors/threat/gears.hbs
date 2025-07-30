@@ -1,7 +1,35 @@
 <section class="tab gear {{tabs.gear.cssClass}}" data-group="{{tabs.gear.group}}"
   data-tab="{{tabs.gear.id}}">
   <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.weapons"}}
+    <span>{{localize "torgeternity.sheetLabels.weapons"}}</span>
+    <div class="list-controls">
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="meleeweapon"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.meleeWeapon' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="missileweapon"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.missileWeapon' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="firearm"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.firearm' }}">
+        <i class="fas fa-plus"></i>
+      </a> <a class="list-control item-create" data-action="itemCreate" data-itemtype="heavyweapon"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.heavyWeapon' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+      {{#if (not ignoreAmmo)}}
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="ammunition"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.ammunition' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+      {{/if}}
+    </div>
   </div>
   {{#if meleeweapons }}
     <ol class="item-list">
@@ -323,7 +351,19 @@
   {{/if}}
 
   <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.armorAndShields"}}
+    <span>{{localize "torgeternity.sheetLabels.armorAndShields"}}</span>
+    <div class="list-controls">
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="armor"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.armor' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="shield"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.shield' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
   </div>
   {{#if armor }}
     <ol class="item-list">
@@ -444,7 +484,14 @@
     </ol>
   {{/if}}
   <div class="list-section-heading">
-    {{torgeternity.itemSheetDescriptions.generalGear}}{{localize "torgeternity.sheetLabels.other"}}
+    <span>{{localize "torgeternity.sheetLabels.generalGear"}}</span>
+    <div class="list-controls">
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="gear"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.generalGear' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
   </div>
   {{#if gear }}
     <ol class="item-list">

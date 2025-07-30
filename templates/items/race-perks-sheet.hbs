@@ -1,6 +1,6 @@
 <section class="tab racePerks scrollable {{tab.cssClass}}" data-group="{{tab.group}}" , data-tab="{{tab.id}}">
   {{#if item.system.perksData.size}}
-    <div class="list-section-heading">{{localize "torgeternity.sheetLabels.perks"}}</div>
+    <div class="list-section-heading"> {{localize "torgeternity.sheetLabels.perks"}}</div>
     <ol class="race perks-list">
       {{#each item.system.perksData as |perk|}}
         <li class="item block" data-item-id="{{perk.system.transferenceID}}" data-inheritedType="perk">

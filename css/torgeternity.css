@@ -1077,7 +1077,6 @@ dialog.torgeternity:not(.actor, .item) .window-content,
           flex-direction: column;
           position: relative;
           margin: 5px;
-          padding-bottom: 5px;
           justify-content: space-between;
           border-top: 1px solid black;
 
@@ -1650,12 +1649,6 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
       div.threat-block ol.item-list {
         padding: 0;
-      }
-
-      .list-section-heading .item-create-rsa,
-      .list-section-heading .item-create-sa {
-        padding: 0px 5px 0px 5px;
-        float: right;
       }
 
       ol.item-list li img {
@@ -3204,6 +3197,22 @@ p.skill-chat-title.skilled {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  span {
+    flex: 1;
+  }
+
+  .list-controls {
+    flex: 0;
+    margin-right: 0.5em;
+    display: flex;
+
+    .list-control {
+      font-size: smaller;
+      margin-left: 0.2em;
+      padding: 0px 5px 0px 5px;
+    }
+  }
 }
 
 .item .window-content {

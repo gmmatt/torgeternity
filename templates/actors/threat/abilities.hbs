@@ -1,21 +1,19 @@
 <section class="tab perks perks-details {{tabs.perks.cssClass}}" data-group="{{tabs.perks.group}}"
   data-tab="{{tabs.perks.id}}">
   <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.specialAbility"}}
-    <a
-      class="item-control item-create-rsa" data-action="itemCreateRsa"
-      data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : {{localize
-      'torgeternity.itemSheetDescriptions.specialabilityRollable'
-    }}">
-      <i class="fas fa-plus"></i>
-    </a>
-    <a
-      class="item-control item-create-sa" data-action="itemCreateSa"
-      data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : {{localize
-      'torgeternity.itemSheetDescriptions.specialability'
-    }}">
-      <i class="fas fa-plus"></i>
-    </a>
+    <span>{{localize "torgeternity.sheetLabels.specialAbility"}}</span>
+    <div class="list-controls">
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="specialability-rollable"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.specialabilityRollable' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="specialability"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.specialability' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
   </div>
 
   {{#if specialability}}
@@ -87,8 +85,16 @@
       {{/each}}
     </ol>
   {{/if}}
+
   <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.perks"}}
+    <span>{{localize "torgeternity.sheetLabels.perks"}}</span>
+    <div class="list-controls">
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="perk"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.perk' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
   </div>
   {{#if perk }}
     <ol class="item-list">
@@ -137,7 +143,14 @@
   {{/if}}
 
   <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.enhancements"}}
+    <span>{{localize "torgeternity.sheetLabels.enhancements"}}</span>
+    <div class="list-controls">
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="enhancement"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.enhancement' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
   </div>
   {{#if enhancement}}
     <ol class="item-list">
@@ -173,7 +186,16 @@
     </ol>
   {{/if}}
 
-  <div class="list-section-heading">{{localize "torgeternity.sheetLabels.customSkills"}}</div>
+  <div class="list-section-heading">
+    <span>{{localize "torgeternity.sheetLabels.customSkills"}}</span>
+    <div class="list-controls">
+      <a class="list-control item-create" data-action="itemCreate" data-itemtype="customSkill"
+        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.customSkill' }}">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
+  </div>
   <ol class="item-list">
     {{#each customSkill as |item id|}}
       <li class="item" data-item-id="{{item._id}}">

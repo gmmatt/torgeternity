@@ -21,6 +21,7 @@
 - Get item delete buttons working in the Threat and Vehicle sheets.
 - Remove 'core' Foundry Card and Card Stack sheets.
 - Add **custom skills** to Threats, allowing them to be edited on the Perks tab.
+- Add ability to directly create items on Actor sheets.
 
 ## v13.2.2
 

@@ -38,8 +38,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       unarmedAttack: TorgeternityActorSheet.#onUnarmedAttack,
       itemPowerRoll: TorgeternityActorSheet.#onPowerRoll,
       itemEquip: TorgeternityActorSheet.#onItemEquip,
-      itemCreateSa: TorgeternityActorSheet.#onCreateSa,
-      itemCreateRsa: TorgeternityActorSheet.#onCreateSaR,
+      itemCreate: TorgeternityActorSheet.#onItemCreate,
       activeDefenseRoll: TorgeternityActorSheet.#onActiveDefenseRoll,
       activeDefenseRollGlow: TorgeternityActorSheet.#onActiveDefenseCancel,
       effectControl: TorgeternityActorSheet.#onManageActiveEffect, // data-action already on relevant elements
@@ -839,30 +838,23 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    *
    * @param event
    */
-  static #onCreateSa(event, button) {
+  static #onItemCreate(event, button) {
     event.preventDefault();
-    const itemData = {
-      name: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
-      type: 'specialability',
-    };
-    return this.actor.createEmbeddedDocuments('Item', [itemData], {
-      renderSheet: true,
-    });
-  }
-
-  /**
-   *
-   * @param event
-   */
-  static #onCreateSaR(event, button) {
-    event.preventDefault();
-    const itemData = {
-      name: game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
-      type: 'specialability-rollable',
-    };
-    return this.actor.createEmbeddedDocuments('Item', [itemData], {
-      renderSheet: true,
-    });
+    const itemType = button.dataset.itemtype;
+    if (!itemType) {
+      console.error('Misconfigured itemCreate action, it is missing data-itemtype')
+      return;
+    }
+    if (!Object.hasOwn(CONFIG.Item.typeLabels, itemType)) {
+      console.error(`itemCreation actin has invalid data-itemtype '${itemType}'`)
+      return;
+    }
+    return this.actor.createEmbeddedDocuments('Item',
+      [{
+        name: game.i18n.localize(CONFIG.Item.typeLabels[itemType]),
+        type: itemType,
+      }],
+      { renderSheet: true, });
   }
 
   /**
