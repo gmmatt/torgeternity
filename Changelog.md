@@ -22,6 +22,7 @@
 - Remove 'core' Foundry Card and Card Stack sheets.
 - Add **custom skills** to Threats, allowing them to be edited on the Perks tab.
 - Add ability to directly **create items on Actor sheets**.
+- Discard unsupported Item Traits at startup (console log message for each trait removed).
 
 ## v13.2.2
 
