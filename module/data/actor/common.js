@@ -110,7 +110,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         skill.unskilledUse = (skill.unskilledUse === 1);
       }
     }
-    return data;
+    return super.migrateData(data);
   }
 
   /**
