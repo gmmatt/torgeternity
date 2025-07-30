@@ -18,10 +18,10 @@
 - When Threat window is closed while Notes tab is selected, on reopening the Notes tab will be shown correctly.
 - Reduce flickering of Combat Tracker on "New" round.
 - Create Actor/Item dialogs now have translated Types again.
-- Get item delete buttons working in the Threat and Vehicle sheets.
+- Get **item delete** buttons working in the Threat and Vehicle sheets.
 - Remove 'core' Foundry Card and Card Stack sheets.
 - Add **custom skills** to Threats, allowing them to be edited on the Perks tab.
-- Add ability to directly create items on Actor sheets.
+- Add ability to directly **create items on Actor sheets**.
 
 ## v13.2.2
 
