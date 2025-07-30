@@ -452,7 +452,8 @@
 
       <div class="threat-block">
         <span class="inline-skill-list">
-          {{#each document.system.skills as |content name|}} {{#if content.isThreatSkill}}
+          {{#each document.system.skills as |content name|}}
+            {{#if content.isThreatSkill}}
               <span class="inline-skill-item">
                 <a
                   class="skill-roll" data-drag="true" data-action="skillRoll"
@@ -465,13 +466,31 @@
                   {{localize (concat 'torgeternity.skills.' name)}}
                 </a>
                 {{#if content.isFav}}
-                  <a class="toggleFav checked">
-                    <i class="far fa-star"></i>
-                  </a>
-                {{/if}} &nbsp;{{content.value}}
+                  <a class="toggleFav checked"> <i class="far fa-star"></i> </a>
+                {{/if}}
+                &nbsp;{{content.value}}
               </span>
-
-            {{/if}} {{/each}}
+            {{/if}}
+          {{/each}}
+          {{#each customSkill as |content name|}}
+            <span class="inline-skill-item">
+              <a
+                class="skill-roll" data-drag="true" data-action="skillRoll"
+                data-testtype="skill"
+                data-customskill="true"
+                data-baseattribute="{{content.system.baseAttribute}}"
+                data-adds="{{content.system.adds}}"
+                data-value="{{content.system.value}}"
+                data-unskilleduse="0"
+                data-name="{{content.name}}">
+                {{content.name}}
+              </a>
+              {{#if content.system.isFav}}
+                <a class="toggleFav checked"> <i class="far fa-star"></i> </a>
+              {{/if}}
+              &nbsp;{{content.system.value}}
+            </span>
+          {{/each}}
         </span>
       </div>
 
