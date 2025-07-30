@@ -90,7 +90,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   get title() {
-    return `${CONFIG.Item.typeLabels[this.item.type]}: ${this.item.name}`
+    return `${game.i18n.localize(CONFIG.Item.typeLabels[this.item.type])}: ${this.item.name}`
   }
 
   /** @inheritdoc */
@@ -354,7 +354,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.effects = prepareActiveEffectCategories(this.document.effects);
     context.item = context.document;
-    context.typeLabel = CONFIG.Item.typeLabels[context.document.type];
+    context.typeLabel = game.i18n.localize(CONFIG.Item.typeLabels[context.document.type]);
 
     context.config = CONFIG.torgeternity;
 

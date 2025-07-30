@@ -193,35 +193,35 @@ Hooks.once('init', async function () {
 });
 
 Hooks.once('i18nInit', () => {
-  // ---localizing entities labels
+  // ---Core Foundry expects typeLabels to be translation keys
   CONFIG.Actor.typeLabels = {
-    stormknight: game.i18n.localize('torgeternity.sheetLabels.stormknight'),
-    threat: game.i18n.localize('torgeternity.sheetLabels.threat'),
-    vehicle: game.i18n.localize('torgeternity.sheetLabels.vehicle'),
+    stormknight: 'TYPES.Actor.stormknight',
+    threat: 'TYPES.Actor.threat',
+    vehicle: 'TYPES.Actor.vehicle',
   };
   CONFIG.Item.typeLabels = {
-    ammunition: game.i18n.localize('torgeternity.itemSheetDescriptions.ammunition'),
-    gear: game.i18n.localize('torgeternity.itemSheetDescriptions.generalGear'),
-    eternityshard: game.i18n.localize('torgeternity.itemSheetDescriptions.eternityshard'),
-    armor: game.i18n.localize('torgeternity.itemSheetDescriptions.armor'),
-    shield: game.i18n.localize('torgeternity.itemSheetDescriptions.shield'),
-    customAttack: game.i18n.localize('torgeternity.itemSheetDescriptions.customAttack'),
-    meleeweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.meleeWeapon'),
-    missileweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.missileWeapon'),
-    firearm: game.i18n.localize('torgeternity.itemSheetDescriptions.firearm'),
-    implant: game.i18n.localize('torgeternity.itemSheetDescriptions.implant'),
-    heavyweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.heavyWeapon'),
-    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicle'),
-    perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
-    enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
-    specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
-    'specialability-rollable': game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
-    spell: game.i18n.localize('torgeternity.itemSheetDescriptions.spell'),
-    miracle: game.i18n.localize('torgeternity.itemSheetDescriptions.miracle'),
-    psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
-    customSkill: game.i18n.localize('torgeternity.itemSheetDescriptions.customSkill'),
-    vehicleAddOn: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicleAddOn'),
-    race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
+    ammunition: 'torgeternity.itemSheetDescriptions.ammunition',
+    gear: 'torgeternity.itemSheetDescriptions.generalGear',
+    eternityshard: 'torgeternity.itemSheetDescriptions.eternityshard',
+    armor: 'torgeternity.itemSheetDescriptions.armor',
+    shield: 'torgeternity.itemSheetDescriptions.shield',
+    customAttack: 'torgeternity.itemSheetDescriptions.customAttack',
+    meleeweapon: 'torgeternity.itemSheetDescriptions.meleeWeapon',
+    missileweapon: 'torgeternity.itemSheetDescriptions.missileWeapon',
+    firearm: 'torgeternity.itemSheetDescriptions.firearm',
+    implant: 'torgeternity.itemSheetDescriptions.implant',
+    heavyweapon: 'torgeternity.itemSheetDescriptions.heavyWeapon',
+    vehicle: 'torgeternity.itemSheetDescriptions.vehicle',
+    perk: 'torgeternity.itemSheetDescriptions.perk',
+    enhancement: 'torgeternity.itemSheetDescriptions.enhancement',
+    specialability: 'torgeternity.itemSheetDescriptions.specialability',
+    'specialability-rollable': 'torgeternity.itemSheetDescriptions.specialabilityRollable',
+    spell: 'torgeternity.itemSheetDescriptions.spell',
+    miracle: 'torgeternity.itemSheetDescriptions.miracle',
+    psionicpower: 'torgeternity.itemSheetDescriptions.psionicpower',
+    customSkill: 'torgeternity.itemSheetDescriptions.customSkill',
+    vehicleAddOn: 'torgeternity.itemSheetDescriptions.vehicleAddOn',
+    race: 'torgeternity.itemSheetDescriptions.race',
   };
 
   // Hard-coded, so that we are guaranteed to have it available immediately
