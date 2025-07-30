@@ -70,7 +70,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs", scrollable: [""] },
     background: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs", scrollable: [""] },
 
-    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: [".scrollable"] },
+    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: ["div.sheet-body"] },
     vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs`, scrollable: [".scrollable"] }
   }
 
