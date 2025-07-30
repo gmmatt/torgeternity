@@ -19,6 +19,7 @@
 - Reduce flickering of Combat Tracker on "New" round.
 - Create Actor/Item dialogs now have translated Types again.
 - Get item delete buttons working in the Threat and Vehicle sheets.
+- Remove 'core' Foundry Card and Card Stack sheets.
 
 ## v13.2.2
 

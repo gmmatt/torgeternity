@@ -118,22 +118,26 @@ Hooks.once('init', async function () {
   });
 
   // ---register cards
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardHandConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityPlayerHand, {
     label: 'Torg Eternity Player Hand',
     types: ['hand'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardPileConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityPile, {
     label: 'Torg Eternity Pile',
     types: ['pile'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardDeckConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityDeck, {
     label: 'Torg Eternity Deck',
     types: ['deck'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Card, 'core', torgeternityCardConfig, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Card, 'core', foundry.applications.sheets.CardConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Card, 'torgeternity', torgeternityCardConfig, {
     label: 'Torg Eternity Card Configuration',
     types: ['destiny', 'drama', 'cosm'],
     makeDefault: true,
