@@ -12,7 +12,7 @@ export class SpecialAbilityRollableItemData extends foundry.abstract.TypeDataMod
   static defineSchema() {
     return {
       ap: new fields.NumberField({ initial: 0, integer: true }),
-      attackWith: new fields.StringField({ initial: '' }),
+      attackWith: new fields.StringField({ initial: 'unarmedCombat' }),
       chatNote: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
       description: new fields.HTMLField({ initial: '' }),

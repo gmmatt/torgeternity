@@ -30,10 +30,10 @@
       {{/if}}
     </div>
   </div>
+
   {{#if meleeweapons}}
     <h2>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h2>
     <ol class="item-list">
-
       {{#each meleeweapons as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -87,10 +87,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if missileweapon}}
     <h2>{{localize "torgeternity.sheetLabels.missileWeapons"}}</h2>
     <ol class="item-list">
-
       {{#each missileweapon as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -153,10 +153,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if firearm}}
     <h2>{{localize "torgeternity.sheetLabels.firearms"}}</h2>
     <ol class="item-list">
-
       {{#each firearm as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -219,10 +219,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if heavyweapon}}
     <h2>{{localize "torgeternity.sheetLabels.heavyWeapons"}}/{{localize "torgeternity.sheetLabels.explosives"}}</h2>
     <ol class="item-list">
-
       {{#each heavyweapon as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -286,7 +286,8 @@
       {{/each}}
     </ol>
   {{/if}}
-  {{#if (and ammunitions (not ignoreAmmo))}}
+
+  {{#if (and ammunitions.length (not ignoreAmmo))}}
     <h2>{{localize "torgeternity.sheetLabels.ammunition"}}</h2>
     <ol class="item-list">
       {{#each ammunitions as |item id|}}
@@ -351,10 +352,10 @@
       </a>
     </div>
   </div>
+
   {{#if armor}}
     <h2>{{localize "torgeternity.sheetLabels.armor"}}</h2>
     <ol class="item-list">
-
       {{#each armor as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -412,10 +413,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if shield}}
     <h2>{{localize "torgeternity.sheetLabels.shield"}}</h2>
     <ol class="item-list">
-
       {{#each shield as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -469,6 +470,7 @@
       {{/each}}
     </ol>
   {{/if}}
+
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.gear"}}</span>
     <div class="list-controls">
@@ -494,10 +496,10 @@
       </a>
     </div>
   </div>
+
   {{#if gear}}
     <h2>{{localize "torgeternity.sheetLabels.generalGear"}}</h2>
     <ol class="item-list">
-
       {{#each gear as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -541,10 +543,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if implant}}
     <h2>{{localize "torgeternity.sheetLabels.implant"}}</h2>
     <ol class="item-list">
-
       {{#each implant as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -590,10 +592,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if eternityshard}}
     <h2>{{localize "torgeternity.sheetLabels.eternityShard"}}</h2>
     <ol class="item-list">
-
       {{#each eternityshard as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -639,10 +641,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if vehicle}}
     <h2>{{localize "torgeternity.sheetLabels.vehicle"}}</h2>
     <ol class="item-list">
-
       {{#each vehicle as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">

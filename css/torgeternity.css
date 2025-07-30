@@ -1063,6 +1063,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       h2 {
         text-align: left;
         background: #37465438;
+        margin: 0;
       }
 
       .item-list {
@@ -3208,9 +3209,8 @@ p.skill-chat-title.skilled {
     display: flex;
 
     .list-control {
-      font-size: smaller;
-      margin-left: 0.2em;
-      padding: 0px 5px 0px 5px;
+      font-size: 70%;
+      padding: 0px 5px;
     }
   }
 }
