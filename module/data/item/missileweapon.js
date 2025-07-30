@@ -26,18 +26,4 @@ export class MissileWeaponItemData extends GeneralItemData {
       range: new fields.StringField({ initial: '' }),
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }

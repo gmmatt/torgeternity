@@ -28,18 +28,4 @@ export class HeavyWeaponItemData extends GeneralItemData {
       range: new fields.StringField({ initial: '' }),
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }

@@ -22,18 +22,4 @@ export class MeleeWeaponItemData extends GeneralItemData {
       minStrength: new fields.NumberField({ initial: null, integer: true }),
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }
