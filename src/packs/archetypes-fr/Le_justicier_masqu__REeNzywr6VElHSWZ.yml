@@ -127,8 +127,8 @@ items:
       - _id: dXpzXzrjw9UvaNpT
         flags: {}
         changes:
-          - key: system.skills.intimidation
-            value: ''
+          - key: system.skills.intimidation.value
+            value: '2'
             mode: 2
             priority: null
         disabled: false
@@ -590,85 +590,6 @@ items:
       duplicateSource: null
       exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.aPOfL2ECIo5XDkjo'
-effects:
-  - _id: 35ZydiYloB6XEGzz
-    flags: {}
-    changes:
-      - key: system.skills.intimidation.value
-        value: '2'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: Actor.LGH3vMNa0jMnMboU.Item.RpNrke9ubLEc5xWb
-    tint: '#ffffff'
-    transfer: true
-    name: Intimidation +2
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!REeNzywr6VElHSWZ.35ZydiYloB6XEGzz'
-  - _id: yyrjyKyzFRpnZC4T
-    flags: {}
-    changes:
-      - key: system.other.armor
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.other.toughness
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: Actor.LGH3vMNa0jMnMboU.Item.S67kDdh9ssjgwSK7
-    tint: '#ffffff'
-    transfer: true
-    name: Armure +1
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!REeNzywr6VElHSWZ.yyrjyKyzFRpnZC4T'
 folder: null
 sort: 100001
 flags: {}
