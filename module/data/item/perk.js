@@ -1,24 +1,20 @@
-import { torgeternity } from '../../config.js';
-import { migrateCosm } from '../shared.js';
-import { newTraitsField } from './general.js';
+import { BaseItemData } from './baseItemData.js';
 
 const fields = foundry.data.fields;
 
 /**
  * @inheritdoc
  */
-export class PerkItemData extends foundry.abstract.TypeDataModel {
+export class PerkItemData extends BaseItemData {
   /**
    * @returns {object} Schema fragment for a perk
    */
   static defineSchema() {
     return {
+      ...super.defineSchema('perk'),
       category: new fields.StringField({ initial: '', textSearch: true }),
-      cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
-      description: new fields.HTMLField({ initial: '' }),
       prerequisites: new fields.StringField({ initial: '' }),
       generalContradiction: new fields.BooleanField({ initial: false }),
-      traits: newTraitsField('perk'),
       pulpPowers: new fields.SchemaField({
         enhancement01: new fields.SchemaField({
           description: new fields.StringField({ initial: '' }),
@@ -115,27 +111,5 @@ export class PerkItemData extends foundry.abstract.TypeDataModel {
       }),
       transferenceID: new fields.DocumentIdField({ initial: null }), // necessary for saving perks data in race items
     };
-  }
-
-  /**
-   * @inheritdoc
-   * @param {object} data delivered data from the constructor
-   */
-  static migrateData(data) {
-    data.cosm = migrateCosm(data.cosm);
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
   }
 }

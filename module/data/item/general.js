@@ -1,20 +1,18 @@
-import { torgeternity } from '../../config.js';
 import { getTorgValue } from '../../torgchecks.js';
-import { migrateCosm } from '../shared.js';
+import { BaseItemData } from './baseItemData.js'
 
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
  */
-export class GeneralItemData extends foundry.abstract.TypeDataModel {
+export class GeneralItemData extends BaseItemData {
   /**
    *
    * @returns {object} Schema fragment for an item
    */
   static defineSchema(itemType) {
     return {
-      cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
-      description: new fields.HTMLField({ initial: '' }),
+      ...super.defineSchema(itemType),
       price: new fields.StringField({ initial: '' }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),
@@ -22,16 +20,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
         selected: new fields.StringField({ initial: 'none' }),
         value: new fields.NumberField({ initial: null, integer: true }),
       }),
-      traits: newTraitsField(itemType),
     };
-  }
-
-  /**
-   * @inheritdoc
-   * @param {object} data delivered data from the constructor
-   */
-  static migrateData(data) {
-    data.cosm = migrateCosm(data.cosm);
   }
 
   /**
@@ -41,29 +30,4 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
     super.prepareBaseData();
     this.value = this.price && !isNaN(this.price) ? getTorgValue(parseInt(this.price)) : null;
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
-}
-
-
-export function newTraitsField(itemType) {
-  return new fields.SetField(
-    new fields.StringField({
-      // StringField options
-      blank: false,
-      choices: (itemType && torgeternity.specificItemTraits[itemType]) ?? CONFIG.torgeternity.allItemTraits,
-      textSearch: true,
-      trim: true,
-    }),
-    { // SetField options
-      nullable: false,
-      required: true,
-      label: 'torgeternity.fieldLabels.itemTraits.label',
-      hint: 'torgeternity.fieldLabels.itemTraits.hint',
-    });
 }

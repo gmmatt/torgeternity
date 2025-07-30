@@ -1,19 +1,19 @@
 import { torgeternity } from '../../config.js';
 import { PerkItemData } from './perk.js';
 import { CustomAttackItemData } from './customAttack.js';
-import { newTraitsField } from './general.js';
+import { BaseItemData } from './baseItemData.js';
+
+const fields = foundry.data.fields;
 
 /**
  * @inheritdoc
  */
-export class RaceItemData extends foundry.abstract.TypeDataModel {
+export class RaceItemData extends BaseItemData {
   /** @inheritdoc */
   static defineSchema() {
-    const fields = foundry.data.fields;
     return {
+      ...super.defineSchema('race'),
       name: new fields.StringField({ initial: '' }), // TODO
-      description: new fields.StringField({ initial: '' }),
-      traits: newTraitsField('race'),
       attributeMaximum: new fields.SchemaField({
         charisma: new fields.NumberField({ initial: 13, integer: true, nullable: false }),
         dexterity: new fields.NumberField({ initial: 13, integer: true, nullable: false }),
@@ -28,23 +28,8 @@ export class RaceItemData extends foundry.abstract.TypeDataModel {
       }),
       darkvision: new fields.BooleanField({ initial: false }),
       perksData: new fields.SetField(new fields.TypeDataField({ document: PerkItemData })),
-      customAttackData: new fields.SetField(
-        new fields.TypeDataField({ document: CustomAttackItemData })
+      customAttackData: new fields.SetField(new fields.TypeDataField({ document: CustomAttackItemData })
       ),
     };
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
   }
 }
