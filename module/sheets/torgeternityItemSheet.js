@@ -104,6 +104,16 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   /** @inheritdoc */
+  async _onDragStart(event) {
+    const target = event.currentTarget;
+    if (target.dataset.effectUuid) {
+      const effect = await fromUuid(target.dataset.effectUuid);
+      return event.dataTransfer.setData("text/plain", JSON.stringify(effect.toDragData()));
+    } else
+      return super._onDragStart(event);
+  }
+
+  /** @inheritdoc */
   async _onDrop(event) {
     // Note, Item#_onDrop does not exist
     const data = foundry.applications.ux.TextEditor.getDragEventData(event);
@@ -159,6 +169,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         drop: this._canDragDrop.bind(this),
       },
       callbacks: {
+        dragstart: this._onDragStart.bind(this),
         drop: this._onDrop.bind(this),
       }
     }).bind(this.element);

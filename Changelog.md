@@ -23,6 +23,9 @@
 - Add **custom skills** to Threats, allowing them to be edited on the Perks tab.
 - Add ability to directly **create items on Actor sheets**.
 - Discard unsupported Item Traits at startup (console log message for each trait removed).
+- Ensure Item Sheet updates automatically when the item's data changes.
+- Replace `render(true)` with `render({ force: true})` (V13 update).
+- Allow **Active Effects** to be dragged between Actors and Items.
 
 ## v13.2.2
 

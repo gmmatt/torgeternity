@@ -251,13 +251,17 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     return context;
   }
 
-  _onDragStart(event) {
-    if (event.target.classList.contains('skill-roll'))
+  async _onDragStart(event) {
+    const target = event.currentTarget;
+    if (target.classList.contains('skill-roll'))
       this._skillAttrDragStart(event) // a.skill-roll
-    else if (event.target.classList.contains('interaction-attack'))
+    else if (target.classList.contains('interaction-attack'))
       this._interactionDragStart(event) // a.interaction-attack
-    else
-      super._onDragStart(event) // a.item-name, threat: a.item
+    else if (target.dataset.effectUuid) {
+      const effect = await fromUuid(target.dataset.effectUuid);
+      event.dataTransfer.setData("text/plain", JSON.stringify(effect.toDragData()));
+    } else
+      return super._onDragStart(event) // a.item-name, threat: a.item
   }
 
   // Skills are not Foundry "items" with IDs, so the skill data is not automatically
