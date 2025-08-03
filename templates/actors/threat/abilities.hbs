@@ -2,18 +2,20 @@
   data-tab="{{tabs.perks.id}}">
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.specialAbility"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="specialability-rollable"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="specialability-rollable"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.specialabilityRollable' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="specialability"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+          <i class="fas fa-plus"></i>
+        </a>
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="specialability"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.specialability' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
 
   {{#if specialability}}
@@ -84,13 +86,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.perks"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="perk"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="perk"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.perk' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   {{#if perk }}
     <ol class="item-list">
@@ -140,13 +144,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.enhancements"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="enhancement"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="enhancement"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.enhancement' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   {{#if enhancement}}
     <ol class="item-list">
@@ -184,13 +190,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.customSkills"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="customSkill"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="customSkill"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.customSkill' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   <ol class="item-list">
     {{#each customSkill as |item id|}}

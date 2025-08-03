@@ -3,13 +3,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.spells"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="spell"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="spell"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.spell' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   <ol class="item-list">
     {{#each spell as |item id|}}
@@ -64,13 +66,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.miracles"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="miracle"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="miracle"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.miracle' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   <ol class="item-list">
     {{#each miracle as |item id|}}
@@ -125,13 +129,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.psionicPowers"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="psionicpower"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="psionicpower"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.psionicpower' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   <ol class="item-list">
     {{#each psionicpower as |item id|}}

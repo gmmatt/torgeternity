@@ -3,13 +3,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.heavyWeapons"}}/{{localize "torgeternity.sheetLabels.explosives"}}</span>
-    <div class="list-controls">
-      </a> <a class="list-control item-create" data-action="itemCreate" data-itemtype="heavyweapon"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        </a> <a class="list-control item-create" data-action="itemCreate" data-itemtype="heavyweapon"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.heavyWeapon' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   <ol class="item-list">
     {{#each heavyweapon as |item id|}}
@@ -72,13 +74,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.ammunition"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="ammunition"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="ammunition"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.ammunition' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   <ol class="item-list">
     {{#each ammunitions as |item id|}}
@@ -129,13 +133,15 @@
 
   <div class="list-section-heading">
     <span>{{localize "torgeternity.sheetLabels.generalGear"}}</span>
-    <div class="list-controls">
-      <a class="list-control item-create" data-action="itemCreate" data-itemtype="gear"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="gear"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
       {{localize 'torgeternity.itemSheetDescriptions.generalGear' }}">
-        <i class="fas fa-plus"></i>
-      </a>
-    </div>
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
   <ol class="item-list">
     {{#each gear as |item id|}}
