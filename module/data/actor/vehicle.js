@@ -28,10 +28,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       }),
       description: new fields.HTMLField({ initial: '', textSearch: true }),
       maneuver: new fields.NumberField({ initial: -1, integer: true, nullable: false }),
-      operator: new fields.SchemaField({
-        name: new fields.StringField({ initial: '' }),
-        skillValue: new fields.StringField({ initial: '' }),
-      }),
+      driver: new fields.DocumentUUIDField(),
       passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       price: new fields.SchemaField({
         dollars: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
@@ -72,6 +69,10 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     if (data?.wounds && Object.hasOwn(data?.wounds, 'current')) {
       data.wounds.value = data.wounds.current;
     }
+    /*if (data.operator && Object.hasOwn(data.operator, 'name')) {
+      if (data.operator.name) data.driver = fromUuidSync(data.operator.name);
+      delete data.operator;
+    }*/
   }
 
   /**
@@ -116,7 +117,5 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       speedPenalty = -6;
     }
     this.topSpeed.penalty = speedPenalty;
-
-    this.defense = parseInt(this.operator.skillValue) + parseInt(this.maneuver);
   }
 }

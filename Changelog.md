@@ -28,6 +28,7 @@
 - Allow **Active Effects** to be dragged between Actors and Items.
 - Having OBSERVER ownership of an Actor prevents most actions on the Actor Sheet.
 - Vehicle and Threat sheets should scroll better.
+- #435: Convert vehicles to **store operator/driver by UUID** rather than name. A migration is performed by looking for an actor with the current name. The advantage of using UUID is that any change to the driver's skill will update the operator skill in the vehicle sheet.
 
 ## v13.2.2
 

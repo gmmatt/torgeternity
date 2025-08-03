@@ -1,3 +1,5 @@
+let deferredDrivers = new Set();
+
 /**
  *
  */
@@ -25,6 +27,15 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 
   get race() {
     return this.itemTypes.race[0] ?? null;
+  }
+
+  get driver() {
+    const driver = this.type === 'vehicle' && fromUuidSync(this.system.driver, { strict: false });
+    if (!driver) return { name: "", skillValue: 0 };
+    return {
+      name: driver.name,
+      skillValue: driver.system.skills[this.system.type.toLowerCase() + 'Vehicles']?.value ?? 0
+    }
   }
 
   /* -------------------------------------------- */
@@ -714,4 +725,27 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       disabled: false,
     }]);
   }
+
+  static migrateData(source) {
+    if (source.type === 'vehicle' /*&& !source.system.driver*/ && source.system.operator?.name) {
+      deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
+    }
+    return super.migrateData(source);
+  }
 }
+
+
+Hooks.on('setup', () => {
+  const updates = deferredDrivers;
+  deferredDrivers = null;
+  for (const block of updates) {
+    const driver = game.actors.find(actor => actor.name === block.driverName);
+    const vehicle = game.actors.get(block.vehicleId);
+    if (driver)
+      vehicle.update({ 'system.driver': driver.uuid })
+    else {
+      console.warn(`VEHICLE MIGRATION: Failed to find driver called ${block.name}`);
+      continue;
+    }
+  }
+})

@@ -121,6 +121,25 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     this._filters = { effects: new Set() };
   }
 
+  async _onFirstRender(context, options) {
+    // If it is a vehicle with a driver, then watch for changes to the driver's 
+    const actor = this.actor;
+    if (actor.type === 'vehicle' && actor.system.driver) {
+      const driver = fromUuidSync(actor.system.driver);
+      if (driver) driver.apps[this.id] = this;
+    }
+    return super._onFirstRender(context, options);
+  }
+
+  _onClose(options) {
+    const actor = this.actor;
+    if (actor.type === 'vehicle' && actor.system.driver) {
+      const driver = fromUuidSync(actor.system.driver);
+      if (driver) delete driver.apps[this.id];
+    }
+    super._onClose(options);
+  }
+
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     this.options.classes.push(this.actor.type);
@@ -183,6 +202,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     context.cosmCard = context.items.filter(item => item.type === 'cosmCard');
     context.vehicleAddOn = context.items.filter(item => item.type === 'vehicleAddOn');
     context.ammunitions = context.items.filter(item => item.type === 'ammunition');
+    if (this.actor.type === 'vehicle') context.driver = this.actor.driver;
 
     for (const type of [
       'meleeweapons',
@@ -396,16 +416,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       case 'vehicle':
         if (document instanceof Actor && (document.type === 'stormknight' || document.type === 'threat')) {
           // dropped document = driver
-          const skill = this.actor.system.type.toLowerCase();
-          const skillValue = document?.system?.skills[skill + 'Vehicles']?.value ?? 0;
+          const skillValue = document?.system?.skills[this.actor.system.type.toLowerCase() + 'Vehicles']?.value ?? 0;
           if (skillValue === 0) {
             ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
             return;
           }
-          this.actor.update({
-            'system.operator.name': document.name,
-            'system.operator.skillValue': skillValue,
-          });
+          this.actor.update({ 'system.driver': document.uuid });
           return;
         }
     }
