@@ -443,11 +443,13 @@
     <div class="threat-section-skills">
       <div class="section-bar">
         {{localize 'torgeternity.sheetLabels.skills'}}
-        <span style="float: right">
-          <a class="skill-edit-toggle" data-action="skillEditToggle" {{disabled (not editable)}}>
-            <i class="fas fa-edit"></i>
-          </a>
-        </span>
+        {{#if editable}}
+          <span style="float: right">
+            <a class="skill-edit-toggle" data-action="skillEditToggle">
+              <i class="fas fa-edit"></i>
+            </a>
+          </span>
+        {{/if}}
       </div>
 
       <div class="threat-block">

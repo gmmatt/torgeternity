@@ -26,6 +26,7 @@
 - Ensure Item Sheet updates automatically when the item's data changes.
 - Replace `render(true)` with `render({ force: true})` (V13 update).
 - Allow **Active Effects** to be dragged between Actors and Items.
+- Having OBSERVER ownership of an Actor prevents most actions on the Actor Sheet.
 
 ## v13.2.2
 
