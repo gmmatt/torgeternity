@@ -4,7 +4,7 @@ const { DialogV2 } = foundry.applications.api;
 /**
  *
  */
-export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheet) {
+export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
 
   static DEFAULT_OPTIONS = {
     classes: ['torgeternity', 'sheet', 'item', 'themed', 'theme-light'],
@@ -175,6 +175,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     // When the window is first opened, collapse the traits editor
     const toggleButton = this.element.querySelector('a.toggleTraits');
     if (toggleButton) TorgeternityItemSheet.#onToggleTraitEdit.call(this, null, toggleButton);
+    return super._onFirstRender(context, options);
   }
 
   /**
