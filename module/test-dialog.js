@@ -128,7 +128,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         this.test[key] = Number(this.test[key]);
 
     // Immediately display the dialog
-    this.render(true);
+    this.render({ force: true });
   }
 
   /**

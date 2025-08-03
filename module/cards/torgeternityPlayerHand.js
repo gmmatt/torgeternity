@@ -154,7 +154,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         getDocumentClass('Card').createDialog({}, { parent: this.object, pack: this.document.pack });
         break;
       case 'edit':
-        card.sheet.render(true);
+        card.sheet.render({ force: true });
         break;
       case 'delete':
         card.deleteDialog();
@@ -180,12 +180,12 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         break
       case 'display':
         const image1 = new foundry.applications.apps.ImagePopout({ src: card.img, window: { title: card.name } });
-        image1.render(true, { width: 425, height: 650 });
+        image1.render({ force: true }, { width: 425, height: 650 });
         image1.shareImage();
         break;
       case 'view':
         const image2 = new foundry.applications.apps.ImagePopout({ src: card.img, window: { title: card.name } });
-        image2.render(true, { width: 425, height: 650 });
+        image2.render({ force: true }, { width: 425, height: 650 });
         break;
       case 'discard':
         {
@@ -401,6 +401,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     if (this.rendered) {
       if (this._minimized) return this.maximize();
       else return this.close();
-    } else return this.render(true);
+    } else return this.render({ force: true });
   }
 }

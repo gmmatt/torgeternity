@@ -79,7 +79,7 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
    */
   toggleRender() {
     if (!this.rendered)
-      return this.render(true);
+      return this.render({ force: true });
     else if (this._minimized)
       return this.maximize();
     else

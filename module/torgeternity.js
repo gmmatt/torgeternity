@@ -822,7 +822,7 @@ function showWelcomeMessage() {
     actions: {
       openPack: (event, button) => {
         const packName = button.dataset.packName;
-        if (packName) game.packs.get(packName).render(true);
+        if (packName) game.packs.get(packName).render({ force: true });
       }
     }
   });
