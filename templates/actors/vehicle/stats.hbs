@@ -79,7 +79,7 @@
       <th>{{localize "torgeternity.sheetLabels.defense"}} {{document.system.defense}}</th>
       <th>
         <button
-          class="base-roll" data-action="baseRoll"
+          class="base-roll" data-action="baseRoll" {{disabled (not editable)}}
           data-skill-value="{{document.system.operator.skillValue}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
@@ -89,7 +89,7 @@
       </th>
       <th>
         <button
-          class="chase-roll" data-action="chaseRoll"
+          class="chase-roll" data-action="chaseRoll" {{disabled (not editable)}}
           data-skill-value="{{document.system.operator.skillValue}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
@@ -99,7 +99,7 @@
       </th>
       <th>
         <button
-          class="stunt-roll" data-action="stuntRoll"
+          class="stunt-roll" data-action="stuntRoll" {{disabled (not editable)}}
           data-skill-value="{{document.system.operator.skillValue}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
@@ -130,7 +130,7 @@
         <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>
         <div class="controls">
           <a
-            class="item-control item-attackRoll" data-action="itemAttackRoll"
+            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
             data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -139,13 +139,13 @@
             <i class="fas fa-edit"></i>
           </a>
           {{#if (not ../ignoreAmmo)}}
-            <a class="item-control" data-weapon="{{item}}"
+            <a class="item-control" data-weapon="{{item}}" {{disabled (not editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}">
               <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i>
             </a>
           {{/if}}
           <a
-            class="item-control item-delete" data-action="itemDelete"
+            class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
             data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
             <i class="fas fa-trash"></i>
           </a>
@@ -170,7 +170,7 @@
         <div class="add-on-description">{{item.system.short-description}}</div>
         <div class="controls">
           <a
-            class="item-control item-tochat" data-action="itemToChat"
+            class="item-control item-tochat" data-action="itemToChat" {{disabled (not editable)}}
             data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
             <i class="fas fa-comment"></i>
           </a>
@@ -179,7 +179,7 @@
             <i class="fas fa-edit"></i>
           </a>
           <a
-            class="item-control item-delete" data-action="itemDelete"
+            class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
             data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
             <i class="fas fa-trash"></i>
           </a>

@@ -44,11 +44,11 @@
               ({{localize 'torgeternity.sheetLabels.meleeWeapons'}})</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -56,7 +56,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -101,11 +101,11 @@
               ({{localize 'torgeternity.sheetLabels.missileWeapons'}})</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -113,7 +113,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -167,11 +167,11 @@
               ({{localize 'torgeternity.sheetLabels.firearms'}}))</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -179,7 +179,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -234,11 +234,11 @@
               'torgeternity.sheetLabels.explosives'}})</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -246,7 +246,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -367,11 +367,11 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -379,7 +379,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -428,11 +428,11 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -440,7 +440,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -512,7 +512,7 @@
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -520,7 +520,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -560,7 +560,7 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
               (Implant)</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -568,7 +568,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -609,7 +609,7 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
               (Eternity Shard)</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -617,7 +617,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -658,7 +658,7 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
               (Vehicle)</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -666,7 +666,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>

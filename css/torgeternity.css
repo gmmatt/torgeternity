@@ -983,8 +983,8 @@ dialog.torgeternity:not(.actor, .item) .window-content,
               top: -4px;
             }
 
-            &.toggleFav.checked,
-            &.toggleDefenseOnly.checked {
+            &.toggleFav.checked:not(disabled),
+            &.toggleDefenseOnly.checked:not(disabled) {
               font-size: 15px;
               animation-duration: 0.3s;
               animation-name: roll;

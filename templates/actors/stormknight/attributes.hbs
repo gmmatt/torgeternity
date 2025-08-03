@@ -1,9 +1,11 @@
 <div class="attributes header">
   <h2>{{localize "torgeternity.sheetLabels.attributes"}}</h2>
-  <a class="changeAttributesToggle" data-action="changeAttributesToggle"
-    data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
-    <i class="fas fa-edit"></i>
-  </a>
+  {{#if editable}}
+    <a class="changeAttributesToggle" data-action="changeAttributesToggle"
+      data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
+      <i class="fas fa-edit"></i>
+    </a>
+  {{/if}}
   {{#if document.flags.torgeternity.editAttributes}}
     <h5>{{localize "torgeternity.sheetLabels.alterAttributes"}}</h5>
   {{/if}}
@@ -20,6 +22,7 @@
       data-name="charisma"
       data-baseAttribute="charisma"
       data-adds="0"
+      {{disabled (not editable)}}
       data-unskilledUse="1">
       {{localize "torgeternity.attributes.charisma"}}
     </a>
@@ -73,6 +76,7 @@
       data-name="dexterity"
       data-baseAttribute="dexterity"
       data-adds="0"
+      {{disabled (not editable)}}
       data-unskilledUse="1">
       {{localize "torgeternity.attributes.dexterity"}}
     </a>
@@ -124,6 +128,7 @@
       data-name="mind"
       data-baseAttribute="mind"
       data-adds="0"
+      {{disabled (not editable)}}
       data-unskilledUse="1">
       {{localize "torgeternity.attributes.mind"}}
     </a>
@@ -175,6 +180,7 @@
       data-name="spirit"
       data-baseAttribute="spirit"
       data-adds="0"
+      {{disabled (not editable)}}
       data-unskilledUse="1">
       {{localize "torgeternity.attributes.spirit"}}
     </a>
@@ -226,6 +232,7 @@
       data-name="strength"
       data-baseAttribute="strength"
       data-adds="0"
+      {{disabled (not editable)}}
       data-unskilledUse="1">
       {{localize "torgeternity.attributes.strength"}}
     </a>
