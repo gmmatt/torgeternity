@@ -27,6 +27,7 @@
 - Replace `render(true)` with `render({ force: true})` (V13 update).
 - Allow **Active Effects** to be dragged between Actors and Items.
 - Having OBSERVER ownership of an Actor prevents most actions on the Actor Sheet.
+- Vehicle and Threat sheets should scroll better.
 
 ## v13.2.2
 
