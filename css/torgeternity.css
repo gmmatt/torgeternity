@@ -157,10 +157,6 @@ form.torgeternity {
   }
 }
 
-form.sheet.actor div.threat-sheet {
-  height: 100%;
-}
-
 dialog.torgeternity:not(.actor, .item) .window-content,
 .application.torgeternity:not(.actor, .item) .window-content {
   background-image: url(../images/thunder.webp);
@@ -446,6 +442,12 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     /*background-image: url(../images/bg-sheet.webp);
     background-size: cover;
     padding-right: 0px;*/
+
+    &>div.scrollable[data-application-part="vehicle"],
+    &>div.scrollable[data-application-part="threat"] {
+      padding-right: 10px;
+      margin-right: 0px;
+    }
 
     h1 {
       border: none;
@@ -1449,10 +1451,6 @@ dialog.torgeternity:not(.actor, .item) .window-content,
         max-width: 120px;
       }
 
-      .tab[data-tab="stats"].active {
-        display: block;
-      }
-
       .vehicle-header-name {
         align-self: center;
         flex-grow: 5;
@@ -1662,9 +1660,21 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
   }
 
-  .threat-sheet {
+  div.vehicle-sheet {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    section.tab {
+      row-gap: 0px;
+    }
+  }
+
+  div.threat-sheet {
     display: inline-flex;
     width: 100%;
+    height: 100%;
 
     .section-bar {
       border: 1px black solid;

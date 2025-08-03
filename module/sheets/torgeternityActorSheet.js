@@ -103,7 +103,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       tabs: [
         { id: 'stats', },
         { id: 'gear', },
-        { id: 'effects', cssClass: 'scrollable' },
+        { id: 'effects' },
         { id: 'background', label: 'torgeternity.sheetLabels.notes' },
       ],
       initial: "stats",
