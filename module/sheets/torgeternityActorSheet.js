@@ -70,7 +70,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     effects: { template: "systems/torgeternity/templates/parts/active-effects.hbs", scrollable: [""] },
     background: { template: "systems/torgeternity/templates/actors/stormknight/background.hbs", scrollable: [""] },
 
-    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: ["div.sheet-body"] },
+    threat: { template: `systems/torgeternity/templates/actors/threat/main.hbs`, scrollable: [".scrollable"] },
     vehicle: { template: `systems/torgeternity/templates/actors/vehicle/main.hbs`, scrollable: [".scrollable"] }
   }
 
@@ -442,10 +442,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const characterHand = this.actor.getDefaultHand();
     // if default hand => render it
     if (characterHand) {
-      characterHand.sheet.render(true);
+      characterHand.sheet.render({ force: true });
     } else {
       const hand = await this.actor.createDefaultHand();
-      hand.sheet.render(true);
+      hand.sheet.render({ force: true });
     }
   }
 
@@ -898,7 +898,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static #onItemEdit(event, button) {
     const li = button.closest('.item');
     const item = this.actor.items.get(li.dataset.itemId);
-    item.sheet.render(true);
+    item.sheet.render({ force: true });
   }
   static #onItemDelete(event, button) {
     return DialogV2.confirm({
