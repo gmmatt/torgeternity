@@ -4,6 +4,6 @@
     {{localize "torgeternity.sheetLabels.backgroundAndNotes"}}
   </h1>
 
-  <prose-mirror toggled name="system.description" {{disabled (not editable)}}
+  <prose-mirror toggled name="system.description" {{disabled (not @root.editable)}}
     value="{{ document.system.description }}">{{{ enrichedDescription }}}</prose-mirror>
 </section>

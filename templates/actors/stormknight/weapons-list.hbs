@@ -1,7 +1,7 @@
 <h2>{{localize 'torgeternity.sheetLabels.attacks'}}</h2>
 <div class="interaction-attack-list">
   <a
-    class="unarmed-attack" data-action="unarmedAttack" {{disabled (not editable)}}
+    class="unarmed-attack" data-action="unarmedAttack" {{disabled (not @root.editable)}}
     data-name="unarmedCombat"
     data-base-attribute="dexterity"
     data-adds="{{document.system.skills.unarmedCombat.adds}}"
@@ -11,7 +11,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not editable)}}
+    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="intimidation"
     data-base-attribute="spirit"
     data-adds="{{document.system.skills.intimidation.adds}}"
@@ -20,7 +20,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not editable)}}
+    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="maneuver"
     data-base-attribute="dexterity"
     data-adds="{{document.system.skills.maneuver.adds}}"
@@ -29,7 +29,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not editable)}}
+    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="taunt"
     data-base-attribute="charisma"
     data-adds="{{document.system.skills.taunt.adds}}"
@@ -38,7 +38,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not editable)}}
+    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="trick"
     data-base-attribute="mind"
     data-adds="{{document.system.skills.trick.adds}}"
@@ -57,7 +57,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
+            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -65,7 +65,7 @@
             data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
             <i class="fas fa-edit"></i>
           </a>
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>
@@ -84,7 +84,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
+            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -93,12 +93,12 @@
             <i class="fas fa-edit"></i>
           </a>
           {{#if (not ../ignoreAmmo)}}
-            <a class="item-control" data-weapon="{{item}}" {{disabled (not editable)}}
+            <a class="item-control" data-weapon="{{item}}" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}">
               <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i>
             </a>
           {{/if}}
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>
@@ -117,7 +117,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
+            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -126,12 +126,12 @@
             <i class="fas fa-edit"></i>
           </a>
           {{#if (not ../ignoreAmmo)}}
-            <a class="item-control" data-weapon="{{item}}" {{disabled (not editable)}}
+            <a class="item-control" data-weapon="{{item}}" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}">
               <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i>
             </a>
           {{/if}}
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>
@@ -150,7 +150,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
+            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -159,12 +159,12 @@
             <i class="fas fa-edit"></i>
           </a>
           {{#if (not ../ignoreAmmo)}}
-            <a class="item-control" data-weapon="{{item}}" {{disabled (not editable)}}
+            <a class="item-control" data-weapon="{{item}}" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}">
               <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i>
             </a>
           {{/if}}
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>
@@ -184,7 +184,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not editable)}}
+            class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.spellRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -192,7 +192,7 @@
             data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
             <i class="fas fa-edit"></i>
           </a>
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>
@@ -211,7 +211,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not editable)}}
+            class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.miracleRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -219,7 +219,7 @@
             data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
             <i class="fas fa-edit"></i>
           </a>
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>
@@ -239,7 +239,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not editable)}}
+            class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.psionicRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -247,7 +247,7 @@
             data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
             <i class="fas fa-edit"></i>
           </a>
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>
@@ -266,7 +266,7 @@
         <span class="item-name" data-action="itemName">{{item.name}}</span>
         <div class="item-controls">
           <a
-            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
+            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'>
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -274,7 +274,7 @@
             data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
             <i class="fas fa-edit"></i>
           </a>
-          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+          <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'>
             <i class="fas fa-trash"></i>
           </a>

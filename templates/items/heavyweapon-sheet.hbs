@@ -78,7 +78,7 @@
       </p>
       <p class="item-data-label">{{localize "torgeternity.gear.description"}}</p>
       <prose-mirror toggled name="system.description" class="item-description-textarea"
-        style="padding: 0px 0px 0px 10px" {{disabled (not editable)}}
+        style="padding: 0px 0px 0px 10px" {{disabled (not @root.editable)}}
         value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
       {{> "systems/torgeternity/templates/items/ammunition-field.hbs"}}
     </div>

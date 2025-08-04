@@ -90,7 +90,7 @@
   <div
     class="sidebar-heading activeDefense-roll{{#if document.defenses.isActivelyDefending}}-glow{{/if}}"
     data-action="activeDefenseRoll{{#if document.defenses.isActivelyDefending}}Glow{{/if}}"
-    data-tooltip='{{localize "torgeternity.sheetLabels.defensesTip"}}' {{disabled (not editable)}}>
+    data-tooltip='{{localize "torgeternity.sheetLabels.defensesTip"}}' {{disabled (not @root.editable)}}>
     <i class="fas fa-shield"></i>
     {{localize 'torgeternity.sheetLabels.defenses'}}
   </div>
