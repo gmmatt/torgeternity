@@ -39,7 +39,7 @@ export class GeneralItemData extends BaseItemData {
         case 'thousands': price *= 1000; break;
         case 'millions': price *= 1000000; break;
         case 'billions': price *= 1000000000; break;
-        default: this.value = null; break;
+        default: this.value = null; price = null; break;
       }
       if (price) this.value = getTorgValue(price);
     }
