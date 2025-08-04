@@ -25,7 +25,7 @@ function guessLabel(check) {
 function InlineRuleEnricher(match, options) {
   const parts = match[1].split('|');
   let label = match[2];
-  const checks = parts.shift();
+  const checks = parts.shift().split(',');
   const anchors = [];
 
   const dataset = {}
@@ -34,7 +34,7 @@ function InlineRuleEnricher(match, options) {
     dataset[key] = value ?? true;
   }
 
-  for (const check of checks.split(',')) {
+  for (const check of checks) {
     // Decode each of the parameters
     dataset.testType = check;
 
@@ -54,10 +54,10 @@ function InlineRuleEnricher(match, options) {
       anchor.append(span);
     }
     // Append a button to copy the link to chat (only when in Journal)
-    if (!parts.includes('fromchat') && game.user.isGM) {
+    if (!options.rollData && game.user.isGM && anchors.length / 2 === checks.length - 1) {
       const icon = document.createElement("i");
       icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-      icon.dataset.original = match[0].replace("]", "|fromchat]");
+      icon.dataset.original = match[0];
       anchor.append(icon);
     }
     anchors.push(anchor);
@@ -66,6 +66,7 @@ function InlineRuleEnricher(match, options) {
   if (anchors.length === 1) return anchors[0];
   const globalspan = document.createElement('span');
   globalspan.append(...anchors);
+
   return globalspan;
 }
 
@@ -76,13 +77,13 @@ const interactionAttacks = ['unarmed', 'intimidation', 'maneuver', 'taunt', 'kic
  * @param {*} event 
  */
 function _onClickInlineCheck(event) {
-  const target = event.target.closest('a.torg-inline-check');
   // Firstly check for clicking on the "post to chat" button
   if (event.target.dataset.original) {
     ChatMessage.create({ content: event.target.dataset.original })
     return;
   }
 
+  const target = event.target.closest('a.torg-inline-check');
   const test = { ...target.dataset };
 
   // Same test as in 'rollSkillMacro'
@@ -164,10 +165,10 @@ function InlineConditionEnricher(match, options) {
     icon: "fa-solid fa-circle-plus"
   });
   // Append a button to copy the link to chat (only when in Journal)
-  if (!parts.includes('fromchat') && game.user.isGM) {
+  if (!options.rollData && game.user.isGM) {
     const icon = document.createElement("i");
     icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match[0].replace("]", "|fromchat]");
+    icon.dataset.original = match[0];
     anchor.append(icon);
   }
   return anchor;
@@ -280,10 +281,10 @@ function InlineBuffEnricher(match, options) {
     icon: "fa-solid fa-bolt-lightning"
   });
   // Append a button to copy the link to chat (only when in Journal)
-  if (!parts.includes('fromchat') && game.user.isGM) {
+  if (!options.rollData && game.user.isGM) {
     const icon = document.createElement("i");
     icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match[0].replace("]", "|fromchat]");
+    icon.dataset.original = match[0];
     anchor.append(icon);
   }
   return anchor;
@@ -317,9 +318,7 @@ async function _onClickInlineBuff(event) {
       return CONST.ACTIVE_EFFECT_MODES.OVERRIDE;
   }
   for (const [key, value] of Object.entries({ ...target.dataset })) {
-    if (key === 'fromchat')
-      continue;
-    else if (key.startsWith('skill'))
+    if (key.startsWith('skill'))
       effectdata.changes.push({
         key: `system.skills.${key.slice(5)}.adds`,
         mode: getMode(value),
