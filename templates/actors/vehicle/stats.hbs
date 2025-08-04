@@ -82,7 +82,7 @@
       <th>
         <button
           class="base-roll" data-action="baseRoll" {{disabled (not editable)}}
-          data-skill-value="{{document.system.operator.skillValue}}"
+          data-skill-value="{{document.operator.skillValue}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
@@ -92,7 +92,7 @@
       <th>
         <button
           class="chase-roll" data-action="chaseRoll" {{disabled (not editable)}}
-          data-skill-value="{{document.system.operator.skillValue}}"
+          data-skill-value="{{document.operator.skillValue}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
@@ -102,7 +102,7 @@
       <th>
         <button
           class="stunt-roll" data-action="stuntRoll" {{disabled (not editable)}}
-          data-skill-value="{{document.system.operator.skillValue}}"
+          data-skill-value="{{document.operator.skillValue}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
@@ -135,7 +135,7 @@
         <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>
         <div class="controls">
           <a
-            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not editable)}}
+            class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
             data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
             <i class="fas fa-dice-d20"></i>
           </a>
@@ -144,13 +144,13 @@
             <i class="fas fa-edit"></i>
           </a>
           {{#if (not ../ignoreAmmo)}}
-            <a class="item-control" data-weapon="{{item}}" {{disabled (not editable)}}
+            <a class="item-control" data-weapon="{{item}}" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}">
               <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i>
             </a>
           {{/if}}
           <a
-            class="item-control item-delete" data-action="itemDelete" {{disabled (not editable)}}
+            class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
             data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
             <i class="fas fa-trash"></i>
           </a>
