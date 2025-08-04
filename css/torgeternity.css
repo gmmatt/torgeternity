@@ -3366,7 +3366,6 @@ p.skill-chat-title.skilled {
   header.sheet-header {
     display: flex;
     align-items: center;
-    margin-top: 15px;
 
     img {
       flex: 0 0 64px;
