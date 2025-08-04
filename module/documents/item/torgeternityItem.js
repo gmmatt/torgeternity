@@ -1,6 +1,7 @@
 import { ChatMessageTorg } from '../chat/document.js';
 import { torgeternity } from '../../config.js';
 
+let deferredGunners = new Set();
 /**
  *
  */
@@ -83,6 +84,9 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (source.type === 'specialability-rollable' && source.system?.damage && source.system.attackWith) {
       source.type = 'customAttack';
       source.system.damageType = 'flat'
+    }
+    if (source.type === 'heavyweapon' && source.system.gunner?.name && !source.system.gunnerId) {
+      deferredGunners.add({ weaponId: source._id, gunnerName: source.system.gunner.name })
     }
     return source;
   }
@@ -434,3 +438,20 @@ export default class TorgeternityItem extends foundry.documents.Item {
       return { name: "", skillValue: 0 }
   }
 }
+
+
+Hooks.on('setup', async () => {
+  const updates = deferredGunners;
+  deferredGunners = null;
+  for (const update of updates) {
+    const gunner = game.actors.find(actor => actor.name === update.gunnerName);
+    const vehicle = game.actors.find(actor => actor.type === 'vehicle' && actor.items.get(update.weaponId));
+    const weapon = vehicle?.items.get(update.weaponId);
+    if (gunner && weapon)
+      await weapon.update({ 'system.gunnerId': gunner.id })
+    else if (!gunner)
+      console.warn(`GUNNER MIGRATION: Failed to find gunner called '${update.name}'`);
+    else // weapon WILL be valid if vehicle is valid
+      console.warn(`GUNNER MIGRATION: Failed to find vehicle with weapon Id '${update.weaponId}'`);
+  }
+})

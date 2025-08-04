@@ -741,14 +741,14 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 Hooks.on('setup', () => {
   const updates = deferredDrivers;
   deferredDrivers = null;
-  for (const block of updates) {
-    const driver = game.actors.find(actor => actor.name === block.driverName);
-    const vehicle = game.actors.get(block.vehicleId);
-    if (driver)
+  for (const update of updates) {
+    const driver = game.actors.find(actor => actor.name === update.driverName);
+    const vehicle = game.actors.get(update.vehicleId);
+    if (driver && vehicle)
       vehicle.update({ 'system.operatorId': driver.id })
-    else {
-      console.warn(`VEHICLE MIGRATION: Failed to find driver called ${block.name}`);
-      continue;
-    }
+    else if (!driver)
+      console.warn(`VEHICLE MIGRATION: Failed to find driver called '${update.name}'`);
+    else
+      console.warn(`VEHICLE MIGRATION: Failed to find vehicle with ID '${update.vehicleId}'`);
   }
 })
