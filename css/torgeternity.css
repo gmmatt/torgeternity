@@ -1385,6 +1385,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       }
     }
 
+    .crew-favored.disabled {
+      color: transparent;
+    }
+
     li.vehicle-weapon-list,
     li.vehicle-add-on-list {
       display: flex;
@@ -1410,6 +1414,17 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       &.disabled {
         color: transparent;
       }
+    }
+
+    li.vehicle-weapon-list .crew-unskilled {
+      color: gray
+    }
+
+    li.vehicle-weapon-list .crew-favored:not(.disabled) {
+      font-size: 15px;
+      animation-duration: 0.3s;
+      animation-name: roll;
+      text-shadow: 0px 0px 3px green;
     }
 
     li.vehicle-add-on-list .add-on-description {

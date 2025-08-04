@@ -73,6 +73,13 @@
           data-dtype="text" readonly />
         <a class="icon fa-solid fa-trash remove-operator {{disabled (not document.system.operator.name)}}"
           data-action="removeOperator" data-tooltip="{{localize 'torgeternity.sheetLabels.removeOperator'}}"></a>
+        {{#if (or (not document.system.operatorSkill.adds) (eq document.system.operatorSkill.adds 0))}}
+          <i class="far fa-ban crew-unskilled"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.crewUnskilledOperator'}}"></i>
+        {{else}}
+          <i class="far fa-star crew-favored {{disabled (not document.system.operatorSkill.isFav)}}"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.crewFavored'}}"></i>
+        {{/if}}
       </th>
       <th>
         {{localize "torgeternity.sheetLabels.skill"}}
@@ -132,6 +139,13 @@
         <a class="icon fa-solid fa-trash remove-gunner {{disabled (not item.system.gunner.name)}}"
           data-action="removeGunner" data-tooltip="{{localize 'torgeternity.sheetLabels.removeGunner'}}"></a>
         <div class="skill">{{item.system.gunnerSkill.value}}</div>
+        {{#if (or (not item.system.gunnerSkill.adds) (eq item.system.gunnerSkill.adds 0))}}
+          <i class="far fa-ban crew-unskilled"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.crewUnskilledWeapon'}}"></i>
+        {{else}}
+          <i class="far fa-star crew-favored {{disabled (not item.system.gunnerSkill.isFav)}}"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.crewFavored'}}"></i>
+        {{/if}}
         <div class="range">{{item.system.range}}</div>
         <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>
         <div class="controls">
