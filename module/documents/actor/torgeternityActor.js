@@ -29,15 +29,6 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     return this.itemTypes.race[0] ?? null;
   }
 
-  get driver() {
-    const driver = this.type === 'vehicle' && fromUuidSync(this.system.driver, { strict: false });
-    if (!driver) return { name: "", skillValue: 0 };
-    return {
-      name: driver.name,
-      skillValue: driver.system.skills[this.system.type.toLowerCase() + 'Vehicles']?.value ?? 0
-    }
-  }
-
   /* -------------------------------------------- */
   /*  Data Preparation                            */
   /* -------------------------------------------- */
@@ -727,10 +718,22 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   static migrateData(source) {
-    if (source.type === 'vehicle' /*&& !source.system.driver*/ && source.system.operator?.name) {
+    if (source.type === 'vehicle' /*&& !source.system.operatorId*/ && source.system.operator?.name) {
       deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
     }
     return super.migrateData(source);
+  }
+
+
+  get operator() {
+    const operator = this.system.operatorId;
+    if (operator)
+      return {
+        name: operator.name,
+        skillValue: operator.system.skills[this.system.type.toLowerCase() + 'Vehicles']?.value ?? 0
+      }
+    else
+      return { name: "", skillValue: 0 };
   }
 }
 
@@ -742,7 +745,7 @@ Hooks.on('setup', () => {
     const driver = game.actors.find(actor => actor.name === block.driverName);
     const vehicle = game.actors.get(block.vehicleId);
     if (driver)
-      vehicle.update({ 'system.driver': driver.uuid })
+      vehicle.update({ 'system.operatorId': driver.id })
     else {
       console.warn(`VEHICLE MIGRATION: Failed to find driver called ${block.name}`);
       continue;

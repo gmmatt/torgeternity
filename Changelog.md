@@ -2,19 +2,27 @@
 
 ## Next Release
 
+### New Features
+
+- #435: Vehicles can now have Heavy Weapons, Missile Weapons and Firearms
+-- Drag an Actor onto the Operator or Weapon line of a Vehicle sheet will assign that Actor to that role.
+-- The Actor's current skill be displayed in the Vehicle sheet and used for any vehicle weapon attacks.
 - Scene Navigation returned to Torg styling.
-- Add option to disable fading of Scene Navigation menu.
-- Combat Tracker no longer disappears when a card Hand is deleted (which would occur when an Actor is deleted).
 - Token Ruler grid highlight is coloured according to move/max move of the token (if any).
-- #565: No errors during hover distance.
 - Make the `attackWith` field visible in the Melee Weapon, Missile Weapon and Heavy Weapon Item sheets, so that things like Pain Gauntlet can be built directly as a Melee Weapon rather than a Gear item with a separate customAttack item.
-- Use common code for performing Attack/Power rolls from the Actor sheet and from `rollItemMacro`.
 - Expand list of traits to cover the cosm books, and force all Item types to use the drop-down list.
 - #551: Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
 - #563: The Rule on a Drama Card can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
-- Change background colour of hover distance function to distinguish it from the waypoint display during turns.
+- #567: Item traits appear in expanded view of gear list.
+
+### Bug Fixes
+
+- Add option to disable fading of Scene Navigation menu.
+- Combat Tracker no longer disappears when a card Hand is deleted (which would occur when an Actor is deleted).
+- #565: No errors during hover distance.
+- Use common code for performing Attack/Power rolls from the Actor sheet and from `rollItemMacro`.
 - When rolling Reality skill from Actor sheet, remove `disconnected` state if the Reconnection is successful.
-- #567: Item traits apepar in expanded view of gear list.
+- Change background colour of hover distance function to distinguish it from the waypoint display during turns.
 - When Threat window is closed while Notes tab is selected, on reopening the Notes tab will be shown correctly.
 - Reduce flickering of Combat Tracker on "New" round.
 - Create Actor/Item dialogs now have translated Types again.
@@ -25,10 +33,9 @@
 - Discard unsupported Item Traits at startup (console log message for each trait removed).
 - Ensure Item Sheet updates automatically when the item's data changes.
 - Replace `render(true)` with `render({ force: true})` (V13 update).
-- Allow **Active Effects** to be dragged between Actors and Items.
+- Allow **Active Effects** to be dragged between Actors and Items again.
 - Having OBSERVER ownership of an Actor prevents most actions on the Actor Sheet.
 - Vehicle and Threat sheets should scroll better.
-- #435: Convert vehicles to **store operator/driver by UUID** rather than name. A migration is performed by looking for an actor with the current name. The advantage of using UUID is that any change to the driver's skill will update the operator skill in the vehicle sheet.
 
 ## v13.2.2
 

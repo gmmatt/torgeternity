@@ -64,16 +64,16 @@
     </table>
   </div>
   <h2>{{localize "torgeternity.sheetLabels.operator"}}</h2>
-  <table class="groove-borders left-align">
+  <table class="groove-borders left-align vehicle-operator">
     <tr>
       <th>
         {{localize "torgeternity.sheetLabels.name"}}
-        <input name="driver.name" class="long-text" type="text" value="{{driver.name}}"
+        <input name="document.operator.name" class="long-text" type="text" value="{{document.operator.name}}"
           data-dtype="text" readonly />
       </th>
       <th>
         {{localize "torgeternity.sheetLabels.skill"}}
-        <input name="driver.skillValue" type="number" value="{{driver.skillValue}}"
+        <input name="document.operator.skillValue" type="number" value="{{document.operator.skillValue}}"
           data-dtype="Number" readonly />
       </th>
       <th>{{localize "torgeternity.sheetLabels.defense"}} {{document.system.defense}}</th>
@@ -120,12 +120,13 @@
       <div class="damage-header">{{localize "torgeternity.sheetLabels.damageAP"}}</div>
       <div class="controls-header"></div>
     </li>
-    {{#each heavyweapon as |item id|}}
+
+    {{#*inline "weaponData" item}}
       <li class="item vehicle-weapon-list" data-item-id="{{item._id}}">
         <div class="vehicle-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" /></div>
         <div class="name">{{item.name}}</div>
-        <div class="gunner">{{item.system.gunner.name}}</div>
-        <div class="skill">{{item.system.gunner.skillValue}}</div>
+        <div class="gunner">{{item.gunner.name}}</div>
+        <div class="skill">{{item.gunner.skillValue}}</div>
         <div class="range">{{item.system.range}}</div>
         <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>
         <div class="controls">
@@ -151,7 +152,18 @@
           </a>
         </div>
       </li>
+    {{/inline}}
+
+    {{#each heavyweapon as |item id|}}
+      {{> weaponData item=item}}
     {{/each}}
+    {{#each missileweapon as |item id|}}
+      {{> weaponData item=item}}
+    {{/each}}
+    {{#each firearm as |item id|}}
+      {{> weaponData item=item}}
+    {{/each}}
+
   </div>
   <h2>{{localize "torgeternity.sheetLabels.addOns"}}</h2>
   <div class="item-list">

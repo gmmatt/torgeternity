@@ -124,18 +124,18 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _onFirstRender(context, options) {
     // If it is a vehicle with a driver, then watch for changes to the driver's 
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.driver) {
-      const driver = fromUuidSync(actor.system.driver);
-      if (driver) driver.apps[this.id] = this;
+    if (actor.type === 'vehicle' && actor.system.operatorId) {
+      const operator = actor.system.operatorId;
+      if (operator) operator.apps[this.id] = this;
     }
     return super._onFirstRender(context, options);
   }
 
   _onClose(options) {
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.driver) {
-      const driver = fromUuidSync(actor.system.driver);
-      if (driver) delete driver.apps[this.id];
+    if (actor.type === 'vehicle' && actor.system.operatorId) {
+      const operator = actor.system.operatorId;
+      if (operator) delete operator.apps[this.id];
     }
     super._onClose(options);
   }
@@ -202,7 +202,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     context.cosmCard = context.items.filter(item => item.type === 'cosmCard');
     context.vehicleAddOn = context.items.filter(item => item.type === 'vehicleAddOn');
     context.ammunitions = context.items.filter(item => item.type === 'ammunition');
-    if (this.actor.type === 'vehicle') context.driver = this.actor.driver;
+    if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 
     for (const type of [
       'meleeweapons',
@@ -341,6 +341,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new foundry.applications.ux.DragDrop.implementation({
       dragSelector: '[data-drag], .item-list .item',
+      permissions: {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this),
+      },
       callbacks: {
         dragstart: this._onDragStart.bind(this),
         drop: this._onDrop.bind(this),
@@ -415,13 +419,29 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
       case 'vehicle':
         if (document instanceof Actor && (document.type === 'stormknight' || document.type === 'threat')) {
-          // dropped document = driver
-          const skillValue = document?.system?.skills[this.actor.system.type.toLowerCase() + 'Vehicles']?.value ?? 0;
-          if (skillValue === 0) {
-            ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
-            return;
+
+          // Is it a driver or a gunner?
+          const target = event.target;
+          if (target.closest('.vehicle-operator')) {
+            // dropped document = driver
+            const skillValue = document?.system?.skills[this.actor.system.type.toLowerCase() + 'Vehicles']?.value ?? 0;
+            if (skillValue === 0) {
+              ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
+              return;
+            }
+            this.actor.update({ 'system.operatorId': document.id });
+          } else {
+            // Check for gunner
+            const weapon = this.actor.items.get(target.closest('li.vehicle-weapon-list')?.dataset?.itemId);
+            if (weapon) {
+              const skillValue = document?.system?.skills[weapon.system.attackWith]?.value ?? 0;
+              if (skillValue === 0) {
+                ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
+                return;
+              }
+              weapon.update({ 'system.gunnerId': document.id });
+            }
           }
-          this.actor.update({ 'system.driver': document.uuid });
           return;
         }
     }

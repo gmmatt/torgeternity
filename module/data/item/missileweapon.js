@@ -1,4 +1,5 @@
 import { BaseWeaponItemData } from './baseweapon.js';
+import TorgeternityActor from '../../documents/actor/torgeternityActor.js'
 
 const fields = foundry.data.fields;
 /**
@@ -16,10 +17,7 @@ export class MissileWeaponItemData extends BaseWeaponItemData {
         max: new fields.NumberField({ initial: 1, integer: true }),
         value: new fields.NumberField({ initial: 1, integer: true }),
       }),
-      gunner: new fields.SchemaField({
-        name: new fields.StringField({ initial: '' }),
-        skillValue: new fields.StringField({ initial: '' }),
-      }),
+      gunnerId: new fields.ForeignDocumentField(TorgeternityActor),
     };
   }
 }

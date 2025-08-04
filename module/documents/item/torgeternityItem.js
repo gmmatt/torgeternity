@@ -419,4 +419,18 @@ export default class TorgeternityItem extends foundry.documents.Item {
         return 1;
     }
   }
+
+  /**
+   * If the item has a gunner, then return the gunner's name and skillValue
+   */
+  get gunner() {
+    const gunner = this.system.gunnerId;
+    if (gunner)
+      return {
+        name: gunner.name,
+        skillValue: gunner.system.skills[this.system.attackWith].value,
+      }
+    else
+      return { name: "", skillValue: 0 }
+  }
 }
