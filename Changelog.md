@@ -14,8 +14,8 @@
 - Make the `attackWith` field visible in the Melee Weapon, Missile Weapon and Heavy Weapon Item sheets, so that things like Pain Gauntlet can be built directly as a Melee Weapon rather than a Gear item with a separate customAttack item.
 - Expand list of traits to cover the cosm books, and force all Item types to use the drop-down list.
 - #551: Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
-- #563: The Rule on a Drama Card can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
-- #567: Item traits appear in expanded view of gear list.
+- #563: The **Rule on a Drama Card** can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
+- #567: Item traits appear in the expanded view of gear list on Actor sheets.
 
 ### Bug Fixes
 
