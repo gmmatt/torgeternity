@@ -18,7 +18,6 @@
 
 ### Bug Fixes
 
-- Add option to disable fading of Scene Navigation menu.
 - Combat Tracker no longer disappears when a card Hand is deleted (which would occur when an Actor is deleted).
 - #565: No errors during hover distance.
 - Use common code for performing Attack/Power rolls from the Actor sheet and from `rollItemMacro`.

@@ -56,6 +56,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       reloadWeapon: TorgeternityActorSheet.#onReloadWeapon,
       itemName: TorgeternityActorSheet.#onitemName,
       deleteRace: TorgeternityActorSheet.#onDeleteRace,
+      removeOperator: TorgeternityActorSheet.#onRemoveOperator,
+      removeGunner: TorgeternityActorSheet.#onRemoveGunner,
     }
   }
 
@@ -935,11 +937,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
     this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1 });
   }
+
   static #onItemEdit(event, button) {
     const li = button.closest('.item');
     const item = this.actor.items.get(li.dataset.itemId);
     item.sheet.render({ force: true });
   }
+
   static #onItemDelete(event, button) {
     return DialogV2.confirm({
       window: { title: 'torgeternity.dialogWindow.itemDeletion.title' },
@@ -985,6 +989,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     })) {
       return this.deleteRace();
     }
+  }
+
+  static async #onRemoveOperator(event, button) {
+    this.document.update({ 'system.operatorId': null })
+  }
+
+  static async #onRemoveGunner(event, button) {
+    const weapon = this.document.items.get(button.closest('.vehicle-weapon-list')?.dataset?.itemId);
+    if (weapon) weapon.update({ 'system.gunnerId': null })
   }
 
   async deleteRace() {

@@ -70,6 +70,8 @@
         {{localize "torgeternity.sheetLabels.name"}}
         <input name="document.operator.name" class="long-text" type="text" value="{{document.operator.name}}"
           data-dtype="text" readonly />
+        <a class="icon fa-solid fa-ban remove-operator {{disabled (not document.operator.name)}}"
+          data-action="removeOperator"></a>
       </th>
       <th>
         {{localize "torgeternity.sheetLabels.skill"}}
@@ -126,6 +128,8 @@
         <div class="vehicle-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" /></div>
         <div class="name">{{item.name}}</div>
         <div class="gunner">{{item.gunner.name}}</div>
+        <a class="icon fa-solid fa-ban remove-gunner {{disabled (not item.gunner.name)}}"
+          data-action="removeGunner"></a>
         <div class="skill">{{item.gunner.skillValue}}</div>
         <div class="range">{{item.system.range}}</div>
         <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>

@@ -1377,6 +1377,13 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       }
     }
 
+    .remove-operator {
+      color: red;
+
+      &.disabled {
+        color: transparent;
+      }
+    }
 
     li.vehicle-weapon-list,
     li.vehicle-add-on-list {
@@ -1395,6 +1402,14 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       font-family: "Signika";
       font-size: 12px;
       text-align: center;
+    }
+
+    li.vehicle-weapon-list .remove-gunner {
+      color: red;
+
+      &.disabled {
+        color: transparent;
+      }
     }
 
     li.vehicle-add-on-list .add-on-description {
