@@ -3173,6 +3173,10 @@ p.skill-chat-title.skilled {
     pointer-events: none;
     color: gray;
   }
+
+  &.notPreferred {
+    color: gray;
+  }
 }
 
 .chat-message .hidden {

@@ -38,6 +38,7 @@
 - Replace `render(true)` with `render({ force: true})` (V13 update).
 - Allow **Active Effects** to be dragged between Actors and Items again.
 - Vehicle and Threat sheets should scroll better.
+- Defeat test greys out the higher stat (of Spirit or Strength), but the button can still be pressed (in case the Actor has an ability that allows them to modify the "lower of" rule)
 
 ## v13.2.2
 

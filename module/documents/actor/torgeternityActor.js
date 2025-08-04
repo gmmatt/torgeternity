@@ -556,11 +556,11 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 
     const html = `<p>${game.i18n.format('torgeternity.defeat.prompt', { name: this.name })}
     <div class="skill-roll-menu">
-     <a class="button roll-button roll-defeat ${(attribute === 'strength') && 'disabled'}"
+     <a class="button roll-button roll-defeat ${(attribute === 'strength') && 'notPreferred'}"
      data-action="testDefeat" data-control="spirit" }>
      ${game.i18n.localize('torgeternity.attributes.spirit')}
      </a>
-     <a class="button roll-button roll-defeat ${(attribute === 'spirit') && 'disabled'}" 
+     <a class="button roll-button roll-defeat ${(attribute === 'spirit') && 'notPreferred'}" 
      data-action="testDefeat" data-control="strength" >
      ${game.i18n.localize('torgeternity.attributes.strength')}
      </a>
