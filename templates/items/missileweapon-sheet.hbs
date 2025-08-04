@@ -15,14 +15,14 @@
         name="system.price"
         type="text"
         value="{{item.system.price}}" />
-      <p class="item-data-label">{{localize "torgeternity.gear.attackWith"}}</p>
-      <select name="system.attackWith">
-        {{selectOptions config.attackTypes selected=item.system.attackWith localize=true}}
-      </select>
       <input
         name="system.value"
         type="number"
         value="{{item.system.value}}" />
+      <p class="item-data-label">{{localize "torgeternity.gear.attackWith"}}</p>
+      <select name="system.attackWith">
+        {{selectOptions config.attackTypes selected=item.system.attackWith localize=true}}
+      </select>
       <p class="item-data-label">{{localize "torgeternity.gear.minStrength"}}</p>
       <input
         name="system.minStrength"

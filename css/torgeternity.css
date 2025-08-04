@@ -3508,9 +3508,9 @@ p.skill-chat-title.skilled {
       grid-column: 2/3;
     }
 
-    input[name="data.price"],
-    input[name="data.tough"] {
-      width: 50px;
+    input[name="system.price"],
+    input[name="system.tough"] {
+      width: 4em;
     }
 
     select {
