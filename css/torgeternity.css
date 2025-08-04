@@ -1327,7 +1327,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       text-align: center;
 
       input {
-        width: 50px !important;
+        width: 50px;
       }
     }
 
@@ -2865,11 +2865,6 @@ nav#controls,
   }
 }
 
-.combat-sidebar #combat-tracker {
-  overflow-y: auto;
-  flex: 2 !important;
-}
-
 .party-sheet {
 
   h1,
@@ -3261,7 +3256,6 @@ p.skill-chat-title.skilled {
 }
 
 .sheet.item {
-  height: auto !important;
   --color-scrollbar: #227878;
   --color-scrollbar-track: #2e2e2e94;
 
@@ -3362,10 +3356,6 @@ p.skill-chat-title.skilled {
 
   .window-content {
     font-size: 0.9em;
-    /*padding: 10px;
-    background-image: url(../images/bg-sheet.webp);
-    background-size: cover;
-    */
     max-height: 95%;
 
     .editor-content {
@@ -3980,7 +3970,6 @@ form.cards-config {
 }
 
 .app.sidebar-popout {
-  height: auto !important;
   max-height: 90%;
 }
 
@@ -3992,14 +3981,6 @@ form.cards-config {
 .enhancement-content {
   flex: 90%;
   font-size: 12px;
-}
-
-.available-enhancement-input {
-  width: 25px !important;
-}
-
-.available-enhancement {
-  text-align: center;
 }
 
 .enhancements-section-heading {
@@ -4093,22 +4074,6 @@ form.cards-config {
 
 #gm-screen.focus-right {
   transform: scale(2) translateX(-33%) translateY(25%);
-}
-
-.operator-name {
-  text-align: center;
-}
-
-.operator-name input {
-  width: 200px !important;
-}
-
-.operator-skill {
-  text-align: center;
-}
-
-.operator-skill input {
-  width: 50px !important;
 }
 
 body,
