@@ -87,10 +87,10 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     let convertedPrice = 0;
     switch (this.price.magnitude) {
       case 'billions':
-        convertedPrice = this.price.dollars * 1000;
+        convertedPrice = this.price.dollars * 1000000000;
         break;
       case 'millions':
-        convertedPrice = this.price.dollars * 1000;
+        convertedPrice = this.price.dollars * 1000000;
         break;
       case 'thousands':
         convertedPrice = this.price.dollars * 1000;
