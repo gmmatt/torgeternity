@@ -40,7 +40,6 @@ export class ThreatData extends CommonActorData {
    * @param {object} data the partial data object to migrate
    */
   static migrateData(data) {
-    super.migrateData(data);
     if (data?.details && Object.hasOwn(data?.details, 'possibilitypotential')) {
       data.details.possibilityPotential ??= 'Never';
     }
@@ -49,6 +48,7 @@ export class ThreatData extends CommonActorData {
         ? data.details.sizeBonus
         : 'normal';
     }
+    return super.migrateData(data);
   }
 
   /**

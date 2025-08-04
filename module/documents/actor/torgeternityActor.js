@@ -718,22 +718,12 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   static migrateData(source) {
-    if (source.type === 'vehicle' /*&& !source.system.operatorId*/ && source.system.operator?.name) {
-      deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
+    if (source.type === 'vehicle' && typeof source.system.operator?.name === 'string') {
+      if (source.system.operator.name)
+        deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
+      delete source.system.operator;
     }
     return super.migrateData(source);
-  }
-
-
-  get operator() {
-    const operator = this.system.operatorId;
-    if (operator)
-      return {
-        name: operator.name,
-        skillValue: operator.system.skills[this.system.type.toLowerCase() + 'Vehicles']?.value ?? 0
-      }
-    else
-      return { name: "", skillValue: 0 };
   }
 }
 
@@ -745,7 +735,7 @@ Hooks.on('setup', () => {
     const driver = game.actors.find(actor => actor.name === update.driverName);
     const vehicle = game.actors.get(update.vehicleId);
     if (driver && vehicle)
-      vehicle.update({ 'system.operatorId': driver.id })
+      vehicle.update({ 'system.operator': driver.id })
     else if (!driver)
       console.warn(`VEHICLE MIGRATION: Failed to find driver called '${update.name}'`);
     else

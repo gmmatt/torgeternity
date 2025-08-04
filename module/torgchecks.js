@@ -857,7 +857,7 @@ export async function rollAttack(actor, item) {
   }
 
   if (actor.type === 'vehicle') {
-    const gunner = item.system.gunnerId;
+    const gunner = item.system.gunner;
     skillData = gunner?.system.skills[attackWith] ?? null;
     skillValue = skillData?.value ?? '-';
     attributes = gunner?.system.attributes ?? 0;

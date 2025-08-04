@@ -79,16 +79,17 @@ export default class TorgeternityItem extends foundry.documents.Item {
   };
 
   static migrateData(source) {
-    super.migrateData(source);
     // For better support, convert the old damaging abilities into custom attacks with a flat damage modifier.
     if (source.type === 'specialability-rollable' && source.system?.damage && source.system.attackWith) {
       source.type = 'customAttack';
       source.system.damageType = 'flat'
     }
-    if (source.type === 'heavyweapon' && source.system.gunner?.name && !source.system.gunnerId) {
-      deferredGunners.add({ weaponId: source._id, gunnerName: source.system.gunner.name })
+    if (typeof source.system.gunner?.name === 'string') {
+      if (source.system.gunner.name)
+        deferredGunners.add({ weaponId: source._id, gunnerName: source.system.gunner.name })
+      delete source.system.gunner;
     }
-    return source;
+    return super.migrateData(source);
   }
   /**
    * Getter for a weapon that might have ammo or not (meelee weapons don't have ammo)
@@ -423,20 +424,6 @@ export default class TorgeternityItem extends foundry.documents.Item {
         return 1;
     }
   }
-
-  /**
-   * If the item has a gunner, then return the gunner's name and skillValue
-   */
-  get gunner() {
-    const gunner = this.system.gunnerId;
-    if (gunner)
-      return {
-        name: gunner.name,
-        skillValue: gunner.system.skills[this.system.attackWith].value,
-      }
-    else
-      return { name: "", skillValue: 0 }
-  }
 }
 
 
@@ -448,7 +435,7 @@ Hooks.on('setup', async () => {
     const vehicle = game.actors.find(actor => actor.type === 'vehicle' && actor.items.get(update.weaponId));
     const weapon = vehicle?.items.get(update.weaponId);
     if (gunner && weapon)
-      await weapon.update({ 'system.gunnerId': gunner.id })
+      await weapon.update({ 'system.gunner': gunner.id })
     else if (!gunner)
       console.warn(`GUNNER MIGRATION: Failed to find gunner called '${update.name}'`);
     else // weapon WILL be valid if vehicle is valid

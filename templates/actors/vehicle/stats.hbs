@@ -68,21 +68,22 @@
     <tr>
       <th>
         {{localize "torgeternity.sheetLabels.name"}}
-        <input name="document.operator.name" class="long-text" type="text" value="{{document.operator.name}}"
+        <input name="document.system.operator.name" class="long-text" type="text"
+          value="{{document.system.operator.name}}"
           data-dtype="text" readonly />
-        <a class="icon fa-solid fa-ban remove-operator {{disabled (not document.operator.name)}}"
+        <a class="icon fa-solid fa-ban remove-operator {{disabled (not document.system.operator.name)}}"
           data-action="removeOperator"></a>
       </th>
       <th>
         {{localize "torgeternity.sheetLabels.skill"}}
-        <input name="document.operator.skillValue" type="number" value="{{document.operator.skillValue}}"
+        <input name="document.system.operatorSkill.value" type="number" value="{{document.system.operatorSkill.value}}"
           data-dtype="Number" readonly />
       </th>
       <th>{{localize "torgeternity.sheetLabels.defense"}} {{document.system.defense}}</th>
       <th>
         <button
           class="base-roll" data-action="baseRoll" {{disabled (not editable)}}
-          data-skill-value="{{document.operator.skillValue}}"
+          data-skill-value="{{document.system.operatorSkill.value}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
@@ -127,10 +128,10 @@
       <li class="item vehicle-weapon-list" data-item-id="{{item._id}}">
         <div class="vehicle-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" /></div>
         <div class="name">{{item.name}}</div>
-        <div class="gunner">{{item.gunner.name}}</div>
-        <a class="icon fa-solid fa-ban remove-gunner {{disabled (not item.gunner.name)}}"
+        <div class="gunner">{{item.system.gunner.name}}</div>
+        <a class="icon fa-solid fa-ban remove-gunner {{disabled (not item.system.gunner.name)}}"
           data-action="removeGunner"></a>
-        <div class="skill">{{item.gunner.skillValue}}</div>
+        <div class="skill">{{item.system.gunnerSkill.value}}</div>
         <div class="range">{{item.system.range}}</div>
         <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>
         <div class="controls">

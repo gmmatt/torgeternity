@@ -17,7 +17,17 @@ export class MissileWeaponItemData extends BaseWeaponItemData {
         max: new fields.NumberField({ initial: 1, integer: true }),
         value: new fields.NumberField({ initial: 1, integer: true }),
       }),
-      gunnerId: new fields.ForeignDocumentField(TorgeternityActor),
+      gunner: new fields.ForeignDocumentField(TorgeternityActor),
     };
+  }
+
+  /**
+   * If the item has a gunner, then return the gunner's name and skillValue
+   */
+  get gunnerSkill() {
+    if (this.gunner)
+      return this.gunner.system.skills[this.attackWith];
+    else
+      return { value: 0 }
   }
 }

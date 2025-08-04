@@ -126,8 +126,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _onFirstRender(context, options) {
     // If it is a vehicle with a driver, then watch for changes to the driver's 
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.operatorId) {
-      const operator = actor.system.operatorId;
+    if (actor.type === 'vehicle' && actor.system.operator) {
+      const operator = actor.system.operator;
       if (operator) operator.apps[this.id] = this;
     }
     return super._onFirstRender(context, options);
@@ -135,8 +135,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   _onClose(options) {
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.operatorId) {
-      const operator = actor.system.operatorId;
+    if (actor.type === 'vehicle' && actor.system.operator) {
+      const operator = actor.system.operator;
       if (operator) delete operator.apps[this.id];
     }
     super._onClose(options);
@@ -431,7 +431,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
               ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
               return;
             }
-            this.actor.update({ 'system.operatorId': document.id });
+            this.actor.update({ 'system.operator': document.id });
           } else {
             // Check for gunner
             const weapon = this.actor.items.get(target.closest('li.vehicle-weapon-list')?.dataset?.itemId);
@@ -441,7 +441,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
                 ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
                 return;
               }
-              weapon.update({ 'system.gunnerId': document.id });
+              weapon.update({ 'system.gunner': document.id });
             }
           }
           return;
@@ -992,12 +992,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static async #onRemoveOperator(event, button) {
-    this.document.update({ 'system.operatorId': null })
+    this.document.update({ 'system.operator': null })
   }
 
   static async #onRemoveGunner(event, button) {
     const weapon = this.document.items.get(button.closest('.vehicle-weapon-list')?.dataset?.itemId);
-    if (weapon) weapon.update({ 'system.gunnerId': null })
+    if (weapon) weapon.update({ 'system.gunner': null })
   }
 
   async deleteRace() {

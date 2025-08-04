@@ -29,7 +29,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       }),
       description: new fields.HTMLField({ initial: '', textSearch: true }),
       maneuver: new fields.NumberField({ initial: -1, integer: true, nullable: false }),
-      operatorId: new fields.ForeignDocumentField(TorgeternityActor),
+      operator: new fields.ForeignDocumentField(TorgeternityActor),
       passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       price: new fields.SchemaField({
         dollars: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
@@ -56,7 +56,6 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
    * @param {object} data the data object to migrate
    */
   static migrateData(data) {
-    super.migrateData(data);
     if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
       data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
         ? data.details.sizeBonus
@@ -70,6 +69,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     if (data?.wounds && Object.hasOwn(data?.wounds, 'current')) {
       data.wounds.value = data.wounds.current;
     }
+    return super.migrateData(data);
   }
 
   /**
@@ -114,5 +114,12 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       speedPenalty = -6;
     }
     this.topSpeed.penalty = speedPenalty;
+  }
+
+  get operatorSkill() {
+    if (this.operator)
+      return this.operator.system.skills[this.type.toLowerCase() + 'Vehicles'] ?? { value: 0 };
+    else
+      return { value: 0 };
   }
 }
