@@ -3510,7 +3510,7 @@ p.skill-chat-title.skilled {
 
     input[name="system.price"],
     input[name="system.tough"] {
-      width: 4em;
+      width: 4.5em;
     }
 
     select {
