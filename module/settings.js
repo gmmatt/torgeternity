@@ -271,14 +271,4 @@ export function registerTorgSettings() {
     default: 0xce0707  // --color-level-error
   });
 
-  game.settings.register('torgeternity', 'sceneNavOpaque', {
-    name: 'torgeternity.settingMenu.sceneNavOpaque.name',
-    hint: 'torgeternity.settingMenu.sceneNavOpaque.hint',
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true,
-    requiresReload: true,
-  })
-
 }
