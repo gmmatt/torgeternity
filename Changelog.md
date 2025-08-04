@@ -16,6 +16,7 @@
 - #551: Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
 - #563: The **Rule on a Drama Card** can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
 - #567: Item traits appear in the expanded view of gear list on Actor sheets.
+- Having **OBSERVER** ownership of an Actor disables most actions on the Actor Sheet.
 
 ### Bug Fixes
 
@@ -35,7 +36,6 @@
 - Ensure Item Sheet updates automatically when the item's data changes.
 - Replace `render(true)` with `render({ force: true})` (V13 update).
 - Allow **Active Effects** to be dragged between Actors and Items again.
-- Having OBSERVER ownership of an Actor prevents most actions on the Actor Sheet.
 - Vehicle and Threat sheets should scroll better.
 
 ## v13.2.2
