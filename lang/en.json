@@ -905,6 +905,8 @@
       "racialPerks": "Racial perks",
       "range": "Range",
       "darkvision": "Darkvision",
+      "removeGunner": "Remove this gunner from this weapon",
+      "removeOperator": "Remove the operator from the vehicle",
       "return": "Return",
       "roll": "Roll",
       "run": "Run",

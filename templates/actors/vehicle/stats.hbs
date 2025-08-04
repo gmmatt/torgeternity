@@ -71,8 +71,8 @@
         <input name="document.system.operator.name" class="long-text" type="text"
           value="{{document.system.operator.name}}"
           data-dtype="text" readonly />
-        <a class="icon fa-solid fa-ban remove-operator {{disabled (not document.system.operator.name)}}"
-          data-action="removeOperator"></a>
+        <a class="icon fa-solid fa-trash remove-operator {{disabled (not document.system.operator.name)}}"
+          data-action="removeOperator" data-tooltip="{{localize 'torgeternity.sheetLabels.removeOperator'}}"></a>
       </th>
       <th>
         {{localize "torgeternity.sheetLabels.skill"}}
@@ -129,8 +129,8 @@
         <div class="vehicle-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" /></div>
         <div class="name">{{item.name}}</div>
         <div class="gunner">{{item.system.gunner.name}}</div>
-        <a class="icon fa-solid fa-ban remove-gunner {{disabled (not item.system.gunner.name)}}"
-          data-action="removeGunner"></a>
+        <a class="icon fa-solid fa-trash remove-gunner {{disabled (not item.system.gunner.name)}}"
+          data-action="removeGunner" data-tooltip="{{localize 'torgeternity.sheetLabels.removeGunner'}}"></a>
         <div class="skill">{{item.system.gunnerSkill.value}}</div>
         <div class="range">{{item.system.range}}</div>
         <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>

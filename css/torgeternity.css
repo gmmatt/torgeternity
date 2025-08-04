@@ -1378,7 +1378,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
 
     .remove-operator {
-      color: red;
+      color: darkRed;
 
       &.disabled {
         color: transparent;
@@ -1405,7 +1405,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
 
     li.vehicle-weapon-list .remove-gunner {
-      color: red;
+      color: darkRed;
 
       &.disabled {
         color: transparent;
