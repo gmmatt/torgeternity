@@ -18,6 +18,8 @@
 - #563: The **Rule on a Drama Card** can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
 - #567: Item traits appear in the expanded view of gear list on Actor sheets.
 - Having **OBSERVER** ownership of an Actor disables most actions on the Actor Sheet.
+- Allow multiple skills/attributes in a single Check, such as `@Check[willpower,spirit]` which will get expanded to two buttons
+separated by a space - skill and attribute names will be displayed with the localized label.
 
 ### Bug Fixes
 

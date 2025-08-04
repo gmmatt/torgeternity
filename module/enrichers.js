@@ -7,6 +7,15 @@ import { TestDialog } from './test-dialog.js';
 // @Check[thing|dn:difficulty]{label}
 const InlineRulePattern = /@Check\[(.+?)\](?:\{(.+?)\}){0,1}/g;
 
+function guessLabel(check) {
+  if (Object.hasOwn(CONFIG.torgeternity.attributeTypes, check))
+    return game.i18n.localize(CONFIG.torgeternity.attributeTypes[check]);
+  else if (Object.hasOwn(CONFIG.torgeternity.skills, check))
+    return game.i18n.localize(CONFIG.torgeternity.skills[check]);
+  else
+    return check;
+}
+
 /**
  * The enricher to create the link when a page is displayed.
  * @param {*} match 
@@ -16,38 +25,48 @@ const InlineRulePattern = /@Check\[(.+?)\](?:\{(.+?)\}){0,1}/g;
 function InlineRuleEnricher(match, options) {
   const parts = match[1].split('|');
   let label = match[2];
-  const check = parts.shift();
+  const checks = parts.shift();
+  const anchors = [];
 
-  // Decode each of the parameters
-  const dataset = { testType: check };
+  const dataset = {}
   for (const elem of parts) {
     const [key, value] = elem.split("=");
     dataset[key] = value ?? true;
   }
 
-  // Create the base anchor
-  const anchor = foundry.applications.ux.TextEditor.createAnchor({
-    //attrs: null, 
-    dataset,
-    name: label ?? check,
-    classes: ['torg-inline-check'],
-    icon: "fa-solid fa-dice-d20"
-  });
-  // Add we are manually creating a label, place the DN in a separate span
-  if (!label && dataset.dn) {
-    const span = document.createElement('span');
-    span.classList.add('dn');
-    span.append(` (DN ${dataset.dn})`);
-    anchor.append(span);
+  for (const check of checks.split(',')) {
+    // Decode each of the parameters
+    dataset.testType = check;
+
+    // Create the base anchor
+    const anchor = foundry.applications.ux.TextEditor.createAnchor({
+      //attrs: null, 
+      dataset,
+      name: label ?? guessLabel(check),
+      classes: ['torg-inline-check'],
+      icon: "fa-solid fa-dice-d20"
+    });
+    // Add we are manually creating a label, place the DN in a separate span
+    if (!label && dataset.dn) {
+      const span = document.createElement('span');
+      span.classList.add('dn');
+      span.append(` (DN ${dataset.dn})`);
+      anchor.append(span);
+    }
+    // Append a button to copy the link to chat (only when in Journal)
+    if (!parts.includes('fromchat') && game.user.isGM) {
+      const icon = document.createElement("i");
+      icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
+      icon.dataset.original = match[0].replace("]", "|fromchat]");
+      anchor.append(icon);
+    }
+    anchors.push(anchor);
+    if (checks.length > 1) anchors.push(' '); // will become a TEXT element
   }
-  // Append a button to copy the link to chat (only when in Journal)
-  if (!parts.includes('fromchat') && game.user.isGM) {
-    const icon = document.createElement("i");
-    icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match[0].replace("]", "|fromchat]");
-    anchor.append(icon);
-  }
-  return anchor;
+  if (anchors.length === 1) return anchors[0];
+  const globalspan = document.createElement('span');
+  globalspan.append(...anchors);
+  return globalspan;
 }
 
 const interactionAttacks = ['unarmed', 'intimidation', 'maneuver', 'taunt', 'kick'];
