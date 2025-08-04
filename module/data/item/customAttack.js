@@ -1,22 +1,16 @@
-import { BaseItemData } from './baseItemData.js'
+import { BaseWeaponItemData } from './baseweapon.js';
 
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
  */
-export class CustomAttackItemData extends BaseItemData {
+export class CustomAttackItemData extends BaseWeaponItemData {
   /**
    * @inheritdoc
    */
-  static defineSchema() {
+  static defineSchema(subtype = 'customAttack', attackwith = 'unarmedCombat') {
     return {
-      ...super.defineSchema('customAttack'),
-      ap: new fields.NumberField({ initial: 0, integer: true }),
-      attackWith: new fields.StringField({ initial: 'unarmedCombat' }),
-      chatNote: new fields.StringField({ initial: '' }),
-      damage: new fields.NumberField({ initial: 0, integer: true }),
-      damageType: new fields.StringField({ initial: '' }),
-      notes: new fields.StringField({ initial: '' }),
+      ...super.defineSchema(subtype, attackwith),
       transferenceID: new fields.DocumentIdField({ initial: null }), // necessary for saving perks data in race items
     };
   }

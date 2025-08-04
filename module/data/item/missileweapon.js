@@ -1,29 +1,25 @@
-import { GeneralItemData } from './general.js';
+import { BaseWeaponItemData } from './baseweapon.js';
 
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
  */
-export class MissileWeaponItemData extends GeneralItemData {
+export class MissileWeaponItemData extends BaseWeaponItemData {
   /**
    * @returns {object} Schema fragment for a missile weapon
    */
-  static defineSchema() {
+  static defineSchema(subtype = 'missileweapon', attackwith = 'missileWeapons') {
     return {
-      ...super.defineSchema('missileweapon'),
+      ...super.defineSchema(subtype, attackwith),
+      range: new fields.StringField({ initial: '' }),
       ammo: new fields.SchemaField({
         max: new fields.NumberField({ initial: 1, integer: true }),
         value: new fields.NumberField({ initial: 1, integer: true }),
       }),
-      ap: new fields.NumberField({ initial: 0, integer: true }),
-      attackWith: new fields.StringField({ initial: 'missileWeapons' }),
-      chatNote: new fields.StringField({ initial: '' }),
-      damage: new fields.NumberField({ initial: 0, integer: true }),
-      damageType: new fields.StringField({ initial: '' }),
-      equipped: new fields.BooleanField({ initial: false }),
-      minStrength: new fields.StringField({ initial: '' }),
-      notes: new fields.StringField({ initial: '' }),
-      range: new fields.StringField({ initial: '' }),
+      gunner: new fields.SchemaField({
+        name: new fields.StringField({ initial: '' }),
+        skillValue: new fields.StringField({ initial: '' }),
+      }),
     };
   }
 }
