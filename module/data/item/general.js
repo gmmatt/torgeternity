@@ -28,6 +28,20 @@ export class GeneralItemData extends BaseItemData {
    */
   prepareBaseData() {
     super.prepareBaseData();
-    this.value = this.price && !isNaN(this.price) ? getTorgValue(parseInt(this.price)) : null;
+    let price = parseInt(this.price);
+    const last = this.price.slice(-1);
+    if (isNaN(price))
+      this.value = null;
+    else if (!isNaN(last))
+      this.value = getTorgValue(price);
+    else {
+      switch (CONFIG.torgeternity.magnitudeLabels[last]) {
+        case 'thousands': price *= 1000; break;
+        case 'millions': price *= 1000000; break;
+        case 'billions': price *= 1000000000; break;
+        default: this.value = null; break;
+      }
+      if (price) this.value = getTorgValue(price);
+    }
   }
 }

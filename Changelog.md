@@ -41,6 +41,7 @@ separated by a space - skill and attribute names will be displayed with the loca
 - Allow **Active Effects** to be dragged between Actors and Items again.
 - Vehicle and Threat sheets should scroll better.
 - Defeat test greys out the higher stat (of Spirit or Strength), but the button can still be pressed (in case the Actor has an ability that allows them to modify the "lower of" rule)
+- Entering a price for an Item that ends with K/M/B (for English, your localized version if de/fr/es) will calculate the correct torg value cost.
 
 ## v13.2.2
 

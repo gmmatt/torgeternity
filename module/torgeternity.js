@@ -263,6 +263,11 @@ Hooks.once('i18nInit', () => {
     "Tierra Viviente": "livingLand",
     "Zentralerde": "coreEarth",
   }
+
+  // Translate number magnitude strings
+  CONFIG.torgeternity.magnitudeLabels = {};
+  for (const [key, value] of Object.entries(CONFIG.torgeternity.magnitudes))
+    CONFIG.torgeternity.magnitudeLabels[game.i18n.localize(value)] = key;
 })
 
 Hooks.once('setup', async function () {
