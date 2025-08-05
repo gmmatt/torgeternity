@@ -13,7 +13,7 @@ export class GeneralItemData extends BaseItemData {
   static defineSchema(itemType) {
     return {
       ...super.defineSchema(itemType),
-      price: new fields.StringField({ initial: '' }),
+      price: new fields.StringField({ initial: '', nullable: false }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),
       secondaryAxiom: new fields.SchemaField({
@@ -29,7 +29,7 @@ export class GeneralItemData extends BaseItemData {
   prepareBaseData() {
     super.prepareBaseData();
     // Calculate this.value based on this.price
-    let found = this.price.match(/^(\d+)(\D*)$/);
+    let found = this.price?.match(/^(\d+)(\D*)$/);
     if (!found) {
       this.value = null;
     } else {
