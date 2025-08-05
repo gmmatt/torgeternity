@@ -18,18 +18,4 @@ export class VehicleItemData extends GeneralItemData {
       wounds: new fields.NumberField({ initial: 3, integer: true }),
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }

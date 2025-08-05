@@ -30,7 +30,7 @@ export default class TorgCombatant extends Combatant {
     const toDelete = [];
     for (const effect of actor.effects.filter((e) => e.duration.type === 'turns')) {
       if (effect.name === 'ActiveDefense') continue;
-      if (effect.duration.turns == 1 && effect.duration.rounds == 1)
+      if (effect.duration.turns === 1 && effect.duration.rounds === 1)
         toDelete.push(effect.id)
       else
         toUpdate.push({

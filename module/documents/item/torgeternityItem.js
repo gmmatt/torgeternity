@@ -1,6 +1,7 @@
 import { ChatMessageTorg } from '../chat/document.js';
 import { torgeternity } from '../../config.js';
 
+let deferredGunners = new Set();
 /**
  *
  */
@@ -77,6 +78,19 @@ export default class TorgeternityItem extends foundry.documents.Item {
     customAttack: 'melee-weapon-icon.webp',
   };
 
+  static migrateData(source) {
+    // For better support, convert the old damaging abilities into custom attacks with a flat damage modifier.
+    if (source.type === 'specialability-rollable' && source.system?.damage && source.system.attackWith) {
+      source.type = 'customAttack';
+      source.system.damageType = 'flat'
+    }
+    if (typeof source.system.gunner?.name === 'string') {
+      if (source.system.gunner.name)
+        deferredGunners.add({ weaponId: source._id, gunnerName: source.system.gunner.name })
+      delete source.system.gunner;
+    }
+    return super.migrateData(source);
+  }
   /**
    * Getter for a weapon that might have ammo or not (meelee weapons don't have ammo)
    *  @returns true/false
@@ -259,7 +273,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
         : (diceroll === 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
 
     const baseDamage =
-      this.system.damageType == 'strengthPlus'
+      this.system.damageType === 'strengthPlus'
         ? this.actor.system.attributes.strength.value + parseInt(this.system.damage)
         : this.system.damage;
 
@@ -411,3 +425,20 @@ export default class TorgeternityItem extends foundry.documents.Item {
     }
   }
 }
+
+
+Hooks.on('setup', async () => {
+  const updates = deferredGunners;
+  deferredGunners = null;
+  for (const update of updates) {
+    const gunner = game.actors.find(actor => actor.name === update.gunnerName);
+    const vehicle = game.actors.find(actor => actor.type === 'vehicle' && actor.items.get(update.weaponId));
+    const weapon = vehicle?.items.get(update.weaponId);
+    if (gunner && weapon)
+      await weapon.update({ 'system.gunner': gunner.id })
+    else if (!gunner)
+      console.warn(`GUNNER MIGRATION: Failed to find gunner called '${update.name}'`);
+    else // weapon WILL be valid if vehicle is valid
+      console.warn(`GUNNER MIGRATION: Failed to find vehicle with weapon Id '${update.weaponId}'`);
+  }
+})

@@ -1,6 +1,18 @@
 <section class="tab powers {{tabs.powers.cssClass}}" data-group="{{tabs.powers.group}}"
   data-tab="{{tabs.powers.id}}">
 
+  <div class="list-section-heading">
+    <span>{{localize "torgeternity.sheetLabels.spells"}}</span>
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="spell"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.spell' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
+  </div>
   <ol class="item-list">
     {{#each spell as |item id|}}
       <li class="item" data-item-id="{{item._id}}">
@@ -9,15 +21,11 @@
           <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
             ({{localize "torgeternity.sheetLabels.spell"}})</a>
           <div class="item-controls">
-            <a class="item-control item-powerRoll" data-action="itemPowerRoll"
+            <a class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.spellRoll'}}">
               <i class="fas fa-dice-d20"></i>
             </a>
-            <a class="item-control item-bonusRoll" data-action="itemBonusRoll"
-              data-tooltip="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-              <i class="fas fa-dice-d6"></i>
-            </a>
-            <a class="item-control item-tochat" data-action="itemToChat"
+            <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
               <i class="fas fa-comment"></i>
             </a>
@@ -25,7 +33,7 @@
               data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
-            <a class="item-control item-delete" data-action="itemDelete"
+            <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
               <i class="fas fa-trash"></i>
             </a>
@@ -56,6 +64,18 @@
     {{/each}}
   </ol>
 
+  <div class="list-section-heading">
+    <span>{{localize "torgeternity.sheetLabels.miracles"}}</span>
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="miracle"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.miracle' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
+  </div>
   <ol class="item-list">
     {{#each miracle as |item id|}}
       <li class="item" data-item-id="{{item._id}}">
@@ -64,15 +84,11 @@
           <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
             ({{localize "torgeternity.sheetLabels.miracle"}})</a>
           <div class="item-controls">
-            <a class="item-control item-powerRoll" data-action="itemPowerRoll"
+            <a class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.miracleRoll'}}">
               <i class="fas fa-dice-d20"></i>
             </a>
-            <a class="item-control item-bonusRoll" data-action="itemBonusRoll"
-              data-tooltip="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-              <i class="fas fa-dice-d6"></i>
-            </a>
-            <a class="item-control item-tochat" data-action="itemToChat"
+            <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
               <i class="fas fa-comment"></i>
             </a>
@@ -80,7 +96,7 @@
               data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
-            <a class="item-control item-delete" data-action="itemDelete"
+            <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
               <i class="fas fa-trash"></i>
             </a>
@@ -111,6 +127,18 @@
     {{/each}}
   </ol>
 
+  <div class="list-section-heading">
+    <span>{{localize "torgeternity.sheetLabels.psionicPowers"}}</span>
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="psionicpower"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.psionicpower' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
+  </div>
   <ol class="item-list">
     {{#each psionicpower as |item id|}}
       <li class="item" data-item-id="{{item._id}}">
@@ -119,15 +147,11 @@
           <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
             ({{localize "torgeternity.sheetLabels.psionic"}})</a>
           <div class="item-controls">
-            <a class="item-control item-powerRoll" data-action="itemPowerRoll"
+            <a class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.miracleRoll'}}">
               <i class="fas fa-dice-d20"></i>
             </a>
-            <a class="item-control item-bonusRoll" data-action="itemBonusRoll"
-              data-tooltip="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-              <i class="fas fa-dice-d6"></i>
-            </a>
-            <a class="item-control item-tochat" data-action="itemToChat"
+            <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
               <i class="fas fa-comment"></i>
             </a>
@@ -135,7 +159,7 @@
               data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
-            <a class="item-control item-delete" data-action="itemDelete"
+            <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
               <i class="fas fa-trash"></i>
             </a>

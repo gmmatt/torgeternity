@@ -1,3 +1,5 @@
+let deferredDrivers = new Set();
+
 /**
  *
  */
@@ -36,7 +38,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    */
   prepareBaseData() {
     // Here Effects are not yet applied
-    if (this.type != 'vehicle') {
+    if (this.type !== 'vehicle') {
       // initialize the worn armor bonus
       this.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
       this.system.other.maxDex = this.wornArmor?.system?.maxDex ?? 0;
@@ -104,7 +106,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     };
 
     // Skillsets
-    if (this.type != 'vehicle') {
+    if (this.type !== 'vehicle') {
       const skills = this.system.skills;
       const attributes = this.system.attributes;
       // by RAW, FIRST you checkout for maxDex, THEN minStr. Doing this into DerivedData means, it takes place after AE's were applied, making sure, this cannot get higher than armor's limitations.
@@ -121,7 +123,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       // Calculate Move and Run base values
       // Derive Skill values for Storm Knights and Threats
       for (const [name, skill] of Object.entries(skills)) {
-        const trained = skill.unskilledUse === 1 || this._source.system.skills[name].adds;
+        const trained = skill.unskilledUse || this._source.system.skills[name].adds;
         skill.value = trained ? this.system.attributes[skill.baseAttribute].value + skill.adds : '';
       }
 
@@ -286,22 +288,22 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
 
     if (changed.img && !changed.prototypeToken?.texture?.src) {
-      const oldtok = this.prototypeToken.texture.src;
+      const oldimg = this.prototypeToken.texture.src;
       let updateToken;
-      if (changed.img == oldtok || this.img == oldtok) {
+      if (changed.img === oldimg || this.img === oldimg) {
         updateToken = true;
       } else {
         // Check for default image
         switch (this.type) {
           case 'stormknight':
-            updateToken = (oldtok === 'icons/svg/mystery-man.svg');
+            updateToken = (oldimg === 'icons/svg/mystery-man.svg');
             break;
           case 'threat':
             // Threats might have been changed to show a cosm-specific ring.
-            updateToken = oldtok.startsWith('systems/torgeternity/images/characters/threat');
+            updateToken = oldimg.startsWith('systems/torgeternity/images/characters/threat');
             break;
           case 'vehicle':
-            updateToken = (oldtok === 'systems/torgeternity/images/characters/vehicle-land.webp');
+            updateToken = (oldimg === 'systems/torgeternity/images/characters/vehicle-land.webp');
             break;
         }
       }
@@ -554,11 +556,11 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 
     const html = `<p>${game.i18n.format('torgeternity.defeat.prompt', { name: this.name })}
     <div class="skill-roll-menu">
-     <a class="button roll-button roll-defeat ${(attribute === 'strength') && 'disabled'}"
+     <a class="button roll-button roll-defeat ${(attribute === 'strength') && 'notPreferred'}"
      data-action="testDefeat" data-control="spirit" }>
      ${game.i18n.localize('torgeternity.attributes.spirit')}
      </a>
-     <a class="button roll-button roll-defeat ${(attribute === 'spirit') && 'disabled'}" 
+     <a class="button roll-button roll-defeat ${(attribute === 'spirit') && 'notPreferred'}" 
      data-action="testDefeat" data-control="strength" >
      ${game.i18n.localize('torgeternity.attributes.strength')}
      </a>
@@ -714,4 +716,29 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       disabled: false,
     }]);
   }
+
+  static migrateData(source) {
+    if (source.type === 'vehicle' && typeof source.system.operator?.name === 'string') {
+      if (source.system.operator.name)
+        deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
+      delete source.system.operator;
+    }
+    return super.migrateData(source);
+  }
 }
+
+
+Hooks.on('setup', () => {
+  const updates = deferredDrivers;
+  deferredDrivers = null;
+  for (const update of updates) {
+    const driver = game.actors.find(actor => actor.name === update.driverName);
+    const vehicle = game.actors.get(update.vehicleId);
+    if (driver && vehicle)
+      vehicle.update({ 'system.operator': driver.id })
+    else if (!driver)
+      console.warn(`VEHICLE MIGRATION: Failed to find driver called '${update.name}'`);
+    else
+      console.warn(`VEHICLE MIGRATION: Failed to find vehicle with ID '${update.vehicleId}'`);
+  }
+})

@@ -203,7 +203,12 @@
       <p style="flex: 2">{{localize 'torgeternity.dramaCard.approvedActions'}}: {{approvedActions}}</p>
     {{/if}}
     {{#if dsrLine}}
-      <p style="flex: 1">{{localize 'torgeternity.dramaCard.dsrLine'}} {{dsrLine}}</p>
+      <p style="flex: 1">{{localize 'torgeternity.dramaCard.dsrLine'}}: {{dsrLine}}</p>
     {{/if}}
   </div>
+  {{#if dramaRule}}
+    <div class="dramaRule">
+      <p>{{localize 'torgeternity.dramaCard.rule'}}: {{dramaRule}}</p>
+    </div>
+  {{/if}}
 </header>

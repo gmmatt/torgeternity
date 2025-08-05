@@ -42,7 +42,7 @@
 
   <li class="attribut-block">
     <a
-      class="attribut-block apply-fatigue" data-action="applyFatigue"
+      class="attribut-block apply-fatigue" data-action="applyFatigue" {{disabled (not @root.editable)}}
       data-fatigue="{{document.fatigue}}"
       data-tooltip="{{localize 'torgeternity.sheetLabels.fatigueTooltip'}}">
       {{localize 'torgeternity.sheetLabels.fatigue'}}

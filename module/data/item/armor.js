@@ -19,18 +19,4 @@ export class ArmorItemData extends GeneralItemData {
       fatigue: new fields.NumberField({ initial: 0, integer: true }),
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }

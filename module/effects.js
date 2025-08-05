@@ -24,7 +24,7 @@ export async function onManageActiveEffect(event, button, owner) {
       ]);
     case 'edit':
       if (!effect) return;
-      return effect.sheet.render(true);
+      return effect.sheet.render({ force: true });
     case 'delete':
       if (!effect) return;
       return effect.delete();

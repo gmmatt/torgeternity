@@ -17,18 +17,4 @@ export class ShieldItemData extends GeneralItemData {
       notes: new fields.StringField({ initial: '' }),
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }

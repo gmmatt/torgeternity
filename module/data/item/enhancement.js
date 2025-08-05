@@ -1,33 +1,18 @@
-import { newTraitsField } from './general.js';
+import { BaseItemData } from './baseItemData.js';
 
 const fields = foundry.data.fields;
 
 /**
  * @inheritdoc
  */
-export class EnhancementItemData extends foundry.abstract.TypeDataModel {
+export class EnhancementItemData extends BaseItemData {
   /**
    * @returns {object} Schema fragment for an enhancement
    */
   static defineSchema() {
     return {
-      description: new fields.HTMLField({ initial: '' }),
+      ...super.defineSchema('enhancement'),
       perk: new fields.StringField({ initial: '' }),
-      traits: newTraitsField('enhancement'),
     };
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
   }
 }

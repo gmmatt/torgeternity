@@ -1,15 +1,47 @@
 # TORG Eternity Changelog
 
-## Next Release
+## v13.3.0
 
+### New Features
+
+- #435: Vehicles can now have Heavy Weapons, Missile Weapons and Firearms
+  - Drag an Actor onto the Operator or Weapon line of a Vehicle sheet will assign that Actor to that role.
+  - The Actor's current skill be displayed in the Vehicle sheet and used for any vehicle weapon attacks.
+  - Migrate old Operator and Gunner info by searching for an Actor with the corresponding name.
+  - Vehicle weapon attacks use full ability of gunner, such as it being a Favored skill.
+  - Weapons/Operator list shows Favoured/Unskilled skills for each crew member.
 - Scene Navigation returned to Torg styling.
-- Add option to disable fading of Scene Navigation menu.
-- Combat Tracker no longer disappears when a card Hand is deleted (which would occur when an Actor is deleted).
 - Token Ruler grid highlight is coloured according to move/max move of the token (if any).
-- #565: No errors during hover distance.
 - Make the `attackWith` field visible in the Melee Weapon, Missile Weapon and Heavy Weapon Item sheets, so that things like Pain Gauntlet can be built directly as a Melee Weapon rather than a Gear item with a separate customAttack item.
-- Use common code for performing Attack/Power rolls from the Actor sheet and from `rollItemMacro`.
 - Expand list of traits to cover the cosm books, and force all Item types to use the drop-down list.
+- #551: Convert `Rollable Special Ability` to `Custom Attack` if it has an attack-with skill and non-zero damage.
+- #563: The **Rule on a Drama Card** can be entered in the Card Editor, and it will be displayed in the Combat Tracker.
+- #567: Item traits appear in the expanded view of gear list on Actor sheets.
+- Having **OBSERVER** ownership of an Actor disables most actions on the Actor Sheet.
+- Allow multiple skills/attributes in a single Check, such as `@Check[willpower,spirit]` which will get expanded to two buttons
+separated by a space - skill and attribute names will be displayed with the localized label.
+
+### Bug Fixes
+
+- Combat Tracker no longer disappears when a card Hand is deleted (which would occur when an Actor is deleted).
+- #565: No errors during hover distance.
+- Use common code for performing Attack/Power rolls from the Actor sheet and from `rollItemMacro`.
+- When rolling Reality skill from Actor sheet, remove `disconnected` state if the Reconnection is successful.
+- Change background colour of hover distance function to distinguish it from the waypoint display during turns.
+- When Threat window is closed while Notes tab is selected, on reopening the Notes tab will be shown correctly.
+- Reduce flickering of Combat Tracker on "New" round.
+- Create Actor/Item dialogs now have translated Types again.
+- Get **item delete** buttons working in the Threat and Vehicle sheets.
+- Remove 'core' Foundry Card and Card Stack sheets.
+- Add **custom skills** to Threats, allowing them to be edited on the Perks tab.
+- Add ability to directly **create items on Actor sheets**.
+- Discard unsupported Item Traits at startup (console log message for each trait removed).
+- Ensure Item Sheet updates automatically when the item's data changes.
+- Replace `render(true)` with `render({ force: true})` (V13 update).
+- Allow **Active Effects** to be dragged between Actors and Items again.
+- Vehicle and Threat sheets should scroll better.
+- Defeat test greys out the higher stat (of Spirit or Strength), but the button can still be pressed (in case the Actor has an ability that allows them to modify the "lower of" rule)
+- Entering a price for an Item that ends with K/M/B (for English, your localized version if de/fr/es) will calculate the correct torg value cost.
 
 ## v13.2.2
 
@@ -30,23 +62,23 @@
 
 - For GMs, the default Actor type is now "threat" (for players, it remains "stormknight").
 - Rework Check Dialog to make selected options appear clearer.
--- New layout, with actual modifier shown in tooltip rather than permanently on display.
--- Modifiers in chat tooltip are sorted alphabetically
+  - New layout, with actual modifier shown in tooltip rather than permanently on display.
+  - Modifiers in chat tooltip are sorted alphabetically
 - When changing an Actor's portrait, if the old portrait matches the token image then the token image
 is replaced by the new portrait. (For unlinked Actors, this will directly affect the displayed token.)
 - #336: Add a field to add **traits** to Items - at the moment only a predefined list of traits is available.
--- **'painful'** trait will add +1 shock if any damage is caused.
--- **'stagger'** trait will display button to apply Stymied to target if any damage is caused.
--- **'unwieldy'** trait will display button to apply Vulnerable to attacker on a miss.
--- **'trademark'** trait will auto-set the "Trademark Weapon" button in the Test Dialog.
+  - **'painful'** trait will add +1 shock if any damage is caused.
+  - **'stagger'** trait will display button to apply Stymied to target if any damage is caused.
+  - **'unwieldy'** trait will display button to apply Vulnerable to attacker on a miss.
+  - **'trademark'** trait will auto-set the "Trademark Weapon" button in the Test Dialog.
 - #162: Allow cosms to be marked as unused in the Deck Configuration window.
--- Cosm decks marked as not available will not be available in the "Draw Cosm Card" dialog.
+  - Cosm decks marked as not available will not be available in the "Draw Cosm Card" dialog.
 - #296: First iteration of supporting the **Conflict Line of Drama Cards**, providing buttons in the Combat Tracker. Pressing the presented button will put a message into chat about the effect, and in the following cases will perform the appropriate action:
--- **Inspiration** - immediately recovers 2 shock for each actor on that faction's side.
--- **Confused** - disables the Play button in card Hands (until the end of the round).
--- **Fatigued** - when each player ends their turn (or GM presses end-turn-tick on the combatant) the character suffers their fatigue.
--- **Stymied** - all actors on that faction's side are immediately given the Stymied (stacking) effect.
--- **Other Options** - No automation supplied (or not easily possible).
+  - **Inspiration** - immediately recovers 2 shock for each actor on that faction's side.
+  - **Confused** - disables the Play button in card Hands (until the end of the round).
+  - **Fatigued** - when each player ends their turn (or GM presses end-turn-tick on the combatant) the character suffers their fatigue.
+  - **Stymied** - all actors on that faction's side are immediately given the Stymied (stacking) effect.
+  - **Other Options** - No automation supplied (or not easily possible).
 - Drawing a Drama Card will auto-sort the combatants based on the new card and the Standard/Dramatic setting.
 - Drama Deck can be shuffled from the Combat Tracker's context menu (three dots to the right of the Round counter).
 - Combat Context Menu option to recall previous Drama Card.
@@ -77,16 +109,16 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Further optimisations to TestDialog.
 - Adding/Deleting/Changing the race of a stormknight should work properly now.
 - Add **`@Condition[status]`** to apply a new effect to the selected actors (or the player's controlled actor). One or more options can be added to the condition, such as:
--- `@Condition[status|overlay]` will set the status as overlay,
--- `@Condition[status|toggle]` will toggle the current state of that status on the token,
--- `@Condition[status|active=false]` will remove the status if it is on the token.
--- `stymied` and `vulnerable` will promote an existing condition to `veryStymied` or `veryVulnerable`.
+  - `@Condition[status|overlay]` will set the status as overlay,
+  - `@Condition[status|toggle]` will toggle the current state of that status on the token,
+  - `@Condition[status|active=false]` will remove the status if it is on the token.
+  - `stymied` and `vulnerable` will promote an existing condition to `veryStymied` or `veryVulnerable`.
 - Add **`@Buff[stat1=num|stat2=num]`** to buff/debuff attributes and skills:
--- Set `stat` to the name of the attribute of ability (either the key [strength] or the localized string).
--- Set `num` to either a fixed value to replace the actor's current value, or a `+X` or `-X` to modify the existing value.
--- Adding `|duration=x` can set the duration of the effect to x turns/rounds (x = number)
--- Other fields in the ActiveEffect can be overridden such as the following which will set the active effect to have a barrel icon:
---- `@Buff[strength=+2|img=icons/svg/barrel.svg]`
+  - Set `stat` to the name of the attribute of ability (either the key [strength] or the localized string).
+  - Set `num` to either a fixed value to replace the actor's current value, or a `+X` or `-X` to modify the existing value.
+  - Adding `|duration=x` can set the duration of the effect to x turns/rounds (x = number)
+  - Other fields in the ActiveEffect can be overridden such as the following which will set the active effect to have a barrel icon:
+    - `@Buff[strength=+2|img=icons/svg/barrel.svg]`
 
 ### Bug Fixes
 
@@ -121,12 +153,12 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Handle **shock and wounds** in a consistent manner, regardless of the source of the change.
 - Show **Enhancements** on the Perks tab of the SK sheet.
 - New system options (default enabled) to:
--- Automatically set threats/stormknights to **Unconscious (KO)** whenever their shock is exceeded.
--- Automatically set threats/vehicles to **Dead** whenever their wounds are exceeded.
+  - Automatically set threats/stormknights to **Unconscious (KO)** whenever their shock is exceeded.
+  - Automatically set threats/vehicles to **Dead** whenever their wounds are exceeded.
 - Displays a Chat Prompt to **check for Defeat** when a stormknight's max wounds are exceeded.
 - **Inline Checks** can be added to journals, and those checks can also be posted to chat by GMs to provide a clickable links for players.
--- The checks take the form `@Check[persuasion|dn=18]` or `@Check[taunt|dn=standard]{Taunt}` (the `{...}` label is optional), or any other sort of test using a slightly more complex syntax, such as the following which shows all the parameters that are normally passed to TestDialog (the first word is always the testType):
--- `@Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true]`
+  - The checks take the form `@Check[persuasion|dn=18]` or `@Check[taunt|dn=standard]{Taunt}` (the `{...}` label is optional), or any other sort of test using a slightly more complex syntax, such as the following which shows all the parameters that are normally passed to TestDialog (the first word is always the testType):
+  - `@Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true]`
 
 ### Other changes
 - **Active Effects** can be edited on Items which are present on Actors.

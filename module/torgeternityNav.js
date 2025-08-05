@@ -21,10 +21,4 @@ export default class TorgeternityNav extends foundry.applications.ui.SceneNaviga
     context.fixedOpaque = 'fixedOpaque';
     return context;
   }
-
-  async _onFirstRender(context, options) {
-    super._onFirstRender(context, options);
-    if (game.settings.get('torgeternity', 'sceneNavOpaque'))
-      this.element.classList.remove('faded-ui');
-  }
 }

@@ -1,11 +1,16 @@
-<div>
+<div class="scrollable">
   <h3 class="actor-type left-tab"> <span>{{localize "torgeternity.sheetLabels.vehicle"}}</span> </h3>
 
   {{> "templates/generic/tab-navigation.hbs"}}
-  {{> "systems/torgeternity/templates/actors/vehicle/header.hbs"}}
-  {{> "systems/torgeternity/templates/actors/vehicle/stats.hbs"}}
-  {{> "systems/torgeternity/templates/actors/vehicle/gear.hbs"}}
-  {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-  {{> "systems/torgeternity/templates/actors/vehicle/background.hbs"}}
 
+  <div class="vehicle-sheet">
+    {{> "systems/torgeternity/templates/actors/vehicle/header.hbs"}}
+
+    <div class="sheet-body">
+      {{> "systems/torgeternity/templates/actors/vehicle/stats.hbs"}}
+      {{> "systems/torgeternity/templates/actors/vehicle/gear.hbs"}}
+      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+      {{> "systems/torgeternity/templates/actors/vehicle/background.hbs"}}
+    </div>
+  </div>
 </div>

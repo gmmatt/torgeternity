@@ -118,22 +118,26 @@ Hooks.once('init', async function () {
   });
 
   // ---register cards
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardHandConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityPlayerHand, {
     label: 'Torg Eternity Player Hand',
     types: ['hand'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardPileConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityPile, {
     label: 'Torg Eternity Pile',
     types: ['pile'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardDeckConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityDeck, {
     label: 'Torg Eternity Deck',
     types: ['deck'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Card, 'core', torgeternityCardConfig, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Card, 'core', foundry.applications.sheets.CardConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Card, 'torgeternity', torgeternityCardConfig, {
     label: 'Torg Eternity Card Configuration',
     types: ['destiny', 'drama', 'cosm'],
     makeDefault: true,
@@ -193,44 +197,77 @@ Hooks.once('init', async function () {
 });
 
 Hooks.once('i18nInit', () => {
-  // ---localizing entities labels
+  // ---Core Foundry expects typeLabels to be translation keys
   CONFIG.Actor.typeLabels = {
-    stormknight: game.i18n.localize('torgeternity.sheetLabels.stormknight'),
-    threat: game.i18n.localize('torgeternity.sheetLabels.threat'),
-    vehicle: game.i18n.localize('torgeternity.sheetLabels.vehicle'),
+    stormknight: 'TYPES.Actor.stormknight',
+    threat: 'TYPES.Actor.threat',
+    vehicle: 'TYPES.Actor.vehicle',
   };
   CONFIG.Item.typeLabels = {
-    ammunition: game.i18n.localize('torgeternity.itemSheetDescriptions.ammunition'),
-    gear: game.i18n.localize('torgeternity.itemSheetDescriptions.generalGear'),
-    eternityshard: game.i18n.localize('torgeternity.itemSheetDescriptions.eternityshard'),
-    armor: game.i18n.localize('torgeternity.itemSheetDescriptions.armor'),
-    shield: game.i18n.localize('torgeternity.itemSheetDescriptions.shield'),
-    customAttack: game.i18n.localize('torgeternity.itemSheetDescriptions.customAttack'),
-    meleeweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.meleeWeapon'),
-    missileweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.missileWeapon'),
-    firearm: game.i18n.localize('torgeternity.itemSheetDescriptions.firearm'),
-    implant: game.i18n.localize('torgeternity.itemSheetDescriptions.implant'),
-    heavyweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.heavyWeapon'),
-    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicle'),
-    perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
-    enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
-    specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
-    'specialability-rollable': game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
-    spell: game.i18n.localize('torgeternity.itemSheetDescriptions.spell'),
-    miracle: game.i18n.localize('torgeternity.itemSheetDescriptions.miracle'),
-    psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
-    customSkill: game.i18n.localize('torgeternity.itemSheetDescriptions.customSkill'),
-    vehicleAddOn: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicleAddOn'),
-    race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
+    ammunition: 'torgeternity.itemSheetDescriptions.ammunition',
+    gear: 'torgeternity.itemSheetDescriptions.generalGear',
+    eternityshard: 'torgeternity.itemSheetDescriptions.eternityshard',
+    armor: 'torgeternity.itemSheetDescriptions.armor',
+    shield: 'torgeternity.itemSheetDescriptions.shield',
+    customAttack: 'torgeternity.itemSheetDescriptions.customAttack',
+    meleeweapon: 'torgeternity.itemSheetDescriptions.meleeWeapon',
+    missileweapon: 'torgeternity.itemSheetDescriptions.missileWeapon',
+    firearm: 'torgeternity.itemSheetDescriptions.firearm',
+    implant: 'torgeternity.itemSheetDescriptions.implant',
+    heavyweapon: 'torgeternity.itemSheetDescriptions.heavyWeapon',
+    vehicle: 'torgeternity.itemSheetDescriptions.vehicle',
+    perk: 'torgeternity.itemSheetDescriptions.perk',
+    enhancement: 'torgeternity.itemSheetDescriptions.enhancement',
+    specialability: 'torgeternity.itemSheetDescriptions.specialability',
+    'specialability-rollable': 'torgeternity.itemSheetDescriptions.specialabilityRollable',
+    spell: 'torgeternity.itemSheetDescriptions.spell',
+    miracle: 'torgeternity.itemSheetDescriptions.miracle',
+    psionicpower: 'torgeternity.itemSheetDescriptions.psionicpower',
+    customSkill: 'torgeternity.itemSheetDescriptions.customSkill',
+    vehicleAddOn: 'torgeternity.itemSheetDescriptions.vehicleAddOn',
+    race: 'torgeternity.itemSheetDescriptions.race',
   };
 
-  // Mapping of translation to key (for cosm migration)
-  CONFIG.torgeternity.cosmTypeFromLabel = Object.keys(torgeternity.cosmTypes).reduce((acc, key) => {
-    acc[game.i18n.localize(torgeternity.cosmTypes[key])] = key;
-    return acc;
-  }, {});
-  // Explicit foreign key present in data.
-  CONFIG.torgeternity.cosmTypeFromLabel["(Keins)"] = "none";
+  // Hard-coded, so that we are guaranteed to have it available immediately
+  CONFIG.torgeternity.cosmTypeFromLabel = {
+    "(Keins)": "none",
+    "(Ninguno)": "none",
+    "(Non)": "none",
+    "(None)": "none",
+    "(Sans cosm)": "none",
+    "Andere": "other",
+    "Autre": "other",
+    "Aysle": "aysle",
+    "Ciberpapado": "cyberpapacy",
+    "Core Earth": "coreEarth",
+    "Cyberpapacy": "cyberpapacy",
+    "Cyberpapauté": "cyberpapacy",
+    "Cyberpontifikat": "cyberpapacy",
+    "Das Lebende Land": "livingLand",
+    "Empire du Nil": "nileEmpire",
+    "Imperio Nilo": "nileEmpire",
+    "Living Land": "livingLand",
+    "Nil Imperium": "nileEmpire",
+    "Nil-Imperium": "nileEmpire",
+    "Nile Empire": "nileEmpire",
+    "Orrorsh": "orrorsh",
+    "Other": "other",
+    "Otro": "other",
+    "Pan Pacifica": "panPacifica",
+    "Prime Terre": "coreEarth",
+    "Terre-Vivante": "livingLand",
+    "Terre vivante": "livingLand",
+    "Terre Vivante": "livingLand",
+    "Tharkold": "tharkold",
+    "Tierra Base": "coreEarth",
+    "Tierra Viviente": "livingLand",
+    "Zentralerde": "coreEarth",
+  }
+
+  // Translate number magnitude strings
+  CONFIG.torgeternity.magnitudeLabels = {};
+  for (const [key, value] of Object.entries(CONFIG.torgeternity.magnitudes))
+    CONFIG.torgeternity.magnitudeLabels[game.i18n.localize(value)] = key;
 })
 
 Hooks.once('setup', async function () {
@@ -303,7 +340,7 @@ Hooks.on('ready', async function () {
 
   // ----load template for welcome message depending on supported languages
   let lang = game.settings.get('core', 'language');
-  torgeternity.supportedLanguages.indexOf(lang) == -1 ? (lang = 'en') : (lang = lang);
+  if (torgeternity.supportedLanguages.indexOf(lang) === -1) lang = 'en';
 
   torgeternity.welcomeMessage = await foundry.applications.handlebars.renderTemplate(
     `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
@@ -318,7 +355,7 @@ Hooks.on('ready', async function () {
 
   // ------Ask about hiding nonlocal compendium
   if (
-    game.settings.get('torgeternity', 'welcomeMessage') == true &&
+    game.settings.get('torgeternity', 'welcomeMessage') === true &&
     !game.settings.get('torgeternity', 'hideForeignCompendium')
   ) {
     DialogV2.confirm({
@@ -643,7 +680,7 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
       value: attribute,
       isFav: actor.system.attributes[attributeNameKey + 'IsFav'],
       groupName: 'other',
-      unskilledUse: 1,
+      unskilledUse: true,
     };
   }
 
@@ -654,7 +691,7 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
   if (!isAttributeTest) {
     if (actor.type === 'stormknight') {
       skillValue += skill.adds;
-    } else if (actor.type == 'threat') {
+    } else if (actor.type === 'threat') {
       const otherAttribute = actor.system.attributes[skill.baseAttribute];
       skillValue = Math.max(skill.value, otherAttribute.value);
     }
@@ -790,7 +827,7 @@ function showWelcomeMessage() {
     actions: {
       openPack: (event, button) => {
         const packName = button.dataset.packName;
-        if (packName) game.packs.get(packName).render(true);
+        if (packName) game.packs.get(packName).render({ force: true });
       }
     }
   });
@@ -824,7 +861,7 @@ function TorgRadioBoxesNumber(name, choices, options) {
     input.type = "radio";
     input.name = name;
     input.value = key;
-    if (isChecked) input.defaultChecked = (checked == key);
+    if (isChecked) input.defaultChecked = (checked === key);
     if (isNumber) input.dataset.dtype = "Number";
     if (options.hash.tooltip) element.dataset.tooltip = key;
     element.append(input, " ", label);

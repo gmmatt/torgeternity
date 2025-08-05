@@ -565,7 +565,7 @@ const rangedWeaponTraits = {
   'heavyBurst': 'torgeternity.traits.heavyBurst',
   'bulky': 'torgeternity.traits.bulky',
   'reload': 'torgeternity.traits.reload',
-  'blackPowder': 'torgeternity.traits.reload',
+  'blackPowder': 'torgeternity.traits.blackPowder',
   'smallBlast': 'torgeternity.traits.smallBlast',
   'mediumBlast': 'torgeternity.traits.mediumBlast',
   'largeBlast': 'torgeternity.traits.largeBlast',
@@ -591,9 +591,9 @@ torgeternity.allItemTraits = {
 }*/
 
 torgeternity.allItemTraits = {
-  ...Object.entries(defenseTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.defense' }; return acc }, {}),
-  ...Object.entries(meleeWeaponTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.melee' }; return acc }, {}),
-  ...Object.entries(rangedWeaponTraits).reduce((acc, ent) => { console.log(ent, acc); acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.ranged' }; return acc }, {})
+  ...Object.entries(defenseTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.defense' }; return acc }, {}),
+  ...Object.entries(meleeWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.melee' }; return acc }, {}),
+  ...Object.entries(rangedWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.ranged' }; return acc }, {})
 }
 
 

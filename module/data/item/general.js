@@ -1,20 +1,18 @@
-import { torgeternity } from '../../config.js';
 import { getTorgValue } from '../../torgchecks.js';
-import { migrateCosm } from '../shared.js';
+import { BaseItemData } from './baseItemData.js'
 
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
  */
-export class GeneralItemData extends foundry.abstract.TypeDataModel {
+export class GeneralItemData extends BaseItemData {
   /**
    *
    * @returns {object} Schema fragment for an item
    */
   static defineSchema(itemType) {
     return {
-      cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
-      description: new fields.HTMLField({ initial: '' }),
+      ...super.defineSchema(itemType),
       price: new fields.StringField({ initial: '' }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),
@@ -22,16 +20,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
         selected: new fields.StringField({ initial: 'none' }),
         value: new fields.NumberField({ initial: null, integer: true }),
       }),
-      traits: newTraitsField(itemType),
     };
-  }
-
-  /**
-   * @inheritdoc
-   * @param {object} data delivered data from the constructor
-   */
-  static migrateData(data) {
-    data.cosm = migrateCosm(data.cosm);
   }
 
   /**
@@ -39,30 +28,20 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
    */
   prepareBaseData() {
     super.prepareBaseData();
-    this.value = this.price && !isNaN(this.price) ? getTorgValue(parseInt(this.price)) : null;
+    let price = parseInt(this.price);
+    const last = this.price.slice(-1);
+    if (isNaN(price))
+      this.value = null;
+    else if (!isNaN(last))
+      this.value = getTorgValue(price);
+    else {
+      switch (CONFIG.torgeternity.magnitudeLabels[last]) {
+        case 'thousands': price *= 1000; break;
+        case 'millions': price *= 1000000; break;
+        case 'billions': price *= 1000000000; break;
+        default: this.value = null; price = null; break;
+      }
+      if (price) this.value = getTorgValue(price);
+    }
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
-}
-
-
-export function newTraitsField(itemType) {
-  return new fields.SetField(
-    new fields.StringField({
-      blank: false,
-      choices: (itemType && torgeternity.specificItemTraits[itemType]) ?? CONFIG.torgeternity.allItemTraits,
-      textSearch: true,
-      trim: true,
-    }),
-    {
-      nullable: false,
-      required: true,
-      label: 'torgeternity.fieldLabels.itemTraits.label',
-      hint: 'torgeternity.fieldLabels.itemTraits.hint',
-    });
 }

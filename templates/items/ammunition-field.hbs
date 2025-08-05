@@ -5,9 +5,11 @@
       {{#each ammunition as |ammo|}}
         <li>
           <p>{{ammo.name}}</p>
-          <a data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}" data-item-id="{{ammo.id}}"><i
-              class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i></a>
-          <a data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}"><i class="fa-solid fa-trash"></i></a>
+          <a data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}" data-item-id="{{ammo.id}}"
+            {{disabled (not @root.editable)}}>
+            <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i></a>
+          <a data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}" {{disabled (not @root.editable)}}>
+            <i class="fa-solid fa-trash"></i></a>
         </li>
       {{/each}}
     </ul>

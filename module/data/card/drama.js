@@ -26,7 +26,7 @@ export class DramaCardData extends foundry.abstract.TypeDataModel {
       heroesFirstDramatic: new fields.BooleanField({ initial: true, label: 'torgeternity.dramaCard.heroesFirst' }),
       heroesFirstStandard: new fields.BooleanField({ initial: true, label: 'torgeternity.dramaCard.heroesFirst' }),
       number: new fields.NumberField({ initial: 1, integer: true }),
-      rule: new fields.StringField({ initial: '' }),
+      rule: new fields.StringField({ initial: '', label: 'torgeternity.dramaCard.rule' }),
       villainsConditionsDramatic: DramaCardData.conditionField('villainsCondition'),
       villainsConditionsStandard: DramaCardData.conditionField('villainsCondition'),
     };

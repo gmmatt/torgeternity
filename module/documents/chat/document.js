@@ -7,8 +7,8 @@ import { torgeternity } from '../../config.js';
 class ChatMessageTorg extends ChatMessage {
   template = '';
 
-  async renderHTML() {
-    const html = await super.renderHTML();
+  async renderHTML(options) {
+    const html = await super.renderHTML(options);
     if (this.flags?.torgeternity?.template && (this.flags?.data || this.flags?.torgeternity?.test)) {
       const template = this.flags.torgeternity.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;

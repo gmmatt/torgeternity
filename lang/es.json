@@ -368,7 +368,8 @@
       "heroesFirst": "Heroes First?",
       "heroesCondition": "H:",
       "villainsCondition": "V:",
-      "dsrLine": "DSR:",
+      "dsrLine": "DSR",
+      "rule": "Rule",
       "approvedActions": "Actions",
       "standard": "Standard",
       "dramatic": "Dramatic",
@@ -433,7 +434,6 @@
     },
     "iconeTitles": {
       "attackRoll": "Tirar Ataque",
-      "bonusRoll": "Tirar Bonus",
       "delete": "Borrar",
       "edit": "Editar",
       "miracleRoll": "Tirar Milagro",

@@ -381,7 +381,8 @@
       "heroesFirst": "Heroes First?",
       "heroesCondition": "H:",
       "villainsCondition": "V:",
-      "dsrLine": "DSR:",
+      "dsrLine": "DSR",
+      "rule": "Rule",
       "approvedActions": "Actions",
       "standard": "Standard",
       "dramatic": "Dramatic",
@@ -452,7 +453,6 @@
     },
     "iconeTitles": {
       "attackRoll": "Attack Roll",
-      "bonusRoll": "Bonus Roll",
       "delete": "Delete",
       "edit": "Edit",
       "miracleRoll": "Miracle Roll",
@@ -749,10 +749,6 @@
       "autoWound": {
         "name": "Automatically Apply Wounds",
         "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
-      },
-      "sceneNavOpaque": {
-        "name": "Disable Faded Scene Nav",
-        "hint": "Disables core Foundry's fading of the Scene Navigation menu"
       }
     },
     "sheetLabels": {
@@ -804,6 +800,9 @@
       "cosm": "Cosm",
       "coverBonus": "Cover Bonus",
       "coverBonusTooltip": "Bonus added to target toughness as a result of cover",
+      "crewUnskilledOperator": "The operator of this vehicle is unskilled!",
+      "crewUnskilledWeapon": "This weapon is being used unskilled!",
+      "crewFavored": "This weapon has a favored gunner",
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Custom Skills",
       "customAttacks": "Custom Attacks",
@@ -909,6 +908,8 @@
       "racialPerks": "Racial perks",
       "range": "Range",
       "darkvision": "Darkvision",
+      "removeGunner": "Remove this gunner from this weapon",
+      "removeOperator": "Remove the operator from the vehicle",
       "return": "Return",
       "roll": "Roll",
       "run": "Run",
@@ -1163,7 +1164,7 @@
       "step": "Step"
     },
     "traits": {
-      "black powder": "Black Powder",
+      "blackPowder": "Black Powder",
       "bulky": "Bulky",
       "carbine": "Carbine",
       "dazing": "Dazing",

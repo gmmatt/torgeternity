@@ -38,46 +38,46 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         value: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       }),
       skills: new fields.SchemaField({
-        airVehicles: new fields.SchemaField(makeSkillFields(false, 'dexterity', 'other')),
-        alteration: new fields.SchemaField(makeSkillFields(false, 'mind', 'other')),
-        apportation: new fields.SchemaField(makeSkillFields(false, 'spirit', 'other')),
-        beastRiding: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'other')),
-        computers: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        conjuration: new fields.SchemaField(makeSkillFields(false, 'spirit', 'other')),
-        divination: new fields.SchemaField(makeSkillFields(false, 'mind', 'other')),
-        dodge: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'other')),
-        energyWeapons: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'combat')),
-        evidenceAnalysis: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        faith: new fields.SchemaField(makeSkillFields(true, 'spirit', 'other')),
-        find: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        fireCombat: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'combat')),
-        firstAid: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        heavyWeapons: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'combat')),
-        intimidation: new fields.SchemaField(makeSkillFields(true, 'spirit', 'interaction')),
-        kinesis: new fields.SchemaField(makeSkillFields(false, 'spirit', 'other')),
-        landVehicles: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'other')),
-        language: new fields.SchemaField(makeSkillFields(false, 'mind', 'other')),
-        lockpicking: new fields.SchemaField(makeSkillFields(false, 'dexterity', 'other')),
-        maneuver: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'interaction')),
-        medicine: new fields.SchemaField(makeSkillFields(false, 'mind', 'other')),
-        meleeWeapons: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'combat')),
-        missileWeapons: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'combat')),
-        persuasion: new fields.SchemaField(makeSkillFields(true, 'charisma', 'other')),
-        precognition: new fields.SchemaField(makeSkillFields(false, 'mind', 'other')),
-        profession: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        reality: new fields.SchemaField(makeSkillFields(false, 'spirit', 'other')),
-        scholar: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        science: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        stealth: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'other')),
-        streetwise: new fields.SchemaField(makeSkillFields(true, 'charisma', 'other')),
-        survival: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        taunt: new fields.SchemaField(makeSkillFields(true, 'charisma', 'interaction')),
-        telepathy: new fields.SchemaField(makeSkillFields(false, 'charisma', 'other')),
-        tracking: new fields.SchemaField(makeSkillFields(true, 'mind', 'other')),
-        trick: new fields.SchemaField(makeSkillFields(true, 'mind', 'interaction')),
-        unarmedCombat: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'combat')),
-        waterVehicles: new fields.SchemaField(makeSkillFields(true, 'dexterity', 'other')),
-        willpower: new fields.SchemaField(makeSkillFields(true, 'spirit', 'other')),
+        airVehicles: makeSkillFields(false, 'dexterity', 'other'),
+        alteration: makeSkillFields(false, 'mind', 'other'),
+        apportation: makeSkillFields(false, 'spirit', 'other'),
+        beastRiding: makeSkillFields(true, 'dexterity', 'other'),
+        computers: makeSkillFields(true, 'mind', 'other'),
+        conjuration: makeSkillFields(false, 'spirit', 'other'),
+        divination: makeSkillFields(false, 'mind', 'other'),
+        dodge: makeSkillFields(true, 'dexterity', 'other'),
+        energyWeapons: makeSkillFields(true, 'dexterity', 'combat'),
+        evidenceAnalysis: makeSkillFields(true, 'mind', 'other'),
+        faith: makeSkillFields(true, 'spirit', 'other'),
+        find: makeSkillFields(true, 'mind', 'other'),
+        fireCombat: makeSkillFields(true, 'dexterity', 'combat'),
+        firstAid: makeSkillFields(true, 'mind', 'other'),
+        heavyWeapons: makeSkillFields(true, 'dexterity', 'combat'),
+        intimidation: makeSkillFields(true, 'spirit', 'interaction'),
+        kinesis: makeSkillFields(false, 'spirit', 'other'),
+        landVehicles: makeSkillFields(true, 'dexterity', 'other'),
+        language: makeSkillFields(false, 'mind', 'other'),
+        lockpicking: makeSkillFields(false, 'dexterity', 'other'),
+        maneuver: makeSkillFields(true, 'dexterity', 'interaction'),
+        medicine: makeSkillFields(false, 'mind', 'other'),
+        meleeWeapons: makeSkillFields(true, 'dexterity', 'combat'),
+        missileWeapons: makeSkillFields(true, 'dexterity', 'combat'),
+        persuasion: makeSkillFields(true, 'charisma', 'other'),
+        precognition: makeSkillFields(false, 'mind', 'other'),
+        profession: makeSkillFields(true, 'mind', 'other'),
+        reality: makeSkillFields(false, 'spirit', 'other'),
+        scholar: makeSkillFields(true, 'mind', 'other'),
+        science: makeSkillFields(true, 'mind', 'other'),
+        stealth: makeSkillFields(true, 'dexterity', 'other'),
+        streetwise: makeSkillFields(true, 'charisma', 'other'),
+        survival: makeSkillFields(true, 'mind', 'other'),
+        taunt: makeSkillFields(true, 'charisma', 'interaction'),
+        telepathy: makeSkillFields(false, 'charisma', 'other'),
+        tracking: makeSkillFields(true, 'mind', 'other'),
+        trick: makeSkillFields(true, 'mind', 'interaction'),
+        unarmedCombat: makeSkillFields(true, 'dexterity', 'combat'),
+        waterVehicles: makeSkillFields(true, 'dexterity', 'other'),
+        willpower: makeSkillFields(true, 'spirit', 'other'),
       }),
       wounds: new fields.SchemaField({
         max: new fields.NumberField({ initial: 3, integer: true }),
@@ -106,8 +106,11 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         skillAdd = isNaN(skillAdd) ? 0 : skillAdd;
         skill.adds = skillAdd;
       }
+      if (Object.hasOwn(skill, 'unskilledUse') && typeof skill.unskilledUse === 'number') {
+        skill.unskilledUse = (skill.unskilledUse === 1);
+      }
     }
-    return data;
+    return super.migrateData(data);
   }
 
   /**
@@ -132,7 +135,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
     this.other.run = this.attributes.dexterity.value * 3;
     // Derive Skill values for Storm Knights and Threats
     for (const [name, skill] of Object.entries(this.skills)) {
-      const trained = skill.unskilledUse === 1 || this._source.skills[name].adds;
+      const trained = skill.unskilledUse || this._source.skills[name].adds;
       skill.value = trained ? this.attributes[skill.baseAttribute].value + skill.adds : '';
     }
   }

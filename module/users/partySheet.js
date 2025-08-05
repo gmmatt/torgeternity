@@ -57,7 +57,7 @@ export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2
     const itemId = button.dataset.itemid;
     const actorId = button.dataset.actorid;
     const item = game.actors.get(actorId).items.get(itemId);
-    item.sheet.render(true);
+    item.sheet.render({ force: true });
   }
   /**
    * 
@@ -66,7 +66,7 @@ export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2
    */
   static #onClickActor(event, button) {
     const actorId = button.dataset.actorid;
-    game.actors.get(actorId).sheet.render(true);
+    game.actors.get(actorId).sheet.render({ force: true });
   }
   /**
    * Prompt for whether ALL or only ACTIVE users are to be shown.
@@ -85,7 +85,7 @@ export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2
           label: "torgeternity.partySheet.allPlayers",
           callback: () => {
             const dialog = new PartySheet({ activeActors: false });
-            dialog.render(true);
+            dialog.render({ force: true });
           }
         },
         {
@@ -94,7 +94,7 @@ export default class PartySheet extends HandlebarsApplicationMixin(ApplicationV2
           disabled: game.users.filter(user => user.active && !user.isGM).length === 0,
           callback: () => {
             const dialog = new PartySheet({ activeActors: true });
-            dialog.render(true);
+            dialog.render({ force: true });
           }
         }
       ]
