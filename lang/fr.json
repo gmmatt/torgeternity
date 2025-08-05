@@ -476,7 +476,7 @@
       "vehicleAddOn": "Accessoire de véhicule"
     },
     "magnitudes": {
-      "billions": "B",
+      "billions": "G",
       "millions": "M",
       "ones": "-",
       "thousands": "K"
