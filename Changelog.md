@@ -1,5 +1,11 @@
 # TORG Eternity Changelog
 
+## v13.3.1
+
+- Items can be created once again.
+- "Convert to Rollable" button is working once again, and repositioned in the sheet.
+- Suffix for price field now localized (K/M/Md for German, K/M/G for French)
+
 ## v13.3.0
 
 ### New Features

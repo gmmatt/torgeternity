@@ -264,10 +264,10 @@ Hooks.once('i18nInit', () => {
     "Zentralerde": "coreEarth",
   }
 
-  // Translate number magnitude strings
+  // Translate number magnitude strings (fast lookup for GeneralItemData.prepareBaseData)
   CONFIG.torgeternity.magnitudeLabels = {};
   for (const [key, value] of Object.entries(CONFIG.torgeternity.magnitudes))
-    CONFIG.torgeternity.magnitudeLabels[game.i18n.localize(value)] = key;
+    CONFIG.torgeternity.magnitudeLabels[key] = game.i18n.localize(value);
 })
 
 Hooks.once('setup', async function () {
