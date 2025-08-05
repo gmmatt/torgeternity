@@ -84,7 +84,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
       source.type = 'customAttack';
       source.system.damageType = 'flat'
     }
-    if (typeof source.system.gunner?.name === 'string') {
+    if (typeof source.system?.gunner?.name === 'string') {
       if (source.system.gunner.name)
         deferredGunners.add({ weaponId: source._id, gunnerName: source.system.gunner.name })
       delete source.system.gunner;
