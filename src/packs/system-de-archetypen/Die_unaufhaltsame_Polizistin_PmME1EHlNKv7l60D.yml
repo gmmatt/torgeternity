@@ -53,14 +53,14 @@ items:
         Schlägerkopf oder sind zusammenklappbar.</p>
       price: '120'
       techlevel: 21
-      value: 11
+      value: 10
       ap: 0
       attackWith: meleeWeapons
       bonus: 2
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Kann für Ringen eingesetzt werden.
       secondaryAxiom:
         selected: none
@@ -72,11 +72,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694861621122
-      modifiedTime: 1722167322258
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598882358
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NnKJxu8DDBFJftYn
       duplicateSource: null
       exportSource: null
@@ -108,7 +108,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Pistole
       range: 10/25/40
       secondaryAxiom:
@@ -120,11 +120,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694861633799
-      modifiedTime: 1722167238389
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598878542
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
       exportSource: null
@@ -517,17 +517,20 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
+        - fatigues
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366229
-      modifiedTime: 1722167228717
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598891352
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wT9t85wtxun9qe9w
       duplicateSource: null
       exportSource: null

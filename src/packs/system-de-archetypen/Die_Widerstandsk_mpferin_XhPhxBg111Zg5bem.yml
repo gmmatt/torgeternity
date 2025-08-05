@@ -148,17 +148,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - shortBurst
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694863291067
-      modifiedTime: 1722167592933
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598957809
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.d8gh3MANb1ueXyVW
       duplicateSource: null
       exportSource: null
@@ -645,17 +647,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366153
-      modifiedTime: 1722167585925
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598945547
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NS8rwrLbP6hgW4VF
       duplicateSource: null
       exportSource: null

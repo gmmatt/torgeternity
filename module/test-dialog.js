@@ -128,7 +128,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         this.test[key] = Number(this.test[key]);
 
     // Immediately display the dialog
-    this.render(true);
+    this.render({ force: true });
   }
 
   /**
@@ -227,9 +227,9 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     foundry.utils.mergeObject(this.test, fields, { inplace: true });
 
     this.test.explicitBonus = fields.bonus !== null;
-    this.test.isOther1 = fields.other1Modifier != 0;
-    this.test.isOther2 = fields.other2Modifier != 0;
-    this.test.isOther3 = fields.other3Modifier != 0;
+    this.test.isOther1 = !!fields.other1Modifier;
+    this.test.isOther2 = !!fields.other2Modifier;
+    this.test.isOther3 = !!fields.other3Modifier;
 
     if (this.mode === 'update') {
 

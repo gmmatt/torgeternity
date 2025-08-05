@@ -168,10 +168,10 @@ export async function renderSkillChat(test) {
     }
 
     if (test.stymiedModifier < 0) {
-      if (test.stymiedModifier == -2) {
+      if (test.stymiedModifier === -2) {
         modifiers.push(modifierString('torgeternity.chatText.check.modifier.stymied', -2));
         test.modifiers += -2;
-      } else if (test.stymiedModifier == -4) {
+      } else if (test.stymiedModifier === -4) {
         modifiers.push(modifierString('torgeternity.chatText.check.modifier.veryStymied', -4));
         test.modifiers += -4;
       }
@@ -490,7 +490,7 @@ export async function renderSkillChat(test) {
     }
 
     // Remind Player to Check for Disconnect?
-    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal != undefined) ? '' : 'hidden';
+    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal !== undefined) ? '' : 'hidden';
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
     if (
@@ -680,8 +680,8 @@ export async function soakDamages(soaker) {
  */
 export function getTorgValue(myNumber) {
   if (myNumber <= 1) return 0;
-  if (myNumber == 2) return 1;
-  if (myNumber == 3) return 2;
+  if (myNumber === 2) return 1;
+  if (myNumber === 3) return 2;
   if (myNumber < 6) return 3;
   if (myNumber < 10) return 4;
   if (myNumber < 15) return 5;
@@ -742,7 +742,7 @@ export function getTorgValue(myNumber) {
 }
 
 function validValue(value, other) {
-  return (value && value != '-') ? value : other;
+  return (value && value !== '-') ? value : other;
 }
 
 function individualDN(test, target) {
@@ -841,4 +841,146 @@ async function highestDN(test) {
     highest = Math.max(highest, individualDN(test, target));
   }
   return highest;
+}
+
+
+export async function rollAttack(actor, item) {
+  const weaponData = item.system;
+  const attackWith = weaponData.attackWith;
+  let skillValue;
+  let skillData;
+  let attributes;
+
+  if (item?.weaponWithAmmo && !item.hasAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
+    ui.notifications.warn(game.i18n.localize('torgeternity.chatText.noAmmo'));
+    return;
+  }
+
+  if (actor.type === 'vehicle') {
+    const gunner = item.system.gunner;
+    skillData = gunner?.system.skills[attackWith] ?? null;
+    skillValue = skillData?.value ?? '-';
+    attributes = gunner?.system.attributes ?? 0;
+  } else {
+    skillData = actor.system.skills[attackWith];
+    skillValue = skillData.value;
+    attributes = actor.system.attributes;
+    if (isNaN(skillValue)) {
+      skillValue = skillData.unskilledUse ? attributes[skillData.baseAttribute].value : '-';
+    }
+  }
+
+  if (checkUnskilled(skillValue, attackWith, actor)) return;
+
+  let dnDescriptor = 'standard';
+
+  if (game.user.targets.size) {
+    const firstTarget = game.user.targets.find(token => token.actor.type !== 'vehicle')?.actor ||
+      game.user.targets.first().actor;
+
+    if (firstTarget.type === 'vehicle') {
+      dnDescriptor = 'targetVehicleDefense';
+    } else {
+      switch (attackWith) {
+        case 'meleeWeapons':
+        case 'unarmedCombat':
+          dnDescriptor = firstTarget.items
+            .filter((it) => it.type === 'meleeweapon' && it.system.equipped).length === 0
+            ? 'targetUnarmedCombat'
+            : 'targetMeleeWeapons';
+          break;
+        case 'fireCombat':
+        case 'energyWeapons':
+        case 'heavyWeapons':
+        case 'missileWeapons':
+          dnDescriptor = 'targetDodge';
+          break;
+        default:
+          dnDescriptor = 'targetMeleeWeapons';
+      }
+    }
+  }
+
+  // Calculate damage caused by this weapon
+  let adjustedDamage = 0;
+  const weaponDamage = weaponData.damage;
+  switch (weaponData.damageType) {
+    case 'flat':
+      adjustedDamage = weaponDamage;
+      break;
+    case 'strengthPlus':
+      adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
+      break;
+    case 'charismaPlus':
+      adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
+      break;
+    case 'dexterityPlus':
+      adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
+      break;
+    case 'mindPlus':
+      adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
+      break;
+    case 'spiritPlus':
+      adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
+      break;
+    default:
+      adjustedDamage = parseInt(weaponDamage);
+  }
+
+  return TestDialog.wait({
+    testType: 'attack',
+    actor: actor,
+    amountBD: 0,
+    isAttack: true,
+    isFav: skillData?.isFav || false,
+    skillName: attackWith,
+    skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute]?.value || 0),
+    unskilledUse: true,
+    damage: adjustedDamage,
+    weaponAP: weaponData.ap,
+    applyArmor: true,
+    DNDescriptor: dnDescriptor,
+    type: 'attack',
+    applySize: true,
+    attackOptions: true,
+    chatNote: weaponData.chatNote,
+    bdDamageLabelStyle: 'hidden',
+    bdDamageSum: 0,
+    itemId: item.id,
+  }, { useTargets: true });
+}
+
+
+export async function rollPower(actor, item) {
+  const powerData = item.system;
+  const skillName = powerData.skill;
+  const skillData = actor.system.skills[skillName];
+
+  // Set modifier for this power
+  const powerModifier = item.system.modifier || 0;
+
+  if (checkUnskilled(skillData.value, skillName, actor)) return;
+
+  return TestDialog.wait({
+    testType: 'power',
+    actor: actor,
+    powerName: item.name,
+    powerModifier: powerModifier,
+    isAttack: powerData.isAttack,
+    isFav: skillData.isFav,
+    skillName: skillName,
+    skillAdds: skillData.adds,
+    skillValue: Math.max(skillData.value, actor.system.attributes[skillData.baseAttribute].value),
+    unskilledUse: false,
+    damage: powerData.damage,
+    weaponAP: powerData.ap,
+    applyArmor: powerData.applyArmor,
+    DNDescriptor: powerData.dn,
+    applySize: powerData.applySize,
+    attackOptions: true,
+    bdDamageLabelStyle: 'dihiddene',
+    amountBD: 0,
+    bdDamageSum: 0,
+    itemId: item.id,
+  }, { useTargets: true });
 }

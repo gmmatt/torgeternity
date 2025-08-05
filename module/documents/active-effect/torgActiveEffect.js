@@ -8,7 +8,6 @@ export default class TorgActiveEffect extends ActiveEffect {
    * @returns {object} the migrated data object
    */
   static migrateData(data) {
-    super.migrateData(data);
     if (Object.hasOwn(data, 'changes')) {
       const migrationDictionary = {
         // SK and Threat attribute modifiers
@@ -55,7 +54,7 @@ export default class TorgActiveEffect extends ActiveEffect {
         }
       }
     }
-    return data;
+    return super.migrateData(data);
   }
 
   /**

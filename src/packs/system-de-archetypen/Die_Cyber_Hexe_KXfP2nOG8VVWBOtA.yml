@@ -59,7 +59,7 @@ items:
       core: {}
     _id: KiKe4Jru8egaH7t1
     system:
-      cosm: cyberpapacy
+      cosm: none
       description: >-
         <p>Die gebräuchlichste Seitenwaffe der Kirchenpolizei ist eine
         hochkalibrige und sehr laute Feuerwaffe. Wie bei anderen GWI-Waffen ist
@@ -79,7 +79,7 @@ items:
       chatNote: ''
       damage: 15
       damageType: ''
-      equipped: false
+      equipped: true
       notes: ''
       range: 10/25/40
       secondaryAxiom:
@@ -91,11 +91,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694865974402
-      modifiedTime: 1722164227136
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598689671
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UmGmfErD1dmV7GuL
       duplicateSource: null
       exportSource: null

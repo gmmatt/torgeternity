@@ -5,6 +5,7 @@ import deckSettingMenu from './cards/cardSettingMenu.js';
  */
 export function registerTorgSettings() {
   // --------welcome message
+  const fields = foundry.data.fields;
 
   game.settings.register('torgeternity', 'welcomeMessage', {
     // game.setting.register("NameOfTheModule", "VariableName",
@@ -241,6 +242,33 @@ export function registerTorgSettings() {
     config: true,
     type: Boolean,
     default: true
+  });
+
+  game.settings.register('torgeternity', 'rulerGridWalk', {
+    name: 'torgeternity.settingMenu.rulerGridWalk.name',
+    hint: 'torgeternity.settingMenu.rulerGridWalk.hint',
+    scope: 'world',
+    config: true,
+    type: new fields.ColorField(),
+    default: 0x26b231  // --color-level-success
+  });
+
+  game.settings.register('torgeternity', 'rulerGridRun', {
+    name: 'torgeternity.settingMenu.rulerGridRun.name',
+    hint: 'torgeternity.settingMenu.rulerGridRun.hint',
+    scope: 'world',
+    config: true,
+    type: new fields.ColorField(),
+    default: 0x59a1f6  // --color-level-info
+  });
+
+  game.settings.register('torgeternity', 'rulerGridMax', {
+    name: 'torgeternity.settingMenu.rulerGridMax.name',
+    hint: 'torgeternity.settingMenu.rulerGridMax.hint',
+    scope: 'world',
+    config: true,
+    type: new fields.ColorField(),
+    default: 0xce0707  // --color-level-error
   });
 
 }

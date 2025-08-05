@@ -13,7 +13,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: aysle
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Erschüttern}</p>
 
@@ -33,23 +33,27 @@ items:
       chatNote: ''
       damage: 4
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Erschüttern, Zweihändig, Unhandlich
       secondaryAxiom:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - stagger
+        - twoHanded
+        - unwieldy
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694866227322
-      modifiedTime: 1722164730292
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598744308
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6BdTFBJxHYmRe9Zd
       duplicateSource: null
       exportSource: null
@@ -64,7 +68,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: aysle
+      cosm: none
       description: >-
         <p>Automatisch ausrüsten bei Wahl der Drachenodem-Waffe im Vorzug
         @UUID[Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.nmQAeA0glsafwmCM]{Drachenkrieger}.</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Flächenangriffe}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#feuerschaden]{Feuerschaden}</p>
@@ -79,24 +83,26 @@ items:
       chatNote: Kleiner Explosionsradius, Feuerschaden
       damage: 16
       damageType: flat
-      equipped: false
+      equipped: true
       minStrength: ''
       notes: ''
       range: 10m
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - smallBlast
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694866234201
-      modifiedTime: 1722164809219
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598726089
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ofRqgHBidUIMKc4g
       duplicateSource: null
       exportSource: null
@@ -228,7 +234,7 @@ items:
         wählt.</p>
       price: ''
       techlevel: 14
-      value: 0
+      value: null
       bonus: 4
       equipped: true
       maxDex: 8
@@ -238,16 +244,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
+        - fullBody
     ownership:
       ZuS1Anc9ORZov40T: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366100
-      modifiedTime: 1722164796708
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598711842
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
       duplicateSource: null
       exportSource: null

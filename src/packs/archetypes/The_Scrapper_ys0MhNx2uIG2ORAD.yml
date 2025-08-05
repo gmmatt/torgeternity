@@ -227,34 +227,37 @@ items:
     flags:
       core: {}
     system:
-      cosm: tharkold
+      cosm: none
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p><p>The heavy head contains a pneumatic mechanism that adds a burst of thrust to the swing and drives a spike forward at the point of impact to greatly increase the force directed at the impact point—if a wielder is strong enough to get the hammer moving in the first place.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       price: '300'
       techlevel: 25
-      value: 13
+      value: 12
       ap: 0
       attackWith: meleeWeapons
       bonus: 2
       chatNote: ''
       damage: 4
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Stagger, Two Handed
       secondaryAxiom:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - stagger
+        - twoHanded
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693914415715
-      modifiedTime: 1722158182874
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599423868
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
       duplicateSource: null
       exportSource: null
@@ -269,7 +272,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: tharkold
+      cosm: none
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#blas:]{Blast}</p>\n<p>A weighted net fits into a tube launcher powered by a tightly wound torsion spring. A mechanical engine is needed to wind the spring or recover the net after it’s been launched. The net acts just like a Grappling attempt (page 123), with a hit dealing −2 damage. A Good hit restrains the target temporarily and does full damage. An Outstanding hit restrains and Stymies the target. Technodemons often employ a special version of this weapon that deploys a net with the same properties as a pain gauntlet.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '100'
       techlevel: 25
@@ -282,24 +285,26 @@ items:
       chatNote: ''
       damage: 5
       damageType: flat
-      equipped: false
+      equipped: true
       minStrength: ''
       notes: Small Blast
       range: 5 / 10 / 15
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - smallBlast
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693914426740
-      modifiedTime: 1722158221388
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599415707
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
       duplicateSource: null
       exportSource: null
@@ -575,17 +580,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146924
-      modifiedTime: 1722158231404
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599403950
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
       duplicateSource: null
       exportSource: null

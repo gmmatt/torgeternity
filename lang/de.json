@@ -372,7 +372,8 @@
       "heroesFirst": "Heroes First?",
       "heroesCondition": "H:",
       "villainsCondition": "V:",
-      "dsrLine": "DSR:",
+      "dsrLine": "DSR",
+      "rule": "Rule",
       "approvedActions": "Actions",
       "standard": "Standard",
       "dramatic": "Dramatic",
@@ -437,7 +438,6 @@
     },
     "iconeTitles": {
       "attackRoll": "Angriffswurf",
-      "bonusRoll": "Bonuswürfel",
       "delete": "Löschen",
       "edit": "bearbeiten",
       "miracleRoll": "Wunder-wurf",

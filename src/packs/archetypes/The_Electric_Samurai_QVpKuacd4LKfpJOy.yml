@@ -212,17 +212,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - shortBurst
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693909870243
-      modifiedTime: 1722155971096
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599119019
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
       duplicateSource: null
       exportSource: null
@@ -427,17 +429,20 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
+        - fullBody
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722156064288
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599128118
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1
       duplicateSource: null
       exportSource: null

@@ -29,6 +29,10 @@
         name="system.value"
         type="number"
         value="{{item.system.value}}" />
+      <p class="item-data-label">{{localize "torgeternity.gear.attackWith"}}</p>
+      <select name="system.attackWith">
+        {{selectOptions config.attackTypes selected=item.system.attackWith localize=true}}
+      </select>
       <p class="item-data-label">{{localize "torgeternity.gear.range"}}</p>
       <input name="system.range" type="text" value="{{item.system.range}}" />
       <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
@@ -74,26 +78,9 @@
       </p>
       <p class="item-data-label">{{localize "torgeternity.gear.description"}}</p>
       <prose-mirror toggled name="system.description" class="item-description-textarea"
-        style="padding: 0px 0px 0px 10px" {{disabled (not editable)}}
+        style="padding: 0px 0px 0px 10px" {{disabled (not @root.editable)}}
         value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
       {{> "systems/torgeternity/templates/items/ammunition-field.hbs"}}
-
-      <div class="heavy-weapon-footer">
-        <p class="heavy-weapon-gunners">
-          {{localize "torgeternity.gear.gunner"}}
-          <input
-            name="system.gunner.name"
-            type="text"
-            value="{{item.system.gunner.name}}"
-            class="gunner-input" />
-          {{localize "torgeternity.gear.skill"}}
-          <input
-            name="system.gunner.skillValue"
-            type="number"
-            value="{{item.system.gunner.skillValue}}"
-            class="gunner-skill" />
-        </p>
-      </div>
     </div>
   </div>
 </section>

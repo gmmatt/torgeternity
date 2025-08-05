@@ -1,5 +1,6 @@
 import { torgeternity } from '../../config.js';
 import { getTorgValue } from '../../torgchecks.js';
+import TorgeternityActor from '../../documents/actor/torgeternityActor.js'
 
 const fields = foundry.data.fields;
 /**
@@ -28,10 +29,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       }),
       description: new fields.HTMLField({ initial: '', textSearch: true }),
       maneuver: new fields.NumberField({ initial: -1, integer: true, nullable: false }),
-      operator: new fields.SchemaField({
-        name: new fields.StringField({ initial: '' }),
-        skillValue: new fields.StringField({ initial: '' }),
-      }),
+      operator: new fields.ForeignDocumentField(TorgeternityActor),
       passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       price: new fields.SchemaField({
         dollars: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
@@ -58,7 +56,6 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
    * @param {object} data the data object to migrate
    */
   static migrateData(data) {
-    super.migrateData(data);
     if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
       data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
         ? data.details.sizeBonus
@@ -72,6 +69,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     if (data?.wounds && Object.hasOwn(data?.wounds, 'current')) {
       data.wounds.value = data.wounds.current;
     }
+    return super.migrateData(data);
   }
 
   /**
@@ -89,10 +87,10 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     let convertedPrice = 0;
     switch (this.price.magnitude) {
       case 'billions':
-        convertedPrice = this.price.dollars * 1000;
+        convertedPrice = this.price.dollars * 1000000000;
         break;
       case 'millions':
-        convertedPrice = this.price.dollars * 1000;
+        convertedPrice = this.price.dollars * 1000000;
         break;
       case 'thousands':
         convertedPrice = this.price.dollars * 1000;
@@ -116,7 +114,12 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       speedPenalty = -6;
     }
     this.topSpeed.penalty = speedPenalty;
+  }
 
-    this.defense = parseInt(this.operator.skillValue) + parseInt(this.maneuver);
+  get operatorSkill() {
+    if (this.operator)
+      return this.operator.system.skills[this.type.toLowerCase() + 'Vehicles'] ?? { value: 0 };
+    else
+      return { value: 0 };
   }
 }

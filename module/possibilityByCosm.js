@@ -43,7 +43,7 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
    * @param actor
    */
   static async create(actor) {
-    new PossibilityByCosm({ document: actor }).render(true);
+    new PossibilityByCosm({ document: actor }).render({ force: true });
   }
 
   /**

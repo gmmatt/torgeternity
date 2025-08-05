@@ -395,7 +395,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: aysle
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#klein:]{Klein}</p><p>Eine
         Waffe mit kurzer Klinge zwischen 15 und 30 Zentimetern Länge. Dolche
@@ -410,23 +410,25 @@ items:
       chatNote: ''
       damage: 1
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Klein
       secondaryAxiom:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - small
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694868092620
-      modifiedTime: 1722162204887
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598552423
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.iDd5uxOdpiUJ9JFn
       duplicateSource: null
       exportSource: null
@@ -441,7 +443,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: orrorsh
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
       price: '300'
@@ -455,7 +457,7 @@ items:
       chatNote: Pistole
       damage: 14
       damageType: ''
-      equipped: false
+      equipped: true
       notes: ''
       range: 10/25/40
       secondaryAxiom:
@@ -467,11 +469,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694868115803
-      modifiedTime: 1722162075931
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598559674
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.eaDTP2RPFOw4DHnq
       duplicateSource: null
       exportSource: null
@@ -486,7 +488,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: orrorsh
+      cosm: none
       description: >-
         <p>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.6RWboAjDxAtNFv3N]{Patronenschmied}</p><p>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.h7fC9k4emlniwjII]{Jagdpatronengurt}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Karabiner}</p>
       price: '0'
@@ -500,7 +502,7 @@ items:
       chatNote: ''
       damage: 14
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Karabiner, nutzt spezielle Patronen
       range: 50/100/200
       secondaryAxiom:
@@ -512,11 +514,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694868126947
-      modifiedTime: 1722163333640
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598557933
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wEOCxOMN84sOaC3F
       duplicateSource: null
       exportSource: null
@@ -659,17 +661,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366100
-      modifiedTime: 1722162063162
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598581687
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6bQe7SykCFATMjWD
       duplicateSource: null
       exportSource: null

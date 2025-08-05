@@ -1,7 +1,7 @@
 <div class="skills">
-  <h2 class="skill-edit-toggle" data-action="skillEditToggle"
-    data-tooltip="torgeternity.sheetLabels.toggleSkillDisplay">
-    <a>{{localize "torgeternity.sheetLabels.skills"}}</a>
+  <h2 class="skill-edit-toggle" {{#if editable}}data-action="skillEditToggle" {{/if}}
+    {{#if editable}}data-tooltip="torgeternity.sheetLabels.toggleSkillDisplay" {{/if}}>
+    <a {{disabled (not @root.editable)}}>{{localize "torgeternity.sheetLabels.skills"}}</a>
   </h2>
   {{#*inline "skillRow" content name attrTypes}}
     <li>
@@ -14,6 +14,7 @@
           data-adds="{{content.adds}}"
           data-value="{{content.value}}"
           data-unskilleduse="{{content.unskilledUse}}"
+          {{disabled (not @root.editable)}}
           data-name="{{name}}">
           {{localize (concat 'torgeternity.skills.' name)}}
         </a>
@@ -32,7 +33,7 @@
       </span>
       <input class="skill-line" placeholder="-" value="{{content.value}}" disabled />
       <span>
-        <a class="toggleFav {{checked content.isFav}}">
+        <a class="toggleFav {{checked content.isFav}}" {{disabled (not @root.editable)}}>
           <i class="far fa-star"></i>
         </a>
         <input
@@ -56,6 +57,7 @@
           data-value="{{content.system.value}}"
           data-unskilleduse="0"
           data-name="{{content.name}}"
+          {{disabled (not @root.editable)}}
           data-isfav="{{content.system.isFav}}">
           {{content.name}}
         </a>
@@ -66,15 +68,14 @@
       <span class="skillAdd">{{content.system.adds}}</span>
       <span class="skill-line">{{content.system.value}}</span>
       <span>
-        <a class="toggleFav {{checked content.system.isFav}}">
+        <a class="toggleFav {{checked content.system.isFav}}" {{disabled (not @root.editable)}}>
           <i class="far fa-star"></i>
         </a>
         <input
           class="favCheck"
           type="checkbox"
           name="content.system.isFav"
-          {{checked
-          content.system.isFav}}
+          {{checked content.system.isFav}}
           data-dtype="Boolean" />
       </span>
     </li>

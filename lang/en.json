@@ -381,7 +381,8 @@
       "heroesFirst": "Heroes First?",
       "heroesCondition": "H:",
       "villainsCondition": "V:",
-      "dsrLine": "DSR:",
+      "dsrLine": "DSR",
+      "rule": "Rule",
       "approvedActions": "Actions",
       "standard": "Standard",
       "dramatic": "Dramatic",
@@ -402,7 +403,7 @@
     },
     "fieldLabels": {
       "itemTraits": {
-        "label": "Item Traits",
+        "label": "Traits",
         "hint": "The specific abilities of this item"
       }
     },
@@ -452,7 +453,6 @@
     },
     "iconeTitles": {
       "attackRoll": "Attack Roll",
-      "bonusRoll": "Bonus Roll",
       "delete": "Delete",
       "edit": "Edit",
       "miracleRoll": "Miracle Roll",
@@ -730,6 +730,18 @@
         "hint": "If checked, hovering the mouse over a token will display the distance to that token from the user's controlled character",
         "name": "Show Distance to Token"
       },
+      "rulerGridWalk": {
+        "hint": "The tint colour for grid cells when a token has not reached its move distance (default: --color-level-success)",
+        "name": "Grid Highlight (Walk)"
+      },
+      "rulerGridRun": {
+        "hint": "The tint colour for grid cells when a token has exceeded its move, but not its max move (default: --color-level-info)",
+        "name": "Grid Highlight (Run)"
+      },
+      "rulerGridMax": {
+        "hint": "The tint colour for grid cells when a token has exceeded its max move (default: --color-level-error)",
+        "name": "Grid Highlight (> Run)"
+      },
       "autoShock": {
         "name": "Automatically Apply KO",
         "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
@@ -788,6 +800,9 @@
       "cosm": "Cosm",
       "coverBonus": "Cover Bonus",
       "coverBonusTooltip": "Bonus added to target toughness as a result of cover",
+      "crewUnskilledOperator": "The operator of this vehicle is unskilled!",
+      "crewUnskilledWeapon": "This weapon is being used unskilled!",
+      "crewFavored": "This weapon has a favored gunner",
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Custom Skills",
       "customAttacks": "Custom Attacks",
@@ -893,6 +908,8 @@
       "racialPerks": "Racial perks",
       "range": "Range",
       "darkvision": "Darkvision",
+      "removeGunner": "Remove this gunner from this weapon",
+      "removeOperator": "Remove the operator from the vehicle",
       "return": "Return",
       "roll": "Roll",
       "run": "Run",
@@ -1147,27 +1164,58 @@
       "step": "Step"
     },
     "traits": {
+      "blackPowder": "Black Powder",
+      "bulky": "Bulky",
+      "carbine": "Carbine",
+      "dazing": "Dazing",
       "fatigues": "Fatigues",
-      "fullBody": "Full Body",
-      "torso": "Torso",
       "fragile": "Fragile",
+      "fullBody": "Full Body",
+      "grapple": "Grapple",
+      "head": "Head",
+      "ignoresArmor": "Ignores Armor",
+      "lowestArmor": "Lowest Armor",
+      "nonLethal": "Non-Lethal",
       "painful": "Painful",
+      "pistol": "Pistol",
+      "quick": "Quick",
+      "reload": "Reload",
+      "shotgun": "Shotgun",
       "small": "Small",
       "stagger": "Stagger",
       "thrown": "Thrown",
+      "torso": "Torso",
       "twoHanded": "Two-Handed",
       "unwieldy": "Unwieldy",
-      "reload": "Reload",
-      "bulky": "Bulky",
-      "heavyBurst": "Heavy Burst",
-      "longBurst": "Long Burst",
+      "wounding": "Wounding",
       "shortBurst": "Short Burst",
-      "smallBlast": "Small Blast",
       "mediumBlast": "Medium Blast",
+      "longBurst": "Long Burst",
+      "smallBlast": "Small Blast",
+      "heavyBurst": "Heavy Burst",
       "largeBlast": "Large Blast",
       "veryLargeBlast": "Very Large Blast",
       "hugeBlast": "Huge Blast",
-      "nonLethal": "Non-Lethal"
+      "energyDamage": "Energy Damage",
+      "fireDamage": "Fire Damage",
+      "forceDamage": "Force Damage",
+      "iceDamage": "Ice Damage",
+      "lightningDamage": "Lightning Damage",
+      "energyArmor": "Armor vs Energy",
+      "fireArmor": "Armor vs Fire",
+      "forceArmor": "Armor vs Force",
+      "iceArmor": "Armor vs Ice",
+      "lightningArmor": "Armor vs Lightning",
+      "energyDefense": "Defense vs Energy",
+      "fireDefense": "Defense vs Fire",
+      "forceDefense": "Defense vs Force",
+      "iceDefense": "Defense vs Ice",
+      "lightningDefense": "Defense vs Lightning"
+    },
+    "traitGroup": {
+      "defense": "Defense",
+      "melee": "Melee",
+      "ranged": "Ranged"
     },
     "vehicleTypes": {
       "air": "Air",

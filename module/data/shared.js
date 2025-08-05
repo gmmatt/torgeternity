@@ -7,18 +7,15 @@
  */
 export function makeSkillFields(unskilledUse, baseAttribute, groupName) {
   const fields = foundry.data.fields;
-  return {
+  return new fields.SchemaField({
     adds: new fields.NumberField({ initial: 0, integer: true }),
     baseAttribute: new fields.StringField({ initial: baseAttribute }),
     groupName: new fields.StringField({ initial: groupName }),
     isFav: new fields.BooleanField({ initial: false }),
     isThreatSkill: new fields.BooleanField({ initial: false }),
     defenseOnly: new fields.BooleanField({ initial: false }),
-    unskilledUse: new fields.NumberField({
-      initial: unskilledUse ? 1 : 0,
-      integer: true,
-    }),
-  };
+    unskilledUse: new fields.BooleanField({ initial: unskilledUse }),
+  });
 }
 
 export function migrateCosm(cosm) {

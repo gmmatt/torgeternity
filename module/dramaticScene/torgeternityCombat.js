@@ -27,7 +27,7 @@ export default class TorgCombat extends Combat {
       .forEach(combatant => {
         const hand = game.actors.get(combatant.actorId).getDefaultHand();
         // delete the flag that give the pooled condition in each card of each hand
-        if (hand) hand.cards.forEach(card => card.unsetFlag('torgeternity', 'pooled'))
+        if (hand) hand.cards.forEach(async card => await card.update({ "system.pooled": false }))
       });
 
     this.#deleteActiveDefense();
@@ -77,7 +77,7 @@ export default class TorgCombat extends Combat {
 
     // Update combat effects
     const card = this.currentDrama;
-    if (card) this.setDramaEffects(card);
+    if (card) return this.setDramaEffects(card);
   }
 
   get isDramatic() {
@@ -115,8 +115,8 @@ export default class TorgCombat extends Combat {
     await dramaDeck.recall();
     await dramaDeck.shuffle();
     // Mark no active drama card
-    this.setFlag('torgeternity', 'activeCard', '');
-    this.setCardsPlayable(true);
+    await this.setFlag('torgeternity', 'activeCard', '');
+    await this.setCardsPlayable(true);
   }
 
   /**
@@ -139,7 +139,7 @@ export default class TorgCombat extends Combat {
     }
 
     const [card] = await dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
-    this.setDramaEffects(card);
+    return this.setDramaEffects(card);
   }
 
   /**
@@ -149,7 +149,7 @@ export default class TorgCombat extends Combat {
     //console.log(this.conflictLineText)
     //console.log(`DSR: '${this.dsrText}'   Actions: '${this.approvedActionsText}'`);
 
-    this.setFlag('torgeternity', 'activeCard', card ? card.faces[0].img : '');
+    await this.setFlag('torgeternity', 'activeCard', card ? card.faces[0].img : '');
 
     // Sort combatants based on which faction is first
     const whoFirst = (this.isDramatic ? card.system.heroesFirstDramatic : card.system.heroesFirstStandard) ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
@@ -158,7 +158,7 @@ export default class TorgCombat extends Combat {
       const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
       updates.push({ _id: combatant.id, initiative });
     }
-    if (updates.length) this.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
+    if (updates.length) return this.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
   }
 
   get conflictLineText() {
@@ -194,6 +194,10 @@ export default class TorgCombat extends Combat {
     return (first === first.toUpperCase()) ? dsr.split('').join(' ') : game.i18n.localize(torgeternity.dramaActions[dsr]);
   }
 
+  get dramaRule() {
+    return this.currentDrama?.system.rule;
+  }
+
   /**
    * 
    */
@@ -208,13 +212,13 @@ export default class TorgCombat extends Combat {
   async nextRound() {
     if (!game.user.isActiveGM) return super.nextRound();
 
-    this.drawDramaCard();
-
-    // Perform end-of-faction's turn processing
-    await this.nextRoundKeep();
+    await this.drawDramaCard();
 
     // deactivate active defense when the combat round is progressed. End of combat is in the hook above, 'deleteCombat'
     await this.#deleteActiveDefense();
+
+    // Perform end-of-faction's turn processing
+    return this.nextRoundKeep();
   }
 
   /**
@@ -226,7 +230,7 @@ export default class TorgCombat extends Combat {
       { updateAll: true });
     this.setCardsPlayable(true);
     this.unsetFlag('torgeternity', FATIGUED_FACTION_FLAG);
-    await super.nextRound();
+    return super.nextRound();
   }
 
   /**
@@ -385,6 +389,6 @@ export default class TorgCombat extends Combat {
     await prevActiveCard.pass(dramaActive);
 
     // Cancel effects from previous card (if any)
-    await this.setDramaEffects(prevActiveCard);
+    return this.setDramaEffects(prevActiveCard);
   }
 }

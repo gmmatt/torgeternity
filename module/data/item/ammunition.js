@@ -18,18 +18,4 @@ export class AmmunitionItemData extends GeneralItemData {
       reach: new fields.StringField({ initial: '' }),
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }

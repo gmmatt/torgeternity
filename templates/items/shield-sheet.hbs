@@ -9,7 +9,7 @@
         type="number"
         value="{{item.system.techlevel}}" />
       <p class="item-data-label">
-        {{localize "torgeternity.gear.price"}}/{{torgeternity.gear.value}}
+        {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
       </p>
       <input
         name="system.price"
@@ -54,7 +54,8 @@
           type="text"
           value="{{item.system.notes}}" />
       </p>
-      <prose-mirror toggled name="system.description" class="item-description-textarea" {{disabled (not editable)}}
+      <prose-mirror toggled name="system.description" class="item-description-textarea" {{disabled (not
+        @root.editable)}}
         value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
     </div>
   </div>

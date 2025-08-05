@@ -364,7 +364,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: coreEarth
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -381,7 +381,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Pistole
       range: 10/25/40
       secondaryAxiom:
@@ -393,11 +393,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694869489370
-      modifiedTime: 1722161388820
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598478945
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
       exportSource: null
@@ -412,7 +412,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: coreEarth
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -429,7 +429,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Pistole
       range: 10/25/40
       secondaryAxiom:
@@ -441,11 +441,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694869490779
-      modifiedTime: 1722161457156
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598479858
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
       exportSource: null
@@ -581,17 +581,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366193
-      modifiedTime: 1722161468203
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598438826
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
       duplicateSource: null
       exportSource: null

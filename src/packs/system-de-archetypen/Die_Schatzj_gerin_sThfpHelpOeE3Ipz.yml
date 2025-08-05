@@ -299,7 +299,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: coreEarth
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -316,7 +316,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Pistole
       range: 10/25/40
       secondaryAxiom:
@@ -328,11 +328,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694861223835
-      modifiedTime: 1722167097942
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598842504
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
       exportSource: null
@@ -347,7 +347,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: coreEarth
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -364,7 +364,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Pistole
       range: 10/25/40
       secondaryAxiom:
@@ -376,11 +376,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694861228288
-      modifiedTime: 1722167093526
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598843607
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
       duplicateSource: null
       exportSource: null
@@ -584,17 +584,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366193
-      modifiedTime: 1722167045143
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598856534
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
       duplicateSource: null
       exportSource: null
@@ -688,7 +690,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: coreEarth
+      cosm: none
       description: >-
         <p>Diese mittelgroße, einschneidige Klinge ist bestens für das Entfernen
         dichten Gestrüpps ausbalanciert und eignet sich auch hervorragend zum
@@ -704,7 +706,7 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Überlebenskunst-Proben werden Begünstigt
       secondaryAxiom:
         selected: none
@@ -718,12 +720,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.2.2
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753598841387
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.ajzc4iSNhMyEooU6'
   - name: Mensch

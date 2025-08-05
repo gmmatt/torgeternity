@@ -151,7 +151,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: cyberpapacy
+      cosm: none
       description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short Burst}</p>\n<p>The GodBeam has a long barrel, a stabilizing stock, and laser sight. It emits a deadly blue beam of laser light. A laser sight (page 141) is integral, using a low-power beam from the weapon itself. All GWI weapons are connected to the GodNet by default, so hacked versions are rare and expensive.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '600'
       techlevel: 26
@@ -164,23 +164,25 @@ items:
       chatNote: ''
       damage: 14
       damageType: flat
-      equipped: false
+      equipped: true
       notes: Short Burst
       range: 100 / 500 / 1000
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - shortBurst
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693913428828
-      modifiedTime: 1722157603887
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599360129
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.3G2SVFJnklgCOnmw
       duplicateSource: null
       exportSource: null

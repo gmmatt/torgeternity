@@ -1,4 +1,4 @@
-import { renderSkillChat } from '../torgchecks.js';
+import { TestResult, renderSkillChat, rollAttack, rollPower } from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { oneTestTarget, TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
@@ -38,8 +38,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       unarmedAttack: TorgeternityActorSheet.#onUnarmedAttack,
       itemPowerRoll: TorgeternityActorSheet.#onPowerRoll,
       itemEquip: TorgeternityActorSheet.#onItemEquip,
-      itemCreateSa: TorgeternityActorSheet.#onCreateSa,
-      itemCreateRsa: TorgeternityActorSheet.#onCreateSaR,
+      itemCreate: TorgeternityActorSheet.#onItemCreate,
       activeDefenseRoll: TorgeternityActorSheet.#onActiveDefenseRoll,
       activeDefenseRollGlow: TorgeternityActorSheet.#onActiveDefenseCancel,
       effectControl: TorgeternityActorSheet.#onManageActiveEffect, // data-action already on relevant elements
@@ -57,6 +56,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       reloadWeapon: TorgeternityActorSheet.#onReloadWeapon,
       itemName: TorgeternityActorSheet.#onitemName,
       deleteRace: TorgeternityActorSheet.#onDeleteRace,
+      removeOperator: TorgeternityActorSheet.#onRemoveOperator,
+      removeGunner: TorgeternityActorSheet.#onRemoveGunner,
     }
   }
 
@@ -104,7 +105,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       tabs: [
         { id: 'stats', },
         { id: 'gear', },
-        { id: 'effects', cssClass: 'scrollable' },
+        { id: 'effects' },
         { id: 'background', label: 'torgeternity.sheetLabels.notes' },
       ],
       initial: "stats",
@@ -120,6 +121,25 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     super(options);
 
     this._filters = { effects: new Set() };
+  }
+
+  async _onFirstRender(context, options) {
+    // If it is a vehicle with a driver, then watch for changes to the driver's 
+    const actor = this.actor;
+    if (actor.type === 'vehicle' && actor.system.operator) {
+      const operator = actor.system.operator;
+      if (operator) operator.apps[this.id] = this;
+    }
+    return super._onFirstRender(context, options);
+  }
+
+  _onClose(options) {
+    const actor = this.actor;
+    if (actor.type === 'vehicle' && actor.system.operator) {
+      const operator = actor.system.operator;
+      if (operator) delete operator.apps[this.id];
+    }
+    super._onClose(options);
   }
 
   _configureRenderOptions(options) {
@@ -184,6 +204,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     context.cosmCard = context.items.filter(item => item.type === 'cosmCard');
     context.vehicleAddOn = context.items.filter(item => item.type === 'vehicleAddOn');
     context.ammunitions = context.items.filter(item => item.type === 'ammunition');
+    if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 
     for (const type of [
       'meleeweapons',
@@ -212,6 +233,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     ]) {
       for (const item of context[type]) {
         item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description);
+        item.traitDesc = Array.from(item.system.traits.map(trait => game.i18n.localize(`torgeternity.traits.${trait}`))).join(' / ');
       }
     }
 
@@ -251,13 +273,17 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     return context;
   }
 
-  _onDragStart(event) {
-    if (event.target.classList.contains('skill-roll'))
+  async _onDragStart(event) {
+    const target = event.currentTarget;
+    if (target.classList.contains('skill-roll'))
       this._skillAttrDragStart(event) // a.skill-roll
-    else if (event.target.classList.contains('interaction-attack'))
+    else if (target.classList.contains('interaction-attack'))
       this._interactionDragStart(event) // a.interaction-attack
-    else
-      super._onDragStart(event) // a.item-name, threat: a.item
+    else if (target.dataset.effectUuid) {
+      const effect = await fromUuid(target.dataset.effectUuid);
+      event.dataTransfer.setData("text/plain", JSON.stringify(effect.toDragData()));
+    } else
+      return super._onDragStart(event) // a.item-name, threat: a.item
   }
 
   // Skills are not Foundry "items" with IDs, so the skill data is not automatically
@@ -317,6 +343,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     new foundry.applications.ux.DragDrop.implementation({
       dragSelector: '[data-drag], .item-list .item',
+      permissions: {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this),
+      },
       callbacks: {
         dragstart: this._onDragStart.bind(this),
         drop: this._onDrop.bind(this),
@@ -337,7 +367,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (!context.editable) return;
 
     // compute adds from total for threats
-    if (this.actor.type == 'threat') {
+    if (this.actor.type === 'threat') {
       html.querySelectorAll('.skill-element-edit .inputsFav input').forEach(elem =>
         elem.addEventListener('change', this.#setThreatAdds.bind(this)));
     }
@@ -391,17 +421,29 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
       case 'vehicle':
         if (document instanceof Actor && (document.type === 'stormknight' || document.type === 'threat')) {
-          // dropped document = driver
-          const skill = this.actor.system.type.toLowerCase();
-          const skillValue = document?.system?.skills[skill + 'Vehicles']?.value ?? 0;
-          if (skillValue === 0) {
-            ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
-            return;
+
+          // Is it a driver or a gunner?
+          const target = event.target;
+          if (target.closest('.vehicle-operator')) {
+            // dropped document = driver
+            const skillValue = document?.system?.skills[this.actor.system.type.toLowerCase() + 'Vehicles']?.value ?? 0;
+            if (skillValue === 0) {
+              ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
+              return;
+            }
+            this.actor.update({ 'system.operator': document.id });
+          } else {
+            // Check for gunner
+            const weapon = this.actor.items.get(target.closest('li.vehicle-weapon-list')?.dataset?.itemId);
+            if (weapon) {
+              const skillValue = document?.system?.skills[weapon.system.attackWith]?.value ?? 0;
+              if (skillValue === 0) {
+                ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
+                return;
+              }
+              weapon.update({ 'system.gunner': document.id });
+            }
           }
-          this.actor.update({
-            'system.operator.name': document.name,
-            'system.operator.skillValue': skillValue,
-          });
           return;
         }
     }
@@ -442,10 +484,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const characterHand = this.actor.getDefaultHand();
     // if default hand => render it
     if (characterHand) {
-      characterHand.sheet.render(true);
+      characterHand.sheet.render({ force: true });
     } else {
       const hand = await this.actor.createDefaultHand();
-      hand.sheet.render(true);
+      hand.sheet.render({ force: true });
     }
   }
 
@@ -490,7 +532,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (checkUnskilled(skillValue, skillName, this.actor)) return;
 
     // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
+    let reconnection_attempt = false;
     if (skillName === 'reality' && this.actor.isDisconnected) {
+      reconnection_attempt = true;
       const confirmed = await DialogV2.confirm({
         window: { title: 'torgeternity.dialogWindow.realityCheck.title' },
         content: game.i18n.localize('torgeternity.dialogWindow.realityCheck.content'),
@@ -517,7 +561,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       }
     }
 
-    return TestDialog.wait({
+    const dialog = TestDialog.wait({
       testType: button.dataset.testtype,
       customSkill: button.dataset.customskill,
       actor: this.actor,
@@ -530,6 +574,22 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       bdDamageLabelStyle: 'hidden',
       bdDamageSum: 0,
     }, { useTargets: true });
+
+    if (!reconnection_attempt) return dialog;
+
+    switch ((await dialog).flags.torgeternity.test.result) {
+      case TestResult.STANDARD:
+      case TestResult.GOOD:
+      case TestResult.OUTSTANDING:
+        await this.actor.toggleStatusEffect('disconnected', { active: false });
+        ui.notifications.info(game.i18n.localize('torgeternity.macros.reconnectMacroStatusLiftet'));
+        break;
+      case TestResult.FAILURE:
+        // ChatMessage.create({content: "<p>Fehlschlag</p>"});
+        break;
+      case TestResult.MISHAP:
+        break;
+    }
   }
 
   // Adapted from above, with event targetting in edit skills list
@@ -803,108 +863,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static #onAttackRoll(event, button) {
     const itemID = button.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
-    const weaponData = item.system;
-    const attackWith = weaponData.attackWith;
-    let skillValue;
-    let skillData;
-    let attributes;
-
-    if (item?.weaponWithAmmo && !item.hasAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
-      ui.notifications.warn(game.i18n.localize('torgeternity.chatText.noAmmo'));
-      return;
-    }
-
-    if (this.actor.type === 'vehicle') {
-      skillValue = item.system.gunner.skillValue;
-      attributes = 0;
-    } else {
-      skillData = this.actor.system.skills[attackWith];
-      skillValue = skillData.value;
-      attributes = this.actor.system.attributes;
-      if (isNaN(skillValue)) {
-        skillValue = skillData.unskilledUse ? attributes[skillData.baseAttribute].value : '-';
-      }
-    }
-
-    if (checkUnskilled(skillValue, attackWith, this.actor)) return;
-
-    let dnDescriptor = 'standard';
-
-    if (game.user.targets.size) {
-      const firstTarget = game.user.targets.find(token => token.actor.type !== 'vehicle')?.actor ||
-        game.user.targets.first().actor;
-
-      if (firstTarget.type === 'vehicle') {
-        dnDescriptor = 'targetVehicleDefense';
-      } else {
-        switch (attackWith) {
-          case 'meleeWeapons':
-          case 'unarmedCombat':
-            firstTarget.items
-              .filter((it) => it.type === 'meleeweapon')
-              .filter((it) => it.system.equipped).length === 0
-              ? (dnDescriptor = 'targetUnarmedCombat')
-              : (dnDescriptor = 'targetMeleeWeapons');
-            break;
-          case 'fireCombat':
-          case 'energyWeapons':
-          case 'heavyWeapons':
-          case 'missileWeapons':
-            dnDescriptor = 'targetDodge';
-            break;
-          default:
-            dnDescriptor = 'targetMeleeWeapons';
-        }
-      }
-    }
-
-    // Calculate damage caused by this weapon
-    let adjustedDamage = 0;
-    const weaponDamage = weaponData.damage;
-    switch (weaponData.damageType) {
-      case 'flat':
-        adjustedDamage = weaponDamage;
-        break;
-      case 'strengthPlus':
-        adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
-        break;
-      case 'charismaPlus':
-        adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
-        break;
-      case 'dexterityPlus':
-        adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
-        break;
-      case 'mindPlus':
-        adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
-        break;
-      case 'spiritPlus':
-        adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
-        break;
-      default:
-        adjustedDamage = parseInt(weaponDamage);
-    }
-
-    return TestDialog.wait({
-      testType: 'attack',
-      actor: this.actor,
-      amountBD: 0,
-      isAttack: true,
-      isFav: skillData?.isFav || false,
-      skillName: attackWith,
-      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute]?.value || 0),
-      unskilledUse: true,
-      damage: adjustedDamage,
-      weaponAP: weaponData.ap,
-      applyArmor: true,
-      DNDescriptor: dnDescriptor,
-      type: 'attack',
-      applySize: true,
-      attackOptions: true,
-      chatNote: weaponData.chatNote,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
-      itemId: item.id,
-    }, { useTargets: true });
+    rollAttack(this.actor, item);
   }
 
   /**
@@ -914,67 +873,30 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   static #onPowerRoll(event, button) {
     const itemID = button.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
-    const powerData = item.system;
-    const skillName = powerData.skill;
-    const skillData = this.actor.system.skills[skillName];
-
-    // Set modifier for this power
-    const powerModifier = item.system.modifier || 0;
-
-    if (checkUnskilled(skillData.value, skillName, this.actor)) return;
-
-    return TestDialog.wait({
-      testType: 'power',
-      actor: this.actor,
-      powerName: item.name,
-      powerModifier: powerModifier,
-      isAttack: powerData.isAttack,
-      isFav: skillData.isFav,
-      skillName: skillName,
-      skillAdds: skillData.adds,
-      skillValue: Math.max(skillData.value, this.actor.system.attributes[skillData.baseAttribute].value),
-      unskilledUse: false,
-      damage: powerData.damage,
-      weaponAP: powerData.ap,
-      applyArmor: powerData.applyArmor,
-      DNDescriptor: powerData.dn,
-      applySize: powerData.applySize,
-      attackOptions: true,
-      bdDamageLabelStyle: 'dihiddene',
-      amountBD: 0,
-      bdDamageSum: 0,
-      itemId: item.id,
-    }, { useTargets: true });
+    rollPower(this.actor, item);
   }
 
   /**
    *
    * @param event
    */
-  static #onCreateSa(event, button) {
+  static #onItemCreate(event, button) {
     event.preventDefault();
-    const itemData = {
-      name: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
-      type: 'specialability',
-    };
-    return this.actor.createEmbeddedDocuments('Item', [itemData], {
-      renderSheet: true,
-    });
-  }
-
-  /**
-   *
-   * @param event
-   */
-  static #onCreateSaR(event, button) {
-    event.preventDefault();
-    const itemData = {
-      name: game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
-      type: 'specialability-rollable',
-    };
-    return this.actor.createEmbeddedDocuments('Item', [itemData], {
-      renderSheet: true,
-    });
+    const itemType = button.dataset.itemtype;
+    if (!itemType) {
+      console.error('Misconfigured itemCreate action, it is missing data-itemtype')
+      return;
+    }
+    if (!Object.hasOwn(CONFIG.Item.typeLabels, itemType)) {
+      console.error(`itemCreation actin has invalid data-itemtype '${itemType}'`)
+      return;
+    }
+    return this.actor.createEmbeddedDocuments('Item',
+      [{
+        name: game.i18n.localize(CONFIG.Item.typeLabels[itemType]),
+        type: itemType,
+      }],
+      { renderSheet: true, });
   }
 
   /**
@@ -1015,11 +937,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
     this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1 });
   }
+
   static #onItemEdit(event, button) {
     const li = button.closest('.item');
     const item = this.actor.items.get(li.dataset.itemId);
-    item.sheet.render(true);
+    item.sheet.render({ force: true });
   }
+
   static #onItemDelete(event, button) {
     return DialogV2.confirm({
       window: { title: 'torgeternity.dialogWindow.itemDeletion.title' },
@@ -1065,6 +989,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     })) {
       return this.deleteRace();
     }
+  }
+
+  static async #onRemoveOperator(event, button) {
+    this.document.update({ 'system.operator': null })
+  }
+
+  static async #onRemoveGunner(event, button) {
+    const weapon = this.document.items.get(button.closest('.vehicle-weapon-list')?.dataset?.itemId);
+    if (weapon) weapon.update({ 'system.gunner': null })
   }
 
   async deleteRace() {

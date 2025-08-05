@@ -102,7 +102,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       if (!confirm) return;
       test.chatNote += game.i18n.localize('torgeternity.sheetLabels.lastSpent');
     } // GM can grant an on the fly possibilty if he does the roll
-    else if (possPool == 0 && game.user.isGM) {
+    else if (possPool === 0 && game.user.isGM) {
       const confirm = await DialogV2.confirm({
         window: { title: 'torgeternity.sheetLabels.noPoss' },
         content: game.i18n.localize('torgeternity.sheetLabels.noPossFree'),

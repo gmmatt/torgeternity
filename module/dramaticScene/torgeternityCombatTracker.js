@@ -39,6 +39,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   async _prepareCombatContext(context, options) {
     // for HEADER and FOOTER
     await super._prepareCombatContext(context, options);
+    if (context.partId !== 'combat-header') return;
+
     const combat = this.viewed;
     const heroesFirst = combat?.areHeroesFirst;
     context.firstFaction = heroesFirst ? 'heroes' : 'villains';
@@ -47,6 +49,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     context.conflictLine = combat?.conflictLineText;
     context.approvedActions = combat?.approvedActionsText;
     context.dsrLine = combat?.dsrText;
+    context.dramaRule = combat?.dramaRule;
 
     context.approved = {};
     if (combat)
@@ -67,7 +70,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     context.noHand = !hand;
     if (hand) {
       context.cardpool = hand.cards
-        ?.filter(card => card.flags?.torgeternity?.pooled)
+        ?.filter(card => card.system.pooled)
         .map(card => { return { name: card.name, img: card.img } }) ?? [];
     }
     context.turnTaken = combatant.turnTaken;

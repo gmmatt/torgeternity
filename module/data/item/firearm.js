@@ -1,42 +1,14 @@
-import { GeneralItemData } from './general.js';
+import { MissileWeaponItemData } from './missileweapon.js';
 
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
  */
-export class FirearmItemData extends GeneralItemData {
+export class FirearmItemData extends MissileWeaponItemData {
   /**
    * @returns {object} Schema fragment for a firearm
    */
-  static defineSchema() {
-    return {
-      ...super.defineSchema('firearm'),
-      ammo: new fields.SchemaField({
-        max: new fields.NumberField({ initial: 1, integer: true }),
-        value: new fields.NumberField({ initial: 1, integer: true }),
-      }),
-      ap: new fields.NumberField({ initial: 0, integer: true }),
-      attackWith: new fields.StringField({ initial: 'fireCombat' }),
-      chatNote: new fields.StringField({ initial: '' }),
-      damage: new fields.NumberField({ initial: 0, integer: true }),
-      damageType: new fields.StringField({ initial: '' }),
-      equipped: new fields.BooleanField({ initial: false }),
-      notes: new fields.StringField({ initial: '' }),
-      range: new fields.StringField({ initial: '' }),
-    };
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
+  static defineSchema(subtype = 'firearm', attackwith = 'fireCombat') {
+    return MissileWeaponItemData.defineSchema(subtype, attackwith);
   }
 }

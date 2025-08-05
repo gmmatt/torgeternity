@@ -149,41 +149,50 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     switch (button.dataset.control) {
       case 'pass':
         await this.playerPassDialog(card);
-        return;
+        break;
       case 'create':
-        return getDocumentClass('Card').createDialog({}, { parent: this.object, pack: this.document.pack });
+        getDocumentClass('Card').createDialog({}, { parent: this.object, pack: this.document.pack });
+        break;
       case 'edit':
-        return card.sheet.render(true);
+        card.sheet.render({ force: true });
+        break;
       case 'delete':
-        return card.deleteDialog();
+        card.deleteDialog();
+        break;
       case 'deal':
-        return this.document.dealDialog();
+        this.document.dealDialog();
+        break;
       case 'draw':
-        return this.document.drawDialog();
+        this.document.drawDialog();
+        break;
       case 'pass':
-        return this.document.passDialog();
+        this.document.passDialog();
+        break;
       case 'reset':
         this._prepareCards('standard');
-        return this.document.recall();
+        this.document.recall();
+        break
       case 'nextFace':
-        return card.update({ face: card.face === null ? 0 : card.face + 1 });
+        card.update({ face: card.face === null ? 0 : card.face + 1 });
+        break
       case 'prevFace':
-        return card.update({ face: card.face === 0 ? null : card.face - 1 });
+        card.update({ face: card.face === 0 ? null : card.face - 1 });
+        break
       case 'display':
         const image1 = new foundry.applications.apps.ImagePopout({ src: card.img, window: { title: card.name } });
-        image1.render(true, { width: 425, height: 650 });
+        image1.render({ force: true }, { width: 425, height: 650 });
         image1.shareImage();
-        return;
+        break;
       case 'view':
         const image2 = new foundry.applications.apps.ImagePopout({ src: card.img, window: { title: card.name } });
-        image2.render(true, { width: 425, height: 650 });
-        return;
+        image2.render({ force: true }, { width: 425, height: 650 });
+        break;
       case 'discard':
         {
-          await card.unsetFlag('torgeternity', 'pooled');
+          await card.update({ "system.pooled": false });
           const settings = game.settings.get('torgeternity', 'deckSetting');
           const discardPile = game.cards.get((card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard);
-          if (!discardPile) return;
+          if (!discardPile) break;
           await card.pass(discardPile, game.torgeternity.cardChatOptions);
           card.toMessage({
             content: `<div class="card-draw flexrow"><span class="card-chat-tooltip">
@@ -191,14 +200,14 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
             <span class="card-name">${game.i18n.localize('torgeternity.chatText.discardsCard')} ${card.name}</span>
             </div>`,
           });
-          return;
+          break;
         }
       case 'play':
         {
-          await card.unsetFlag('torgeternity', 'pooled');
+          await card.update({ "system.pooled": false });
           const settings = game.settings.get('torgeternity', 'deckSetting');
           const discardPile = game.cards.get((card.type === 'destiny') ? settings.destinyDiscard : settings.cosmDiscard);
-          if (!discardPile) return;
+          if (!discardPile) break;
           await card.pass(discardPile, game.torgeternity.cardChatOptions);
           card.toMessage({
             content: `<div class="card-draw flexrow"><span class="card-chat-tooltip">
@@ -206,7 +215,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
             <span class="card-name">${game.i18n.localize('torgeternity.chatText.playsCard')} ${card.name}</span>
             </div>`,
           });
-          return;
+          break;
         }
     }
   }
@@ -252,10 +261,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     // Handle the control action
     switch (input.dataset.action) {
       case 'poolToggle':
-        if (card.getFlag('torgeternity', 'pooled'))
-          await card.unsetFlag('torgeternity', 'pooled');
-        else
-          await card.setFlag('torgeternity', 'pooled', true);
+        await card.update({ "system.pooled": !card.system.pooled });
         return;
     }
   }
@@ -273,7 +279,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
       cards = game.users
         .filter(user => user.active && !user.isGM && !user.isSelf)
         .map(user => user.character.getDefaultHand())
-        .filter(cards => cards.type == 'hand' && cards.testUserPermission(game.user, 'LIMITED'));
+        .filter(cards => cards.type === 'hand' && cards.testUserPermission(game.user, 'LIMITED'));
     }
     if (!cards.length)
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'));
@@ -395,6 +401,6 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
     if (this.rendered) {
       if (this._minimized) return this.maximize();
       else return this.close();
-    } else return this.render(true);
+    } else return this.render({ force: true });
   }
 }

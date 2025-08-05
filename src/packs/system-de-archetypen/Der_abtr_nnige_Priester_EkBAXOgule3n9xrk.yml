@@ -152,7 +152,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: cyberpapacy
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#kurzer-fs:]{Kurzer
         Feuerstoß}</p>
@@ -174,23 +174,25 @@ items:
       chatNote: ''
       damage: 14
       damageType: ''
-      equipped: false
+      equipped: true
       notes: Kurzer FS
       range: 100/500/1000
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - shortBurst
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694867248691
-      modifiedTime: 1722161559582
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598474866
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.fuYQYaZohFwwXDTS
       duplicateSource: null
       exportSource: null

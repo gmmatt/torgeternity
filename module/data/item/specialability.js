@@ -1,32 +1,13 @@
-import { newTraitsField } from './general.js';
-
-const fields = foundry.data.fields;
+import { BaseItemData } from './baseItemData.js';
 
 /**
  * @inheritdoc
  */
-export class SpecialAbilityItemData extends foundry.abstract.TypeDataModel {
+export class SpecialAbilityItemData extends BaseItemData {
   /**
    * @inheritdoc
    */
   static defineSchema() {
-    return {
-      description: new fields.HTMLField({ initial: '' }),
-      traits: newTraitsField('specialability'),
-    };
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
+    return super.defineSchema('specialability');
   }
 }

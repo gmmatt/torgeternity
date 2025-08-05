@@ -5,7 +5,7 @@ description: Dies ist das Basis-Schicksalsdeck mit den Karten 1-60.
 img: >-
   systems/torgeternity/images/deutsch/cards/Schicksalskarten/ZZR%C3%BCckseite.webp
 cards:
-  - _id: JYzGK0UbGIkux9ps
+  - _id: 3OkZzaJF4U2AxhZX
     name: Adrenalin
     description: ''
     type: destiny
@@ -25,23 +25,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.JYzGK0UbGIkux9ps'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3OkZzaJF4U2AxhZX'
     cards: []
-  - _id: CVOb3w0ULQW7kd4Z
+  - _id: FG5hhtQOLsoChNC6
     name: Adrenalin
     description: ''
     type: destiny
@@ -61,23 +59,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CVOb3w0ULQW7kd4Z'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.FG5hhtQOLsoChNC6'
     cards: []
-  - _id: bBQW0tikfLJ7sa0w
+  - _id: wH6drp4xZFROlpvT
     name: Adrenalin
     description: ''
     type: destiny
@@ -97,23 +93,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bBQW0tikfLJ7sa0w'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.wH6drp4xZFROlpvT'
     cards: []
-  - _id: X02irVt2FNIJ02z3
+  - _id: 0Xf2Vp01bTCyZzfP
     name: Adrenalin
     description: ''
     type: destiny
@@ -133,23 +127,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.X02irVt2FNIJ02z3'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.0Xf2Vp01bTCyZzfP'
     cards: []
-  - _id: pFEeEs0SZW5X6iT2
+  - _id: gre0vXifaFuRJ21R
     name: Willenskraft
     description: ''
     type: destiny
@@ -169,23 +161,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.pFEeEs0SZW5X6iT2'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.gre0vXifaFuRJ21R'
     cards: []
-  - _id: a4HEQ4YqxUAnDy3l
+  - _id: HGTpO2nEmy6Uax2I
     name: Willenskraft
     description: ''
     type: destiny
@@ -205,23 +195,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.a4HEQ4YqxUAnDy3l'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.HGTpO2nEmy6Uax2I'
     cards: []
-  - _id: Z3lOERY1km6fvQ3D
+  - _id: 0vktTHtyvHv7Vczt
     name: Willenskraft
     description: ''
     type: destiny
@@ -241,23 +229,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Z3lOERY1km6fvQ3D'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.0vktTHtyvHv7Vczt'
     cards: []
-  - _id: VAXK6iO6iW0rK8Iq
+  - _id: e6OCRB6GXCpPqqIj
     name: Willenskraft
     description: ''
     type: destiny
@@ -277,23 +263,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.VAXK6iO6iW0rK8Iq'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.e6OCRB6GXCpPqqIj'
     cards: []
-  - _id: i590rrUu9mVlLSY8
+  - _id: 4ozaj7FUlawLexwf
     name: Wachsamkeit
     description: ''
     type: destiny
@@ -313,23 +297,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.i590rrUu9mVlLSY8'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.4ozaj7FUlawLexwf'
     cards: []
-  - _id: 51KAGC32qUnz100l
+  - _id: FxfZSV7qLrqFigD9
     name: Wachsamkeit
     description: ''
     type: destiny
@@ -349,23 +331,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.51KAGC32qUnz100l'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.FxfZSV7qLrqFigD9'
     cards: []
-  - _id: Q2u078dYJdW8lsOX
+  - _id: Ket2Sb8HrVILqyXA
     name: Märtyrer
     description: ''
     type: destiny
@@ -385,23 +365,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Q2u078dYJdW8lsOX'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Ket2Sb8HrVILqyXA'
     cards: []
-  - _id: dU538niQf18K8bFd
+  - _id: 9XXbYe66HWyT6OPx
     name: Tatendrang
     description: ''
     type: destiny
@@ -421,23 +399,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.dU538niQf18K8bFd'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9XXbYe66HWyT6OPx'
     cards: []
-  - _id: CRLDy8rV4p5tfE7x
+  - _id: bjn83Wa3DFjFt58n
     name: Tatendrang
     description: ''
     type: destiny
@@ -457,23 +433,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CRLDy8rV4p5tfE7x'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bjn83Wa3DFjFt58n'
     cards: []
-  - _id: 3OST98o9FqnuclPV
+  - _id: wnxvqBuhgZZlc1A7
     name: Tatendrang
     description: ''
     type: destiny
@@ -493,23 +467,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3OST98o9FqnuclPV'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.wnxvqBuhgZZlc1A7'
     cards: []
-  - _id: 3qyJ6j6m77xmZ0PI
+  - _id: ojIYAqWa8li1bPa2
     name: Tatendrang
     description: ''
     type: destiny
@@ -529,23 +501,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3qyJ6j6m77xmZ0PI'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ojIYAqWa8li1bPa2'
     cards: []
-  - _id: 8AOGRjkybayr3DeY
+  - _id: 9wiQIZT2ps7Rqy1n
     name: Hast
     description: ''
     type: destiny
@@ -565,23 +535,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.8AOGRjkybayr3DeY'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9wiQIZT2ps7Rqy1n'
     cards: []
-  - _id: 0tvobbXTePomnFLk
+  - _id: zihLKoLr6AwDpNJK
     name: Hast
     description: ''
     type: destiny
@@ -601,23 +569,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.0tvobbXTePomnFLk'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.zihLKoLr6AwDpNJK'
     cards: []
-  - _id: O4jzHvmijTRTbcRN
+  - _id: 6D7ZtX04C7UWRkxd
     name: Meisterhafter Plan
     description: ''
     type: destiny
@@ -637,23 +603,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.O4jzHvmijTRTbcRN'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.6D7ZtX04C7UWRkxd'
     cards: []
-  - _id: 3WES3l69PDK0t6Ow
+  - _id: FvZvJWytWAM8GQZP
     name: Meisterhafter Plan
     description: ''
     type: destiny
@@ -673,23 +637,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3WES3l69PDK0t6Ow'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.FvZvJWytWAM8GQZP'
     cards: []
-  - _id: o9dl3AD7MQXab7R0
+  - _id: 9wVQFkBxUKerlUI9
     name: Ansporn
     description: ''
     type: destiny
@@ -709,23 +671,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.o9dl3AD7MQXab7R0'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9wVQFkBxUKerlUI9'
     cards: []
-  - _id: 9f95nWJKKwaOhzvM
+  - _id: ElhI9B9IrykgjO5r
     name: Initiative ergreifen
     description: ''
     type: destiny
@@ -745,23 +705,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9f95nWJKKwaOhzvM'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ElhI9B9IrykgjO5r'
     cards: []
-  - _id: sYB0RguyOQ9gy2e2
+  - _id: Wur1qFyKGQUiMuIe
     name: Initiative ergreifen
     description: ''
     type: destiny
@@ -781,23 +739,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.sYB0RguyOQ9gy2e2'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Wur1qFyKGQUiMuIe'
     cards: []
-  - _id: ZeAjkd0P4i7fmZAR
+  - _id: yDAOI6IeiesTAUkA
     name: Heldenhaft
     description: ''
     type: destiny
@@ -817,23 +773,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ZeAjkd0P4i7fmZAR'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.yDAOI6IeiesTAUkA'
     cards: []
-  - _id: fyisDfPEu9mzJ6To
+  - _id: 2XFDyhRV4dDuUiMr
     name: Heldenhaft
     description: ''
     type: destiny
@@ -853,23 +807,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fyisDfPEu9mzJ6To'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.2XFDyhRV4dDuUiMr'
     cards: []
-  - _id: MLp6PjSkC2ukV9NK
+  - _id: cOsGbZu3N9JSww0N
     name: Heldenhaft
     description: ''
     type: destiny
@@ -889,23 +841,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.MLp6PjSkC2ukV9NK'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.cOsGbZu3N9JSww0N'
     cards: []
-  - _id: hqoF1WXVyH77VEKQ
+  - _id: ubzw0buk571CR77d
     name: Heldenhaft
     description: ''
     type: destiny
@@ -925,23 +875,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.hqoF1WXVyH77VEKQ'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ubzw0buk571CR77d'
     cards: []
-  - _id: QMsSTaGNe5rFZsL5
+  - _id: y4RNxmKUo62Toex8
     name: Feind versagt
     description: ''
     type: destiny
@@ -961,23 +909,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.QMsSTaGNe5rFZsL5'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.y4RNxmKUo62Toex8'
     cards: []
-  - _id: G7qigbKintKvybcZ
+  - _id: 2fGvTJXIFkCUn1aW
     name: Feind versagt
     description: ''
     type: destiny
@@ -997,23 +943,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.G7qigbKintKvybcZ'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.2fGvTJXIFkCUn1aW'
     cards: []
-  - _id: CnHzyLANl5lNU0UP
+  - _id: 5QhFiSST23VnMF7J
     name: Sammeln
     description: ''
     type: destiny
@@ -1033,23 +977,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CnHzyLANl5lNU0UP'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.5QhFiSST23VnMF7J'
     cards: []
-  - _id: k0IzPzCqBBmzWAV7
+  - _id: quEfp8vhg00Npyuk
     name: Zweite Chance
     description: ''
     type: destiny
@@ -1069,23 +1011,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.k0IzPzCqBBmzWAV7'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.quEfp8vhg00Npyuk'
     cards: []
-  - _id: bwa1k6iSeQy07yjq
+  - _id: gVCnPR5y5ZvsH86c
     name: Zweite Chance
     description: ''
     type: destiny
@@ -1105,23 +1045,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bwa1k6iSeQy07yjq'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.gVCnPR5y5ZvsH86c'
     cards: []
-  - _id: CmHbI4aXOfstubDF
+  - _id: Zr6fxNh5rgrses3w
     name: Zweite Chance
     description: ''
     type: destiny
@@ -1141,23 +1079,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CmHbI4aXOfstubDF'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Zr6fxNh5rgrses3w'
     cards: []
-  - _id: MFgbzhk4WNGHIRcT
+  - _id: l31wj1qBlhUIV7D6
     name: Verbindungen
     description: ''
     type: destiny
@@ -1177,23 +1113,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.MFgbzhk4WNGHIRcT'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.l31wj1qBlhUIV7D6'
     cards: []
-  - _id: JbFuReymAfG08xNX
+  - _id: jIrpQ11JukLD4TIi
     name: Idee
     description: ''
     type: destiny
@@ -1213,23 +1147,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.JbFuReymAfG08xNX'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.jIrpQ11JukLD4TIi'
     cards: []
-  - _id: b16o7Mt5YG7qIYQx
+  - _id: cTKpui4rOVqIiUed
     name: Gut eingestimmt
     description: ''
     type: destiny
@@ -1249,23 +1181,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.b16o7Mt5YG7qIYQx'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.cTKpui4rOVqIiUed'
     cards: []
-  - _id: NNrcUlvU01YedT4Q
+  - _id: mggyTdY51FCarjG3
     name: Ruhm
     description: ''
     type: destiny
@@ -1285,23 +1215,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.NNrcUlvU01YedT4Q'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.mggyTdY51FCarjG3'
     cards: []
-  - _id: R6OLLTeDi1n8147e
+  - _id: jd0n9RnoTJJqD1Uo
     name: Ruhm
     description: ''
     type: destiny
@@ -1321,23 +1249,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.R6OLLTeDi1n8147e'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.jd0n9RnoTJJqD1Uo'
     cards: []
-  - _id: R6belGe3D4TAh8Du
+  - _id: TgrDHw1xYz9BuGtD
     name: Ruhm
     description: ''
     type: destiny
@@ -1357,23 +1283,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.R6belGe3D4TAh8Du'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.TgrDHw1xYz9BuGtD'
     cards: []
-  - _id: fICkwZmXGNgpNQPp
+  - _id: Tdkhdo7RFoidmumz
     name: Ruhm
     description: ''
     type: destiny
@@ -1393,23 +1317,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fICkwZmXGNgpNQPp'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Tdkhdo7RFoidmumz'
     cards: []
-  - _id: OXb05IK8KdRJ3Ury
+  - _id: JmUiMfECLfGlhYgl
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -1429,23 +1351,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.OXb05IK8KdRJ3Ury'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.JmUiMfECLfGlhYgl'
     cards: []
-  - _id: n7Q1uhEPhREz36gV
+  - _id: 54rxMPPAei9a4h06
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -1465,23 +1385,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.n7Q1uhEPhREz36gV'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.54rxMPPAei9a4h06'
     cards: []
-  - _id: kZp7VcNP6fZFRTsa
+  - _id: VKTopUDDOZxWRJAE
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -1501,23 +1419,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.kZp7VcNP6fZFRTsa'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.VKTopUDDOZxWRJAE'
     cards: []
-  - _id: BmD3JjALrge4DcIf
+  - _id: OAcDvpasBW2XrAMs
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -1537,23 +1453,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.BmD3JjALrge4DcIf'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.OAcDvpasBW2XrAMs'
     cards: []
-  - _id: YeSFGHmSfjm3hKIA
+  - _id: F5gXH1Zsbci3GWx7
     name: Romanze
     description: ''
     type: destiny
@@ -1573,23 +1487,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.YeSFGHmSfjm3hKIA'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.F5gXH1Zsbci3GWx7'
     cards: []
-  - _id: fy3YH3x5Utlp1vTz
+  - _id: ac6gYpagIqxtf4dl
     name: Nemesis
     description: ''
     type: destiny
@@ -1609,23 +1521,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fy3YH3x5Utlp1vTz'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ac6gYpagIqxtf4dl'
     cards: []
-  - _id: g1NH21b0IQCNEDnp
+  - _id: C2gIuDJ612uRKUiG
     name: Dramatik
     description: ''
     type: destiny
@@ -1645,23 +1555,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.g1NH21b0IQCNEDnp'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.C2gIuDJ612uRKUiG'
     cards: []
-  - _id: kcvqqYlWgDAn3Fnc
+  - _id: rtHyZAKwMNBUh4uX
     name: Dramatik
     description: ''
     type: destiny
@@ -1681,23 +1589,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.kcvqqYlWgDAn3Fnc'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.rtHyZAKwMNBUh4uX'
     cards: []
-  - _id: MBkfUbS8YJC6EQJZ
+  - _id: VsPZ7QpvF2o7CzfC
     name: Dramatik
     description: ''
     type: destiny
@@ -1717,23 +1623,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.MBkfUbS8YJC6EQJZ'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.VsPZ7QpvF2o7CzfC'
     cards: []
-  - _id: utmESMBhbu1gy8MA
+  - _id: 8IKDQWQbb2BczoIf
     name: Dramatik
     description: ''
     type: destiny
@@ -1753,23 +1657,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.utmESMBhbu1gy8MA'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.8IKDQWQbb2BczoIf'
     cards: []
-  - _id: DyCpdarIjhU7OZiG
+  - _id: TkZNkfyKFn1CkwIo
     name: Anführer
     description: ''
     type: destiny
@@ -1789,23 +1691,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.DyCpdarIjhU7OZiG'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.TkZNkfyKFn1CkwIo'
     cards: []
-  - _id: 6XOztqhWcKNnoere
+  - _id: BjsHdTAznFQXbReK
     name: Anführer
     description: ''
     type: destiny
@@ -1825,23 +1725,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.6XOztqhWcKNnoere'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.BjsHdTAznFQXbReK'
     cards: []
-  - _id: vUTHzNnNaWTOHc9C
+  - _id: kzeIBlM4UdOCdPKP
     name: Unterstützer
     description: ''
     type: destiny
@@ -1861,23 +1759,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.vUTHzNnNaWTOHc9C'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.kzeIBlM4UdOCdPKP'
     cards: []
-  - _id: emj7ZkRdaWw4W4oj
+  - _id: VPRI7DOaOlfp5FZe
     name: Unterstützer
     description: ''
     type: destiny
@@ -1897,23 +1793,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.emj7ZkRdaWw4W4oj'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.VPRI7DOaOlfp5FZe'
     cards: []
-  - _id: 7BJMgEKH3OA24eso
+  - _id: 9Zr9XKv9NqRtcTt8
     name: Unterstützer
     description: ''
     type: destiny
@@ -1933,23 +1827,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7BJMgEKH3OA24eso'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9Zr9XKv9NqRtcTt8'
     cards: []
-  - _id: H9fm4MmRHFDiaU9A
+  - _id: BuNxS6JnCBviYUwI
     name: Unterstützer
     description: ''
     type: destiny
@@ -1969,23 +1861,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.H9fm4MmRHFDiaU9A'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.BuNxS6JnCBviYUwI'
     cards: []
-  - _id: S2LJcj8GpZXLOfv0
+  - _id: JxNehN7ZUZnHxkXj
     name: Neue Kraft
     description: ''
     type: destiny
@@ -2005,23 +1895,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.S2LJcj8GpZXLOfv0'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.JxNehN7ZUZnHxkXj'
     cards: []
-  - _id: c7ul0KijWK7pbSCS
+  - _id: e8KzS3SwrOCkZ27t
     name: Neue Kraft
     description: ''
     type: destiny
@@ -2041,23 +1929,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.c7ul0KijWK7pbSCS'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.e8KzS3SwrOCkZ27t'
     cards: []
-  - _id: ShCPjgqGJn0hmgeS
+  - _id: zVklpkFJhh7u5gfe
     name: Transfer
     description: ''
     type: destiny
@@ -2077,23 +1963,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ShCPjgqGJn0hmgeS'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.zVklpkFJhh7u5gfe'
     cards: []
-  - _id: nn2AARW6QQ5VQjm8
+  - _id: 2kdm04WK2ZpdpaK4
     name: Realitätswelle
     description: ''
     type: destiny
@@ -2113,23 +1997,21 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.nn2AARW6QQ5VQjm8'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.2kdm04WK2ZpdpaK4'
     cards: []
-  - _id: DKIQbGxoRfgkEsPX
+  - _id: Sf4upW1LsXnVqiv2
     name: Mahlstrom
     description: ''
     type: destiny
@@ -2149,26 +2031,24 @@ cards:
     sort: 0
     flags: {}
     system:
-      number: ''
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.DKIQbGxoRfgkEsPX'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Sf4upW1LsXnVqiv2'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 250000
 flags:
   core: {}
   torgeternity:
@@ -2182,11 +2062,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812384
-  modifiedTime: 1716827812384
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598358706
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.tL2JmgOWm0lJvfRU
   duplicateSource: null
   exportSource: null

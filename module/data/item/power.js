@@ -1,23 +1,23 @@
 import { torgeternity } from '../../config.js';
-import { newTraitsField } from './general.js';
+import { BaseItemData } from './baseItemData.js';
 
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
  */
-export class PowerItemData extends foundry.abstract.TypeDataModel {
+export class PowerItemData extends BaseItemData {
   /**
    * @inheritdoc
    */
   static defineSchema() {
     return {
+      ...super.defineSchema('power'),
       ap: new fields.NumberField({ initial: 0, integer: true }),
       applyArmor: new fields.BooleanField({ initial: true }),
       applySize: new fields.BooleanField({ initial: true }),
       axiom: new fields.NumberField({ initial: 0, integer: true }),
       castingtime: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
-      description: new fields.HTMLField({ initial: '' }),
       dn: new fields.StringField({ initial: '' }),
       dnType: new fields.StringField({ initial: '' }),
       duration: new fields.StringField({ initial: '' }),
@@ -29,7 +29,6 @@ export class PowerItemData extends foundry.abstract.TypeDataModel {
       skill: new fields.StringField({ initial: '' }),
       skilllevel: new fields.StringField({ initial: '' }),
       targetDefense: new fields.StringField({ initial: '' }),
-      traits: newTraitsField('power'),
     };
   }
 

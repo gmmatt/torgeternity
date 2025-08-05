@@ -7,6 +7,15 @@ import { TestDialog } from './test-dialog.js';
 // @Check[thing|dn:difficulty]{label}
 const InlineRulePattern = /@Check\[(.+?)\](?:\{(.+?)\}){0,1}/g;
 
+function guessLabel(check) {
+  if (Object.hasOwn(CONFIG.torgeternity.attributeTypes, check))
+    return game.i18n.localize(CONFIG.torgeternity.attributeTypes[check]);
+  else if (Object.hasOwn(CONFIG.torgeternity.skills, check))
+    return game.i18n.localize(CONFIG.torgeternity.skills[check]);
+  else
+    return check;
+}
+
 /**
  * The enricher to create the link when a page is displayed.
  * @param {*} match 
@@ -16,38 +25,49 @@ const InlineRulePattern = /@Check\[(.+?)\](?:\{(.+?)\}){0,1}/g;
 function InlineRuleEnricher(match, options) {
   const parts = match[1].split('|');
   let label = match[2];
-  const check = parts.shift();
+  const checks = parts.shift().split(',');
+  const anchors = [];
 
-  // Decode each of the parameters
-  const dataset = { testType: check };
+  const dataset = {}
   for (const elem of parts) {
     const [key, value] = elem.split("=");
     dataset[key] = value ?? true;
   }
 
-  // Create the base anchor
-  const anchor = foundry.applications.ux.TextEditor.createAnchor({
-    //attrs: null, 
-    dataset,
-    name: label ?? check,
-    classes: ['torg-inline-check'],
-    icon: "fa-solid fa-dice-d20"
-  });
-  // Add we are manually creating a label, place the DN in a separate span
-  if (!label && dataset.dn) {
-    const span = document.createElement('span');
-    span.classList.add('dn');
-    span.append(` (DN ${dataset.dn})`);
-    anchor.append(span);
+  for (const check of checks) {
+    // Decode each of the parameters
+    dataset.testType = check;
+
+    // Create the base anchor
+    const anchor = foundry.applications.ux.TextEditor.createAnchor({
+      //attrs: null, 
+      dataset,
+      name: label ?? guessLabel(check),
+      classes: ['torg-inline-check'],
+      icon: "fa-solid fa-dice-d20"
+    });
+    // Add we are manually creating a label, place the DN in a separate span
+    if (!label && dataset.dn) {
+      const span = document.createElement('span');
+      span.classList.add('dn');
+      span.append(` (DN ${dataset.dn})`);
+      anchor.append(span);
+    }
+    // Append a button to copy the link to chat (only when in Journal)
+    if (!options.rollData && game.user.isGM && anchors.length / 2 === checks.length - 1) {
+      const icon = document.createElement("i");
+      icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
+      icon.dataset.original = match[0];
+      anchor.append(icon);
+    }
+    anchors.push(anchor);
+    if (checks.length > 1) anchors.push(' '); // will become a TEXT element
   }
-  // Append a button to copy the link to chat (only when in Journal)
-  if (!parts.includes('fromchat') && game.user.isGM) {
-    const icon = document.createElement("i");
-    icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match[0].replace("]", "|fromchat]");
-    anchor.append(icon);
-  }
-  return anchor;
+  if (anchors.length === 1) return anchors[0];
+  const globalspan = document.createElement('span');
+  globalspan.append(...anchors);
+
+  return globalspan;
 }
 
 const interactionAttacks = ['unarmed', 'intimidation', 'maneuver', 'taunt', 'kick'];
@@ -57,13 +77,13 @@ const interactionAttacks = ['unarmed', 'intimidation', 'maneuver', 'taunt', 'kic
  * @param {*} event 
  */
 function _onClickInlineCheck(event) {
-  const target = event.target.closest('a.torg-inline-check');
   // Firstly check for clicking on the "post to chat" button
   if (event.target.dataset.original) {
     ChatMessage.create({ content: event.target.dataset.original })
     return;
   }
 
+  const target = event.target.closest('a.torg-inline-check');
   const test = { ...target.dataset };
 
   // Same test as in 'rollSkillMacro'
@@ -91,7 +111,7 @@ function _onClickInlineCheck(event) {
   if (actor.system.skills[test.testType]) {  // CONFIG.torgeternity.skills
     const isInteractionAttack = test.attack ?? interactionAttacks[choice] ?? false;
     return game.torgeternity.rollSkillMacro(choice, test.attr ?? actor.system.skills[test.testType].baseAttribute, isInteractionAttack, test.dn ?? 'standard');
-  } else if ((actor.system.attributes[test.testType])) { // CONFIG.torgeternity.attributeTypes
+  } else if (actor.system.attributes[test.testType]) { // CONFIG.torgeternity.attributeTypes
     return game.torgeternity.rollSkillMacro(choice, choice, test.attack ?? false, test.dn ?? 'standard');
   }
   // Not rollSkillMacro, so anything can be set in the test.
@@ -145,10 +165,10 @@ function InlineConditionEnricher(match, options) {
     icon: "fa-solid fa-circle-plus"
   });
   // Append a button to copy the link to chat (only when in Journal)
-  if (!parts.includes('fromchat') && game.user.isGM) {
+  if (!options.rollData && game.user.isGM) {
     const icon = document.createElement("i");
     icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match[0].replace("]", "|fromchat]");
+    icon.dataset.original = match[0];
     anchor.append(icon);
   }
   return anchor;
@@ -261,10 +281,10 @@ function InlineBuffEnricher(match, options) {
     icon: "fa-solid fa-bolt-lightning"
   });
   // Append a button to copy the link to chat (only when in Journal)
-  if (!parts.includes('fromchat') && game.user.isGM) {
+  if (!options.rollData && game.user.isGM) {
     const icon = document.createElement("i");
     icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
-    icon.dataset.original = match[0].replace("]", "|fromchat]");
+    icon.dataset.original = match[0];
     anchor.append(icon);
   }
   return anchor;
@@ -284,10 +304,10 @@ async function _onClickInlineBuff(event) {
 
   // Convert dataset into a set of active effect rules
   const effectdata = {
-    name: 'FromBuff',
+    name: target.text || 'FromBuff',
     img: 'icons/svg/aura.svg',
-    disabled: false,
-    transfer: true,
+    //disabled: false,
+    //transfer: false,  // Placed directly on Actor, so not transferred
     changes: []
   };
 
@@ -298,9 +318,7 @@ async function _onClickInlineBuff(event) {
       return CONST.ACTIVE_EFFECT_MODES.OVERRIDE;
   }
   for (const [key, value] of Object.entries({ ...target.dataset })) {
-    if (key === 'fromchat')
-      continue;
-    else if (key.startsWith('skill'))
+    if (key.startsWith('skill'))
       effectdata.changes.push({
         key: `system.skills.${key.slice(5)}.adds`,
         mode: getMode(value),

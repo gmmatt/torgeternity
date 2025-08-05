@@ -280,7 +280,7 @@ items:
       chatNote: ''
       damage: 15
       damageType: ''
-      equipped: false
+      equipped: true
       notes: ''
       range: 10/25/50
       secondaryAxiom:
@@ -292,11 +292,11 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1694866995356
-      modifiedTime: 1722166724463
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598823707
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jDYOf9wwFysGXhkN
       duplicateSource: null
       exportSource: null
@@ -562,17 +562,19 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - torso
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366193
-      modifiedTime: 1722166728591
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598830473
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
       duplicateSource: null
       exportSource: null

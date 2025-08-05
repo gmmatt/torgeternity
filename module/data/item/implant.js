@@ -15,18 +15,4 @@ export class ImplantItemData extends GeneralItemData {
       implantType: new fields.StringField({ initial: game.i18n.localize('torgeternity.perkTypes.cyberware') })
     };
   }
-
-  /**
-   * @inheritdoc
-   */
-  prepareBaseData() {
-    super.prepareBaseData();
-  }
-
-  /**
-   * @inheritdoc
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
-  }
 }

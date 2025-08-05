@@ -4,12 +4,12 @@ const { DialogV2 } = foundry.applications.api;
 /**
  *
  */
-export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheet) {
+export default class TorgeternityItemSheet extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.sheets.ItemSheetV2) {
 
   static DEFAULT_OPTIONS = {
     classes: ['torgeternity', 'sheet', 'item', 'themed', 'theme-light'],
     window: {
-      contentClasses: ['standard-form'],
+      contentClasses: ['standard-form', 'scrollable'],
       resizable: true,
     },
     position: {
@@ -37,42 +37,36 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   static PARTS = {
     header: { template: 'systems/torgeternity/templates/items/item-header.hbs' },
     tabs: { template: 'templates/generic/tab-navigation.hbs' },
-    effects: { template: 'systems/torgeternity/templates/parts/active-effects.hbs', scrollable: [""] },
+    effects: { template: 'systems/torgeternity/templates/parts/active-effects.hbs', scrollable: [".scrollable"] },
 
     // same order as in system.json
-    ammunition: { template: `systems/torgeternity/templates/items/ammunition-sheet.hbs`, scrollable: [""] },
-    armor: { template: `systems/torgeternity/templates/items/armor-sheet.hbs`, scrollable: [""] },
-    customAttack: { template: `systems/torgeternity/templates/items/customAttack-sheet.hbs`, scrollable: [""] },
-    customSkill: { template: `systems/torgeternity/templates/items/customSkill-sheet.hbs`, scrollable: [""] },
-    enhancement: { template: `systems/torgeternity/templates/items/enhancement-sheet.hbs`, scrollable: [""] },
-    eternityshard: { template: `systems/torgeternity/templates/items/eternityshard-sheet.hbs`, scrollable: [""] },
-    firearm: { template: `systems/torgeternity/templates/items/firearm-sheet.hbs`, scrollable: [""] },
-    gear: { template: `systems/torgeternity/templates/items/gear-sheet.hbs`, scrollable: [""] },
-    heavyweapon: { template: `systems/torgeternity/templates/items/heavyweapon-sheet.hbs`, scrollable: [""] },
-    implant: { template: `systems/torgeternity/templates/items/implant-sheet.hbs`, scrollable: [""] },
-    meleeweapon: { template: `systems/torgeternity/templates/items/meleeweapon-sheet.hbs`, scrollable: [""] },
-    miracle: { template: `systems/torgeternity/templates/items/powers-sheet.hbs`, scrollable: [""] },
-    missileweapon: { template: `systems/torgeternity/templates/items/missileweapon-sheet.hbs`, scrollable: [""] },
-    perk: { template: `systems/torgeternity/templates/items/perk-sheet.hbs`, scrollable: [""] },
-    perkEnhancements: { template: `systems/torgeternity/templates/items/perk-enhancements-sheet.hbs`, scrollable: [""] },
-    perkLimitations: { template: `systems/torgeternity/templates/items/perk-limitations-sheet.hbs`, scrollable: [""] },
-    psionicpower: { template: `systems/torgeternity/templates/items/powers-sheet.hbs`, scrollable: [""] },
-    race: { template: `systems/torgeternity/templates/items/race-sheet.hbs`, scrollable: [""] },
-    shield: { template: `systems/torgeternity/templates/items/shield-sheet.hbs`, scrollable: [""] },
-    specialability: { template: `systems/torgeternity/templates/items/specialability-sheet.hbs`, scrollable: [""] },
-    ["specialability-rollable"]: { template: `systems/torgeternity/templates/items/specialability-rollable-sheet.hbs`, scrollable: [""] },
-    spell: { template: `systems/torgeternity/templates/items/powers-sheet.hbs`, scrollable: [""] },
-    vehicle: { template: `systems/torgeternity/templates/items/vehicle-sheet.hbs`, scrollable: [""] },
-    vehicleAddOn: { template: `systems/torgeternity/templates/items/vehicleAddOn-sheet.hbs`, scrollable: [""] },
+    ammunition: { template: `systems/torgeternity/templates/items/ammunition-sheet.hbs`, scrollable: [".scrollable"] },
+    armor: { template: `systems/torgeternity/templates/items/armor-sheet.hbs`, scrollable: [".scrollable"] },
+    customAttack: { template: `systems/torgeternity/templates/items/customAttack-sheet.hbs`, scrollable: [".scrollable"] },
+    customSkill: { template: `systems/torgeternity/templates/items/customSkill-sheet.hbs`, scrollable: [".scrollable"] },
+    enhancement: { template: `systems/torgeternity/templates/items/enhancement-sheet.hbs`, scrollable: [".scrollable"] },
+    eternityshard: { template: `systems/torgeternity/templates/items/eternityshard-sheet.hbs`, scrollable: [".scrollable"] },
+    firearm: { template: `systems/torgeternity/templates/items/firearm-sheet.hbs`, scrollable: [".scrollable"] },
+    gear: { template: `systems/torgeternity/templates/items/gear-sheet.hbs`, scrollable: [".scrollable"] },
+    heavyweapon: { template: `systems/torgeternity/templates/items/heavyweapon-sheet.hbs`, scrollable: [".scrollable"] },
+    implant: { template: `systems/torgeternity/templates/items/implant-sheet.hbs`, scrollable: [".scrollable"] },
+    meleeweapon: { template: `systems/torgeternity/templates/items/meleeweapon-sheet.hbs`, scrollable: [".scrollable"] },
+    miracle: { template: `systems/torgeternity/templates/items/powers-sheet.hbs`, scrollable: [".scrollable"] },
+    missileweapon: { template: `systems/torgeternity/templates/items/missileweapon-sheet.hbs`, scrollable: [".scrollable"] },
+    perk: { template: `systems/torgeternity/templates/items/perk-sheet.hbs`, scrollable: [".scrollable"] },
+    perkEnhancements: { template: `systems/torgeternity/templates/items/perk-enhancements-sheet.hbs`, scrollable: [".scrollable"] },
+    perkLimitations: { template: `systems/torgeternity/templates/items/perk-limitations-sheet.hbs`, scrollable: [".scrollable"] },
+    psionicpower: { template: `systems/torgeternity/templates/items/powers-sheet.hbs`, scrollable: [".scrollable"] },
+    race: { template: `systems/torgeternity/templates/items/race-sheet.hbs`, scrollable: [".scrollable"] },
+    shield: { template: `systems/torgeternity/templates/items/shield-sheet.hbs`, scrollable: [".scrollable"] },
+    specialability: { template: `systems/torgeternity/templates/items/specialability-sheet.hbs`, scrollable: [".scrollable"] },
+    ["specialability-rollable"]: { template: `systems/torgeternity/templates/items/specialability-rollable-sheet.hbs`, scrollable: [".scrollable"] },
+    spell: { template: `systems/torgeternity/templates/items/powers-sheet.hbs`, scrollable: [".scrollable"] },
+    vehicle: { template: `systems/torgeternity/templates/items/vehicle-sheet.hbs`, scrollable: [".scrollable"] },
+    vehicleAddOn: { template: `systems/torgeternity/templates/items/vehicleAddOn-sheet.hbs`, scrollable: [".scrollable"] },
 
     // not valid Item.type
-    //actionCard: { template: `systems/torgeternity/templates/items/actionCard-sheet.hbs`, scrollable: [""] },
-    //cosmCard: { template: `systems/torgeternity/templates/items/cosmCard-sheet.hbs`, scrollable: [""] },
-    //destinyCard: { template: `systems/torgeternity/templates/items/destinyCard-sheet.hbs`, scrollable: [""] },
-    racePerks: { template: `systems/torgeternity/templates/items/race-perks-sheet.hbs`, scrollable: [""] }, // TODO
-    //vehicleHeader: { template: `systems/torgeternity/templates/items/vehicle-header-sheet.hbs`, scrollable: [""] },
-
-    //powers: { template: `systems/torgeternity/templates/parts/active-effects.hbs`, scrollable: [""] }
+    racePerks: { template: `systems/torgeternity/templates/items/race-perks-sheet.hbs`, scrollable: [".scrollable"] }, // TODO
   };
 
   static TABS = {
@@ -90,7 +84,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   get title() {
-    return `${CONFIG.Item.typeLabels[this.item.type]}: ${this.item.name}`
+    return `${game.i18n.localize(CONFIG.Item.typeLabels[this.item.type])}: ${this.item.name}`
   }
 
   /** @inheritdoc */
@@ -101,6 +95,16 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   /** @inheritdoc */
   _canDragDrop(selector) {
     return this.isEditable && this.item.type === 'race';
+  }
+
+  /** @inheritdoc */
+  async _onDragStart(event) {
+    const target = event.currentTarget;
+    if (target.dataset.effectUuid) {
+      const effect = await fromUuid(target.dataset.effectUuid);
+      return event.dataTransfer.setData("text/plain", JSON.stringify(effect.toDragData()));
+    } else
+      return super._onDragStart(event);
   }
 
   /** @inheritdoc */
@@ -117,7 +121,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   async dropPerkOnRace(perk) {
-    if (perk.system.category != 'racial') {
+    if (perk.system.category !== 'racial') {
       ui.notifications.error(
         game.i18n.format('torgeternity.notifications.notAPerkItem', {
           a: game.i18n.localize('torgeternity.perkTypes.' + perk.system.category),
@@ -159,6 +163,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         drop: this._canDragDrop.bind(this),
       },
       callbacks: {
+        dragstart: this._onDragStart.bind(this),
         drop: this._onDrop.bind(this),
       }
     }).bind(this.element);
@@ -175,6 +180,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     // When the window is first opened, collapse the traits editor
     const toggleButton = this.element.querySelector('a.toggleTraits');
     if (toggleButton) TorgeternityItemSheet.#onToggleTraitEdit.call(this, null, toggleButton);
+    return super._onFirstRender(context, options);
   }
 
   /**
@@ -230,7 +236,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   static #onToggleTraitEdit(event, button) {
     const traits = button.parentElement.querySelectorAll('string-tags input, string-tags button, multi-select select');
-    console.log({ event, button, traits })
     if (!traits) return;
     const hidden = !traits[0].disabled;
     for (const elem of traits) elem.disabled = hidden;
@@ -293,7 +298,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       switch (this.document.type) {
         case 'firearm':
         case 'missileweapon':
-          options.position.height = 710;
+          options.position.height = 850;
           break;
         case 'heavyweapon':
           options.position.height = 730;
@@ -319,7 +324,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         case 'implant':
         case 'armor':
         case 'shield':
-          options.position.height = 615;
+          options.position.height = 665;
           break;
         case 'customAttack':
           options.position.height = 675;
@@ -330,7 +335,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
           break;
         case 'perk':
         default:
-          options.position.height = 560;
+          options.position.height = 600;
       }
     }
   }
@@ -355,7 +360,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.effects = prepareActiveEffectCategories(this.document.effects);
     context.item = context.document;
-    context.typeLabel = CONFIG.Item.typeLabels[context.document.type];
+    context.typeLabel = game.i18n.localize(CONFIG.Item.typeLabels[context.document.type]);
 
     context.config = CONFIG.torgeternity;
 

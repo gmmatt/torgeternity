@@ -40,7 +40,6 @@ export class StormKnightData extends CommonActorData {
    * @param {object} data the data object to migrate
    */
   static migrateData(data) {
-    super.migrateData(data);
     if (data?.details && Object.hasOwn(data?.details, 'race')) {
       data.details.race = Object.keys(torgeternity.races).includes(data.details.race)
         ? data.details.race
@@ -51,6 +50,7 @@ export class StormKnightData extends CommonActorData {
         ? data.details.sizeBonus
         : 'normal';
     }
+    return super.migrateData(data);
   }
 
   /**

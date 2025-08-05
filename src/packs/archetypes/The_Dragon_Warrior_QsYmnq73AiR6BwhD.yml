@@ -13,7 +13,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: aysle
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Blast}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#fire]{Fire
         damage}</p><p>Acquire this weapon when taking the Dragon Breath
@@ -31,22 +31,24 @@ items:
       chatNote: ''
       damage: 16
       damageType: flat
-      equipped: false
+      equipped: true
       minStrength: ''
       notes: Fire, Small Blast
       range: 10m
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - smallBlast
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: null
-      modifiedTime: 1722347753223
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599053487
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Item.njMZnZIEFvRkHHIS
       duplicateSource: null
       exportSource: null
@@ -140,17 +142,21 @@ items:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - stagger
+        - twoHanded
+        - unwieldy
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1693900634311
-      modifiedTime: 1722154788109
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599043838
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.N6G6v7wgDhnpsIiQ
       duplicateSource: null
       exportSource: null
@@ -182,13 +188,16 @@ items:
       secondaryAxiom:
         selected: none
         value: null
+      traits:
+        - fatigues
+        - fullBody
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711551146690
-      modifiedTime: 1722154966379
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753599063119
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.kKfw6Od1PySvYsOs
       duplicateSource: null
       exportSource: null

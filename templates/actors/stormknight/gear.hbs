@@ -1,11 +1,41 @@
 <section class="tab gear scrollable {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
   <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.weapons"}}
+    <span>{{localize "torgeternity.sheetLabels.weapons"}}</span>
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="meleeweapon"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.meleeWeapon' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="missileweapon"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.missileWeapon' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="firearm"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.firearm' }}">
+          <i class="fas fa-plus"></i>
+        </a> <a class="list-control item-create" data-action="itemCreate" data-itemtype="heavyweapon"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.heavyWeapon' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+        {{#if (not ignoreAmmo)}}
+          <a class="list-control item-create" data-action="itemCreate" data-itemtype="ammunition"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.ammunition' }}">
+            <i class="fas fa-plus"></i>
+          </a>
+        {{/if}}
+      </div>
+    {{/if}}
   </div>
+
   {{#if meleeweapons}}
     <h2>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h2>
     <ol class="item-list">
-
       {{#each meleeweapons as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -14,11 +44,11 @@
               ({{localize 'torgeternity.sheetLabels.meleeWeapons'}})</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -26,7 +56,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -43,6 +73,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -56,10 +89,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if missileweapon}}
     <h2>{{localize "torgeternity.sheetLabels.missileWeapons"}}</h2>
     <ol class="item-list">
-
       {{#each missileweapon as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -68,11 +101,11 @@
               ({{localize 'torgeternity.sheetLabels.missileWeapons'}})</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -80,7 +113,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -97,6 +130,9 @@
                 TL
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -119,10 +155,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if firearm}}
     <h2>{{localize "torgeternity.sheetLabels.firearms"}}</h2>
     <ol class="item-list">
-
       {{#each firearm as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -131,11 +167,11 @@
               ({{localize 'torgeternity.sheetLabels.firearms'}}))</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -143,7 +179,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -160,6 +196,9 @@
                 TL
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -182,10 +221,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if heavyweapon}}
     <h2>{{localize "torgeternity.sheetLabels.heavyWeapons"}}/{{localize "torgeternity.sheetLabels.explosives"}}</h2>
     <ol class="item-list">
-
       {{#each heavyweapon as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -195,11 +234,11 @@
               'torgeternity.sheetLabels.explosives'}})</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-attackRoll" data-action="itemAttackRoll"
+              <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
               </a>
@@ -207,7 +246,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -224,6 +263,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -246,7 +288,8 @@
       {{/each}}
     </ol>
   {{/if}}
-  {{#if (and ammunitions (not ignoreAmmo))}}
+
+  {{#if (and ammunitions.length (not ignoreAmmo))}}
     <h2>{{localize "torgeternity.sheetLabels.ammunition"}}</h2>
     <ol class="item-list">
       {{#each ammunitions as |item id|}}
@@ -279,6 +322,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{item.system.price}}
                 ({{item.system.value}})
@@ -294,12 +340,26 @@
   {{/if}}
 
   <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.armorAndShields"}}
+    <span>{{localize "torgeternity.sheetLabels.armorAndShields"}}</span>
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="armor"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.armor' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="shield"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.shield' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
   </div>
+
   {{#if armor}}
     <h2>{{localize "torgeternity.sheetLabels.armor"}}</h2>
     <ol class="item-list">
-
       {{#each armor as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -307,11 +367,11 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -319,7 +379,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -340,6 +400,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.bonus'}}
                 {{item.system.bonus}}
@@ -354,10 +417,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if shield}}
     <h2>{{localize "torgeternity.sheetLabels.shield"}}</h2>
     <ol class="item-list">
-
       {{#each shield as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -365,11 +428,11 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
                 <i class="fas fa-hand-paper"></i>
               </a>
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -377,7 +440,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -398,6 +461,9 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.bonus'}}
                 {{item.system.bonus}}
@@ -408,20 +474,45 @@
       {{/each}}
     </ol>
   {{/if}}
-  <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.generalGear"}}
-  </div>
-  {{#if gear}}
-    <h2>{{localize "torgeternity.sheetLabels.gear"}}</h2>
-    <ol class="item-list">
 
+  <div class="list-section-heading">
+    <span>{{localize "torgeternity.sheetLabels.gear"}}</span>
+    {{#if editable}}
+      <div class="list-controls">
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="gear"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.generalGear' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="implant"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.implant' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="eternityshard"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.eternityshard' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+        <a class="list-control item-create" data-action="itemCreate" data-itemtype="vehicle"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.add'}} : 
+      {{localize 'torgeternity.itemSheetDescriptions.vehicle' }}">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    {{/if}}
+  </div>
+
+  {{#if gear}}
+    <h2>{{localize "torgeternity.sheetLabels.generalGear"}}</h2>
+    <ol class="item-list">
       {{#each gear as |item id|}}
-        <li class="item" data-item-id="{{item._id}}">
+        <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -429,7 +520,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -450,16 +541,18 @@
               {{localize 'torgeternity.gear.tl'}}
               {{item.system.techlevel}}
             </div>
-
+            {{#if item.traitDesc}}
+              <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+            {{/if}}
           </div>
         </li>
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if implant}}
     <h2>{{localize "torgeternity.sheetLabels.implant"}}</h2>
     <ol class="item-list">
-
       {{#each implant as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -467,7 +560,7 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
               (Implant)</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -475,7 +568,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -496,16 +589,19 @@
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.techlevel}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
             </div>
           </div>
         </li>
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if eternityshard}}
     <h2>{{localize "torgeternity.sheetLabels.eternityShard"}}</h2>
     <ol class="item-list">
-
       {{#each eternityshard as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -513,7 +609,7 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
               (Eternity Shard)</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -521,7 +617,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
@@ -534,6 +630,9 @@
               <div class="item-dropdown-extras">
                 {{localize (concat "torgeternity.cosms." item.system.cosm)}}
               </div>
+              {{#if item.traitDesc}}
+                <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
+              {{/if}}
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tappingDifficulty'}} :
                 {{item.system.tappingDifficulty}}
@@ -548,10 +647,10 @@
       {{/each}}
     </ol>
   {{/if}}
+
   {{#if vehicle}}
     <h2>{{localize "torgeternity.sheetLabels.vehicle"}}</h2>
     <ol class="item-list">
-
       {{#each vehicle as |item id|}}
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
@@ -559,7 +658,7 @@
             <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
               (Vehicle)</a>
             <div class="item-controls">
-              <a class="item-control item-tochat" data-action="itemToChat"
+              <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
               </a>
@@ -567,7 +666,7 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
                 <i class="fas fa-edit"></i>
               </a>
-              <a class="item-control item-delete" data-action="itemDelete"
+              <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>

@@ -488,17 +488,19 @@ items:
       secondaryAxiom:
         selected: spirit
         value: 11
+      traits:
+        - torso
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '13.345'
+      systemVersion: 13.2.2
+      coreVersion: '13.346'
       createdTime: 1711562366100
-      modifiedTime: 1722161839484
-      lastModifiedBy: 93AMwcGe6H37rcPA
+      modifiedTime: 1753598518344
+      lastModifiedBy: W32Zl65V9atvPk8o
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.GY0pNAesiNYc1UXL
       duplicateSource: null
       exportSource: null
@@ -627,7 +629,7 @@ items:
     type: missileweapon
     img: systems/torgeternity/images/icons/missile-weapon-icon.webp
     system:
-      cosm: livingLand
+      cosm: none
       description: >-
         <p>Zum Ausrüsten als Nahkampfwaffe s.
         @UUID[Actor.6Pc9oa7mM6kZkFUi.Item.bsYMg4OVWpTV2Ixt]{Hrockt-Sprossenspeer}</p><p>Die
@@ -649,7 +651,7 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       minStrength: ''
       notes: ''
       range: 10/20/40
@@ -662,12 +664,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.oA1Elm4eVdBcBSn2
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.2.2
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753598497945
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _id: z1qqBadmQ8CgUUel
     sort: 0
@@ -682,7 +684,7 @@ items:
     flags:
       core: {}
     system:
-      cosm: livingLand
+      cosm: none
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#wurfwaffe:]{Wurfwaffe}</p><p>Zum
         Ausrüsten als Projektilwaffe s.
@@ -700,12 +702,14 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       notes: Wurfwaffe
       secondaryAxiom:
         selected: none
         value: null
       minStrength: null
+      traits:
+        - thrown
     ownership:
       default: 0
       1pSzpSNrhKGYYcib: 3
@@ -714,12 +718,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.346'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.2.2
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1753598504163
+      lastModifiedBy: W32Zl65V9atvPk8o
       exportSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.bsYMg4OVWpTV2Ixt'
   - name: Edeinos

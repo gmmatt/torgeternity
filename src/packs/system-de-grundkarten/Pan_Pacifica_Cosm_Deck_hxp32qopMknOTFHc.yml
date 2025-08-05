@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/PZZR%C3%BCckseite.webp
 cards:
-  - _id: NadILnWH1f7Pxfci
+  - _id: Bwwj1sKWtoU0kEtt
     name: Die Rache ist mein!
     description: ''
     type: cosm
@@ -26,24 +26,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.NadILnWH1f7Pxfci'
+    _key: '!cards.cards!hxp32qopMknOTFHc.Bwwj1sKWtoU0kEtt'
     cards: []
-  - _id: kgdXLGH9y6ntiU1R
+  - _id: KtNVPt2VLNjowa6Z
     name: Blutbad
     description: ''
     type: cosm
@@ -64,24 +62,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.kgdXLGH9y6ntiU1R'
+    _key: '!cards.cards!hxp32qopMknOTFHc.KtNVPt2VLNjowa6Z'
     cards: []
-  - _id: dkSfn6OR5jJZOKkZ
+  - _id: QQwakgAlBqkDDvQa
     name: Fehde
     description: ''
     type: cosm
@@ -102,24 +98,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.dkSfn6OR5jJZOKkZ'
+    _key: '!cards.cards!hxp32qopMknOTFHc.QQwakgAlBqkDDvQa'
     cards: []
-  - _id: Vq2hoTWMDmuW03sj
+  - _id: B8hssjGE3tTXihEC
     name: Mutation
     description: ''
     type: cosm
@@ -140,24 +134,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.Vq2hoTWMDmuW03sj'
+    _key: '!cards.cards!hxp32qopMknOTFHc.B8hssjGE3tTXihEC'
     cards: []
-  - _id: OYBGdt0q4MyQB5wb
+  - _id: Kp3lqCZ8m86TzMak
     name: Ausbruch
     description: ''
     type: cosm
@@ -178,24 +170,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.OYBGdt0q4MyQB5wb'
+    _key: '!cards.cards!hxp32qopMknOTFHc.Kp3lqCZ8m86TzMak'
     cards: []
-  - _id: tpLKgWWe9jtmogv4
+  - _id: eX1N7mpQbJhK94QO
     name: Fäuste des Zorns
     description: ''
     type: cosm
@@ -216,24 +206,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.tpLKgWWe9jtmogv4'
+    _key: '!cards.cards!hxp32qopMknOTFHc.eX1N7mpQbJhK94QO'
     cards: []
-  - _id: qbkQZURGCfvY75L1
+  - _id: 3r4Z6G6tAnFjBYCc
     name: Ist das ein Biss?
     description: ''
     type: cosm
@@ -254,24 +242,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.qbkQZURGCfvY75L1'
+    _key: '!cards.cards!hxp32qopMknOTFHc.3r4Z6G6tAnFjBYCc'
     cards: []
-  - _id: uFd46ZSaFk0Rqne8
+  - _id: uozK4nycABWmKcNV
     name: Du siehst kacke aus.
     description: ''
     type: cosm
@@ -292,24 +278,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.uFd46ZSaFk0Rqne8'
+    _key: '!cards.cards!hxp32qopMknOTFHc.uozK4nycABWmKcNV'
     cards: []
-  - _id: OxwXvrIS6nTCCoXG
+  - _id: wxMgbqnV7TF4M4Vv
     name: Verkauft
     description: ''
     type: cosm
@@ -330,24 +314,22 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.OxwXvrIS6nTCCoXG'
+    _key: '!cards.cards!hxp32qopMknOTFHc.wxMgbqnV7TF4M4Vv'
     cards: []
-  - _id: dzYdt41d4Av4pEXg
+  - _id: F5NHfipyvuSGb55G
     name: Abgebrüht
     description: ''
     type: cosm
@@ -368,27 +350,25 @@ cards:
     sort: 0
     flags: {}
     system:
-      cosm: ''
-      number: ''
+      cosm: none
+      number: null
     value: null
     width: null
     height: null
     _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
+      coreVersion: '13.346'
+      systemId: torgeternity
+      systemVersion: 13.2.2
       lastModifiedBy: null
       compendiumSource: null
       duplicateSource: null
       exportSource: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.dzYdt41d4Av4pEXg'
+    _key: '!cards.cards!hxp32qopMknOTFHc.F5NHfipyvuSGb55G'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
-sort: 0
+sort: 900000
 flags:
   core: {}
   torgeternity:
@@ -402,11 +382,11 @@ width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '13.345'
+  systemVersion: 13.2.2
+  coreVersion: '13.346'
   createdTime: 1716827812343
-  modifiedTime: 1716827812343
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1753598355970
+  lastModifiedBy: W32Zl65V9atvPk8o
   compendiumSource: Cards.BMEXCFRgfLAn56S5
   duplicateSource: null
   exportSource: null

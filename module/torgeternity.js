@@ -14,7 +14,7 @@ import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
 import torgeternitySceneConfig from './torgeternitySceneConfig.js';
 import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
-import * as torgChecks from './torgchecks.js';
+import { rollAttack, rollPower } from './torgchecks.js';
 import { modifyTokenBars } from './tokenBars.js';
 import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
@@ -22,6 +22,7 @@ import torgeternityPlayerHand from './cards/torgeternityPlayerHand.js';
 import torgeternityPile from './cards/torgeternityPile.js';
 import torgeternityDeck from './cards/torgeternityDeck.js';
 import torgeternityCardConfig from './cards/torgeternityCardConfig.js';
+import { torgeternityCard } from './cards/torgeternityCard.js';
 import { torgeternityCards } from './cards/torgeternityCards.js';
 import { TestDialog } from './test-dialog.js';
 import initTorgControlButtons from './controlButtons.js';
@@ -93,6 +94,7 @@ Hooks.once('init', async function () {
   CONFIG.ui.chat = TorgeternityChatLog;
 
   // ---cards
+  CONFIG.Card.documentClass = torgeternityCard;
   CONFIG.Cards.documentClass = torgeternityCards;
   CONFIG.cardTypes = torgeternity.cardTypes;
 
@@ -116,22 +118,26 @@ Hooks.once('init', async function () {
   });
 
   // ---register cards
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardHandConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityPlayerHand, {
     label: 'Torg Eternity Player Hand',
     types: ['hand'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardPileConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityPile, {
     label: 'Torg Eternity Pile',
     types: ['pile'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Cards, 'core', foundry.applications.sheets.CardDeckConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Cards, 'torgeternity', torgeternityDeck, {
     label: 'Torg Eternity Deck',
     types: ['deck'],
     makeDefault: true,
   });
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Card, 'core', torgeternityCardConfig, {
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(Card, 'core', foundry.applications.sheets.CardConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Card, 'torgeternity', torgeternityCardConfig, {
     label: 'Torg Eternity Card Configuration',
     types: ['destiny', 'drama', 'cosm'],
     makeDefault: true,
@@ -191,44 +197,77 @@ Hooks.once('init', async function () {
 });
 
 Hooks.once('i18nInit', () => {
-  // ---localizing entities labels
+  // ---Core Foundry expects typeLabels to be translation keys
   CONFIG.Actor.typeLabels = {
-    stormknight: game.i18n.localize('torgeternity.sheetLabels.stormknight'),
-    threat: game.i18n.localize('torgeternity.sheetLabels.threat'),
-    vehicle: game.i18n.localize('torgeternity.sheetLabels.vehicle'),
+    stormknight: 'TYPES.Actor.stormknight',
+    threat: 'TYPES.Actor.threat',
+    vehicle: 'TYPES.Actor.vehicle',
   };
   CONFIG.Item.typeLabels = {
-    ammunition: game.i18n.localize('torgeternity.itemSheetDescriptions.ammunition'),
-    gear: game.i18n.localize('torgeternity.itemSheetDescriptions.generalGear'),
-    eternityshard: game.i18n.localize('torgeternity.itemSheetDescriptions.eternityshard'),
-    armor: game.i18n.localize('torgeternity.itemSheetDescriptions.armor'),
-    shield: game.i18n.localize('torgeternity.itemSheetDescriptions.shield'),
-    customAttack: game.i18n.localize('torgeternity.itemSheetDescriptions.customAttack'),
-    meleeweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.meleeWeapon'),
-    missileweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.missileWeapon'),
-    firearm: game.i18n.localize('torgeternity.itemSheetDescriptions.firearm'),
-    implant: game.i18n.localize('torgeternity.itemSheetDescriptions.implant'),
-    heavyweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.heavyWeapon'),
-    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicle'),
-    perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
-    enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
-    specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
-    'specialability-rollable': game.i18n.localize('torgeternity.itemSheetDescriptions.specialabilityRollable'),
-    spell: game.i18n.localize('torgeternity.itemSheetDescriptions.spell'),
-    miracle: game.i18n.localize('torgeternity.itemSheetDescriptions.miracle'),
-    psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
-    customSkill: game.i18n.localize('torgeternity.itemSheetDescriptions.customSkill'),
-    vehicleAddOn: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicleAddOn'),
-    race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
+    ammunition: 'torgeternity.itemSheetDescriptions.ammunition',
+    gear: 'torgeternity.itemSheetDescriptions.generalGear',
+    eternityshard: 'torgeternity.itemSheetDescriptions.eternityshard',
+    armor: 'torgeternity.itemSheetDescriptions.armor',
+    shield: 'torgeternity.itemSheetDescriptions.shield',
+    customAttack: 'torgeternity.itemSheetDescriptions.customAttack',
+    meleeweapon: 'torgeternity.itemSheetDescriptions.meleeWeapon',
+    missileweapon: 'torgeternity.itemSheetDescriptions.missileWeapon',
+    firearm: 'torgeternity.itemSheetDescriptions.firearm',
+    implant: 'torgeternity.itemSheetDescriptions.implant',
+    heavyweapon: 'torgeternity.itemSheetDescriptions.heavyWeapon',
+    vehicle: 'torgeternity.itemSheetDescriptions.vehicle',
+    perk: 'torgeternity.itemSheetDescriptions.perk',
+    enhancement: 'torgeternity.itemSheetDescriptions.enhancement',
+    specialability: 'torgeternity.itemSheetDescriptions.specialability',
+    'specialability-rollable': 'torgeternity.itemSheetDescriptions.specialabilityRollable',
+    spell: 'torgeternity.itemSheetDescriptions.spell',
+    miracle: 'torgeternity.itemSheetDescriptions.miracle',
+    psionicpower: 'torgeternity.itemSheetDescriptions.psionicpower',
+    customSkill: 'torgeternity.itemSheetDescriptions.customSkill',
+    vehicleAddOn: 'torgeternity.itemSheetDescriptions.vehicleAddOn',
+    race: 'torgeternity.itemSheetDescriptions.race',
   };
 
-  // Mapping of translation to key (for cosm migration)
-  CONFIG.torgeternity.cosmTypeFromLabel = Object.keys(torgeternity.cosmTypes).reduce((acc, key) => {
-    acc[game.i18n.localize(torgeternity.cosmTypes[key])] = key;
-    return acc;
-  }, {});
-  // Explicit foreign key present in data.
-  CONFIG.torgeternity.cosmTypeFromLabel["(Keins)"] = "none";
+  // Hard-coded, so that we are guaranteed to have it available immediately
+  CONFIG.torgeternity.cosmTypeFromLabel = {
+    "(Keins)": "none",
+    "(Ninguno)": "none",
+    "(Non)": "none",
+    "(None)": "none",
+    "(Sans cosm)": "none",
+    "Andere": "other",
+    "Autre": "other",
+    "Aysle": "aysle",
+    "Ciberpapado": "cyberpapacy",
+    "Core Earth": "coreEarth",
+    "Cyberpapacy": "cyberpapacy",
+    "Cyberpapauté": "cyberpapacy",
+    "Cyberpontifikat": "cyberpapacy",
+    "Das Lebende Land": "livingLand",
+    "Empire du Nil": "nileEmpire",
+    "Imperio Nilo": "nileEmpire",
+    "Living Land": "livingLand",
+    "Nil Imperium": "nileEmpire",
+    "Nil-Imperium": "nileEmpire",
+    "Nile Empire": "nileEmpire",
+    "Orrorsh": "orrorsh",
+    "Other": "other",
+    "Otro": "other",
+    "Pan Pacifica": "panPacifica",
+    "Prime Terre": "coreEarth",
+    "Terre-Vivante": "livingLand",
+    "Terre vivante": "livingLand",
+    "Terre Vivante": "livingLand",
+    "Tharkold": "tharkold",
+    "Tierra Base": "coreEarth",
+    "Tierra Viviente": "livingLand",
+    "Zentralerde": "coreEarth",
+  }
+
+  // Translate number magnitude strings
+  CONFIG.torgeternity.magnitudeLabels = {};
+  for (const [key, value] of Object.entries(CONFIG.torgeternity.magnitudes))
+    CONFIG.torgeternity.magnitudeLabels[game.i18n.localize(value)] = key;
 })
 
 Hooks.once('setup', async function () {
@@ -301,7 +340,7 @@ Hooks.on('ready', async function () {
 
   // ----load template for welcome message depending on supported languages
   let lang = game.settings.get('core', 'language');
-  torgeternity.supportedLanguages.indexOf(lang) == -1 ? (lang = 'en') : (lang = lang);
+  if (torgeternity.supportedLanguages.indexOf(lang) === -1) lang = 'en';
 
   torgeternity.welcomeMessage = await foundry.applications.handlebars.renderTemplate(
     `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
@@ -316,7 +355,7 @@ Hooks.on('ready', async function () {
 
   // ------Ask about hiding nonlocal compendium
   if (
-    game.settings.get('torgeternity', 'welcomeMessage') == true &&
+    game.settings.get('torgeternity', 'welcomeMessage') === true &&
     !game.settings.get('torgeternity', 'hideForeignCompendium')
   ) {
     DialogV2.confirm({
@@ -575,125 +614,15 @@ async function rollItemMacro(itemName) {
     case 'meleeweapon':
     case 'missileweapon':
     case 'firearm':
-    case 'energyweapon':
     case 'heavyweapon':
     case 'specialability-rollable':
-      {
-        // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
-        const weaponData = item.system;
-        const { attackWith, damageType } = weaponData;
-        const weaponDamage = parseInt(weaponData.damage);
-        const skillData = actor.system.skills?.[attackWith] || item.system?.gunner;
-        let dnDescriptor = 'standard';
-        let adjustedDamage;
-        const attributes = actor.system.attributes;
-
-        // Modify dnDecriptor if target exists
-        if (game.user.targets.size) {
-          const firstTarget = game.user.targets.find(token => token.actor.type !== 'vehicle')?.actor ||
-            game.user.targets.first().actor;
-
-          switch (attackWith) {
-            case 'meleeWeapons':
-            case 'unarmedCombat':
-              firstTarget.items
-                .filter((it) => it.type === 'meleeweapon')
-                .filter((it) => it.system.equipped).length === 0
-                ? (dnDescriptor = 'targetUnarmedCombat')
-                : (dnDescriptor = 'targetMeleeWeapons');
-              break;
-            case 'fireCombat':
-            case 'energyWeapons':
-            case 'heavyWeapons':
-            case 'missileWeapons':
-              dnDescriptor = 'targetDodge';
-              break;
-            default:
-              dnDescriptor = 'targetMeleeWeapons';
-          }
-          if (firstTarget.type === 'vehicle') {
-            dnDescriptor = 'targetVehicleDefense';
-          }
-        }
-
-        // Calculate damage caused by weapon
-        switch (damageType) {
-          case 'strengthPlus':
-            adjustedDamage = attributes.strength.value + weaponDamage;
-            break;
-          case 'charismaPlus':
-            adjustedDamage = attributes.charisma.value + weaponDamage;
-            break;
-          case 'dexterityPlus':
-            adjustedDamage = attributes.dexterity.value + weaponDamage;
-            break;
-          case 'mindPlus':
-            adjustedDamage = attributes.mind.value + weaponDamage;
-            break;
-          case 'spiritPlus':
-            adjustedDamage = attributes.spirit.value + weaponDamage;
-            break;
-          case 'flat':
-          default:
-            adjustedDamage = weaponDamage;
-        }
-
-        return TestDialog.wait({
-          testType: 'attack',
-          actor: actor,
-          itemId: item.id,
-          isAttack: true,
-          amountBD: 0,
-          isFav: skillData.isFav,
-          skillName: attackWith,
-          skillValue: skillData?.value || skillData?.skillValue,
-          skillAdds: skillData.adds,
-          unskilledUse: true,
-          DNDescriptor: dnDescriptor,
-          weaponName: item.name,
-          weaponDamageType: damageType,
-          weaponDamage: weaponDamage,
-          damage: adjustedDamage,
-          weaponAP: weaponData.ap,
-          applyArmor: true,
-          applySize: true,
-          attackOptions: true,
-          chatNote: weaponData.chatNote,
-          bdDamageLabelStyle: 'hidden',
-          bdDamageSum: 0,
-        }, { useTargets: true });
-      }
+      rollAttack(actor, item);
       break;
 
     case 'psionicpower':
     case 'miracle':
     case 'spell':
-      {
-        const powerData = item.system;
-        const skillName = powerData.skill;
-        const skillData = actor.system.skills[skillName];
-
-        return TestDialog.wait({
-          testType: 'power',
-          DNDescriptor: game.user.targets.size ? powerData.dn : 'standard',
-          actor: actor,
-          powerName: item.name,
-          powerModifier: item.system.modifier || 0,
-          isAttack: powerData.isAttack,
-          amountBD: 0,
-          skillName: skillName,
-          skillAdds: skillData.adds,
-          skillValue: skillData.value,
-          unskilledUse: false,
-          damage: powerData.damage,
-          weaponAP: powerData.ap,
-          applyArmor: powerData.applyArmor,
-          applySize: powerData.applySize,
-          attackOptions: true,
-          bdDamageLabelStyle: 'hidden',
-          bdDamageSum: 0,
-        }, { useTargets: true });
-      }
+      rollPower(actor, item);
       break;
 
     default:
@@ -751,7 +680,7 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
       value: attribute,
       isFav: actor.system.attributes[attributeNameKey + 'IsFav'],
       groupName: 'other',
-      unskilledUse: 1,
+      unskilledUse: true,
     };
   }
 
@@ -762,7 +691,7 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
   if (!isAttributeTest) {
     if (actor.type === 'stormknight') {
       skillValue += skill.adds;
-    } else if (actor.type == 'threat') {
+    } else if (actor.type === 'threat') {
       const otherAttribute = actor.system.attributes[skill.baseAttribute];
       skillValue = Math.max(skill.value, otherAttribute.value);
     }
@@ -820,13 +749,6 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
 
   return TestDialog.wait(test, { useTargets: true });
 }
-
-Hooks.on('renderCombatTracker', (combatTracker) => {
-  const hands = game.cards;
-  for (const hand of hands) {
-    hand.apps[combatTracker.id] = combatTracker;
-  }
-});
 
 // change the generic threat token to match the cosm's one if it's set in the scene
 Hooks.on('preCreateToken', async (document, data, options, userId) => {
@@ -905,7 +827,7 @@ function showWelcomeMessage() {
     actions: {
       openPack: (event, button) => {
         const packName = button.dataset.packName;
-        if (packName) game.packs.get(packName).render(true);
+        if (packName) game.packs.get(packName).render({ force: true });
       }
     }
   });
@@ -939,7 +861,7 @@ function TorgRadioBoxesNumber(name, choices, options) {
     input.type = "radio";
     input.name = name;
     input.value = key;
-    if (isChecked) input.defaultChecked = (checked == key);
+    if (isChecked) input.defaultChecked = (checked === key);
     if (isNumber) input.dataset.dtype = "Number";
     if (options.hash.tooltip) element.dataset.tooltip = key;
     element.append(input, " ", label);
