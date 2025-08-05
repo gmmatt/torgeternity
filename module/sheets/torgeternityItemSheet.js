@@ -195,6 +195,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   static #onConvertRsa(event, button) {
     this.item.update({
       type: 'specialability-rollable',
+      "==system": this.item.system
     });
   }
 
@@ -313,7 +314,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
           break;
         case 'specialability':
           options.position.width = 435;
-          options.position.height = 550;
+          options.position.height = 585;
           break;
         case 'specialability-rollable':
           options.position.height = 625;
