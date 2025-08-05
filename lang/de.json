@@ -480,7 +480,7 @@
       "vehicleAddOn": "Fahrzeuge-Add-On"
     },
     "magnitudes": {
-      "billions": "B",
+      "billions": "Md",
       "millions": "M",
       "ones": "-",
       "thousands": "K"
