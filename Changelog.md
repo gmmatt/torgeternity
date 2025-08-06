@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## Next Release
+
+- Ensure all Item sheets have the correct height.
+
 ## v13.3.1
 
 - Items can be created once again.
