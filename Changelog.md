@@ -15,6 +15,7 @@
 - #359: **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
 - Apply an equipped **Shield's Minimum Strength**.
 - Ensure the current selections are visible when the Test Dialog is first opened.
+- If an explicit image is set during initial Threat creation, then use that image for the token instead of the default.
 
 ## v13.3.1
 

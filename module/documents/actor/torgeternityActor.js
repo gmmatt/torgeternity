@@ -480,7 +480,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
             lockRotation: true,
             rotation: 0,
             texture: {
-              src: 'systems/torgeternity/images/characters/threat-generic.Token.webp',
+              src: data.img ?? 'systems/torgeternity/images/characters/threat-generic.Token.webp',
               rotation: 0,
             },
             displayBars: CONST.TOKEN_DISPLAY_MODES.HOVER,
