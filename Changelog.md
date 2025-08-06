@@ -4,6 +4,8 @@
 
 - Ensure all Item sheets have the correct height.
 - Change vehicle sheet to show combined dollars+magnitude field, to match the price field of Items.
+- Vehicle sheet defaults to smaller height.
+- Restore styling of macro bar from V12.x
 
 ## v13.3.1
 

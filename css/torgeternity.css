@@ -4260,3 +4260,17 @@ a.torg-inline-buff {
     margin-left: 10px;
   }
 }
+
+#hotbar #action-bar li.slot {
+  background: url(../images/backg-page.webp);
+  box-shadow: 0 0 5px #000 inset;
+  border-radius: 0% 0% 75%;
+
+  &.full {
+    border-radius: 10%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px #004777 inset;
+  }
+}
