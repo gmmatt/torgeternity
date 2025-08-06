@@ -1772,7 +1772,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 }
 
-.tabsOff .sheet.actor .window-content {
+.sheet.actor.tabsOff .window-content {
   nav.tabs {
     display: none;
   }
@@ -1782,7 +1782,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 }
 
-.tabsOn .sheet.actor .window-content h5.editable-tooltip {
+.sheet.actor.tabsOn .window-content h5.editable-tooltip {
   display: none;
 }
 
