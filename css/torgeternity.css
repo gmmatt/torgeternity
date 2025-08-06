@@ -425,8 +425,8 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 
   &:not(.minimized) {
-    min-width: 450px;
-    min-height: 636px;
+    min-width: 750px;
+    min-height: 400px;
   }
 
   --color-scrollbar: #227878;
@@ -439,14 +439,12 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   .window-content {
     font-size: 13px;
     line-height: 14px;
-    /*background-image: url(../images/bg-sheet.webp);
-    background-size: cover;
-    padding-right: 0px;*/
 
     &>div.scrollable[data-application-part="vehicle"],
     &>div.scrollable[data-application-part="threat"] {
       padding-right: 10px;
       margin-right: 0px;
+      height: 100%;
     }
 
     h1 {

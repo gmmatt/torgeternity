@@ -152,6 +152,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         break;
       case 'vehicle':
         options.parts = [this.actor.type];
+        if (options.isFirstRender) {
+          options.position.height = "auto";
+        }
         break;
       case 'threat':
         options.parts = [this.actor.type];
