@@ -861,7 +861,7 @@ function TorgRadioBoxesNumber(name, choices, options) {
     input.type = "radio";
     input.name = name;
     input.value = key;
-    if (isChecked) input.defaultChecked = (checked === key);
+    if (isChecked) input.defaultChecked = (checked == key);
     if (isNumber) input.dataset.dtype = "Number";
     if (options.hash.tooltip) element.dataset.tooltip = key;
     element.append(input, " ", label);

@@ -14,6 +14,7 @@
 - Restore styling of **macro bar** from V12.x
 - #359: **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
 - Apply an equipped **Shield's Minimum Strength**.
+- Ensure the current selections are visible when the Test Dialog is first opened.
 
 ## v13.3.1
 
