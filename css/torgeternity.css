@@ -4220,6 +4220,10 @@ dialog.externalLinks {
 
 div.token-distance {
   background-color: #000060;
+
+  span.total-measurement {
+    color: white;
+  }
 }
 
 a.torg-inline-check,
