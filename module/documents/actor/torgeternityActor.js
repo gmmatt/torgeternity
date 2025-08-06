@@ -37,14 +37,18 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     if (this.type !== 'vehicle') {
       // initialize the worn armor and shield bonus
       const wornArmor = this.itemTypes.armor.find((a) => a.system.equipped);
-      const shieldBonus = this.itemTypes.shield.find((a) => a.system.equipped)?.system?.bonus ?? 0;
+      const heldShield = this.itemTypes.shield.find((a) => a.system.equipped);
+      const shieldBonus = heldShield?.system?.bonus ?? 0;
 
       this.fatigue = 2 + (wornArmor?.system?.fatigue ?? 0);
       this.system.other.maxDex = wornArmor?.system?.maxDex ?? 0;
       const highestMinStrWeapons = Math.max(...this.equippedMelees?.map((m) => m.system.minStrength)) ?? 0;
-      this.system.other.minStr = Math.max(wornArmor?.system?.minStrength ?? 0, highestMinStrWeapons);
+      this.system.other.minStr = Math.max(
+        wornArmor?.system?.minStrength ?? 0,
+        heldShield?.system?.minStrength ?? 0,
+        highestMinStrWeapons);
       // TODO: If we allow more than 1 wornArmor and an array is to be expected, then we need to change that here.
-      // value of each field is set in prepareDerivedData
+      // 'value' of each field is set in prepareDerivedData
       this.defenses = {
         dodge: { value: 0, mod: shieldBonus },
         meleeWeapons: { value: 0, mod: shieldBonus },
