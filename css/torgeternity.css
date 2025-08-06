@@ -4169,7 +4169,7 @@ h4 {
   font-weight: normal;
 }
 
-.sheet.item.miracle p.atkDmgAP {
+.sheet.item .item-data-label.atkDmgAP {
   font-size: smaller;
 }
 

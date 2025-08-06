@@ -297,44 +297,60 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     // On first render, set the height
     if (options.isFirstRender) {
       switch (this.document.type) {
+        case 'ammunition':
+          options.position.height = 685;
+          break;
         case 'firearm':
+          options.position.height = 800;
+          break;
         case 'missileweapon':
-          options.position.height = 850;
+          options.position.height = 940;
           break;
         case 'heavyweapon':
-          options.position.height = 730;
+          options.position.height = 800;
           break;
         case 'meleeweapon':
-          options.position.height = 675;
+          options.position.height = 795;
           break;
         case 'miracle':
         case 'psionicpower':
         case 'spell':
-          options.position.height = 780;
+          options.position.height = 795;
           break;
         case 'specialability':
-          options.position.width = 435;
-          options.position.height = 585;
+          options.position.height = 580;
           break;
         case 'specialability-rollable':
-          options.position.height = 625;
+          options.position.height = 650;
           break;
         case 'vehicle':
-          options.position.height = 630;
-          break;
-        case 'implant':
-        case 'armor':
-        case 'shield':
-          options.position.height = 665;
-          break;
-        case 'customAttack':
           options.position.height = 675;
           break;
+        case 'implant':
+          options.position.height = 650;
+          break;
+        case 'armor':
+          options.position.height = 665;
+          break;
+        case 'shield':
+          options.position.height = 650;
+          break;
+        case 'customAttack':
+          options.position.height = 705;
+          break;
+        case 'customSkill':
+        case 'gear':
+          options.position.height = 580;
+          break;
         case 'vehicleAddOn':
-          options.position.height = 620;
-          options.position.width = 465;
+          options.position.height = 650;
           break;
         case 'perk':
+          options.position.height = 810;
+          break;
+        case 'race':
+          options.position.height = 860;
+          break;
         default:
           options.position.height = 600;
       }
