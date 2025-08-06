@@ -3,6 +3,7 @@
 ## Next Release
 
 - Ensure all Item sheets have the correct height.
+- Change vehicle sheet to show combined dollars+magnitude field, to match the price field of Items.
 
 ## v13.3.1
 

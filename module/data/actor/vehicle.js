@@ -1,6 +1,7 @@
 import { torgeternity } from '../../config.js';
 import { getTorgValue } from '../../torgchecks.js';
 import TorgeternityActor from '../../documents/actor/torgeternityActor.js'
+import { calcPriceValue } from '../shared.js';
 
 const fields = foundry.data.fields;
 /**
@@ -32,12 +33,8 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       operator: new fields.ForeignDocumentField(TorgeternityActor),
       passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       price: new fields.SchemaField({
-        dollars: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
-        magnitude: new fields.StringField({
-          initial: 'ones',
-          choices: Object.keys(torgeternity.magnitudes),
-          required: true,
-        }),
+        dollars: new fields.StringField({ initial: '', nullable: false }),
+        // will receive price.value during prepareDerivedData
       }),
       topSpeed: new fields.SchemaField({
         kph: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
@@ -62,9 +59,10 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         : 'normal';
     }
     if (data?.price && Object.hasOwn(data?.price, 'magnitude')) {
-      data.price.magnitude = Object.keys(torgeternity.magnitudes).includes(data.price.magnitude)
-        ? data.price.magnitude
-        : 'other';
+      data.price.dollars = String(data.price.dollars);
+      if (data.price.magnitude !== 'ones' && Object.keys(torgeternity.magnitudes).includes(data.price.magnitude))
+        data.price.dollars += CONFIG.torgeternity.magnitudeLabels[data.price.magnitude];
+      delete data.price.magnitude;
     }
     if (data?.wounds && Object.hasOwn(data?.wounds, 'current')) {
       data.wounds.value = data.wounds.current;
@@ -84,23 +82,8 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
-    let convertedPrice = 0;
-    switch (this.price.magnitude) {
-      case 'billions':
-        convertedPrice = this.price.dollars * 1000000000;
-        break;
-      case 'millions':
-        convertedPrice = this.price.dollars * 1000000;
-        break;
-      case 'thousands':
-        convertedPrice = this.price.dollars * 1000;
-        break;
-      case 'ones':
-      default:
-        convertedPrice = this.price.dollars;
-        break;
-    }
-    this.price.value = getTorgValue(convertedPrice);
+    this.price.value = calcPriceValue(String(this.price.dollars));
+
     const speedValue = getTorgValue(this.topSpeed.kph) + 2;
     this.topSpeed.value = speedValue;
     let speedPenalty = 0;
