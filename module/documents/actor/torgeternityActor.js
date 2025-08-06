@@ -13,10 +13,6 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    *
    * @returns {Item|null}
    */
-  get wornArmor() {
-    return this.itemTypes.armor.find((a) => a.system.equipped) ?? null;
-  }
-
   get equippedMelee() {
     return this.itemTypes.meleeweapon.find((a) => a.system.equipped) ?? null;
   }
@@ -39,25 +35,26 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   prepareBaseData() {
     // Here Effects are not yet applied
     if (this.type !== 'vehicle') {
-      // initialize the worn armor bonus
-      this.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
-      this.system.other.maxDex = this.wornArmor?.system?.maxDex ?? 0;
-      const highestMinStrWeapons =
-        Math.max(...this.equippedMelees?.map((m) => m.system.minStrength)) ?? 0;
-      this.system.other.minStr = Math.max(
-        this.wornArmor?.system?.minStrength ?? 0,
-        highestMinStrWeapons ?? 0
-      ); // TODO: If we allow more than 1 wornArmor and an array is to be expected, then we need to change that here
+      // initialize the worn armor and shield bonus
+      const wornArmor = this.itemTypes.armor.find((a) => a.system.equipped);
+      const shieldBonus = this.itemTypes.shield.find((a) => a.system.equipped)?.system?.bonus ?? 0;
+
+      this.fatigue = 2 + (wornArmor?.system?.fatigue ?? 0);
+      this.system.other.maxDex = wornArmor?.system?.maxDex ?? 0;
+      const highestMinStrWeapons = Math.max(...this.equippedMelees?.map((m) => m.system.minStrength)) ?? 0;
+      this.system.other.minStr = Math.max(wornArmor?.system?.minStrength ?? 0, highestMinStrWeapons);
+      // TODO: If we allow more than 1 wornArmor and an array is to be expected, then we need to change that here
       this.defenses = {
-        dodge: { value: 0, mod: 0 },
-        meleeWeapons: { value: 0, mod: 0 },
+        dodge: { value: 0, mod: shieldBonus },
+        meleeWeapons: { value: 0, mod: shieldBonus },
         unarmedCombat: { value: 0, mod: 0 },
         intimidation: { value: 0, mod: 0 },
         maneuver: { value: 0, mod: 0 },
         taunt: { value: 0, mod: 0 },
         trick: { value: 0, mod: 0 },
         toughness: this.system.attributes.strength.value,
-        armor: this.wornArmor?.system?.bonus ?? 0,
+        armor: wornArmor?.system?.bonus ?? 0,
+        shield: shieldBonus
       };
       this.unarmed = { damage: 0, damageMod: 0 };
     }

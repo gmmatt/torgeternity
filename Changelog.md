@@ -5,7 +5,8 @@
 - Ensure all Item sheets have the correct height.
 - Change vehicle sheet to show combined dollars+magnitude field, to match the price field of Items.
 - Vehicle sheet defaults to smaller height.
-- Restore styling of macro bar from V12.x
+- Restore styling of **macro bar** from V12.x
+- **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
 
 ## v13.3.1
 
