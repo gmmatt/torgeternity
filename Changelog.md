@@ -2,6 +2,12 @@
 
 ## Next Release
 
+### IMPORTANT
+
+- Remove Active Effects from Shields that modify the defense (dodge/melee weapons), since that is now automated.
+
+### Improvements
+
 - Ensure all Item sheets have the correct height.
 - Change vehicle sheet to show combined dollars+magnitude field, to match the price field of Items.
 - Vehicle sheet defaults to smaller height.
