@@ -722,6 +722,15 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
     return super.migrateData(source);
   }
+
+  /**
+   * For a Player, returns the controlled character.
+   * For a GM, returns the "first" selected (not targeted) token's actor.
+   * @returns Actor | null
+   */
+  static getControlledActor() {
+    return (game.user.isGM && game.canvas.tokens.controlled?.length) ? game.canvas.tokens.controlled[0].actor : game.user.character;
+  }
 }
 
 

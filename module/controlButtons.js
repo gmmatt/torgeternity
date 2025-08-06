@@ -1,3 +1,5 @@
+import TorgeternityActor from './documents/actor/torgeternityActor.js';
+
 /**
  *
  */
@@ -25,7 +27,7 @@ export default function initTorgControlButtons() {
           icon: 'fa fa-id-badge',
           toggle: true,
           onChange: (event, active) => {
-            const hand = game.user.character && game.user.character.getDefaultHand();
+            const hand = TorgeternityActor.getControlledActor()?.getDefaultHand();
             if (!hand) return ui.notifications.error(game.i18n.localize('torgeternity.notifications.noHands'));
             setWindowState(hand.sheet, active);
           },
@@ -91,10 +93,10 @@ Hooks.on('closeGMScreen', () => setControlsToggle("gmScreen", false))
 Hooks.on('closeMacroHub', () => setControlsToggle("macroHub", false))
 
 Hooks.on('rendertorgeternityPlayerHand', (hand, element, context, options) => {
-  const ownHand = game.user.character && game.user.character.getDefaultHand();
+  const ownHand = TorgeternityActor.getControlledActor()?.getDefaultHand();
   if (hand.document === ownHand) setControlsToggle("playerHand", true)
 })
 Hooks.on('closetorgeternityPlayerHand', (hand) => {
-  const ownHand = game.user.character && game.user.character.getDefaultHand();
+  const ownHand = TorgeternityActor.getControlledActor()?.getDefaultHand();
   if (hand.document === ownHand) setControlsToggle("playerHand", false)
 })

@@ -727,14 +727,8 @@ export class TorgeternityMacros {
       newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
       newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     }
-    const actors = [];
-    if (game.canvas.tokens.controlled.length > 0) {
-      for (const token of game.canvas.tokens.controlled) {
-        actors.push(token.actor);
-      }
-    } else {
-      actors.push(game.user.character);
-    }
+    let actors = game.canvas.tokens.controlled.map(t => t.actor);
+    if (!actors.length) actors = [game.user.character];
 
     for (const actor of actors) {
       await actor?.createEmbeddedDocuments('ActiveEffect', [newEffect]);

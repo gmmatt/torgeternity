@@ -17,6 +17,7 @@
 - Ensure the current selections are visible when the Test Dialog is first opened.
 - If an explicit image is set during initial Threat creation, then use that image for the token instead of the default.
 - Reinstate hiding tabs on Threat sheet when its height goes below 630px.
+- Open Player Hand/Distance Hover now affect selected tokens for GMs (still controlled Actor for players).
 
 Fixes #359, #381,
 
