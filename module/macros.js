@@ -739,12 +739,12 @@ export class TorgeternityMacros {
    * Applies damage on targeted tokens
    *
    * @param {string} source A description of the source the damage comes from
-              * @param {number} value The actual damage value
-              * @param {number} bds The number of Bonus Dice that ought to take place.
-              * @param {boolean} armored Does armor count?
-              * @param {number} ap The amount of armor piercing.
-              * @returns {null} no Value
-              */
+   * @param {number} value The actual damage value
+   * @param {number} bds The number of Bonus Dice that ought to take place.
+   * @param {boolean} armored Does armor count?
+   * @param {number} ap The amount of armor piercing.
+   * @returns {null} no Value
+   */
   async periculum(source = '', value = 10, bds = 0, armored = false, ap = 0) {
     if (!game.user.targets.size)
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));

@@ -5,6 +5,12 @@
 ### IMPORTANT
 
 - Remove Active Effects from Shields that modify the defense (dodge/melee weapons), since that is now automated.
+- `@Condition[...]` has been simplified to have just three optional words
+  - `@Condition[status]` adds the condition
+  - `@Condition[status|off]` removes the condition
+  - `@Condition[status|toggle]` toggle the on/off state of the condition
+  - `@Condition[status|overlay]` adds the condition and displays it as an overlay
+  - `@Condition[status|toggle|overlay]` toggle the on/off state of the condition, and if toggled to the on state then it will be an overlay
 
 ### Improvements
 
