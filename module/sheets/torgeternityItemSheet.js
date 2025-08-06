@@ -343,7 +343,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
           options.position.height = 580;
           break;
         case 'vehicleAddOn':
-          options.position.height = 650;
+          options.position.height = 660;
           break;
         case 'perk':
           options.position.height = 810;
