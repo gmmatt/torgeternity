@@ -3390,8 +3390,7 @@ p.skill-chat-title.skilled {
 
   .window-content .sheet-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 150px 1fr;
     margin: 15px;
     column-gap: 0.5em;
   }
@@ -3467,8 +3466,6 @@ p.skill-chat-title.skilled {
   }
 
   .window-content .asside {
-    grid-row: 1/4;
-    grid-column: 1/2;
     text-align: center;
 
     &.armor {
@@ -3517,11 +3514,6 @@ p.skill-chat-title.skilled {
       text-align: center;
       max-width: 150px;
     }
-  }
-
-  .window-content .main-content {
-    grid-row: 1/4;
-    grid-column: 2/5;
   }
 
   .window-content .editor {
