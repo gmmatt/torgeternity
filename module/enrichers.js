@@ -258,7 +258,7 @@ function InlineBuffEnricher(match, options) {
   }
 
   if (!found) {
-    console.warn(`Unrecognised @Buff key: ${skillAttribute}`)
+    console.warn(`Unrecognised @Buff key: ${match[1]}`)
     return match[0];
   }
 
