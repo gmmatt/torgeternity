@@ -21,10 +21,11 @@
 - #359: **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
 - Apply an equipped **Shield's Minimum Strength**.
 - Ensure the current selections are visible when the Test Dialog is first opened.
-- If an explicit image is set during initial Threat creation, then use that image for the token instead of the default.
+- If a specific image is set during initial Threat creation, then use that image for the token instead of the default.
 - Reinstate hiding tabs on Threat sheet when its height goes below 630px.
-- Open Player Hand/Distance Hover now affect selected tokens for GMs (still controlled Actor for players).
+- **Open Player Hand/Distance Hover** now affect selected tokens for GMs (still controlled Actor's token for players).
 - Set hover distance label text color to White, regardless of Foundry's interface light/dark setting.
+- **GM Screen** pops out of the window once again.
 
 Fixes #359, #381,
 
