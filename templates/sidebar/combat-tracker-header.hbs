@@ -85,10 +85,10 @@
       {{disabled (not (and @root.user.isGM combat.turns))}}>
     </button>
     {{#if user.isGM}}
-      <!--<button type="button" class="heros-first icon fa-solid fa-users" data-action="heroesFirst"
+      <!--<button type="button" class="heroes-first icon fa-solid fa-users" data-action="heroesFirst"
         data-tooltip="{{localize 'torgeternity.combat.herosTooltip'}}" {{disabled (not combat.turns)}}>
       </button>
-      <button type="button" class="vilains-first icon fa-solid fa-users" data-action="villainsFirst"
+      <button type="button" class="villains-first icon fa-solid fa-users" data-action="villainsFirst"
         data-tooltip="{{localize 'torgeternity.combat.vilainsTooltip'}}" {{disabled (not combat.turns)}}>
       </button>-->
       {{> dramaButtons faction=firstFaction condition=firstCondition}}

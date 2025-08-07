@@ -1,3 +1,5 @@
+import { getTorgValue } from '../torgchecks.js';
+
 /**
  *
  * @param {boolean} unskilledUse Can the skill be used unskilled?
@@ -28,4 +30,24 @@ export function migrateCosm(cosm) {
 
   console.log(`Invalid Cosm: ${cosm}`);
   return 'none';
+}
+
+export function calcPriceValue(price) {
+  const found = price?.match(/^(\d+)(\D*)$/);
+  if (!found) return null;
+  let fullprice = Number(found[1]);
+  if (found[2]) {
+    const units = found[2];
+    if (units === CONFIG.torgeternity.magnitudeLabels.billions) {
+      fullprice *= 1000000000;
+    } else if (units === CONFIG.torgeternity.magnitudeLabels.millions) {
+      fullprice *= 1000000;
+    } else if (units === CONFIG.torgeternity.magnitudeLabels.thousands) {
+      fullprice *= 1000;
+    } else {
+      // Unknown suffix, so don't generate a value
+      fullprice = null;
+    }
+  }
+  return fullprice ? getTorgValue(fullprice) : null;
 }

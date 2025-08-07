@@ -3,6 +3,7 @@ import { rollBonusDie } from './torgchecks.js';
 import { torgDamage } from './torgchecks.js';
 import { TestResult, soakDamages } from './torgchecks.js';
 import { TestDialog } from './test-dialog.js';
+import TorgeternityActor from './documents/actor/torgeternityActor.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -78,8 +79,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     // check for actor possibility
-    // If vehicle roll, search for a character from the user
-    const possOwner = test.actorType === 'vehicle' ? game.user.character?.uuid : test.actor;
+    // If vehicle roll, search for a character from the user (operator or gunner)
+    const possOwner = test.actorType === 'vehicle' ? TorgeternityActor.getControlledActor()?.uuid : test.actor;
     let possPool;
     // If no valid possOwner, take possibilities from the GM
     if (possOwner) {

@@ -12,10 +12,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       contentClasses: ['standard-form', 'scrollable'],
       resizable: true,
     },
-    position: {
-      width: 530,
-      height: 580,
-    },
     form: {
       submitOnChange: true
     },
@@ -169,18 +165,13 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     }).bind(this.element);
 
     this.element.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
-  }
 
-  /**
-   * Only triggered when the window is first rendered.
-   * @param {*} context 
-   * @param {*} options 
-   */
-  async _onFirstRender(context, options) {
-    // When the window is first opened, collapse the traits editor
-    const toggleButton = this.element.querySelector('a.toggleTraits');
-    if (toggleButton) TorgeternityItemSheet.#onToggleTraitEdit.call(this, null, toggleButton);
-    return super._onFirstRender(context, options);
+    if (options.force) {
+      // Either window has just been opened, or it has been brought to the top of the stack.
+      // When the window is first opened, collapse the traits editor
+      const toggleButton = this.element.querySelector('a.toggleTraits');
+      if (toggleButton) TorgeternityItemSheet.#onToggleTraitEdit.call(this, null, toggleButton);
+    }
   }
 
   /**
@@ -279,7 +270,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
-    this.options.classes.push(this.item.type);
 
     // Decide which tabs are required
     switch (this.document.type) {
@@ -294,51 +284,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         break;
     }
 
-    // On first render, set the height
-    if (options.isFirstRender) {
-      switch (this.document.type) {
-        case 'firearm':
-        case 'missileweapon':
-          options.position.height = 850;
-          break;
-        case 'heavyweapon':
-          options.position.height = 730;
-          break;
-        case 'meleeweapon':
-          options.position.height = 675;
-          break;
-        case 'miracle':
-        case 'psionicpower':
-        case 'spell':
-          options.position.height = 780;
-          break;
-        case 'specialability':
-          options.position.width = 435;
-          options.position.height = 585;
-          break;
-        case 'specialability-rollable':
-          options.position.height = 625;
-          break;
-        case 'vehicle':
-          options.position.height = 630;
-          break;
-        case 'implant':
-        case 'armor':
-        case 'shield':
-          options.position.height = 665;
-          break;
-        case 'customAttack':
-          options.position.height = 675;
-          break;
-        case 'vehicleAddOn':
-          options.position.height = 620;
-          options.position.width = 465;
-          break;
-        case 'perk':
-        default:
-          options.position.height = 600;
-      }
-    }
+    if (!this.options.classes.includes(this.item.type))
+      this.options.classes.push(this.item.type);
   }
 
   async _preparePartContext(partId, context, options) {

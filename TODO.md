@@ -19,5 +19,3 @@
 - Should the Combat Tracker support more than one combat?
 - Check all styles for Journals (esp. with the published journals).
 - 'non-lethal' trait will KO an SK, but not require a Defeat test.
-- Need to store UUID of each gunner in the Heavy Weapon Item record embedded on the vehicle.
--- Allow drop of actor directly into weapons list on Vehicle sheet to assign as Gunner.

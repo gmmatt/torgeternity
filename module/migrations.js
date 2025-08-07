@@ -201,8 +201,7 @@ export async function torgMigration() {
         for (const key of badActorTokenKeys) {
           if (
             key === 'systems\\torgeternity\\images\\icons\\threat.Token.webp' &&
-            actor.prototypeToken.texture.src ===
-            'systems\\torgeternity\\images\\icons\\threat.Token.webp'
+            actor.prototypeToken.texture.src === 'systems\\torgeternity\\images\\icons\\threat.Token.webp'
           ) {
             const goodKey = 'systems\\torgeternity\\images\\characters\\threat-generic.Token.webp';
             await actor.update({ 'prototypeToken.texture.src': goodKey });

@@ -165,6 +165,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
 .item.sheet.torgeternity .tab {
   font-family: Palatino;
+  height: 100%;
 }
 
 .item.sheet.torgeternity .window-content header.sheet-header {
@@ -425,8 +426,8 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 
   &:not(.minimized) {
-    min-width: 450px;
-    min-height: 636px;
+    min-width: 750px;
+    min-height: 400px;
   }
 
   --color-scrollbar: #227878;
@@ -439,14 +440,12 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   .window-content {
     font-size: 13px;
     line-height: 14px;
-    /*background-image: url(../images/bg-sheet.webp);
-    background-size: cover;
-    padding-right: 0px;*/
 
     &>div.scrollable[data-application-part="vehicle"],
     &>div.scrollable[data-application-part="threat"] {
       padding-right: 10px;
       margin-right: 0px;
+      height: 100%;
     }
 
     h1 {
@@ -1774,7 +1773,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 }
 
-.tabsOff .sheet.actor .window-content {
+.sheet.actor.tabsOff .window-content {
   nav.tabs {
     display: none;
   }
@@ -1784,7 +1783,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 }
 
-.tabsOn .sheet.actor .window-content h5.editable-tooltip {
+.sheet.actor.tabsOn .window-content h5.editable-tooltip {
   display: none;
 }
 
@@ -2716,14 +2715,27 @@ nav#controls,
   button {
     border-width: 0px;
     height: 24px;
+    /* .themed .theme-dark */
+    --control-bg-color: var(--color-cool-5-75);
+    --control-border-color: var(--color-cool-4);
+    --control-icon-color: var(--color-light-2);
+    --control-hover-bg-color: var(--color-cool-5);
+    --control-hover-border-color: var(--color-cool-3);
+    --control-hover-icon-color: var(--color-light-1);
+    --control-active-bg-color: var(--color-cool-5);
+    --control-active-border-color: var(--color-warm-2);
+    --control-active-icon-color: var(--color-light-1);
+    --control-button-border-color: var(--color-warm-1);
+    --control-button-hover-bg-color: var(--color-warm-2);
+    --control-button-hover-border-color: var(--color-light-1);
   }
 
-  .heros-first,
+  .heroes-first,
   div.drama-heroes button {
     color: rgb(132, 132, 255);
   }
 
-  .vilains-first,
+  .villains-first,
   div.drama-villains button {
     color: rgb(253, 148, 148);
   }
@@ -2740,6 +2752,11 @@ nav#controls,
     border-radius: 10px;
     padding: 0px 5px 0px 5px;
     width: 65px;
+  }
+
+  .player-dsr-counter {
+    flex: 0;
+    margin-right: 2em;
   }
 
   .player-dsr-token {
@@ -2959,7 +2976,7 @@ div.readme a.compendium {
     padding: 0px 0px;
   }
 
-  .item-description-chat {
+  .item-description {
     font-family: Palatino;
     background-image: none;
     background-color: transparent;
@@ -3390,10 +3407,10 @@ p.skill-chat-title.skilled {
 
   .window-content .sheet-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 15px;
+    grid-template-columns: 150px 1fr;
+    margin-bottom: 1em;
     column-gap: 0.5em;
+    height: 100%;
   }
 
   .window-content .raceDescriptionHeadline {
@@ -3467,8 +3484,6 @@ p.skill-chat-title.skilled {
   }
 
   .window-content .asside {
-    grid-row: 1/4;
-    grid-column: 1/2;
     text-align: center;
 
     &.armor {
@@ -3519,13 +3534,12 @@ p.skill-chat-title.skilled {
     }
   }
 
-  .window-content .main-content {
-    grid-row: 1/4;
-    grid-column: 2/5;
+  .sheet-content .main-content {
+    display: flex;
+    flex-direction: column;
   }
 
   .window-content .editor {
-    min-height: 400px;
     border: 15px solid transparent;
     border-image: url('../images/frameWithoutFilling.svg') 30 / 2rem;
   }
@@ -3553,17 +3567,43 @@ p.skill-chat-title.skilled {
     }
   }
 
-  .window-content .item-description-textarea {
+  .window-content .item-description {
     font-family: "Palatino Linotype";
     font-size: 14px;
     border-radius: 15px;
     resize: none;
     padding: 5px 5px;
     width: 100%;
-  }
+    flex: 1;
 
-  .window-content .editor[name="system.prerequisites"] {
-    min-height: 150px;
+    &[name="system.description"] {
+      --min-height: 300px;
+      flex: 3;
+    }
+
+    &.smallEditor {
+      min-height: 150px;
+      row-gap: 0px;
+
+      menu {
+        gap: 2px;
+        padding: 4px;
+
+        li.text button {
+          --button-size: 24px;
+          font-size: 10px;
+          padding: 0.25em;
+        }
+      }
+
+      .editor-container {
+        margin-top: 0px;
+
+        .editor-content {
+          padding: 0px;
+        }
+      }
+    }
   }
 
   .window-content .effects {
@@ -4007,6 +4047,14 @@ form.cards-config {
   font-size: 10px;
 }
 
+#GMscreen {
+  overflow: visible;
+
+  .window-content {
+    overflow: visible;
+  }
+}
+
 #gm-screen {
   position: absolute;
   width: 120%;
@@ -4169,7 +4217,7 @@ h4 {
   font-weight: normal;
 }
 
-.sheet.item.miracle p.atkDmgAP {
+.sheet.item .item-data-label.atkDmgAP {
   font-size: smaller;
 }
 
@@ -4230,6 +4278,10 @@ dialog.externalLinks {
 
 div.token-distance {
   background-color: #000060;
+
+  span.total-measurement {
+    color: white;
+  }
 }
 
 a.torg-inline-check,
@@ -4268,5 +4320,19 @@ a.torg-inline-buff {
 
   i.toChat {
     margin-left: 10px;
+  }
+}
+
+#hotbar #action-bar li.slot {
+  background: url(../images/backg-page.webp);
+  box-shadow: 0 0 5px #000 inset;
+  border-radius: 0% 0% 75%;
+
+  &.full {
+    border-radius: 10%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px #004777 inset;
   }
 }
