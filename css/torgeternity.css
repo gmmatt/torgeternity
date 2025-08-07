@@ -3576,6 +3576,15 @@ p.skill-chat-title.skilled {
     width: 100%;
     flex: 1;
 
+    &:has(~.item-description.active) {
+      min-height: 50px;
+      flex: 1;
+    }
+
+    &.active {
+      flex: 2;
+    }
+
     &[name="system.description"] {
       --min-height: 300px;
       flex: 3;
