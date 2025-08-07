@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## NEXT RELEASE
+
+- The `Good` and `Outstanding` fields of the powers sheet (Spells, Miracle, Psionic Powers) has been converted to an HTML field, so that inline enrichers such as `@Buff` can be used.
+
 ## v13.4.0
 
 ### IMPORTANT

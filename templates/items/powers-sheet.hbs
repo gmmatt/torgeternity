@@ -59,13 +59,17 @@
     </div>
     <div class="main-content">
       <p class="item-data-label">{{localize "torgeternity.gear.description"}}</p>
-      <prose-mirror name="system.description" class="item-description" toggled name="system.description"
+      <prose-mirror name="system.description" class="item-description" toggled
         {{disabled (not @root.editable)}}
         value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.goodResult"}}</p>
-      <textarea name="system.good" class="item-description">{{item.system.good}}</textarea>
+      <prose-mirror name="system.good" class="item-description smallEditor" toggled
+        {{disabled (not @root.editable)}} value="{{ item.system.good }}">
+        {{{enrichedGood}}} </prose-mirror>
       <p class="item-data-label">{{localize "torgeternity.sheetLabels.outstandingResult"}}</p>
-      <textarea name="system.outstanding" class="item-description">{{item.system.outstanding}}</textarea>
+      <prose-mirror name="system.outstanding" class="item-description smallEditor" toggled
+        {{disabled (not @root.editable)}} value="{{ item.system.outstanding }}">
+        {{{enrichedOutstanding}}}</prose-mirror>
     </div>
   </div>
   </div>
