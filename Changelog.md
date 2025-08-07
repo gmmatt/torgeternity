@@ -14,11 +14,11 @@
 
 ### Improvements
 
-- Change vehicle sheet to show combined dollars+magnitude field, to match the price field of Items.
-- Vehicle sheet defaults to smaller height.
-- Restore styling of **macro bar** from V12.x
 - #381: **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
 - Apply an equipped **Shield's Minimum Strength**.
+- Change vehicle sheet to show **combined dollars+magnitude** field, to match the price field of Items.
+- Vehicle sheet defaults to smaller height.
+- Restore styling of **macro bar** from V12.x
 - Ensure the current selections are visible when the Test Dialog is first opened.
 - If a specific image is set during initial Threat creation, then use that image for the token instead of the default.
 - Reinstate hiding tabs on Threat sheet when its height goes below 630px.
