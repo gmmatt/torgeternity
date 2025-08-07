@@ -14,7 +14,6 @@
 
 ### Improvements
 
-- Ensure all Item sheets have the correct height.
 - Change vehicle sheet to show combined dollars+magnitude field, to match the price field of Items.
 - Vehicle sheet defaults to smaller height.
 - Restore styling of **macro bar** from V12.x
@@ -28,7 +27,7 @@
 - **GM Screen** pops out of the window once again.
 - Set **combat turn time** to 10 seconds, to advance clock automatically at end of combat Turn.
 - **Sort Combatants alphabetically** within their allegiance group.
-- Item Sheets now automatically size themselves.
+- **Item Sheets** now automatically size themselves.
 
 Fixes #359, #381,
 
