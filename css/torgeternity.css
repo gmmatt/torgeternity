@@ -2714,14 +2714,27 @@ nav#controls,
   button {
     border-width: 0px;
     height: 24px;
+    /* .themed .theme-dark */
+    --control-bg-color: var(--color-cool-5-75);
+    --control-border-color: var(--color-cool-4);
+    --control-icon-color: var(--color-light-2);
+    --control-hover-bg-color: var(--color-cool-5);
+    --control-hover-border-color: var(--color-cool-3);
+    --control-hover-icon-color: var(--color-light-1);
+    --control-active-bg-color: var(--color-cool-5);
+    --control-active-border-color: var(--color-warm-2);
+    --control-active-icon-color: var(--color-light-1);
+    --control-button-border-color: var(--color-warm-1);
+    --control-button-hover-bg-color: var(--color-warm-2);
+    --control-button-hover-border-color: var(--color-light-1);
   }
 
-  .heros-first,
+  .heroes-first,
   div.drama-heroes button {
     color: rgb(132, 132, 255);
   }
 
-  .vilains-first,
+  .villains-first,
   div.drama-villains button {
     color: rgb(253, 148, 148);
   }
