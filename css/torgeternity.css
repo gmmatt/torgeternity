@@ -3373,7 +3373,6 @@ p.skill-chat-title.skilled {
 
   .window-content {
     font-size: 0.9em;
-    max-height: 95%;
 
     .editor-content {
       flex: 1 0 auto;
