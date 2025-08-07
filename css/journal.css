@@ -443,6 +443,7 @@ a.torg-inline-buff {
   margin-right: 0.5rem;
   width: 50%;
   height: 50%;
+  object-fit: cover;
 
   &.shrink20p {
     width: 20%;
@@ -462,6 +463,7 @@ a.torg-inline-buff {
   margin-left: 0.5rem;
   width: 50%;
   height: 50%;
+  object-fit: cover;
 
   &.shrink20p {
     width: 20%;
