@@ -81,7 +81,7 @@
             type="text"
             value="{{item.system.chatNote}}" />
         </p>
-        <prose-mirror toggled name="system.description" class="item-description-textarea" {{disabled (not
+        <prose-mirror toggled name="system.description" class="item-description" {{disabled (not
           @root.editable)}}
           value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
         {{> "systems/torgeternity/templates/items/ammunition-field.hbs"}}

@@ -727,14 +727,8 @@ export class TorgeternityMacros {
       newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
       newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     }
-    const actors = [];
-    if (game.canvas.tokens.controlled.length > 0) {
-      for (const token of game.canvas.tokens.controlled) {
-        actors.push(token.actor);
-      }
-    } else {
-      actors.push(game.user.character);
-    }
+    let actors = game.canvas.tokens.controlled.map(t => t.actor);
+    if (!actors.length) actors = [game.user.character];
 
     for (const actor of actors) {
       await actor?.createEmbeddedDocuments('ActiveEffect', [newEffect]);
@@ -745,12 +739,12 @@ export class TorgeternityMacros {
    * Applies damage on targeted tokens
    *
    * @param {string} source A description of the source the damage comes from
-              * @param {number} value The actual damage value
-              * @param {number} bds The number of Bonus Dice that ought to take place.
-              * @param {boolean} armored Does armor count?
-              * @param {number} ap The amount of armor piercing.
-              * @returns {null} no Value
-              */
+   * @param {number} value The actual damage value
+   * @param {number} bds The number of Bonus Dice that ought to take place.
+   * @param {boolean} armored Does armor count?
+   * @param {number} ap The amount of armor piercing.
+   * @returns {null} no Value
+   */
   async periculum(source = '', value = 10, bds = 0, armored = false, ap = 0) {
     if (!game.user.targets.size)
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));

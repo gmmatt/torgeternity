@@ -1,5 +1,6 @@
 import { getTorgValue } from '../../torgchecks.js';
 import { BaseItemData } from './baseItemData.js'
+import { calcPriceValue } from '../shared.js';
 
 const fields = foundry.data.fields;
 /**
@@ -28,26 +29,6 @@ export class GeneralItemData extends BaseItemData {
    */
   prepareBaseData() {
     super.prepareBaseData();
-    // Calculate this.value based on this.price
-    let found = this.price?.match(/^(\d+)(\D*)$/);
-    if (!found) {
-      this.value = null;
-    } else {
-      let price = Number(found[1]);
-      if (found[2]) {
-        const units = found[2];
-        if (units === CONFIG.torgeternity.magnitudeLabels.billions) {
-          price *= 1000000000;
-        } else if (units === CONFIG.torgeternity.magnitudeLabels.millions) {
-          price *= 1000000;
-        } else if (units === CONFIG.torgeternity.magnitudeLabels.thousands) {
-          price *= 1000;
-        } else {
-          // Unknown suffix, so don't generate a value
-          price = null;
-        }
-      }
-      this.value = price ? getTorgValue(price) : null;
-    }
+    this.value = calcPriceValue(this.price);
   }
 }

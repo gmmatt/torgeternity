@@ -1,21 +1,20 @@
 <div
   class="perk-border sheet-card {{type}}"
-  data-type="{{type}}"  
->
-<div class="generalHeader">  
-      <img src="{{img}}" data-tooltip="{{name}}"/>      
-      <span>
-        {{name}} {{#if system.generalContradiction}}&bigstar;{{/if}}
-      </span>
+  data-type="{{type}}">
+  <div class="generalHeader">
+    <img src="{{img}}" data-tooltip="{{name}}" />
+    <span>
+      {{name}} {{#if system.generalContradiction}}&bigstar;{{/if}}
+    </span>
   </div>
   <div data-item-id="{{_id}}">
-    <div class="item-description-chat">{{{system.description}}}
-    {{#if system.generalContradiction}}
-    <span>
-    &bigstar;{{localize "torgeternity.chatText.mayCauseContradiction"}}
-    </span>
-    {{/if}}
-    
+    <div class="item-description">{{{system.description}}}
+      {{#if system.generalContradiction}}
+        <span>
+          &bigstar;{{localize "torgeternity.chatText.mayCauseContradiction"}}
+        </span>
+      {{/if}}
+
     </div>
   </div>
 </div>

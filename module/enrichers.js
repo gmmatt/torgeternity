@@ -141,6 +141,9 @@ function _onClickInlineCheck(event) {
  * INLINE CONDITIONS
  * 
  * @Condition[status]{label}
+ * @Condition[status|overlay|on]{label}
+ * @Condition[status|off]{label}
+ * @Condition[status|on]{label}
  */
 const InlineConditionPattern = /@Condition\[(.+?)\](?:\{(.+?)\}){0,1}/g;
 
@@ -151,9 +154,8 @@ function InlineConditionEnricher(match, options) {
 
   // Decode each of the parameters
   const dataset = { status };
-  for (const elem of parts) {
-    const [key, value] = elem.split("=");
-    dataset[key] = value ?? true;
+  for (const key of parts) {
+    dataset[key] = true;
   }
 
   // Create the base anchor
@@ -188,10 +190,10 @@ async function _onClickInlineCondition(event) {
 
   const data = { ...target.dataset };
 
-  const options = { active: true };
-  if (Object.hasOwn(data, "toggle")) delete options.active;
-  if (Object.hasOwn(data, "active")) options.active = data.active;
-  if (Object.hasOwn(data, "overlay")) options.overlay = data.overlay;
+  const options = {};
+  if (Object.hasOwn(data, "off")) options.active = false;
+  else if (!Object.hasOwn(data, "toggle")) options.active = true;
+  if (Object.hasOwn(data, "overlay")) options.overlay = true;
 
   // Special case of stymied/vulnerable stacking
   for (const actor of getActors()) {
@@ -258,7 +260,7 @@ function InlineBuffEnricher(match, options) {
   }
 
   if (!found) {
-    console.warn(`Unrecognised @Buff key: ${skillAttribute}`)
+    console.warn(`Unrecognised @Buff key: ${match[1]}`)
     return match[0];
   }
 

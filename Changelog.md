@@ -1,5 +1,39 @@
 # TORG Eternity Changelog
 
+## v13.4.0
+
+### IMPORTANT
+
+- Remove Active Effects from Shields that modify the defense (dodge/melee weapons), since that is now automated.
+- `@Condition[...]` has been simplified to have just three optional words
+  - `@Condition[status]` adds the condition
+  - `@Condition[status|off]` removes the condition
+  - `@Condition[status|toggle]` toggle the on/off state of the condition
+  - `@Condition[status|overlay]` adds the condition and displays it as an overlay
+  - `@Condition[status|toggle|overlay]` toggle the on/off state of the condition, and if toggled to the on state then it will be an overlay
+
+### Improvements
+
+- #381: **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
+- Apply an equipped **Shield's Minimum Strength**.
+- Change vehicle sheet to show **combined dollars+magnitude** field, to match the price field of Items.
+- Vehicle sheet defaults to smaller height.
+- Restore styling of **macro bar** from V12.x
+- Ensure the current selections are visible when the Test Dialog is first opened.
+- If a specific image is set during initial Threat creation, then use that image for the token instead of the default.
+- Reinstate hiding tabs on Threat sheet when its height goes below 630px.
+- **Open Player Hand/Distance Hover** now affect selected tokens for GMs (still controlled Actor's token for players).
+- Set hover distance label text color to White, regardless of Foundry's interface light/dark setting.
+- **GM Screen** pops out of the window once again.
+- Set **combat turn time** to 10 seconds, to advance clock automatically at end of combat Turn.
+- **Sort Combatants alphabetically** within their allegiance group.
+- **Item Sheets** now automatically size themselves.
+- **Distance to Token** label placed ABOVE the top resource bar.
+- Add a game system setting to disable core Foundry's **Token Movement History** feature.
+
+Fixes #359, #381, #544
+Previously Fixed #195, #326
+
 ## v13.3.1
 
 - Items can be created once again.

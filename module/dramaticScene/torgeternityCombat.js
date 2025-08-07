@@ -158,7 +158,10 @@ export default class TorgCombat extends Combat {
       const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
       updates.push({ _id: combatant.id, initiative });
     }
-    if (updates.length) return this.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
+    if (updates.length) {
+      await this.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
+      this.setupTurns();
+    }
   }
 
   get conflictLineText() {
@@ -390,5 +393,15 @@ export default class TorgCombat extends Combat {
 
     // Cancel effects from previous card (if any)
     return this.setDramaEffects(prevActiveCard);
+  }
+
+  // Sort by initiative, and then by name.
+  _sortCombatants(a, b) {
+    const ia = Number.isNumeric(a.initiative) ? a.initiative : -Infinity;
+    const ib = Number.isNumeric(b.initiative) ? b.initiative : -Infinity;
+    if (ia === ib)
+      return (a.name < b.name) ? -1 : 1;
+    else
+      return (ib - ia) || (a.id > b.id ? 1 : -1);
   }
 }

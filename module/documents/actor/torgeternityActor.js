@@ -13,10 +13,6 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    *
    * @returns {Item|null}
    */
-  get wornArmor() {
-    return this.itemTypes.armor.find((a) => a.system.equipped) ?? null;
-  }
-
   get equippedMelee() {
     return this.itemTypes.meleeweapon.find((a) => a.system.equipped) ?? null;
   }
@@ -39,45 +35,53 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   prepareBaseData() {
     // Here Effects are not yet applied
     if (this.type !== 'vehicle') {
-      // initialize the worn armor bonus
-      this.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
-      this.system.other.maxDex = this.wornArmor?.system?.maxDex ?? 0;
-      const highestMinStrWeapons =
-        Math.max(...this.equippedMelees?.map((m) => m.system.minStrength)) ?? 0;
+      // initialize the worn armor and shield bonus
+      const wornArmor = this.itemTypes.armor.find((a) => a.system.equipped);
+      const heldShield = this.itemTypes.shield.find((a) => a.system.equipped);
+      const shieldBonus = heldShield?.system?.bonus ?? 0;
+
+      this.fatigue = 2 + (wornArmor?.system?.fatigue ?? 0);
+      this.system.other.maxDex = wornArmor?.system?.maxDex ?? 0;
+      const highestMinStrWeapons = Math.max(...this.equippedMelees?.map((m) => m.system.minStrength)) ?? 0;
       this.system.other.minStr = Math.max(
-        this.wornArmor?.system?.minStrength ?? 0,
-        highestMinStrWeapons ?? 0
-      ); // TODO: If we allow more than 1 wornArmor and an array is to be expected, then we need to change that here
+        wornArmor?.system?.minStrength ?? 0,
+        heldShield?.system?.minStrength ?? 0,
+        highestMinStrWeapons);
+      // TODO: If we allow more than 1 wornArmor and an array is to be expected, then we need to change that here.
+      // 'value' of each field is set in prepareDerivedData
       this.defenses = {
-        dodge: { value: 0, mod: 0 },
-        meleeWeapons: { value: 0, mod: 0 },
+        dodge: { value: 0, mod: shieldBonus },
+        meleeWeapons: { value: 0, mod: shieldBonus },
         unarmedCombat: { value: 0, mod: 0 },
         intimidation: { value: 0, mod: 0 },
         maneuver: { value: 0, mod: 0 },
         taunt: { value: 0, mod: 0 },
         trick: { value: 0, mod: 0 },
         toughness: this.system.attributes.strength.value,
-        armor: this.wornArmor?.system?.bonus ?? 0,
+        armor: wornArmor?.system?.bonus ?? 0,
+        shield: shieldBonus
       };
       this.unarmed = { damage: 0, damageMod: 0 };
-    }
 
-    if (this.type === 'stormknight') {
-      if (this.race) {
-        for (const attribute of Object.keys(this.race.system.attributeMaximum)) {
-          this.system.attributes[attribute].maximum = this.race.system.attributeMaximum[attribute];
+      if (this.type === 'stormknight') {
+        if (this.race) {
+          for (const attribute of Object.keys(this.race.system.attributeMaximum)) {
+            this.system.attributes[attribute].maximum = this.race.system.attributeMaximum[attribute];
+          }
+          this.system.details.race = this.race.name;
+        } else {
+          this.system.details.race = game.i18n.localize('torgeternity.sheetLabels.noRace');
         }
-        this.system.details.race = this.race.name;
-      } else {
-        this.system.details.race = game.i18n.localize('torgeternity.sheetLabels.noRace');
       }
-    }
-    if (this.type === 'vehicle') {
+
+    } else {
+      // vehicle
       this.defenses = {
         toughness: this.system.toughness,
         armor: this.system.armor,
       };
     }
+
     this.statusModifiers = {
       stymied: 0,
       vulnerable: 0,
@@ -96,13 +100,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     this.statusModifiers = {
       stymied: this.statuses.has('veryStymied') ? -4 : this.statuses.has('stymied') ? -2 : 0,
       vulnerable: this.statuses.has('veryVulnerable') ? 4 : this.statuses.has('vulnerable') ? 2 : 0,
-      darkness: this.statuses.has('pitchBlack')
-        ? -6
-        : this.statuses.has('dark')
-          ? -4
-          : this.statuses.has('dim')
-            ? -2
-            : 0,
+      darkness: this.statuses.has('pitchBlack') ? -6 : this.statuses.has('dark') ? -4 : this.statuses.has('dim') ? -2 : 0,
     };
 
     // Skillsets
@@ -143,8 +141,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       this.defenses.meleeWeapons.value = meleeWeaponsDefenseSkill + this.defenses.meleeWeapons.mod;
 
       const unarmedCombatDefenseSkill = skills.unarmedCombat.value || attributes.dexterity.value;
-      this.defenses.unarmedCombat.value =
-        unarmedCombatDefenseSkill + this.defenses.unarmedCombat.mod;
+      this.defenses.unarmedCombat.value = unarmedCombatDefenseSkill + this.defenses.unarmedCombat.mod;
 
       const intimidationDefenseSkill = skills.intimidation.value || attributes.spirit.value;
       this.defenses.intimidation.value = intimidationDefenseSkill + this.defenses.intimidation.mod;
@@ -483,7 +480,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
             lockRotation: true,
             rotation: 0,
             texture: {
-              src: 'systems/torgeternity/images/characters/threat-generic.Token.webp',
+              src: data.img ?? 'systems/torgeternity/images/characters/threat-generic.Token.webp',
               rotation: 0,
             },
             displayBars: CONST.TOKEN_DISPLAY_MODES.HOVER,
@@ -724,6 +721,15 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       delete source.system.operator;
     }
     return super.migrateData(source);
+  }
+
+  /**
+   * For a Player, returns the controlled character.
+   * For a GM, returns the "first" selected (not targeted) token's actor.
+   * @returns Actor | null
+   */
+  static getControlledActor() {
+    return (game.user.isGM && game.canvas.tokens.controlled?.length) ? game.canvas.tokens.controlled[0].actor : game.user.character;
   }
 }
 

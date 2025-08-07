@@ -1,3 +1,5 @@
+import TorgeternityActor from '../documents/actor/torgeternityActor.js';
+
 export default class TorgEternityToken extends foundry.canvas.placeables.Token {
 
   static #originToken;
@@ -10,7 +12,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     if (!game.settings.get('torgeternity', 'hoverDistance') || !this.visible) return result;
     if (!canvas.tokens.active || game.activeTool !== "select") return result;
 
-    const originActor = game.user.character;
+    const originActor = TorgeternityActor.getControlledActor();
     if (!originActor) return result;
     const originToken = canvas.scene.tokens.find(t => t.actor === originActor);
     if (!originToken || originToken.object === this) return;
@@ -81,7 +83,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     html = foundry.utils.parseHTML(html);
     html.style.setProperty("--position-x", `${token.center.x}px`);
     // 50 to get text ABOVE the top of the token
-    html.style.setProperty("--position-y", `${token.center.y - 0.5 * token.h - (50 * canvas.dimensions.uiScale)}px`);
+    html.style.setProperty("--position-y", `${token.center.y - 0.6 * token.h - (50 * canvas.dimensions.uiScale)}px`);
     html.style.setProperty("--ui-scale", canvas.dimensions.uiScale);
 
     // Update the displayed label

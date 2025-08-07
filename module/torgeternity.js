@@ -333,6 +333,10 @@ Hooks.on('ready', async function () {
   // adding gmScreen to UI
   ui.GMScreen = new GMScreen();
 
+  // Set default time for combat (in seconds)
+  CONFIG.time.turnTime = 0;
+  CONFIG.time.roundTime = 10;
+
   // -----applying GM possibilities pool if absent
   if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
     game.user.setFlag('torgeternity', 'GMpossibilities', 0);
@@ -861,7 +865,7 @@ function TorgRadioBoxesNumber(name, choices, options) {
     input.type = "radio";
     input.name = name;
     input.value = key;
-    if (isChecked) input.defaultChecked = (checked === key);
+    if (isChecked) input.defaultChecked = (checked == key);
     if (isNumber) input.dataset.dtype = "Number";
     if (options.hash.tooltip) element.dataset.tooltip = key;
     element.append(input, " ", label);

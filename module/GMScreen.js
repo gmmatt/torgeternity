@@ -6,8 +6,9 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static DEFAULT_OPTIONS = {
-    tag: 'form',
-    classes: ['torgeternity', 'gmscreen', 'themed', 'theme-dark'],
+    //tag: 'form',
+    id: "GMscreen",
+    classes: ['torgeternity', 'themed', 'theme-dark'],
     position: {
       top: 10,
       width: 1300,
@@ -15,7 +16,8 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
     },
     window: {
       resizable: true,
-      contentClasses: ['standard-form'],
+      //contentClasses: ['standard-form'],
+      title: 'torgeternity.gmScreen.title',
     },
     actions: {
       clickPanel: GMScreen.#clickPanel,
@@ -25,10 +27,6 @@ export default class GMScreen extends HandlebarsApplicationMixin(ApplicationV2) 
   static PARTS = {
     gmscreen: { template: 'systems/torgeternity/templates/gmscreen/screen.html' },
   };
-
-  get title() {
-    return game.i18n.localize('torgeternity.gmScreen.title');
-  }
 
   /**
    *

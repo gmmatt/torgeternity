@@ -1,4 +1,6 @@
 import { PossibilityByCosm } from './possibilityByCosm.js';
+import TorgeternityActor from './documents/actor/torgeternityActor.js';
+
 /**
  *
  */
@@ -8,9 +10,7 @@ export default function createTorgShortcuts() {
     name: game.i18n.localize('torgeternity.dialogPrompts.openHand'),
     editable: [{ key: 'KeyH', },],
     onDown: (context) => {
-      if (game.user.character) {
-        game.user.character.getDefaultHand().sheet.toggleRender();
-      }
+      TorgeternityActor.getControlledActor()?.getDefaultHand().sheet.toggleRender();
     },
   });
   game.keybindings.register('torgeternity', 'openGMScreen', {
@@ -24,9 +24,8 @@ export default function createTorgShortcuts() {
     name: 'Possibility by cosm', // game.i18n.localize("torgeternity.gmScreen.toggle"),
     editable: [{ key: 'KeyP', },],
     onDown: (context) => {
-      if (game.user.character) {
-        PossibilityByCosm.toggleRender(game.user.character);
-      }
+      const actor = TorgeternityActor.getControlledActor();
+      if (actor) PossibilityByCosm.toggleRender(actor);
     },
   });
 }

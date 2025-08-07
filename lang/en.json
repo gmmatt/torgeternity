@@ -742,6 +742,10 @@
         "hint": "The tint colour for grid cells when a token has exceeded its max move (default: --color-level-error)",
         "name": "Grid Highlight (> Run)"
       },
+      "showMovementRuler": {
+        "hint": "Displays the movement history of tokens during a combat round (history is cleared on a new round)",
+        "name": "Show Token Movement History"
+      },
       "autoShock": {
         "name": "Automatically Apply KO",
         "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
