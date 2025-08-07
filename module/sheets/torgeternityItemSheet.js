@@ -274,7 +274,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
-    this.options.classes.push(this.item.type);
 
     // Decide which tabs are required
     switch (this.document.type) {
@@ -291,6 +290,9 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     // On first render, set the height
     if (options.isFirstRender) {
+      if (!this.options.classes.includes(this.item.type))
+        this.options.classes.push(this.item.type);
+
       switch (this.document.type) {
         case 'ammunition':
           options.position.height = 685;
