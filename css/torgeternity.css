@@ -2740,6 +2740,11 @@ nav#controls,
     width: 65px;
   }
 
+  .player-dsr-counter {
+    flex: 0;
+    margin-right: 2em;
+  }
+
   .player-dsr-token {
     color: black;
     font-family: Palatino;

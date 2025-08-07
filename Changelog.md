@@ -26,6 +26,7 @@
 - **Open Player Hand/Distance Hover** now affect selected tokens for GMs (still controlled Actor's token for players).
 - Set hover distance label text color to White, regardless of Foundry's interface light/dark setting.
 - **GM Screen** pops out of the window once again.
+- Set **combat turn time** to 10 seconds, to advance clock automatically at end of combat Turn.
 
 Fixes #359, #381,
 

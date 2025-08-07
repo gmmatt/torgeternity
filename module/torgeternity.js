@@ -333,6 +333,10 @@ Hooks.on('ready', async function () {
   // adding gmScreen to UI
   ui.GMScreen = new GMScreen();
 
+  // Set default time for combat (in seconds)
+  CONFIG.time.turnTime = 0;
+  CONFIG.time.roundTime = 10;
+
   // -----applying GM possibilities pool if absent
   if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
     game.user.setFlag('torgeternity', 'GMpossibilities', 0);
