@@ -746,8 +746,10 @@ function individualDN(test, target) {
   if (test.DNDescriptor.startsWith('target')) {
     let onTarget = test.DNDescriptor.slice(6);
     onTarget = onTarget.at(0).toLowerCase() + onTarget.slice(1);
-    if (Object.hasOwn(target.attributes, onTarget)) return target.attributes[onTarget].value;
-    if (Object.hasOwn(target.defenses, onTarget)) return target.defenses[onTarget];
+    if (Object.hasOwn(target.attributes, onTarget))
+      return target.attributes[onTarget].value;
+    if (Object.hasOwn(target.defenses, onTarget))
+      return target.defenses[onTarget];
     if (Object.hasOwn(target.skills, onTarget)) {
       const skill = target.skills[onTarget];
       return (skill.value && skill.value !== '-') ? skill.value : target.attributes[skill.baseAttribute].value;
