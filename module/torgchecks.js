@@ -741,12 +741,21 @@ export function getTorgValue(myNumber) {
   return 59;
 }
 
-function validValue(value, other) {
-  return (value && value !== '-') ? value : other;
-}
-
 function individualDN(test, target) {
+
+  if (test.DNDescriptor.startsWith('target')) {
+    let onTarget = test.DNDescriptor.slice(6);
+    onTarget = onTarget.at(0).toLowerCase() + onTarget.slice(1);
+    if (Object.hasOwn(target.attributes, onTarget)) return target.attributes[onTarget].value;
+    if (Object.hasOwn(target.defenses, onTarget)) return target.defenses[onTarget];
+    if (Object.hasOwn(target.skills, onTarget)) {
+      const skill = target.skills[onTarget];
+      return (skill.value && skill.value !== '-') ? skill.value : target.attributes[skill.baseAttribute].value;
+    }
+  }
+
   switch (test.DNDescriptor) {
+    // Simple DNs
     case 'veryEasy':
       return 6;
     case 'easy':
@@ -763,58 +772,13 @@ function individualDN(test, target) {
       return 18;
     case 'nearImpossible':
       return 20;
-    case 'targetCharisma':
-      return target.attributes.charisma.value;
-    case 'targetDexterity':
-      return target.attributes.dexterity.value;
-    case 'targetMind':
-      return target.attributes.mind.value;
-    case 'targetSpirit':
-      return target.attributes.spirit.value;
-    case 'targetStrength':
-      return target.attributes.strength.value;
-    case 'targetAlteration':
-      return validValue(target.skills.alteration.value, target.attributes.mind.value);
-    case 'targetConjuration':
-      return validValue(target.skills.conjuration.value, target.attributes.spirit.value);
-    case 'targetDivination':
-      return validValue(target.skills.divination.value, target.attributes.mind.value);
-    case 'targetDodge':
-      return target.defenses.dodge;
-    case 'targetFaith':
-      return target.skills.faith.value || target.attributes.spirit.value;
-    case 'targetFind':
-      return validValue(target.skills.find.value, target.attributes.mind.value);
-    case 'targetIntimidation':
-      return target.defenses.intimidation;
-    case 'targetKinesis':
-      return validValue(target.skills.kinesis.value, target.attributes.spirit.value);
-    case 'targetManeuver':
-      return target.defenses.maneuver;
-    case 'targetMeleeWeapons':
-      return target.defenses.meleeWeapons;
-    case 'targetPrecognition':
-      return validValue(target.skills.precognition.value, target.attributes.mind.value);
-    case 'targetStealth':
-      return target.skills.stealth.value || target.attributes.dexterity.value;
-    case 'targetTaunt':
-      return target.defenses.taunt;
-    case 'targetTrick':
-      return target.defenses.trick;
-    case 'targetUnarmedCombat':
-      return target.defenses.unarmedCombat;
-    case 'targetWillpower':
-      return target.skills.willpower.value || target.attributes.spirit.value;
+
+    // Special Case
     case 'targetWillpowerMind':
       return target.skills.willpower.value
         ? target.skills.willpower.value - target.attributes.spirit.value + target.attributes.mind.value
         : target.attributes.mind.value;
-    case 'targetLandVehicles':
-      return target.skills.landVehicles.value || target.attributes.dexterity.value;
-    case 'targetAirVehicles':
-      return target.skills.airVehicles.value || target.attributes.dexterity.value;
-    case 'targetWaterVehicles':
-      return target.skills.waterVehicles.value || target.attributes.dexterity.value;
+
     case 'highestSpeed':
       // Find the fastest participant in the active combat
       let highestSpeed = 0;
