@@ -28,6 +28,7 @@
 - Set **combat turn time** to 10 seconds, to advance clock automatically at end of combat Turn.
 - **Sort Combatants alphabetically** within their allegiance group.
 - **Item Sheets** now automatically size themselves.
+- **Distance to Token** label placed ABOVE the top resource bar.
 
 Fixes #359, #381,
 

@@ -83,7 +83,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     html = foundry.utils.parseHTML(html);
     html.style.setProperty("--position-x", `${token.center.x}px`);
     // 50 to get text ABOVE the top of the token
-    html.style.setProperty("--position-y", `${token.center.y - 0.5 * token.h - (50 * canvas.dimensions.uiScale)}px`);
+    html.style.setProperty("--position-y", `${token.center.y - 0.6 * token.h - (50 * canvas.dimensions.uiScale)}px`);
     html.style.setProperty("--ui-scale", canvas.dimensions.uiScale);
 
     // Update the displayed label
