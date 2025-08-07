@@ -3997,6 +3997,14 @@ form.cards-config {
   font-size: 10px;
 }
 
+#GMscreen {
+  overflow: visible;
+
+  .window-content {
+    overflow: visible;
+  }
+}
+
 #gm-screen {
   position: absolute;
   width: 120%;
