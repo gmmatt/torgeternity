@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## Next Release
+## v13.4.0
 
 ### IMPORTANT
 
