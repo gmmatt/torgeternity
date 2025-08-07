@@ -1,33 +1,40 @@
 <div
   class="psionicpower-border sheet-card {{system.type}}"
-  data-type="{{system.type}}"  
->
-  <div class="generalHeader">  
-    <img src="{{img}}" data-tooltip="{{name}}"/>      
+  data-type="{{system.type}}">
+  <div class="generalHeader">
+    <img src="{{img}}" data-tooltip="{{name}}" />
     <span>
       {{name}}
     </span>
   </div>
-  <div class="item-description-chat" data-item-id="{{_id}}">
+  <div class="item-description" data-item-id="{{_id}}">
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.axiom"}}:</span>
-      <span class="item-dropdown-extras">{{localize "torgeternity.sheetLabels.social"}} {{system.axiom}}</span></div>
+      <span class="item-dropdown-extras">{{localize "torgeternity.sheetLabels.social"}} {{system.axiom}}</span>
+    </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.skilllevel"}}:</span>
-      <span class="item-dropdown-extras">{{system.translatedSkill}} {{system.skilllevel}}</span></div>
+      <span class="item-dropdown-extras">{{system.translatedSkill}} {{system.skilllevel}}</span>
+    </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.castingtime"}}:</span>
-      <span class="item-dropdown-extras">{{system.castingtime}}</span></div>
+      <span class="item-dropdown-extras">{{system.castingtime}}</span>
+    </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.dn"}}:</span>
-      <span class="item-dropdown-extras">{{system.dnType}}</span></div>
+      <span class="item-dropdown-extras">{{system.dnType}}</span>
+    </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.range"}}:</span>
-      <span class="item-dropdown-extras">{{system.range}}</span></div>
+      <span class="item-dropdown-extras">{{system.range}}</span>
+    </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.duration"}}:</span>
-      <span class="item-dropdown-extras">{{system.duration}}</span></div>
+      <span class="item-dropdown-extras">{{system.duration}}</span>
+    </div>
     <br />
-    <div class="item-description-chat">{{{system.description}}}</div>
+    <div class="item-description">{{{system.description}}}</div>
     <br />
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.good"}}:</span>
-      <span class="item-description-chat">{{system.good}}</span></div>
+      <span class="item-description">{{system.good}}</span>
+    </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.outstanding"}}:</span>
-      <span class="item-description-chat">{{system.outstanding}}</span></div>
+      <span class="item-description">{{system.outstanding}}</span>
+    </div>
   </div>
 
 </div>
