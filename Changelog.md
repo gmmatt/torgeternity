@@ -17,7 +17,7 @@
 - Change vehicle sheet to show combined dollars+magnitude field, to match the price field of Items.
 - Vehicle sheet defaults to smaller height.
 - Restore styling of **macro bar** from V12.x
-- #359: **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
+- #381: **Auto-apply the shield bonus** to Dodge and Melee Weapon defense (existing AE must be removed from items).
 - Apply an equipped **Shield's Minimum Strength**.
 - Ensure the current selections are visible when the Test Dialog is first opened.
 - If a specific image is set during initial Threat creation, then use that image for the token instead of the default.
@@ -29,9 +29,10 @@
 - **Sort Combatants alphabetically** within their allegiance group.
 - **Item Sheets** now automatically size themselves.
 - **Distance to Token** label placed ABOVE the top resource bar.
-- Add a game system setting to disable core Foundry's Token Movement History feature.
+- Add a game system setting to disable core Foundry's **Token Movement History** feature.
 
-Fixes #359, #381,
+Fixes #359, #381, #544
+Previously Fixed #195, #326
 
 ## v13.3.1
 
