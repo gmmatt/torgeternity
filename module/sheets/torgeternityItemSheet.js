@@ -12,10 +12,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       contentClasses: ['standard-form', 'scrollable'],
       resizable: true,
     },
-    position: {
-      width: 530,
-      height: 580,
-    },
     form: {
       submitOnChange: true
     },
@@ -288,70 +284,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         break;
     }
 
-    // On first render, set the height
-    if (options.isFirstRender) {
-      if (!this.options.classes.includes(this.item.type))
-        this.options.classes.push(this.item.type);
-
-      switch (this.document.type) {
-        case 'ammunition':
-          options.position.height = 685;
-          break;
-        case 'firearm':
-          options.position.height = 800;
-          break;
-        case 'missileweapon':
-          options.position.height = 940;
-          break;
-        case 'heavyweapon':
-          options.position.height = 800;
-          break;
-        case 'meleeweapon':
-          options.position.height = 795;
-          break;
-        case 'miracle':
-        case 'psionicpower':
-        case 'spell':
-          options.position.height = 795;
-          break;
-        case 'specialability':
-          options.position.height = 580;
-          break;
-        case 'specialability-rollable':
-          options.position.height = 650;
-          break;
-        case 'vehicle':
-          options.position.height = 675;
-          break;
-        case 'implant':
-          options.position.height = 650;
-          break;
-        case 'armor':
-          options.position.height = 665;
-          break;
-        case 'shield':
-          options.position.height = 650;
-          break;
-        case 'customAttack':
-          options.position.height = 705;
-          break;
-        case 'customSkill':
-        case 'gear':
-          options.position.height = 580;
-          break;
-        case 'vehicleAddOn':
-          options.position.height = 660;
-          break;
-        case 'perk':
-          options.position.height = 810;
-          break;
-        case 'race':
-          options.position.height = 860;
-          break;
-        default:
-          options.position.height = 600;
-      }
-    }
+    if (!this.options.classes.includes(this.item.type))
+      this.options.classes.push(this.item.type);
   }
 
   async _preparePartContext(partId, context, options) {

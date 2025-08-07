@@ -3407,7 +3407,7 @@ p.skill-chat-title.skilled {
   .window-content .sheet-content {
     display: grid;
     grid-template-columns: 150px 1fr;
-    margin: 15px;
+    margin-bottom: 1em;
     column-gap: 0.5em;
   }
 
