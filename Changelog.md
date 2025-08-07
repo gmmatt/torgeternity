@@ -29,6 +29,7 @@
 - **Sort Combatants alphabetically** within their allegiance group.
 - **Item Sheets** now automatically size themselves.
 - **Distance to Token** label placed ABOVE the top resource bar.
+- Add a game system setting to disable core Foundry's Token Movement History feature.
 
 Fixes #359, #381,
 

@@ -244,6 +244,19 @@ export function registerTorgSettings() {
     default: true
   });
 
+  game.settings.register('torgeternity', 'showMovementRuler', {
+    name: 'torgeternity.settingMenu.showMovementRuler.name',
+    hint: 'torgeternity.settingMenu.showMovementRuler.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true,
+    requiresReload: true,
+  });
+  // Disable TokenRuler if not required
+  if (!game.settings.get('torgeternity', 'showMovementRuler'))
+    CONFIG.Token.rulerClass = null;
+
   game.settings.register('torgeternity', 'rulerGridWalk', {
     name: 'torgeternity.settingMenu.rulerGridWalk.name',
     hint: 'torgeternity.settingMenu.rulerGridWalk.hint',
