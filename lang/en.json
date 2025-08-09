@@ -89,13 +89,13 @@
         "noTracker": "Cannot use chase button unless there is an active combat in the combat tracker.",
         "result": {
           "actionTotal": "Action Total",
-          "diceTotal": "Dice sum",
           "attackMissed": "Attack Missed",
           "damage": "Damage",
+          "diceTotal": "Dice sum",
           "failure": "Failure",
+          "fragileBroken": "The fragile {itemName} breaks",
           "goodSuccess": "Good Success",
           "mishape": "Mishap",
-          "fragileBroken": "The fragile {itemName} breaks",
           "new": "New Roll Total",
           "noDamage": "No Damage",
           "outstandingSuccess": "Outstanding Success",
@@ -724,13 +724,13 @@
         "hint": "If checked, the system will re-set the decks and discard piles in the Card Stacks tab. You will need to refresh your browser before the changes are made.",
         "name": "Setup the Cards Directory"
       },
-      "welcome": {
-        "hint": "If checked, the welcome message will pop up after your world loads.",
-        "name": "Display the Welcome Message"
-      },
       "showCheckDetails": {
         "hint": "If checked, the details of checks will always be shown.",
         "name": "Show Details in checks"
+      },
+      "welcome": {
+        "hint": "If checked, the welcome message will pop up after your world loads.",
+        "name": "Display the Welcome Message"
       },
       "uniqueDN": {
         "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",

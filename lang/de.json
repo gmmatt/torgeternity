@@ -90,9 +90,10 @@
         "result": {
           "actionTotal": "Aktion insgesamt",
           "attackMissed": "Angriff verfehlt",
-          "diceTotal": "Würfelergebnis",
           "damage": "Schaden",
+          "diceTotal": "Würfelergebnis",
           "failure": "Fehlschlag",
+	  "fragileBroken": "***The fragile {itemName} breaks",
           "goodSuccess": "Guter Erfolg",
           "mishape": "Patzer",
           "new": "Neue Summe",
@@ -106,6 +107,15 @@
           "BDDamageSum": "Summe des Schadens der BW"
         },
         "testUnsuccessfull": "Probe nicht erfolgreich"
+      },
+      "contradiction": {
+        "alreadyDisconnected": "***is already disconnected",
+        "noContradiction": "***has no contradiction",
+        "hasDisconnected": "***has <strong>disconnected</strong>!!!",
+        "notDisconnected": "***has not disconnected",
+        "possibleContradiction": "***has a possible contradiction",
+        "contradictionCheck": "***Contradiction Check",
+        "checkTooltip": "***<strong>{name}</strong> rolls for contradiction"
       },
       "damage": "Schaden",
       "dieTotal": "Würfelergebnis",
@@ -154,6 +164,8 @@
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
       "nextNew": "neue Runde (neue Dramakarte)",
+      "heroes": "***Heroes",
+      "villains": "***Villains",
       "herosTooltip": "heros first",
       "vilainsTooltip": "vilains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
@@ -217,6 +229,13 @@
       "mindPlus": "Verstand +",
       "spiritPlus": "Geist +",
       "strengthPlus": "Stärke +"
+    },
+    "defeat": {
+      "prompt": "***{name} must make a Defeat Test",
+      "outstanding": "***<p><strong>{name} is Knocked Out</strong></p>",
+      "good": "***<p><strong>{name} is Knocked Out</strong></p><p>They suffer an Injury that lasts until all Wounds are healed</p>",
+      "standard": "***<p><strong>{name} is Knocked Out</strong></p><p>They suffer a permanent Injury</p>",
+      "failure": "***<p><strong>{name} dies!</strong></p><p>They get one final, dramatic action before expiring (ignoring wound penalties)</p>"
     },
     "dialogPrompts": {
       "cardPooled": "Im Aktionenpool?",
@@ -312,25 +331,45 @@
       "standard": "Standard (10)",
       "targetAirVehicles": "Luftfahrzeuge oder Geschicklichkeit des Ziels",
       "targetAlteration": "Verwandlung des Ziels",
+      "targetApportation": "***Target Appportation",
+      "targetBeastRiding": "***Target Beast Riding",
+      "targetComputers": "***Target Computers",
       "targetCharisma": "Charisma des Ziels",
       "targetConjuration": "Beschwörung des Ziels",
       "targetDexterity": "Geschicklichkeit des Ziels",
       "targetDivination": "Wahrsagung des Ziels",
       "targetDodge": "Ausweichen des Ziels",
+      "targetEnergyWeapons": "***Target Energy Weapons",
+      "targetEvidenceAnalysis": "***Target Evidence Analysis",
       "targetFaith": "Glauben des Ziels",
+      "targetFind": "Finden des Ziels",
+      "targetFireCombat": "***Target Fire Combat",
+      "targetFirstAid": "***Target First Aid",
+      "targetHeavyWeapons": "***Target Heavy Weapons",
       "targetIntimidation": "Einschüchtern des Ziels",
       "targetKinesis": "Kinese  des Ziels",
       "targetLandVehicles": "Landfahrzeuge oder Geschicklichkeit des Ziels",
+      "targetLanguage": "***Target Language",
+      "targetLockpicking": "***Target Lockpicking",
       "targetManeuver": "Manövrieren des Ziels",
+      "targetMedicine": "***Target Medicine",
       "targetMeleeWeapons": "Nahkampfwaffen des Ziels",
+      "targetMissileWeapons": "***Target Missile Weapons",
       "targetMind": "Verstand des Ziels",
+      "targetPersuasion": "***Target Persuasion",
       "targetPrecognition": "Präkognition des Ziels",
+      "targetProfession": "***Target Profession",
+      "targetReality": "***Target Reality",
+      "targetScholar": "***Target Scholar",
       "targetSpirit": "Geist  des Ziels",
       "targetStealth": "Heimlichkeit des Ziels",
+      "targetStreetwise": "***Target Streetwise",
       "targetStrength": "Stärke des Ziels",
+      "targetSurvival": "***Target Survival",
       "targetTaunt": "Verspotten des Ziels",
+      "targetTelepathy": "***Target Telepathy",
+      "targetTracking": "***Target Tracking",
       "targetTrick": "Tricksen des Ziels",
-      "targetFind": "Finden des Ziels",
       "targetUnarmedCombat": "Waffenloser Kampf  des Ziels",
       "targetVehicleDefense": "Verteidigung des Zielfahrzeuges",
       "targetWaterVehicles": "Wasserfahrzeuge oder Geschicklichkeit des Ziels",
@@ -391,6 +430,12 @@
       "description": "Beschreibung",
       "enhances": "verbessert",
       "perk": "Verbundener Vorzug"
+    },
+    "fieldLabels": {
+      "itemTraits": {
+        "label": "***Traits",
+        "hint": "***The specific abilities of this item"
+      }
     },
     "gear": {
       "ammo": "Munition",
@@ -476,6 +521,7 @@
       "specialability": "Spezialfähigkeit",
       "specialabilityRollable": "Spezialfähigkeit (würfelbar)",
       "spell": "Zauber",
+      "traits": "***Traits",
       "vehicle": "Fahrzeuge",
       "vehicleAddOn": "Fahrzeuge-Add-On"
     },
@@ -698,6 +744,10 @@
         "hint": "Verwende den Pan-Pacifica Tischaufsteller nach Jahr 1.",
         "name": "Jahr-1 PP Aufsteller"
       },
+      "cardChatNotify": {
+        "hint": "***Hides core Foundry card messages where Torg Eternity supplies its own message",
+        "name": "***Suppress Core Card Messages"
+      },
       "shuffleMessageSurpress": {
         "hint": "Wenn diese Option aktiviert ist, wird die Chat-Nachricht beim Mischen der Karten unterdrückt.",
         "name": "Chatnachrichten beim Mischen unterdrücken"
@@ -705,6 +755,34 @@
       "ignoreAmmo": {
         "hint": "Wenn diese Option aktiviert ist, werden sämtliche Mechanismen und Regeln für Munition igorniert.",
         "name": "Ignoriere Munitionsmechanismen"
+      },
+      "hoverDistance": {
+        "hint": "If checked, hovering the mouse over a token will display the distance to that token from the user's controlled character",
+        "name": "Show Distance to Token"
+      },
+      "rulerGridWalk": {
+        "hint": "The tint colour for grid cells when a token has not reached its move distance (default: --color-level-success)",
+        "name": "Grid Highlight (Walk)"
+      },
+      "rulerGridRun": {
+        "hint": "The tint colour for grid cells when a token has exceeded its move, but not its max move (default: --color-level-info)",
+        "name": "Grid Highlight (Run)"
+      },
+      "rulerGridMax": {
+        "hint": "The tint colour for grid cells when a token has exceeded its max move (default: --color-level-error)",
+        "name": "Grid Highlight (> Run)"
+      },
+      "showMovementRuler": {
+        "hint": "Displays the movement history of tokens during a combat round (history is cleared on a new round)",
+        "name": "Show Token Movement History"
+      },
+      "autoShock": {
+        "name": "Automatically Apply KO",
+        "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
+      },
+      "autoWound": {
+        "name": "Automatically Apply Wounds",
+        "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
       }
     },
     "sheetLabels": {
@@ -733,8 +811,8 @@
       "attacks": "Angriffe",
       "attribute": "Attribute",
       "attributeMaximum": "Maximum der Attribute",
+      "attributes": "***Attribute",
       "max": "Max.",
-      "attributes": "Attribute",
       "availableEnhancements": "Verfügbare Verbesserungen",
       "background": "Hintergrund",
       "backgroundAndNotes": "Hintergrund und Notizen",
@@ -756,6 +834,8 @@
       "cosm": "Cosm",
       "coverBonus": "Deckungsbonus",
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
+      "crewUnskilledOperator": "***The operator of this vehicle is unskilled!",
+      "crewUnskilledWeapon": "***This weapon is being used unskilled!",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "customAttacks": "Individuelle Angriffe",
@@ -861,6 +941,9 @@
       "race": "Volk",
       "racialPerks": "Volksfähigkeiten",
       "range": "Reichweite",
+      "darkvision": "***Darkvision",
+      "removeGunner": "***Remove this gunner from this weapon",
+      "removeOperator": "***Remove the operator from the vehicle",
       "return": "Zurück",
       "roll": "Würfeln",
       "run": "Laufen",
@@ -1114,6 +1197,60 @@
       "noDSR": "Keine DPA",
       "step": "Schritt"
     },
+    "traits": {
+      "blackPowder": "***Black Powder",
+      "bulky": "***Bulky",
+      "carbine": "***Carbine",
+      "dazing": "***Dazing",
+      "fatigues": "***Fatigues",
+      "fragile": "***Fragile",
+      "fullBody": "***Full Body",
+      "grapple": "***Grapple",
+      "head": "***Head",
+      "ignoresArmor": "***Ignores Armor",
+      "lowestArmor": "***Lowest Armor",
+      "nonLethal": "***Non-Lethal",
+      "painful": "***Painful",
+      "pistol": "***Pistol",
+      "quick": "***Quick",
+      "reload": "***Reload",
+      "shotgun": "***Shotgun",
+      "small": "***Small",
+      "stagger": "***Stagger",
+      "thrown": "***Thrown",
+      "torso": "***Torso",
+      "twoHanded": "***Two-Handed",
+      "unwieldy": "***Unwieldy",
+      "wounding": "***Wounding",
+      "shortBurst": "***Short Burst",
+      "mediumBlast": "***Medium Blast",
+      "longBurst": "***Long Burst",
+      "smallBlast": "***Small Blast",
+      "heavyBurst": "***Heavy Burst",
+      "largeBlast": "***Large Blast",
+      "veryLargeBlast": "***Very Large Blast",
+      "hugeBlast": "***Huge Blast",
+      "energyDamage": "***Energy Damage",
+      "fireDamage": "***Fire Damage",
+      "forceDamage": "***Force Damage",
+      "iceDamage": "***Ice Damage",
+      "lightningDamage": "***Lightning Damage",
+      "energyArmor": "***Armor vs Energy",
+      "fireArmor": "***Armor vs Fire",
+      "forceArmor": "***Armor vs Force",
+      "iceArmor": "***Armor vs Ice",
+      "lightningArmor": "***Armor vs Lightning",
+      "energyDefense": "***Defense vs Energy",
+      "fireDefense": "***Defense vs Fire",
+      "forceDefense": "***Defense vs Force",
+      "iceDefense": "***Defense vs Ice",
+      "lightningDefense": "***Defense vs Lightning"
+    },
+    "traitGroup": {
+      "defense": "***Defense",
+      "melee": "***Melee",
+      "ranged": "***Ranged"
+    },    
     "vehicleTypes": {
       "air": "Luft",
       "land": "Land",
