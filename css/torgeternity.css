@@ -4295,6 +4295,7 @@ div.token-distance {
 
 a.torg-inline-check,
 a.torg-inline-condition,
+a.torg-inline-contradiction,
 a.torg-inline-damage,
 a.torg-inline-buff {
   /* Just like core a.inline-roll */

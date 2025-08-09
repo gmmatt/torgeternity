@@ -430,7 +430,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * or if it exceeds the provided axiom limits
    * @param {String} cosm 
    * @param {String|undefined} cosm2 
-   * @param {Object} maxAxioms 
+   * @param {Object} maxAxioms (see CONFIG.torgeternity.axiomByCosm)
    * @returns Boolean
    */
   isContradiction(cosm, cosm2, maxAxioms) {

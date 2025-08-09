@@ -3,6 +3,8 @@ import { torgeternity } from '../config.js';
 const FATIGUED_FACTION_FLAG = 'fatiguedFaction';
 const IS_DRAMATIC_FLAG = 'isDramatic';
 
+let firsttime;
+
 /**
  *
  */
@@ -16,6 +18,9 @@ export default class TorgCombat extends Combat {
    * @param userId
    */
   _onCreate(data, options, userId) {
+    if (!firsttime) {
+
+    }
     super._onCreate(data, options, userId);
   }
 
@@ -366,13 +371,26 @@ export default class TorgCombat extends Combat {
       const foreignItem = actor.items.find(item => item.isContradiction(cosm, CompressionStream, maxAxioms));
 
       chatOutput += `<li>${actor.name}: `
-      if (fromReality && !foreignItem) {
+      if (actor.isDisconnected) {
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.alreadyDisconnected')}`;
+      } else if (fromReality && !foreignItem) {
         chatOutput += ` ${game.i18n.localize('torgeternity.chatText.noContradiction')}`;
         continue;
-      } else if (!fromReality && foreignItem)
-        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.possibleContradiction')} [[/r d20cs>4]]{1-4}`;
-      else
-        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.possibleContradiction')} [[/r d20cs>1]]{1}`;
+      } else {
+        const limit = (!fromReality && foreignItem) ? 4 : 1;
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.possibleContradiction')} `;
+        /*chatOutput += `[[/r d20cs>${limit}]]`;
+        chatOutput += limit ? '{1 - 4}' : '{1}';*/
+        chatOutput += foundry.applications.ux.TextEditor.createAnchor({
+          dataset: {
+            limit: limit,
+            uuid: actor.uuid
+          },
+          name: limit ? '{1-4}' : '{1}',
+          classes: ['torg-inline-contradiction'],
+          icon: "fa-solid fa-dice-d20"
+        }).outerHTML;
+      }
 
       chatOutput += '</li>';
     }
@@ -441,4 +459,46 @@ export default class TorgCombat extends Combat {
     else
       return (ib - ia) || (a.id > b.id ? 1 : -1);
   }
+
+  static async _onClickContradiction(event) {
+    const target = event.target.closest('a.torg-inline-contradiction');
+    const limit = target.dataset.limit;
+    const actor = fromUuidSync(target.dataset.uuid);
+
+    // Get the current speaker
+    const speaker = ChatMessage.getSpeaker();
+    let rollData = actor ? actor.getRollData() : {};
+
+    // Perform the roll
+    const rolls = foundry.dice.Roll.create(`d20cs>${limit}`, rollData);
+    const roll = await rolls.roll();
+    console.log(roll);
+    const success = roll.result === '1';
+
+    let result;
+    if (!success) {
+      await actor.toggleStatusEffect('disconnected', { active: true });
+      result = game.i18n.localize('torgeternity.statusEffects.disconnected');
+    } else {
+      result = game.i18n.localize('torgeternity.chatText.notDisconnected');
+    }
+    const content = `<h2>${game.i18n.localize('torgeternity.chatText.possibleDisconnect')}</h2><p>${roll.dice[0].values[0]}: ${result}</p>`;
+
+    //const roll = Roll.create(a.dataset.formula, rollData);
+    //return roll.toMessage({ flavor: a.dataset.flavor, speaker }, { rollMode: a.dataset.mode });
+
+    //ChatMessage.create({ flavor: content, rolls })
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content
+    })
+  }
 }
+
+
+Hooks.once('setup', async function () {
+  document.body.addEventListener('click', event => {
+    if (event.target?.closest("a.torg-inline-contradiction"))
+      TorgCombat._onClickContradiction(event);
+  })
+})
