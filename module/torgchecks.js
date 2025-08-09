@@ -15,6 +15,8 @@ export const TestResult = {
  */
 export async function renderSkillChat(test) {
 
+  if (CONFIG.debug.torgtestrender) console.debug('renderSkillChat', test);
+
   for (const key of Object.keys(test)) {
     if (!(test[key] instanceof String)) continue;
     const num = Number(test[key]);
