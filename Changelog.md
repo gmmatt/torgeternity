@@ -2,6 +2,8 @@
 
 ## NEXT RELEASE
 
+### Improvements
+
 - The **Good** and **Outstanding** fields of the powers sheet (Spells, Miracle, Psionic Powers) has been converted to an HTML field, so that inline enrichers such as `@Buff` can be used.
 - Item control buttons are in same order on Stats tab and other tabs.
 - Rework the `@Check` enricher, so that "dn=" can simply reference the target skill/attribute (without the 'target' prefix).
@@ -18,6 +20,10 @@
   - Each actor in the combat tracker on that faction's side will be examined for a possible contradiction, and a chat card will prompt with a dice roll for each actor. The 0, 1 or 1-4 cases are based on none, one or both of the following being true:
     - The actor's cosm does not match either of the cosms of the current scene.
     - Any item on the has a higher `Tech Level` (if set) or higher `secondary axiom` than the highest axioms of the cosms of the current scene.
+
+### Bug Fixes
+
+- Popping out the Combat Tracker should show the correctly working drama card line.
 
 ## v13.4.0
 

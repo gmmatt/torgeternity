@@ -39,7 +39,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   async _prepareCombatContext(context, options) {
     // for HEADER and FOOTER
     await super._prepareCombatContext(context, options);
-    if (context.partId !== 'combat-header') return;
+    if (context.partId !== 'combat-header' && context.partId !== 'combat-popout-header') return;
 
     const combat = this.viewed;
     const heroesFirst = combat?.areHeroesFirst;
