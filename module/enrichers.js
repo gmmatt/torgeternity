@@ -35,7 +35,7 @@ function InlineRuleEnricher(match, options) {
   }
 
   for (const check of checks) {
-    // Decode each of the parameters
+    // Decode each of the parameters: DN, <skill>, <attribute>, <other>
     dataset.testType = check;
 
     // Create the base anchor
@@ -91,8 +91,8 @@ function _onClickInlineCheck(event) {
   const speaker = ChatMessage.getSpeaker();
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
+  if (!actor) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTokenNorActor'));
 
-  const choice = test.testType;
   if (test.dn) {
     const dnmap = {
       "6": "veryEasy",
@@ -107,31 +107,73 @@ function _onClickInlineCheck(event) {
     test.dn = dnmap[test.dn] ?? test.dn;
   }
 
-  // See if we can pass the check off to `rollSkillMacro`
-  if (actor.system.skills[test.testType]) {  // CONFIG.torgeternity.skills
-    const isInteractionAttack = test.attack ?? interactionAttacks[choice] ?? false;
-    return game.torgeternity.rollSkillMacro(choice, test.attr ?? actor.system.skills[test.testType].baseAttribute, isInteractionAttack, test.dn ?? 'standard');
-  } else if (actor.system.attributes[test.testType]) { // CONFIG.torgeternity.attributeTypes
-    return game.torgeternity.rollSkillMacro(choice, choice, test.attack ?? false, test.dn ?? 'standard');
+  // use 'actor' simply to get the full list of attributes, defenses and skills
+  if (Object.hasOwn(CONFIG.torgeternity.attributeTypes, test.dn) ||
+    Object.hasOwn(actor.defenses, test.dn) ||
+    Object.hasOwn(CONFIG.torgeternity.skills, test.dn)) {
+    test.DNDescriptor = `target${test.dn.capitalize()}`;
+  } else {
+    if (!Object.hasOwn(CONFIG.torgeternity.dnTypes, test.dn)) {
+      ui.notifications.warn('Unrecognized DN in check', { field: test.dn });
+      return;
+    }
+    test.DNDescriptor = test.dn ?? (interactionAttacks.includes(test.testType) ? `target${test.testType.capitalize()}` : 'standard');
   }
-  // Not rollSkillMacro, so anything can be set in the test.
+
+  if (actor.system?.skills?.[test.testType]) {
+    // skill test
+    const skillName = test.testType;
+    const skill = actor.system.skills[skillName];
+    if (!skill) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noSkillNamed') + skillName);
+    const attribute = actor.system.attributes[test.attribute ?? skill.baseAttribute];
+    if (!attribute) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noItemNamed'));
+
+    let skillValue = attribute.value;
+    if (actor.type === 'stormknight')
+      skillValue += skill.adds;
+    else if (actor.type === 'threat')
+      skillValue += Math.max(skill.value, attribute.value);
+    const isInteractionAttack = (test.attack || interactionAttacks.includes(skillName));
+
+    foundry.utils.mergeObject(test, {
+      testType: isInteractionAttack ? 'interactionAttack' : 'skill',
+      skillName: skillName,
+      skillAdds: skill.adds,
+      skillValue: skillValue,
+      isFav: skill.isFav,
+      unskilledUse: skill.unskilledUse || isInteractionAttack,
+    }, { inplace: true })
+
+  } else if (actor.system?.attributes?.[test.testType]) {
+    // attribute test
+    const attributeName = test.testType;
+    const attribute = actor.system.attributes[attributeName];
+
+    foundry.utils.mergeObject(test, {
+      testType: test.attack ? 'interactionAttack' : 'attribute',
+      skillName: attributeName,
+      skillAdds: 0,
+      skillValue: attribute.value,
+      isFav: actor.system.attributes[attributeName + 'IsFav'],
+      unskilledUse: true,
+    }, { inplace: true });
+
+  } else {
+    // Not skill or attribute, so anything can be set in the test.
+    // @Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true]
+    if (test.skillName && actor.system.skills[test.skillName]) {
+      const skill = actor.system.skills[test.skillName];
+      test.skillAdds ??= skill.adds;
+      test.skillValue ??= skill.value;
+    }
+  }
 
   // Add Actor information
-  test.actor = actor;
-  test.DNDescriptor = test.dn;
-  if (!Object.hasOwn(CONFIG.torgeternity.dnTypes, test.DNDescriptor)) {
-    ui.notifications.warn('Unrecognized DN in check', { field: test.DNDescriptor });
-    return;
-  }
-
-  // @Check[interactionAttack|skillName=intimidation|dn=targetIntimidation|unskilledUse=true]
-
-  // Add Skill/Attribute values from the actor
-  if (test.skillName && actor.system.skills[test.skillName]) {
-    const skill = actor.system.skills[test.skillName];
-    test.skillAdds ??= skill.adds;
-    test.skillValue ??= skill.value;
-  }
+  foundry.utils.mergeObject(test, {
+    actor: actor,
+    bdDamageLabelStyle: 'hidden',
+    bdDamageSum: 0,
+  }, { inplace: true })
 
   return TestDialog.wait(test, { useTargets: true });
 }
