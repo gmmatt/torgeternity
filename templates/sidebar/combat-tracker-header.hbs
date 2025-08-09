@@ -58,7 +58,7 @@
   <nav class="encounters flexrow">
     <button type="button" class="toggleDramatic icon fa-solid {{ifThen isDramatic 'fa-people-robbery' 'fa-person'}}"
       data-action="toggleDramatic"
-      data-tooltip="{{localize 'torgeternity.combat.toggleDramatic'}}"
+      data-tooltip="<p>{{localize (concat 'torgeternity.dramaCard.' (ifThen isDramatic 'dramatic' 'standard'))}}<p>{{localize 'torgeternity.combat.toggleDramatic'}}"
       {{disabled (not (and @root.user.isGM combat.turns))}}>
     </button>
     {{#if user.isGM}}
