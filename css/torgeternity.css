@@ -3071,6 +3071,10 @@ div.readme a.compendium {
     margin: 0.5em 0 0 0;
   }
 
+  .contradiction-roll {
+    font-family: "Palatino Linotype";
+  }
+
   .applyButtons {
     display: flex;
     align-items: center;

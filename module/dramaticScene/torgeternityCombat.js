@@ -370,21 +370,22 @@ export default class TorgCombat extends Combat {
       const fromReality = (actor.system.other.cosm === cosm) || (cosm2 && actor.system.other.cosm === cosm2);
       const foreignItem = actor.items.find(item => item.isContradiction(cosm, CompressionStream, maxAxioms));
 
-      chatOutput += `<li>${actor.name}: `
+      chatOutput += `<li class="contradiction-roll"><strong>${actor.name}:</strong> `
       if (actor.isDisconnected) {
-        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.alreadyDisconnected')}`;
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.alreadyDisconnected')}`;
       } else if (fromReality && !foreignItem) {
-        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.noContradiction')}`;
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.noContradiction')}`;
         continue;
       } else {
         const limit = (!fromReality && foreignItem) ? 4 : 1;
-        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.possibleContradiction')} `;
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.possibleContradiction')} `;
         /*chatOutput += `[[/r d20cs>${limit}]]`;
         chatOutput += limit ? '{1 - 4}' : '{1}';*/
         chatOutput += foundry.applications.ux.TextEditor.createAnchor({
           dataset: {
             limit: limit,
-            uuid: actor.uuid
+            uuid: actor.uuid,
+            tooltip: game.i18n.format('torgeternity.chatText.contradiction.checkTooltip', { name: actor.name })
           },
           name: limit ? '{1-4}' : '{1}',
           classes: ['torg-inline-contradiction'],
@@ -464,27 +465,25 @@ export default class TorgCombat extends Combat {
     const target = event.target.closest('a.torg-inline-contradiction');
     const limit = target.dataset.limit;
     const actor = fromUuidSync(target.dataset.uuid);
-
-    // Get the current speaker
-    const speaker = ChatMessage.getSpeaker();
-    let rollData = actor ? actor.getRollData() : {};
+    // Silently ignore clicks if user is not the owner.
+    if (!actor.isOwner) return;
 
     // Perform the roll
-    const rolls = foundry.dice.Roll.create(`d20cs>${limit}`, rollData);
-    const roll = await rolls.roll();
+    const rollData = actor ? actor.getRollData() : {};
+    const roll = await foundry.dice.Roll.create(`d20cs>${limit}`, rollData).roll();
     console.log(roll);
     const success = roll.result === '1';
 
     let result;
     if (!success) {
       await actor.toggleStatusEffect('disconnected', { active: true });
-      result = game.i18n.localize('torgeternity.chatText.hasDisconnected');
+      result = game.i18n.localize('torgeternity.chatText.contradiction.hasDisconnected');
     } else {
-      result = game.i18n.localize('torgeternity.chatText.notDisconnected');
+      result = game.i18n.localize('torgeternity.chatText.contradiction.notDisconnected');
     }
     const dieNum = roll.dice[0].values[0];
-    const content = `<h2>${game.i18n.localize('torgeternity.chatText.contradictionCheck')}</h2>
-      <p>${actor.name} ${result}</p>
+    const content = `<h2>${game.i18n.localize('torgeternity.chatText.contradiction.contradictionCheck')}</h2>
+      <p class="contradiction-roll"><strong>${actor.name}</strong> ${result}</p>
       <div class="dice-roll-torg">
           <div class="dice-result">
             <div class="dice-tooltip expanded" style="display: block;">
@@ -501,10 +500,6 @@ export default class TorgCombat extends Combat {
         </div> 
       </div> `;
 
-    //const roll = Roll.create(a.dataset.formula, rollData);
-    //return roll.toMessage({ flavor: a.dataset.flavor, speaker }, { rollMode: a.dataset.mode });
-
-    //ChatMessage.create({ flavor: content, rolls })
     ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),
       content

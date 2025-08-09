@@ -107,6 +107,15 @@
         },
         "testUnsuccessfull": "Test unsuccessful"
       },
+      "contradiction": {
+        "alreadyDisconnected": "is already disconnected",
+        "noContradiction": "has no contradiction",
+        "hasDisconnected": "has disconnected",
+        "notDisconnected": "has not disconnected",
+        "possibleContradiction": "has a possible contradiction",
+        "contradictionCheck": "Contradiction Check",
+        "checkTooltip": "<strong>{name}</strong> rolls for contradiction"
+      },
       "damage": "Damage",
       "dieTotal": "Die Total",
       "discardsCard": "Discards",
@@ -127,12 +136,6 @@
       "passesCard1": "Passes",
       "passesCard2": "to",
       "playsCard": "Plays",
-      "alreadyDisconnected": "already disconnected",
-      "noContradiction": "no contradiction",
-      "hasDisconnected": "has disconnected",
-      "notDisconnected": "has not disconnected",
-      "possibleContradiction": "possible contradiction",
-      "contradictionCheck": "Contradiction Check",
       "possibility": "Possibility",
       "possibleDisconnect": "Possible Disconnect",
       "rolled": "rolled",
