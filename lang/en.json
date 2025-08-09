@@ -95,6 +95,7 @@
           "failure": "Failure",
           "goodSuccess": "Good Success",
           "mishape": "Mishap",
+          "fragileBroken": "The fragile {itemName} breaks",
           "new": "New Roll Total",
           "noDamage": "No Damage",
           "outstandingSuccess": "Outstanding Success",

@@ -21,6 +21,7 @@
     - The actor's cosm does not match either of the cosms of the current scene.
     - Any item on the has a higher `Tech Level` (if set) or higher `secondary axiom` than the highest axioms of the cosms of the current scene.
 - Drama Card Line tooltip shows if current scene is `Standard` or `Dramatic`
+- Report a **fragile item breaking** on a Mishap involving its use.
 
 ### Bug Fixes
 

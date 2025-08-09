@@ -352,6 +352,10 @@ export async function renderSkillChat(test) {
       // Roll 1 and not defense = Mishap
       test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
+      if (test?.attackTraits.includes('fragile')) {
+        const itemName = fromUuidSync(test.actor, { strict: false })?.items.get(test.itemId).name;
+        test.fragileText = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName });
+      }
       test.outcomeColor = 'color: purple';
       test.resultTextColor = 'color: purple';
       if (!useColorBlind) {

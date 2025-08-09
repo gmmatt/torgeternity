@@ -20,6 +20,9 @@
     <p class="skill-roll-result" style="{{resultTextColor}}">
       {{resultText}}
     </p>
+    {{#if fragileText}}
+      <p class="skill-roll-disconnect-label"> {{fragileText}} </p>
+    {{/if}}
     <p class="skill-roll-disconnect-label {{disconnectLabel}}">
       {{localize 'torgeternity.chatText.possibleDisconnect'}},{{localize 'torgeternity.chatText.rolled'}}
       {{diceList.[0]}}
