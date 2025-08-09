@@ -478,11 +478,28 @@ export default class TorgCombat extends Combat {
     let result;
     if (!success) {
       await actor.toggleStatusEffect('disconnected', { active: true });
-      result = game.i18n.localize('torgeternity.statusEffects.disconnected');
+      result = game.i18n.localize('torgeternity.chatText.hasDisconnected');
     } else {
       result = game.i18n.localize('torgeternity.chatText.notDisconnected');
     }
-    const content = `<h2>${game.i18n.localize('torgeternity.chatText.possibleDisconnect')}</h2><p>${roll.dice[0].values[0]}: ${result}</p>`;
+    const dieNum = roll.dice[0].values[0];
+    const content = `<h2>${game.i18n.localize('torgeternity.chatText.contradictionCheck')}</h2>
+      <p>${actor.name} ${result}</p>
+      <div class="dice-roll-torg">
+          <div class="dice-result">
+            <div class="dice-tooltip expanded" style="display: block;">
+              <section class="tooltip-part">
+                <div class="dice">
+      <ol class="dice-rolls">
+      <li class="roll die d20" 
+      ${game.settings.get('torgeternity', 'useRenderedTorgDice') ? 'style="background-image: url(systems/torgeternity/images/Torgd20.svg);";' : ''}>${dieNum}</li>
+      </ol>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div> 
+      </div> `;
 
     //const roll = Roll.create(a.dataset.formula, rollData);
     //return roll.toMessage({ flavor: a.dataset.flavor, speaker }, { rollMode: a.dataset.mode });
