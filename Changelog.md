@@ -3,6 +3,7 @@
 ## NEXT RELEASE
 
 - The `Good` and `Outstanding` fields of the powers sheet (Spells, Miracle, Psionic Powers) has been converted to an HTML field, so that inline enrichers such as `@Buff` can be used.
+- Item control buttons are in same order on Stats tab and other tabs.
 
 ## v13.4.0
 

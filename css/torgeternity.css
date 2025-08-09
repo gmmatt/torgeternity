@@ -1041,14 +1041,16 @@ dialog.torgeternity:not(.actor, .item) .window-content,
           align-self: center;
         }
 
-        .item-control {
-          margin-right: 2px;
-        }
-
         img {
           max-width: 30px;
           max-height: 30px;
         }
+      }
+    }
+
+    .item-list .item-controls {
+      .item-control {
+        margin-right: 2px;
       }
     }
 
@@ -1099,13 +1101,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
           .item-controls {
             align-content: center;
             justify-content: end;
-            max-width: 115px;
             flex: none;
-
-            a.item-control {
-              float: right;
-              margin-right: 5px;
-            }
 
             a.item-equip.item-equipped {
               color: #0000af;
