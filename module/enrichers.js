@@ -1,4 +1,5 @@
 import { TestDialog } from './test-dialog.js';
+import { torgDamage } from './torgchecks.js';
 
 /**
  * INLINE CHECKS
@@ -238,7 +239,9 @@ async function _onClickInlineCondition(event) {
   if (Object.hasOwn(data, "overlay")) options.overlay = true;
 
   // Special case of stymied/vulnerable stacking
-  for (const actor of getActors()) {
+  const actors = getActors();
+  if (!actors) return ui.notifications.info('torgeternity.notifications.noTokenNorActor', { localize: true });
+  for (const actor of actors) {
     const status = data.status;
     if (status === 'stymied' && options.active) {
       if (actor.hasStatusEffect('stymied')) {
@@ -383,10 +386,145 @@ async function _onClickInlineBuff(event) {
   }
 
   // Add an effect to each actor
-  for (const actor of getActors()) {
+  const actors = getActors();
+  if (!actors) return ui.notifications.info('torgeternity.notifications.noTokenNorActor', { localize: true });
+  for (const actor of actors) {
     //console.log(`Setting '${actor.name}'`, effectdata);
     actor.createEmbeddedDocuments('ActiveEffect', [effectdata]);
   }
+}
+
+/**
+ * @Damage[shock=x,damage=y]
+ */
+
+const InlineDamagePattern = /@Damage\[(.+?)\](?:\{(.+?)\}){0,1}/g;
+
+function InlineDamageEnricher(match, options) {
+  let label = match[2];
+  const dataset = {};
+  const parts = match[1].split('|');
+  for (const elem of match[1].split('|')) {
+    const [key, value] = elem.split("=");
+    // Convert localized field into internal name
+    if (key === 'shock' || key === game.i18n.localize('torgeternity.sheetLabels.shock'))
+      dataset.shock = value;
+    else if (key === 'wounds' || key === game.i18n.localize('torgeternity.sheetLabels.wounds'))
+      dataset.wounds = value;
+    else if (key === 'damage' || key === game.i18n.localize('torgeternity.chatText.damage'))
+      dataset.damage = value;
+    else if (key === 'traits') {
+      if (!dataset.damage) {
+        console.warn(`'traits' only valid with 'damage' in ${match[0]}`);
+        continue;
+      }
+      dataset.traits = value;
+    }
+    else
+      dataset[key] = value;
+  }
+
+  const hasDamage = Object.hasOwn(dataset, 'damage');
+  const hasSpecific = Object.hasOwn(dataset, 'shock') || Object.hasOwn(dataset, 'wounds');
+  if (hasDamage === hasSpecific) {
+    console.warn(`@Damage must have either 'damage=x' OR at least one of 'shock=x', 'wounds=x'`, match[0]);
+    return match[0];
+  }
+
+  function createLabel() {
+    let label = ''
+    if (dataset.damage) {
+      label += `${dataset.damage} ${game.i18n.localize('torgeternity.chatText.damage')}`;
+      if (dataset.traits) {
+        const traits = [];
+        for (const trait of dataset.traits.split(',')) {
+          const loc = `torgeternity.traits.${trait}`;
+          traits.push(game.i18n.has(loc) ? game.i18n.localize(loc) : trait)
+        }
+        label += (` [${traits.join(',')}]`);
+      }
+    } else {
+      if (dataset.shock) label += `${dataset.shock} ${game.i18n.localize('torgeternity.sheetLabels.shock')}`
+      if (dataset.shock && dataset.wounds) label += ', ';
+      if (dataset.wounds) label += `${dataset.wounds} ${game.i18n.localize('torgeternity.sheetLabels.wounds')}`
+    }
+    return label;
+  }
+
+  // Create the base anchor
+  const anchor = foundry.applications.ux.TextEditor.createAnchor({
+    dataset,
+    name: label ?? createLabel(),
+    classes: ['torg-inline-damage'],
+    icon: "fa-solid fa-damage"
+  });
+
+  // Append a button to copy the link to chat (only when in Journal)
+  if (!options.rollData && game.user.isGM) {
+    const icon = document.createElement("i");
+    icon.classList.add('icon', 'fa-solid', 'fa-comment', 'toChat');
+    icon.dataset.original = match[0];
+    anchor.append(icon);
+  }
+  return anchor;
+}
+
+
+async function _onClickInlineDamage(event) {
+  const target = event.target.closest('a.torg-inline-damage');
+  const dataset = event.target.dataset;
+
+  // Firstly check for clicking on the "post to chat" button
+  if (event.target.dataset.original) {
+    ChatMessage.create({ content: event.target.dataset.original })
+    return;
+  }
+
+  // Firstly check for clicking on the "post to chat" button
+  const actors = getActors();
+  if (!actors) return ui.notifications.info('torgeternity.notifications.noTokenNorActor', { localize: true });
+
+  let chatOutput = `<h2> ${dataset.label ?? game.i18n.localize('torgeternity.chatText.check.result.damage')}</h2> `;
+  if (dataset.damage) {
+    chatOutput += `<p> ${game.i18n.localize('torgeternity.chatText.baseDamage')} ${dataset.damage}</p> `
+  }
+  chatOutput += `<p> ${game.i18n.localize('torgeternity.macros.fatigueMacroDealtDamage')}</p> <ul>`;
+  for (const actor of actors) {
+    // for damage, need to adjust for AP and armour?
+    const damage = dataset.damage ?
+      torgDamage(dataset.damage, actor.defenses.toughness, dataset.traits.split(',')) :
+      {
+        shocks: dataset.shock && Number(dataset.shock),
+        wounds: dataset.wounds && Number(dataset.wounds)
+      }
+    const wasKO = damage.shocks && actor.hasStatusEffect('unconscious');
+    const applyResult = actor.applyDamages(damage.shocks, damage.wounds);
+
+    // Chat Message
+
+    chatOutput += `<li>${actor.name}: `;
+    const chatParts = [];
+    if (!damage.shocks && !damage.wounds) {
+      chatParts.push(game.i18n.localize('torgeternity.chatText.check.result.noDamage'));
+    } else {
+      if (damage.wounds) {
+        chatParts.push(`${damage.wounds} ${game.i18n.localize('torgeternity.sheetLabels.wounds')}`);
+      }
+      if (damage.shocks) {
+        if (wasKO) {
+          chatParts.push(`${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}`);
+        } else {
+          chatParts.push(`${damage.shocks} ${game.i18n.localize('torgeternity.sheetLabels.shock')}`);
+          if (applyResult.shockExceeded) {
+            chatParts.push(`<br><strong>${actor.name}${game.i18n.localize('torgeternity.macros.fatigueMacroCharKO')}</strong>`);
+          }
+        }
+      }
+    }
+    chatOutput += chatParts.join(', ') + '</li>';
+  }
+  chatOutput += '</ul>';
+  ChatMessage.create({ content: chatOutput });
 }
 
 /**
@@ -396,6 +534,7 @@ const enrichers = [
   { pattern: InlineRulePattern, enricher: InlineRuleEnricher },
   { pattern: InlineConditionPattern, enricher: InlineConditionEnricher },
   { pattern: InlineBuffPattern, enricher: InlineBuffEnricher },
+  { pattern: InlineDamagePattern, enricher: InlineDamageEnricher },
 ];
 
 export default function InitEnrichers() {
@@ -408,6 +547,8 @@ export default function InitEnrichers() {
       _onClickInlineCondition(event);
     else if (event.target?.closest("a.torg-inline-buff"))
       _onClickInlineBuff(event);
+    else if (event.target?.closest("a.torg-inline-damage"))
+      _onClickInlineDamage(event);
   })
 }
 

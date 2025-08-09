@@ -7,6 +7,10 @@
 - Rework the `@Check` enricher, so that "dn=" can simply reference the target skill/attribute (without the 'target' prefix).
 - Add `CONFIG.debug.torgtest` to provide console output for the Test processing.
 - Add `CONFIG.debug.torgtestrender` to provide console output for the Test Reporting.
+- Add new `@Damage[]` inline enricher.
+  - `@Damage[shock=X|wounds=Y]` inflicts X shock and Y wounds to each selected token (either shock or wounds can be omitted)
+  - `@Damage[damage=X]` inflicts X damage to the selected tokens, applying the target's toughness
+  - `@Damage[damage=X|traits=fire]` inflicts X damage with the given attack Traits to the selected tokens, applying the target's toughness before calculating shock/wounds (currently the only supported traits are 'painful' and 'stagger')
 
 ## v13.4.0
 
