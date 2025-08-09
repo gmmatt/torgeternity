@@ -14,6 +14,8 @@
     - `@Damage[damage=X|traits=fire]` inflicts X damage with the given attack Traits to the selected tokens, applying the target's toughness before calculating shock/wounds (currently the only supported traits are 'painful' and 'stagger')
     - `@Damage[damage=X|ap=Y]` apply Y amount of Armor Piercing when determining shock/wounds.
     - `@Damage[damage=X|ignoreArmor]` ignores the armor rating of the target when determining shock/wounds.
+- Provide automation for the `Surge Drama Conflict Line`.
+  - Each actor in the combat tracker on that faction's side will be examined for a possible contradiction, and a chat card will prompt with a dice roll for each actor.
 
 
 ## v13.4.0

@@ -339,9 +339,46 @@ export default class TorgCombat extends Combat {
   }
 
   async dramaSurge(faction) {
-    // All Actors must check for Contradictions
+    // All Actors must check for Contradictions (TCR 178)
     console.log('Drama Surge', faction)
-    this.#sendDramaChat('surge', faction);
+    //this.#sendDramaChat('surge', faction);
+
+    const scene = this.scene ?? game.scenes.active;
+    const sceneflags = scene.flags.torgeternity;
+    const cosm = sceneflags.cosm;
+    const cosm2 = sceneflags.displayCosm2 && sceneflags.cosm2;
+    const maxAxioms = { ...CONFIG.torgeternity.axiomByCosm[cosm] };
+    if (cosm2) {
+      const axiom2 = CONFIG.torgeternity.axiomByCosm[cosm2];
+      for (const key of Object.keys(maxAxioms))
+        if (axiom2[key] > maxAxioms[key]) maxAxioms[key] = axiom2[key];
+    }
+    console.log('SURGE axiom limits: ', maxAxioms)
+
+    let chatOutput = `<h2>${game.i18n.localize('torgeternity.drama.surge')}!</h2><ul>`;
+    //const cosm = this.
+    for (const actor of this.getFactionActors(faction)) {
+      // Any character who is not from that reality,
+      // or has something foreign to that reality on their person.
+
+      // Ignore actors from the scene's reality
+      const fromReality = (actor.system.other.cosm === cosm) || (cosm2 && actor.system.other.cosm === cosm2);
+      const foreignItem = actor.items.find(item => item.isContradiction(cosm, CompressionStream, maxAxioms));
+
+      chatOutput += `<li>${actor.name}: `
+      if (fromReality && !foreignItem) {
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.noContradiction')}`;
+        continue;
+      } else if (!fromReality && foreignItem)
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.possibleContradiction')} [[/r d20cs>4]]{1-4}`;
+      else
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.possibleContradiction')} [[/r d20cs>1]]{1}`;
+
+      chatOutput += '</li>';
+    }
+
+    chatOutput += `</ul>`;
+    ChatMessage.create({ content: chatOutput });
   }
 
   /**

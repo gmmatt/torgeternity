@@ -424,6 +424,28 @@ export default class TorgeternityItem extends foundry.documents.Item {
         return 1;
     }
   }
+
+  /**
+   * Indicates if this item will cause a contradiction in either of the supplied cosms,
+   * or if it exceeds the provided axiom limits
+   * @param {String} cosm 
+   * @param {String|undefined} cosm2 
+   * @param {Object} maxAxioms 
+   * @returns Boolean
+   */
+  isContradiction(cosm, cosm2, maxAxioms) {
+    if (this.system.cosm === cosm) return false;
+    if (cosm2 && this.system.cosm === cosm2) return false;
+    if (this.type === 'perk') return this.system.generalContradiction;
+
+    if (this.system.techlevel && this.system.techlevel > maxAxioms.tech)
+      return true;
+
+    if (this.system?.secondaryAxiom && this.system.secondaryAxiom.selected !== 'none' &&
+      this.system.secondaryAxiom.value > maxAxioms[this.system.secondaryAxiom.selected]) return true;
+
+    return false;
+  }
 }
 
 

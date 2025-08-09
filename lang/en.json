@@ -127,6 +127,8 @@
       "passesCard1": "Passes",
       "passesCard2": "to",
       "playsCard": "Plays",
+      "noContradiction": "no contradiction",
+      "possibleContradiction": "possible contradiction",
       "possibility": "Possibility",
       "possibleDisconnect": "Possible Disconnect",
       "rolled": "rolled",
