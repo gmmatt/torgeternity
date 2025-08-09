@@ -100,6 +100,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
    */
   constructor(test, options = {}) {
     super(options);
+    if (CONFIG.debug.torgtest) console.debug('TestDialog.create', test);
 
     for (const key of Object.keys(test)) {
       if (!(test[key] instanceof String)) continue;
@@ -264,6 +265,8 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         this.test.vitalAreaDamageModifier ??= 0;
       }
     }
+
+    if (CONFIG.debug.torgtest) console.debug('TestDialog.onRoll', this.test);
 
     const messages = await torgchecks.renderSkillChat(this.test);
     if (messages && this.options.callback) {
