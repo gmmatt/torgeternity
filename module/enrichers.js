@@ -421,7 +421,7 @@ function InlineDamageEnricher(match, options) {
       dataset.traits = value;
     }
     else
-      dataset[key] = value;
+      dataset[key] = value ?? true;
   }
 
   const hasDamage = Object.hasOwn(dataset, 'damage');
@@ -486,13 +486,20 @@ async function _onClickInlineDamage(event) {
 
   let chatOutput = `<h2> ${dataset.label ?? game.i18n.localize('torgeternity.chatText.check.result.damage')}</h2> `;
   if (dataset.damage) {
-    chatOutput += `<p> ${game.i18n.localize('torgeternity.chatText.baseDamage')} ${dataset.damage}</p> `
+    chatOutput += `<p> ${game.i18n.localize('torgeternity.chatText.baseDamage')} ${dataset.damage}`;
+    if (dataset.ap) {
+      chatOutput += `, ${game.i18n.localize('torgeternity.gear.ap')} ${dataset.ap}`
+    }
+    chatOutput += `</p>`;
   }
   chatOutput += `<p> ${game.i18n.localize('torgeternity.macros.fatigueMacroDealtDamage')}</p> <ul>`;
   for (const actor of actors) {
+    let toughness = actor.defenses.toughness -
+      (dataset.ignoreArmor ? actor.defenses.armor : (Math.min(dataset.ap ?? 0, actor.defenses.armor)));
+
     // for damage, need to adjust for AP and armour?
     const damage = dataset.damage ?
-      torgDamage(dataset.damage, actor.defenses.toughness, dataset.traits.split(',')) :
+      torgDamage(dataset.damage, toughness, dataset.traits?.split(',')) :
       {
         shocks: dataset.shock && Number(dataset.shock),
         wounds: dataset.wounds && Number(dataset.wounds)

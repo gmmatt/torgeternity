@@ -10,7 +10,11 @@
 - Add new `@Damage[]` inline enricher.
   - `@Damage[shock=X|wounds=Y]` inflicts X shock and Y wounds to each selected token (either shock or wounds can be omitted)
   - `@Damage[damage=X]` inflicts X damage to the selected tokens, applying the target's toughness
-  - `@Damage[damage=X|traits=fire]` inflicts X damage with the given attack Traits to the selected tokens, applying the target's toughness before calculating shock/wounds (currently the only supported traits are 'painful' and 'stagger')
+    - `damage=X` can take some extra parameters:
+    - `@Damage[damage=X|traits=fire]` inflicts X damage with the given attack Traits to the selected tokens, applying the target's toughness before calculating shock/wounds (currently the only supported traits are 'painful' and 'stagger')
+    - `@Damage[damage=X|ap=Y]` apply Y amount of Armor Piercing when determining shock/wounds.
+    - `@Damage[damage=X|ignoreArmor]` ignores the armor rating of the target when determining shock/wounds.
+
 
 ## v13.4.0
 
