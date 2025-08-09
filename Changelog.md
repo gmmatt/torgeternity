@@ -15,8 +15,9 @@
     - `@Damage[damage=X|ap=Y]` apply Y amount of Armor Piercing when determining shock/wounds.
     - `@Damage[damage=X|ignoreArmor]` ignores the armor rating of the target when determining shock/wounds.
 - Provide automation for the **Surge** Drama Conflict Line.
-  - Each actor in the combat tracker on that faction's side will be examined for a possible contradiction, and a chat card will prompt with a dice roll for each actor.
-
+  - Each actor in the combat tracker on that faction's side will be examined for a possible contradiction, and a chat card will prompt with a dice roll for each actor. The 0, 1 or 1-4 cases are based on none, one or both of the following being true:
+    - The actor's cosm does not match either of the cosms of the current scene.
+    - Any item on the has a higher `Tech Level` (if set) or higher `secondary axiom` than the highest axioms of the cosms of the current scene.
 
 ## v13.4.0
 
