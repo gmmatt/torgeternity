@@ -4,6 +4,9 @@
 
 - The `Good` and `Outstanding` fields of the powers sheet (Spells, Miracle, Psionic Powers) has been converted to an HTML field, so that inline enrichers such as `@Buff` can be used.
 - Item control buttons are in same order on Stats tab and other tabs.
+- Rework the `@Check` enricher, so that "dn=" can simply reference the target skill/attribute (without the 'target' prefix).
+- Add `CONFIG.debug.torgtest` to provide console output for the Test processing.
+- Add `CONFIG.debug.torgtestrender` to provide console output for the Test Reporting.
 
 ## v13.4.0
 
