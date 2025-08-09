@@ -3572,12 +3572,13 @@ p.skill-chat-title.skilled {
     flex: 1;
 
     &:has(~.item-description.active) {
-      min-height: 50px;
+      --min-height: 100px;
       flex: 1;
     }
 
     &.active {
-      flex: 2;
+      --min-height: 300px;
+      flex: 3;
     }
 
     &[name="system.description"] {
@@ -3588,6 +3589,10 @@ p.skill-chat-title.skilled {
     &.smallEditor {
       min-height: 150px;
       row-gap: 0px;
+
+      &.active {
+        min-height: 300px;
+      }
 
       menu {
         gap: 2px;
