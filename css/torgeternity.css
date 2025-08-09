@@ -3073,6 +3073,10 @@ div.readme a.compendium {
 
   .contradiction-roll {
     font-family: "Palatino Linotype";
+
+    &.disconnection {
+      color: red;
+    }
   }
 
   .applyButtons {

@@ -31,8 +31,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
   }
 
-  static async renderMessage(message, options) {
-    const result = await super.renderMessage(message, options);
+  static async renderHTML(options) {
+    const result = await super.renderHTML(options);
     result.querySelector?.('a.button[data-action="applyDam"]')?.addEventListener('contextmenu', TorgeternityChatLog.#adjustDamage);
     return result;
   }

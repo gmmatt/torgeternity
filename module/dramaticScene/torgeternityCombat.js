@@ -72,6 +72,24 @@ export default class TorgCombat extends Combat {
     super._onUpdate(changed, options, userId);
   }
 
+  /**
+   * Addition of Combatants
+   * @param {} parent 
+   * @param {*} collection 
+   * @param {*} documents 
+   * @param {*} data 
+   * @param {*} options 
+   * @param {*} userId 
+   */
+  async _onEnter(combatant) {
+    await super._onEnter(combatant);
+    if (game.user.isActiveGM && this.started) {
+      const whoFirst = await this.getFlag('torgeternity', 'combatFirstDisposition');
+      const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
+      combatant.update({ initiative });
+    }
+  }
+
   get currentDrama() {
     const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
     return dramaActive.cards.size ? dramaActive.cards.contents[0] : null;
@@ -158,6 +176,8 @@ export default class TorgCombat extends Combat {
 
     // Sort combatants based on which faction is first
     const whoFirst = (this.isDramatic ? card.system.heroesFirstDramatic : card.system.heroesFirstStandard) ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
+    await this.setFlag('torgeternity', 'combatFirstDisposition', whoFirst);
+
     const updates = [];
     for (const combatant of this.turns) {
       const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
@@ -468,6 +488,14 @@ export default class TorgCombat extends Combat {
     // Silently ignore clicks if user is not the owner.
     if (!actor.isOwner) return;
 
+    // Special case of the actor NOW being disconnected
+    if (actor.isDisconnected) {
+      return ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p class="contradiction-roll">${actor.name} ${game.i18n.localize('torgeternity.chatText.contradiction.alreadyDisconnected')}</p>`
+      })
+    }
+
     // Perform the roll
     const rollData = actor ? actor.getRollData() : {};
     const roll = await foundry.dice.Roll.create(`d20cs>${limit}`, rollData).roll();
@@ -483,7 +511,7 @@ export default class TorgCombat extends Combat {
     }
     const dieNum = roll.dice[0].values[0];
     const content = `<h2>${game.i18n.localize('torgeternity.chatText.contradiction.contradictionCheck')}</h2>
-      <p class="contradiction-roll"><strong>${actor.name}</strong> ${result}</p>
+      <p class="contradiction-roll ${success ? '' : 'disconnection'}">${actor.name} ${result}</p>
       <div class="dice-roll-torg">
           <div class="dice-result">
             <div class="dice-tooltip expanded" style="display: block;">

@@ -110,7 +110,7 @@
       "contradiction": {
         "alreadyDisconnected": "is already disconnected",
         "noContradiction": "has no contradiction",
-        "hasDisconnected": "has disconnected",
+        "hasDisconnected": "has <strong>disconnected</strong>!!!",
         "notDisconnected": "has not disconnected",
         "possibleContradiction": "has a possible contradiction",
         "contradictionCheck": "Contradiction Check",
