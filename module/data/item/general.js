@@ -17,10 +17,7 @@ export class GeneralItemData extends BaseItemData {
       price: new fields.StringField({ initial: '', nullable: false }),
       //techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),
-      secondaryAxiom: new fields.SchemaField({
-        selected: new fields.StringField({ initial: 'none' }),
-        value: new fields.NumberField({ initial: null, integer: true }),
-      }),
+      secondaryAxiom: new fields.StringField({ initial: 'none' }),
     };
   }
 
@@ -29,6 +26,14 @@ export class GeneralItemData extends BaseItemData {
       if (!source.axioms) source.axioms = {};
       source.axioms.tech = source.techlevel;
       delete source.techlevel;
+    }
+
+    if (source.secondaryAxiom?.selected) {
+      if (source.secondaryAxiom.selected !== 'none') {
+        if (!source.axioms) source.axioms = {};
+        source.axioms[source.secondaryAxiom] = source.secondaryAxiom.value;
+      }
+      source.secondaryAxiom = source.secondaryAxiom.selected;
     }
     return super.migrateData(source);
   }

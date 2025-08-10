@@ -51,18 +51,18 @@
           {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
         </p>
 
-        <select style="grid-column: 1/3" name="system.secondaryAxiom.selected"
+        <select style="grid-column: 1/3" name="system.secondaryAxiom"
           class=" selectSecondaryAxiom">
           <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
-          {{selectOptions config.axiomsNoTech selected=item.system.secondaryAxiom.selected localize=true}}
+          {{selectOptions config.axiomsNoTech selected=item.system.secondaryAxiom localize=true}}
         </select>
 
         {{#if displaySecondaryAxiomValue}}
           <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
           <input
-            name="system.axioms.{{item.system.secondaryAxiom.selected}}"
+            name="system.axioms.{{item.system.secondaryAxiom}}"
             type="number"
-            value="{{lookup item.system.axioms item.system.secondaryAxiom.selected}}" />
+            value="{{lookup item.system.axioms item.system.secondaryAxiom}}" />
         {{/if}}
 
       </div>

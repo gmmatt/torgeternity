@@ -441,8 +441,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (this.system.axioms.tech && this.system.axioms.tech > maxAxioms.tech)
       return true;
 
-    if (this.system?.secondaryAxiom && this.system.secondaryAxiom.selected !== 'none' &&
-      this.system.secondaryAxiom.value > maxAxioms[this.system.secondaryAxiom.selected]) return true;
+    if (this.system?.secondaryAxiom && this.system.secondaryAxiom !== 'none' &&
+      this.system.axioms[this.system.secondaryAxiom] > maxAxioms[this.system.secondaryAxiom]) return true;
 
     return false;
   }

@@ -223,7 +223,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   static async #onSelectSecondaryAxiom(event) {
-    const old_selected = this.item.system.secondaryAxiom.selected;
+    const old_selected = this.item.system.secondaryAxiom;
     if (event.target.value === old_selected) return;
     if (old_selected !== 'none')
       await this.item.update({ [`system.axioms.${old_selected}`]: 0 });
@@ -324,11 +324,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
 
-    context.displaySecondaryAxiomValue =
-      !this.document.system?.secondaryAxiom ||
-        this.document.system?.secondaryAxiom.selected === 'none'
-        ? false
-        : true;
+    context.displaySecondaryAxiomValue = this.document.system?.secondaryAxiom !== 'none';
 
     context.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
 
