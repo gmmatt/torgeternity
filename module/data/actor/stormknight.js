@@ -1,5 +1,7 @@
 import { CommonActorData } from './common.js';
 import { torgeternity } from '../../config.js';
+import { makeAxiomsField } from '../shared.js';
+
 const fields = foundry.data.fields;
 
 /**
@@ -13,12 +15,7 @@ export class StormKnightData extends CommonActorData {
   static defineSchema() {
     return {
       ...super.defineSchema(),
-      axioms: new fields.SchemaField({
-        magic: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-        social: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-        spirit: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-        tech: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-      }),
+      axioms: makeAxiomsField(),
       details: new fields.SchemaField({
         background: new fields.HTMLField({ initial: '', textSearch: true }),
         race: new fields.StringField({ initial: undefined }),

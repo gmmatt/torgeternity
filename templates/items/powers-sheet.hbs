@@ -2,7 +2,7 @@
   <div class="sheet-content">
     <div class="asside">
       <p class="item-data-label">{{localize "torgeternity.powers.axiom"}}</p>
-      <input name="system.axiom" type="number" value="{{item.system.axiom}}" />
+      <input name="system.axioms.{{axiom}}" type="number" value="{{lookup item.system.axioms axiom}}" />
       <p class="item-data-label">
         {{localize "torgeternity.powers.skill"}}/{{localize "torgeternity.powers.skilllevel"}}
       </p>

@@ -15,7 +15,7 @@ export class PowerItemData extends BaseItemData {
       ap: new fields.NumberField({ initial: 0, integer: true }),
       applyArmor: new fields.BooleanField({ initial: true }),
       applySize: new fields.BooleanField({ initial: true }),
-      axiom: new fields.NumberField({ initial: 0, integer: true }),
+      //axiom: new fields.NumberField({ initial: 0, integer: true }),
       castingtime: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
       dn: new fields.StringField({ initial: '' }),

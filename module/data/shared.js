@@ -20,6 +20,17 @@ export function makeSkillFields(unskilledUse, baseAttribute, groupName) {
   });
 }
 
+export function makeAxiomsField() {
+  const fields = foundry.data.fields;
+
+  return new fields.SchemaField({
+    magic: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+    social: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+    spirit: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+    tech: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+  })
+}
+
 export function migrateCosm(cosm) {
   if (!cosm)
     return 'none'

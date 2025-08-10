@@ -361,6 +361,10 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     }
     context.tabs[this.tabGroups.primary].cssClass = 'active';
 
+    if (this.item.type === 'spell') context.axiom = 'magic';
+    else if (this.item.type === 'miracle') context.axiom = 'spirit';
+    else if (this.item.type === 'psionicpower') context.axiom = 'social';
+
     return context;
   }
 }

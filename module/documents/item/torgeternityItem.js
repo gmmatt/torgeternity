@@ -438,7 +438,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (cosm2 && this.system.cosm === cosm2) return false;
     if (this.type === 'perk') return this.system.generalContradiction;
 
-    if (this.system.techlevel && this.system.techlevel > maxAxioms.tech)
+    if (this.system.axioms.tech && this.system.axioms.tech > maxAxioms.tech)
       return true;
 
     if (this.system?.secondaryAxiom && this.system.secondaryAxiom.selected !== 'none' &&
