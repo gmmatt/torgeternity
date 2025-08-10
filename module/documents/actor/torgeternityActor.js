@@ -518,13 +518,6 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     return this.statuses.has('disconnected') ?? false;
   }
 
-  isContradiction(maxAxioms) {
-    return this.system.axioms.tech > maxAxioms.tech ||
-      this.system.axioms.magic > maxAxioms.magic ||
-      this.system.axioms.spirit > maxAxioms.spirit ||
-      this.system.axioms.social > maxAxioms.social;
-  }
-
   hasStatusEffect(statusId) {
     return this.statuses.has(statusId) ?? false;
   }
