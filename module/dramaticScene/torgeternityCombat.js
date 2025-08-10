@@ -373,7 +373,7 @@ export default class TorgCombat extends Combat {
     const cosm = sceneflags.cosm;
     const cosm2 = sceneflags.displayCosm2 && sceneflags.cosm2;
     const maxAxioms = { ...CONFIG.torgeternity.axiomByCosm[cosm] };
-    if (cosm2) {
+    if (sceneflags.isMixed && cosm2) {
       const axiom2 = CONFIG.torgeternity.axiomByCosm[cosm2];
       for (const key of Object.keys(maxAxioms))
         if (axiom2[key] > maxAxioms[key]) maxAxioms[key] = axiom2[key];
@@ -388,26 +388,29 @@ export default class TorgCombat extends Combat {
 
       // Ignore actors from the scene's reality
       const fromReality = (actor.system.other.cosm === cosm) || (cosm2 && actor.system.other.cosm === cosm2);
-      const foreignItem = actor.items.find(item => item.isContradiction(cosm, CompressionStream, maxAxioms));
+      const itemContradictsActor = actor.items.find(item => item.isContradiction(actor.system.axioms));
+      const itemContradictsCosm = actor.items.find(item =>
+        item.system.cosm !== cosm && (!cosm2 || item.system.cosm !== cosm2) && item.isContradiction(maxAxioms));
 
       chatOutput += `<li class="contradiction-roll"><strong>${actor.name}:</strong> `
       if (actor.isDisconnected) {
         chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.alreadyDisconnected')}`;
-      } else if (fromReality && !foreignItem) {
+      } else if (fromReality && !itemContradictsActor) {
+        // axioms of cosm === axioms of actor
         chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.noContradiction')}`;
         continue;
       } else {
-        const limit = (!fromReality && foreignItem) ? 4 : 1;
+        const FourCase = (fromReality || (itemContradictsCosm && itemContradictsActor)) //? 4 : 1;
         chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.possibleContradiction')} `;
         /*chatOutput += `[[/r d20cs>${limit}]]`;
         chatOutput += limit ? '{1 - 4}' : '{1}';*/
         chatOutput += foundry.applications.ux.TextEditor.createAnchor({
           dataset: {
-            limit: limit,
+            limit: FourCase ? 4 : 1,
             uuid: actor.uuid,
             tooltip: game.i18n.format('torgeternity.chatText.contradiction.checkTooltip', { name: actor.name })
           },
-          name: limit ? '{1-4}' : '{1}',
+          name: FourCase ? '{1-4}' : '{1}',
           classes: ['torg-inline-contradiction'],
           icon: "fa-solid fa-dice-d20"
         }).outerHTML;

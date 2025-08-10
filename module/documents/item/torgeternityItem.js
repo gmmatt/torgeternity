@@ -433,18 +433,13 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * @param {Object} maxAxioms (see CONFIG.torgeternity.axiomByCosm)
    * @returns Boolean
    */
-  isContradiction(cosm, cosm2, maxAxioms) {
-    if (this.system.cosm === cosm) return false;
-    if (cosm2 && this.system.cosm === cosm2) return false;
+  isContradiction(maxAxioms) {
     if (this.type === 'perk') return this.system.generalContradiction;
 
-    if (this.system.axioms.tech && this.system.axioms.tech > maxAxioms.tech)
-      return true;
-
-    if (this.system?.secondaryAxiom && this.system.secondaryAxiom !== 'none' &&
-      this.system.axioms[this.system.secondaryAxiom] > maxAxioms[this.system.secondaryAxiom]) return true;
-
-    return false;
+    return this.system.axioms.tech > maxAxioms.tech ||
+      this.system.axioms.magic > maxAxioms.magic ||
+      this.system.axioms.spirit > maxAxioms.spirit ||
+      this.system.axioms.social > maxAxioms.social;
   }
 }
 
