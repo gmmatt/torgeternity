@@ -88,6 +88,13 @@ torgeternity.axioms = {
   magic: 'torgeternity.axioms.magic',
 };
 
+torgeternity.axiomsNoTech = {
+  // Used for choosing a Secondary Axiom in items, where tech is already present
+  social: 'torgeternity.axioms.social',
+  spirit: 'torgeternity.axioms.spirit',
+  magic: 'torgeternity.axioms.magic',
+};
+
 torgeternity.axiomByCosm = {
   coreEarth: {
     magic: 9,
