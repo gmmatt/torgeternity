@@ -31,7 +31,7 @@ export class GeneralItemData extends BaseItemData {
     if (source.secondaryAxiom?.selected) {
       if (source.secondaryAxiom.selected !== 'none') {
         if (!source.axioms) source.axioms = {};
-        source.axioms[source.secondaryAxiom] = source.secondaryAxiom.value;
+        source.axioms[source.secondaryAxiom.selected] = source.secondaryAxiom.value;
       }
       source.secondaryAxiom = source.secondaryAxiom.selected;
     }

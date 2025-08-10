@@ -72,6 +72,9 @@
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -127,8 +130,11 @@
                 {{localize (concat "torgeternity.cosms." item.system.cosm)}}
               </div>
               <div class="item-dropdown-extras">
-                TL
+                {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -193,8 +199,11 @@
                 {{localize (concat "torgeternity.cosms." item.system.cosm)}}
               </div>
               <div class="item-dropdown-extras">
-                TL
+                {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -262,6 +271,9 @@
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -321,6 +333,9 @@
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -399,6 +414,9 @@
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -460,6 +478,9 @@
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -540,6 +561,9 @@
             <div class="item-dropdown-extras">
               {{localize 'torgeternity.gear.tl'}}
               {{item.system.axioms.tech}}
+              {{#if (ne item.system.secondaryAxiom 'none')}} /
+                {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
             </div>
             {{#if item.traitDesc}}
               <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -588,6 +612,9 @@
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
                 {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
