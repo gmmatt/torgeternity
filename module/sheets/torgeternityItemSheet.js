@@ -23,7 +23,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       addLimitation: TorgeternityItemSheet.#onAddLimitation,
       removeLimitation: TorgeternityItemSheet.#onRemoveLimitation,
       reloadWeapon: TorgeternityItemSheet.#onReloadWeapon,
-      selectSecondaryAxiom: TorgeternityItemSheet.#onSelectSecondaryAxiom,
       itemName: TorgeternityItemSheet.#onItemName,
       itemDelete: TorgeternityItemSheet.#onItemDelete,
       toggleTraitEdit: TorgeternityItemSheet.#onToggleTraitEdit,
@@ -165,6 +164,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     }).bind(this.element);
 
     this.element.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
+    this.element.querySelectorAll('select.selectSecondaryAxiom').forEach(elem =>
+      elem.addEventListener('change', TorgeternityItemSheet.#onSelectSecondaryAxiom.bind(this)));
 
     if (options.force) {
       // Either window has just been opened, or it has been brought to the top of the stack.
@@ -221,9 +222,11 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     await reloadAmmo(this.actor, this.item, usedAmmo, this);
   }
 
-  static #onSelectSecondaryAxiom(event, button) {
-    button.value === 'none' &&
-      this.item.update({ 'system.secondaryAxiom.value': null });
+  static async #onSelectSecondaryAxiom(event) {
+    const old_selected = this.item.system.secondaryAxiom.selected;
+    if (event.target.value === old_selected) return;
+    if (old_selected !== 'none')
+      await this.item.update({ [`system.axioms.${old_selected}`]: 0 });
   }
 
   static #onToggleTraitEdit(event, button) {
