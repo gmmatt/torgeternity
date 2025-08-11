@@ -159,7 +159,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * @returns
    */
   async _preUpdate(changes, options, user) {
-    if ((await super._preUpdate(changes, options, user)) === false) return false;
+    const allowed = await super._preUpdate(changes, options, user);
+    if (allowed === false) return false;
 
     if (
       foundry.utils.getProperty(changes, 'system.ammo') &&

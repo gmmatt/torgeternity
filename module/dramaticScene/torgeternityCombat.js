@@ -11,7 +11,8 @@ let firsttime;
 export default class TorgCombat extends Combat {
 
   async _preDelete(options, user) {
-    if (!super._preDelete(options, user)) return false;
+    const allowed = super._preDelete(options, user);
+    if (allowed === false) return false;
 
     // listing of hands' actors in closing combat
     this.combatants.filter(combatant => combatant.actor?.type === 'stormknight')
