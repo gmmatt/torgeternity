@@ -1,5 +1,11 @@
 # TORG Eternity Changelog
 
+## NEXT RELEASE
+
+### Improvements
+
+Remove immediate change of scene's cosms, since they shouldn't change until the Save Changes button is pressed.
+
 ## v13.5.0  (SURGE + DISCONNECTIONS)
 
 ### Improvements
