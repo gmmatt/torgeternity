@@ -38,14 +38,14 @@ export default class torgeternitySceneConfig extends foundry.applications.sheets
   }
 
   async _preparePartContext(partId, context, options) {
-    const result = await super._preparePartContext(partId, context, options);
+    const partContext = await super._preparePartContext(partId, context, options);
     switch (partId) {
       case "cosm":
-        context.zones = torgeternity.zones;
-        context.cosmTypes = torgeternity.cosmTypes;
+        partContext.zones = torgeternity.zones;
+        partContext.cosmTypes = torgeternity.cosmTypes;
         break;
     }
-    return result;
+    return partContext;
   }
 
   _onChangeForm(formConfig, event) {
@@ -59,15 +59,7 @@ export default class torgeternitySceneConfig extends foundry.applications.sheets
         this.document.setFlag('torgeternity', 'cosm2', event.target.value);
         break;
       case "zone":
-        {
-          const zone = event.target.value;
-          // More efficient than three calls to this.document.setFlag
-          this.document.update({
-            "flags.torgeternity.zone": zone,
-            "flags.torgeternity.displayCosm2": (zone === 'mixed' || zone === 'dominant'), // i.e. not 'pure'
-            "flags.torgeternity.isMixed": (zone === 'mixed')
-          })
-        }
+        this.document.update({ "flags.torgeternity.zone": event.target.value })
         break;
     }
   }

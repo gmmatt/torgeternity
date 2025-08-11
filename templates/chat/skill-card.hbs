@@ -20,10 +20,25 @@
     <p class="skill-roll-result" style="{{resultTextColor}}">
       {{resultText}}
     </p>
-    <p class="skill-roll-disconnect-label {{disconnectLabel}}">
-      {{localize 'torgeternity.chatText.possibleDisconnect'}},{{localize 'torgeternity.chatText.rolled'}}
-      {{diceList.[0]}}
-    </p>
+    {{#if fragileText}}
+      <p class="skill-roll-disconnect-label"> {{fragileText}} </p>
+    {{/if}}
+    {{#if disconnection}}
+      <p class="skill-roll-disconnect-label">
+        {{disconnection}}
+      </p>
+      <ul class="skill-roll-disconnect-label axioms">
+        {{#each disconnectionPerks}}
+          <li> {{this}}</li>
+        {{/each}}
+        {{#each disconnectionZone}}
+          <li> {{this}}</li>
+        {{/each}}
+        {{#each disconnectionActor}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     <p class="skill-roll-damage-label {{damageLabel}}">
       {{damageDescription}}
     </p>

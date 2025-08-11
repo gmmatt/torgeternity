@@ -1,5 +1,37 @@
 # TORG Eternity Changelog
 
+## v13.5.0  (SURGE + DISCONNECTIONS)
+
+### Improvements
+
+- The **Good** and **Outstanding** fields of the powers sheet (Spells, Miracle, Psionic Powers) has been converted to an HTML field, so that inline enrichers such as `@Buff` can be used.
+- Item control buttons are in same order on Stats tab and other tabs.
+- Rework the `@Check` enricher, so that "dn=" can simply reference the target skill/attribute (without the 'target' prefix).
+- Add `CONFIG.debug.torgtest` to provide console output for the Test processing.
+- Add `CONFIG.debug.torgtestrender` to provide console output for the Test Reporting.
+- Add new `@Damage[]` inline enricher.
+  - `@Damage[shock=X|wounds=Y]` inflicts X shock and Y wounds to each selected token (either shock or wounds can be omitted)
+  - `@Damage[damage=X]` inflicts X damage to the selected tokens, applying the target's toughness
+    - `damage=X` can take some extra parameters:
+    - `@Damage[damage=X|traits=fire]` inflicts X damage with the given attack Traits to the selected tokens, applying the target's toughness before calculating shock/wounds (currently the only supported traits are 'painful' and 'stagger')
+    - `@Damage[damage=X|ap=Y]` apply Y amount of Armor Piercing when determining shock/wounds.
+    - `@Damage[damage=X|ignoreArmor]` ignores the armor rating of the target when determining shock/wounds.
+- Provide automation for the **Surge** Drama Conflict Line.
+  - Each actor in the combat tracker on that faction's side will be examined for a possible contradiction, and a chat card will prompt with a dice roll for each actor. The 0, 1 or 1-4 cases are based on none, one or both of the following being true:
+    - The actor's cosm does not match either of the cosms of the current scene.
+    - Any item on the has a higher `Tech Level` (if set) or higher `secondary axiom` than the highest axioms of the cosms of the current scene (only taking 2nd cosm into account in a "mixed" zone).
+- Provide automation for detecting **disconnection** during Test Checks.
+- When **disconnected**, any items on the Actor which exceed the current scene's axioms will have a line drawn through the item's name (the system doesn't prevent the item from being used).
+- A game system setting is available to disable automatically setting the Actor to disconnected on a Surge or Test check disconnection.
+- Drama Card Line tooltip shows if current scene is `Standard` or `Dramatic`
+- Report a **fragile item breaking** on a Mishap involving its use.
+
+### Bug Fixes
+
+- Popping out the Combat Tracker should show the correctly working drama card line.
+- Adding a new Actor to an active Combat should set the correct initiative immediately.
+- It is now possible to create **Vehicle** actors again.
+
 ## v13.4.0
 
 ### IMPORTANT

@@ -18,7 +18,7 @@
       <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-          <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
             ({{localize "torgeternity.sheetLabels.spell"}})</a>
           <div class="item-controls">
             <a class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
@@ -81,7 +81,7 @@
       <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-          <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
             ({{localize "torgeternity.sheetLabels.miracle"}})</a>
           <div class="item-controls">
             <a class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}
@@ -144,7 +144,7 @@
       <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-          <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
             ({{localize "torgeternity.sheetLabels.psionic"}})</a>
           <div class="item-controls">
             <a class="item-control item-powerRoll" data-action="itemPowerRoll" {{disabled (not @root.editable)}}

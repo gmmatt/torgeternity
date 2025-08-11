@@ -15,6 +15,8 @@ export const TestResult = {
  */
 export async function renderSkillChat(test) {
 
+  if (CONFIG.debug.torgtestrender) console.debug('renderSkillChat', test);
+
   for (const key of Object.keys(test)) {
     if (!(test[key] instanceof String)) continue;
     const num = Number(test[key]);
@@ -115,6 +117,42 @@ export async function renderSkillChat(test) {
           test.chatNote += game.i18n.localize('torgeternity.sheetLabels.explosionCancelled');
         }
       } else test.rollTotal = test.diceroll.total;
+
+      // Check for Disconnection
+      if (!test.ignoreContradictions && testItem && test.rollTotal <= 4) {
+
+        // We can't check for Starred Perks, since no dice rolls are made from them.
+        const failsZone = testItem.isGeneralContradiction(game.scenes.active) || testItem.isContradiction(game.scenes.active?.torg.axioms);
+        const failsActor = testItem.isContradiction(testActor.system.axioms);
+        const limit = (!failsZone && !failsActor) ? 0 : (failsZone && failsActor) ? 4 : 1;
+
+        if (test.rollTotal <= limit) {
+
+          function axiomLabels(label, axiomField, failures) {
+            if (!failures) return null;
+            const result = []
+            for (const failure of failures)
+              result.push(game.i18n.format(`torgeternity.chatText.disconnection.${label}`, {
+                axiom: game.i18n.localize(CONFIG.torgeternity.axioms[failure.axiom]),
+                actorType: game.i18n.localize(CONFIG.Actor.typeLabels[testActor.type]),
+                itemName: testItem.name,
+                itemAxiom: failure.item,
+                [axiomField]: failure.max
+              }))
+            return result;
+          }
+
+          test.disconnection = game.i18n.format('torgeternity.chatText.disconnection.base', {
+            diceTotal: test.rollTotal,
+            itemName: testItem.name,
+          })
+          test.disconnectionZone = axiomLabels('zoneLabel', 'zoneAxiom', failsZone);
+          test.disconnectionActor = axiomLabels('actorLabel', 'actorAxiom', failsActor);
+
+          if (game.settings.get('torgeternity', 'autoDisconnect'))
+            testActor.toggleStatusEffect('disconnected', { active: true })
+        }
+      }
     }
 
     // Add the dices list in test
@@ -350,6 +388,9 @@ export async function renderSkillChat(test) {
       // Roll 1 and not defense = Mishap
       test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
+      if (test?.attackTraits.includes('fragile')) {
+        test.fragileText = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.itemName });
+      }
       test.outcomeColor = 'color: purple';
       test.resultTextColor = 'color: purple';
       if (!useColorBlind) {
@@ -488,9 +529,6 @@ export async function renderSkillChat(test) {
       test.damageLabel = 'hidden';
       test.damageSubLabel = 'hidden';
     }
-
-    // Remind Player to Check for Disconnect?
-    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal !== undefined) ? '' : 'hidden';
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
     if (
@@ -741,12 +779,23 @@ export function getTorgValue(myNumber) {
   return 59;
 }
 
-function validValue(value, other) {
-  return (value && value !== '-') ? value : other;
-}
-
 function individualDN(test, target) {
+
+  if (test.DNDescriptor.startsWith('target')) {
+    let onTarget = test.DNDescriptor.slice(6);
+    onTarget = onTarget.at(0).toLowerCase() + onTarget.slice(1);
+    if (Object.hasOwn(target.attributes, onTarget))
+      return target.attributes[onTarget].value;
+    if (Object.hasOwn(target.defenses, onTarget))
+      return target.defenses[onTarget];
+    if (Object.hasOwn(target.skills, onTarget)) {
+      const skill = target.skills[onTarget];
+      return (skill.value && skill.value !== '-') ? skill.value : target.attributes[skill.baseAttribute].value;
+    }
+  }
+
   switch (test.DNDescriptor) {
+    // Simple DNs
     case 'veryEasy':
       return 6;
     case 'easy':
@@ -763,58 +812,13 @@ function individualDN(test, target) {
       return 18;
     case 'nearImpossible':
       return 20;
-    case 'targetCharisma':
-      return target.attributes.charisma.value;
-    case 'targetDexterity':
-      return target.attributes.dexterity.value;
-    case 'targetMind':
-      return target.attributes.mind.value;
-    case 'targetSpirit':
-      return target.attributes.spirit.value;
-    case 'targetStrength':
-      return target.attributes.strength.value;
-    case 'targetAlteration':
-      return validValue(target.skills.alteration.value, target.attributes.mind.value);
-    case 'targetConjuration':
-      return validValue(target.skills.conjuration.value, target.attributes.spirit.value);
-    case 'targetDivination':
-      return validValue(target.skills.divination.value, target.attributes.mind.value);
-    case 'targetDodge':
-      return target.defenses.dodge;
-    case 'targetFaith':
-      return target.skills.faith.value || target.attributes.spirit.value;
-    case 'targetFind':
-      return validValue(target.skills.find.value, target.attributes.mind.value);
-    case 'targetIntimidation':
-      return target.defenses.intimidation;
-    case 'targetKinesis':
-      return validValue(target.skills.kinesis.value, target.attributes.spirit.value);
-    case 'targetManeuver':
-      return target.defenses.maneuver;
-    case 'targetMeleeWeapons':
-      return target.defenses.meleeWeapons;
-    case 'targetPrecognition':
-      return validValue(target.skills.precognition.value, target.attributes.mind.value);
-    case 'targetStealth':
-      return target.skills.stealth.value || target.attributes.dexterity.value;
-    case 'targetTaunt':
-      return target.defenses.taunt;
-    case 'targetTrick':
-      return target.defenses.trick;
-    case 'targetUnarmedCombat':
-      return target.defenses.unarmedCombat;
-    case 'targetWillpower':
-      return target.skills.willpower.value || target.attributes.spirit.value;
+
+    // Special Case
     case 'targetWillpowerMind':
       return target.skills.willpower.value
         ? target.skills.willpower.value - target.attributes.spirit.value + target.attributes.mind.value
         : target.attributes.mind.value;
-    case 'targetLandVehicles':
-      return target.skills.landVehicles.value || target.attributes.dexterity.value;
-    case 'targetAirVehicles':
-      return target.skills.airVehicles.value || target.attributes.dexterity.value;
-    case 'targetWaterVehicles':
-      return target.skills.waterVehicles.value || target.attributes.dexterity.value;
+
     case 'highestSpeed':
       // Find the fastest participant in the active combat
       let highestSpeed = 0;

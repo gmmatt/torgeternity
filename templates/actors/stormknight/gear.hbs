@@ -40,14 +40,9 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.meleeWeapons'}})</a>
             <div class="item-controls">
-              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip" {{disabled (not @root.editable)}}
-                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
-                <i class="fas fa-hand-paper"></i>
-              </a>
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
@@ -60,6 +55,11 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
+              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
+                <i class="fas fa-hand-paper"></i>
+              </a>
             </div>
           </div>
           <div class="item-detail">
@@ -71,7 +71,10 @@
               </div>
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
-                {{item.system.techlevel}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -97,14 +100,10 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}} {{TorgDisconnected item}}" data-action="itemName"
+              data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.missileWeapons'}})</a>
             <div class="item-controls">
-              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip" {{disabled (not @root.editable)}}
-                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
-                <i class="fas fa-hand-paper"></i>
-              </a>
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
@@ -117,6 +116,11 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
+              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
+                <i class="fas fa-hand-paper"></i>
+              </a>
             </div>
           </div>
           <div class="item-detail">
@@ -127,8 +131,11 @@
                 {{localize (concat "torgeternity.cosms." item.system.cosm)}}
               </div>
               <div class="item-dropdown-extras">
-                TL
-                {{item.system.techlevel}}
+                {{localize 'torgeternity.gear.tl'}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -163,14 +170,9 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.firearms'}}))</a>
             <div class="item-controls">
-              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip" {{disabled (not @root.editable)}}
-                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
-                <i class="fas fa-hand-paper"></i>
-              </a>
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
@@ -183,6 +185,11 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
+              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
+                <i class="fas fa-hand-paper"></i>
+              </a>
             </div>
           </div>
           <div class="item-detail">
@@ -193,8 +200,11 @@
                 {{localize (concat "torgeternity.cosms." item.system.cosm)}}
               </div>
               <div class="item-dropdown-extras">
-                TL
-                {{item.system.techlevel}}
+                {{localize 'torgeternity.gear.tl'}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -229,15 +239,10 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.heavyWeapons'}}/{{localize
               'torgeternity.sheetLabels.explosives'}})</a>
             <div class="item-controls">
-              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip" {{disabled (not @root.editable)}}
-                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
-                <i class="fas fa-hand-paper"></i>
-              </a>
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                 <i class="fas fa-dice-d20"></i>
@@ -250,6 +255,11 @@
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
               </a>
+              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
+                <i class="fas fa-hand-paper"></i>
+              </a>
             </div>
           </div>
           <div class="item-detail">
@@ -261,7 +271,10 @@
               </div>
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
-                {{item.system.techlevel}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -296,7 +309,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.ammunition'}})</a>
             <div class="item-controls">
               <a class="item-control item-edit" data-action="itemEdit"
@@ -320,7 +333,10 @@
               </div>
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
-                {{item.system.techlevel}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -364,13 +380,8 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
-              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip" {{disabled (not @root.editable)}}
-                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
-                <i class="fas fa-hand-paper"></i>
-              </a>
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
@@ -382,6 +393,11 @@
               <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
+              </a>
+              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
+                <i class="fas fa-hand-paper"></i>
               </a>
             </div>
           </div>
@@ -398,7 +414,10 @@
               </div>
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
-                {{item.system.techlevel}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -425,13 +444,8 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
-              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
-                data-action="itemEquip" {{disabled (not @root.editable)}}
-                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
-                <i class="fas fa-hand-paper"></i>
-              </a>
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                 <i class="fas fa-comment"></i>
@@ -443,6 +457,11 @@
               <a class="item-control item-delete" data-action="itemDelete" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
                 <i class="fas fa-trash"></i>
+              </a>
+              <a class="item-control item-equip {{ifThen item.system.equipped " item-equipped" "item-unequipped" }}"
+                data-action="itemEquip" {{disabled (not @root.editable)}}
+                data-tooltip="{{localize 'torgeternity.iconeTitles.toggleEquip'}}">
+                <i class="fas fa-hand-paper"></i>
               </a>
             </div>
           </div>
@@ -459,7 +478,10 @@
               </div>
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
-                {{item.system.techlevel}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -510,7 +532,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -539,7 +561,10 @@
             </div>
             <div class="item-dropdown-extras">
               {{localize 'torgeternity.gear.tl'}}
-              {{item.system.techlevel}}
+              {{item.system.axioms.tech}}
+              {{#if (ne item.system.secondaryAxiom 'none')}} /
+                {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
             </div>
             {{#if item.traitDesc}}
               <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -557,7 +582,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               (Implant)</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
@@ -587,7 +612,10 @@
               </div>
               <div class="item-dropdown-extras">
                 {{localize 'torgeternity.gear.tl'}}
-                {{item.system.techlevel}}
+                {{item.system.axioms.tech}}
+                {{#if (ne item.system.secondaryAxiom 'none')}} /
+                  {{localize (lookup @root.config.axioms item.system.secondaryAxiom)}}
+                  {{lookup item.system.axioms item.system.secondaryAxiom}}{{/if}}
               </div>
               {{#if item.traitDesc}}
                 <div class="item-dropdown-extras"> {{item.traitDesc}} </div>
@@ -606,7 +634,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               (Eternity Shard)</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
@@ -655,7 +683,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               (Vehicle)</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}

@@ -3,6 +3,7 @@ import { torgeternity } from './config.js';
 import TorgeternityChatLog from './torgeternityChatLog.js';
 import TorgeternityItem from './documents/item/torgeternityItem.js';
 import TorgeternityActor from './documents/actor/torgeternityActor.js';
+import TorgeternityScene from './documents/torgeternityscene.js';
 import TorgeternityItemSheet from './sheets/torgeternityItemSheet.js';
 import TorgeternityActorSheet from './sheets/torgeternityActorSheet.js';
 import { sheetResize } from './sheetResize.js';
@@ -72,6 +73,7 @@ Hooks.once('init', async function () {
   CONFIG.attributeTypes = torgeternity.attributeTypes;
   CONFIG.Token.rulerClass = TorgEternityTokenRuler;
   CONFIG.Token.objectClass = TorgEternityToken;
+  CONFIG.Scene.documentClass = TorgeternityScene;
 
   // --------combats
   CONFIG.Combat.initiative.formula = '1';
@@ -291,6 +293,7 @@ Hooks.once('setup', async function () {
 
   Handlebars.registerHelper({ TorgRadioBoxesNumber })
   Handlebars.registerHelper({ TorgHidden })
+  Handlebars.registerHelper({ TorgDisconnected })
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {
@@ -876,4 +879,8 @@ function TorgRadioBoxesNumber(name, choices, options) {
 
 function TorgHidden(value) {
   return value ? "hidden" : "";
+}
+
+function TorgDisconnected(doc) {
+  return doc?.isDisconnected ? "disconnected" : "";
 }

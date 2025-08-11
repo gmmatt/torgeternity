@@ -88,6 +88,13 @@ torgeternity.axioms = {
   magic: 'torgeternity.axioms.magic',
 };
 
+torgeternity.axiomsNoTech = {
+  // Used for choosing a Secondary Axiom in items, where tech is already present
+  social: 'torgeternity.axioms.social',
+  spirit: 'torgeternity.axioms.spirit',
+  magic: 'torgeternity.axioms.magic',
+};
+
 torgeternity.axiomByCosm = {
   coreEarth: {
     magic: 9,
@@ -210,31 +217,54 @@ torgeternity.dnTypes = {
   veryHard: 'torgeternity.dnTypes.veryHard',
   heroic: 'torgeternity.dnTypes.heroic',
   nearImpossible: 'torgeternity.dnTypes.nearImpossible',
+  // Attributes
   targetCharisma: 'torgeternity.dnTypes.targetCharisma',
   targetDexterity: 'torgeternity.dnTypes.targetDexterity',
   targetMind: 'torgeternity.dnTypes.targetMind',
   targetSpirit: 'torgeternity.dnTypes.targetSpirit',
   targetStrength: 'torgeternity.dnTypes.targetStrength',
+  // Skills
+  targetAirVehicles: 'torgeternity.dnTypes.targetAirVehicles',
   targetAlteration: 'torgeternity.dnTypes.targetAlteration',
+  targetApportation: 'torgeternity.dnTypes.targetApportation',
+  targetBeastRiding: 'torgeternity.dnTypes.targetBeastRiding',
+  targetComputers: 'torgeternity.dnTypes.targetComputers',
   targetConjuration: 'torgeternity.dnTypes.targetConjuration',
   targetDivination: 'torgeternity.dnTypes.targetDivination',
   targetDodge: 'torgeternity.dnTypes.targetDodge',
+  targetEnergyWeapons: 'torgeternity.dnTypes.targetEnergyWeapons',
+  targetEvidenceAnalysis: 'torgeternity.dnTypes.targetEvidenceAnalysis',
   targetFaith: 'torgeternity.dnTypes.targetFaith',
+  targetFind: 'torgeternity.dnTypes.targetFind',
+  targetFireCombat: 'torgeternity.dnTypes.targetFireCombat',
+  targetFirstAid: 'torgeternity.dnTypes.targetFirstAid',
+  targetHeavyWeapons: 'torgeternity.dnTypes.targetHeavyWeapons',
   targetIntimidation: 'torgeternity.dnTypes.targetIntimidation',
   targetKinesis: 'torgeternity.dnTypes.targetKinesis',
+  targetLandVehicles: 'torgeternity.dnTypes.targetLandVehicles',
+  targetLanguage: 'torgeternity.dnTypes.targetLanguage',
+  targetLockpicking: 'torgeternity.dnTypes.targetLockpicking',
   targetManeuver: 'torgeternity.dnTypes.targetManeuver',
+  targetMedicine: 'torgeternity.dnTypes.targetMedicine',
   targetMeleeWeapons: 'torgeternity.dnTypes.targetMeleeWeapons',
+  targetMissileWeapons: 'torgeternity.dnTypes.targetMissileWeapons',
+  targetPersuasion: 'torgeternity.dnTypes.targetPersuasion',
   targetPrecognition: 'torgeternity.dnTypes.targetPrecognition',
+  targetProfession: 'torgeternity.dnTypes.targetProfession',
+  targetReality: 'torgeternity.dnTypes.targetReality',
+  targetScholar: 'torgeternity.dnTypes.targetScholar',
   targetStealth: 'torgeternity.dnTypes.targetStealth',
+  targetStreetwise: 'torgeternity.dnTypes.targetStreetwise',
+  targetSurvival: 'torgeternity.dnTypes.targetSurvival',
   targetTaunt: 'torgeternity.dnTypes.targetTaunt',
+  targetTelepathy: 'torgeternity.dnTypes.targetTelepathy',
+  targetTracking: 'torgeternity.dnTypes.targetTracking',
   targetTrick: 'torgeternity.dnTypes.targetTrick',
   targetUnarmedCombat: 'torgeternity.dnTypes.targetUnarmedCombat',
-  targetWillpower: 'torgeternity.dnTypes.targetWillpower',
-  targetWillpowerMind: 'torgeternity.dnTypes.targetWillpowerMind',
-  targetFind: 'torgeternity.dnTypes.targetFind',
-  targetLandVehicles: 'torgeternity.dnTypes.targetLandVehicles',
   targetWaterVehicles: 'torgeternity.dnTypes.targetWaterVehicles',
-  targetAirVehicles: 'torgeternity.dnTypes.targetAirVehicles',
+  targetWillpower: 'torgeternity.dnTypes.targetWillpower',
+  // Other
+  targetWillpowerMind: 'torgeternity.dnTypes.targetWillpowerMind',
   highestSpeed: 'torgeternity.dnTypes.highestSpeed',
   targetVehicleDefense: 'torgeternity.dnTypes.targetVehicleDefense',
 };

@@ -3,24 +3,16 @@ import { torgeternity } from '../config.js';
 const FATIGUED_FACTION_FLAG = 'fatiguedFaction';
 const IS_DRAMATIC_FLAG = 'isDramatic';
 
+let firsttime;
+
 /**
  *
  */
 export default class TorgCombat extends Combat {
 
-
-  /**
-   *
-   * @param data
-   * @param options
-   * @param userId
-   */
-  _onCreate(data, options, userId) {
-    super._onCreate(data, options, userId);
-  }
-
   async _preDelete(options, user) {
-    if (!super._preDelete(options, user)) return false;
+    const allowed = super._preDelete(options, user);
+    if (allowed === false) return false;
 
     // listing of hands' actors in closing combat
     this.combatants.filter(combatant => combatant.actor?.type === 'stormknight')
@@ -60,11 +52,29 @@ export default class TorgCombat extends Combat {
    * @param userId
    */
   _onUpdate(changed, options, userId) {
-    if (game.user.isGM) {
+    if (game.user.isActiveGM) {
       const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
       this.setFlag('torgeternity', 'activeCard', (dramaActive.cards.size > 0) ? dramaActive.cards.contents[0].faces[0].img : '');
     }
     super._onUpdate(changed, options, userId);
+  }
+
+  /**
+   * Addition of Combatants
+   * @param {} parent 
+   * @param {*} collection 
+   * @param {*} documents 
+   * @param {*} data 
+   * @param {*} options 
+   * @param {*} userId 
+   */
+  async _onEnter(combatant) {
+    await super._onEnter(combatant);
+    if (game.user.isActiveGM && this.started) {
+      const whoFirst = await this.getFlag('torgeternity', 'combatFirstDisposition');
+      const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
+      combatant.update({ initiative });
+    }
   }
 
   get currentDrama() {
@@ -153,6 +163,8 @@ export default class TorgCombat extends Combat {
 
     // Sort combatants based on which faction is first
     const whoFirst = (this.isDramatic ? card.system.heroesFirstDramatic : card.system.heroesFirstStandard) ? CONST.TOKEN_DISPOSITIONS.FRIENDLY : CONST.TOKEN_DISPOSITIONS.HOSTILE;
+    await this.setFlag('torgeternity', 'combatFirstDisposition', whoFirst);
+
     const updates = [];
     for (const combatant of this.turns) {
       const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
@@ -339,9 +351,51 @@ export default class TorgCombat extends Combat {
   }
 
   async dramaSurge(faction) {
-    // All Actors must check for Contradictions
+    // All Actors must check for Contradictions (TCR 178)
     console.log('Drama Surge', faction)
-    this.#sendDramaChat('surge', faction);
+    //this.#sendDramaChat('surge', faction);
+
+    const scene = this.scene ?? game.scenes.active;
+    console.log('SURGE axiom limits: ', scene.torg.axioms)
+
+    let chatOutput = `<h2>${game.i18n.localize('torgeternity.drama.surge')}!</h2><ul>`;
+    //const cosm = this.
+    for (const actor of this.getFactionActors(faction)) {
+      // Any character who is not from that reality,
+      // or has something foreign to that reality on their person.
+
+      // Ignore actors from the scene's reality
+      const fromReality = scene.hasCosm(actor.system.other.cosm);
+      const itemContradictsActor = actor.items.find(item => item.isContradiction(actor.system.axioms));
+      const itemContradictsCosm = actor.items.find(item => item.isGeneralContradiction(scene) || (!scene.hasCosm(item.system.cosm) && item.isContradiction(scene.torg.axioms)));
+
+      chatOutput += `<li class="contradiction-roll"><strong>${actor.name}:</strong> `
+      if (actor.isDisconnected) {
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.alreadyDisconnected')}`;
+      } else if (!itemContradictsActor && !itemContradictsCosm) {
+        // axioms of cosm === axioms of actor
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.noContradiction')}`;
+        continue;
+      } else {
+        const FourCase = fromReality || (itemContradictsCosm && itemContradictsActor);
+        chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.possibleContradiction')} `;
+        chatOutput += foundry.applications.ux.TextEditor.createAnchor({
+          dataset: {
+            limit: FourCase ? 4 : 1,
+            uuid: actor.uuid,
+            tooltip: game.i18n.format('torgeternity.chatText.contradiction.checkTooltip', { name: actor.name })
+          },
+          name: FourCase ? '{1-4}' : '{1}',
+          classes: ['torg-inline-contradiction'],
+          icon: "fa-solid fa-dice-d20"
+        }).outerHTML;
+      }
+
+      chatOutput += '</li>';
+    }
+
+    chatOutput += `</ul>`;
+    ChatMessage.create({ content: chatOutput });
   }
 
   /**
@@ -404,4 +458,66 @@ export default class TorgCombat extends Combat {
     else
       return (ib - ia) || (a.id > b.id ? 1 : -1);
   }
+
+  static async _onClickContradiction(event) {
+    const target = event.target.closest('a.torg-inline-contradiction');
+    const limit = target.dataset.limit;
+    const actor = fromUuidSync(target.dataset.uuid);
+    // Silently ignore clicks if user is not the owner.
+    if (!actor.isOwner) return;
+
+    // Special case of the actor NOW being disconnected
+    if (actor.isDisconnected) {
+      return ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p class="contradiction-roll">${actor.name} ${game.i18n.localize('torgeternity.chatText.contradiction.alreadyDisconnected')}</p>`
+      })
+    }
+
+    // Perform the roll
+    const rollData = actor ? actor.getRollData() : {};
+    const roll = await foundry.dice.Roll.create(`d20cs>${limit}`, rollData).roll();
+    console.log(roll);
+    const success = roll.result === '1';
+
+    let result;
+    if (!success) {
+      if (game.settings.get('torgeternity', 'autoDisconnect'))
+        await actor.toggleStatusEffect('disconnected', { active: true });
+      result = game.i18n.localize('torgeternity.chatText.contradiction.hasDisconnected');
+    } else {
+      result = game.i18n.localize('torgeternity.chatText.contradiction.notDisconnected');
+    }
+    const dieNum = roll.dice[0].values[0];
+    const content = `<h2>${game.i18n.localize('torgeternity.chatText.contradiction.contradictionCheck')}</h2>
+      <p class="contradiction-roll ${success ? '' : 'disconnection'}">${actor.name} ${result}</p>
+      <div class="dice-roll-torg">
+          <div class="dice-result">
+            <div class="dice-tooltip expanded" style="display: block;">
+              <section class="tooltip-part">
+                <div class="dice">
+      <ol class="dice-rolls">
+      <li class="roll die d20" 
+      ${game.settings.get('torgeternity', 'useRenderedTorgDice') ? 'style="background-image: url(systems/torgeternity/images/Torgd20.svg);";' : ''}>${dieNum}</li>
+      </ol>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div> 
+      </div> `;
+
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content
+    })
+  }
 }
+
+
+Hooks.once('setup', async function () {
+  document.body.addEventListener('click', event => {
+    if (event.target?.closest("a.torg-inline-contradiction"))
+      TorgCombat._onClickContradiction(event);
+  })
+})

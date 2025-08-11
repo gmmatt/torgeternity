@@ -5,13 +5,13 @@
         {{localize "torgeternity.gear.cosm"}}
       </label>
       {{formInput systemFields.cosm value=item.system.cosm name="system.cosm" localize=true sort=true style="grid-column: 1/3"}}
-      <label for="system.techlevel" class="item-data-label">
+      <label for="system.axioms.tech" class="item-data-label">
         {{localize "torgeternity.gear.techlevel"}}
       </label>
       <input
-        name="system.techlevel"
+        name="system.axioms.tech"
         type="number"
-        value="{{item.system.techlevel}}" />
+        value="{{item.system.axioms.tech}}" />
       <label for="system.price" style="grid-column: 1/3" class="item-data-label">
         {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
       </label>
@@ -55,17 +55,17 @@
         {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
       </p>
 
-      <select style="grid-column: 1/3" name="system.secondaryAxiom.selected" class=" selectSecondaryAxiom">
+      <select style="grid-column: 1/3" name="system.secondaryAxiom" class="selectSecondaryAxiom">
         <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
-        {{selectOptions config.axioms selected=item.system.secondaryAxiom.selected localize=true}}
+        {{selectOptions config.axiomsNoTech selected=item.system.secondaryAxiom localize=true}}
       </select>
 
       {{#if displaySecondaryAxiomValue}}
         <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
         <input
-          name="system.secondaryAxiom.value"
+          name="system.axioms.{{item.system.secondaryAxiom}}"
           type="number"
-          value="{{item.system.secondaryAxiom.value}}" />
+          value="{{lookup item.system.axioms item.system.secondaryAxiom}}" />
       {{/if}}
 
     </aside>

@@ -441,7 +441,8 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   async _preCreate(data, options, user) {
-    super._preCreate(data, options, user);
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
 
     if (foundry.utils.hasProperty(data, 'prototypeToken')) return;
 
@@ -715,7 +716,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   static migrateData(source) {
-    if (source.type === 'vehicle' && typeof source.system.operator?.name === 'string') {
+    if (source.type === 'vehicle' && typeof source.system?.operator?.name === 'string') {
       if (source.system.operator.name)
         deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
       delete source.system.operator;

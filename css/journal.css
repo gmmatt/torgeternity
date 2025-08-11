@@ -425,6 +425,8 @@ a.content-link,
 a.inline-roll,
 a.torg-inline-check,
 a.torg-inline-condition,
+a.torg-inline-contradiction,
+a.torg-inline-damage,
 a.torg-inline-buff {
   background-image: url(../images/lightning_bar.webp);
   background-repeat: repeat-x;
