@@ -1,7 +1,7 @@
 {
   "CARD": {
-    "discard": "Wegwerfen",
-    "display": "Zeige diese Karte den anderen Spielern"
+    "discard": "Abwerfen",
+    "display": "Herzeigen"
   },
   "TYPES": {
     "Card": {
@@ -10,9 +10,9 @@
       "cosm": "Cosm"
     },
     "Actor": {
-      "stormknight": "Stormknight",
-      "threat": "Threat",
-      "vehicle": "Vehicle"
+      "stormknight": "Storm Knight",
+      "threat": "Bedrohung",
+      "vehicle": "Fahrzeug"
     }
   },
   "torgeternity": {
@@ -61,8 +61,8 @@
       "check": {
         "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
         "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
-        "cantUseRealityWhileDisconnected": "Du kannst nicht die Fähigkeit Realität verwenden, so lange du abgekoppelt bist.",
-        "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
+        "cantUseRealityWhileDisconnected": "Du kannst die Fähigkeit Realität nicht verwenden, so lange du abgekoppelt bist.",
+        "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und erneut versuchen.",
         "modifier": {
           "aimedShot": "Zielen",
           "allOutAttack": "Rücksichtsloser Angriff",
@@ -72,10 +72,10 @@
           "heavyBurst": "Schwerer Feuerstoß",
           "longBurst": "Langer Feuerstoß",
           "multiAction": "Mehrfachaktion",
-          "multiAttack": "Mehrfach-Attacke",
+          "multiAttack": "Mehrfach-Angriff",
           "multiTarget": "Mehrfach-Zielauswahl",
           "powerModifier": "Modifikator von Kräften",
-          "running": "Laufend",
+          "running": "Laufen",
           "shortBurst": "Kurzer Feuerstoß",
           "stymied": "Angeschlagen",
           "targetConcealment": "Deckungsschutz",
@@ -85,7 +85,7 @@
           "veryStymied": "Sehr Angeschlagen",
           "wounds": "Wunden"
         },
-        "needTarget": "Der ausgeweitete Angriffswurf kann ohne Ziel nicht durchgeführt werden. Wähle ein Ziel und versuche es erneut.",
+        "needTarget": "Der ausgeweitete Angriffswurf kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und erneut versuchen.",
         "noTracker": "Der Verfolgungsjagd-Button kann so lange nicht verwendet werden, bis es einen aktiven Kampf im Begegnungsstracker gibt.",
         "result": {
           "actionTotal": "Aktion insgesamt",
@@ -93,7 +93,7 @@
           "damage": "Schaden",
           "diceTotal": "Würfelergebnis",
           "failure": "Fehlschlag",
-	  "fragileBroken": "***The fragile {itemName} breaks",
+	  "fragileBroken": "{itemName} zerbricht",
           "goodSuccess": "Guter Erfolg",
           "mishape": "Patzer",
           "new": "Neue Summe",
@@ -109,13 +109,13 @@
         "testUnsuccessfull": "Probe nicht erfolgreich"
       },
       "contradiction": {
-        "alreadyDisconnected": "***is already disconnected",
-        "noContradiction": "***has no contradiction",
-        "hasDisconnected": "***has <strong>disconnected</strong>!!!",
-        "notDisconnected": "***has not disconnected",
-        "possibleContradiction": "***has a possible contradiction",
-        "contradictionCheck": "***Contradiction Check",
-        "checkTooltip": "***<strong>{name}</strong> rolls for contradiction"
+        "alreadyDisconnected": "ist bereits entkoppelt",
+        "noContradiction": "löst keine Widersprüche aus",
+        "hasDisconnected": "wird <strong>entkoppelt</strong>!!!",
+        "notDisconnected": "wird nicht entkoppelt",
+        "possibleContradiction": "löst möglicherweise Widersprüche aus",
+        "contradictionCheck": "Widerspruch-Probe",
+        "checkTooltip": "***<strong>{name}</strong> würfelt auf Widersprüche"
       },
       "damage": "Schaden",
       "dieTotal": "Würfelergebnis",
@@ -154,26 +154,26 @@
     "clearances": {
       "alpha": "Alpha",
       "beta": "Beta",
-      "delta": "Delta",
       "gamma": "Gamma",
+      "delta": "Delta",
       "omega": "Omega"
     },
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
-      "toggleDramatic": "Toggle between Standard and Dramatic Combat Resolution",
+      "toggleDramatic": "Zwischen Standard- und dramatischer Szene umschalten",
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
       "nextNew": "neue Runde (neue Dramakarte)",
-      "heroes": "***Heroes",
-      "villains": "***Villains",
-      "herosTooltip": "heros first",
-      "vilainsTooltip": "vilains first",
-      "hasPlayedTooltip": "Check when character's turn is complete"
+      "heroes": "Helden",
+      "villains": "Schurken",
+      "herosTooltip": "Helden zuerst",
+      "vilainsTooltip": "Schurken zuerst",
+      "hasPlayedTooltip": "Bestätigen wenn der Spielzug des Charakters beendet ist"
     },
     "contextMenu": {
       "characterInfo": {
-        "contextMenuTitle": "Show character information",
-        "windowTitle": "Notes and Backgrounds from {a}",
+        "contextMenuTitle": "Zeige Character Information",
+        "windowTitle": "Notizen und Hintergrund von {a}",
         "createChatCard": "Mache eine Chatkarte"
       }
     },
@@ -231,11 +231,11 @@
       "strengthPlus": "Stärke +"
     },
     "defeat": {
-      "prompt": "***{name} must make a Defeat Test",
-      "outstanding": "***<p><strong>{name} is Knocked Out</strong></p>",
-      "good": "***<p><strong>{name} is Knocked Out</strong></p><p>They suffer an Injury that lasts until all Wounds are healed</p>",
-      "standard": "***<p><strong>{name} is Knocked Out</strong></p><p>They suffer a permanent Injury</p>",
-      "failure": "***<p><strong>{name} dies!</strong></p><p>They get one final, dramatic action before expiring (ignoring wound penalties)</p>"
+      "prompt": "***{name} muss eine Ausgeschaltet-Probe ablegen",
+      "outstanding": "***<p><strong>{name} geht K.O.</strong></p>",
+      "good": "***<p><strong>{name} geht K.O.</strong></p><p>Und erleidet eine Verletzung, die anhält, bis alle seine Wunden geheilt sind</p>",
+      "standard": "***<p><strong>{name} geht K.O.</strong></p><p>Und erleidet eine permanente Verletzung</p>",
+      "failure": "***<p><strong>{name} stirbt!</strong></p><p>Das Opfer erhält sofort eine letzte, dramatische Aktion, bevor es abtritt. Verwundungsmalusse werden hierbei ignoriert.</p>"
     },
     "dialogPrompts": {
       "cardPooled": "Im Aktionenpool?",
@@ -264,7 +264,7 @@
         "title": "Links"
       },
       "hideForeignCompendium": {
-        "content": "Dieses System umfasst sowohl englisch- als auch deutschsprachige Kompendien. Möchtest du fremdsprachige Kompendien ausblenden?",
+        "content": "Dieses System umfasst sowohl englische, französische als auch deutschsprachige Kompendien. Möchtest du fremdsprachige Kompendien ausblenden?",
         "title": "Fremdsprachige Kompendien ausblenden?"
       },
       "itemDeletion": {
@@ -276,8 +276,8 @@
         "title": "Wirklich löschen?"
       },
       "realityCheck": {
-        "title": "Reconnecting?",
-        "content": "Are you trying to reconnect?"
+        "title": "Ankopplung?",
+        "content": "Versuchst du, dich wieder anzukoppeln?"
       },
       "buttons": {
         "execute": "Ausführen",
@@ -331,49 +331,49 @@
       "standard": "Standard (10)",
       "targetAirVehicles": "Luftfahrzeuge oder Geschicklichkeit des Ziels",
       "targetAlteration": "Verwandlung des Ziels",
-      "targetApportation": "***Target Appportation",
-      "targetBeastRiding": "***Target Beast Riding",
-      "targetComputers": "***Target Computers",
+      "targetApportation": "Apportation des Ziels",
+      "targetBeastRiding": "Reiten oder Geschicklichkeit des Ziels",
+      "targetComputers": "Computer oder Verstand des Ziels",
       "targetCharisma": "Charisma des Ziels",
       "targetConjuration": "Beschwörung des Ziels",
       "targetDexterity": "Geschicklichkeit des Ziels",
       "targetDivination": "Wahrsagung des Ziels",
-      "targetDodge": "Ausweichen des Ziels",
-      "targetEnergyWeapons": "***Target Energy Weapons",
-      "targetEvidenceAnalysis": "***Target Evidence Analysis",
-      "targetFaith": "Glauben des Ziels",
-      "targetFind": "Finden des Ziels",
-      "targetFireCombat": "***Target Fire Combat",
-      "targetFirstAid": "***Target First Aid",
-      "targetHeavyWeapons": "***Target Heavy Weapons",
-      "targetIntimidation": "Einschüchtern des Ziels",
-      "targetKinesis": "Kinese  des Ziels",
+      "targetDodge": "Ausweichen oder Geschicklichkeit des Ziels",
+      "targetEnergyWeapons": "Energiewaffen oder Geschicklichkeit des Ziels",
+      "targetEvidenceAnalysis": "Beweisanalyse oder Verstand des Ziels",
+      "targetFaith": "Glauben oder Geist des Ziels",
+      "targetFind": "Finden oder Verstand des Ziels",
+      "targetFireCombat": "Feuerwaffen oder Geschicklichkeit des Ziels",
+      "targetFirstAid": "Erste Hilfe oder Verstand des Ziels",
+      "targetHeavyWeapons": "Schwere Waffen oder Geschicklichkeit des Ziels",
+      "targetIntimidation": "Einschüchtern oder Geist des Ziels",
+      "targetKinesis": "Kinese des Ziels",
       "targetLandVehicles": "Landfahrzeuge oder Geschicklichkeit des Ziels",
-      "targetLanguage": "***Target Language",
-      "targetLockpicking": "***Target Lockpicking",
-      "targetManeuver": "Manövrieren des Ziels",
-      "targetMedicine": "***Target Medicine",
-      "targetMeleeWeapons": "Nahkampfwaffen des Ziels",
-      "targetMissileWeapons": "***Target Missile Weapons",
+      "targetLanguage": "Sprache des Ziels",
+      "targetLockpicking": "Schlossknacken oder Geschicklichkeit des Ziels",
+      "targetManeuver": "Manövrieren oder Geschicklichkeit des Ziels",
+      "targetMedicine": "Medizin des Ziels",
+      "targetMeleeWeapons": "Nahkampfwaffen oder Geschicklichkeit des Ziels",
+      "targetMissileWeapons": "Projektilwaffen oder Geschicklichkeit des Ziels",
       "targetMind": "Verstand des Ziels",
-      "targetPersuasion": "***Target Persuasion",
+      "targetPersuasion": "Überreden oder Charisma des Ziels",
       "targetPrecognition": "Präkognition des Ziels",
-      "targetProfession": "***Target Profession",
-      "targetReality": "***Target Reality",
-      "targetScholar": "***Target Scholar",
-      "targetSpirit": "Geist  des Ziels",
-      "targetStealth": "Heimlichkeit des Ziels",
-      "targetStreetwise": "***Target Streetwise",
+      "targetProfession": "Beruf oder Verstand des Ziels",
+      "targetReality": "Realität des Ziels",
+      "targetScholar": "Gelehrsamkeit oder Verstand des Ziels",
+      "targetSpirit": "Geist des Ziels",
+      "targetStealth": "Heimlichkeit oder Geschicklichkeit des Ziels",
+      "targetStreetwise": "Gassenwissen oder Charisma des Ziels",
       "targetStrength": "Stärke des Ziels",
-      "targetSurvival": "***Target Survival",
-      "targetTaunt": "Verspotten des Ziels",
-      "targetTelepathy": "***Target Telepathy",
-      "targetTracking": "***Target Tracking",
-      "targetTrick": "Tricksen des Ziels",
-      "targetUnarmedCombat": "Waffenloser Kampf  des Ziels",
+      "targetSurvival": "Überreden oder Charisma des Ziels",
+      "targetTaunt": "Verspotten oder Charisma des Ziels",
+      "targetTelepathy": "Telepathie des Ziels",
+      "targetTracking": "Spurenlesen oder Verstand des Ziels",
+      "targetTrick": "Tricksen oder Verstand des Ziels",
+      "targetUnarmedCombat": "Waffenloser Kampf oder Geschicklichkeit des Ziels",
       "targetVehicleDefense": "Verteidigung des Zielfahrzeuges",
       "targetWaterVehicles": "Wasserfahrzeuge oder Geschicklichkeit des Ziels",
-      "targetWillpower": "Willenskraft des Ziels",
+      "targetWillpower": "Willenskraft oder Geist des Ziels",
       "targetWillpowerMind": "Willenskraft oder Verstand des Ziels",
       "veryEasy": "Sehr einfach (6)",
       "veryHard": "Sehr schwer (16)"
@@ -390,41 +390,41 @@
     },
     "drama": {
       "none": "---",
-      "flurry": "Flurry",
+      "flurry": "Hast",
       "inspiration": "Inspiration",
-      "up": "Up",
-      "confused": "Confused",
-      "fatigued": "Fatigued",
-      "setback": "Setback",
-      "stymied": "Stymied",
-      "surge": "Surge",
-      "flurryDesc": "FLURRY: {faction} get an extra turn this round",
-      "inspirationDesc": "INSPIRATION: All {faction} immediately recover 2 shock",
-      "upDesc": "UP: Add an additional roll to the first roll for {faction}",
-      "confusedDesc": "CONFUSED: Players are unable to play cards from their pool",
-      "fatiguedDesc": "FATIGUED: Two shock inflicted at the end of each {faction} turn",
-      "setbackDesc": "SETBACK: GM decides a suitable setback for {faction}",
-      "stymiedDesc": "STYMIED: All {faction} are stymied until the end of the their turn",
-      "surgeDesc": "SURGE: All {faction} must check for Contradications"
+      "up": "Oberhand",
+      "confused": "Verwirrt",
+      "fatigued": "Ermüdung",
+      "setback": "Rückschlag",
+      "stymied": "Angeschlagen",
+      "surge": "Welle",
+      "flurryDesc": "HAST: {faction} bekommen in der laufenden Runde einen zusätzlichen Spielzug",
+      "inspirationDesc": "INSPIRATION: Alle {faction} regenerieren sofort 2 Schock",
+      "upDesc": "OBERHAND: Addiert bei Proben von {faction} einen zusätzlichen Würfelwurf",
+      "confusedDesc": "VERWIRRT: Spieler dürfen während der laufenden Runde keine Karten aus ihrem Aktionsvorrat einsetzen",
+      "fatiguedDesc": "ERMÜDUNG: Jedem {faction} werden am Ende seines Zuges 2 Schockschaden zugefügt",
+      "setbackDesc": "RÜCKSCHLAG: SL eintscheidet sich für eine passende unglückliche Wendung der Ereignisse für {faction}",
+      "stymiedDesc": "ANGESCHLAGEN: Alle {faction} zählt bis zum Ende des eigenen Zuges als Angeschlagen",
+      "surgeDesc": "WELLE: Alle {faction} muss eine Probe für Widersprüche durchführen"
     },
     "dramaCard": {
-      "heroesFirst": "Heroes First?",
+      "heroesFirst": "Helden zuerst?",
       "heroesCondition": "H:",
-      "villainsCondition": "V:",
-      "dsrLine": "DSR",
-      "rule": "Rule",
-      "approvedActions": "Actions",
+      "villainsCondition": "S:",
+      "dsrLine": "DPA",
+      "rule": "Regel",
+      "approvedActions": "Anerkannte Aktionen",
       "standard": "Standard",
-      "dramatic": "Dramatic",
-      "attack": "Attack",
-      "defend": "Defend",
-      "multiAction": "Any Multi-Action",
-      "any": "Any",
-      "complication": "Complication",
-      "criticalProblem": "Critical Problem",
-      "possibleSetback": "Possible Setback",
-      "shuffleDeck": "Shuffle Drama Deck",
-      "getPreviousDrama": "Recall Previous Drama Card"
+      "dramatic": "Dramatisch",
+      "attack": "Angreifen",
+      "defend": "Verteidigen",
+      "multiAction": "Beliebige Mehrfachaktion",
+      "any": "Alle",
+      "complication": "Komplikation",
+      "criticalProblem": "Kritisches Problem",
+      "possibleSetback": "Möglicher Rückschlag",
+      "shuffleDeck": "Drama-Deck mischen",
+      "getPreviousDrama": "Vorherige Drama-Karte zurückholen"
     },
     "enhancements": {
       "description": "Beschreibung",
@@ -433,8 +433,8 @@
     },
     "fieldLabels": {
       "itemTraits": {
-        "label": "***Traits",
-        "hint": "***The specific abilities of this item"
+        "label": "Anmerkungen",
+        "hint": "Die besonderen Fähigkeiten dieses Gegenstands"
       }
     },
     "gear": {
@@ -485,7 +485,7 @@
       "attackRoll": "Angriffswurf",
       "delete": "Löschen",
       "edit": "bearbeiten",
-      "miracleRoll": "Wunder-wurf",
+      "miracleRoll": "Wunder-Wurf",
       "openParty": "Öffnet die Gruppenübersicht",
       "psionicRoll": "Psionischer Wurf",
       "reload": "Waffe nachladen",
@@ -516,12 +516,12 @@
       "other": "Allgemeine Ausrüstung",
       "perk": "Vorzug",
       "race": "Volk",
-      "psionicpower": "Psikraft",
+      "psionicpower": "Psi-Kraft",
       "shield": "Schild",
       "specialability": "Spezialfähigkeit",
       "specialabilityRollable": "Spezialfähigkeit (würfelbar)",
       "spell": "Zauber",
-      "traits": "***Traits",
+      "traits": "Anmerkungen",
       "vehicle": "Fahrzeuge",
       "vehicleAddOn": "Fahrzeuge-Add-On"
     },
@@ -676,16 +676,16 @@
     },
     "settingMenu": {
       "animatedChat": {
-        "hint": "Wenn ausgewählt, wird die Einblendung der Chatkarten animiert.",
-        "name": "Animation der Chatkarten"
+        "hint": "Wenn ausgewählt, wird die Einblendung der Chatfenster animiert.",
+        "name": "Animation der Chat-Fenster"
       },
       "useColorBlindnessColors": {
         "hint": "Wenn angehakt, werden Achromatismus- freundliche (AKA Farbblindheit) rote und grüne Farben genutzt.",
         "name": "Farben für Achromatismus (rot-grün-Schwäche)"
       },
       "useRenderedTorgDice": {
-        "hint": "Wenn angehakt, bekommen die Würfel in Chat-Karten einen Torg-Anstrich. Wenn nicht, sind diese standard-grau.",
-        "name": "Zeige Torg-Würfel in Chatkarten"
+        "hint": "Wenn angehakt, bekommen die Würfel in Chat-Fenster einen Torg-Anstrich. Wenn nicht, sind diese standard-grau.",
+        "name": "Zeige Torg-Würfel in Chat-Feldern "
       },
       "autoDamages": {
         "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden.",
@@ -693,7 +693,7 @@
       },
       "deckSetting": {
         "hint": "Konfiguriere hier die Standard-Decks, aus denen die Karten gezogen und abgelegt werden.",
-        "label": "Standard-Kartenpack-Konfiguration",
+        "label": "Standard-Kartendeck-Konfiguration",
         "name": "Standard-Deckkonfiguration"
       },
       "defaultUserHand": {
@@ -721,8 +721,8 @@
         "name": "Anzeige der Spielerhand am unteren Bildschirmrand"
       },
       "setupCards": {
-        "hint": "Wenn ausgewählt, wird das System alle Kartendecks beim Start der Welt zurücksetzen. Du musst deinen Browser refreshen (F5), damit diese Änderung sofort greift.",
-        "name": "Kartenpakete installieren"
+        "hint": "Wenn ausgewählt, wird das System alle Kartendecks beim Start der Welt zurücksetzen. Du musst deinen Browser aktualisieren (F5), damit diese Änderung sofort greift.",
+        "name": "Kartendecks Zurücksetzen"
       },
       "showCheckDetails": {
         "hint": "Wenn dies angehakt ist, werden die Details eines Wurfs immer angezeigt.",
@@ -733,20 +733,20 @@
         "name": "Willkommensnachricht anzeigen"
       },
       "uniqueDN": {
-        "hint": "Wenn diese Option aktiviert ist, wird bei einem Test mit mehreren Zielen der höchste DN aller Ziele zur Bestimmung des Ergebnisses beibehalten, wie von den Regeln vorgesehen.",
-        "name": "Unique DN"
+        "hint": "Wenn diese Option aktiviert ist, wird bei einem Test mit mehreren Zielen der höchste MW aller Ziele zur Bestimmung des Ergebnisses beibehalten, wie von den Regeln vorgesehen.",
+        "name": "Einzelner MW"
       },
       "unTarget": {
-        "hint": "Targets are reseted after an attack by default. Uncheck if you want to keep them.",
-        "name": "Cancel targeting"
+        "hint": "Zielauswahl wird nach dem Angriff standardmäßig zurückgesetzt. Deaktiviere diese Option falls du die Zielauswahl behalten möchtest.",
+        "name": "Zielauswahl abwählen"
       },
       "useYear1PPTent": {
-        "hint": "Verwende den Pan-Pacifica Tischaufsteller nach Jahr 1.",
+        "hint": "Verwende den Pan-Pacifica Tischaufsteller nach Tag 172.",
         "name": "Jahr-1 PP Aufsteller"
       },
       "cardChatNotify": {
-        "hint": "***Hides core Foundry card messages where Torg Eternity supplies its own message",
-        "name": "***Suppress Core Card Messages"
+        "hint": "Verbirgt Kern-Foundry Chat-Benachrichtigungen wenn Torg Eternity eigene Benachrichtigungen bietet",
+        "name": "Verbirg Kern Chat-Benachrichtigungen"
       },
       "shuffleMessageSurpress": {
         "hint": "Wenn diese Option aktiviert ist, wird die Chat-Nachricht beim Mischen der Karten unterdrückt.",
@@ -757,32 +757,32 @@
         "name": "Ignoriere Munitionsmechanismen"
       },
       "hoverDistance": {
-        "hint": "If checked, hovering the mouse over a token will display the distance to that token from the user's controlled character",
-        "name": "Show Distance to Token"
+        "hint": "Wenn diese Option aktiviert ist, wird die Entfernung zum kontrollierten Charakter angezeigt, wenn der Mauszeiger über einem Token steht",
+        "name": "Zeige Entfernung zu Token"
       },
       "rulerGridWalk": {
-        "hint": "The tint colour for grid cells when a token has not reached its move distance (default: --color-level-success)",
-        "name": "Grid Highlight (Walk)"
+        "hint": "Die Einfärbung des Rasters solange der Token die einfache Bewegungsweite nicht erreicht hat (default: --color-level-success)",
+        "name": "Grid Highlight (Gehen)"
       },
       "rulerGridRun": {
-        "hint": "The tint colour for grid cells when a token has exceeded its move, but not its max move (default: --color-level-info)",
-        "name": "Grid Highlight (Run)"
+        "hint": "Die Einfärbung des Rasters wenn der Token die einfache Bewegungsweite überschritten, aber seine maximale Laufentfernung noch nicht erreicht hat (default: --color-level-info)",
+        "name": "Grid Highlight (Laufen)"
       },
       "rulerGridMax": {
-        "hint": "The tint colour for grid cells when a token has exceeded its max move (default: --color-level-error)",
-        "name": "Grid Highlight (> Run)"
+        "hint": "Die Einfärbung des Rasters, wenn der Token die maximale Laufentfernung überschritten hat. (default: --color-level-error)",
+        "name": "Grid Highlight (Laufen überschritten)"
       },
       "showMovementRuler": {
-        "hint": "Displays the movement history of tokens during a combat round (history is cleared on a new round)",
-        "name": "Show Token Movement History"
+        "hint": "Zeige den Bewegungsverlauf von Token während der aktuellen Kampfrunde (Verlauf wird bei neuer Runde gelöscht)",
+        "name": "Zeige Tokenbewegungsverlauf"
       },
       "autoShock": {
-        "name": "Automatically Apply KO",
-        "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
+        "name": "Automatische Zuweisung des Zustands K.O.",
+        "hint": "K.O.-Zustand wird automatisch angewandt, wenn ein Akteur sein Schocklimit erreicht"
       },
       "autoWound": {
-        "name": "Automatically Apply Wounds",
-        "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
+        "name": "Automatische Zuweisung des Zustands Tod",
+        "hint": "Tod-Zustand wird automatisch angewandt, wenn ein Akteur sein Wundenlimit überschreitet"
       }
     },
     "sheetLabels": {
@@ -793,14 +793,14 @@
       "addOns": "Add-Ons",
       "adds": "Fertigkeitsstufen",
       "aimed": "Zielen",
-      "aimedTooltip": "Aimed Shot (ranged attacks only)",
+      "aimedTooltip": "Gezielter Schuss (Nur Angriffe mit Fernkampfwaffen)",
       "allOut": "Rücksichtsloser Angriff",
-      "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
+      "allOutTooltip": "+4 Bonus/Sehr Verwundbar (Nur Angriffe mit Nahkampfwaffen oder Waffenloser Kampf)",
       "alterAttributes": "Du kannst nun die Attribute ändern",
       "ammunition": "Munition",
       "APMod": "PB Modifikator",
       "applyDamage": "Schaden anwenden",
-      "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
+      "applyDamageTooltip": "Linksklick zum anwenden, Rechtsklick zum modifizieren.",
       "applyStymied": "Angeschlagen anwenden",
       "applyStymiedTooltip": "Klicke, um den Status \"Angeschlagen\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Angeschlagen\".",
       "applyVulnerable": "Verwundbar anwenden",
@@ -811,7 +811,7 @@
       "attacks": "Angriffe",
       "attribute": "Attribute",
       "attributeMaximum": "Maximum der Attribute",
-      "attributes": "***Attribute",
+      "attributes": "Attribute",
       "max": "Max.",
       "availableEnhancements": "Verfügbare Verbesserungen",
       "background": "Hintergrund",
@@ -826,7 +826,7 @@
       "burstTooltip": "Nur automatische Waffen",
       "calledShot": "Gezielter Angriff",
       "chase": "Verfolgung",
-      "chooseDamage": "Wähle den anzuwendenden Schaden.",
+      "chooseDamage": "Wähle den anzuwendenden Schaden",
       "clearance": "Sicherheitsstufe",
       "collision": "Kollision",
       "combatSkills": "Kampf",
@@ -834,8 +834,8 @@
       "cosm": "Cosm",
       "coverBonus": "Deckungsbonus",
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
-      "crewUnskilledOperator": "***The operator of this vehicle is unskilled!",
-      "crewUnskilledWeapon": "***This weapon is being used unskilled!",
+      "crewUnskilledOperator": "Der Lenker des Fahrzeug ist ungelernt!",
+      "crewUnskilledWeapon": "Die Waffe wird ungelernt genutzt!",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "customAttacks": "Individuelle Angriffe",
@@ -843,7 +843,7 @@
       "damageMod": "Schadensmodifikator",
       "darkvision": "Dunkelsicht",
       "defense": "Verteidigung",
-      "defenses": "Verteidigung",
+      "defenses": "Verteidigungen",
       "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen",
       "derivedValues": "Abgeleitete Werte",
       "description": "Beschreibung",
@@ -858,18 +858,18 @@
       "end": "Ende",
       "enhancement": "Verbesserung",
       "enhancements": "Verbesserungen",
-      "enhancementTooltip": "Anklicken, wenn die Erweiterung gewählt wurde",
-      "enhancementRemoveTooltip": "Lösche die letzte Erweiterung",
-      "enhancementAddTooltip": "Füge eine Erweiterung hinzu",
+      "enhancementTooltip": "Anklicken, wenn die Verbesserung gewählt wurde",
+      "enhancementRemoveTooltip": "Lösche die letzte Verbesserung",
+      "enhancementAddTooltip": "Füge eine Verbesserung hinzu",
       "equipment": "Ausrüstung",
       "eternityShard": "Ewigkeitssplitter",
       "explosionCancelled": "Du bist benachteiligt, der erste Bonuswürfel wurde nicht angerechnet, bist aber nicht länger benachteiligt. ",
       "explosives": "Sprengstoffe",
-      "fatigue": "Erschöpfung",
+      "fatigue": "Ermüdung",
       "fatigueTooltip": "Anklicken, um Ermüdungsschaden anzuwenden",
       "favDis": "Bevorzugt & benachteiligt heben sich gegeneinander auf.",
       "favored": "Bevorzugt",
-      "favoredTitle": "Markiere dies, wenn die Fertigkeit begünstigt ist",
+      "favoredTitle": "Markieren, wenn die Fertigkeit begünstigt ist",
       "firearms": "Feuerwaffen",
       "firedamage": "Verursacht Feuerschaden",
       "freePoss": "SL schenkt dir eine Möglichkeit!",
@@ -917,7 +917,7 @@
       "noRace": "Kein Volk hinzugefügt",
       "notes": "Notizen",
       "number": "Nummer",
-      "operator": "Fahrzeugpilot:in",
+      "operator": "Fahrzeuglenker:in",
       "other": "Sonstige",
       "otherAttacks": "Sonstige Attacke",
       "otherModifiers": "Andere Modifikatoren",
@@ -941,9 +941,9 @@
       "race": "Volk",
       "racialPerks": "Volksfähigkeiten",
       "range": "Reichweite",
-      "darkvision": "***Darkvision",
-      "removeGunner": "***Remove this gunner from this weapon",
-      "removeOperator": "***Remove the operator from the vehicle",
+      "darkvision": "Dunkelsicht",
+      "removeGunner": "Entferne bei dieser Waffe den Schützen",
+      "removeOperator": "Entferne bei diesem Fahrzeug den Lenker",
       "return": "Zurück",
       "roll": "Würfeln",
       "run": "Laufen",
@@ -957,12 +957,12 @@
       "size": "Größe",
       "skill": "Fertigkeit",
       "skillAdds": "Fertigkeitsstufen",
-      "skillRollHint": "Click für eine Probe",
+      "skillRollHint": "Für eine Probe klicken",
       "skills": "Fertigkeiten",
       "skillValue": "Fertigkeitswert",
       "soakAll": "Du steckst alle Wunden und Schock weg.",
       "soakDamage": "Schaden wegstecken",
-      "soakDamageTooltip": "Generiert einen Realitäts-Check und gibt die Schadensreduzierung aus.",
+      "soakDamageTooltip": "Macht eine Realitäts-Probe und zeigt die Schadensreduzierung",
       "soakNull": "Du steckst nichts weg.",
       "soakRoll": "Wegstecken",
       "soakValue": " Wunden und allen Schock weggesteckt.",
@@ -972,7 +972,7 @@
       "specialAbility": "Spezielle Fähigkeit",
       "spell": "Zauber",
       "spells": "Zauber",
-      "spirit": "Spirit.",
+      "spirit": "Geist",
       "stats": "Werte",
       "statusEffects": "Statuseffekte",
       "stormknight": "Storm Knight",
@@ -994,7 +994,7 @@
       "trademarkHint": "Lieblingswaffe-Vorzug für die verwendete Waffe",
       "type": "Typ",
       "unarmed": "Unbewaffnet",
-      "unspent": "nicht ausgegeben",
+      "unspent": "Nicht ausgegeben",
       "up": "Oberhand",
       "update": "Aktualisieren",
       "usePreviousBonusLegend": "Wähle, ob du (1) würfeln willst oder (2) einen zuvor gewürfelten Bonus eingibst, wenn du eine Mehrfachaktion versuchst.",
@@ -1003,15 +1003,15 @@
       "vehicle": "Fahrzeug",
       "vehicles": "Fahrzeuge",
       "vitalArea": "Schwerer Treffer",
-      "vitalAreaTooltip": "+4 Damage",
+      "vitalAreaTooltip": "+4 Schaden",
       "walking": "Gehen",
       "weapons": "Waffen",
       "wounds": "Wunden",
       "xp": "EP",
-      "xpOnlyGM": "Nur die SL darf das füllen",
-      "toolTipClickToAdd": "klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen",
+      "xpOnlyGM": "Nur die SL darf Änderungen machen",
+      "toolTipClickToAdd": "Klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen",
       "backlash1": "Rückkopplung",
-      "backlash2": "Reduzierte\nRückkopplung",
+      "backlash2": "Reduzierte Rückkopplung",
       "backlash3": "Kopfschmerzen!",
       "backlash1Tooltip": "2 Schock anwenden",
       "backlash2Tooltip": "1 Schock anwenden",
@@ -1198,58 +1198,58 @@
       "step": "Schritt"
     },
     "traits": {
-      "blackPowder": "***Black Powder",
-      "bulky": "***Bulky",
-      "carbine": "***Carbine",
-      "dazing": "***Dazing",
-      "fatigues": "***Fatigues",
-      "fragile": "***Fragile",
-      "fullBody": "***Full Body",
-      "grapple": "***Grapple",
-      "head": "***Head",
-      "ignoresArmor": "***Ignores Armor",
-      "lowestArmor": "***Lowest Armor",
-      "nonLethal": "***Non-Lethal",
-      "painful": "***Painful",
-      "pistol": "***Pistol",
-      "quick": "***Quick",
-      "reload": "***Reload",
-      "shotgun": "***Shotgun",
-      "small": "***Small",
-      "stagger": "***Stagger",
-      "thrown": "***Thrown",
-      "torso": "***Torso",
-      "twoHanded": "***Two-Handed",
-      "unwieldy": "***Unwieldy",
-      "wounding": "***Wounding",
-      "shortBurst": "***Short Burst",
-      "mediumBlast": "***Medium Blast",
-      "longBurst": "***Long Burst",
-      "smallBlast": "***Small Blast",
-      "heavyBurst": "***Heavy Burst",
-      "largeBlast": "***Large Blast",
-      "veryLargeBlast": "***Very Large Blast",
-      "hugeBlast": "***Huge Blast",
-      "energyDamage": "***Energy Damage",
-      "fireDamage": "***Fire Damage",
-      "forceDamage": "***Force Damage",
-      "iceDamage": "***Ice Damage",
-      "lightningDamage": "***Lightning Damage",
-      "energyArmor": "***Armor vs Energy",
-      "fireArmor": "***Armor vs Fire",
-      "forceArmor": "***Armor vs Force",
-      "iceArmor": "***Armor vs Ice",
-      "lightningArmor": "***Armor vs Lightning",
-      "energyDefense": "***Defense vs Energy",
-      "fireDefense": "***Defense vs Fire",
-      "forceDefense": "***Defense vs Force",
-      "iceDefense": "***Defense vs Ice",
-      "lightningDefense": "***Defense vs Lightning"
+      "blackPowder": "Schwarzpulver",
+      "bulky": "Sperrig",
+      "carbine": "Karabiner",
+      "dazing": "Verwirrend",
+      "fatigues": "Ermüdung",
+      "fragile": "Zerbrechlich",
+      "fullBody": "Ganzkörper",
+      "grapple": "Festhalten",
+      "head": "Kopf",
+      "ignoresArmor": "Ignoriert Rüstung",
+      "lowestArmor": "Niedrigste Rüstung",
+      "nonLethal": "Nicht-tödlich",
+      "painful": "Schmerzhaft",
+      "pistol": "Pistole",
+      "quick": "Flink",
+      "reload": "Nachladen",
+      "shotgun": "Schrotflinte",
+      "small": "Klein",
+      "stagger": "Erschüttern",
+      "thrown": "Wurfwaffe",
+      "torso": "Torso",
+      "twoHanded": "Zweihändig",
+      "unwieldy": "Unhandlich",
+      "wounding": "Verletzend",
+      "shortBurst": "Kurzer FS",
+      "mediumBlast": "Mittlere Explosion",
+      "longBurst": "Langer FS",
+      "smallBlast": "Kleine Explosion",
+      "heavyBurst": "Schwerer FS",
+      "largeBlast": "Große Explosion",
+      "veryLargeBlast": "Sehr große Explosion",
+      "hugeBlast": "Riesige Explosion",
+      "energyDamage": "Energieschaden",
+      "fireDamage": "Feuerschaden",
+      "forceDamage": "Kraftschaden",
+      "iceDamage": "Eisschaden",
+      "lightningDamage": "Blitzschaden",
+      "energyArmor": "Rüstung gegen Energie",
+      "fireArmor": "Rüstung gegen Feuer",
+      "forceArmor": "Rüstung gegen Kraft",
+      "iceArmor": "Rüstung gegen Eis",
+      "lightningArmor": "Rüstung gegen Blitz",
+      "energyDefense": "Verteidigung gegen Energie",
+      "fireDefense": "Verteidigung gegen Feuer",
+      "forceDefense": "Verteidigung gegen Kraft",
+      "iceDefense": "Verteidigung gegen Eis",
+      "lightningDefense": "Verteidigung gegen Blitz"
     },
     "traitGroup": {
-      "defense": "***Defense",
-      "melee": "***Melee",
-      "ranged": "***Ranged"
+      "defense": "Verteidigung",
+      "melee": "Nahkampf",
+      "ranged": "Fernkampf"
     },    
     "vehicleTypes": {
       "air": "Luft",
@@ -1301,15 +1301,15 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
       "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben.",
-      "periculumSourceName": "Source's damages",
-      "periculumSourcePlaceHolder": "Describe the source of hazard",
-      "periculumDamageValue": "Base damage",
-      "periculumBds": "BDs modifiers",
-      "periculumArmor": "Apply armor ?",
-      "periculumAp": "Armor piercing value",
+      "periculumSourceName": "Schadensquelle",
+      "periculumSourcePlaceHolder": "Beschreibe die Quelle der Gefahr",
+      "periculumDamageValue": "Grundschaden",
+      "periculumBds": "BW-Modifikation",
+      "periculumArmor": "Rüstung wirksam?",
+      "periculumAp": "Panzerbrechungswert",
       "macroHub": {
         "buttonTitle": "MacroHub",
-        "title": "Der Torg Eternity Macro Hub"
+        "title": "Der Torg Eternity Macro-Hub"
       }
     }
   }
