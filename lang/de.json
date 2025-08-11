@@ -93,7 +93,7 @@
           "damage": "Schaden",
           "diceTotal": "Würfelergebnis",
           "failure": "Fehlschlag",
-	  "fragileBroken": "{itemName} zerbricht",
+          "fragileBroken": "{itemName} zerbricht",
           "goodSuccess": "Guter Erfolg",
           "mishape": "Patzer",
           "new": "Neue Summe",
@@ -116,6 +116,12 @@
         "possibleContradiction": "löst möglicherweise Widersprüche aus",
         "contradictionCheck": "Widerspruch-Probe",
         "checkTooltip": "***<strong>{name}</strong> würfelt auf Widersprüche"
+      },
+      "disconnection": {
+        "base": "{itemName} verursacht eine ENTKOPPLUNG ({diceTotal}):",
+        "actorLabel": "{axiom}: {itemAxiom} > {actorType} {actorAxiom}",
+        "zoneLabel": "{axiom}: {itemAxiom} > Zone {zoneAxiom}",
+        "perk": "{itemName} wurde außerhalb seines Cosm verwendet"
       },
       "damage": "Schaden",
       "dieTotal": "Würfelergebnis",
@@ -783,6 +789,10 @@
       "autoWound": {
         "name": "Automatische Zuweisung des Zustands Tod",
         "hint": "Tod-Zustand wird automatisch angewandt, wenn ein Akteur sein Wundenlimit überschreitet"
+      },
+      "autoDisconnect": {
+        "name": "Automatisches Entkoppeln",
+        "hint": "Bei einer Welle oder Probe die eine Entkopplung hervorruft, wird der Charakter erhält der Charakter automatisch den Zustand Entkoppelt"
       }
     },
     "sheetLabels": {
@@ -1250,7 +1260,7 @@
       "defense": "Verteidigung",
       "melee": "Nahkampf",
       "ranged": "Fernkampf"
-    },    
+    },
     "vehicleTypes": {
       "air": "Luft",
       "land": "Land",
