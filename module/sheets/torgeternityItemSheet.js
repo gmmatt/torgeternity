@@ -249,8 +249,9 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   static #onItemDelete(event, button) {
     if (this.item.type === 'race') {
+      // Deleting an item from a race Item
       const inheritedType = button.closest('.item').dataset.inheritedtype;
-      const raceid = button.closest('.item').dataset.itemid;
+      const itemid = button.closest('.item').dataset.itemid;
       const raceItem = this.item;
       const allThingsOfRaceItem =
         inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
@@ -258,7 +259,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       if (!allThingsOfRaceItem) return; // just for safety
 
       for (const thing of allThingsOfRaceItem) {
-        if (thing.system.transferenceID === raceid) {
+        if (thing.system.transferenceID === itemid) {
           allThingsOfRaceItem.delete(thing);
           break;
         }

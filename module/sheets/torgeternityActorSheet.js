@@ -381,7 +381,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (!this.actor.isOwner) return super._onDrop(event);
 
     const data = foundry.applications.ux.TextEditor.getDragEventData(event);
-    const document = await fromUuid(data.uuid);
+    const document = await fromUuid(data.uuid, { invalid: true });
+    if (!document) return super._onDrop(event);
 
     switch (this.actor.type) {
 
@@ -392,11 +393,18 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         await this.deleteRace();
 
         // Add new race and racial abilities
-        await this.actor.createEmbeddedDocuments('Item', [
+        let docs = await this.actor.createEmbeddedDocuments('Item', [
           document.toObject(),
           ...document.system.perksData,
           ...document.system.customAttackData
         ]);
+        console.log(docs);
+
+        // Mark items are being from the race
+        const racedoc = docs.shift();
+        for (const item of docs) {
+          item.update({ 'system.transferenceID': racedoc.id })
+        }
 
         // Enforce attribute maximums
         const updates = {};
@@ -1011,7 +1019,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       return this.actor.deleteEmbeddedDocuments('Item', [
         oldRace.id,
         ...this.actor.items
-          .filter(item =>
+          .filter(item => (item.system.transferenceID === oldRace.id) ||
             (item.type === 'perk' && item.system.category === 'racial') ||
             (item.type === 'customAttack' && item.name.includes(oldRace.name)))
           .map(item => item.id),

@@ -436,11 +436,10 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * @param {*} cosm2 
    * @returns {Boolean} 
    */
-  isGeneralContradiction(cosm, cosm2) {
+  isGeneralContradiction(scene) {
     return this.type === 'perk' &&
       this.system.cosm !== 'none' &&
-      this.system.cosm !== cosm &&
-      (!cosm2 || this.system.cosm !== cosm2);
+      !scene.hasCosm(this.system.cosm);
   }
 
   /**
@@ -452,6 +451,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * @returns Boolean
    */
   isContradiction(maxAxioms) {
+    if (!maxAxioms) return false;
+
     const results = [];
 
     for (const field of Object.keys(maxAxioms))
@@ -469,22 +470,13 @@ export default class TorgeternityItem extends foundry.documents.Item {
     // If not embedded, then it isn't disconnected
     if (!this.parent?.isDisconnected) return false;
 
-    const sceneflags = game.scenes.active?.flags.torgeternity;
-    if (!sceneflags) return false;
-
-    // CALCULATE zoneAxioms
-    const zoneAxioms = { ...CONFIG.torgeternity.axiomByCosm[sceneflags.cosm] };
-    if (sceneflags.isMixed && sceneflags.cosm2) {
-      const axiom2 = CONFIG.torgeternity.axiomByCosm[sceneflags.cosm2];
-      for (const key of Object.keys(zoneAxioms))
-        if (axiom2[key] > zoneAxioms[key]) zoneAxioms[key] = axiom2[key];
-    }
-    // FINISHED CALCULATING zoneAxioms
+    const scene = game.scenes.active;
+    if (!scene || scene.torg.cosm === 'none') return false;
 
     // Some Perks just don't work outside their own COSM while disconnected
-    if (this.isGeneralContradiction(sceneflags.cosm, sceneflags.isMixed && sceneflags.cosm2)) return true;
+    if (this.isGeneralContradiction(scene)) return true;
 
-    return this.isContradiction(zoneAxioms);
+    return this.isContradiction(scene.torg.axioms);
   }
 }
 

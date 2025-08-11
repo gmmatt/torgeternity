@@ -397,9 +397,9 @@ export class TorgeternityMacros {
       vulnerableModifier: _actor.statusModifiers.vulnerable,
       darknessModifier: _actor.statusModifiers.darkness,
       type: 'skill',
-      isOther1: game.scenes.active.flags.torgeternity.cosm !== 'none',
+      isOther1: game.scenes.active && game.scenes.active.torg.cosm !== 'none',
       other1Description: game.i18n.localize('torgeternity.macros.reconnectMacroZoneModifier'),
-      other1Modifier: difficultyRecon[game.scenes.active.flags.torgeternity.zone],
+      other1Modifier: game.scenes.active && difficultyRecon[game.scenes.active.flags.torgeternity.zone],
     };
 
     if (!test.isOther1) {

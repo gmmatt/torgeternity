@@ -119,7 +119,7 @@
       },
       "disconnection": {
         "base": "{itemName} caused DISCONNECTION ({diceTotal}):",
-        "actorLabel": "{axiom}: {itemAxiom} > Actor {actorAxiom}",
+        "actorLabel": "{axiom}: {itemAxiom} > {actorType} {actorAxiom}",
         "zoneLabel": "{axiom}: {itemAxiom} > Zone {zoneAxiom}",
         "perk": "{itemName} was used outside its cosm"
       },

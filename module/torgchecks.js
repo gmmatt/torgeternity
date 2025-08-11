@@ -121,18 +121,8 @@ export async function renderSkillChat(test) {
       // Check for Disconnection
       if (!test.ignoreContradictions && testItem && test.rollTotal <= 4) {
 
-        // CALCULATE zoneAxioms
-        const sceneflags = game.scenes.active.flags.torgeternity;
-        const zoneAxioms = { ...CONFIG.torgeternity.axiomByCosm[sceneflags.cosm] };
-        if (sceneflags.isMixed && sceneflags.cosm2) {
-          const axiom2 = CONFIG.torgeternity.axiomByCosm[sceneflags.cosm2];
-          for (const key of Object.keys(zoneAxioms))
-            if (axiom2[key] > zoneAxioms[key]) zoneAxioms[key] = axiom2[key];
-        }
-        // FINISHED CALCULATING zoneAxioms
-
         // We can't check for Starred Perks, since no dice rolls are made from them.
-        const failsZone = testItem.isContradiction(zoneAxioms);
+        const failsZone = testItem.isContradiction(game.scenes.active?.torg.axioms);
         const failsActor = testItem.isContradiction(testActor.system.axioms);
         const limit = (!failsZone && !failsActor) ? 0 : (failsZone && failsActor) ? 4 : 1;
 
@@ -144,6 +134,7 @@ export async function renderSkillChat(test) {
             for (const failure of failures)
               result.push(game.i18n.format(`torgeternity.chatText.disconnection.${label}`, {
                 axiom: game.i18n.localize(CONFIG.torgeternity.axioms[failure.axiom]),
+                actorType: game.i18n.localize(CONFIG.Actor.typeLabels[testActor.type]),
                 itemName: testItem.name,
                 itemAxiom: failure.item,
                 [axiomField]: failure.max

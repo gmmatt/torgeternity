@@ -356,16 +356,7 @@ export default class TorgCombat extends Combat {
     //this.#sendDramaChat('surge', faction);
 
     const scene = this.scene ?? game.scenes.active;
-    const sceneflags = scene.flags.torgeternity;
-    const cosm = sceneflags.cosm;
-    const cosm2 = sceneflags.displayCosm2 && sceneflags.cosm2;
-    const zoneAxioms = { ...CONFIG.torgeternity.axiomByCosm[cosm] };
-    if (sceneflags.isMixed && cosm2) {
-      const axiom2 = CONFIG.torgeternity.axiomByCosm[cosm2];
-      for (const key of Object.keys(zoneAxioms))
-        if (axiom2[key] > zoneAxioms[key]) zoneAxioms[key] = axiom2[key];
-    }
-    console.log('SURGE axiom limits: ', zoneAxioms)
+    console.log('SURGE axiom limits: ', scene.torg.axioms)
 
     let chatOutput = `<h2>${game.i18n.localize('torgeternity.drama.surge')}!</h2><ul>`;
     //const cosm = this.
@@ -374,10 +365,9 @@ export default class TorgCombat extends Combat {
       // or has something foreign to that reality on their person.
 
       // Ignore actors from the scene's reality
-      const fromReality = (actor.system.other.cosm === cosm) || (cosm2 && actor.system.other.cosm === cosm2);
+      const fromReality = scene.hasCosm(actor.system.other.cosm);
       const itemContradictsActor = actor.items.find(item => item.isContradiction(actor.system.axioms));
-      const itemContradictsCosm = actor.items.find(item =>
-        item.system.cosm !== cosm && (!cosm2 || item.system.cosm !== cosm2) && item.isContradiction(zoneAxioms));
+      const itemContradictsCosm = actor.items.find(item => !scene.hasCosm(item.system.cosm) && item.isContradiction(scene.torg.axioms));
 
       chatOutput += `<li class="contradiction-roll"><strong>${actor.name}:</strong> `
       if (actor.isDisconnected) {
