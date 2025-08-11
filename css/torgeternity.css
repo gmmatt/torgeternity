@@ -426,7 +426,6 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 
   &:not(.minimized) {
-    min-width: 750px;
     min-height: 400px;
   }
 

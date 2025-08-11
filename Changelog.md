@@ -4,7 +4,11 @@
 
 ### Improvements
 
-Remove immediate change of scene's cosms, since they shouldn't change until the Save Changes button is pressed.
+- Remove immediate change of scene's cosms, since they shouldn't change until the Save Changes button is pressed.
+
+### Bug Fixes
+
+- Allow Stormknight Sheets to reduce width below 750px, so that it can change to single column format.
 
 ## v13.5.0  (SURGE + DISCONNECTIONS)
 
