@@ -441,7 +441,8 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 
   async _preCreate(data, options, user) {
-    super._preCreate(data, options, user);
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
 
     if (foundry.utils.hasProperty(data, 'prototypeToken')) return;
 

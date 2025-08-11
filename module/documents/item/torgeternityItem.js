@@ -102,7 +102,9 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 
   async _preCreate(data, options, user) {
-    super._preCreate(data, options, user);
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
+
     if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
@@ -118,6 +120,12 @@ export default class TorgeternityItem extends foundry.documents.Item {
       ui.notifications.error(game.i18n.localize('torgeternity.notifications.raceExistent'));
       return false;
     }
+
+    if (this.type === 'perk' || this.type === 'customAttack') {
+      this.updateSource({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
+    }
+
+    if (this.type === 'miracle') this.updateSource({ 'system.skill': 'faith' });
   }
 
   /**
@@ -140,12 +148,6 @@ export default class TorgeternityItem extends foundry.documents.Item {
         TorgeternityItem.toggleEquipState(previousEquipped, actor);
       }
     }
-
-    if (this.type === 'perk' || this.type === 'customAttack') {
-      await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
-    }
-
-    if (this.type === 'miracle') await this.update({ 'system.skill': 'faith' });
   }
 
   /**
