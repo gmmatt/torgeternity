@@ -29,6 +29,7 @@
 
 - Popping out the Combat Tracker should show the correctly working drama card line.
 - Adding a new Actor to an active Combat should set the correct initiative immediately.
+- It is now possible to create **Vehicle** actors again.
 
 ## v13.4.0
 
