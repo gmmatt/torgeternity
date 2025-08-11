@@ -149,7 +149,8 @@ export async function renderSkillChat(test) {
           test.disconnectionZone = axiomLabels('zoneLabel', 'zoneAxiom', failsZone);
           test.disconnectionActor = axiomLabels('actorLabel', 'actorAxiom', failsActor);
 
-          testActor.toggleStatusEffect('disconnected', { active: true })
+          if (game.settings.get('torgeternity', 'autoDisconnect'))
+            testActor.toggleStatusEffect('disconnected', { active: true })
         }
       }
     }

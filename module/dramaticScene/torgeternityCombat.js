@@ -484,7 +484,8 @@ export default class TorgCombat extends Combat {
 
     let result;
     if (!success) {
-      await actor.toggleStatusEffect('disconnected', { active: true });
+      if (game.settings.get('torgeternity', 'autoDisconnect'))
+        await actor.toggleStatusEffect('disconnected', { active: true });
       result = game.i18n.localize('torgeternity.chatText.contradiction.hasDisconnected');
     } else {
       result = game.i18n.localize('torgeternity.chatText.contradiction.notDisconnected');

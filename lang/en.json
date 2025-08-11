@@ -789,6 +789,10 @@
       "autoWound": {
         "name": "Automatically Apply Wounds",
         "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
+      },
+      "autoDisconnect": {
+        "name": "Automatically Disconnect",
+        "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
       }
     },
     "sheetLabels": {
