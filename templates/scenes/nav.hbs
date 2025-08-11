@@ -11,15 +11,15 @@
         {{#if scene.tooltip}}data-tooltip-text="{{scene.tooltip}}" {{/if}}>
         <span class="scene-name ellipsis">{{scene.name}}</span>
         <div class="cosmIcons flexrow">
-          <div class="cosm-icone {{scene.flags.torgeternity.cosm}}">
+          <div class="cosm-icone {{scene.torg.cosm}}">
             <div
-              class="{{../lang}} cosm-card {{scene.flags.torgeternity.cosm}}{{#if (and ../y1pp (eq scene.flags.torgeternity.cosm 'panPacifica') (or (eq ../lang 'en' ) (eq ../lang 'de' )))}}Y1{{/if}}">
+              class="{{../lang}} cosm-card {{scene.torg.cosm}}{{#if (and ../y1pp (eq scene.torg.cosm 'panPacifica') (or (eq ../lang 'en' ) (eq ../lang 'de' )))}}Y1{{/if}}">
             </div>
           </div>
-          {{#if scene.flags.torgeternity.displayCosm2}}
+          {{#if scene.torg.displayCosm2}}
             <div
-              class="{{#unless scene.flags.torgeternity.isMixed}} dominant2ndCosm {{/unless}} cosm-icone {{scene.flags.torgeternity.cosm2}}">
-              <div class="{{../lang}} cosm-card cosm2 {{scene.flags.torgeternity.cosm2}} "></div>
+              class="{{#unless scene.torg.isMixed}} dominant2ndCosm {{/unless}} cosm-icone {{scene.torg.cosm2}}">
+              <div class="{{../lang}} cosm-card cosm2 {{scene.torg.cosm2}} "></div>
             </div>
           {{/if}}
         </div>
@@ -40,15 +40,15 @@
         {{#if scene.tooltip}}data-tooltip-text="{{scene.tooltip}}" {{/if}}>
         <span class="scene-name ellipsis">{{scene.name}}</span>
         <div class="cosmIcons flexrow">
-          <div class="cosm-icone {{scene.flags.torgeternity.cosm}}">
+          <div class="cosm-icone {{scene.torg.cosm}}">
             <div
-              class="{{../lang}} cosm-card {{scene.flags.torgeternity.cosm}}{{#if (and ../y1pp (eq scene.flags.torgeternity.cosm 'panPacifica') (or (eq ../lang 'en' ) (eq ../lang 'de' )))}}Y1{{/if}}">
+              class="{{../lang}} cosm-card {{scene.torg.cosm}}{{#if (and ../y1pp (eq scene.torg.cosm 'panPacifica') (or (eq ../lang 'en' ) (eq ../lang 'de' )))}}Y1{{/if}}">
             </div>
           </div>
-          {{#if scene.flags.torgeternity.displayCosm2}}
+          {{#if scene.torg.displayCosm2}}
             <div
-              class="{{#unless scene.flags.torgeternity.isMixed}} dominant2ndCosm {{/unless}} cosm-icone {{scene.flags.torgeternity.cosm2}}">
-              <div class="{{../lang}} cosm-card cosm2 {{scene.flags.torgeternity.cosm2}} "></div>
+              class="{{#unless scene.torg.isMixed}} dominant2ndCosm {{/unless}} cosm-icone {{scene.torg.cosm2}}">
+              <div class="{{../lang}} cosm-card cosm2 {{scene.torg.cosm2}} "></div>
             </div>
           {{/if}}
         </div>

@@ -8,12 +8,10 @@ export default class TorgCombatant extends Combatant {
    * @param options
    * @param user
    */
-  async _onCreate(data, options, user) {
-    if (game.user.isGM) {
-      this.setFlag('world', 'turnTaken', false);
-    }
-
-    await super._onCreate(data, options, user);
+  async _preCreate(data, options, user) {
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
+    this.updateSource({ "flags.world.turnTaken": false });
   }
 
   get turnTaken() {

@@ -23,7 +23,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       addLimitation: TorgeternityItemSheet.#onAddLimitation,
       removeLimitation: TorgeternityItemSheet.#onRemoveLimitation,
       reloadWeapon: TorgeternityItemSheet.#onReloadWeapon,
-      selectSecondaryAxiom: TorgeternityItemSheet.#onSelectSecondaryAxiom,
       itemName: TorgeternityItemSheet.#onItemName,
       itemDelete: TorgeternityItemSheet.#onItemDelete,
       toggleTraitEdit: TorgeternityItemSheet.#onToggleTraitEdit,
@@ -165,6 +164,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     }).bind(this.element);
 
     this.element.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
+    this.element.querySelectorAll('select.selectSecondaryAxiom').forEach(elem =>
+      elem.addEventListener('change', TorgeternityItemSheet.#onSelectSecondaryAxiom.bind(this)));
 
     if (options.force) {
       // Either window has just been opened, or it has been brought to the top of the stack.
@@ -221,9 +222,11 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     await reloadAmmo(this.actor, this.item, usedAmmo, this);
   }
 
-  static #onSelectSecondaryAxiom(event, button) {
-    button.value === 'none' &&
-      this.item.update({ 'system.secondaryAxiom.value': null });
+  static async #onSelectSecondaryAxiom(event) {
+    const old_selected = this.item.system.secondaryAxiom;
+    if (event.target.value === old_selected) return;
+    if (old_selected !== 'none')
+      await this.item.update({ [`system.axioms.${old_selected}`]: 0 });
   }
 
   static #onToggleTraitEdit(event, button) {
@@ -246,8 +249,9 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
   static #onItemDelete(event, button) {
     if (this.item.type === 'race') {
+      // Deleting an item from a race Item
       const inheritedType = button.closest('.item').dataset.inheritedtype;
-      const id = button.closest('.item').dataset.itemid;
+      const itemid = button.closest('.item').dataset.itemid;
       const raceItem = this.item;
       const allThingsOfRaceItem =
         inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
@@ -255,7 +259,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       if (!allThingsOfRaceItem) return; // just for safety
 
       for (const thing of allThingsOfRaceItem) {
-        if (thing.system.transferenceID === id) {
+        if (thing.system.transferenceID === itemid) {
           allThingsOfRaceItem.delete(thing);
           break;
         }
@@ -314,14 +318,14 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description);
     context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites);
+    if (Object.hasOwn(this.document.system, 'good')) {
+      context.enrichedGood = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.good);
+      context.enrichedOutstanding = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.outstanding);
+    }
 
     context.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
 
-    context.displaySecondaryAxiomValue =
-      !this.document.system?.secondaryAxiom ||
-        this.document.system?.secondaryAxiom.selected === 'none'
-        ? false
-        : true;
+    context.displaySecondaryAxiomValue = this.document.system?.secondaryAxiom !== 'none';
 
     context.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
 
@@ -356,6 +360,10 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
         break;
     }
     context.tabs[this.tabGroups.primary].cssClass = 'active';
+
+    if (this.item.type === 'spell') context.axiom = 'magic';
+    else if (this.item.type === 'miracle') context.axiom = 'spirit';
+    else if (this.item.type === 'psionicpower') context.axiom = 'social';
 
     return context;
   }

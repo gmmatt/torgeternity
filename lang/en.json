@@ -89,10 +89,11 @@
         "noTracker": "Cannot use chase button unless there is an active combat in the combat tracker.",
         "result": {
           "actionTotal": "Action Total",
-          "diceTotal": "Dice sum",
           "attackMissed": "Attack Missed",
           "damage": "Damage",
+          "diceTotal": "Dice sum",
           "failure": "Failure",
+          "fragileBroken": "The fragile {itemName} breaks",
           "goodSuccess": "Good Success",
           "mishape": "Mishap",
           "new": "New Roll Total",
@@ -106,6 +107,21 @@
           "BDDamageSum": "Sum damage of rolled BD"
         },
         "testUnsuccessfull": "Test unsuccessful"
+      },
+      "contradiction": {
+        "alreadyDisconnected": "is already disconnected",
+        "noContradiction": "has no contradiction",
+        "hasDisconnected": "has <strong>disconnected</strong>!!!",
+        "notDisconnected": "has not disconnected",
+        "possibleContradiction": "has a possible contradiction",
+        "contradictionCheck": "Contradiction Check",
+        "checkTooltip": "<strong>{name}</strong> rolls for contradiction"
+      },
+      "disconnection": {
+        "base": "{itemName} caused DISCONNECTION ({diceTotal}):",
+        "actorLabel": "{axiom}: {itemAxiom} > {actorType} {actorAxiom}",
+        "zoneLabel": "{axiom}: {itemAxiom} > Zone {zoneAxiom}",
+        "perk": "{itemName} was used outside its cosm"
       },
       "damage": "Damage",
       "dieTotal": "Die Total",
@@ -321,25 +337,45 @@
       "standard": "Standard (10)",
       "targetAirVehicles": "Target air vehicles or Dexterity",
       "targetAlteration": "Target Alteration",
+      "targetApportation": "Target Appportation",
+      "targetBeastRiding": "Target Beast Riding",
+      "targetComputers": "Target Computers",
       "targetCharisma": "Target Charisma",
       "targetConjuration": "Target Conjuration",
       "targetDexterity": "Target Dexterity",
       "targetDivination": "Target Divination",
       "targetDodge": "Target dodge or Dexterity",
+      "targetEnergyWeapons": "Target Energy Weapons",
+      "targetEvidenceAnalysis": "Target Evidence Analysis",
       "targetFaith": "Target faith or Spirit",
+      "targetFind": "Target find or Mind",
+      "targetFireCombat": "Target Fire Combat",
+      "targetFirstAid": "Target First Aid",
+      "targetHeavyWeapons": "Target Heavy Weapons",
       "targetIntimidation": "Target intimidation or Spirit",
       "targetKinesis": "Target Kinesis",
       "targetLandVehicles": "Target land vehicles or Dexterity",
+      "targetLanguage": "Target Language",
+      "targetLockpicking": "Target Lockpicking",
       "targetManeuver": "Target maneuver or Dexterity",
+      "targetMedicine": "Target Medicine",
       "targetMeleeWeapons": "Target melee weapons or Dexterity",
+      "targetMissileWeapons": "Target Missile Weapons",
       "targetMind": "Target Mind",
+      "targetPersuasion": "Target Persuasion",
       "targetPrecognition": "Target Precognition",
+      "targetProfession": "Target Profession",
+      "targetReality": "Target Reality",
+      "targetScholar": "Target Scholar",
       "targetSpirit": "Target Spirit",
       "targetStealth": "Target stealth or Dexterity",
+      "targetStreetwise": "Target Streetwise",
       "targetStrength": "Target Strength",
+      "targetSurvival": "Target Survival",
       "targetTaunt": "Target taunt or Charisma",
+      "targetTelepathy": "Target Telepathy",
+      "targetTracking": "Target Tracking",
       "targetTrick": "Target trick or Mind",
-      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Target unarmed combat or Dexterity",
       "targetVehicleDefense": "Target Vehicle Defense",
       "targetWaterVehicles": "Target water vehicles or Dexterity",
@@ -694,13 +730,13 @@
         "hint": "If checked, the system will re-set the decks and discard piles in the Card Stacks tab. You will need to refresh your browser before the changes are made.",
         "name": "Setup the Cards Directory"
       },
-      "welcome": {
-        "hint": "If checked, the welcome message will pop up after your world loads.",
-        "name": "Display the Welcome Message"
-      },
       "showCheckDetails": {
         "hint": "If checked, the details of checks will always be shown.",
         "name": "Show Details in checks"
+      },
+      "welcome": {
+        "hint": "If checked, the welcome message will pop up after your world loads.",
+        "name": "Display the Welcome Message"
       },
       "uniqueDN": {
         "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
@@ -753,6 +789,10 @@
       "autoWound": {
         "name": "Automatically Apply Wounds",
         "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
+      },
+      "autoDisconnect": {
+        "name": "Automatically Disconnect",
+        "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
       }
     },
     "sheetLabels": {

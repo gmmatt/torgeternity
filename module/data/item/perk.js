@@ -105,11 +105,19 @@ export class PerkItemData extends BaseItemData {
         limitationNumber: new fields.NumberField({ initial: 0, integer: true }),
       }),
       timestaken: new fields.StringField({ initial: '' }),
-      secondaryAxiom: new fields.SchemaField({
-        selected: new fields.StringField({ initial: 'none' }),
-        value: new fields.NumberField({ initial: null, integer: true }),
-      }),
+      secondaryAxiom: new fields.StringField({ initial: 'none' }),
       transferenceID: new fields.DocumentIdField({ initial: null }), // necessary for saving perks data in race items
     };
+  }
+
+  static migrateData(source) {
+    if (source.secondaryAxiom?.selected) {
+      if (source.secondaryAxiom.selected !== 'none') {
+        if (!source.axioms) source.axioms = {};
+        source.axioms[source.secondaryAxiom.selected] = source.secondaryAxiom.value;
+      }
+      source.secondaryAxiom = source.secondaryAxiom.selected;
+    }
+    return super.migrateData(source);
   }
 }

@@ -102,7 +102,9 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 
   async _preCreate(data, options, user) {
-    super._preCreate(data, options, user);
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
+
     if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
@@ -118,6 +120,12 @@ export default class TorgeternityItem extends foundry.documents.Item {
       ui.notifications.error(game.i18n.localize('torgeternity.notifications.raceExistent'));
       return false;
     }
+
+    if (this.type === 'perk' || this.type === 'customAttack') {
+      this.updateSource({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
+    }
+
+    if (this.type === 'miracle') this.updateSource({ 'system.skill': 'faith' });
   }
 
   /**
@@ -128,6 +136,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
    */
   async _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
+    if (game.user.id !== userId) return;
 
     if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
       const actor = this.parent;
@@ -139,12 +148,6 @@ export default class TorgeternityItem extends foundry.documents.Item {
         TorgeternityItem.toggleEquipState(previousEquipped, actor);
       }
     }
-
-    if (this.type === 'perk' || this.type === 'customAttack') {
-      await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
-    }
-
-    if (this.type === 'miracle') await this.update({ 'system.skill': 'faith' });
   }
 
   /**
@@ -156,7 +159,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * @returns
    */
   async _preUpdate(changes, options, user) {
-    if ((await super._preUpdate(changes, options, user)) === false) return false;
+    const allowed = await super._preUpdate(changes, options, user);
+    if (allowed === false) return false;
 
     if (
       foundry.utils.getProperty(changes, 'system.ammo') &&
@@ -176,6 +180,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
   async _onUpdate(changed, options, userId) {
     await super._onUpdate(changed, options, userId);
+    if (game.user.id !== userId) return;
 
     if (
       changed?.system &&
@@ -423,6 +428,55 @@ export default class TorgeternityItem extends foundry.documents.Item {
       default:
         return 1;
     }
+  }
+
+  /**
+   * Return true if this item is a Perk that will always cause a contradiction when used outside its realm.
+   * @param {*} cosm 
+   * @param {*} cosm2 
+   * @returns {Boolean} 
+   */
+  isGeneralContradiction(scene) {
+    return this.type === 'perk' &&
+      this.system.cosm !== 'none' &&
+      !scene.hasCosm(this.system.cosm);
+  }
+
+  /**
+   * Indicates if this item will cause a contradiction in either of the supplied cosms,
+   * or if it exceeds the provided axiom limits
+   * @param {String} cosm 
+   * @param {String|undefined} cosm2 
+   * @param {Object} maxAxioms (see CONFIG.torgeternity.axiomByCosm)
+   * @returns Boolean
+   */
+  isContradiction(maxAxioms) {
+    if (!maxAxioms) return false;
+
+    const results = [];
+
+    for (const field of Object.keys(maxAxioms))
+      if (this.system.axioms[field] > maxAxioms[field])
+        results.push({ axiom: field, item: this.system.axioms[field], max: maxAxioms[field] });
+
+    return results.length ? results : null;
+  }
+
+  /**
+   * Returns true if the item exceeds the current scene's axioms whilst on a disconnected actor,
+   * or is a Starred Perk when the Item is not inside the correct cosm.
+  */
+  get isDisconnected() {
+    // If not embedded, then it isn't disconnected
+    if (!this.parent?.isDisconnected) return false;
+
+    const scene = game.scenes.active;
+    if (!scene || scene.torg.cosm === 'none') return false;
+
+    // Some Perks just don't work outside their own COSM while disconnected
+    if (this.isGeneralContradiction(scene)) return true;
+
+    return this.isContradiction(scene.torg.axioms);
   }
 }
 

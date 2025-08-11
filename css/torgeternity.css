@@ -1039,16 +1039,22 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
         .item-name {
           align-self: center;
-        }
 
-        .item-control {
-          margin-right: 2px;
+          &.disconnected {
+            text-decoration: line-through;
+          }
         }
 
         img {
           max-width: 30px;
           max-height: 30px;
         }
+      }
+    }
+
+    .item-list .item-controls {
+      .item-control {
+        margin-right: 2px;
       }
     }
 
@@ -1081,6 +1087,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
           .item-name {
             text-align: center;
+
+            &.disconnected {
+              text-decoration: line-through;
+            }
           }
 
           img {
@@ -1099,13 +1109,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
           .item-controls {
             align-content: center;
             justify-content: end;
-            max-width: 115px;
             flex: none;
-
-            a.item-control {
-              float: right;
-              margin-right: 5px;
-            }
 
             a.item-equip.item-equipped {
               color: #0000af;
@@ -2708,7 +2712,7 @@ nav#controls,
 
     button {
       font-family: Alaska;
-      font-size: 20px;
+      font-size: 19px;
     }
   }
 
@@ -3005,13 +3009,15 @@ div.readme a.compendium {
   }
 
   .skill-roll-disconnect-label {
-    font-size: 12px;
     text-align: center;
     padding: 0px;
     margin: 0px;
     font-family: "Palatino Linotype";
     width: 100%;
-    font-style: italic;
+
+    &.axioms {
+      font-style: italic;
+    }
   }
 
   .skill-roll-result {
@@ -3073,6 +3079,14 @@ div.readme a.compendium {
     font-weight: bold;
     text-align: center;
     margin: 0.5em 0 0 0;
+  }
+
+  .contradiction-roll {
+    font-family: "Palatino Linotype";
+
+    &.disconnection {
+      color: red;
+    }
   }
 
   .applyButtons {
@@ -3373,7 +3387,6 @@ p.skill-chat-title.skilled {
 
   .window-content {
     font-size: 0.9em;
-    max-height: 95%;
 
     .editor-content {
       flex: 1 0 auto;
@@ -3576,6 +3589,16 @@ p.skill-chat-title.skilled {
     width: 100%;
     flex: 1;
 
+    &:has(~.item-description.active) {
+      --min-height: 100px;
+      flex: 1;
+    }
+
+    &.active {
+      --min-height: 300px;
+      flex: 3;
+    }
+
     &[name="system.description"] {
       --min-height: 300px;
       flex: 3;
@@ -3584,6 +3607,10 @@ p.skill-chat-title.skilled {
     &.smallEditor {
       min-height: 150px;
       row-gap: 0px;
+
+      &.active {
+        min-height: 300px;
+      }
 
       menu {
         gap: 2px;
@@ -4286,6 +4313,8 @@ div.token-distance {
 
 a.torg-inline-check,
 a.torg-inline-condition,
+a.torg-inline-contradiction,
+a.torg-inline-damage,
 a.torg-inline-buff {
   /* Just like core a.inline-roll */
   background: #DDD;
