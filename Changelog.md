@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT RELEASE  (SURGE + DISCONNECTIONS)
+## v13.5.0  (SURGE + DISCONNECTIONS)
 
 ### Improvements
 
@@ -20,7 +20,7 @@
   - Each actor in the combat tracker on that faction's side will be examined for a possible contradiction, and a chat card will prompt with a dice roll for each actor. The 0, 1 or 1-4 cases are based on none, one or both of the following being true:
     - The actor's cosm does not match either of the cosms of the current scene.
     - Any item on the has a higher `Tech Level` (if set) or higher `secondary axiom` than the highest axioms of the cosms of the current scene (only taking 2nd cosm into account in a "mixed" zone).
-- Provide automation for detecting **disconnection** during skill use.
+- Provide automation for detecting **disconnection** during Test Checks.
 - When **disconnected**, any items on the Actor which exceed the current scene's axioms will have a line drawn through the item's name (the system doesn't prevent the item from being used).
 - A game system setting is available to disable automatically setting the Actor to disconnected on a Surge or Test check disconnection.
 - Drama Card Line tooltip shows if current scene is `Standard` or `Dramatic`
