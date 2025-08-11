@@ -367,20 +367,18 @@ export default class TorgCombat extends Combat {
       // Ignore actors from the scene's reality
       const fromReality = scene.hasCosm(actor.system.other.cosm);
       const itemContradictsActor = actor.items.find(item => item.isContradiction(actor.system.axioms));
-      const itemContradictsCosm = actor.items.find(item => !scene.hasCosm(item.system.cosm) && item.isContradiction(scene.torg.axioms));
+      const itemContradictsCosm = actor.items.find(item => item.isGeneralContradiction(scene) || (!scene.hasCosm(item.system.cosm) && item.isContradiction(scene.torg.axioms)));
 
       chatOutput += `<li class="contradiction-roll"><strong>${actor.name}:</strong> `
       if (actor.isDisconnected) {
         chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.alreadyDisconnected')}`;
-      } else if (fromReality && !itemContradictsActor) {
+      } else if (!itemContradictsActor && !itemContradictsCosm) {
         // axioms of cosm === axioms of actor
         chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.noContradiction')}`;
         continue;
       } else {
-        const FourCase = (fromReality || (itemContradictsCosm && itemContradictsActor)) //? 4 : 1;
+        const FourCase = fromReality || (itemContradictsCosm && itemContradictsActor);
         chatOutput += ` ${game.i18n.localize('torgeternity.chatText.contradiction.possibleContradiction')} `;
-        /*chatOutput += `[[/r d20cs>${limit}]]`;
-        chatOutput += limit ? '{1 - 4}' : '{1}';*/
         chatOutput += foundry.applications.ux.TextEditor.createAnchor({
           dataset: {
             limit: FourCase ? 4 : 1,
