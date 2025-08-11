@@ -9,6 +9,7 @@
 ### Bug Fixes
 
 - Allow Stormknight Sheets to reduce width below 750px, so that it can change to single column format.
+- Get Periculum macro working.
 
 ## v13.5.0  (SURGE + DISCONNECTIONS)
 
