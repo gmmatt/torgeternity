@@ -117,6 +117,12 @@
         "contradictionCheck": "Contradiction Check",
         "checkTooltip": "<strong>{name}</strong> rolls for contradiction"
       },
+      "disconnection": {
+        "base": "{itemName} caused DISCONNECTION ({diceTotal}):",
+        "actorLabel": "{axiom}: {itemAxiom} > Actor {actorAxiom}",
+        "zoneLabel": "{axiom}: {itemAxiom} > Zone {zoneAxiom}",
+        "perk": "{itemName} was used outside its cosm"
+      },
       "damage": "Damage",
       "dieTotal": "Die Total",
       "discardsCard": "Discards",

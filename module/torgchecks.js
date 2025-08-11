@@ -117,6 +117,50 @@ export async function renderSkillChat(test) {
           test.chatNote += game.i18n.localize('torgeternity.sheetLabels.explosionCancelled');
         }
       } else test.rollTotal = test.diceroll.total;
+
+      // Check for Disconnection
+      if (!test.ignoreContradictions && testItem && test.rollTotal <= 4) {
+
+        // CALCULATE zoneAxioms
+        const sceneflags = game.scenes.active.flags.torgeternity;
+        const zoneAxioms = { ...CONFIG.torgeternity.axiomByCosm[sceneflags.cosm] };
+        if (sceneflags.isMixed && sceneflags.cosm2) {
+          const axiom2 = CONFIG.torgeternity.axiomByCosm[sceneflags.cosm2];
+          for (const key of Object.keys(zoneAxioms))
+            if (axiom2[key] > zoneAxioms[key]) zoneAxioms[key] = axiom2[key];
+        }
+        // FINISHED CALCULATING zoneAxioms
+
+        // We can't check for Starred Perks, since no dice rolls are made from them.
+        const failsZone = testItem.isContradiction(zoneAxioms);
+        const failsActor = testItem.isContradiction(testActor.system.axioms);
+        const limit = (!failsZone && !failsActor) ? 0 : (failsZone && failsActor) ? 4 : 1;
+
+        if (test.rollTotal <= limit) {
+
+          function axiomLabels(label, axiomField, failures) {
+            if (!failures) return null;
+            const result = []
+            for (const failure of failures)
+              result.push(game.i18n.format(`torgeternity.chatText.disconnection.${label}`, {
+                axiom: game.i18n.localize(CONFIG.torgeternity.axioms[failure.axiom]),
+                itemName: testItem.name,
+                itemAxiom: failure.item,
+                [axiomField]: failure.max
+              }))
+            return result;
+          }
+
+          test.disconnection = game.i18n.format('torgeternity.chatText.disconnection.base', {
+            diceTotal: test.rollTotal,
+            itemName: testItem.name,
+          })
+          test.disconnectionZone = axiomLabels('zoneLabel', 'zoneAxiom', failsZone);
+          test.disconnectionActor = axiomLabels('actorLabel', 'actorAxiom', failsActor);
+
+          testActor.toggleStatusEffect('disconnected', { active: true })
+        }
+      }
     }
 
     // Add the dices list in test
@@ -353,8 +397,7 @@ export async function renderSkillChat(test) {
       test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
       if (test?.attackTraits.includes('fragile')) {
-        const itemName = fromUuidSync(test.actor, { strict: false })?.items.get(test.itemId).name;
-        test.fragileText = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName });
+        test.fragileText = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.itemName });
       }
       test.outcomeColor = 'color: purple';
       test.resultTextColor = 'color: purple';
@@ -494,9 +537,6 @@ export async function renderSkillChat(test) {
       test.damageLabel = 'hidden';
       test.damageSubLabel = 'hidden';
     }
-
-    // Remind Player to Check for Disconnect?
-    test.disconnectLabel = (test.rollTotal <= 4 && test.rollTotal !== undefined) ? '' : 'hidden';
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
     if (

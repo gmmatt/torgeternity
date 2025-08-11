@@ -1039,6 +1039,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
         .item-name {
           align-self: center;
+
+          &.disconnected {
+            text-decoration: line-through;
+          }
         }
 
         img {
@@ -1083,6 +1087,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
           .item-name {
             text-align: center;
+
+            &.disconnected {
+              text-decoration: line-through;
+            }
           }
 
           img {
@@ -3001,13 +3009,15 @@ div.readme a.compendium {
   }
 
   .skill-roll-disconnect-label {
-    font-size: 12px;
     text-align: center;
     padding: 0px;
     margin: 0px;
     font-family: "Palatino Linotype";
     width: 100%;
-    font-style: italic;
+
+    &.axioms {
+      font-style: italic;
+    }
   }
 
   .skill-roll-result {

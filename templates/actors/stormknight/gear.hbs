@@ -40,7 +40,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.meleeWeapons'}})</a>
             <div class="item-controls">
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
@@ -100,7 +100,8 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}} {{TorgDisconnected item}}" data-action="itemName"
+              data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.missileWeapons'}})</a>
             <div class="item-controls">
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
@@ -169,7 +170,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.firearms'}}))</a>
             <div class="item-controls">
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
@@ -238,7 +239,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.heavyWeapons'}}/{{localize
               'torgeternity.sheetLabels.explosives'}})</a>
             <div class="item-controls">
@@ -308,7 +309,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               ({{localize 'torgeternity.sheetLabels.ammunition'}})</a>
             <div class="item-controls">
               <a class="item-control item-edit" data-action="itemEdit"
@@ -379,7 +380,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -443,7 +444,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -531,7 +532,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -581,7 +582,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               (Implant)</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
@@ -633,7 +634,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               (Eternity Shard)</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
@@ -682,7 +683,7 @@
         <li class="item block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
               (Vehicle)</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}

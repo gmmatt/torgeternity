@@ -291,6 +291,7 @@ Hooks.once('setup', async function () {
 
   Handlebars.registerHelper({ TorgRadioBoxesNumber })
   Handlebars.registerHelper({ TorgHidden })
+  Handlebars.registerHelper({ TorgDisconnected })
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {
@@ -876,4 +877,8 @@ function TorgRadioBoxesNumber(name, choices, options) {
 
 function TorgHidden(value) {
   return value ? "hidden" : "";
+}
+
+function TorgDisconnected(doc) {
+  return doc?.isDisconnected ? "disconnected" : "";
 }

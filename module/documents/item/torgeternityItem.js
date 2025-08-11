@@ -426,6 +426,19 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 
   /**
+   * Return true if this item is a Perk that will always cause a contradiction when used outside its realm.
+   * @param {*} cosm 
+   * @param {*} cosm2 
+   * @returns {Boolean} 
+   */
+  isGeneralContradiction(cosm, cosm2) {
+    return this.type === 'perk' &&
+      this.system.cosm !== 'none' &&
+      this.system.cosm !== cosm &&
+      (!cosm2 || this.system.cosm !== cosm2);
+  }
+
+  /**
    * Indicates if this item will cause a contradiction in either of the supplied cosms,
    * or if it exceeds the provided axiom limits
    * @param {String} cosm 
@@ -434,12 +447,39 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * @returns Boolean
    */
   isContradiction(maxAxioms) {
-    if (this.type === 'perk') return this.system.generalContradiction;
+    const results = [];
 
-    return this.system.axioms.tech > maxAxioms.tech ||
-      this.system.axioms.magic > maxAxioms.magic ||
-      this.system.axioms.spirit > maxAxioms.spirit ||
-      this.system.axioms.social > maxAxioms.social;
+    for (const field of Object.keys(maxAxioms))
+      if (this.system.axioms[field] > maxAxioms[field])
+        results.push({ axiom: field, item: this.system.axioms[field], max: maxAxioms[field] });
+
+    return results.length ? results : null;
+  }
+
+  /**
+   * Returns true if the item exceeds the current scene's axioms whilst on a disconnected actor,
+   * or is a Starred Perk when the Item is not inside the correct cosm.
+  */
+  get isDisconnected() {
+    // If not embedded, then it isn't disconnected
+    if (!this.parent?.isDisconnected) return false;
+
+    const sceneflags = game.scenes.active?.flags.torgeternity;
+    if (!sceneflags) return false;
+
+    // CALCULATE zoneAxioms
+    const zoneAxioms = { ...CONFIG.torgeternity.axiomByCosm[sceneflags.cosm] };
+    if (sceneflags.isMixed && sceneflags.cosm2) {
+      const axiom2 = CONFIG.torgeternity.axiomByCosm[sceneflags.cosm2];
+      for (const key of Object.keys(zoneAxioms))
+        if (axiom2[key] > zoneAxioms[key]) zoneAxioms[key] = axiom2[key];
+    }
+    // FINISHED CALCULATING zoneAxioms
+
+    // Some Perks just don't work outside their own COSM while disconnected
+    if (this.isGeneralContradiction(sceneflags.cosm, sceneflags.isMixed && sceneflags.cosm2)) return true;
+
+    return this.isContradiction(zoneAxioms);
   }
 }
 
