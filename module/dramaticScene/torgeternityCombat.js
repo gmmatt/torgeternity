@@ -10,20 +10,6 @@ let firsttime;
  */
 export default class TorgCombat extends Combat {
 
-
-  /**
-   *
-   * @param data
-   * @param options
-   * @param userId
-   */
-  _onCreate(data, options, userId) {
-    if (!firsttime) {
-
-    }
-    super._onCreate(data, options, userId);
-  }
-
   async _preDelete(options, user) {
     if (!super._preDelete(options, user)) return false;
 
@@ -65,7 +51,7 @@ export default class TorgCombat extends Combat {
    * @param userId
    */
   _onUpdate(changed, options, userId) {
-    if (game.user.isGM) {
+    if (game.user.isActiveGM) {
       const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
       this.setFlag('torgeternity', 'activeCard', (dramaActive.cards.size > 0) ? dramaActive.cards.contents[0].faces[0].img : '');
     }

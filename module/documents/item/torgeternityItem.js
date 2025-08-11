@@ -128,6 +128,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
    */
   async _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
+    if (game.user.id !== userId) return;
 
     if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
       const actor = this.parent;
@@ -176,6 +177,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
   async _onUpdate(changed, options, userId) {
     await super._onUpdate(changed, options, userId);
+    if (game.user.id !== userId) return;
 
     if (
       changed?.system &&
