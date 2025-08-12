@@ -572,8 +572,9 @@ export async function renderSkillChat(test) {
 
     // Hide the UP button if the current drama card doesn't show UP on the condition line.
     const combat = game.combat;
-    const token = testActor.getActiveTokens(false, true)?.[0];  // (linked, document [rather than PlaceableObject])
-    if (combat?.active &&
+    // get disposition from prototype Token if there's no real token.
+    const token = testActor.getActiveTokens(false, true)?.[0] || testActor.prototypeToken;  // (linked, document [rather than PlaceableObject])
+    if (combat?.active && token &&
       (token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
       (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up'))
       test.upStyle = 'hidden';
