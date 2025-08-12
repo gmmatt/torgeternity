@@ -24,8 +24,15 @@
 form.journal-sheet.journal-entry-page .window-content {
   background-image: url(../images/journal-background.webp);
   background-size: 100% 100%;
-  box-shadow: -20px 0px 150px black inset, 30px 0px 150px black inset;
   padding: 4% 4% 0% 4%;
+}
+
+form.journal-sheet.journal-entry-page .editor-content {
+  background-color: rgba(255, 247, 247, 0.25);
+}
+
+form.journal-sheet.journal-entry-page prose-mirror.editor {
+  padding: 3% 4%;
 }
 
 .journal-sheet .window-content .editor {

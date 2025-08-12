@@ -13,6 +13,7 @@
 - Remove immediate change of scene's cosms, since they shouldn't change until the Save Changes button is pressed.
 - DN in `@Check` is now localized if a skill or attribute.
 - Display message to player if the "Done" (end turn) button can't find your combatant.
+- Remove the heavy shadow from the journal page editor.
 
 ### Bug Fixes
 
