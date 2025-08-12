@@ -1,15 +1,15 @@
 # TORG Eternity Changelog
 
-## NEXT RELEASE
+## NEXT RELEASE - DRAMA DECK APPROVED ACTIONS & UP
 
 ### Improvements
 
+- Detect when an **Approved Action** has been performed by a stormknight - add a note to the Chat Card in such cases.
+- Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction.
+- Ensure correct state of "play card" button state when hero is added to/removed from a combat.
 - Remove immediate change of scene's cosms, since they shouldn't change until the Save Changes button is pressed.
 - DN in `@Check` is now localized if a skill or attribute.
 - Display message to player if the "Done" (end turn) button can't find your combatant.
-- Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction.
-- Ensure correct state of "play card" button state when hero is added to/removed from a combat.
-- Detect when an **Approved Action** has been performed - add a note to the Chat Card in such cases.
 
 ### Bug Fixes
 

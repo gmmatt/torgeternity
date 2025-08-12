@@ -371,10 +371,11 @@ export async function renderSkillChat(test) {
       test.soakWounds = 1;
     }
 
+    // Approved Action Processing
     test.successfulDefendApprovedAction = false;
     test.successfulApprovedAction = false;
     if (test.result < TestResult.STANDARD) {
-      // The defender draws a card if DEFEND is an approved action
+      // "Defend is successful once an attack or interaction misses the hero."
       if (target.type === 'stormknight' &&
         (test.testType === 'attack' || test.testType === 'interactionAttack') &&
         game.combat?.approvedActions?.includes('defend'))
