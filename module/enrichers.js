@@ -13,6 +13,10 @@ function guessLabel(check) {
     return game.i18n.localize(CONFIG.torgeternity.attributeTypes[check]);
   else if (Object.hasOwn(CONFIG.torgeternity.skills, check))
     return game.i18n.localize(CONFIG.torgeternity.skills[check]);
+  else if (Object.hasOwn(CONFIG.torgeternity.dnTypes, check))
+    return game.i18n.localize(CONFIG.torgeternity.dnTypes[check]);
+  else if (Object.hasOwn(CONFIG.torgeternity.dnTypes, `target${check.capitalize()}`))
+    return game.i18n.localize(CONFIG.torgeternity.dnTypes[`target${check.capitalize()}`]);
   else
     return check;
 }
