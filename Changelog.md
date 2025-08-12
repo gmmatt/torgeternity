@@ -18,6 +18,7 @@
 
 - Allow Stormknight Sheets to reduce width below 750px, so that it can change to single column format.
 - Get Periculum macro working.
+- Don't modify the default threat token when dragging a threat onto a scene where the cosm is set to 'none'.
 
 ## v13.5.0  (SURGE + DISCONNECTIONS)
 
