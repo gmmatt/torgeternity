@@ -3,6 +3,9 @@ const fields = foundry.data.fields;
 export default class TorgeternityScene extends foundry.documents.Scene {
 
   async _preCreate(data, options, user) {
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
+
     if (!data.flags?.torgeternity) {
       this.updateSource({
         'flags.torgeternity.cosm': 'none',
