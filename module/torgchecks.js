@@ -371,6 +371,18 @@ export async function renderSkillChat(test) {
       test.soakWounds = 1;
     }
 
+    test.successfulDefendApprovedAction = false;
+    test.successfulApprovedAction = false;
+    if (test.result < TestResult.STANDARD) {
+      // The defender draws a card if DEFEND is an approved action
+      if (target.type === 'stormknight' &&
+        (test.testType === 'attack' || test.testType === 'interactionAttack') &&
+        game.combat?.approvedActions?.includes('defend'))
+        test.successfulDefendApprovedAction = true;
+    } else {
+      if (testActor.type === 'stormknight' && isApprovedAction(test))
+        test.successfulApprovedAction = true;
+    }
     // Turn on + sign for modifiers?
     test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
 
@@ -995,4 +1007,34 @@ export async function rollPower(actor, item) {
     bdDamageSum: 0,
     itemId: item.id,
   }, { useTargets: true });
+}
+
+function isApprovedAction(test) {
+  // maneuver, trick, taunt, intimidate, any, attack, defend, "any multi-action"
+  for (const action of game.combat.approvedActions) {
+    switch (action) {
+      case 'any':
+        return true;
+      case 'intimidate':
+      case 'maneuver':
+      case 'taunt':
+      case 'trick':
+        // interactionAttack = intimidate, maneuver, taunt, trick
+        if (test.testType === 'interactionAttack' && test.skillName === action) return true;
+        break;
+      case 'attack':
+        if (test.testType === 'attack') return true;
+        break;
+      case 'multiAction':
+        if (test.multiModifier) return true;
+        break;
+      case 'defend':
+        // defend ("Defend is successful once an attack or interaction misses the hero.")
+        break;
+      default:
+        console.info(`Unrecognised Approved Action: '${action}'`)
+        break;
+    }
+  }
+  return false;
 }

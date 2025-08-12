@@ -39,6 +39,14 @@
         {{/each}}
       </ul>
     {{/if}}
+    {{#if successfulDefendApprovedAction}}
+      <p class="skill-roll-approved-action">
+        {{localize 'torgeternity.chatText.check.isApprovedDefend' name=target.targetName}}
+      </p>
+    {{/if}}
+    {{#if successfulApprovedAction}}
+      <p class="skill-roll-approved-action">{{localize 'torgeternity.chatText.check.isApprovedAction'}} </p>
+    {{/if}}
     <p class="skill-roll-damage-label {{damageLabel}}">
       {{damageDescription}}
     </p>

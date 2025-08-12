@@ -63,6 +63,8 @@
         "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
         "cantUseRealityWhileDisconnected": "You cannot use the reality skill as long as you are disconnected",
         "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
+        "isApprovedAction": "Successful Approved Action (draw a destiny card)",
+        "isApprovedDefend": "{name} successfully DEFENDed (draw a destiny card)",
         "modifier": {
           "aimedShot": "Aimed Shot",
           "allOutAttack": "All out Attack",
