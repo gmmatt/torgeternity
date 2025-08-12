@@ -61,20 +61,37 @@ export default class TorgCombat extends Combat {
 
   /**
    * Addition of Combatants
-   * @param {} parent 
-   * @param {*} collection 
-   * @param {*} documents 
-   * @param {*} data 
-   * @param {*} options 
-   * @param {*} userId 
+   * 
+   *    * When a new combatant is added to the combat, ensure that a Hero cannot play cards if the current
+   * drama card is "confused"
+   * @param {Combatant} combatant
    */
   async _onEnter(combatant) {
     await super._onEnter(combatant);
-    if (game.user.isActiveGM && this.started) {
+
+    if (this.started) {
       const whoFirst = await this.getFlag('torgeternity', 'combatFirstDisposition');
       const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
       combatant.update({ initiative });
+
+      if (combatant.token.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY && this.heroCondition === 'confused') {
+        const hand = combatant.actor.getDefaultHand();
+        if (hand) hand.setFlag('torgeternity', 'disablePlayCards', true)
+      }
     }
+  }
+
+  /**
+   * When a combatant is removed from the combat, ensure that they can play cards from their hand
+   * @param {Combatant} combatant 
+   */
+  async _onExit(combatant) {
+    // Cancel "cannot play cards"
+    if (combatant.token.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY && this.heroCondition === 'confused') {
+      const hand = combatant.actor.getDefaultHand();
+      if (hand) hand.setFlag('torgeternity', 'disablePlayCards', false)
+    }
+    return super._onExit(combatant);
   }
 
   get currentDrama() {

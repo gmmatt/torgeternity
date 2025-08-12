@@ -8,6 +8,7 @@
 - DN in `@Check` is now localized if a skill or attribute.
 - Display message to player if the "Done" (end turn) button can't find your combatant.
 - Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction.
+- Ensure correct state of "play card" button state when hero is added to/removed from a combat.
 
 ### Bug Fixes
 
