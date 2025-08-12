@@ -561,8 +561,8 @@ export async function renderSkillChat(test) {
     const combat = game.combat;
     const token = testActor.getActiveTokens(false, true)?.[0];  // (linked, document [rather than PlaceableObject])
     if (combat?.active &&
-      (token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroCondition !== 'up') ||
-      (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainCondition !== 'up'))
+      (token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
+      (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up'))
       test.upStyle = 'hidden';
 
     // Display cards played label?

@@ -415,8 +415,8 @@
     },
     "dramaCard": {
       "heroesFirst": "Helden zuerst?",
-      "heroesCondition": "H:",
-      "villainsCondition": "S:",
+      "heroesConflict": "H:",
+      "villainsConflict": "S:",
       "dsrLine": "DPA",
       "rule": "Regel",
       "approvedActions": "Anerkannte Aktionen",

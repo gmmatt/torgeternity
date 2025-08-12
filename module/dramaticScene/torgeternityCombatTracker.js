@@ -55,8 +55,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (combat)
       for (const action of combat.approvedActions)
         context.approved[action] = true;
-    context.firstCondition = !combat ? 'none' : heroesFirst ? combat.heroCondition : combat.villainCondition;
-    context.secondCondition = !combat ? 'none' : !heroesFirst ? combat.heroCondition : combat.villainCondition;
+    context.firstConflict = !combat ? 'none' : heroesFirst ? combat.heroConflict : combat.villainConflict;
+    context.secondConflict = !combat ? 'none' : !heroesFirst ? combat.heroConflict : combat.villainConflict;
 
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
