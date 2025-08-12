@@ -51,7 +51,7 @@ function InlineCheckEnricher(match, options) {
     if (!label && dataset.dn) {
       const span = document.createElement('span');
       span.classList.add('dn');
-      span.append(` (DN ${guessLabel(dataset.dn)})`);
+      span.append(` (${game.i18n.localize('torgeternity.sheetLabels.dn')} ${guessLabel(dataset.dn)})`);
       anchor.append(span);
     }
     // Append a button to copy the link to chat (only when in Journal)
