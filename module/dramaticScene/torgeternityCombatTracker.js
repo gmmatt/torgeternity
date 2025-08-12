@@ -171,7 +171,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (updates.length) this.viewed.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
   }
 
-  updateStage(document) {
+  updateStage(document, force) {
     let newStep;
     switch (document.getFlag('torgeternity', 'dsrStage')) {
       case undefined:
@@ -181,6 +181,13 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       case 'C': newStep = 'D'; break;
       case 'D': newStep = ''; break;
     }
+    // DSR - check that the next step is approved by the current Drama Card
+    const dsr = this.viewed?.currentDrama?.system.dsrLine;
+    if (!force && dsr.length && dsr.length <= 4 && dsr.indexOf(newStep) === -1) {
+      ui.notifications.info(game.i18n.format(`torgeternity.chatText.notPermittedDSR`, { step: newStep }));
+      return;
+    }
+
     document.setFlag('torgeternity', 'dsrStage', newStep);
   }
 
@@ -191,7 +198,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   static async #incStage(event, button) {
     if (!this.viewed) return;
     event.preventDefault();
-    this.updateStage(this.viewed);
+    this.updateStage(this.viewed, event.shiftKey);
   }
 
   /**
@@ -202,7 +209,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
     const combatant = this.viewed?.combatants.get(combatantId);
     if (!combatant) return;
-    this.updateStage(combatant);
+    this.updateStage(combatant, event.shiftKey);
     event.preventDefault();
   }
 

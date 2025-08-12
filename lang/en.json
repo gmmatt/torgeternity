@@ -135,6 +135,7 @@
       "hero": "Hero",
       "heroCard": "Hero Card",
       "hideDetails": "Hide Details",
+      "notPermittedDSR": "Next DSR step {step} not permitted by Drama Card",
       "modifiers": "Modifiers",
       "noAmmo": "Failed to fire your weapon, no bullets left.",
       "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
