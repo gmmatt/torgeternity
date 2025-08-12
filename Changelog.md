@@ -6,7 +6,7 @@
 
 - Detect when an **Approved Action** has been performed by a stormknight - add a note to the Chat Card in such cases.
   - Note that an Approved Action won't be detected an attack if you roll from the skills list.
-- Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction.
+- Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction. (This function can be disabled in the game settings.)
 - Provide a warning message if the DSR button is pressed and the next step is not approved by the Drama card.
   - This warning can be bypassed by holding SHIFT while clicking on the DSR button.
 - Ensure correct state of "play card" button state when hero is added to/removed from a combat.

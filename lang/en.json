@@ -796,6 +796,10 @@
       "autoDisconnect": {
         "name": "Automatically Disconnect",
         "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
+      },
+      "dramaCardUp": {
+        "name": "UP only from Drama Card",
+        "hint": "Hide the UP button in Test Check results if the current Drama Card doesn't have UP in the conflict line (default true)"
       }
     },
     "sheetLabels": {

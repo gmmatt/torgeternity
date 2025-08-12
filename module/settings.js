@@ -293,4 +293,12 @@ export function registerTorgSettings() {
     default: 0xce0707  // --color-level-error
   });
 
+  game.settings.register('torgeternity', 'dramaCardUp', {
+    name: 'torgeternity.settingMenu.dramaCardUp.name',
+    hint: 'torgeternity.settingMenu.dramaCardUp.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
 }
