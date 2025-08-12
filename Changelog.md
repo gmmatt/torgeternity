@@ -17,7 +17,7 @@
 ### Bug Fixes
 
 - Allow Stormknight Sheets to reduce width below 750px, so that it can change to single column format.
-- Get Periculum macro working.
+- Get Periculum macro working (for applying damage via the Macro Hub).
 - Don't modify the default threat token when dragging a threat onto a scene where the cosm is set to 'none'.
 
 ## v13.5.0  (SURGE + DISCONNECTIONS)
