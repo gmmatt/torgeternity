@@ -6,7 +6,7 @@ import { torgDamage } from './torgchecks.js';
  */
 
 // @Check[thing|dn:difficulty]{label}
-const InlineRulePattern = /@Check\[(.+?)\](?:\{(.+?)\}){0,1}/g;
+const InlineCheckPattern = /@Check\[(.+?)\](?:\{(.+?)\}){0,1}/g;
 
 function guessLabel(check) {
   if (Object.hasOwn(CONFIG.torgeternity.attributeTypes, check))
@@ -23,7 +23,7 @@ function guessLabel(check) {
  * @param {*} options 
  * @returns 
  */
-function InlineRuleEnricher(match, options) {
+function InlineCheckEnricher(match, options) {
   const parts = match[1].split('|');
   let label = match[2];
   const checks = parts.shift().split(',');
@@ -51,7 +51,7 @@ function InlineRuleEnricher(match, options) {
     if (!label && dataset.dn) {
       const span = document.createElement('span');
       span.classList.add('dn');
-      span.append(` (DN ${dataset.dn})`);
+      span.append(` (DN ${guessLabel(dataset.dn)})`);
       anchor.append(span);
     }
     // Append a button to copy the link to chat (only when in Journal)
@@ -538,7 +538,7 @@ async function _onClickInlineDamage(event) {
  * COMMON INITIALISATION
  */
 const enrichers = [
-  { pattern: InlineRulePattern, enricher: InlineRuleEnricher },
+  { pattern: InlineCheckPattern, enricher: InlineCheckEnricher },
   { pattern: InlineConditionPattern, enricher: InlineConditionEnricher },
   { pattern: InlineBuffPattern, enricher: InlineBuffEnricher },
   { pattern: InlineDamagePattern, enricher: InlineDamageEnricher },
