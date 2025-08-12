@@ -116,7 +116,10 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    */
   static async #onHasFinished(event, button) {
     const combatant = this.viewed?.combatants.find(combatant => combatant.actorId === game.user.character.id);
-    if (!combatant) return;
+    if (!combatant) {
+      ui.notifications.info('COMBAT.UnknownCombatant', { localize: true })
+      return;
+    }
 
     await combatant.setFlag('world', 'turnTaken', true);
     this.viewed.dramaEndOfTurn(combatant);
