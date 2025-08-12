@@ -557,6 +557,14 @@ export async function renderSkillChat(test) {
     }
     test.typeLabel += ' ';
 
+    // Hide the UP button if the current drama card doesn't show UP on the condition line.
+    const combat = game.combat;
+    const token = testActor.getActiveTokens(false, true)?.[0];  // (linked, document [rather than PlaceableObject])
+    if (combat?.active &&
+      (token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroCondition !== 'up') ||
+      (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainCondition !== 'up'))
+      test.upStyle = 'hidden';
+
     // Display cards played label?
     test.cardsPlayedLabel = (test.cardsPlayed > 0) ? '' : 'hidden';
 
