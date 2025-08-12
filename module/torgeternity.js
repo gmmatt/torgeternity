@@ -761,7 +761,8 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
 Hooks.on('preCreateToken', async (document, data, options, userId) => {
   if (document.texture.src.includes('systems/torgeternity/images/characters/threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
-    if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
+    // not cosmTypes, because that includes 'none'
+    if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmDecks, cosm))
       document.updateSource({ 'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp' });
   }
 });
