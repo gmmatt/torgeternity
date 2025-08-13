@@ -432,8 +432,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
   /**
    * Return true if this item is a Perk that will always cause a contradiction when used outside its realm.
-   * @param {*} cosm 
-   * @param {*} cosm2 
+   * @param {TorgeternityScene} scene 
    * @returns {Boolean} 
    */
   isGeneralContradiction(scene) {
@@ -445,8 +444,6 @@ export default class TorgeternityItem extends foundry.documents.Item {
   /**
    * Indicates if this item will cause a contradiction in either of the supplied cosms,
    * or if it exceeds the provided axiom limits
-   * @param {String} cosm 
-   * @param {String|undefined} cosm2 
    * @param {Object} maxAxioms (see CONFIG.torgeternity.axiomByCosm)
    * @returns Boolean
    */
