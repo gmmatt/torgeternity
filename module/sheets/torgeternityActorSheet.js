@@ -30,7 +30,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     actions: {
       skillList: TorgeternityActorSheet.#onSkillList,
       skillRoll: TorgeternityActorSheet.#onSkillRoll,
-      skillElementRoll: TorgeternityActorSheet.#onSkillElementRoll,
       skillEditToggle: TorgeternityActorSheet.#onSkillEditToggle,
       itemToChat: TorgeternityActorSheet.#onItemChat,
       itemAttackRoll: TorgeternityActorSheet.#onAttackRoll,
@@ -598,40 +597,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
   }
 
-  // Adapted from above, with event targetting in edit skills list
-  /**
-   *
-   * @param event
-   */
-  static async #onSkillElementRoll(event, button) {
-    const skillName = button.dataset.name;
-    const attributeName = button.dataset.baseattribute;
-    const isUnskilledTest = button.dataset.unskilleduse === '0';
-    const skillValue =
-      button.dataset.value === 'NaN'
-        ? isUnskilledTest
-          ? '-'
-          : this.actor.system.attributes[attributeName].value
-        : Number(button.dataset.value);
-
-    // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
-    if (checkUnskilled(skillValue, skillName, this.actor)) return;
-
-    return TestDialog.wait({
-      testType: button.dataset.testtype,
-      customSkill: button.dataset.customskill,
-      actor: this.actor,
-      isFav:
-        this.actor.system.skills[skillName]?.isFav ||
-        this.actor.system.attributes?.[skillName + 'IsFav'] ||
-        !!button.dataset.isfav,
-      skillName: skillName,
-      skillValue: skillValue,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
-    }, { useTargets: true });
-  }
-
   /**
    *
    * @param event
@@ -1024,10 +989,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 }
 
 /**
- *
- * @param skillValue
- * @param skillName
- * @param actor
+ * Checks to see if the given skill is actually unskilled for the indicated actor.
+ * If unskilled, a message is sent to the chat log.
+ * @param {String} skillValue The value of the skill being checked
+ * @param {Number} skillName The name of the skill being checked
+ * @param {Actor} actor The actor whose skilled nature is being checked
+ * @returns {Boolean} Returns true if the actor is UNSKILLED at 'skillName'
  */
 export function checkUnskilled(skillValue, skillName, actor) {
   if (skillValue) return false;
