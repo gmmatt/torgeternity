@@ -121,11 +121,10 @@ export default class TorgeternityItem extends foundry.documents.Item {
       return false;
     }
 
-    if (this.type === 'perk' || this.type === 'customAttack') {
+    if (this.type === 'perk' || this.type === 'customAttack')
       this.updateSource({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
-    }
-
-    if (this.type === 'miracle') this.updateSource({ 'system.skill': 'faith' });
+    else if (this.type === 'miracle')
+      this.updateSource({ 'system.skill': 'faith' });
   }
 
   /**
