@@ -28,7 +28,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       submitOnChange: true
     },
     actions: {
-      skillList: TorgeternityActorSheet.#onSkillList,
+      toggleThreatSkill: TorgeternityActorSheet.#onToggleThreatSkill,
       skillRoll: TorgeternityActorSheet.#onSkillRoll,
       skillEditToggle: TorgeternityActorSheet.#onSkillEditToggle,
       itemToChat: TorgeternityActorSheet.#onItemChat,
@@ -511,10 +511,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   /**
-   *
+   * Toggle whether the skill is a threat skill not (whether it appears in a Threat sheet's reduced skill list)
    * @param event
    */
-  static async #onSkillList(event, button) {
+  static async #onToggleThreatSkill(event, button) {
     const skillName = button.dataset.name;
     const isThreatSkill = this.actor.system.skills[skillName]?.isThreatSkill;
     const update = { [`system.skills.${skillName}.isThreatSkill`]: !isThreatSkill };
