@@ -175,21 +175,14 @@ export default class TorgeternityItem extends foundry.documents.Item {
         game.i18n.format('torgeternity.notifications.ammoValueExceedsMax', { a: this.name })
       );
     }
-  }
 
-  _onUpdate(changed, options, userId) {
-    super._onUpdate(changed, options, userId);
-    if (game.user.id !== userId) return;
+    if (this.type === 'implant' &&
+      changes?.system?.implantType &&
+      (!changes.img || this.img === changes.img) &&
+      this.img.includes('systems/torgeternity/images/icons/')) {
 
-    if (
-      changed?.system &&
-      this.type === 'implant' &&
-      Object.keys(changed?.system)[0] === 'implantType' &&
-      this.img.includes('systems/torgeternity/images/icons/')
-    )
-      this.update({
-        img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`,
-      });
+      changes.img = `systems/torgeternity/images/icons/${changes.system.implantType}-icon.webp`;
+    }
   }
 
   /**
