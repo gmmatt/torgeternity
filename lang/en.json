@@ -158,6 +158,7 @@
       "value": "Value",
       "vehicleBase": "Vehicle Operation Test",
       "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "changeAmmoType": "{weapon} switched ammunition to {ammo}",
       "ammoFull": "The weapon \"{a}\" is already fully loaded."
     },
     "clearances": {

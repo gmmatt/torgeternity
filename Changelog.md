@@ -9,6 +9,9 @@
 - Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction. (This function can be disabled in the game settings.)
 - Provide a warning message if the DSR button is pressed and the next step is not approved by the Drama card.
   - This warning can be bypassed by holding SHIFT while clicking on the DSR button.
+- Ammunition - weapons remember which ammunition was selected for reloading (ammo name shown in BOLD on weapon's ammunition list).
+  - Can change the ammunition type on the weapon's Sheet.
+  - Add the damage and AP bonus from the loaded ammunition when attacking with that weapon.
 - Ensure correct state of "play card" button state when hero is added to/removed from a combat.
 - Remove immediate change of scene's cosms, since they shouldn't change until the Save Changes button is pressed.
 - DN in `@Check` is now localized if a skill or attribute.

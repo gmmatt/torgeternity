@@ -217,9 +217,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
   }
 
   static async #onReloadWeapon(event, button) {
-    const item = button.closest('[data-item-id]');
-    const usedAmmo = this?.actor.items.get(item.dataset.itemId);
-    await reloadAmmo(this.actor, this.item, usedAmmo, this);
+    const usedAmmo = this?.actor.items.get(button.closest('[data-item-id]').dataset.itemId);
+    await reloadAmmo(this.actor, this.item, usedAmmo);
   }
 
   static async #onSelectSecondaryAxiom(event) {
@@ -374,18 +373,31 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
  *
  * @param {object} actor The actor who holds the weapon
  * @param {object} weapon The used weapon
- * @param {object} usedAmmo The Ammo that is used
+ * @param {object} ammoItem The Ammo that is used
  */
-async function reloadAmmo(actor, weapon, usedAmmo) {
+async function reloadAmmo(actor, weapon, ammoItem) {
+
   if (weapon.system.ammo.value === weapon.system.ammo.max) {
-    ChatMessage.create({
-      content: `${game.i18n.format('torgeternity.chatText.ammoFull', { a: weapon.name })}`,
-      speaker: ChatMessage.getSpeaker(),
-    });
+
+    if (weapon.system.loadedAmmo != ammoItem.id) {
+      weapon.update({ 'system.loadedAmmo': ammoItem.id });
+      ChatMessage.create({
+        content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
+        speaker: ChatMessage.getSpeaker(),
+      });
+
+    } else {
+      ChatMessage.create({
+        content: `${game.i18n.format('torgeternity.chatText.ammoFull', { a: weapon.name })}`,
+        speaker: ChatMessage.getSpeaker(),
+      });
+    }
+
+    // But maybe swapping from one ammo type to another.
     return;
   }
 
-  if (!usedAmmo) {
+  if (!ammoItem) {
     // called from the main actor sheet, it's not known what ammo item is used.
     const ammoArray = [];
     for (const item of actor.items) {
@@ -400,7 +412,7 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
     }
 
     if (ammoArray.length === 1) {
-      usedAmmo = ammoArray[0];
+      ammoItem = ammoArray[0];
     } else {
       let dialogContent =
         '<p>' +
@@ -423,7 +435,7 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
           default: true,
           callback: (event, button, dialog) => {
             const checked = dialog.element.querySelector('input:checked');
-            if (checked) usedAmmo = actor.items.get(checked.dataset.chosenId);
+            if (checked) ammoItem = actor.items.get(checked.dataset.chosenId);
           },
         },
         no: {
@@ -433,15 +445,26 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
     }
   }
   // Maybe no selection made
-  if (!usedAmmo) return;
+  if (!ammoItem) return;
 
-  if (usedAmmo.system.quantity <= 0) {
+  if (ammoItem.system.quantity <= 0) {
     ui.notifications.error(game.i18n.localize('torgeternity.notifications.clipEmpty'));
     return;
   }
-  await weapon.update({ 'system.ammo.value': weapon.system.ammo.max });
+  if (weapon.system.loadedAmmo != ammoItem.id) {
+    ChatMessage.create({
+      content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
+      speaker: ChatMessage.getSpeaker(),
+    });
+  }
+  await weapon.update({
+    'system.loadedAmmo': ammoItem.id,
+    'system.ammo.value': weapon.system.ammo.max
+  });
 
-  await usedAmmo.update({ 'system.quantity': usedAmmo.system.quantity - 1 });
+  await ammoItem.update({
+    'system.quantity': ammoItem.system.quantity - 1
+  });
 
   await ChatMessage.create({
     content: game.i18n.format('torgeternity.chatText.reloaded', { a: weapon.name }),

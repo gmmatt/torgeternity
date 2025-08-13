@@ -3,11 +3,11 @@
     <legend>{{localize "torgeternity.gear.ammunition"}}</legend>
     <ul>
       {{#each ammunition as |ammo|}}
-        <li>
-          <p>{{ammo.name}}</p>
-          <a data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}" data-item-id="{{ammo.id}}"
+        <li data-item-id="{{ammo.id}}">
+          <p class="{{ifThen (eq @root.item.system.loadedAmmo ammo.id) 'loaded' '' }}">{{ammo.name}}</p>
+          <a data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}""
             {{disabled (not @root.editable)}}>
-            <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i></a>
+            <i class=" fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i></a>
           <a data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}" {{disabled (not @root.editable)}}>
             <i class="fa-solid fa-trash"></i></a>
         </li>

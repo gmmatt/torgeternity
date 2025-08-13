@@ -3737,6 +3737,10 @@ p.skill-chat-title.skilled {
   gap: 3px;
   justify-items: baseline;
   align-items: baseline;
+
+  p.loaded {
+    font-weight: bold;
+  }
 }
 
 .directory-item {

@@ -931,28 +931,35 @@ export async function rollAttack(actor, item) {
 
   // Calculate damage caused by this weapon
   let adjustedDamage = 0;
-  const weaponDamage = weaponData.damage;
+  const weaponDamage = parseInt(weaponData.damage);
   switch (weaponData.damageType) {
     case 'flat':
       adjustedDamage = weaponDamage;
       break;
     case 'strengthPlus':
-      adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.strength.value + weaponDamage;
       break;
     case 'charismaPlus':
-      adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.charisma.value + weaponDamage;
       break;
     case 'dexterityPlus':
-      adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.dexterity.value + weaponDamage;
       break;
     case 'mindPlus':
-      adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.mind.value + weaponDamage;
       break;
     case 'spiritPlus':
-      adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.spirit.value + weaponDamage;
       break;
     default:
-      adjustedDamage = parseInt(weaponDamage);
+      adjustedDamage = weaponDamage;
+  }
+  let weaponAP = weaponData.ap;
+
+  const ammo = weaponData.loadedAmmo && actor.items.get(weaponData.loadedAmmo)?.system;
+  if (ammo) {
+    if (ammo.damageMod) adjustedDamage += ammo.damageMod;
+    if (ammo.apMod) weaponAP += ammo.apMod;
   }
 
   return TestDialog.wait({
@@ -965,7 +972,7 @@ export async function rollAttack(actor, item) {
     skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute]?.value || 0),
     unskilledUse: true,
     damage: adjustedDamage,
-    weaponAP: weaponData.ap,
+    weaponAP: weaponAP,
     applyArmor: true,
     DNDescriptor: dnDescriptor,
     type: 'attack',
