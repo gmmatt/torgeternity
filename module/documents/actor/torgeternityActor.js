@@ -732,6 +732,31 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   static getControlledActor() {
     return (game.user.isGM && game.canvas.tokens.controlled?.length) ? game.canvas.tokens.controlled[0].actor : game.user.character;
   }
+
+  /**
+   * Reduces the remaining duration of any ActiveEffects present directly on the Actor,
+   * excluding ActiveDefense.
+   * @returns {Promise} A Promise which resolves when all affected ActiveEffects have been changed.
+   */
+  decayEffects() {
+    const toUpdate = [];
+    const toDelete = [];
+    for (const effect of this.effects.filter((e) => e.duration.type === 'turns')) {
+      if (effect.name === 'ActiveDefense') continue;
+      if (effect.duration.turns === 1 && effect.duration.rounds === 1)
+        toDelete.push(effect.id)
+      else
+        toUpdate.push({
+          _id: effect.id,
+          'duration.turns': effect.duration.turns - 1,
+          'duration.rounds': effect.duration.rounds - 1,
+        });
+    }
+    const promises = [];
+    if (toUpdate.length) promises.push(this.updateEmbeddedDocuments('ActiveEffect', toUpdate));
+    if (toDelete.length) promises.push(this.deleteEmbeddedDocuments('ActiveEffect', toDelete));
+    return Promise.all(promises);
+  }
 }
 
 
