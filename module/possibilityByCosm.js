@@ -65,16 +65,8 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
    * @param event
    */
   static async #onTestActiveModule(event) {
-    const compendiumLink = event.target.dataset.uuid;
-    try {
-      const tes = await fromUuidSync(compendiumLink);
-      if (!tes)
-        ui.notifications.warn(game.i18n.localize('torgeternity.notifications.moduleNotActive'));
-    } catch {
-      (err) => {
-        return;
-      };
-    }
+    const tes = await fromUuidSync(event.target.dataset.uuid, { strict: false });
+    if (!tes) ui.notifications.warn(game.i18n.localize('torgeternity.notifications.moduleNotActive'));
   }
 
   /**
