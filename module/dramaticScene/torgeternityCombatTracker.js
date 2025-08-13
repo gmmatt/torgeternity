@@ -121,7 +121,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       return;
     }
 
-    await combatant.setFlag('world', 'turnTaken', true);
+    await combatant.setTurnTaken(true);
     this.viewed.dramaEndOfTurn(combatant);
   }
 
@@ -134,8 +134,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     const combatant = this.viewed?.combatants.get(combatantId);
     if (!combatant) return;
 
-    const turnTaken = !combatant.getFlag('world', 'turnTaken');
-    await combatant.setFlag('world', 'turnTaken', turnTaken);
+    const turnTaken = !combatant.turnTaken;
+    await combatant.setTurnTaken(turnTaken);
     if (turnTaken) this.viewed.dramaEndOfTurn(combatant);
   }
 
@@ -211,12 +211,6 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (!combatant) return;
     this.updateStage(combatant, event.shiftKey);
     event.preventDefault();
-  }
-
-  finishTurn() {
-    const combatant = this.viewed?.combatants.find(combatant.turnTaken && combatant.isOwner);
-    // Check for Fatigued on Drama Conflict Line (see macros.js)
-    combatant.setFlag('world', 'turnTaken', true);
   }
 
   /*

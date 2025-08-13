@@ -18,6 +18,10 @@ export default class TorgCombatant extends Combatant {
     return this.getFlag('world', 'turnTaken');
   }
 
+  async setTurnTaken(value) {
+    return this.setFlag('world', 'turnTaken', value);
+  }
+
   _onUpdate(changed, options, userId) {
     super._onUpdate(changed, options, userId);
 
