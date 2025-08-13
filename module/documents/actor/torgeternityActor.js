@@ -240,6 +240,12 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
   }
 
+  /**
+   * On creation of a stormknight, create a corresponding card hand.
+   * @param {*} data 
+   * @param {*} options 
+   * @param {*} userId 
+   */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
     // by default creating a  hand for each stormknight
@@ -397,7 +403,11 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
   }
 
-
+  /**
+   * When a stormknight is deleted, delete the corresponding player hand
+   * @param {*} options 
+   * @param {*} userId 
+   */
   _onDelete(options, userId) {
     if (this.type === 'stormknight' && game.user.isActiveGM)
       this.getDefaultHand()?.delete();

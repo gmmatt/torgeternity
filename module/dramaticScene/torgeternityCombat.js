@@ -10,6 +10,12 @@ let firsttime;
  */
 export default class TorgCombat extends Combat {
 
+  /**
+   * On deletion, remove all pooled cards from the hands of the stormknight actors in the combat.
+   * @param {*} options 
+   * @param {*} user 
+   * @returns 
+   */
   async _preDelete(options, user) {
     const allowed = super._preDelete(options, user);
     if (allowed === false) return false;
@@ -27,7 +33,8 @@ export default class TorgCombat extends Combat {
   }
 
   /**
-   *
+   * On deletion of a Combat, return the current Drama Card to the deck,
+   * and let all players play cards from their hands (i.e. cancel Confused).
    * @param options
    * @param userId
    */
@@ -46,7 +53,7 @@ export default class TorgCombat extends Combat {
   }
 
   /**
-   *
+   * Ensure the correct drama card image is shown in the Combat Tracker.
    * @param changed
    * @param options
    * @param userId
@@ -267,8 +274,7 @@ export default class TorgCombat extends Combat {
   }
 
   /**
-   * 
-   * @param {*} combatants Passed explicitly, for when called from onDelete
+   * Remove the ActiveDefense AE from all combatants.
    */
   async #deleteActiveDefense() {
     for (const combatant of this.combatants) {

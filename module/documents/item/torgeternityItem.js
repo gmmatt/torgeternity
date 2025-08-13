@@ -128,7 +128,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 
   /**
-   *
+   * When a new armor or shield is equipped, unequip any previously equipped item of the same type.
    * @param data
    * @param options
    * @param userId
