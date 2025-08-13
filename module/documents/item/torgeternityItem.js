@@ -133,7 +133,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
    * @param options
    * @param userId
    */
-  async _onCreate(data, options, userId) {
+  _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
     if (game.user.id !== userId) return;
 
@@ -177,8 +177,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
     }
   }
 
-  async _onUpdate(changed, options, userId) {
-    await super._onUpdate(changed, options, userId);
+  _onUpdate(changed, options, userId) {
+    super._onUpdate(changed, options, userId);
     if (game.user.id !== userId) return;
 
     if (
@@ -187,7 +187,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
       Object.keys(changed?.system)[0] === 'implantType' &&
       this.img.includes('systems/torgeternity/images/icons/')
     )
-      await this.update({
+      this.update({
         img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`,
       });
   }
