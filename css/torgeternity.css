@@ -1672,7 +1672,11 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
     .tab[data-tab].active {
       .list-section-heading {
-        font-size: 18px;
+        font-size: 1.4em;
+      }
+
+      h2 {
+        font-size: 1.1em;
       }
 
       div.threat-block ol.item-list {
