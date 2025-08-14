@@ -9,7 +9,7 @@
 - Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction. (This function can be disabled in the game settings.)
 - Provide a warning message if the DSR button is pressed and the next step is not approved by the Drama card.
   - This warning can be bypassed by holding SHIFT while clicking on the DSR button.
-- Ammunition - weapons remember which ammunition was selected for reloading (ammo name shown in BOLD on weapon's ammunition list).
+- Ammunition - weapons remember which ammunition was selected for reloading (ammo name shown in BOLD at top of weapon's ammunition list).
   - Can change the ammunition type on the weapon's Sheet.
   - Add the damage and AP bonus from the loaded ammunition when attacking with that weapon.
 - Ensure correct state of "play card" button state when hero is added to/removed from a combat.
@@ -17,6 +17,10 @@
 - DN in `@Check` is now localized if a skill or attribute.
 - Display message to player if the "Done" (end turn) button can't find your combatant.
 - Remove the heavy shadow from the journal page editor.
+- Gear list in Actor sheets
+  - Item type removed from end of item name since all items of the same type appear in their own section.
+  - Quantity of ammunition shown after the item name.
+  - Holding SHIFT when clicking on the `reload` button will NOT reduce the quantity of ammo.
 
 ### Bug Fixes
 
