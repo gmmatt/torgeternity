@@ -307,7 +307,7 @@
                   data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'>
                   <i class="fas fa-dice-d20"></i>
                 </a>
-                {{#if (not ..UignoreAmmo)}}
+                {{#if (not ../ignoreAmmo)}}
                   <a class="item-control" data-weapon="{{item}}" {{disabled (not @root.editable)}}
                     data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}">
                     <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i>
