@@ -1,4 +1,4 @@
-{{#if (and ammunition.length (not ../ignoreAmmo))}}
+{{#if hasAmmunition}}
 
   {{#*inline "oneAmmo"}}
     <li data-item-id="{{ammo.id}}">
@@ -11,7 +11,7 @@
     </li>
   {{/inline}}
 
-  <fieldset class="ammofield">
+  <fieldset class="ammofield scrollable">
     <legend>{{localize "torgeternity.gear.ammunition"}}</legend>
     <ul>
       {{#if loadedAmmunition}}{{> oneAmmo ammo=loadedAmmunition}}{{/if}}
