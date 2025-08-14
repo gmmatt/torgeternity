@@ -87,7 +87,8 @@
       <li class="item block gear" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
+            ({{item.system.quantity}})</a>
           <div class="item-controls">
             <a class="item-control item-edit" data-action="itemEdit"
               data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
