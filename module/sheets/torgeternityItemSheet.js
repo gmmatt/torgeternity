@@ -322,7 +322,8 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       context.enrichedOutstanding = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.outstanding);
     }
 
-    context.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
+    context.ammunition = this.document.actor?.itemTypes?.ammunition.filter(ammo => ammo.id !== this.document.system.loadedAmmo) ?? [];
+    context.loadedAmmunition = this.document.actor?.itemTypes?.ammunition.find(ammo => ammo.id === this.document.system.loadedAmmo) ?? [];
 
     context.displaySecondaryAxiomValue = this.document.system?.secondaryAxiom !== 'none';
 
