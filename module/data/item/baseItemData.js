@@ -11,7 +11,7 @@ export class BaseItemData extends foundry.abstract.TypeDataModel {
   static defineSchema(itemType) {
     return {
       cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
-      description: new fields.HTMLField({ initial: '' }),
+      description: new fields.HTMLField({ initial: '', textSearch: true }),
       traits: newTraitsField(itemType),
       axioms: makeAxiomsField()
     };
