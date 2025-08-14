@@ -94,7 +94,7 @@ export default class TorgCombat extends Combat {
    */
   async _onExit(combatant) {
     // Cancel "cannot play cards"
-    if (combatant.token.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY && this.heroConflict === 'confused') {
+    if (combatant.token?.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY && this.heroConflict === 'confused') {
       const hand = combatant.actor.getDefaultHand();
       if (hand) hand.setFlag('torgeternity', 'disablePlayCards', false)
     }
