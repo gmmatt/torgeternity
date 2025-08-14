@@ -936,9 +936,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static #onReloadWeapon(event, button) {
-    const item = button.closest('[data-item-id]');
-    const weapon = this.actor.items.get(item.dataset.itemId);
-    reloadAmmo(this.actor, weapon);
+    const weapon = this.actor.items.get(button.closest('[data-item-id]').dataset.itemId);
+    reloadAmmo(this.actor, weapon, null, event.shiftKey);
   }
 
   static #onitemName(event, button) {
