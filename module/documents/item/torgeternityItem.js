@@ -82,7 +82,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
     // For better support, convert the old damaging abilities into custom attacks with a flat damage modifier.
     if (source.type === 'specialability-rollable' && source.system?.damage && source.system.attackWith) {
       source.type = 'customAttack';
-      source.system.damageType = 'flat'
+      source.system.damageType ??= 'flat'
     }
     if (typeof source.system?.gunner?.name === 'string') {
       if (source.system.gunner.name)
@@ -121,20 +121,19 @@ export default class TorgeternityItem extends foundry.documents.Item {
       return false;
     }
 
-    if (this.type === 'perk' || this.type === 'customAttack') {
+    if (this.type === 'perk' || this.type === 'customAttack')
       this.updateSource({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
-    }
-
-    if (this.type === 'miracle') this.updateSource({ 'system.skill': 'faith' });
+    else if (this.type === 'miracle')
+      this.updateSource({ 'system.skill': 'faith' });
   }
 
   /**
-   *
+   * When a new armor or shield is equipped, unequip any previously equipped item of the same type.
    * @param data
    * @param options
    * @param userId
    */
-  async _onCreate(data, options, userId) {
+  _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
     if (game.user.id !== userId) return;
 
@@ -176,21 +175,14 @@ export default class TorgeternityItem extends foundry.documents.Item {
         game.i18n.format('torgeternity.notifications.ammoValueExceedsMax', { a: this.name })
       );
     }
-  }
 
-  async _onUpdate(changed, options, userId) {
-    await super._onUpdate(changed, options, userId);
-    if (game.user.id !== userId) return;
+    if (this.type === 'implant' &&
+      changes?.system?.implantType &&
+      (!changes.img || this.img === changes.img) &&
+      this.img.includes('systems/torgeternity/images/icons/')) {
 
-    if (
-      changed?.system &&
-      this.type === 'implant' &&
-      Object.keys(changed?.system)[0] === 'implantType' &&
-      this.img.includes('systems/torgeternity/images/icons/')
-    )
-      await this.update({
-        img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`,
-      });
+      changes.img = `systems/torgeternity/images/icons/${changes.system.implantType}-icon.webp`;
+    }
   }
 
   /**
@@ -432,8 +424,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
   /**
    * Return true if this item is a Perk that will always cause a contradiction when used outside its realm.
-   * @param {*} cosm 
-   * @param {*} cosm2 
+   * @param {TorgeternityScene} scene 
    * @returns {Boolean} 
    */
   isGeneralContradiction(scene) {
@@ -445,8 +436,6 @@ export default class TorgeternityItem extends foundry.documents.Item {
   /**
    * Indicates if this item will cause a contradiction in either of the supplied cosms,
    * or if it exceeds the provided axiom limits
-   * @param {String} cosm 
-   * @param {String|undefined} cosm2 
    * @param {Object} maxAxioms (see CONFIG.torgeternity.axiomByCosm)
    * @returns Boolean
    */

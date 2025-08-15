@@ -62,8 +62,8 @@
       {{disabled (not (and @root.user.isGM combat.turns))}}>
     </button>
     {{#if user.isGM}}
-      {{> dramaButtons faction=firstFaction condition=firstCondition}}
-      {{> dramaButtons faction=secondFaction condition=secondCondition}}
+      {{> dramaButtons faction=firstFaction conflict=firstConflict}}
+      {{> dramaButtons faction=secondFaction conflict=secondConflict}}
     {{/if}}
     <button type="button" class="dsr-counter" data-action="dsrCounter"
       {{disabled (not (and @root.user.isGM combat.turns))}}>
@@ -106,46 +106,46 @@
   </nav>
 
   {{#*inline "dramaButtons"}}
-    <div class="control-buttons right flexrow drama-{{faction}} {{TorgHidden (eq condition 'none')}}">
+    <div class="control-buttons right flexrow drama-{{faction}} {{TorgHidden (eq conflict 'none')}}">
       <span
-        class="{{TorgHidden (eq condition 'none')}}">{{localize (concat 'torgeternity.dramaCard.' faction 'Condition')}}</span>
+        class="{{TorgHidden (eq conflict 'none')}}">{{localize (concat 'torgeternity.dramaCard.' faction 'Conflict')}}</span>
       <button type="button"
-        class="ui-control toggle icon fa-solid fa-person-running-fast {{TorgHidden (ne condition 'flurry')}}"
+        class="ui-control toggle icon fa-solid fa-person-running-fast {{TorgHidden (ne conflict 'flurry')}}"
         data-action="dramaFlurry"
         data-tooltip="{{localize 'torgeternity.drama.flurryDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
-        class="ui-control toggle icon fa-solid fa-heart-circle-plus {{TorgHidden (ne condition 'inspiration')}}"
+        class="ui-control toggle icon fa-solid fa-heart-circle-plus {{TorgHidden (ne conflict 'inspiration')}}"
         data-action="dramaInspiration"
         data-tooltip="{{localize 'torgeternity.drama.inspirationDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />
-      <button type="button" class="ui-control toggle icon fa-solid fa-up {{TorgHidden (ne condition 'up')}}"
+      <button type="button" class="ui-control toggle icon fa-solid fa-up {{TorgHidden (ne conflict 'up')}}"
         data-action="dramaUp"
         data-tooltip="{{localize 'torgeternity.drama.upDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />
 
       <button type="button"
-        class="ui-control toggle icon fa-solid fa-face-confused {{TorgHidden (ne condition 'confused')}}"
+        class="ui-control toggle icon fa-solid fa-face-confused {{TorgHidden (ne conflict 'confused')}}"
         data-action="dramaConfused"
         data-tooltip="{{localize 'torgeternity.drama.confusedDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
-        class="ui-control toggle icon fa-solid fa-face-tired {{TorgHidden (ne condition 'fatigued')}}"
+        class="ui-control toggle icon fa-solid fa-face-tired {{TorgHidden (ne conflict 'fatigued')}}"
         data-action="dramaFatigued"
         data-tooltip="{{localize 'torgeternity.drama.fatiguedDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
-        class="ui-control toggle icon fa-solid fa-stocking {{TorgHidden (ne condition 'setback')}}"
+        class="ui-control toggle icon fa-solid fa-stocking {{TorgHidden (ne conflict 'setback')}}"
         data-action="dramaSetback"
         data-tooltip="{{localize 'torgeternity.drama.setbackDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
-        class="ui-control toggle icon fa-solid fa-triangle-exclamation {{TorgHidden (ne condition 'stymied')}}"
+        class="ui-control toggle icon fa-solid fa-triangle-exclamation {{TorgHidden (ne conflict 'stymied')}}"
         data-action="dramaStymied"
         data-tooltip="{{localize 'torgeternity.drama.stymiedDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />
       <button type="button"
-        class="ui-control toggle icon fa-solid fa-water {{TorgHidden (ne condition 'surge')}}"
+        class="ui-control toggle icon fa-solid fa-water {{TorgHidden (ne conflict 'surge')}}"
         data-action="dramaSurge"
         data-tooltip="{{localize 'torgeternity.drama.surgeDesc' faction=(localize (concat 'torgeternity.combat.' faction))}}"
         data-faction="{{faction}}" {{disabled (not combat.turns)}} />

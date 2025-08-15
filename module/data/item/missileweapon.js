@@ -17,6 +17,7 @@ export class MissileWeaponItemData extends BaseWeaponItemData {
         max: new fields.NumberField({ initial: 1, integer: true }),
         value: new fields.NumberField({ initial: 1, integer: true }),
       }),
+      loadedAmmo: new fields.DocumentIdField({ initial: null }),
       gunner: new fields.ForeignDocumentField(TorgeternityActor),
     };
   }

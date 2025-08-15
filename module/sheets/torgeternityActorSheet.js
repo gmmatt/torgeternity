@@ -28,9 +28,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       submitOnChange: true
     },
     actions: {
-      skillList: TorgeternityActorSheet.#onSkillList,
+      toggleThreatSkill: TorgeternityActorSheet.#onToggleThreatSkill,
       skillRoll: TorgeternityActorSheet.#onSkillRoll,
-      skillElementRoll: TorgeternityActorSheet.#onSkillElementRoll,
       skillEditToggle: TorgeternityActorSheet.#onSkillEditToggle,
       itemToChat: TorgeternityActorSheet.#onItemChat,
       itemAttackRoll: TorgeternityActorSheet.#onAttackRoll,
@@ -492,14 +491,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onOpenHand(event, button) {
-    const characterHand = this.actor.getDefaultHand();
-    // if default hand => render it
-    if (characterHand) {
-      characterHand.sheet.render({ force: true });
-    } else {
-      const hand = await this.actor.createDefaultHand();
-      hand.sheet.render({ force: true });
-    }
+    let hand = this.actor.getDefaultHand();
+    if (!hand) hand = await this.actor.createDefaultHand();
+    hand?.sheet.render({ force: true });
   }
 
   /**
@@ -517,10 +511,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   /**
-   *
+   * Toggle whether the skill is a threat skill not (whether it appears in a Threat sheet's reduced skill list)
    * @param event
    */
-  static async #onSkillList(event, button) {
+  static async #onToggleThreatSkill(event, button) {
     const skillName = button.dataset.name;
     const isThreatSkill = this.actor.system.skills[skillName]?.isThreatSkill;
     const update = { [`system.skills.${skillName}.isThreatSkill`]: !isThreatSkill };
@@ -601,40 +595,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       case TestResult.MISHAP:
         break;
     }
-  }
-
-  // Adapted from above, with event targetting in edit skills list
-  /**
-   *
-   * @param event
-   */
-  static async #onSkillElementRoll(event, button) {
-    const skillName = button.dataset.name;
-    const attributeName = button.dataset.baseattribute;
-    const isUnskilledTest = button.dataset.unskilleduse === '0';
-    const skillValue =
-      button.dataset.value === 'NaN'
-        ? isUnskilledTest
-          ? '-'
-          : this.actor.system.attributes[attributeName].value
-        : Number(button.dataset.value);
-
-    // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
-    if (checkUnskilled(skillValue, skillName, this.actor)) return;
-
-    return TestDialog.wait({
-      testType: button.dataset.testtype,
-      customSkill: button.dataset.customskill,
-      actor: this.actor,
-      isFav:
-        this.actor.system.skills[skillName]?.isFav ||
-        this.actor.system.attributes?.[skillName + 'IsFav'] ||
-        !!button.dataset.isfav,
-      skillName: skillName,
-      skillValue: skillValue,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
-    }, { useTargets: true });
   }
 
   /**
@@ -976,9 +936,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   }
 
   static #onReloadWeapon(event, button) {
-    const item = button.closest('[data-item-id]');
-    const weapon = this.actor.items.get(item.dataset.itemId);
-    reloadAmmo(this.actor, weapon);
+    const weapon = this.actor.items.get(button.closest('[data-item-id]').dataset.itemId);
+    reloadAmmo(this.actor, weapon, null, event.shiftKey);
   }
 
   static #onitemName(event, button) {
@@ -1029,10 +988,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 }
 
 /**
- *
- * @param skillValue
- * @param skillName
- * @param actor
+ * Checks to see if the given skill is actually unskilled for the indicated actor.
+ * If unskilled, a message is sent to the chat log.
+ * @param {String} skillValue The value of the skill being checked
+ * @param {Number} skillName The name of the skill being checked
+ * @param {Actor} actor The actor whose skilled nature is being checked
+ * @returns {Boolean} Returns true if the actor is UNSKILLED at 'skillName'
  */
 export function checkUnskilled(skillValue, skillName, actor) {
   if (skillValue) return false;

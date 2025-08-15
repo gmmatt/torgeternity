@@ -47,20 +47,4 @@ export default class torgeternitySceneConfig extends foundry.applications.sheets
     }
     return partContext;
   }
-
-  _onChangeForm(formConfig, event) {
-    super._onChangeForm(formConfig, event);
-
-    switch (event.target.dataset.field) {
-      case "cosm":
-        this.document.setFlag('torgeternity', 'cosm', event.target.value);
-        break;
-      case "cosm2":
-        this.document.setFlag('torgeternity', 'cosm2', event.target.value);
-        break;
-      case "zone":
-        this.document.update({ "flags.torgeternity.zone": event.target.value })
-        break;
-    }
-  }
 }

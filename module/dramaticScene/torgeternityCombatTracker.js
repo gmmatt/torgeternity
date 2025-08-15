@@ -55,8 +55,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (combat)
       for (const action of combat.approvedActions)
         context.approved[action] = true;
-    context.firstCondition = !combat ? 'none' : heroesFirst ? combat.heroCondition : combat.villainCondition;
-    context.secondCondition = !combat ? 'none' : !heroesFirst ? combat.heroCondition : combat.villainCondition;
+    context.firstConflict = !combat ? 'none' : heroesFirst ? combat.heroConflict : combat.villainConflict;
+    context.secondConflict = !combat ? 'none' : !heroesFirst ? combat.heroConflict : combat.villainConflict;
 
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
@@ -116,9 +116,12 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    */
   static async #onHasFinished(event, button) {
     const combatant = this.viewed?.combatants.find(combatant => combatant.actorId === game.user.character.id);
-    if (!combatant) return;
+    if (!combatant) {
+      ui.notifications.info('COMBAT.UnknownCombatant', { localize: true })
+      return;
+    }
 
-    await combatant.setFlag('world', 'turnTaken', true);
+    await combatant.setTurnTaken(true);
     this.viewed.dramaEndOfTurn(combatant);
   }
 
@@ -131,8 +134,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     const combatant = this.viewed?.combatants.get(combatantId);
     if (!combatant) return;
 
-    const turnTaken = !combatant.getFlag('world', 'turnTaken');
-    await combatant.setFlag('world', 'turnTaken', turnTaken);
+    const turnTaken = !combatant.turnTaken;
+    await combatant.setTurnTaken(turnTaken);
     if (turnTaken) this.viewed.dramaEndOfTurn(combatant);
   }
 
@@ -168,7 +171,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (updates.length) this.viewed.updateEmbeddedDocuments("Combatant", updates, { turnEvents: false });
   }
 
-  updateStage(document) {
+  updateStage(document, force) {
     let newStep;
     switch (document.getFlag('torgeternity', 'dsrStage')) {
       case undefined:
@@ -178,6 +181,13 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       case 'C': newStep = 'D'; break;
       case 'D': newStep = ''; break;
     }
+    // DSR - check that the next step is approved by the current Drama Card
+    const dsr = this.viewed?.currentDrama?.system.dsrLine;
+    if (!force && dsr.length && dsr.length <= 4 && dsr.indexOf(newStep) === -1) {
+      ui.notifications.info(game.i18n.format(`torgeternity.chatText.notPermittedDSR`, { step: newStep }));
+      return;
+    }
+
     document.setFlag('torgeternity', 'dsrStage', newStep);
   }
 
@@ -188,7 +198,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   static async #incStage(event, button) {
     if (!this.viewed) return;
     event.preventDefault();
-    this.updateStage(this.viewed);
+    this.updateStage(this.viewed, event.shiftKey);
   }
 
   /**
@@ -199,14 +209,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
     const combatant = this.viewed?.combatants.get(combatantId);
     if (!combatant) return;
-    this.updateStage(combatant);
+    this.updateStage(combatant, event.shiftKey);
     event.preventDefault();
-  }
-
-  finishTurn() {
-    const combatant = this.viewed?.combatants.find(combatant.turnTaken && combatant.isOwner);
-    // Check for Fatigued on Drama Conflict Line (see macros.js)
-    combatant.setFlag('world', 'turnTaken', true);
   }
 
   /*

@@ -426,7 +426,6 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 
   &:not(.minimized) {
-    min-width: 750px;
     min-height: 400px;
   }
 
@@ -1673,7 +1672,11 @@ dialog.torgeternity:not(.actor, .item) .window-content,
 
     .tab[data-tab].active {
       .list-section-heading {
-        font-size: 18px;
+        font-size: 1.4em;
+      }
+
+      h2 {
+        font-size: 1.1em;
       }
 
       div.threat-block ol.item-list {
@@ -3738,6 +3741,10 @@ p.skill-chat-title.skilled {
   gap: 3px;
   justify-items: baseline;
   align-items: baseline;
+
+  p.loaded {
+    font-weight: bold;
+  }
 }
 
 .directory-item {
