@@ -63,6 +63,8 @@
         "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
         "cantUseRealityWhileDisconnected": "Du kannst die Fähigkeit Realität nicht verwenden, so lange du abgekoppelt bist.",
         "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und erneut versuchen.",
+        "isApprovedAction": "Anerkannte Aktion erfolgreich (ziehe eine Schicksalskarte)",
+        "isApprovedDefend": "{name} hat erfolgreich verteidigt  (ziehe eine Schicksalskarte)",
         "modifier": {
           "aimedShot": "Zielen",
           "allOutAttack": "Rücksichtsloser Angriff",
@@ -133,6 +135,7 @@
       "hero": "Held",
       "heroCard": "Heldenhaft-Karte",
       "hideDetails": "Verstecke Details",
+      "notPermittedDSR": "Dramakarte erlaubt den DPA-Schritt {step} nicht.",
       "modifiers": "Modifikator",
       "noAmmo": "Waffe nicht abgefeuert, keine Kugeln mehr übrig.",
       "noAmmoPosessing": "Du hast keine Munition in deinem Inventar. Nachladen nicht möglich.",
@@ -415,8 +418,8 @@
     },
     "dramaCard": {
       "heroesFirst": "Helden zuerst?",
-      "heroesCondition": "H:",
-      "villainsCondition": "S:",
+      "heroesConflict": "H:",
+      "villainsConflict": "S:",
       "dsrLine": "DPA",
       "rule": "Regel",
       "approvedActions": "Anerkannte Aktionen",
@@ -494,7 +497,7 @@
       "miracleRoll": "Wunder-Wurf",
       "openParty": "Öffnet die Gruppenübersicht",
       "psionicRoll": "Psionischer Wurf",
-      "reload": "Waffe nachladen",
+      "reload": "Waffe nachladen<p>(halte SHIFT für freies Nachladen)",
       "resetPossibilities": "Möglichkeiten zurücksetzen",
       "GMPoss": "GM's possibility pool",
       "SKPoss": "character's possibilities",
@@ -793,6 +796,10 @@
       "autoDisconnect": {
         "name": "Automatisches Entkoppeln",
         "hint": "Bei einer Welle oder Probe die eine Entkopplung hervorruft, wird der Charakter erhält der Charakter automatisch den Zustand Entkoppelt"
+      },
+      "dramaCardUp": {
+        "name": "Oberhand nur von Drama Karte erlaubt",
+        "hint": "Oberhand-Knopf wird verborgen wenn kein Oberhand-Effekt nicht auf der Dramakarte angegeben ist. (default true)"
       }
     },
     "sheetLabels": {

@@ -1,5 +1,35 @@
 # TORG Eternity Changelog
 
+## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
+
+### Improvements
+
+- SHIFT key is starting to be used to override certain automations/checks.
+- Detect when an **Approved Action** has been performed by a stormknight - add a note to the Chat Card in such cases.
+  - Note that an Approved Action won't be detected an attack if you roll from the skills list.
+- Only allow the **UP** button to appear when the current Drama Card shows UP for the actor's faction. (This function can be disabled in the game settings.)
+- Provide a warning message if the DSR button is pressed and the next step is not approved by the Drama card.
+  - This warning can be bypassed by holding SHIFT while clicking on the DSR button.
+- Ammunition - weapons remember which ammunition was selected for reloading (ammo name shown in BOLD at top of weapon's ammunition list).
+  - Can change the ammunition type on the weapon's Sheet.
+  - Add the damage and AP bonus from the loaded ammunition when attacking with that weapon.
+- Ensure correct state of "play card" button state when hero is added to/removed from a combat.
+- Remove immediate change of scene's cosms, since they shouldn't change until the Save Changes button is pressed.
+- DN in `@Check` is now localized if a skill or attribute.
+- Display message to player if the "Done" (end turn) button can't find your combatant.
+- Remove the heavy shadow from the journal page editor.
+- Gear list in Actor sheets
+  - Item type removed from end of item name since all items of the same type appear in their own section.
+  - Quantity of ammunition shown after the item name.
+  - Holding SHIFT when clicking on the `reload` button will NOT reduce the quantity of ammo.
+
+### Bug Fixes
+
+- Allow Stormknight Sheets to reduce width below 750px, so that it can change to single column format.
+- Get Periculum macro working (for applying damage via the Macro Hub).
+- Don't modify the default threat token when dragging a threat onto a scene where the cosm is set to 'none'.
+- Retain the "Damage Type" when importing weapons and actors.
+
 ## v13.5.0  (SURGE + DISCONNECTIONS)
 
 ### Improvements

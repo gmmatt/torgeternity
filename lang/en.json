@@ -63,6 +63,8 @@
         "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
         "cantUseRealityWhileDisconnected": "You cannot use the reality skill as long as you are disconnected",
         "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
+        "isApprovedAction": "Successful Approved Action (draw a destiny card)",
+        "isApprovedDefend": "{name} successfully DEFENDed (draw a destiny card)",
         "modifier": {
           "aimedShot": "Aimed Shot",
           "allOutAttack": "All out Attack",
@@ -133,6 +135,7 @@
       "hero": "Hero",
       "heroCard": "Hero Card",
       "hideDetails": "Hide Details",
+      "notPermittedDSR": "Next DSR step {step} not permitted by Drama Card",
       "modifiers": "Modifiers",
       "noAmmo": "Failed to fire your weapon, no bullets left.",
       "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
@@ -155,6 +158,7 @@
       "value": "Value",
       "vehicleBase": "Vehicle Operation Test",
       "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "changeAmmoType": "{weapon} switched ammunition to {ammo}",
       "ammoFull": "The weapon \"{a}\" is already fully loaded."
     },
     "clearances": {
@@ -415,8 +419,8 @@
     },
     "dramaCard": {
       "heroesFirst": "Heroes First?",
-      "heroesCondition": "H:",
-      "villainsCondition": "V:",
+      "heroesConflict": "H:",
+      "villainsConflict": "V:",
       "dsrLine": "DSR",
       "rule": "Rule",
       "approvedActions": "Actions",
@@ -494,7 +498,7 @@
       "miracleRoll": "Miracle Roll",
       "openParty": "Open the party sheet",
       "psionicRoll": "Psionic Power Roll",
-      "reload": "Reload weapon",
+      "reload": "Reload weapon<p>(hold SHIFT for free reload)",
       "resetPossibilities": "Reset Storm Knight Possibilities",
       "GMPoss": "GM's possibility pool",
       "SKPoss": "character's possibilities",
@@ -793,6 +797,10 @@
       "autoDisconnect": {
         "name": "Automatically Disconnect",
         "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
+      },
+      "dramaCardUp": {
+        "name": "UP only from Drama Card",
+        "hint": "Hide the UP button in Test Check results if the current Drama Card doesn't have UP in the conflict line (default true)"
       }
     },
     "sheetLabels": {

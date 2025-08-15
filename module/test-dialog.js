@@ -257,6 +257,10 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
           return;
         }
         this.test.attackTraits = myItem ? Array.from(myItem.system.traits) : [];
+        if (myItem?.system?.loadedAmmo) {
+          const ammo = myActor.items.get(myItem?.system.loadedAmmo);
+          if (ammo) this.test.attackTraits.push(...Array.from(ammo.system.traits));
+        }
 
         // Add Cover Modifier
         this.test.addBDs ??= 0;

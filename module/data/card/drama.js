@@ -21,14 +21,14 @@ export class DramaCardData extends foundry.abstract.TypeDataModel {
       approvedActions: new fields.StringField({ initial: '', label: 'torgeternity.dramaCard.approvedActions' }),
       cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
       dsrLine: new fields.StringField({ initial: '', label: 'torgeternity.dramaCard.dsrLine' }),
-      heroesConditionsDramatic: DramaCardData.conditionField('heroesCondition'),
-      heroesConditionsStandard: DramaCardData.conditionField('heroesCondition'),
+      heroesConditionsDramatic: DramaCardData.conditionField('heroesConflict'),
+      heroesConditionsStandard: DramaCardData.conditionField('heroesConflict'),
       heroesFirstDramatic: new fields.BooleanField({ initial: true, label: 'torgeternity.dramaCard.heroesFirst' }),
       heroesFirstStandard: new fields.BooleanField({ initial: true, label: 'torgeternity.dramaCard.heroesFirst' }),
       number: new fields.NumberField({ initial: 1, integer: true }),
       rule: new fields.StringField({ initial: '', label: 'torgeternity.dramaCard.rule' }),
-      villainsConditionsDramatic: DramaCardData.conditionField('villainsCondition'),
-      villainsConditionsStandard: DramaCardData.conditionField('villainsCondition'),
+      villainsConditionsDramatic: DramaCardData.conditionField('villainsConflict'),
+      villainsConditionsStandard: DramaCardData.conditionField('villainsConflict'),
     };
   }
 

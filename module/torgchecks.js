@@ -371,6 +371,19 @@ export async function renderSkillChat(test) {
       test.soakWounds = 1;
     }
 
+    // Approved Action Processing
+    test.successfulDefendApprovedAction = false;
+    test.successfulApprovedAction = false;
+    if (test.result < TestResult.STANDARD) {
+      // "Defend is successful once an attack or interaction misses the hero."
+      if (target.type === 'stormknight' &&
+        (test.testType === 'attack' || test.testType === 'interactionAttack') &&
+        game.combat?.approvedActions?.includes('defend'))
+        test.successfulDefendApprovedAction = true;
+    } else {
+      if (testActor.type === 'stormknight' && isApprovedAction(test))
+        test.successfulApprovedAction = true;
+    }
     // Turn on + sign for modifiers?
     test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
 
@@ -556,6 +569,17 @@ export async function renderSkillChat(test) {
       test.bdStyle = 'hidden';
     }
     test.typeLabel += ' ';
+
+    // Hide the UP button if the current drama card doesn't show UP on the condition line.
+    if (game.settings.get('torgeternity', 'dramaCardUp')) {
+      const combat = game.combat;
+      // get disposition from prototype Token if there's no real token.
+      const token = testActor.getActiveTokens(false, true)?.[0] || testActor.prototypeToken;  // (linked, document [rather than PlaceableObject])
+      if (combat?.active && token &&
+        (token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
+        (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up'))
+        test.upStyle = 'hidden';
+    }
 
     // Display cards played label?
     test.cardsPlayedLabel = (test.cardsPlayed > 0) ? '' : 'hidden';
@@ -907,28 +931,35 @@ export async function rollAttack(actor, item) {
 
   // Calculate damage caused by this weapon
   let adjustedDamage = 0;
-  const weaponDamage = weaponData.damage;
+  const weaponDamage = parseInt(weaponData.damage);
   switch (weaponData.damageType) {
     case 'flat':
       adjustedDamage = weaponDamage;
       break;
     case 'strengthPlus':
-      adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.strength.value + weaponDamage;
       break;
     case 'charismaPlus':
-      adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.charisma.value + weaponDamage;
       break;
     case 'dexterityPlus':
-      adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.dexterity.value + weaponDamage;
       break;
     case 'mindPlus':
-      adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.mind.value + weaponDamage;
       break;
     case 'spiritPlus':
-      adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
+      adjustedDamage = attributes.spirit.value + weaponDamage;
       break;
     default:
-      adjustedDamage = parseInt(weaponDamage);
+      adjustedDamage = weaponDamage;
+  }
+  let weaponAP = weaponData.ap;
+
+  const ammo = weaponData.loadedAmmo && actor.items.get(weaponData.loadedAmmo)?.system;
+  if (ammo) {
+    if (ammo.damageMod) adjustedDamage += ammo.damageMod;
+    if (ammo.apMod) weaponAP += ammo.apMod;
   }
 
   return TestDialog.wait({
@@ -941,7 +972,7 @@ export async function rollAttack(actor, item) {
     skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute]?.value || 0),
     unskilledUse: true,
     damage: adjustedDamage,
-    weaponAP: weaponData.ap,
+    weaponAP: weaponAP,
     applyArmor: true,
     DNDescriptor: dnDescriptor,
     type: 'attack',
@@ -987,4 +1018,34 @@ export async function rollPower(actor, item) {
     bdDamageSum: 0,
     itemId: item.id,
   }, { useTargets: true });
+}
+
+function isApprovedAction(test) {
+  // maneuver, trick, taunt, intimidate, any, attack, defend, "any multi-action"
+  for (const action of game.combat.approvedActions) {
+    switch (action) {
+      case 'any':
+        return true;
+      case 'intimidate':
+      case 'maneuver':
+      case 'taunt':
+      case 'trick':
+        // interactionAttack = intimidate, maneuver, taunt, trick
+        if (test.testType === 'interactionAttack' && test.skillName === action) return true;
+        break;
+      case 'attack':
+        if (test.testType === 'attack') return true;
+        break;
+      case 'multiAction':
+        if (test.multiModifier) return true;
+        break;
+      case 'defend':
+        // defend ("Defend is successful once an attack or interaction misses the hero.")
+        break;
+      default:
+        console.info(`Unrecognised Approved Action: '${action}'`)
+        break;
+    }
+  }
+  return false;
 }

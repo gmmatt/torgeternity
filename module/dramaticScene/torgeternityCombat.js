@@ -10,6 +10,12 @@ let firsttime;
  */
 export default class TorgCombat extends Combat {
 
+  /**
+   * On deletion, remove all pooled cards from the hands of the stormknight actors in the combat.
+   * @param {*} options 
+   * @param {*} user 
+   * @returns 
+   */
   async _preDelete(options, user) {
     const allowed = super._preDelete(options, user);
     if (allowed === false) return false;
@@ -27,7 +33,8 @@ export default class TorgCombat extends Combat {
   }
 
   /**
-   *
+   * On deletion of a Combat, return the current Drama Card to the deck,
+   * and let all players play cards from their hands (i.e. cancel Confused).
    * @param options
    * @param userId
    */
@@ -46,48 +53,66 @@ export default class TorgCombat extends Combat {
   }
 
   /**
-   *
+   * Ensure the correct drama card image is shown in the Combat Tracker.
    * @param changed
    * @param options
    * @param userId
    */
   _onUpdate(changed, options, userId) {
     if (game.user.isActiveGM) {
-      const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
-      this.setFlag('torgeternity', 'activeCard', (dramaActive.cards.size > 0) ? dramaActive.cards.contents[0].faces[0].img : '');
+      const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting')?.dramaActive);
+      this.setFlag('torgeternity', 'activeCard', (dramaActive?.cards.size > 0) ? dramaActive.cards.contents[0].faces[0].img : '');
     }
     super._onUpdate(changed, options, userId);
   }
 
   /**
    * Addition of Combatants
-   * @param {} parent 
-   * @param {*} collection 
-   * @param {*} documents 
-   * @param {*} data 
-   * @param {*} options 
-   * @param {*} userId 
+   * 
+   * When a new combatant is added to the combat, ensure that a Hero cannot play cards if the current
+   * drama card is "confused"
+   * @param {Combatant} combatant
    */
   async _onEnter(combatant) {
     await super._onEnter(combatant);
-    if (game.user.isActiveGM && this.started) {
+
+    if (this.started) {
       const whoFirst = await this.getFlag('torgeternity', 'combatFirstDisposition');
       const initiative = (combatant.token.disposition === whoFirst) ? 2 : 1;
       combatant.update({ initiative });
+
+      if (combatant.token.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY && this.heroConflict === 'confused') {
+        const hand = combatant.actor.getDefaultHand();
+        if (hand) hand.setFlag('torgeternity', 'disablePlayCards', true)
+      }
     }
+  }
+
+  /**
+   * When a combatant is removed from the combat, ensure that they can play cards from their hand
+   * @param {Combatant} combatant 
+   */
+  async _onExit(combatant) {
+    // Cancel "cannot play cards"
+    if (combatant.token?.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY && this.heroConflict === 'confused') {
+      const hand = combatant.actor.getDefaultHand();
+      if (hand) hand.setFlag('torgeternity', 'disablePlayCards', false)
+    }
+    return super._onExit(combatant);
   }
 
   get currentDrama() {
     const dramaActive = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive);
     return dramaActive.cards.size ? dramaActive.cards.contents[0] : null;
   }
+
   async setIsDramatic(value) {
     const result = await this.setFlag('torgeternity', IS_DRAMATIC_FLAG, value)
-    if (!result) return;
+    if (!result) return;  // unchanged
 
     // Update combat effects
     const card = this.currentDrama;
-    if (card) return this.setDramaEffects(card);
+    if (card) return this.#setDramaEffects(card);
   }
 
   get isDramatic() {
@@ -98,13 +123,13 @@ export default class TorgCombat extends Combat {
     return this.currentDrama?.system.approvedActions?.split(' ') ?? [];
   }
 
-  get heroCondition() {
+  get heroConflict() {
     const card = this.currentDrama;
     if (!card) return 'none';
     return this.isDramatic ? card.system.heroesConditionsDramatic : card.system.heroesConditionsStandard;
   }
 
-  get villainCondition() {
+  get villainConflict() {
     const card = this.currentDrama;
     if (!card) return 'none';
     return this.isDramatic ? card.system.villainsConditionsDramatic : card.system.villainsConditionsStandard;
@@ -149,13 +174,13 @@ export default class TorgCombat extends Combat {
     }
 
     const [card] = await dramaActive.draw(dramaDeck, 1, game.torgeternity.cardChatOptions);
-    return this.setDramaEffects(card);
+    return this.#setDramaEffects(card);
   }
 
   /**
    * Set the effects of the current drama card
    */
-  async setDramaEffects(card) {
+  async #setDramaEffects(card) {
     //console.log(this.conflictLineText)
     //console.log(`DSR: '${this.dsrText}'   Actions: '${this.approvedActionsText}'`);
 
@@ -181,8 +206,8 @@ export default class TorgCombat extends Combat {
     if (!card) return "No Drama Card Active";
 
     const lookup = (a) => game.i18n.localize(torgeternity.dramaConflicts[a]);
-    const H = game.i18n.localize('torgeternity.dramaCard.heroesCondition');
-    const V = game.i18n.localize('torgeternity.dramaCard.villainsCondition');
+    const H = game.i18n.localize('torgeternity.dramaCard.heroesConflict');
+    const V = game.i18n.localize('torgeternity.dramaCard.villainsConflict');
     if (this.isDramatic) {
       if (card.system.heroesFirstDramatic)
         return `${game.i18n.localize('torgeternity.dramaCard.dramatic')}: ${H} ${lookup(card.system.heroesConditionsDramatic)}   ${V} ${lookup(card.system.villainsConditionsDramatic)}`
@@ -249,8 +274,7 @@ export default class TorgCombat extends Combat {
   }
 
   /**
-   * 
-   * @param {*} combatants Passed explicitly, for when called from onDelete
+   * Remove the ActiveDefense AE from all combatants.
    */
   async #deleteActiveDefense() {
     for (const combatant of this.combatants) {
@@ -446,7 +470,7 @@ export default class TorgCombat extends Combat {
     await prevActiveCard.pass(dramaActive);
 
     // Cancel effects from previous card (if any)
-    return this.setDramaEffects(prevActiveCard);
+    return this.#setDramaEffects(prevActiveCard);
   }
 
   // Sort by initiative, and then by name.

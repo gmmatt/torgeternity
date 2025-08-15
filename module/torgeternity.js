@@ -300,29 +300,8 @@ Hooks.once('diceSoNiceReady', (dice3d) => {
   registerDiceSoNice(dice3d);
 });
 
-/*
-Hooks.on("renderUIConfig", (config, html, context, options) => {
-  let select = html.querySelector('[name="core.uiConfig.colorScheme.applications');
-  if (select) {
-    select.disabled = true;
-    let hint = select.parentElement.parentElement.querySelector("p.hint");
-    if (hint) hint.innerText = game.i18n.localize("torgeternity.core.forceDarkModeHint");
-  }
-})
-  */
-
 // -------------once everything ready
 Hooks.on('ready', async function () {
-
-  /*
-  // Force DARK application colour scheme
-  const uiconfig = game.settings.get('core', 'uiConfig');
-  if (uiconfig.colorScheme.applications !== 'dark') {
-    //ui.notifications.warn('TORG system works best when the Applications theme is set to DARK');
-    uiconfig.colorScheme.applications = 'dark';
-    game.settings.set('core', 'uiConfig', uiconfig);
-  }
-    */
 
   // migration script
   if (game.user.isGM) torgMigration();
@@ -761,7 +740,8 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
 Hooks.on('preCreateToken', async (document, data, options, userId) => {
   if (document.texture.src.includes('systems/torgeternity/images/characters/threat')) {
     const cosm = canvas.scene.getFlag('torgeternity', 'cosm');
-    if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmTypes, cosm))
+    // not cosmTypes, because that includes 'none'
+    if (cosm && Object.hasOwn(CONFIG.torgeternity.cosmDecks, cosm))
       document.updateSource({ 'texture.src': 'systems/torgeternity/images/characters/threat-' + cosm + '.Token.webp' });
   }
 });

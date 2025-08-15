@@ -240,6 +240,12 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
   }
 
+  /**
+   * On creation of a stormknight, create a corresponding card hand.
+   * @param {*} data 
+   * @param {*} options 
+   * @param {*} userId 
+   */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
     // by default creating a  hand for each stormknight
@@ -353,10 +359,10 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     super._onUpdate(changed, options, userId);
 
     if (this.type === 'stormknight') {
-      const hand = this.getDefaultHand();
+      let hand = this.getDefaultHand();
       // If there is no hand for that SK, and a GM is online, create one
       if (!hand && game.user.isActiveGM) {
-        this.createDefaultHand();
+        hand = this.createDefaultHand();
       }
       // If the update includes permissions, sync them to the hand
       if (hand && changed['==ownership'] && game.userId === userId) {
@@ -397,7 +403,11 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     }
   }
 
-
+  /**
+   * When a stormknight is deleted, delete the corresponding player hand
+   * @param {*} options 
+   * @param {*} userId 
+   */
   _onDelete(options, userId) {
     if (this.type === 'stormknight' && game.user.isActiveGM)
       this.getDefaultHand()?.delete();
@@ -731,6 +741,31 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    */
   static getControlledActor() {
     return (game.user.isGM && game.canvas.tokens.controlled?.length) ? game.canvas.tokens.controlled[0].actor : game.user.character;
+  }
+
+  /**
+   * Reduces the remaining duration of any ActiveEffects present directly on the Actor,
+   * excluding ActiveDefense.
+   * @returns {Promise} A Promise which resolves when all affected ActiveEffects have been changed.
+   */
+  decayEffects() {
+    const toUpdate = [];
+    const toDelete = [];
+    for (const effect of this.effects.filter((e) => e.duration.type === 'turns')) {
+      if (effect.name === 'ActiveDefense') continue;
+      if (effect.duration.turns === 1 && effect.duration.rounds === 1)
+        toDelete.push(effect.id)
+      else
+        toUpdate.push({
+          _id: effect.id,
+          'duration.turns': effect.duration.turns - 1,
+          'duration.rounds': effect.duration.rounds - 1,
+        });
+    }
+    const promises = [];
+    if (toUpdate.length) promises.push(this.updateEmbeddedDocuments('ActiveEffect', toUpdate));
+    if (toDelete.length) promises.push(this.deleteEmbeddedDocuments('ActiveEffect', toDelete));
+    return Promise.all(promises);
   }
 }
 

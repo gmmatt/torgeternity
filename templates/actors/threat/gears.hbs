@@ -34,13 +34,13 @@
     {{/if}}
   </div>
   {{#if meleeweapons }}
+    <h2>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h2>
     <ol class="item-list">
       {{#each meleeweapons as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              ({{localize "torgeternity.itemSheetDescriptions.meleeWeapon"}})</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
@@ -90,13 +90,13 @@
   {{/if}}
 
   {{#if missileweapon }}
+    <h2>{{localize "torgeternity.sheetLabels.missileWeapons"}}</h2>
     <ol class="item-list">
       {{#each missileweapon as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              ({{localize "torgeternity.itemSheetDescriptions.missileWeapon"}})</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
@@ -154,13 +154,13 @@
     </ol>
   {{/if}}
   {{#if firearm }}
+    <h2>{{localize "torgeternity.sheetLabels.firearms"}}</h2>
     <ol class="item-list">
       {{#each firearm as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              ({{localize "torgeternity.itemSheetDescriptions.firearm"}})</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
@@ -218,14 +218,13 @@
     </ol>
   {{/if}}
   {{#if heavyweapon }}
+    <h2>{{localize "torgeternity.sheetLabels.heavyWeapons"}}/{{localize "torgeternity.sheetLabels.explosives"}}</h2>
     <ol class="item-list">
       {{#each heavyweapon as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              ({{localize "torgeternity.itemSheetDescriptions.heavyWeapon"}}/{{localize
-              'torgeternity.itemSheetDescriptions.explosive' }})</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
@@ -283,13 +282,14 @@
     </ol>
   {{/if}}
   {{#if ammunitions }}
+    <h2>{{localize "torgeternity.sheetLabels.ammunition"}}</h2>
     <ol class="item-list">
       {{#each ammunitions as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
             <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              ({{localize 'torgeternity.sheetLabels.ammunition'}})</a>
+              ({{item.system.quantity}})</a>
             <div class="item-controls">
               <a class="item-control item-edit" data-action="itemEdit"
                 data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
@@ -349,6 +349,7 @@
     {{/if}}
   </div>
   {{#if armor }}
+    <h2>{{localize "torgeternity.sheetLabels.armor"}}</h2>
     <ol class="item-list">
       {{#each armor as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
@@ -408,6 +409,7 @@
     </ol>
   {{/if}}
   {{#if shield }}
+    <h2>{{localize "torgeternity.sheetLabels.shield"}}</h2>
     <ol class="item-list">
       {{#each shield as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
@@ -475,6 +477,7 @@
     {{/if}}
   </div>
   {{#if gear }}
+    <h2>{{localize "torgeternity.sheetLabels.generalGear"}}</h2>
     <ol class="item-list">
       {{#each gear as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
@@ -521,13 +524,13 @@
     </ol>
   {{/if}}
   {{#if implant }}
+    <h2>{{localize "torgeternity.sheetLabels.implant"}}</h2>
     <ol class="item-list">
       {{#each implant as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              (Implant)</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -568,13 +571,13 @@
     </ol>
   {{/if}}
   {{#if eternityshard }}
+    <h2>{{localize "torgeternity.sheetLabels.eternityShard"}}</h2>
     <ol class="item-list">
       {{#each eternityshard as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              ({{localize "torgeternity.sheetLabels.eternityShard"}})</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -615,13 +618,13 @@
     </ol>
   {{/if}}
   {{#if vehicle }}
+    <h2>{{localize "torgeternity.sheetLabels.vehicle"}}</h2>
     <ol class="item-list">
       {{#each vehicle as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
-              ({{localize "torgeternity.sheetLabels.vehicle"}})</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">

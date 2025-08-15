@@ -780,7 +780,7 @@ export class TorgeternityMacros {
       },
     });
 
-    const test = {
+    return renderSkillChat({
       testType: 'custom',
       actor: game.actors.contents[0].uuid,
       actorPic: 'systems/torgeternity/images/tokens/vulnerable.webp',
@@ -805,21 +805,11 @@ export class TorgeternityMacros {
       chatNote: '',
       bdDamageSum: 0,
       hasModifiers: false,
-      targetAll: game.user.targets.map(token => oneTestTarget(token)),
+      targetAll: Array.from(game.user.targets).map(token => oneTestTarget(token)),
       bonus: 0,
       bdStyle: '',
-      upStyle: 'hidden',
       possibilityStyle: 'hidden',
-      allOutFlag: false,
-      aimedFlag: false,
-      blindFireFlag: false,
-      trademark: false,
       coverModifier: 0,
-      additionalDamage: false,
-      isOther1: false,
-      isOther2: false,
-      isOther3: false,
-      target: tokens[0],
       chatTitle: '',
       DN: 9,
       unskilledLabel: 'hidden',
@@ -841,7 +831,6 @@ export class TorgeternityMacros {
       disconnectLabel: 'hidden',
       cardsPlayedLabel: 'hidden',
       notesLabel: 'hidden',
-    };
-    await renderSkillChat(test);
+    });
   }
 }

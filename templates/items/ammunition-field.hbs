@@ -1,16 +1,22 @@
-{{#if (and ammunition.length (not ../ignoreAmmo))}}
-  <fieldset class="ammofield">
+{{#if hasAmmunition}}
+
+  {{#*inline "oneAmmo"}}
+    <li data-item-id="{{ammo.id}}">
+      <p class="{{ifThen (eq @root.item.system.loadedAmmo ammo.id) 'loaded' '' }}">{{ammo.name}}</p>
+      <a data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}""
+            {{disabled (not @root.editable)}}>
+            <i class=" fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i></a>
+      <a data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}" {{disabled (not @root.editable)}}>
+        <i class="fa-solid fa-trash"></i></a>
+    </li>
+  {{/inline}}
+
+  <fieldset class="ammofield scrollable">
     <legend>{{localize "torgeternity.gear.ammunition"}}</legend>
     <ul>
+      {{#if loadedAmmunition}}{{> oneAmmo ammo=loadedAmmunition}}{{/if}}
       {{#each ammunition as |ammo|}}
-        <li>
-          <p>{{ammo.name}}</p>
-          <a data-tooltip="{{localize 'torgeternity.iconeTitles.reload'}}" data-item-id="{{ammo.id}}"
-            {{disabled (not @root.editable)}}>
-            <i class="fa-solid fa-bullseye reload-weapon" data-action="reloadWeapon"></i></a>
-          <a data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}" {{disabled (not @root.editable)}}>
-            <i class="fa-solid fa-trash"></i></a>
-        </li>
+        {{> oneAmmo ammo=ammo}}
       {{/each}}
     </ul>
   </fieldset>
