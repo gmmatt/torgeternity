@@ -158,13 +158,14 @@
       "value": "Wert",
       "vehicleBase": "Fahrzeugprobe",
       "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche.",
+      "changeAmmoType": "{weapon} switched ammunition to {ammo}",
       "ammoFull": "Die Waffe \"{a}\" ist bereits vollständig geladen."
     },
     "clearances": {
       "alpha": "Alpha",
       "beta": "Beta",
-      "gamma": "Gamma",
       "delta": "Delta",
+      "gamma": "Gamma",
       "omega": "Omega"
     },
     "combat": {
@@ -853,12 +854,12 @@
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
       "crewUnskilledOperator": "Der Lenker des Fahrzeug ist ungelernt!",
       "crewUnskilledWeapon": "Die Waffe wird ungelernt genutzt!",
+      "crewFavored": "This weapon has a favored gunner",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "customAttacks": "Individuelle Angriffe",
       "damageAP": "Schaden (PB)",
       "damageMod": "Schadensmodifikator",
-      "darkvision": "Dunkelsicht",
       "defense": "Verteidigung",
       "defenses": "Verteidigungen",
       "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen",
