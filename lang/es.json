@@ -63,6 +63,8 @@
         "cantUseUntrained": " no se puede utilizar sin entrenar (mínimo 1 adición).",
         "cantUseRealityWhileDisconnected": "No puedes utilizar la capacidad de la realidad mientras estés desconectado.",
         "interactionNeedTarget": "No se puede intentar la prueba de ataque de interacción sin un objetivo. Selecciona un objetivo e inténtalo de nuevo.",
+        "isApprovedAction": "Successful Approved Action (draw a destiny card)",
+        "isApprovedDefend": "{name} successfully DEFENDed (draw a destiny card)",
         "modifier": {
           "aimedShot": "Tiro Apuntado",
           "allOutAttack": "Ataque Total",
@@ -90,9 +92,10 @@
         "result": {
           "actionTotal": "TOTAL",
           "attackMissed": "Ataque Falla",
-          "diceTotal": "Resultado del dado",
           "damage": "Daño",
+          "diceTotal": "Resultado del dado",
           "failure": "Fallo",
+          "fragileBroken": "The fragile {itemName} breaks",
           "goodSuccess": "Éxito Bueno",
           "mishape": "Percance",
           "new": "New Roll Total",
@@ -107,6 +110,21 @@
         },
         "testUnsuccessfull": "Test unsuccessfull"
       },
+      "contradiction": {
+        "alreadyDisconnected": "is already disconnected",
+        "noContradiction": "has no contradiction",
+        "hasDisconnected": "has <strong>disconnected</strong>!!!",
+        "notDisconnected": "has not disconnected",
+        "possibleContradiction": "has a possible contradiction",
+        "contradictionCheck": "Contradiction Check",
+        "checkTooltip": "<strong>{name}</strong> rolls for contradiction"
+      },
+      "disconnection": {
+        "base": "{itemName} caused DISCONNECTION ({diceTotal}):",
+        "actorLabel": "{axiom}: {itemAxiom} > {actorType} {actorAxiom}",
+        "zoneLabel": "{axiom}: {itemAxiom} > Zone {zoneAxiom}",
+        "perk": "{itemName} was used outside its cosm"
+      },
       "damage": "Daño",
       "dieTotal": "DADOS:",
       "discardsCard": "Discards",
@@ -117,6 +135,7 @@
       "hero": "HÉROE",
       "heroCard": "Carta Héroe",
       "hideDetails": "Hide Details",
+      "notPermittedDSR": "Next DSR step {step} not permitted by Drama Card",
       "modifiers": "Modificadores",
       "noAmmo": "Failed to fire your weapon, no bullets left.",
       "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
@@ -139,6 +158,7 @@
       "value": "Valor",
       "vehicleBase": "Vehicle Operation Test",
       "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "changeAmmoType": "{weapon} switched ammunition to {ammo}",
       "ammoFull": "The weapon \"{a}\" is already fully loaded."
     },
     "clearances": {
@@ -154,6 +174,8 @@
       "endMyTurn": "Done",
       "nextKeep": "Sigu. Turno (Mantener Carta)",
       "nextNew": "Sigu. Turno (Nueva Carta)",
+      "heroes": "Heroes",
+      "villains": "Villains",
       "herosTooltip": "heros first",
       "vilainsTooltip": "vilains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
@@ -164,6 +186,9 @@
         "windowTitle": "Notes and Backgrounds from {a}",
         "createChatCard": "Create chat card"
       }
+    },
+    "core": {
+      "forceDarkModeHint": "TORG only works with Applications set to Dark mode"
     },
     "cosmDecks": {
       "aysle": "Mazo Cosmos Aysle",
@@ -215,6 +240,13 @@
       "spiritPlus": "Espíritu +",
       "strengthPlus": "Fuerza +"
     },
+    "defeat": {
+      "prompt": "{name} must make a Defeat Test",
+      "outstanding": "<p><strong>{name} is Knocked Out</strong></p>",
+      "good": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer an Injury that lasts until all Wounds are healed</p>",
+      "standard": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer a permanent Injury</p>",
+      "failure": "<p><strong>{name} dies!</strong></p><p>They get one final, dramatic action before expiring (ignoring wound penalties)</p>"
+    },
     "dialogPrompts": {
       "cardPooled": "Reserva",
       "cosmDeckDialogLabel": "Roba",
@@ -224,11 +256,11 @@
       "drawDestiny": "Roba Destino",
       "lifelike": "Visor Mejorado",
       "openHand": "Abrir Mano",
+      "playCard": "Jugar",
       "playerPassInstructions": "Escoge Jugador para Recibir Carta",
       "playerPassLabel": "Intercambiar",
       "playerPassTitle": "Intercambiar con Jugador",
       "playerPassTo": "Intercambiar con",
-      "playCard": "Jugar",
       "return": "Devuelve todas las cartas a sus mazos. NO baraja automáticamente los mazos.",
       "selectCosmDeck": "Escoge Mazo Cosmos",
       "showToPlayers": "Mostrar carta a Todos"
@@ -275,7 +307,8 @@
         "recipient": "Choice of whisper's recipient",
         "whisper": "Whisper to checked active player",
         "apply": "Apply",
-        "show": "Next card(s)"
+        "show": "Next card(s)",
+        "noMoreCards": "No More Drama cards available"
       },
       "cardRetour": {
         "cardBack": "Card goes back after missplay",
@@ -308,25 +341,45 @@
       "standard": "Standard (10)",
       "targetAirVehicles": "Target air vehicles or Dexterity",
       "targetAlteration": "Target Alteration",
+      "targetApportation": "Target Appportation",
+      "targetBeastRiding": "Target Beast Riding",
+      "targetComputers": "Target Computers",
       "targetCharisma": "Target Charisma",
       "targetConjuration": "Target Conjuration",
       "targetDexterity": "Target Dexterity",
       "targetDivination": "Target Divination",
       "targetDodge": "Target dodge or Dexterity",
+      "targetEnergyWeapons": "Target Energy Weapons",
+      "targetEvidenceAnalysis": "Target Evidence Analysis",
       "targetFaith": "Target faith or Spirit",
+      "targetFind": "Target find or Mind",
+      "targetFireCombat": "Target Fire Combat",
+      "targetFirstAid": "Target First Aid",
+      "targetHeavyWeapons": "Target Heavy Weapons",
       "targetIntimidation": "Target intimidation or Spirit",
       "targetKinesis": "Target Kinesis",
       "targetLandVehicles": "Target land vehicles or Dexterity",
+      "targetLanguage": "Target Language",
+      "targetLockpicking": "Target Lockpicking",
       "targetManeuver": "Target maneuver or Dexterity",
+      "targetMedicine": "Target Medicine",
       "targetMeleeWeapons": "Target melee weapons or Dexterity",
+      "targetMissileWeapons": "Target Missile Weapons",
       "targetMind": "Target Mind",
+      "targetPersuasion": "Target Persuasion",
       "targetPrecognition": "Target Precognition",
+      "targetProfession": "Target Profession",
+      "targetReality": "Target Reality",
+      "targetScholar": "Target Scholar",
       "targetSpirit": "Target Spirit",
       "targetStealth": "Target stealth or Dexterity",
+      "targetStreetwise": "Target Streetwise",
       "targetStrength": "Target Strength",
+      "targetSurvival": "Target Survival",
       "targetTaunt": "Target taunt or Charisma",
+      "targetTelepathy": "Target Telepathy",
+      "targetTracking": "Target Tracking",
       "targetTrick": "Target trick or Mind",
-      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Target unarmed combat or Dexterity",
       "targetVehicleDefense": "Target Vehicle Defense",
       "targetWaterVehicles": "Target water vehicles or Dexterity",
@@ -387,6 +440,12 @@
       "description": "Descripción",
       "enhances": "Mejora",
       "perk": "Don"
+    },
+    "fieldLabels": {
+      "itemTraits": {
+        "label": "Traits",
+        "hint": "The specific abilities of this item"
+      }
     },
     "gear": {
       "ammo": "Munición",
@@ -472,6 +531,7 @@
       "specialability": "Habilidad Especial",
       "specialabilityRollable": "Special Ability Rollable",
       "spell": "Conjuro",
+      "traits": "Traits",
       "vehicle": "Vehículo",
       "vehicleAddOn": "Vehicle Add-On"
     },
@@ -497,9 +557,10 @@
       "noAttrNamed": "Your controlled Actor does not have an attribute named ",
       "noHands": "No hands available!",
       "noItemNamed": "Your controlled Actor does not have an item named ",
-      "noSkillNamed": "Your controlled Actor does not have a skill named ",
       "noRaceToDelete": "There is no race to delete.",
+      "noSkillNamed": "Your controlled Actor does not have a skill named ",
       "noTarget": "No valid Target Token",
+      "noTokenNorActor": "No tokens selected and no assigned character found, the macro cannot proceed.",
       "noVehicleOperator": "The targeted vehicle {a} doesn't have an operator. The test cannot proceed.",
       "notImplemented": "Not implemented at this moment",
       "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
@@ -511,6 +572,7 @@
       "noPossibility": "There is no possibility left",
       "noCapacity": "{a} can't pilote this kind of vehicle!",
       "noFight": "No activefight, or not started",
+      "noPlayers": "No active players",
       "raceExistent": "You have already chosen a race.",
       "notAPerkItem": "Has intentado asignar una ventaja de la categoría {a} a esta raza, pero debe pertenecer a la categoría racial. La acción ha sido abortada.",
       "addedRacePerkToActor": "Añadido {perkName}-perk al actor.",
@@ -524,7 +586,9 @@
     "partySheet": {
       "chooseParty": "<h3>If you choose YES, it will open with all characters.<br>If you choose NO, it'll open only active characters.</h3>",
       "noCharacter": "This user doesn't own any actor",
-      "openParty": "Choose the party sheet"
+      "openParty": "Choose the party sheet",
+      "allPlayers": "All Players",
+      "activePlayers": "Active Players"
     },
     "perks": {
       "category": "Categoria",
@@ -670,13 +734,13 @@
         "hint": "Activo: el sistema hace un reinicio de los mazos y pilas de descarte en la pestaña de Cartas. AVISO: Es necesario refrescar el navegador (F5) para que los cambios se activen.",
         "name": "Reiniciar las Cartas"
       },
-      "welcome": {
-        "hint": "Activo: el mensaje de bienvenida se mostrará después de cargar el mundo.",
-        "name": "Mostrar Mensaje Bienvenida"
-      },
       "showCheckDetails": {
         "hint": "If checked, the details of checks will always be shown.",
         "name": "Show Details in checks"
+      },
+      "welcome": {
+        "hint": "Activo: el mensaje de bienvenida se mostrará después de cargar el mundo.",
+        "name": "Mostrar Mensaje Bienvenida"
       },
       "uniqueDN": {
         "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
@@ -690,6 +754,10 @@
         "hint": "Use the Pan-Pacifica tabletent after year 1.",
         "name": "Year-1 PP TT"
       },
+      "cardChatNotify": {
+        "hint": "Hides core Foundry card messages where Torg Eternity supplies its own message",
+        "name": "Suppress Core Card Messages"
+      },
       "shuffleMessageSurpress": {
         "hint": "If checked, the Chat Message on shuffling cards will be surpressed.",
         "name": "Supress Chatmessage on shuffle"
@@ -697,6 +765,42 @@
       "ignoreAmmo": {
         "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
         "name": "Ignore ammo mechanics"
+      },
+      "hoverDistance": {
+        "hint": "If checked, hovering the mouse over a token will display the distance to that token from the user's controlled character",
+        "name": "Show Distance to Token"
+      },
+      "rulerGridWalk": {
+        "hint": "The tint colour for grid cells when a token has not reached its move distance (default: --color-level-success)",
+        "name": "Grid Highlight (Walk)"
+      },
+      "rulerGridRun": {
+        "hint": "The tint colour for grid cells when a token has exceeded its move, but not its max move (default: --color-level-info)",
+        "name": "Grid Highlight (Run)"
+      },
+      "rulerGridMax": {
+        "hint": "The tint colour for grid cells when a token has exceeded its max move (default: --color-level-error)",
+        "name": "Grid Highlight (> Run)"
+      },
+      "showMovementRuler": {
+        "hint": "Displays the movement history of tokens during a combat round (history is cleared on a new round)",
+        "name": "Show Token Movement History"
+      },
+      "autoShock": {
+        "name": "Automatically Apply KO",
+        "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
+      },
+      "autoWound": {
+        "name": "Automatically Apply Wounds",
+        "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
+      },
+      "autoDisconnect": {
+        "name": "Automatically Disconnect",
+        "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
+      },
+      "dramaCardUp": {
+        "name": "UP only from Drama Card",
+        "hint": "Hide the UP button in Test Check results if the current Drama Card doesn't have UP in the conflict line (default true)"
       }
     },
     "sheetLabels": {
@@ -726,6 +830,7 @@
       "attribute": "Atributo",
       "attributeMaximum": "Atributo máximo",
       "attributes": "Atributos",
+      "max": "Max.",
       "availableEnhancements": "Mejoras Disponibles",
       "background": "Trasfondo",
       "backgroundAndNotes": "Trasfondo y Notas",
@@ -747,6 +852,9 @@
       "cosm": "Cosmos",
       "coverBonus": "Mod. Cobertura",
       "coverBonusTooltip": "Bonus added to target toughness as a result of cover",
+      "crewUnskilledOperator": "The operator of this vehicle is unskilled!",
+      "crewUnskilledWeapon": "This weapon is being used unskilled!",
+      "crewFavored": "This weapon has a favored gunner",
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Hab. Personalizada",
       "customAttacks": "Custom Attacks",
@@ -851,11 +959,13 @@
       "race": "Raza",
       "racialPerks": "Ventajas raciales",
       "range": "Range",
+      "darkvision": "Darkvision",
+      "removeGunner": "Remove this gunner from this weapon",
+      "removeOperator": "Remove the operator from the vehicle",
       "return": "Retornar",
       "roll": "Tirar",
       "run": "Carrera",
       "running": "Correr",
-      "darkvision": "Darkvision",
       "secondaryAxiom": "Secondary Axiom",
       "secondaryCosm": "Cosmos Secundario",
       "shield": "Escudo",
@@ -1104,6 +1214,60 @@
       "d": " D",
       "noDSR": "RDH",
       "step": "Paso"
+    },
+    "traits": {
+      "blackPowder": "Black Powder",
+      "bulky": "Bulky",
+      "carbine": "Carbine",
+      "dazing": "Dazing",
+      "fatigues": "Fatigues",
+      "fragile": "Fragile",
+      "fullBody": "Full Body",
+      "grapple": "Grapple",
+      "head": "Head",
+      "ignoresArmor": "Ignores Armor",
+      "lowestArmor": "Lowest Armor",
+      "nonLethal": "Non-Lethal",
+      "painful": "Painful",
+      "pistol": "Pistol",
+      "quick": "Quick",
+      "reload": "Reload",
+      "shotgun": "Shotgun",
+      "small": "Small",
+      "stagger": "Stagger",
+      "thrown": "Thrown",
+      "torso": "Torso",
+      "twoHanded": "Two-Handed",
+      "unwieldy": "Unwieldy",
+      "wounding": "Wounding",
+      "shortBurst": "Short Burst",
+      "mediumBlast": "Medium Blast",
+      "longBurst": "Long Burst",
+      "smallBlast": "Small Blast",
+      "heavyBurst": "Heavy Burst",
+      "largeBlast": "Large Blast",
+      "veryLargeBlast": "Very Large Blast",
+      "hugeBlast": "Huge Blast",
+      "energyDamage": "Energy Damage",
+      "fireDamage": "Fire Damage",
+      "forceDamage": "Force Damage",
+      "iceDamage": "Ice Damage",
+      "lightningDamage": "Lightning Damage",
+      "energyArmor": "Armor vs Energy",
+      "fireArmor": "Armor vs Fire",
+      "forceArmor": "Armor vs Force",
+      "iceArmor": "Armor vs Ice",
+      "lightningArmor": "Armor vs Lightning",
+      "energyDefense": "Defense vs Energy",
+      "fireDefense": "Defense vs Fire",
+      "forceDefense": "Defense vs Force",
+      "iceDefense": "Defense vs Ice",
+      "lightningDefense": "Defense vs Lightning"
+    },
+    "traitGroup": {
+      "defense": "Defense",
+      "melee": "Melee",
+      "ranged": "Ranged"
     },
     "vehicleTypes": {
       "air": "Air",
