@@ -1,5 +1,13 @@
 # TORG Eternity Changelog
 
+## NEXT VERSION
+
+- If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
+
+### Translations
+
+- 'torgeternity.chatText.possibleGlory'
+
 ## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
 
 ### Improvements

@@ -153,6 +153,8 @@ export async function renderSkillChat(test) {
             testActor.toggleStatusEffect('disconnected', { active: true })
         }
       }
+
+      if (test.rollTotal >= 60) test.possibleGlory = true;
     }
 
     // Add the dices list in test

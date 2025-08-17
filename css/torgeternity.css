@@ -3189,6 +3189,12 @@ p.skill-chat-title.skilled {
   justify-content: space-around;
 }
 
+.chat-message .possible-glory {
+  text-align: center;
+  color: darkGreen;
+  text-shadow: #ffcc00 1px 0 10px;
+}
+
 .chat-message .roll-button {
   border: black 1px solid;
   border-radius: 1rem;

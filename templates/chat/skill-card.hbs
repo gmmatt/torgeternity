@@ -166,6 +166,12 @@
       </div>
     </details>
 
+    {{#if possibleGlory}}
+      <div class="possible-glory">
+        <p>{{localize 'torgeternity.chatText.possibleGlory'}}</p>
+      </div>
+    {{/if}}
+
     <div class="skill-roll-menu">
       <a class="button roll-button {{isFavStyle}}"
         data-action="rollFav">{{localize 'torgeternity.chatText.favored'}}</a>
