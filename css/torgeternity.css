@@ -3212,6 +3212,11 @@ p.skill-chat-title.skilled {
   &.notPreferred {
     color: gray;
   }
+
+  &.drawDestiny {
+    display: inline;
+    margin-left: 1em;
+  }
 }
 
 .chat-message .hidden {

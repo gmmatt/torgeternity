@@ -28,6 +28,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'backlash2': TorgeternityChatLog.#applyBacklash2,
       'backlash3': TorgeternityChatLog.#applyBacklash3,
       'testDefeat': TorgeternityChatLog.#testDefeat,
+      'drawDestiny': TorgeternityChatLog.#drawDestiny,
     }
   }
 
@@ -527,6 +528,17 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       owner: actor,
       content: formattedMessage
     })
+  }
+
+  static async #drawDestiny(event, button) {
+    let id = button.dataset.actor;
+    if (id.startsWith('Actor.')) id = id.slice(6);
+    let actor = game.actors.get(id);
+    if (!actor) return;  // maybe warning message
+    if (!actor.isOwner) return;  // not an owner of the actor receiving the card
+    let hand = actor.getDefaultHand();
+    if (!hand) return;  // maybe warning message
+    return hand.drawDestiny();
   }
 }
 

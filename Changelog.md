@@ -3,10 +3,12 @@
 ## NEXT VERSION
 
 - If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
+- Add button on successful Approved Action to draw a destiny card for the relevant actor/target.
 
 ### Translations
 
 - 'torgeternity.chatText.possibleGlory'
+- 'torgeternity.chatText.check.drawDestiny'
 
 ## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
 

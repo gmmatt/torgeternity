@@ -225,18 +225,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
   }
 
   static #onDrawDestiny() {
-    const destinyDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDeck);
-    if (!destinyDeck) return;
-    if (destinyDeck.cards.size) {
-      const [firstCardKey] = destinyDeck.cards.keys(); // need to grab a card to get toMessage access
-      const card = destinyDeck.cards.get(firstCardKey);
-      card.toMessage({
-        content: `<div class="card-draw flexrow"><span class="card-chat-tooltip">
-        <img class="card-face" src="${destinyDeck.img}"/><span><img src="${destinyDeck.img}"></span></span>
-        <h4 class="card-name">${game.i18n.localize('torgeternity.chatText.drawsCard')} ${destinyDeck.name}.</h4></div>`
-      });
-    }
-    return this.document.draw(destinyDeck, 1, { face: 1, ...game.torgeternity.cardChatOptions });
+    return this.document.drawDestiny();
   }
   /**
  *
@@ -337,22 +326,7 @@ export default class torgeternityPlayerHand extends foundry.applications.sheets.
         callback: (event, button, dialog) => {
           const form = dialog.element.querySelector('form');
           const fd = new foundry.applications.ux.FormDataExtended(form).object;
-          const cosmDeck = game.cards.get(fd.from);
-          if (cosmDeck.cards.size) {
-            const [firstCardKey] = cosmDeck.cards.keys(); // need to grab a card to get toMessage access
-            const card = cosmDeck.cards.get(firstCardKey);
-            card.toMessage({
-              content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${cosmDeck.img
-                }"/><span><img src="${cosmDeck.img
-                }"></span></span><h4 class="card-name">${game.i18n.localize(
-                  'torgeternity.chatText.drawsCard'
-                )} ${cosmDeck.name}.</h4></div>`,
-            });
-          }
-          return this.document.draw(cosmDeck, 1, { face: 1, ...game.torgeternity.cardChatOptions }).catch((err) => {
-            ui.notifications.error(err.message);
-            return this;
-          });
+          this.document.drawCosm(fd.from);
         },
       },
     });
