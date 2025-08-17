@@ -489,9 +489,10 @@ export async function renderSkillChat(test) {
       if (!target.dummyTarget) {
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor) {
+          let extraarmor = getExtraProtection(test.attackTraits, target.defenseTraits, 'Armor', 0);
           test.targetAdjustedToughness =
             target.toughness -
-            Math.min(test.weaponAP, target.armor) +
+            Math.min(test.weaponAP, target.armor + extraarmor) +
             test.coverModifier;
           // Ignore armor and cover
         } else {
@@ -571,6 +572,7 @@ export async function renderSkillChat(test) {
     test.typeLabel += ' ';
 
     // Hide the UP button if the current drama card doesn't show UP on the condition line.
+    // TODO: Vengeful Perk should allow UP to appear in Chat Card.
     if (game.settings.get('torgeternity', 'dramaCardUp')) {
       const combat = game.combat;
       // get disposition from prototype Token if there's no real token.
@@ -808,13 +810,14 @@ function individualDN(test, target) {
   if (test.DNDescriptor.startsWith('target')) {
     let onTarget = test.DNDescriptor.slice(6);
     onTarget = onTarget.at(0).toLowerCase() + onTarget.slice(1);
+    let traitdefense = getExtraProtection(test.attackTraits, target.defenseTraits, 'Defense', 0);
     if (Object.hasOwn(target.attributes, onTarget))
-      return target.attributes[onTarget].value;
+      return target.attributes[onTarget].value + traitdefense;
     if (Object.hasOwn(target.defenses, onTarget))
-      return target.defenses[onTarget];
+      return target.defenses[onTarget] + traitdefense;
     if (Object.hasOwn(target.skills, onTarget)) {
       const skill = target.skills[onTarget];
-      return (skill.value && skill.value !== '-') ? skill.value : target.attributes[skill.baseAttribute].value;
+      return ((skill.value && skill.value !== '-') ? skill.value : target.attributes[skill.baseAttribute].value) + traitdefense;
     }
   }
 
@@ -1048,4 +1051,26 @@ function isApprovedAction(test) {
     }
   }
   return false;
+}
+/**
+ * For each '*Damage' trait in 'attackTraits' look for a corresponding "*${protection}" in defenseTraits.
+ * If found, then return the numeric value for that defensive trait.
+ * @param {*} attackerTraits The attack traits of the attacker
+ * @param {*} targetTraits The defensive traits of the target
+ * @param {*} protection The type of trait to look for on the target (e.g. 'Armor' , 'Defense')
+ * @param {Number} defaultValue The value returned if no matching targetTrait for any attackerTrait
+ * @returns {Number} The numeric value of the corresponding targetTrait, or 'defaultValue'
+ */
+function getExtraProtection(attackerTraits, targetTraits, protection, defaultValue) {
+  for (const atktrait of attackerTraits) {
+    if (atktrait.endsWith('Damage')) {
+      for (const deftrait of targetTraits) {
+        if (deftrait.endsWith(protection) && deftrait.slice(0, -protection.length) === atktrait.slice(0, -6)) {
+          // TODO - where do we get the actual number from?
+          console.log(`Apply TRAIT-specific ${protection}`);
+        }
+      }
+    }
+  }
+  return defaultValue;
 }
