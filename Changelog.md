@@ -2,15 +2,19 @@
 
 ## NEXT VERSION
 
-- If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
+- #63: If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
 - Add button on successful Approved Action to draw a destiny card for the relevant actor/target.
 - Click on Image in Chat Message to open the Actor's sheet.
 - Several language file updates provided by @Durak-Git
+- #569: Hold SHIFT while clicking on the POSSIBILITY button to remove the "minimum 10" on the roll.
 
 ### Translations
 
-- 'torgeternity.chatText.possibleGlory'
-- 'torgeternity.chatText.check.drawDestiny'
+- torgeternity.chatText.possibleGlory
+- torgeternity.chatText.check.drawDestiny
+- torgeternity.chatText.possibilityTooltip
+- torgeternity.sheetLabels.noMin10
+
 
 ## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
 

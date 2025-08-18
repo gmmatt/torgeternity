@@ -76,6 +76,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onPossibility(event, button) {
     event.preventDefault();
+    const noMin10 = event.shiftKey;
     const { chatMessageId, chatMessage, test } = getMessage(button);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
@@ -155,7 +156,9 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       test.possibilityTotal = 0.1;
       test.disfavored = false;
       test.chatNote += game.i18n.localize('torgeternity.sheetLabels.explosionCancelled');
-    } else {
+    } else if (!noMin10) {
+      // Standardly, a possibility has a minimum of 10 on the dice.
+      // Certain circumstances break that rule, so holding SHIFT will not apply min 10.
       test.possibilityTotal = Math.max(10, diceroll.total, test.possibilityTotal);
     }
     test.diceroll = diceroll;
@@ -163,6 +166,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.unskilledLabel = 'hidden';
     // add chat note "poss spent"
     test.chatNote += game.i18n.localize('torgeternity.sheetLabels.possSpent');
+    if (noMin10) test.chatNote += game.i18n.localize('torgeternity.sheetLabels.noMin10');
 
     this.parentDeleteByTime(chatMessage);
     await renderSkillChat(test);
