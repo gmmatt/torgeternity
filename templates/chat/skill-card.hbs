@@ -1,6 +1,7 @@
 <div class="skill-card sheet-card" data-type="{{data.type}}">
   <div class="torgeternity-message-header">
-    <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" data-tooltip="{{actorName}}" />
+    <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" data-tooltip="{{actorName}}"
+      data-action="openSheet" data-actor="{{actor}}" />
 
     <div class="message-header torgeternity-skill-description">
       {{#if unskilledTest}}
@@ -13,7 +14,7 @@
 
     {{#if target}}
       <img class="message-header torgeternity-target-icon" src="{{target.targetPic}}"
-        data-tooltip="{{target.targetName}}" />
+        data-tooltip="{{target.targetName}}" data-action="openSheet" data-actor="{{target.id}}" />
     {{/if}}
   </div>
   <div class="chat-text" style="padding:0px">

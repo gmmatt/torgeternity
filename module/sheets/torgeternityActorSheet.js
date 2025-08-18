@@ -551,6 +551,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
           './systems/torgeternity/templates/chat/skill-error-card.hbs',
           {
             message: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
+            actor: this.actor.uuid,
             actorPic: this.actor.img,
             actorName: this.actor.name,
           }
@@ -1002,6 +1003,7 @@ export function checkUnskilled(skillValue, skillName, actor) {
     './systems/torgeternity/templates/chat/skill-error-card.hbs',
     {
       message: game.i18n.localize('torgeternity.skills.' + skillName) + ' ' + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
+      actor: actor.uuid,
       actorPic: actor.img,
       actorName: actor.name,
     }).then(content =>

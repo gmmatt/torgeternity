@@ -11,6 +11,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static DEFAULT_OPTIONS = {
     actions: {
+      'openSheet': TorgeternityChatLog.#openSheet,
       'rollFav': TorgeternityChatLog.#onFavored,
       'rollPossibility': TorgeternityChatLog.#onPossibility,
       'rollUp': TorgeternityChatLog.#onUp,
@@ -539,6 +540,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     let hand = actor.getDefaultHand();
     if (!hand) return;  // maybe warning message
     return hand.drawDestiny();
+  }
+
+  static async #openSheet(event, button) {
+    console.log({ event, button });
+    let id = button.dataset.actor;
+    if (id.startsWith('Actor.')) id = id.slice(6);
+    let actor = game.actors.get(id);
+    if (!actor) return;  // maybe warning message
+    if (!actor.isOwner) return;  // not an owner of the actor receiving the card
+    actor.sheet.render({ force: true });
   }
 }
 

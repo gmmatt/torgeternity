@@ -4,6 +4,7 @@
 
 - If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
 - Add button on successful Approved Action to draw a destiny card for the relevant actor/target.
+- Click on Image in Chat Message to open the Actor's sheet.
 
 ### Translations
 
