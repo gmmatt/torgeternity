@@ -54,9 +54,19 @@
           data-actor="{{actor}}">{{localize 'torgeternity.chatText.check.drawDestiny'}}</a>
       </p>
     {{/if}}
-    <p class="skill-roll-damage-label {{damageLabel}}">
-      {{damageDescription}}
-    </p>
+    {{#if damageDescription}}
+      <p class="skill-roll-damage-label">
+        {{damageDescription}}
+      </p>
+    {{/if}}
+    {{#if isDefeatTest}}
+      <p class="skill-roll-defeat defeat-main">
+        <a class="defeat" data-action="applyDefeat"
+          data-result="{{result}}">{{{defeatMain}}}</a>
+      </p>
+      <p class="skill-roll-defeat defeat-sub">{{{defeatSub}}}</p>
+      </p>
+    {{/if}}
     <p class="applyButtons">
       <a class="button roll-button {{applyDamLabel}}" data-action="applyDam"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
@@ -90,12 +100,18 @@
         <p class="skill-roll-action-label">{{localize 'torgeternity.chatText.check.result.diceTotal'}}
           {{combinedRollTotal}}
         </p>
-        <p class="skill-roll-action-label {{actionTotalLabel}}">{{actionTotalContent}}</p>
+        {{#if actionTotalContent}}
+          <p class="skill-roll-action-label">{{actionTotalContent}}</p>
+        {{/if}}
       </summary>
-      <p class="skill-roll-action-label {{damageSubLabel}}">{{damageSubDescription}}</p>
-      <p class="skill-roll-action-label {{bdDamageLabelStyle}}" ">
-        {{localize 'torgeternity.chatText.check.result.BDDamageSum'}}: {{bdDamageSum}}
+      {{#if damageSubDescription}}
+        <p class="skill-roll-action-label">{{damageSubDescription}}</p>
+      {{/if}}
+      {{#if bdDamageSum}}
+        <p class="skill-roll-action-label">{{localize 'torgeternity.chatText.check.result.BDDamageSum'}}:
+          {{~bdDamageSum~}}
         </p>
+      {{/if}}
       <table class=" skill-roll-table">
         <tr>
           <td>{{typeLabel}}:</td>
@@ -146,8 +162,8 @@
         </tr>
 
 
-        </table>
-        <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
+      </table>
+      <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
       <div class="message-content">
         <div class="dice-roll-torg">
           <div class="dice-result">

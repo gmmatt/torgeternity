@@ -698,7 +698,6 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
     stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
-    bdDamageLabelStyle: 'hidden',
     bdDamageSum: 0,
   };
 

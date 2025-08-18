@@ -176,7 +176,6 @@ function _onClickInlineCheck(event) {
   // Add Actor information
   foundry.utils.mergeObject(test, {
     actor: actor,
-    bdDamageLabelStyle: 'hidden',
     bdDamageSum: 0,
   }, { inplace: true })
 

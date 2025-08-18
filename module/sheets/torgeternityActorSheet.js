@@ -577,8 +577,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         button.dataset.isfav,
       skillName: (button.dataset.testtype === 'attribute') ? attributeName : skillName,
       skillValue: skillValue,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
     }, { useTargets: true });
 
     if (!reconnection_attempt) return dialog;
@@ -616,8 +614,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       DNDescriptor: 'highestSpeed',
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
     }, { useTargets: true });
   }
 
@@ -633,8 +629,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillValue: Number(button.dataset.skillValue),
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
     }, { useTargets: true });
   }
 
@@ -654,8 +648,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       DNDescriptor: dnDescriptor,
       vehicleSpeed: button.dataset.speed,
       maneuverModifier: button.dataset.maneuver,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
     }, { useTargets: true });
   }
 
@@ -696,8 +688,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       unskilledUse: true,
       DNDescriptor: dnDescriptor,
       type: 'interactionAttack',
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
     }, { useTargets: true });
   }
 
@@ -742,8 +732,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       type: 'attack',
       applySize: true,
       attackOptions: true,
-      bdDamageLabelStyle: 'dishiddene',
-      bdDamageSum: 0,
       amountBD: 0,
     }, { useTargets: true });
   }
@@ -774,8 +762,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       skillValue: null,
       unskilledUse: true,
       type: 'activeDefense',
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
     }, { useTargets: true });
   }
 

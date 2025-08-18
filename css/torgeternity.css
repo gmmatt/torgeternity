@@ -3084,6 +3084,29 @@ div.readme a.compendium {
     margin: 0.5em 0 0 0;
   }
 
+  .skill-roll-defeat {
+    font-family: "Palatino Linotype";
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+    font-size: 18px;
+
+    a.defeat {
+      font-family: "Palatino Linotype";
+      text-shadow: 0 0 5px darkorange;
+
+      &:hover {
+        text-shadow: 0 0 10px #3bb3b3;
+      }
+    }
+
+    &.defeat-sub {
+      font-style: italic;
+      font-size: smaller;
+    }
+  }
+
   .contradiction-roll {
     font-family: "Palatino Linotype";
 

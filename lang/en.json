@@ -245,10 +245,30 @@
     },
     "defeat": {
       "prompt": "{name} must make a Defeat Test",
-      "outstanding": "<p><strong>{name} is Knocked Out</strong></p>",
-      "good": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer an Injury that lasts until all Wounds are healed</p>",
-      "standard": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer a permanent Injury</p>",
-      "failure": "<p><strong>{name} dies!</strong></p><p>They get one final, dramatic action before expiring (ignoring wound penalties)</p>"
+      "chooseAttribute": "Choose an Attribute",
+      "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
+      "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
+      "outstanding-success": {
+        "main": "Knocked Out",
+        "sub": ""
+      },
+      "good-success": {
+        "main": "Temporary Injury",
+        "sub": "You suffer an Injury that lasts until all Wounds are healed",
+        "effectName": "Temp. Injury"
+      },
+      "standard-success": {
+        "main": "Permanent Injury",
+        "sub": "You suffer a permanent Injury"
+      },
+      "failure": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+      },
+      "mishap": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+      }
     },
     "dialogPrompts": {
       "cardPooled": "In Pool?",

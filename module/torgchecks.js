@@ -47,7 +47,6 @@ export async function renderSkillChat(test) {
   test.applyDamLabel = 'hidden';
   test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
-  test.bdDamageLabelStyle = test.bdDamageSum ? '' : 'hidden';
   let iteratedRoll;
 
   const testActor = fromUuidSync(test.actor);
@@ -403,7 +402,7 @@ export async function renderSkillChat(test) {
       // Roll 1 and not defense = Mishap
       test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
-      if (test?.attackTraits.includes('fragile')) {
+      if (test?.attackTraits?.includes('fragile')) {
         test.fragileText = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.itemName });
       }
       test.outcomeColor = 'color: purple';
@@ -412,7 +411,6 @@ export async function renderSkillChat(test) {
         test.outcomeColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
         test.resultTextColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
-      test.actionTotalLabel = 'hidden';
       test.possibilityStyle = 'hidden';
       test.upStyle = 'hidden';
       test.dramaStyle = 'hidden';
@@ -459,7 +457,6 @@ export async function renderSkillChat(test) {
         await testActor.setActiveDefense(test.bonus);
         test.testType = 'activeDefenseUpdate';
         test.resultText = '+ ' + test.bonus;
-        test.actionTotalLabel = 'hidden';
       }
 
     } else if (test.testType === 'activeDefenseUpdate') {
@@ -520,7 +517,6 @@ export async function renderSkillChat(test) {
 
             test.chatTitle += ` + ${test.amountBD} ${game.i18n.localize('torgeternity.chatText.bonusDice')}`;
 
-            test.bdDamageLabelStyle = '';
             test.bdDamageSum += test.BDDamageInPromise;
 
             test.damage += test.BDDamageInPromise;
@@ -538,12 +534,16 @@ export async function renderSkillChat(test) {
         }
       } else {
         // Basic roll
-        test.damageSubLabel = 'hidden';
         test.damageDescription = `${adjustedDamage} ${game.i18n.localize('torgeternity.chatText.check.result.damage')}`;
       }
-    } else {
-      test.damageLabel = 'hidden';
-      test.damageSubLabel = 'hidden';
+    } else if (test.isDefeatTest) {
+      if (test.result === TestResult.STANDARD)
+        test.defeatInjury = 'permanent'
+      else if (test.result === TestResult.GOOD)
+        test.defeatInjury = 'temporary';
+
+      test.defeatMain = game.i18n.localize(`torgeternity.defeat.${test.resultText.slugify()}.main`);
+      test.defeatSub = game.i18n.localize(`torgeternity.defeat.${test.resultText.slugify()}.sub`);
     }
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
@@ -605,7 +605,6 @@ export async function renderSkillChat(test) {
     test.notesLabel = test.chatNote ? '' : 'hidden';
 
     if (test.testType === 'interactionAttack' && test.rollResult >= test.DN) {
-      test.damageSubLabel = '';
       test.applyDamLabel = 'hidden';
       if (!target.dummyTarget) {
         test.applyStymiedLabel = '';
@@ -984,7 +983,6 @@ export async function rollAttack(actor, item) {
     applySize: true,
     attackOptions: true,
     chatNote: weaponData.chatNote,
-    bdDamageLabelStyle: 'hidden',
     bdDamageSum: 0,
     itemId: item.id,
   }, { useTargets: true });
@@ -1018,7 +1016,6 @@ export async function rollPower(actor, item) {
     DNDescriptor: powerData.dn,
     applySize: powerData.applySize,
     attackOptions: true,
-    bdDamageLabelStyle: 'dihiddene',
     amountBD: 0,
     bdDamageSum: 0,
     itemId: item.id,

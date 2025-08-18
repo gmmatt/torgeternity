@@ -29,6 +29,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'backlash2': TorgeternityChatLog.#applyBacklash2,
       'backlash3': TorgeternityChatLog.#applyBacklash3,
       'testDefeat': TorgeternityChatLog.#testDefeat,
+      'applyDefeat': TorgeternityChatLog.#applyDefeat,
       'drawDestiny': TorgeternityChatLog.#drawDestiny,
     }
   }
@@ -296,7 +297,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     chatMessage.unsetFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
     test.unskilledLabel = 'hidden';
-    test.bdDamageLabelStyle = '';
 
     const finalValue = await rollBonusDie(test.trademark, 1);
 
@@ -484,55 +484,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const attribute = button.dataset.control;
     const actor = game.actors.get(chatMessage.speaker.actor);
 
-    const response = await TestDialog.wait({
+    return TestDialog.wait({
       DNDescriptor: 'standard',
       actor: actor,
       testType: 'attribute',
       skillName: attribute,
       skillValue: actor.system.attributes[attribute].value,
-      bdDamageLabelStyle: 'hidden',
-      bdDamageSum: 0,
+      isDefeatTest: true,
     });
-    if (!response) return;
 
-    const result = response.flags.torgeternity.test.result;
-
-    let message;
-
-    if (result < TestResult.STANDARD) {
-      message = 'torgeternity.defeat.failure';
-      actor.toggleStatusEffect('dead', { active: true, overlay: true });
-    } else {
-
-      await actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
-
-      switch (result) {
-        case TestResult.OUTSTANDING:
-          message = 'torgeternity.defeat.outstanding';
-          break;
-
-        case TestResult.GOOD:
-          // Suffers an **Injury** lasting until all his Wounds are healed
-          message = 'torgeternity.defeat.good';
-          break;
-
-        case TestResult.STANDARD:
-          // Permanent **Injury**
-          message = 'torgeternity.defeat.standard';
-          break;
-      }
-    }
-
-    const formattedMessage = game.i18n.format(message, { name: actor.name });
-
-    ui.notifications.info(formattedMessage, { escape: false, clean: false });
-
-    ChatMessage.create({
-      user: game.user.id,
-      speaker: ChatMessage.getSpeaker(),
-      owner: actor,
-      content: formattedMessage
-    })
+    // Wait for manual addition of results, when applyDefeat is invoked.
   }
 
   static async #drawDestiny(event, button) {
@@ -554,6 +515,77 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!actor) return;  // maybe warning message
     if (!actor.isOwner) return;  // not an owner of the actor receiving the card
     actor.sheet.render({ force: true });
+  }
+
+  static async #applyDefeat(event, button) {
+    const { actor } = getChatActor(button);
+    if (!actor) return console.error(`applyDefeat: failed to find actor`)
+    const result = parseInt(button.dataset.result);
+    console.log(`applyDefeat`, result)
+
+    if (result < TestResult.STANDARD) {
+      actor.toggleStatusEffect('dead', { active: true, overlay: true });
+      return;
+    }
+
+    if (result === TestResult.OUTSTANDING) {
+      await actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
+      return;
+    }
+
+    const selection = await foundry.applications.api.DialogV2.prompt({
+      window: {
+        title: game.i18n.localize('torgeternity.defeat.chooseAttribute')
+      },
+      content: foundry.applications.fields.createSelectInput({
+        options: Object.entries(CONFIG.torgeternity.attributeTypes).map(attr => { return { value: attr[0], label: attr[1] } }),
+        localize: true,
+        name: 'attrName'
+      }).outerHTML,
+      ok: {
+        label: "Confirm Choice",
+        callback: (event, button, dialog) => button.form.elements.attrName.value
+      }
+    });
+
+    if (selection) {
+      const localAttr = game.i18n.localize(CONFIG.torgeternity.attributeTypes[selection]);
+
+      await actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
+      const attrfield = `system.attributes.${selection}.value`;
+      if (result === TestResult.STANDARD) {
+        ChatMessage.create({
+          user: game.user.id,
+          speaker: ChatMessage.getSpeaker({ actor }),
+          owner: actor,
+          content: game.i18n.format('torgeternity.defeat.permInjury', { attribute: localAttr })
+        })
+        // Permanent: Reduce attribute directly
+        return actor.update({
+          [`system.attributes.${selection}.base`]: Math.max(1, actor.system.attributes[selection].base - 1)
+        })
+
+      } else {
+        // Temporary: Add AE to reduce until cleared
+        ChatMessage.create({
+          user: game.user.id,
+          speaker: ChatMessage.getSpeaker({ actor }),
+          owner: actor,
+          content: game.i18n.format('torgeternity.defeat.tempInjury', { attribute: localAttr })
+        })
+        return actor?.createEmbeddedDocuments('ActiveEffect', [{
+          name: `${game.i18n.localize('torgeternity.defeat.good-success.effectName')} (${localAttr})`,
+          icon: 'icons/svg/downgrade.svg',
+          changes: [
+            {
+              key: `system.attributes.${selection}.value`,
+              value: -1,
+              mode: CONST.ACTIVE_EFFECT_MODES.ADD,
+            }
+          ],
+        }]);
+      }
+    }
   }
 }
 

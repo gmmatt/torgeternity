@@ -7,6 +7,7 @@
 - Click on Image in Chat Message to open the Actor's sheet.
 - Several language file updates provided by @Durak-Git
 - #569: Hold SHIFT while clicking on the POSSIBILITY button to remove the "minimum 10" on the roll.
+- Update **Defeat** handling to display a button to apply the relevant effects, prompting for an attribute to modify if relevant.
 
 ### Translations
 
@@ -14,6 +15,7 @@
 - torgeternity.chatText.check.drawDestiny
 - torgeternity.chatText.possibilityTooltip
 - torgeternity.sheetLabels.noMin10
+- torgeternity.defeat... (all of them)
 
 
 ## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
