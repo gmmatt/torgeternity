@@ -7,7 +7,7 @@
 - Click on Image in Chat Message to open the Actor's sheet.
 - Several language file updates provided by @Durak-Git
 - #569: Hold SHIFT while clicking on the POSSIBILITY button to remove the "minimum 10" on the roll.
-- Update **Defeat** handling to display a button to apply the relevant effects, prompting for an attribute to modify if relevant.
+- #466: Update **Defeat** handling to display a button to apply the relevant effects, which will prompt for an attribute to modify if relevant.
 
 ### Translations
 
