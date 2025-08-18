@@ -8,6 +8,7 @@
 - Several language file updates provided by @Durak-Git
 - #569: Hold SHIFT while clicking on the POSSIBILITY button to remove the "minimum 10" on the roll.
 - #466: Update **Defeat** handling to display a button to apply the relevant effects, which will prompt for an attribute to modify if relevant.
+- Ensure use of Intimidation skill is detected as an Approved Action for Intimidate.
 
 ### Translations
 

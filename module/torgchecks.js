@@ -1029,6 +1029,10 @@ function isApprovedAction(test) {
       case 'any':
         return true;
       case 'intimidate':
+        // Drama Card: intimidate
+        // Skill: intimidation
+        if (test.testType === 'interactionAttack' && test.skillName === 'intimidation') return true;
+        break;
       case 'maneuver':
       case 'taunt':
       case 'trick':
@@ -1061,6 +1065,7 @@ function isApprovedAction(test) {
  * @returns {Number} The numeric value of the corresponding targetTrait, or 'defaultValue'
  */
 function getExtraProtection(attackerTraits, targetTraits, protection, defaultValue) {
+  if (!attackerTraits || !targetTraits) return defaultValue;
   for (const atktrait of attackerTraits) {
     if (atktrait.endsWith('Damage')) {
       for (const deftrait of targetTraits) {
