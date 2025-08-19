@@ -2959,7 +2959,7 @@ div.readme a.compendium {
     display: flex;
     flex-direction: row;
     border: none;
-    background: transparent;
+    background: rgba(0, 0, 0, 5%);
 
     img {
       border: none;
@@ -2971,9 +2971,24 @@ div.readme a.compendium {
       width: 100%;
       flex: 1;
 
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      .skill-chat-title {
+        font-size: 20px;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .skill-unskilled-label {
+        font-size: 12px;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        font-family: "Palatino Linotype";
+        width: 100%;
+      }
     }
   }
 
@@ -2990,23 +3005,6 @@ div.readme a.compendium {
   .chat-title {
     font-size: 18px;
     display: flex;
-  }
-
-  .skill-chat-title {
-    font-size: 20px;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-  }
-
-  .skill-unskilled-label {
-    font-size: 12px;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-    font-family: "Palatino Linotype";
-    /*width: 100%;*/
-    grid-row: 2/2;
   }
 
   .skill-roll-disconnect-label {
@@ -3164,17 +3162,6 @@ div.readme a.compendium {
       content: attr(data-close);
     }
   }
-}
-
-p.skill-chat-title.unskilled {
-  grid-row: 1/1;
-}
-
-p.skill-chat-title.skilled {
-  justify-content: center;
-  align-items: center;
-  grid-row: span 2;
-  display: grid;
 }
 
 .dice-tooltip .dice-rolls {

@@ -1,9 +1,9 @@
 <div class="skill-card sheet-card" data-type="{{data.type}}">
-  <div class="torgeternity-message-header">
+  <div class="torgeternity-message-header flexrow">
     <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" data-tooltip="{{actorName}}"
       data-action="openSheet" data-actor="{{actor}}" />
 
-    <div class="message-header torgeternity-skill-description">
+    <div class="message-header torgeternity-skill-description flexcol">
       {{#if unskilledTest}}
         <p class="skill-chat-title unskilled">{{chatTitle}}</p>
         <p class="skill-unskilled-label {{unskilledLabel}}">{{localize 'torgeternity.chatText.unskilled'}}</p>
