@@ -163,18 +163,18 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   background-size: cover;
 }
 
-.item.sheet.torgeternity .tab {
+.sheet.item.torgeternity .tab {
   font-family: Palatino;
   height: 100%;
 }
 
-.item.sheet.torgeternity .window-content header.sheet-header {
+.sheet.item.torgeternity .window-content header.sheet-header {
   margin-right: 12px;
 }
 
 /* Actor/Item/Journal sheet */
-.actor.sheet.torgeternity .window-content,
-.item.sheet.torgeternity .window-content {
+.sheet.actor.torgeternity .window-content,
+.sheet.item.torgeternity .window-content {
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   padding: 8px 0px 8px 8px;
