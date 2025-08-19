@@ -40,7 +40,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         kph: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
       }),
       toughness: new fields.NumberField({ initial: 5, integer: true, nullable: false }),
-      type: new fields.StringField({ initial: 'land' }),
+      type: new fields.StringField({ initial: 'land', textSearch: true }),
       wounds: new fields.SchemaField({
         value: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
         max: new fields.NumberField({ initial: 3, integer: true, nullable: false }),

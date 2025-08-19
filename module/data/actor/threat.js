@@ -25,6 +25,7 @@ export class ThreatData extends CommonActorData {
           initial: 'alpha',
           choices: Object.keys(torgeternity.clearances),
           required: false,
+          textSearch: true
         }),
         possibilityPotential: new fields.StringField({
           initial: 'Never',
