@@ -1023,6 +1023,8 @@ export async function rollPower(actor, item) {
 }
 
 function isApprovedAction(test) {
+  if (!game.combat?.approvedActions) return false;
+
   // maneuver, trick, taunt, intimidate, any, attack, defend, "any multi-action"
   for (const action of game.combat.approvedActions) {
     switch (action) {

@@ -12,6 +12,10 @@
 - #416: Allow **Compendium Search** of Items to filter based on cosm, traits, secondaryAxiom, category (incl. Implant Type).
 - (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/1330 - a one-line patch in foundry.js could get it working)
 
+### Bug Fixes
+
+- An error related to `approvedActions` would sometimes occur when rolling skill checks outside of combat.
+
 ### Translations
 
 - torgeternity.chatText.possibleGlory
