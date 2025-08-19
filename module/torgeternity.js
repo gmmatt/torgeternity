@@ -75,6 +75,14 @@ Hooks.once('init', async function () {
   CONFIG.Token.objectClass = TorgEternityToken;
   CONFIG.Scene.documentClass = TorgeternityScene;
 
+  // Indexable Compendiums
+  //CONFIG.Actor.compendiumIndexFields.push('system.traits');
+  CONFIG.Item.compendiumIndexFields.push(
+    'system.traits', 'system.axioms', 'system.cosm', // BaseItemData
+    'secondaryAxiom', // GeneralItemData
+    'system.category' // Perks
+  );
+
   // --------combats
   CONFIG.Combat.initiative.formula = '1';
   CONFIG.Combat.documentClass = torgeternityCombat;
