@@ -9,8 +9,8 @@
 - #569: Hold SHIFT while clicking on the POSSIBILITY button to remove the "minimum 10" on the roll.
 - #466: Update **Defeat** handling to display a button to apply the relevant effects, which will prompt for an attribute to modify if relevant.
 - Ensure use of Intimidation skill is detected as an Approved Action for Intimidate.
-- Allow **Compendium Search** of Items to filter based on cosm, traits, axioms, secondaryAxiom, category (incl. Implant Type).
-- (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/1330 - a one-word patch in foundry.js could get it working)
+- #416: Allow **Compendium Search** of Items to filter based on cosm, traits, secondaryAxiom, category (incl. Implant Type).
+- (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/1330 - a one-line patch in foundry.js could get it working)
 
 ### Translations
 
