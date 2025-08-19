@@ -157,8 +157,6 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
     context.test.stymiedModifier = myActor.statusModifiers.stymied;
     context.test.darknessModifier = myActor.statusModifiers.darkness;
-    context.test.sizeModifier = 0;
-    context.test.vulnerableModifier = 0;
 
     // Set Modifiers for Vehicles
     if (this.test.testType === 'chase') {
@@ -190,10 +188,12 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
     if (context.test.targetPresent && context.test.testType !== 'soak') {
       context.test.targetAll = targets.map(token => oneTestTarget(token, this.test.applySize));
-      context.test.sizeModifier = context.test.targetAll[0].sizeModifier;
-      context.test.vulnerableModifier = context.test.targetAll[0].vulnerableModifier;
+      context.test.sizeModifier = Math.max(...context.test.targetAll.map(target => target.sizeModifier));
+      context.test.vulnerableModifier = Math.max(...context.test.targetAll.map(target => target.vulnerableModifier));
     } else {
       context.test.targetAll = [];
+      context.test.sizeModifier = 0;
+      context.test.vulnerableModifier = 0;
     }
 
     context.test.hasModifiers =
