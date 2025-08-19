@@ -357,7 +357,10 @@ export function TestDialogLabel(test) {
 
   switch (test.testType) {
     case 'attribute':
-      result = `${game.i18n.localize('torgeternity.attributes.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.test')} `;
+      if (test.isDefeatTest)
+        result = game.i18n.format('torgeternity.defeat.chatTitle', { attribute: game.i18n.localize('torgeternity.attributes.' + test.skillName) });
+      else
+        result = `${game.i18n.localize('torgeternity.attributes.' + test.skillName)} ${game.i18n.localize('torgeternity.chatText.test')} `;
       break;
     case 'skill':
       result = test.customSkill ? `${test.skillName} ` :

@@ -2956,27 +2956,25 @@ div.readme a.compendium {
   }
 
   .torgeternity-message-header {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr;
+    display: flex;
+    flex-direction: row;
     border: none;
     background: transparent;
 
     img {
       border: none;
+      flex: 0;
+      max-width: 20%;
     }
-  }
 
-  .message-header .flavor-text {
-    font-size: unset;
-  }
+    .torgeternity-skill-description {
+      width: 100%;
+      flex: 1;
 
-  .message-header .torgeternity-actor-icon {
-    max-width: 50px;
-    grid-column: 1 / 1;
-    grid-row: 1 / 2;
-    aspect-ratio: 1/1;
-    border: none;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   table td {
@@ -3166,24 +3164,6 @@ div.readme a.compendium {
       content: attr(data-close);
     }
   }
-}
-
-.torgeternity-skill-description {
-  width: 100%;
-  /*grid-column: 2 / 4;*/
-  /*grid-row: 1 / 2;*/
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: grid;
-}
-
-.message-header .torgeternity-target-icon {
-  max-width: 50px;
-  grid-column: 5 / 5;
-  grid-row: 1 / 2;
-  aspect-ratio: 1/1;
-  border: none;
 }
 
 p.skill-chat-title.unskilled {
