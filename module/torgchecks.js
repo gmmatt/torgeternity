@@ -812,6 +812,8 @@ function individualDN(test, target) {
     let onTarget = test.DNDescriptor.slice(6);
     onTarget = onTarget.at(0).toLowerCase() + onTarget.slice(1);
     let traitdefense = getExtraProtection(test.attackTraits, target.defenseTraits, 'Defense', 0);
+    if (onTarget === 'vehicleDefense')
+      return target.defenses?.vehicle ?? 0;
     if (Object.hasOwn(target.attributes, onTarget))
       return target.attributes[onTarget].value + traitdefense;
     if (Object.hasOwn(target.defenses, onTarget))
