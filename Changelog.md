@@ -17,6 +17,7 @@
 
 - An error related to `approvedActions` would sometimes occur when rolling skill checks outside of combat.
 - Attacks against Vehicles should work once again.
+- Attacks by threats outside of combat works once again.
 
 ### Translations
 
