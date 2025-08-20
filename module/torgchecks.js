@@ -542,8 +542,8 @@ export async function renderSkillChat(test) {
       else if (test.result === TestResult.GOOD)
         test.defeatInjury = 'temporary';
 
-      test.defeatMain = game.i18n.localize(`torgeternity.defeat.${test.resultText.slugify()}.main`);
-      test.defeatSub = game.i18n.localize(`torgeternity.defeat.${test.resultText.slugify()}.sub`);
+      test.defeatMain = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.main`, { name: testActor.name });
+      test.defeatSub = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.sub`, { name: testActor.name });
     }
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
