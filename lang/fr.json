@@ -146,6 +146,7 @@
       "passesCard1": "Passe",
       "passesCard2": "à",
       "playsCard": "Jouer",
+      "possibleGlory": "!!! POSSIBLE GLORY !!!",
       "possibility": "Possibilité",
       "possibilityTooltip": "Hold SHIFT to roll Possibility without a minimum of 10",
       "possibleDisconnect": "Déconnexion possible",
@@ -242,11 +243,32 @@
       "strengthPlus": "Force +"
     },
     "defeat": {
-      "prompt": "{name} doit faire un test de Défaite",
-      "outstanding": "<p><strong>{name} est KO</strong></p>",
-      "good": "<p><strong>{name} est KO</strong></p><p>Il subit une Blessure qui dure jusqu'aux soins complets</p>",
-      "standard": "<p><strong>{name} et KO</strong></p><p>Il subit une Blessure permanente</p>",
-      "failure": "<p><strong>{name} trépasse!</strong></p><p>Il peut agir héroïquement une dernière fois (en ignorant la pénalité de blessures) avant d'expirer</p>"
+      "prompt": "{name} must make a Defeat Test",
+      "chatTitle": "Defeat Test ({attribute})",
+      "chooseAttribute": "Choose an Attribute",
+      "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
+      "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
+      "outstanding-success": {
+        "main": "Knocked Out",
+        "sub": ""
+      },
+      "good-success": {
+        "main": "Temporary Injury",
+        "sub": "You suffer an Injury that lasts until all Wounds are healed",
+        "effectName": "Temp. Injury"
+      },
+      "standard-success": {
+        "main": "Permanent Injury",
+        "sub": "You suffer a permanent Injury"
+      },
+      "failure": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+      },
+      "mishap": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+      }
     },
     "dialogPrompts": {
       "cardPooled": "Réserve d'action",
