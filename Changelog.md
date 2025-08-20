@@ -22,7 +22,6 @@
 ### Translations
 
 - torgeternity.chatText.possibleGlory
-- torgeternity.chatText.check.drawDestiny
 - torgeternity.chatText.possibilityTooltip
 - torgeternity.sheetLabels.noMin10
 - torgeternity.defeat... (all of them)
