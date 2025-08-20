@@ -44,14 +44,14 @@
       <p class="skill-roll-approved-action">
         {{localize 'torgeternity.chatText.check.isApprovedDefend' name=target.targetName}}
         <a class="button roll-button drawDestiny" data-action="drawDestiny"
-          data-actor="{{target.id}}">{{localize 'torgeternity.chatText.check.drawDestiny'}}</a>
+          data-actor="{{target.id}}">{{localize 'torgeternity.dialogPrompts.drawDestiny'}}</a>
       </p>
     {{/if}}
     {{#if successfulApprovedAction}}
       {{log actor}}
       <p class="skill-roll-approved-action">{{localize 'torgeternity.chatText.check.isApprovedAction'}}
         <a class="button roll-button drawDestiny" data-action="drawDestiny"
-          data-actor="{{actor}}">{{localize 'torgeternity.chatText.check.drawDestiny'}}</a>
+          data-actor="{{actor}}">{{localize 'torgeternity.dialogPrompts.drawDestiny'}}</a>
       </p>
     {{/if}}
     {{#if damageDescription}}
