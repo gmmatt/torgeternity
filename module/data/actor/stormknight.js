@@ -18,7 +18,7 @@ export class StormKnightData extends CommonActorData {
       axioms: makeAxiomsField(),
       details: new fields.SchemaField({
         background: new fields.HTMLField({ initial: '', textSearch: true }),
-        race: new fields.StringField({ initial: undefined }),
+        race: new fields.StringField({ initial: undefined, textSearch: true }),
         sizeBonus: new fields.StringField({
           initial: 'normal',
           choices: Object.keys(torgeternity.sizes),

@@ -146,7 +146,9 @@
       "passesCard1": "Gibt",
       "passesCard2": "an",
       "playsCard": "Spielt aus:",
+      "possibleGlory": "!!! MÖGLICHES RUHMEREIGNIS !!!",
       "possibility": "Möglichkeit",
+      "possibilityTooltip": "Halte die SHIFT-Taste gedrückt um die Möglichkeit ohne dem Minimum von 10 zu würfeln.",
       "possibleDisconnect": "Mögliche Abkopplung",
       "rolled": "gewürfelt",
       "showDetails": "Zeige Details",
@@ -158,13 +160,14 @@
       "value": "Wert",
       "vehicleBase": "Fahrzeugprobe",
       "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche.",
+      "changeAmmoType": "{weapon} switched ammunition to {ammo}",
       "ammoFull": "Die Waffe \"{a}\" ist bereits vollständig geladen."
     },
     "clearances": {
       "alpha": "Alpha",
       "beta": "Beta",
-      "gamma": "Gamma",
       "delta": "Delta",
+      "gamma": "Gamma",
       "omega": "Omega"
     },
     "combat": {
@@ -241,10 +244,31 @@
     },
     "defeat": {
       "prompt": "***{name} muss eine Ausgeschaltet-Probe ablegen",
-      "outstanding": "***<p><strong>{name} geht K.O.</strong></p>",
-      "good": "***<p><strong>{name} geht K.O.</strong></p><p>Und erleidet eine Verletzung, die anhält, bis alle seine Wunden geheilt sind</p>",
-      "standard": "***<p><strong>{name} geht K.O.</strong></p><p>Und erleidet eine permanente Verletzung</p>",
-      "failure": "***<p><strong>{name} stirbt!</strong></p><p>Das Opfer erhält sofort eine letzte, dramatische Aktion, bevor es abtritt. Verwundungsmalusse werden hierbei ignoriert.</p>"
+      "chatTitle": "Ausgeschaltet-Probe ({attribute})",
+      "chooseAttribute": "Wähle ein Attribut",
+      "tempInjury": "Du erleidest eine vorrübergehende Verletzung. {attribute} wird durch eine Effekt reduziert (Minus 1)",
+      "permInjury": "Du erleidest eine permanente Verletzung. {attribute} wurde um 1 reduziert",
+      "outstanding-success": {
+        "main": "{name} geht K.O.",
+        "sub": ""
+      },
+      "good-success": {
+        "main": "Vorrübergehende Verletzung",
+        "sub": "Und erleidet eine Verletzung, die anhält, bis alle seine Wunden geheilt sind",
+        "effectName": "Temp. Verletzung"
+      },
+      "standard-success": {
+        "main": "Permanente Verletzung",
+        "sub": "Und erleidet eine permanente Verletzung"
+      },
+      "failure": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; {name} stirbt! &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "Das Opfer erhält sofort eine letzte, dramatische Aktion, bevor es abtritt. Verwundungsmalusse werden hierbei ignoriert."
+      },
+      "mishap": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; {name} stirbt! &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "Das Opfer erhält sofort eine letzte, dramatische Aktion, bevor es abtritt. Verwundungsmalusse werden hierbei ignoriert."
+      }
     },
     "dialogPrompts": {
       "cardPooled": "Im Aktionenpool?",
@@ -853,12 +877,12 @@
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
       "crewUnskilledOperator": "Der Lenker des Fahrzeug ist ungelernt!",
       "crewUnskilledWeapon": "Die Waffe wird ungelernt genutzt!",
+      "crewFavored": "This weapon has a favored gunner",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "customAttacks": "Individuelle Angriffe",
       "damageAP": "Schaden (PB)",
       "damageMod": "Schadensmodifikator",
-      "darkvision": "Dunkelsicht",
       "defense": "Verteidigung",
       "defenses": "Verteidigungen",
       "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen",
@@ -929,6 +953,7 @@
       "name": "Name",
       "new": "Neu",
       "none": "Keiner",
+      "noMin10": " (Minimum von 10 nicht angewendet)",
       "noPoss": " Keine Möglichkeit übrig!",
       "noPossFree": "Keine Möglichkeit!<br>Möchtest du eine Möglichkeit schenken?",
       "noRace": "Kein Volk hinzugefügt",

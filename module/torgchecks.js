@@ -47,7 +47,6 @@ export async function renderSkillChat(test) {
   test.applyDamLabel = 'hidden';
   test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
-  test.bdDamageLabelStyle = test.bdDamageSum ? '' : 'hidden';
   let iteratedRoll;
 
   const testActor = fromUuidSync(test.actor);
@@ -153,6 +152,8 @@ export async function renderSkillChat(test) {
             testActor.toggleStatusEffect('disconnected', { active: true })
         }
       }
+
+      if (test.rollTotal >= 60) test.possibleGlory = true;
     }
 
     // Add the dices list in test
@@ -401,7 +402,7 @@ export async function renderSkillChat(test) {
       // Roll 1 and not defense = Mishap
       test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
-      if (test?.attackTraits.includes('fragile')) {
+      if (test?.attackTraits?.includes('fragile')) {
         test.fragileText = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.itemName });
       }
       test.outcomeColor = 'color: purple';
@@ -410,7 +411,6 @@ export async function renderSkillChat(test) {
         test.outcomeColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
         test.resultTextColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
-      test.actionTotalLabel = 'hidden';
       test.possibilityStyle = 'hidden';
       test.upStyle = 'hidden';
       test.dramaStyle = 'hidden';
@@ -457,7 +457,6 @@ export async function renderSkillChat(test) {
         await testActor.setActiveDefense(test.bonus);
         test.testType = 'activeDefenseUpdate';
         test.resultText = '+ ' + test.bonus;
-        test.actionTotalLabel = 'hidden';
       }
 
     } else if (test.testType === 'activeDefenseUpdate') {
@@ -489,9 +488,10 @@ export async function renderSkillChat(test) {
       if (!target.dummyTarget) {
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor) {
+          let extraarmor = getExtraProtection(test.attackTraits, target.defenseTraits, 'Armor', 0);
           test.targetAdjustedToughness =
             target.toughness -
-            Math.min(test.weaponAP, target.armor) +
+            Math.min(test.weaponAP, target.armor + extraarmor) +
             test.coverModifier;
           // Ignore armor and cover
         } else {
@@ -517,7 +517,6 @@ export async function renderSkillChat(test) {
 
             test.chatTitle += ` + ${test.amountBD} ${game.i18n.localize('torgeternity.chatText.bonusDice')}`;
 
-            test.bdDamageLabelStyle = '';
             test.bdDamageSum += test.BDDamageInPromise;
 
             test.damage += test.BDDamageInPromise;
@@ -535,12 +534,16 @@ export async function renderSkillChat(test) {
         }
       } else {
         // Basic roll
-        test.damageSubLabel = 'hidden';
         test.damageDescription = `${adjustedDamage} ${game.i18n.localize('torgeternity.chatText.check.result.damage')}`;
       }
-    } else {
-      test.damageLabel = 'hidden';
-      test.damageSubLabel = 'hidden';
+    } else if (test.isDefeatTest) {
+      if (test.result === TestResult.STANDARD)
+        test.defeatInjury = 'permanent'
+      else if (test.result === TestResult.GOOD)
+        test.defeatInjury = 'temporary';
+
+      test.defeatMain = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.main`, { name: testActor.name });
+      test.defeatSub = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.sub`, { name: testActor.name });
     }
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
@@ -571,13 +574,14 @@ export async function renderSkillChat(test) {
     test.typeLabel += ' ';
 
     // Hide the UP button if the current drama card doesn't show UP on the condition line.
+    // TODO: Vengeful Perk should allow UP to appear in Chat Card.
     if (game.settings.get('torgeternity', 'dramaCardUp')) {
       const combat = game.combat;
       // get disposition from prototype Token if there's no real token.
       const token = testActor.getActiveTokens(false, true)?.[0] || testActor.prototypeToken;  // (linked, document [rather than PlaceableObject])
       if (combat?.active && token &&
-        (token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
-        (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up'))
+        ((token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
+          (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up')))
         test.upStyle = 'hidden';
     }
 
@@ -601,7 +605,6 @@ export async function renderSkillChat(test) {
     test.notesLabel = test.chatNote ? '' : 'hidden';
 
     if (test.testType === 'interactionAttack' && test.rollResult >= test.DN) {
-      test.damageSubLabel = '';
       test.applyDamLabel = 'hidden';
       if (!target.dummyTarget) {
         test.applyStymiedLabel = '';
@@ -808,13 +811,16 @@ function individualDN(test, target) {
   if (test.DNDescriptor.startsWith('target')) {
     let onTarget = test.DNDescriptor.slice(6);
     onTarget = onTarget.at(0).toLowerCase() + onTarget.slice(1);
+    let traitdefense = getExtraProtection(test.attackTraits, target.defenseTraits, 'Defense', 0);
+    if (onTarget === 'vehicleDefense')
+      return target.defenses?.vehicle ?? 0;
     if (Object.hasOwn(target.attributes, onTarget))
-      return target.attributes[onTarget].value;
+      return target.attributes[onTarget].value + traitdefense;
     if (Object.hasOwn(target.defenses, onTarget))
-      return target.defenses[onTarget];
+      return target.defenses[onTarget] + traitdefense;
     if (Object.hasOwn(target.skills, onTarget)) {
       const skill = target.skills[onTarget];
-      return (skill.value && skill.value !== '-') ? skill.value : target.attributes[skill.baseAttribute].value;
+      return ((skill.value && skill.value !== '-') ? skill.value : target.attributes[skill.baseAttribute].value) + traitdefense;
     }
   }
 
@@ -979,7 +985,6 @@ export async function rollAttack(actor, item) {
     applySize: true,
     attackOptions: true,
     chatNote: weaponData.chatNote,
-    bdDamageLabelStyle: 'hidden',
     bdDamageSum: 0,
     itemId: item.id,
   }, { useTargets: true });
@@ -1013,7 +1018,6 @@ export async function rollPower(actor, item) {
     DNDescriptor: powerData.dn,
     applySize: powerData.applySize,
     attackOptions: true,
-    bdDamageLabelStyle: 'dihiddene',
     amountBD: 0,
     bdDamageSum: 0,
     itemId: item.id,
@@ -1021,12 +1025,18 @@ export async function rollPower(actor, item) {
 }
 
 function isApprovedAction(test) {
+  if (!game.combat?.approvedActions) return false;
+
   // maneuver, trick, taunt, intimidate, any, attack, defend, "any multi-action"
   for (const action of game.combat.approvedActions) {
     switch (action) {
       case 'any':
         return true;
       case 'intimidate':
+        // Drama Card: intimidate
+        // Skill: intimidation
+        if (test.testType === 'interactionAttack' && test.skillName === 'intimidation') return true;
+        break;
       case 'maneuver':
       case 'taunt':
       case 'trick':
@@ -1048,4 +1058,27 @@ function isApprovedAction(test) {
     }
   }
   return false;
+}
+/**
+ * For each '*Damage' trait in 'attackTraits' look for a corresponding "*${protection}" in defenseTraits.
+ * If found, then return the numeric value for that defensive trait.
+ * @param {*} attackerTraits The attack traits of the attacker
+ * @param {*} targetTraits The defensive traits of the target
+ * @param {*} protection The type of trait to look for on the target (e.g. 'Armor' , 'Defense')
+ * @param {Number} defaultValue The value returned if no matching targetTrait for any attackerTrait
+ * @returns {Number} The numeric value of the corresponding targetTrait, or 'defaultValue'
+ */
+function getExtraProtection(attackerTraits, targetTraits, protection, defaultValue) {
+  if (!attackerTraits || !targetTraits) return defaultValue;
+  for (const atktrait of attackerTraits) {
+    if (atktrait.endsWith('Damage')) {
+      for (const deftrait of targetTraits) {
+        if (deftrait.endsWith(protection) && deftrait.slice(0, -protection.length) === atktrait.slice(0, -6)) {
+          // TODO - where do we get the actual number from?
+          console.log(`Apply TRAIT-specific ${protection}`);
+        }
+      }
+    }
+  }
+  return defaultValue;
 }

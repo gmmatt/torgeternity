@@ -1,8 +1,9 @@
 <div class="skill-card sheet-card" data-type="{{data.type}}">
-  <div class="torgeternity-message-header">
-    <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" data-tooltip="{{actorName}}" />
+  <div class="torgeternity-message-header flexrow">
+    <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" data-tooltip="{{actorName}}"
+      data-action="openSheet" data-actor="{{actor}}" />
 
-    <div class="message-header torgeternity-skill-description">
+    <div class="message-header torgeternity-skill-description flexcol">
       {{#if unskilledTest}}
         <p class="skill-chat-title unskilled">{{chatTitle}}</p>
         <p class="skill-unskilled-label {{unskilledLabel}}">{{localize 'torgeternity.chatText.unskilled'}}</p>
@@ -13,7 +14,7 @@
 
     {{#if target}}
       <img class="message-header torgeternity-target-icon" src="{{target.targetPic}}"
-        data-tooltip="{{target.targetName}}" />
+        data-tooltip="{{target.targetName}}" data-action="openSheet" data-actor="{{target.id}}" />
     {{/if}}
   </div>
   <div class="chat-text" style="padding:0px">
@@ -42,14 +43,30 @@
     {{#if successfulDefendApprovedAction}}
       <p class="skill-roll-approved-action">
         {{localize 'torgeternity.chatText.check.isApprovedDefend' name=target.targetName}}
+        <a class="button roll-button drawDestiny" data-action="drawDestiny"
+          data-actor="{{target.id}}">{{localize 'torgeternity.dialogPrompts.drawDestiny'}}</a>
       </p>
     {{/if}}
     {{#if successfulApprovedAction}}
-      <p class="skill-roll-approved-action">{{localize 'torgeternity.chatText.check.isApprovedAction'}} </p>
+      {{log actor}}
+      <p class="skill-roll-approved-action">{{localize 'torgeternity.chatText.check.isApprovedAction'}}
+        <a class="button roll-button drawDestiny" data-action="drawDestiny"
+          data-actor="{{actor}}">{{localize 'torgeternity.dialogPrompts.drawDestiny'}}</a>
+      </p>
     {{/if}}
-    <p class="skill-roll-damage-label {{damageLabel}}">
-      {{damageDescription}}
-    </p>
+    {{#if damageDescription}}
+      <p class="skill-roll-damage-label">
+        {{damageDescription}}
+      </p>
+    {{/if}}
+    {{#if isDefeatTest}}
+      <p class="skill-roll-defeat defeat-main">
+        <a class="defeat" data-action="applyDefeat"
+          data-result="{{result}}">{{{defeatMain}}}</a>
+      </p>
+      <p class="skill-roll-defeat defeat-sub">{{{defeatSub}}}</p>
+      </p>
+    {{/if}}
     <p class="applyButtons">
       <a class="button roll-button {{applyDamLabel}}" data-action="applyDam"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
@@ -83,12 +100,18 @@
         <p class="skill-roll-action-label">{{localize 'torgeternity.chatText.check.result.diceTotal'}}
           {{combinedRollTotal}}
         </p>
-        <p class="skill-roll-action-label {{actionTotalLabel}}">{{actionTotalContent}}</p>
+        {{#if actionTotalContent}}
+          <p class="skill-roll-action-label">{{actionTotalContent}}</p>
+        {{/if}}
       </summary>
-      <p class="skill-roll-action-label {{damageSubLabel}}">{{damageSubDescription}}</p>
-      <p class="skill-roll-action-label {{bdDamageLabelStyle}}" ">
-        {{localize 'torgeternity.chatText.check.result.BDDamageSum'}}: {{bdDamageSum}}
+      {{#if damageSubDescription}}
+        <p class="skill-roll-action-label">{{damageSubDescription}}</p>
+      {{/if}}
+      {{#if bdDamageSum}}
+        <p class="skill-roll-action-label">{{localize 'torgeternity.chatText.check.result.BDDamageSum'}}:
+          {{~bdDamageSum~}}
         </p>
+      {{/if}}
       <table class=" skill-roll-table">
         <tr>
           <td>{{typeLabel}}:</td>
@@ -139,8 +162,8 @@
         </tr>
 
 
-        </table>
-        <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
+      </table>
+      <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
       <div class="message-content">
         <div class="dice-roll-torg">
           <div class="dice-result">
@@ -166,11 +189,18 @@
       </div>
     </details>
 
+    {{#if possibleGlory}}
+      <div class="possible-glory">
+        <p>{{localize 'torgeternity.chatText.possibleGlory'}}</p>
+      </div>
+    {{/if}}
+
     <div class="skill-roll-menu">
       <a class="button roll-button {{isFavStyle}}"
         data-action="rollFav">{{localize 'torgeternity.chatText.favored'}}</a>
       <a class="button roll-button {{possibilityStyle}}"
-        data-action="rollPossibility">{{localize 'torgeternity.chatText.possibility'}}</a>
+        data-action="rollPossibility"
+        data-tooltip="{{localize 'torgeternity.chatText.possibilityTooltip'}}">{{localize 'torgeternity.chatText.possibility'}}</a>
       <a class="button roll-button {{upStyle}}" data-action="rollUp">{{localize 'torgeternity.chatText.up'}}</a>
       <a class="button roll-button {{heroStyle}}" data-action="rollHero">{{localize 'torgeternity.chatText.hero'}}</a>
       <a class="button roll-button {{dramaStyle}}"
