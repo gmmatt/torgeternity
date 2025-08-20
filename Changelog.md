@@ -10,8 +10,8 @@
 - #466: Update **Defeat** handling to display a button to apply the relevant effects, which will prompt for an attribute to modify if relevant.
 - Ensure use of Intimidation skill is detected as an Approved Action for Intimidate.
 - #416: Allow **Compendium Search** of Items to filter based on cosm, traits, secondaryAxiom, category (incl. Implant Type).
-- (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/1330 - a one-line patch in foundry.js could get it working)
-- Display highest size and vulnerable modifier in the Skill Test dialog.
+  - (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/13300 - a one-line patch in foundry.js could get it working)
+- Display highest size and vulnerable modifier from all the targets in the Skill Test dialog (even though they are applied separately to each target during test resolution).
 
 ### Bug Fixes
 
