@@ -62,6 +62,7 @@
         "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence requise",
         "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un rang).",
         "cantUseRealityWhileDisconnected": "Vous ne pouvez pas utiliser la compétence Réalité lorsque vous êtes déconnecté.",
+        "drawDestiny": "Piocher une carte de Destin",
         "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
         "isApprovedAction": "Action approuvée réussie (piocher une carte Destin)",
         "isApprovedDefend": "{name} s'est défendu avec succès (piocher une carte Destin)",
@@ -146,9 +147,9 @@
       "passesCard1": "Passe",
       "passesCard2": "à",
       "playsCard": "Jouer",
-      "possibleGlory": "!!! POSSIBLE GLORY !!!",
+      "possibleGlory": "!!! GLOIRE JOUABLE !!!",
       "possibility": "Possibilité",
-      "possibilityTooltip": "Hold SHIFT to roll Possibility without a minimum of 10",
+      "possibilityTooltip": "Maintenir SHIFT pour utiliser une possibilité dont le jet minimum ne sera pas 10",
       "possibleDisconnect": "Déconnexion possible",
       "rolled": "jet",
       "showDetails": "Afficher détails",
@@ -243,31 +244,31 @@
       "strengthPlus": "Force +"
     },
     "defeat": {
-      "prompt": "{name} must make a Defeat Test",
-      "chatTitle": "Defeat Test ({attribute})",
-      "chooseAttribute": "Choose an Attribute",
-      "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
-      "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
+      "prompt": "{name} doit effectuer un test de Défaite",
+      "chatTitle": "Test de Défaite ({attribute})",
+      "chooseAttribute": "Choisir un Attribut",
+      "tempInjury": "Vous souffrez d'une Séquelle temporaire. Votre {attribute} est réduit par un effet (moins 1)",
+      "permInjury": "Vous souffrez d'une Séquelle permanente. Votre {attribute} est réduit de 1",
       "outstanding-success": {
-        "main": "Knocked Out",
+        "main": "KO",
         "sub": ""
       },
       "good-success": {
-        "main": "Temporary Injury",
-        "sub": "You suffer an Injury that lasts until all Wounds are healed",
-        "effectName": "Temp. Injury"
+        "main": "Séquelle temporaire",
+        "sub": "Votre Séquelle perdure jusqu'aux soins complets",
+        "effectName": "Séquelle Temp."
       },
       "standard-success": {
-        "main": "Permanent Injury",
-        "sub": "You suffer a permanent Injury"
+        "main": "Séquelle permanente",
+        "sub": "Vous subissez une Séquelle permanente"
       },
       "failure": {
-        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
-        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+        "main": "&#x1F480;&#x1F480;&#x1F480; MORT &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "Vous pouvez effectuer une dernière action dramatique avant d’expirer. Vous ignorez les malus des Blessures pour ce dernier effort héroïque."
       },
       "mishap": {
-        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
-        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+        "main": "&#x1F480;&#x1F480;&#x1F480; MORT &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "Vous pouvez effectuer une dernière action dramatique avant d’expirer. Vous ignorez les malus des Blessures pour ce dernier effort héroïque."
       }
     },
     "dialogPrompts": {
@@ -836,7 +837,7 @@
       "aimed": "Visée",
       "aimedTooltip": "Tir précis (uniquement pour armes a distance)",
       "allOut": "Attaque totale",
-      "allOutTooltip": "+4 Bonus/Très Vulnérable (Melee et attaques mains nues)",
+      "allOutTooltip": "+4 Bonus/Très Vulnérable (Mélée et attaques mains nues)",
       "alterAttributes": "Tu peux maintenant modifier les attributs",
       "ammunition": "Munitions",
       "APMod": "Modificateur d'AP",
@@ -953,7 +954,7 @@
       "name": "Nom",
       "new": "Nouveau",
       "none": "Non",
-      "noMin10": " (Minimum of 10 not applied)",
+      "noMin10": " (Minimum de 10 non appliqué)",
       "noPoss": " Pas de Possibilité!",
       "noPossFree": "Pas de possibilité !<br>Confirmez le don ?",
       "noRace": "Pas de race choisie",
