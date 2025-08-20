@@ -542,8 +542,8 @@ export async function renderSkillChat(test) {
       else if (test.result === TestResult.GOOD)
         test.defeatInjury = 'temporary';
 
-      test.defeatMain = game.i18n.localize(`torgeternity.defeat.${test.resultText.slugify()}.main`);
-      test.defeatSub = game.i18n.localize(`torgeternity.defeat.${test.resultText.slugify()}.sub`);
+      test.defeatMain = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.main`, { name: testActor.name });
+      test.defeatSub = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.sub`, { name: testActor.name });
     }
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
@@ -580,8 +580,8 @@ export async function renderSkillChat(test) {
       // get disposition from prototype Token if there's no real token.
       const token = testActor.getActiveTokens(false, true)?.[0] || testActor.prototypeToken;  // (linked, document [rather than PlaceableObject])
       if (combat?.active && token &&
-        (token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
-        (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up'))
+        ((token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
+          (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up')))
         test.upStyle = 'hidden';
     }
 
@@ -812,6 +812,8 @@ function individualDN(test, target) {
     let onTarget = test.DNDescriptor.slice(6);
     onTarget = onTarget.at(0).toLowerCase() + onTarget.slice(1);
     let traitdefense = getExtraProtection(test.attackTraits, target.defenseTraits, 'Defense', 0);
+    if (onTarget === 'vehicleDefense')
+      return target.defenses?.vehicle ?? 0;
     if (Object.hasOwn(target.attributes, onTarget))
       return target.attributes[onTarget].value + traitdefense;
     if (Object.hasOwn(target.defenses, onTarget))
@@ -1023,6 +1025,8 @@ export async function rollPower(actor, item) {
 }
 
 function isApprovedAction(test) {
+  if (!game.combat?.approvedActions) return false;
+
   // maneuver, trick, taunt, intimidate, any, attack, defend, "any multi-action"
   for (const action of game.combat.approvedActions) {
     switch (action) {

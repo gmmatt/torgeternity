@@ -75,6 +75,19 @@ Hooks.once('init', async function () {
   CONFIG.Token.objectClass = TorgEternityToken;
   CONFIG.Scene.documentClass = TorgeternityScene;
 
+  // Indexable Compendiums
+  CONFIG.Actor.compendiumIndexFields.push(
+    'system.other.cosm', // CommonActorData
+    'system.details.race', // StormKnightData
+    'system.details.clearance',  // ThreatData
+    'system.type', // VehicleData
+  );
+  CONFIG.Item.compendiumIndexFields.push(
+    'system.traits', 'system.cosm', // BaseItemData
+    'system.secondaryAxiom', // GeneralItemData
+    'system.category' // Perks
+  );
+
   // --------combats
   CONFIG.Combat.initiative.formula = '1';
   CONFIG.Combat.documentClass = torgeternityCombat;
@@ -294,6 +307,12 @@ Hooks.once('setup', async function () {
   Handlebars.registerHelper({ TorgRadioBoxesNumber })
   Handlebars.registerHelper({ TorgHidden })
   Handlebars.registerHelper({ TorgDisconnected })
+
+  // Ensure all Actor & Item packs have the updated index contents
+  for (const pack of game.packs) {
+    if (pack.metadata.type === 'Actor' || pack.metadata.type === 'Item')
+      await pack.getIndex();
+  }
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {

@@ -62,7 +62,6 @@
         "cantUseSkillRecquired": " cannot be used without at least 1 add in the required skill.",
         "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
         "cantUseRealityWhileDisconnected": "You cannot use the reality skill as long as you are disconnected",
-        "drawDestiny": "draw a destiny card",
         "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
         "isApprovedAction": "Successful Approved Action",
         "isApprovedDefend": "{name} successfully DEFENDed",
@@ -245,6 +244,7 @@
     },
     "defeat": {
       "prompt": "{name} must make a Defeat Test",
+      "chatTitle": "Defeat Test ({attribute})",
       "chooseAttribute": "Choose an Attribute",
       "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
       "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",

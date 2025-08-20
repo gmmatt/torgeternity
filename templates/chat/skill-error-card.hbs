@@ -1,15 +1,14 @@
-<div
-  class="skill-card sheet-card"
-  data-type="{{data.type}}">
-
-  <div class="torgeternity-message-header">
+<div class="skill-card sheet-card" data-type="{{data.type}}">
+  <div class="torgeternity-message-header flexrow">
     <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" data-tooltip="{{name}}"
       data-action="openSheet" data-actor="{{actor}}" />
-    <div class="message-header torgeternity-skill-description" style="font-size:18px">
-      <p>{{localize "torgeternity.chatText.check.testUnsuccessfull"}}</p>
+
+    <div class="message-header torgeternity-skill-description flexcol">
+      <p class="skill-chat-title skilled">{{localize "torgeternity.chatText.check.testUnsuccessfull"}}</p>
     </div>
   </div>
 
   <div class="chat-text" style="padding:0px">
     <p style="text-align:center;font-size:14px;padding:3px 0px 0px 0px">{{message}}</p>
   </div>
+</div>

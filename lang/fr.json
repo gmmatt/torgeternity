@@ -245,6 +245,7 @@
     },
     "defeat": {
       "prompt": "{name} doit effectuer un test de Défaite",
+      "chatTitle": "Test de Défaite ({attribute})",
       "chooseAttribute": "Choisir un Attribut",
       "tempInjury": "Vous souffrez d'une Séquelle temporaire. Votre {attribute} est réduit par un effet (moins 1)",
       "permInjury": "Vous souffrez d'une Séquelle permanente. Votre {attribute} est réduit de 1",

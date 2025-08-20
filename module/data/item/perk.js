@@ -12,7 +12,7 @@ export class PerkItemData extends BaseItemData {
   static defineSchema() {
     return {
       ...super.defineSchema('perk'),
-      category: new fields.StringField({ initial: '', textSearch: true }),
+      category: new fields.StringField({ initial: '', choices: CONFIG.torgeternity.perkTypes, textSearch: true }),
       prerequisites: new fields.StringField({ initial: '' }),
       generalContradiction: new fields.BooleanField({ initial: false }),
       pulpPowers: new fields.SchemaField({
@@ -117,6 +117,9 @@ export class PerkItemData extends BaseItemData {
         source.axioms[source.secondaryAxiom.selected] = source.secondaryAxiom.value;
       }
       source.secondaryAxiom = source.secondaryAxiom.selected;
+    }
+    if (!CONFIG.torgeternity.perkTypes[source.category]) {
+      source.category = source.category.toLowerCase();
     }
     return super.migrateData(source);
   }
