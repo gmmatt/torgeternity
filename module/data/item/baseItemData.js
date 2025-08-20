@@ -41,10 +41,10 @@ export function newTraitsField(itemType) {
       textSearch: true,
       trim: true,
     }),
-    { // SetField options
+    { // SetField options (ArrayFieldOptions)
       nullable: false,
       required: true,
       label: 'torgeternity.fieldLabels.itemTraits.label',
-      hint: 'torgeternity.fieldLabels.itemTraits.hint',
+      hint: 'torgeternity.fieldLabels.itemTraits.hint'
     });
 }

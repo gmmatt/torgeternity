@@ -10,9 +10,9 @@
       "cosm": "Cosm"
     },
     "Actor": {
-      "stormknight": "Stormknight",
-      "threat": "Threat",
-      "vehicle": "Vehicle"
+      "stormknight": "Chevalier des Tempêtes",
+      "threat": "Menace",
+      "vehicle": "Véhicule"
     }
   },
   "torgeternity": {
@@ -62,7 +62,10 @@
         "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence requise",
         "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un rang).",
         "cantUseRealityWhileDisconnected": "Vous ne pouvez pas utiliser la compétence Réalité lorsque vous êtes déconnecté.",
+        "drawDestiny": "Piocher une carte de Destin",
         "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
+        "isApprovedAction": "Action approuvée réussie (piocher une carte Destin)",
+        "isApprovedDefend": "{name} s'est défendu avec succès (piocher une carte Destin)",
         "modifier": {
           "aimedShot": "tir visé",
           "allOutAttack": "attaque totale",
@@ -90,9 +93,10 @@
         "result": {
           "actionTotal": "Total de l'action",
           "attackMissed": "Attaque ratée",
-          "diceTotal": "Résultat des dés",
           "damage": "Dommages",
+          "diceTotal": "Résultat des dés",
           "failure": "Échec",
+          "fragileBroken": "{itemName} est fragile et se casse",
           "goodSuccess": "Succès supérieur",
           "mishape": "Échec critique",
           "new": "Résultat du nouveau jet",
@@ -103,9 +107,24 @@
           "result": "Résultat",
           "standartSuccess": "Succès simple",
           "toughness": "Résistance",
-          "BDDamageSum": "Sum damage of rolled BD"
+          "BDDamageSum": "Somme des BDs de dommages"
         },
         "testUnsuccessfull": "Le jet n'a pas réussi"
+      },
+      "contradiction": {
+        "alreadyDisconnected": "est déjà déconnecté",
+        "noContradiction": "ne génère aucune contradiction",
+        "hasDisconnected": "s'est <strong>déconneté</strong>!!!",
+        "notDisconnected": "ne s'est pas déconnecté",
+        "possibleContradiction": "peut générer une contradiction",
+        "contradictionCheck": "Jet de Déconnexion",
+        "checkTooltip": "<strong>{name}</strong> effectue un test de Contradiction"
+      },
+      "disconnection": {
+        "base": "{itemName} a causé une DECONNEXION ({diceTotal}):",
+        "actorLabel": "{axiom}: {itemAxiom} > {actorType} {actorAxiom}",
+        "zoneLabel": "{axiom}: {itemAxiom} > Zone {zoneAxiom}",
+        "perk": "{itemName} a été utilisé hors de son Cosm"
       },
       "damage": "Dommages",
       "dieTotal": "Total du dé",
@@ -117,6 +136,7 @@
       "hero": "Héros",
       "heroCard": "Carte Héros",
       "hideDetails": "Cacher détails",
+      "notPermittedDSR": "Prochain RDT {step} non autorisé par la carte Action",
       "modifiers": "Modificateurs",
       "noAmmo": "Le chargeur de votre arme est vide, vous ne pouvez pas faire feu.",
       "noAmmoPosessing": "Pas de munitions dans votre inventaire. Rechargement impossible.",
@@ -127,7 +147,9 @@
       "passesCard1": "Passe",
       "passesCard2": "à",
       "playsCard": "Jouer",
+      "possibleGlory": "!!! GLOIRE JOUABLE !!!",
       "possibility": "Possibilité",
+      "possibilityTooltip": "Maintenir SHIFT pour utiliser une possibilité dont le jet minimum ne sera pas 10",
       "possibleDisconnect": "Déconnexion possible",
       "rolled": "jet",
       "showDetails": "Afficher détails",
@@ -138,7 +160,8 @@
       "up": "Un de plus !",
       "value": "Valeur",
       "vehicleBase": "Test d'Opérateur",
-      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "mayCauseContradiction": "Les Atouts avec ce sigle dépendent des Lois de leur Cosm, et peuvent générer des contradictions dans les autres Cosms.",
+      "changeAmmoType": "Munitions de {weapon} changée pour {ammo}",
       "ammoFull": "Le chargeur de votre \"{a}\" est plein."
     },
     "clearances": {
@@ -150,20 +173,25 @@
     },
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp",
-      "toggleDramatic": "Toggle between Standard and Dramatic Combat Resolution",
+      "toggleDramatic": "Bascule le combat entre une scène Normale et une scène Dramatique",
       "endMyTurn": "Terminé",
       "nextKeep": "Nouveau round (garder la carte actuelle)",
       "nextNew": "Nouveau round (nouvelle carte Action)",
+      "heroes": "Héros",
+      "villains": "Vilains",
       "herosTooltip": "initiative aux heros",
       "vilainsTooltip": "initiative aux méchants",
       "hasPlayedTooltip": "Cocher quand le tour du personnage est fini"
     },
     "contextMenu": {
       "characterInfo": {
-        "contextMenuTitle": "Show character information",
-        "windowTitle": "Notes and Backgrounds from {a}",
-        "createChatCard": "Create chat card"
+        "contextMenuTitle": "Afficher les informations du personnage",
+        "windowTitle": "Notes et historique de {a}",
+        "createChatCard": "Créer un message"
       }
+    },
+    "core": {
+      "forceDarkModeHint": "TORG fonctionne uniquement avec les Applications en mode Sombre"
     },
     "cosmDecks": {
       "aysle": "Cartes Cosm Aysle",
@@ -215,13 +243,41 @@
       "spiritPlus": "Esprit +",
       "strengthPlus": "Force +"
     },
+    "defeat": {
+      "prompt": "{name} doit effectuer un test de Défaite",
+      "chatTitle": "Test de Défaite ({attribute})",
+      "chooseAttribute": "Choisir un Attribut",
+      "tempInjury": "Vous souffrez d'une Séquelle temporaire. Votre {attribute} est réduit par un effet (moins 1)",
+      "permInjury": "Vous souffrez d'une Séquelle permanente. Votre {attribute} est réduit de 1",
+      "outstanding-success": {
+        "main": "KO",
+        "sub": ""
+      },
+      "good-success": {
+        "main": "Séquelle temporaire",
+        "sub": "Votre Séquelle perdure jusqu'aux soins complets",
+        "effectName": "Séquelle Temp."
+      },
+      "standard-success": {
+        "main": "Séquelle permanente",
+        "sub": "Vous subissez une Séquelle permanente"
+      },
+      "failure": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; MORT &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "Vous pouvez effectuer une dernière action dramatique avant d’expirer. Vous ignorez les malus des Blessures pour ce dernier effort héroïque."
+      },
+      "mishap": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; MORT &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "Vous pouvez effectuer une dernière action dramatique avant d’expirer. Vous ignorez les malus des Blessures pour ce dernier effort héroïque."
+      }
+    },
     "dialogPrompts": {
       "cardPooled": "Réserve d'action",
       "cosmDeckDialogLabel": "Piocher",
-      "cosmDialogTitle": "Piocher une carte cosm",
+      "cosmDialogTitle": "Piocher une carte de Cosm",
       "discardCard": "Défaussez",
-      "drawCosm": "Piocher une carte cosm",
-      "drawDestiny": "Piocher une carte Destin",
+      "drawCosm": "Piocher une carte de Cosm",
+      "drawDestiny": "Piocher une carte de Destin",
       "lifelike": "Affichage en éventail",
       "openHand": "Voir sa main",
       "playCard": "Jouez",
@@ -254,7 +310,7 @@
         "title": "Confirmer la suppression"
       },
       "realityCheck": {
-        "title": "Reconnection?",
+        "title": "Reconnexion?",
         "content": "Essayez-vous de vous re-connecter?"
       },
       "buttons": {
@@ -275,7 +331,8 @@
         "recipient": "Destinataire(s) du message privé",
         "whisper": "Nombre de cartes",
         "apply": "Appliquer",
-        "show": "Carte(s) suivante(s)"
+        "show": "Carte(s) suivante(s)",
+        "noMoreCards": "Plus de cartes Action disponibles"
       },
       "cardRetour": {
         "cardBack": "Restitution d'une carte jouée",
@@ -308,25 +365,45 @@
       "standard": "Normale (10)",
       "targetAirVehicles": "Véhicules aériens ou Dextérité de la cible",
       "targetAlteration": "Altération de la cible",
+      "targetApportation": "Cinétique de la cible",
+      "targetBeastRiding": "Equitation de la cible",
+      "targetComputers": "Informatique de la cible",
       "targetCharisma": "Charisme de la cible",
       "targetConjuration": "Conjuration de la cible",
       "targetDexterity": "Dextérité de la cible",
       "targetDivination": "Divination de la cible",
       "targetDodge": "Esquive de la cible",
+      "targetEnergyWeapons": "Armes à Energie de la cible",
+      "targetEvidenceAnalysis": "Analyse d'indices de la cible",
       "targetFaith": "Foi de la cible",
+      "targetFind": "Observation ou Raison de la cible",
+      "targetFireCombat": "Armes à feu de la cible",
+      "targetFirstAid": "Premiers soins de la cible",
+      "targetHeavyWeapons": "Armes lourdes de la cible",
       "targetIntimidation": "Intimidation de la cible",
       "targetKinesis": "Kinésie de la cible",
       "targetLandVehicles": "Véhicules terrestres ou Dextérité de la cible",
+      "targetLanguage": "Langue de la cible",
+      "targetLockpicking": "Crochetage de la cible",
       "targetManeuver": "Manœuvre de la cible",
+      "targetMedicine": "Médicine de la cible",
       "targetMeleeWeapons": "Armes de mêlée de la cible",
+      "targetMissileWeapons": "Armes de jet de la cible",
       "targetMind": "Raison de la cible",
+      "targetPersuasion": "Persuasion de la cible",
       "targetPrecognition": "Précognition de la cible",
+      "targetProfession": "Profession de la cible",
+      "targetReality": "Realité de la cible",
+      "targetScholar": "Sciences humaines de la cible",
       "targetSpirit": "Esprit de la cible",
       "targetStealth": "Discrétion de la cible",
+      "targetStreetwise": "Débrouillardise de la cible",
       "targetStrength": "Force de la cible",
+      "targetSurvival": "Survie de la cible ",
       "targetTaunt": "Provocation de la cible",
+      "targetTelepathy": "Télépathie de la cible",
+      "targetTracking": "Pistage de la cible",
       "targetTrick": "Ruse de la cible",
-      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Combat à mains nues de la cible",
       "targetVehicleDefense": "Défense du véhicule ciblé",
       "targetWaterVehicles": "Véhicules aquatiques ou Dextérité de la cible",
@@ -347,46 +424,52 @@
     },
     "drama": {
       "none": "---",
-      "flurry": "Flurry",
+      "flurry": "Vivacité",
       "inspiration": "Inspiration",
-      "up": "Up",
-      "confused": "Confused",
-      "fatigued": "Fatigued",
-      "setback": "Setback",
-      "stymied": "Stymied",
-      "surge": "Surge",
-      "flurryDesc": "FLURRY: {faction} get an extra turn this round",
-      "inspirationDesc": "INSPIRATION: All {faction} immediately recover 2 shock",
-      "upDesc": "UP: Add an additional roll to the first roll for {faction}",
-      "confusedDesc": "CONFUSED: Players are unable to play cards from their pool",
-      "fatiguedDesc": "FATIGUED: Two shock inflicted at the end of each {faction} turn",
-      "setbackDesc": "SETBACK: GM decides a suitable setback for {faction}",
-      "stymiedDesc": "STYMIED: All {faction} are stymied until the end of the their turn",
-      "surgeDesc": "SURGE: All {faction} must check for Contradications"
+      "up": "Un de plus!",
+      "confused": "Désorientés",
+      "fatigued": "Fatigués",
+      "setback": "Revers",
+      "stymied": "Déstabilisés",
+      "surge": "Déferlement",
+      "flurryDesc": "VIVACITE: Les {faction} bénéficient d'un tour supplémentaire",
+      "inspirationDesc": "INSPIRATION: Tous les  {faction} se remettent immédiatement de 2 points de Choc",
+      "upDesc": "UN DE PLUS!: Octroie un jet de dé supplémentaire à celui du premier jet pour les {faction}",
+      "confusedDesc": "DESORIENTES: Les joueurs ne peuvent utiliser de cartes de leur réserve",
+      "fatiguedDesc": "FATIGUES: Inflige 2+ points de Choc à chaque membres des {faction} à la fin de leur tour",
+      "setbackDesc": "REVERS: Le MJ doit déterminer un rebondissement probable et malheureux au détriment des {faction}",
+      "stymiedDesc": "DESTABILISE: Tous les {faction} sont déstabilisés jusqu'à la fin de leur tour",
+      "surgeDesc": "DEFERLEMENT: Tous les {faction} doivent effectuer un test de Contradiction"
     },
     "dramaCard": {
-      "heroesFirst": "Heroes First?",
+      "heroesFirst": "Initiative aux Heros?",
       "heroesConflict": "H:",
       "villainsConflict": "V:",
       "dsrLine": "DSR",
-      "rule": "Rule",
+      "rule": "Règle",
       "approvedActions": "Actions",
-      "standard": "Standard",
-      "dramatic": "Dramatic",
-      "attack": "Attack",
-      "defend": "Defend",
-      "multiAction": "Any Multi-Action",
-      "any": "Any",
+      "standard": "Normale",
+      "dramatic": "Dramatique",
+      "attack": "Attaque",
+      "defend": "Défense",
+      "multiAction": "Toutes Actions Multiples",
+      "any": "Toutes",
       "complication": "Complication",
-      "criticalProblem": "Critical Problem",
-      "possibleSetback": "Possible Setback",
-      "shuffleDeck": "Shuffle Drama Deck",
-      "getPreviousDrama": "Recall Previous Drama Card"
+      "criticalProblem": "Problème critique",
+      "possibleSetback": "Revers Possible",
+      "shuffleDeck": "Mélanger le paquet Action",
+      "getPreviousDrama": "Récupérer la carte ACtion précédente"
     },
     "enhancements": {
       "description": "Description",
       "enhances": "Amélioration",
       "perk": "Atout associé"
+    },
+    "fieldLabels": {
+      "itemTraits": {
+        "label": "Traits",
+        "hint": "Les capacités particulières de cet objet"
+      }
     },
     "gear": {
       "ammo": "Munitions",
@@ -472,6 +555,7 @@
       "specialability": "Capacité spéciale",
       "specialabilityRollable": "Capacité spéciale avec jet",
       "spell": "Sortilège",
+      "traits": "Traits",
       "vehicle": "Véhicule",
       "vehicleAddOn": "Accessoire de véhicule"
     },
@@ -487,7 +571,7 @@
       "play": "Jouer cette carte"
     },
     "notifications": {
-      "beginningMigration": "Migrating Torg system version to ",
+      "beginningMigration": "Migration du système TORG vers la version ",
       "defaultAction": "Action par défaut, équipement par exemple.",
       "dramaDeckEmpty": "Le paquet de cartes Action est vide. Réinitialisez-le.",
       "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos objets, attributs ou compétences",
@@ -503,7 +587,7 @@
       "noTokenNorActor": "Keine Token ausgewählt und kein zugewiesener Charakter gefunden, das Makro kann nicht fortgesetzt werden.",
       "noVehicleOperator": "Le véhicule {a} ciblé n'a pas d'opérateur. Le test ne peut pas avoir lieu.",
       "notImplemented": "Pas encore implémenté.",
-      "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène dramatique.",
+      "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène de combat.",
       "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
       "openIssue": "Votre navigateur va ouvrir un onglet pour signaler un problème.",
       "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele.",
@@ -512,6 +596,7 @@
       "noPossibility": "Pas de possibilités disponibles",
       "noCapacity": "{a} ne sait pas piloter ce type véhicule !",
       "noFight": "Pas de rencontre active, ou initiée",
+      "noPlayers": "Pas de joueurs actifs",
       "raceExistent": "Vous avez déjà choisi votre race.",
       "notAPerkItem": "Vous avez tenté d'attribuer un avantage de la catégorie {a} à cette race, mais il doit appartenir à la catégorie raciale. L'action a été annulée.",
       "addedRacePerkToActor": "Ajouté {perkName}-perk à l'acteur.",
@@ -525,7 +610,9 @@
     "partySheet": {
       "chooseParty": "<h3>Choisir OUI afiche TOUS les acteurs.<br>Choisir NON n'affiche que les actifs.</h3>",
       "noCharacter": "Cet utilisateur ne possède pas de personnage",
-      "openParty": "Choisir qui afficher"
+      "openParty": "Choisir qui afficher",
+      "allPlayers": "Tous les joueurs",
+      "activePlayers": "Les joueurs actifs"
     },
     "perks": {
       "category": "Catégorie",
@@ -572,8 +659,8 @@
       "spellcraft": "Arts magiques",
       "stalenger": "Stalenger",
       "theRace": "La Race",
-      "legend": "Legend",
-      "special": "Special/Homebrew"
+      "legend": "Légende",
+      "special": "Spécial/Personnalisé"
     },
     "poolToggle": {
       "inPool": "Carte réservée",
@@ -630,13 +717,13 @@
         "hint": "Si sélectionné, le système utilise des couleurs rouge et verte plus adaptées à des personnes atteinte de daltonisme.",
         "name": "Utilise des couleurs plus adaptées au daltonisme"
       },
+      "useRenderedTorgDice": {
+        "hint": "Si sélectionné, le Dé dans les messages sera celui de TORG, à la place du Dé gris de Foundry.",
+        "name": "Affiche les Dés TORG dans les messages"
+      },
       "autoDamages": {
         "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide.",
         "name": "Application des dommages automatiques"
-      },
-      "useRenderedTorgDice": {
-        "hint": "If activated, the Dice in Chat-Cards will be Torgish. If disabled, they're standard-foundry-grey.",
-        "name": "Show Torg-Dice in chatcards"
       },
       "deckSetting": {
         "hint": "Configuration des paquets où piochés les différents type de cartes, ainsi que leurs défausses.",
@@ -671,13 +758,13 @@
         "hint": "Si sélectionné, le système réinstallera tous les paquets de cartes, et les défausses. Vous devrez rafraîchir le navigateur ou l'application (F5).",
         "name": "Installer les paquets de cartes"
       },
-      "welcome": {
-        "hint": "Si sélectionné, le message de bienvenue apparaîtra au chargement",
-        "name": "Afficher le message de bienvenue"
-      },
       "showCheckDetails": {
         "hint": "Si coché, les détails des tests seront affichés par défaut.",
         "name": "Montrer les détails des tests"
+      },
+      "welcome": {
+        "hint": "Si sélectionné, le message de bienvenue apparaîtra au chargement",
+        "name": "Afficher le message de bienvenue"
       },
       "uniqueDN": {
         "hint": "Si coché, durant une attaque en multi-cibles, garde le DN le plus élevé pour déterminer le résultat sur toutes les cibles (Règle).",
@@ -691,13 +778,53 @@
         "hint": "Utiliser la 'tent' Pan-Pacifica de l'après an 1.",
         "name": "Year-1 PP TT"
       },
+      "cardChatNotify": {
+        "hint": "Supprimme les messages de Foundry si le système TORG génère son propre message",
+        "name": "Supprimme les messages Core Foundry"
+      },
       "shuffleMessageSurpress": {
         "hint": "Si coché, le message indiquant le mélange d'un deck ne sera pas affiché dans le chat.",
         "name": "Supprimmer le message lors d'un mélange de cartes"
       },
       "ignoreAmmo": {
-        "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
-        "name": "Ignore ammo mechanics"
+        "hint": "Si coché, les règles et mécanismes de rechargement des munitions sont complètement ignorés.",
+        "name": "Ignore les munitions"
+      },
+      "hoverDistance": {
+        "hint": "Si coché, la souris positionnée au dessus d'un token affichera la distance depuis le token sélectionné de l'utilisateur.",
+        "name": "Afficher la distance entre token"
+      },
+      "rulerGridWalk": {
+        "hint": "Couleur de mouvement tant que le token n'a pas parcouru sa distance de marche (default: --color-level-success)",
+        "name": "Couleur de grille (Marche)"
+      },
+      "rulerGridRun": {
+        "hint": "Couleur de mouvement tant que le token dépasse sa distance de marche, mais pas sa distance de course (default: --color-level-info)",
+        "name": "Couleur de grille (Course)"
+      },
+      "rulerGridMax": {
+        "hint": "Couleur de mouvement si le token dépasse son déplacement maximal (default: --color-level-error)",
+        "name": "Couleur de grille (>Course)"
+      },
+      "showMovementRuler": {
+        "hint": "Affiche le déplacement effectué par le token durant son round de combat (l'historique est supprimé lors d'un nouveau round)",
+        "name": "Afficher l'historique de déplacement"
+      },
+      "autoShock": {
+        "name": "Application du KO",
+        "hint": "Applique automatiquement KO à un acteur si il dépasse son seuil de choc"
+      },
+      "autoWound": {
+        "name": "Application des Blessures",
+        "hint": "Applique l'effet Mort aux menaces et véhicules qui dépassent leur seuil de blessures"
+      },
+      "autoDisconnect": {
+        "name": "Déconnexion Automatique",
+        "hint": "En cas de Déferlement et de jet qui provoque une Déconnexion, applique l'effet Déconnecté automatiquement"
+      },
+      "dramaCardUp": {
+        "name": "Un de plus! des cartes Actions",
+        "hint": "Cache le bouton Un de plus! si l'option n'est pas dans la ligne conflit de la carte Action en cours (vrai par defaut)"
       }
     },
     "sheetLabels": {
@@ -705,15 +832,15 @@
       "actions": "Actions",
       "activeDefense": "Défense active",
       "add": "Ajout",
-      "addOns": "Add-Ons",
+      "addOns": "Options",
       "adds": "Rang",
       "aimed": "Visée",
       "aimedTooltip": "Tir précis (uniquement pour armes a distance)",
       "allOut": "Attaque totale",
-      "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
+      "allOutTooltip": "+4 Bonus/Très Vulnérable (Mélée et attaques mains nues)",
       "alterAttributes": "Tu peux maintenant modifier les attributs",
-      "ammunition": "Ammunition",
-      "APMod": "AP Modifier",
+      "ammunition": "Munitions",
+      "APMod": "Modificateur d'AP",
       "applyDamage": "Appliquer dommages",
       "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
       "applyStymied": "Appliquer Déstabilisé",
@@ -727,6 +854,7 @@
       "attribute": "Attribut",
       "attributeMaximum": "Attributs maximum",
       "attributes": "Attributs",
+      "max": "Max.",
       "availableEnhancements": "Améliorations disponibles",
       "background": "Historique",
       "backgroundAndNotes": "Historique et notes",
@@ -748,9 +876,12 @@
       "cosm": "Cosm",
       "coverBonus": "Couvert",
       "coverBonusTooltip": "Bonus appliqué a l'endurance résultant du couvert",
+      "crewUnskilledOperator": "L'utilisateur sélectionné est Incompétent!",
+      "crewUnskilledWeapon": "Cette arme est utilisée par un opérateur Incompétent!",
+      "crewFavored": "Cette arme est utlisée par un opérateur Favorisé",
       "customSkill": "Les compétences personnalisées sont modifiables dans l'onglet Atouts",
       "customSkills": "Compétences personnalisées",
-      "customAttacks": "Custom Attacks",
+      "customAttacks": "Attaques personnalisées",
       "damageAP": "Dmg (AP)",
       "damageMod": "Modificateur dommages",
       "defense": "Défense",
@@ -780,7 +911,7 @@
       "fatigueTooltip": "Cliquer pour appliquer la fatigue",
       "favDis": "Favorisé & Défavorisé s'annulent mutuellement.",
       "favored": "Favorisé",
-      "favoredTitle": "Check this if the skill is favored",
+      "favoredTitle": "Cocher si la compétence est Favorisée",
       "firearms": "Armes à feu",
       "firedamage": "Applique des dommages de feu",
       "freePoss": " Le GM offre une possibilité!",
@@ -823,9 +954,10 @@
       "name": "Nom",
       "new": "Nouveau",
       "none": "Non",
+      "noMin10": " (Minimum de 10 non appliqué)",
       "noPoss": " Pas de Possibilité!",
       "noPossFree": "Pas de possibilité !<br>Confirmez le don ?",
-      "noRace": "No race added",
+      "noRace": "Pas de race choisie",
       "notes": "Notes",
       "number": "Nombre",
       "operator": "Opérateur",
@@ -836,9 +968,9 @@
       "outstandingResult": "Résultat spectaculaire",
       "passiveEffects": "Effets passifs",
       "perks": "Atouts",
+      "noPerksAdded": "Aucun Atout ajouté",
       "perksAbilities": "Atouts/Capa.",
       "pool": "Réserve d'action",
-      "noPerksAdded": "No perks added",
       "possibilities": "Possibilités",
       "possibilityByCosm": "Possibilités de Cosm",
       "possibilitypotential": "Potentiel de Possibilités",
@@ -852,8 +984,10 @@
       "race": "Race",
       "racialPerks": "Avantages raciaux",
       "range": "Portée",
+      "darkvision": "Vision dans le noir",
+      "removeGunner": "Supprimme l'opérateur de cette arme",
+      "removeOperator": "Supprimme l'opérateur de ce véhicule",
       "return": "Retour",
-      "darkvision": "Darkvision",
       "roll": "Lancer",
       "run": "Course",
       "running": "Course",
@@ -876,7 +1010,7 @@
       "soakRoll": "Jet de Réalité/Annulation dommages",
       "soakValue": " blessure(s) annulée(s), et tout le Choc.",
       "social": "Social",
-      "source": "Source",
+      "source": "Origine",
       "specialabilities": "Capacités spéciales",
       "specialAbility": "Capacité spéciale",
       "spell": "Sortilège",
@@ -900,15 +1034,15 @@
       "tough": "Rés",
       "toughness": "Résistance",
       "trademark": "Arme de prédilection",
-      "trademarkHint": "Trademark Weapon Perk pour l'arme utilisée",
+      "trademarkHint": "Atout Arme de prédilection pour l'arme utilisée",
       "type": "Type",
       "unarmed": "Mains nues",
       "unspent": "Disponibles",
       "up": "Un de plus",
       "update": "Mise à jour",
-      "usePreviousBonusLegend": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
-      "usePreviousBonustitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
-      "usePreviousBonusText": "Input BONUS NUMBER from previous test, not die total.",
+      "usePreviousBonusLegend": "Choisir entre (1) lancer le Dé et générer un bonus ou (2) saisir un bonus déjà généré par un jet en Actions Multiples.",
+      "usePreviousBonustitle": "Dans le cadre d'Actions multiples, cocher pour saisir le bonus généré par le test précédent.",
+      "usePreviousBonusText": "Saisir le BONUS, et pas le total du Dé.",
       "vehicle": "Véhicule",
       "vehicles": "Véhicules",
       "vitalArea": "Coup fatal",
@@ -1105,6 +1239,60 @@
       "d": " D",
       "noDSR": "Pas de RDT",
       "step": "ét."
+    },
+    "traits": {
+      "blackPowder": "Poudre Noire",
+      "bulky": "Encombrant",
+      "carbine": "Carabine",
+      "dazing": "Dazing",
+      "fatigues": "Fatigue",
+      "fragile": "Fragile",
+      "fullBody": "Intégrale",
+      "grapple": "Lutte",
+      "head": "T^te",
+      "ignoresArmor": "Ignore l'armure",
+      "lowestArmor": "Plus faible zone armurée",
+      "nonLethal": "Non Létal",
+      "painful": "Douleur",
+      "pistol": "Pistolet",
+      "quick": "Rapide",
+      "reload": "Rechargement",
+      "shotgun": "Canon Court",
+      "small": "Patit",
+      "stagger": "Déséquilibre",
+      "thrown": "Lancée",
+      "torso": "Torse",
+      "twoHanded": "Deux Mains",
+      "unwieldy": "Peu Maniable",
+      "wounding": "Wounding",
+      "shortBurst": "Rafale Courte",
+      "mediumBlast": "Zone d'effet moyenne",
+      "longBurst": "Rafale Longue",
+      "smallBlast": "Zone d'effet limitée",
+      "heavyBurst": "Rafale Nourrie",
+      "largeBlast": "Zone d'effet étendue",
+      "veryLargeBlast": "Zone d'effet très grande",
+      "hugeBlast": "Zone d'effet énorme",
+      "energyDamage": "Dommages d'Energie",
+      "fireDamage": "Dommages de Feu",
+      "forceDamage": "Dommages de Force",
+      "iceDamage": "Dommages de Froid",
+      "lightningDamage": "Dommages d'Electricité",
+      "energyArmor": "Armure vs Energie",
+      "fireArmor": "Armure vs Feu",
+      "forceArmor": "Armure vs Force",
+      "iceArmor": "Armure vs Froid",
+      "lightningArmor": "Armure vs Electricité",
+      "energyDefense": "Défense vs Energie",
+      "fireDefense": "Défense vs Feu",
+      "forceDefense": "Défense vs Force",
+      "iceDefense": "Défense vs Froid",
+      "lightningDefense": "Défense vs Electricité"
+    },
+    "traitGroup": {
+      "defense": "Défense",
+      "melee": "Mélée",
+      "ranged": "Distance"
     },
     "vehicleTypes": {
       "air": "Aérien",

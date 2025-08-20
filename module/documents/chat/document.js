@@ -4,7 +4,7 @@ import { torgeternity } from '../../config.js';
  * ChatMessage Implementation for Torg Eternity
  * renders the chatMessage from data every time the HTML is rendered
  */
-class ChatMessageTorg extends ChatMessage {
+export class ChatMessageTorg extends ChatMessage {
   template = '';
 
   async renderHTML(options) {
@@ -40,5 +40,3 @@ class ChatMessageTorg extends ChatMessage {
     return html;
   }
 }
-
-export { ChatMessageTorg };

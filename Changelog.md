@@ -1,5 +1,33 @@
 # TORG Eternity Changelog
 
+## v13.7.0 - Glory, Defeat and Intimidation
+
+- #63: If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
+- Add button on successful Approved Action to draw a destiny card for the relevant actor/target.
+- Click on Image in Chat Message to open the Actor's sheet.
+- Several language file updates provided by @Durak-Git
+- #569: Hold SHIFT while clicking on the POSSIBILITY button to remove the "minimum 10" on the roll.
+- #466: Update **Defeat** handling to display a button to apply the relevant effects, which will prompt for an attribute to modify if relevant.
+- Ensure use of Intimidation skill is detected as an Approved Action for Intimidate.
+- #416: Allow **Compendium Search** of Items to filter based on cosm, traits, secondaryAxiom, category (incl. Implant Type).
+  - (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/13300 - a one-line patch in foundry.js could get it working)
+- Display highest size and vulnerable modifier from all the targets in the Skill Test dialog (even though they are applied separately to each target during test resolution).
+
+### Bug Fixes
+
+- An error related to `approvedActions` would sometimes occur when rolling skill checks outside of combat.
+- Attacks against Vehicles should work once again.
+- Attacks by threats outside of combat works once again.
+
+### Translations
+
+- torgeternity.chatText.possibleGlory
+- torgeternity.chatText.possibilityTooltip
+- torgeternity.sheetLabels.noMin10
+- torgeternity.defeat... (all of them)
+- torgeternity.defeat.chatTitle
+
+
 ## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
 
 ### Improvements

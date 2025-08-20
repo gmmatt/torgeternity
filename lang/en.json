@@ -63,8 +63,8 @@
         "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
         "cantUseRealityWhileDisconnected": "You cannot use the reality skill as long as you are disconnected",
         "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
-        "isApprovedAction": "Successful Approved Action (draw a destiny card)",
-        "isApprovedDefend": "{name} successfully DEFENDed (draw a destiny card)",
+        "isApprovedAction": "Successful Approved Action",
+        "isApprovedDefend": "{name} successfully DEFENDed",
         "modifier": {
           "aimedShot": "Aimed Shot",
           "allOutAttack": "All out Attack",
@@ -146,7 +146,9 @@
       "passesCard1": "Passes",
       "passesCard2": "to",
       "playsCard": "Plays",
+      "possibleGlory": "!!! POSSIBLE GLORY !!!",
       "possibility": "Possibility",
+      "possibilityTooltip": "Hold SHIFT to roll Possibility without a minimum of 10",
       "possibleDisconnect": "Possible Disconnect",
       "rolled": "rolled",
       "showDetails": "Show Details",
@@ -242,10 +244,31 @@
     },
     "defeat": {
       "prompt": "{name} must make a Defeat Test",
-      "outstanding": "<p><strong>{name} is Knocked Out</strong></p>",
-      "good": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer an Injury that lasts until all Wounds are healed</p>",
-      "standard": "<p><strong>{name} is Knocked Out</strong></p><p>They suffer a permanent Injury</p>",
-      "failure": "<p><strong>{name} dies!</strong></p><p>They get one final, dramatic action before expiring (ignoring wound penalties)</p>"
+      "chatTitle": "Defeat Test ({attribute})",
+      "chooseAttribute": "Choose an Attribute",
+      "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
+      "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
+      "outstanding-success": {
+        "main": "Knocked Out",
+        "sub": ""
+      },
+      "good-success": {
+        "main": "Temporary Injury",
+        "sub": "You suffer an Injury that lasts until all Wounds are healed",
+        "effectName": "Temp. Injury"
+      },
+      "standard-success": {
+        "main": "Permanent Injury",
+        "sub": "You suffer a permanent Injury"
+      },
+      "failure": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+      },
+      "mishap": {
+        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+      }
     },
     "dialogPrompts": {
       "cardPooled": "In Pool?",
@@ -341,7 +364,7 @@
       "standard": "Standard (10)",
       "targetAirVehicles": "Target air vehicles or Dexterity",
       "targetAlteration": "Target Alteration",
-      "targetApportation": "Target Appportation",
+      "targetApportation": "Target Apportation",
       "targetBeastRiding": "Target Beast Riding",
       "targetComputers": "Target Computers",
       "targetCharisma": "Target Charisma",
@@ -930,6 +953,7 @@
       "name": "Name",
       "new": "New",
       "none": "None",
+      "noMin10": " (Minimum of 10 not applied)",
       "noPoss": " No Possibility!",
       "noPossFree": "No possibility !<br>Do you confirm the gift ?",
       "noRace": "No race added",

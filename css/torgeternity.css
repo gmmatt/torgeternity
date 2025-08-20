@@ -163,18 +163,18 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   background-size: cover;
 }
 
-.item.sheet.torgeternity .tab {
+.sheet.item.torgeternity .tab {
   font-family: Palatino;
   height: 100%;
 }
 
-.item.sheet.torgeternity .window-content header.sheet-header {
+.sheet.item.torgeternity .window-content header.sheet-header {
   margin-right: 12px;
 }
 
 /* Actor/Item/Journal sheet */
-.actor.sheet.torgeternity .window-content,
-.item.sheet.torgeternity .window-content {
+.sheet.actor.torgeternity .window-content,
+.sheet.item.torgeternity .window-content {
   background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   padding: 8px 0px 8px 8px;
@@ -2956,27 +2956,40 @@ div.readme a.compendium {
   }
 
   .torgeternity-message-header {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr;
+    display: flex;
+    flex-direction: row;
     border: none;
-    background: transparent;
+    background: rgba(0, 0, 0, 5%);
 
     img {
       border: none;
+      flex: 0;
+      max-width: 20%;
     }
-  }
 
-  .message-header .flavor-text {
-    font-size: unset;
-  }
+    .torgeternity-skill-description {
+      width: 100%;
+      flex: 1;
 
-  .message-header .torgeternity-actor-icon {
-    max-width: 50px;
-    grid-column: 1 / 1;
-    grid-row: 1 / 2;
-    aspect-ratio: 1/1;
-    border: none;
+      .skill-chat-title {
+        font-size: 20px;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .skill-unskilled-label {
+        font-size: 12px;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        font-family: "Palatino Linotype";
+        width: 100%;
+      }
+    }
   }
 
   table td {
@@ -2992,23 +3005,6 @@ div.readme a.compendium {
   .chat-title {
     font-size: 18px;
     display: flex;
-  }
-
-  .skill-chat-title {
-    font-size: 20px;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-  }
-
-  .skill-unskilled-label {
-    font-size: 12px;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-    font-family: "Palatino Linotype";
-    /*width: 100%;*/
-    grid-row: 2/2;
   }
 
   .skill-roll-disconnect-label {
@@ -3084,6 +3080,29 @@ div.readme a.compendium {
     margin: 0.5em 0 0 0;
   }
 
+  .skill-roll-defeat {
+    font-family: "Palatino Linotype";
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+    font-size: 18px;
+
+    a.defeat {
+      font-family: "Palatino Linotype";
+      text-shadow: 0 0 5px darkorange;
+
+      &:hover {
+        text-shadow: 0 0 10px #3bb3b3;
+      }
+    }
+
+    &.defeat-sub {
+      font-style: italic;
+      font-size: smaller;
+    }
+  }
+
   .contradiction-roll {
     font-family: "Palatino Linotype";
 
@@ -3145,35 +3164,6 @@ div.readme a.compendium {
   }
 }
 
-.torgeternity-skill-description {
-  width: 100%;
-  /*grid-column: 2 / 4;*/
-  /*grid-row: 1 / 2;*/
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: grid;
-}
-
-.message-header .torgeternity-target-icon {
-  max-width: 50px;
-  grid-column: 5 / 5;
-  grid-row: 1 / 2;
-  aspect-ratio: 1/1;
-  border: none;
-}
-
-p.skill-chat-title.unskilled {
-  grid-row: 1/1;
-}
-
-p.skill-chat-title.skilled {
-  justify-content: center;
-  align-items: center;
-  grid-row: span 2;
-  display: grid;
-}
-
 .dice-tooltip .dice-rolls {
   display: flex;
   flex-direction: row;
@@ -3187,6 +3177,12 @@ p.skill-chat-title.skilled {
   flex-wrap: wrap;
   justify-content: flex-start;
   justify-content: space-around;
+}
+
+.chat-message .possible-glory {
+  text-align: center;
+  color: darkGreen;
+  text-shadow: #ffcc00 1px 0 10px;
 }
 
 .chat-message .roll-button {
@@ -3205,6 +3201,11 @@ p.skill-chat-title.skilled {
 
   &.notPreferred {
     color: gray;
+  }
+
+  &.drawDestiny {
+    display: inline;
+    margin-left: 1em;
   }
 }
 
