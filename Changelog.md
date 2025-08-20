@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT VERSION
+## v13.7.0 - Glory, Defeat and Intimidation
 
 - #63: If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
 - Add button on successful Approved Action to draw a destiny card for the relevant actor/target.
