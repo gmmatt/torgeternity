@@ -42,6 +42,7 @@ const DEFAULT_TEST = {
   // fixed-modifiers
   stymiedModifier: 0,
   darknessModifier: 0,
+  waitingModifier: 0,
   woundModifier: 0,
   sizeModifier: 0,
   speedModifier: 0,
@@ -157,6 +158,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
     context.test.stymiedModifier = myActor.statusModifiers.stymied;
     context.test.darknessModifier = myActor.statusModifiers.darkness;
+    context.test.waitingModifier = myActor.statusModifiers.waiting;
 
     // Set Modifiers for Vehicles
     if (this.test.testType === 'chase') {
@@ -200,6 +202,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       (context.test?.woundModifier ||
         context.test?.stymiedModifier ||
         context.test?.darknessModifier ||
+        context.test?.waitingModifier ||
         context.test?.sizeModifier ||
         context.test?.vulnerableModifier ||
         context.test?.speedModifier ||

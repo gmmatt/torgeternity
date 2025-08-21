@@ -85,6 +85,7 @@
           "targetVeryVulnerable": "Target Very Vulnerable",
           "targetVulnerable": "Target Vulnerable",
           "veryStymied": "Very Stymied",
+          "waiting": "Waiting",
           "wounds": "Wounds"
         },
         "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",

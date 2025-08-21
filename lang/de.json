@@ -85,6 +85,7 @@
           "targetVeryVulnerable": "Ziel sehr verwundbar",
           "targetVulnerable": "Ziel verwundbar",
           "veryStymied": "Sehr Angeschlagen",
+          "waiting": "Warten",
           "wounds": "Wunden"
         },
         "needTarget": "Der ausgeweitete Angriffswurf kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und erneut versuchen.",

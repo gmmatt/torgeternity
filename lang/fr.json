@@ -86,6 +86,7 @@
           "targetVeryVulnerable": "cible très vulnérable",
           "targetVulnerable": "cible vulnérable",
           "veryStymied": "très déstabilisé",
+          "waiting": "Attendre",
           "wounds": "blessures"
         },
         "needTarget": "Impossible d’effectuer un jet avancé sans cible. Ciblez un token puis réessayez.",

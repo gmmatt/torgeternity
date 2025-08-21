@@ -86,6 +86,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       stymied: 0,
       vulnerable: 0,
       darkness: 0,
+      waiting: 0,
     };
   }
 
@@ -101,6 +102,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       stymied: this.statuses.has('veryStymied') ? -4 : this.statuses.has('stymied') ? -2 : 0,
       vulnerable: this.statuses.has('veryVulnerable') ? 4 : this.statuses.has('vulnerable') ? 2 : 0,
       darkness: this.statuses.has('pitchBlack') ? -6 : this.statuses.has('dark') ? -4 : this.statuses.has('dim') ? -2 : 0,
+      waiting: this.statuses.has('waiting') ? -2 : 0,
     };
 
     // Skillsets

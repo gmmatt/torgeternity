@@ -221,6 +221,11 @@ export async function renderSkillChat(test) {
       test.modifiers += test.darknessModifier;
     }
 
+    if (test.waitingModifier < 0) {
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.waiting', test.waitingModifier));
+      test.modifiers += test.waitingModifier;
+    }
+
     if (test.movementModifier < 0) {
       modifiers.push(modifierString('torgeternity.chatText.check.modifier.running', test.movementModifier));
       test.modifiers += -2;

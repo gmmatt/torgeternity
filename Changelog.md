@@ -7,6 +7,7 @@
   - Waiting Combatants are placed at the end of the Combat Tracker.
   - Allow Waiting status to be toggled in the Combat Tracker.
   - Automatically cancel the Waiting status when a combatant's turn ends.
+  - Apply the "-2" modifier to any Test Check while an Actor is "waiting".
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 

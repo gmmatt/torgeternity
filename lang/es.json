@@ -86,6 +86,7 @@
           "targetVeryVulnerable": "Objetivo muy Vulnerable",
           "targetVulnerable": "Objetivo Vulnerable",
           "veryStymied": "Muy Impedido",
+          "waiting": "Espera",
           "wounds": "Heridas"
         },
         "needTarget": "No se puede realizar una tirada avanzada sin objetivo. Selecciona objetivo y prueba de nuevo.",
