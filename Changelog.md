@@ -1,5 +1,10 @@
 # TORG Eternity Changelog
 
+## NEXT RELEASE
+
+- If the Foundry server is running on HTTPS: then open the Torg Reference website in a separate tab.
+- Add toggle for WAITING into combat tracker, and cancel WAITING status when actor's turn ends.
+
 ## v13.7.0 - Glory, Defeat and Intimidation
 
 - #63: If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".

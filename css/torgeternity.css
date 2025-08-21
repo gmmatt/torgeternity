@@ -2763,7 +2763,7 @@ nav#controls,
 
   .player-dsr-counter {
     flex: 0;
-    margin-right: 2em;
+    margin-right: 1em;
   }
 
   .player-dsr-token {
@@ -2837,6 +2837,10 @@ nav#controls,
       .combatant-control {
         font-size: 14px;
         text-shadow: 1px 1px 4px var(--color-shadow-dark);
+
+        &[data-action="toggleWaiting"] {
+          padding: 0 0.25rem;
+        }
       }
 
       &:not(.turnDone) {

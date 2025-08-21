@@ -22,6 +22,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       'heroesFirst': torgeternityCombatTracker.#onHeroesFirst,
       'villainsFirst': torgeternityCombatTracker.#onVillainsFirst,
       'hasPlayed': torgeternityCombatTracker.#onHasPlayed,
+      'toggleWaiting': torgeternityCombatTracker.#onToggleWaiting,
       'dsrCounter': torgeternityCombatTracker.#incStage,
       'playerDsrCounter': torgeternityCombatTracker.#incPlayerStage,
       'hasFinished': torgeternityCombatTracker.#onHasFinished,
@@ -74,6 +75,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
         .map(card => { return { name: card.name, img: card.img } }) ?? [];
     }
     context.turnTaken = combatant.turnTaken;
+    context.isWaiting = combatant.actor.hasStatusEffect('waiting');
+    context.waitingImg = CONFIG.statusEffects.find(e => e.id === 'waiting')?.img;
     context.actorType = combatant.actor?.type;
     const dispositions = {
       [CONST.TOKEN_DISPOSITIONS.SECRET]: "secret",
@@ -139,6 +142,16 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (turnTaken) this.viewed.dramaEndOfTurn(combatant);
   }
 
+  /**
+ * Toggle the Wait status of a combatant.
+ * @param event
+ */
+  static async #onToggleWaiting(event, button) {
+    const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
+    const combatant = this.viewed?.combatants.get(combatantId);
+    if (!combatant) return;
+    combatant.actor.toggleStatusEffect('waiting');
+  }
   /**
  *
  */
