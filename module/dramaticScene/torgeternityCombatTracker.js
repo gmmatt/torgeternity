@@ -106,7 +106,9 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    * Add an option to Shuffle the Drama Deck
    */
   _getCombatContextOptions() {
-    const options = super._getCombatContextOptions();
+    // Remove Initiative options:
+    const options = super._getCombatContextOptions().filter(
+      opt => opt.name !== 'COMBAT.InitiativeReset');
     options.unshift({
       name: "torgeternity.dramaCard.getPreviousDrama",
       icon: '<i class="fa-solid fa-up-down"></i>',
@@ -120,6 +122,12 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     });
     return options;
   }
+
+  _getEntryContextOptions() {
+    return super._getEntryContextOptions().filter(
+      opt => opt.name !== 'COMBAT.CombatantReroll' && opt.name !== 'COMBAT.CombatantClear')
+  }
+
   /**
    * A player has pressed the button at the bottom of the combat tracker to end "their" turn.
    * @param event
