@@ -174,6 +174,7 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "toggleDramatic": "Zwischen Standard- und dramatischer Szene umschalten",
       "toggleWaiting": "Toggle the Wait state of this combatant",
+      "waitingCombatants": "Waiting Combatants",
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
       "nextNew": "neue Runde (neue Dramakarte)",

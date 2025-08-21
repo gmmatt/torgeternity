@@ -63,6 +63,13 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
   }
 
+  async _prepareTrackerContext(context, options) {
+    await super._prepareTrackerContext(context, options);
+    if (!this.viewed) return;
+    context.activeTurns = context.turns?.filter(c => !c.isWaiting) ?? [];
+    context.waiting = context.turns?.filter(c => c.isWaiting) ?? [];
+  }
+
   async _prepareTurnContext(combat, combatant, index) {
     const context = await super._prepareTurnContext(combat, combatant, index);
 

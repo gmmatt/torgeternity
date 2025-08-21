@@ -3,7 +3,10 @@
 ## NEXT RELEASE
 
 - If the Foundry server is running on HTTPS: then open the Torg Reference website in a separate tab.
-- Add toggle for WAITING into combat tracker, and cancel WAITING status when actor's turn ends.
+- **Waiting** supported in Combat Tracker:
+  - Waiting Combatants are placed at the end of the Combat Tracker.
+  - Allow Waiting status to be toggled in the Combat Tracker.
+  - Automatically cancel the Waiting status when a combatant's turn ends.
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 

@@ -1,7 +1,7 @@
 <ol class="combat-tracker plain">
-  {{#each turns}}
-    <li class="combatant flexrow {{css}}" data-combatant-id="{{id}}" data-action="activateCombatant">
 
+  {{#*inline "combatant"}}
+    <li class="combatant flexrow {{css}}" data-combatant-id="{{id}}" data-action="activateCombatant">
       <div class="flexrow">
         <img class="token-image" src="{{img}}" alt="{{name}}" loading="lazy">
         <div class="token-name flexcol">
@@ -79,5 +79,16 @@
         </div>
       </div>
     </li>
+  {{/inline}}
+
+  {{#each activeTurns}}
+    {{> combatant}}
   {{/each}}
+
+  {{#if waiting}}
+    <h3 class="waiting">{{localize 'torgeternity.combat.waitingCombatants'}}</h3>
+    {{#each waiting}}
+      {{> combatant}}
+    {{/each}}
+  {{/if}}
 </ol>

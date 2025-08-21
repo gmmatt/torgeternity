@@ -175,6 +175,7 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp",
       "toggleDramatic": "Bascule le combat entre une scène Normale et une scène Dramatique",
       "toggleWaiting": "Toggle the Wait state of this combatant",
+      "waitingCombatants": "Waiting Combatants",
       "endMyTurn": "Terminé",
       "nextKeep": "Nouveau round (garder la carte actuelle)",
       "nextNew": "Nouveau round (nouvelle carte Action)",

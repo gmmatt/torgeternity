@@ -175,6 +175,7 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "toggleDramatic": "Toggle between Standard and Dramatic Combat Resolution",
       "toggleWaiting": "Toggle the Wait state of this combatant",
+      "waitingCombatants": "Waiting Combatants",
       "endMyTurn": "Done",
       "nextKeep": "Sigu. Turno (Mantener Carta)",
       "nextNew": "Sigu. Turno (Nueva Carta)",
