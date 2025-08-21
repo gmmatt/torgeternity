@@ -590,6 +590,7 @@
       "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène de combat.",
       "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
       "openIssue": "Votre navigateur va ouvrir un onglet pour signaler un problème.",
+      "openReference": "Your browser will open a new page to join the Torg Reference website",
       "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele.",
       "failureBDResolution": "Echec de résolution avec le BD",
       "ammoValueExceedsMax": "La quantité de munitions dépasse la capacité du chargeur dans l'arme {a}. La valeur va être réduite à son maximum.",

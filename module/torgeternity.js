@@ -439,19 +439,25 @@ Hooks.on("renderSettings", async (app, html) => {
             icon: 'fa-solid fa-expand-arrows-alt',
             label: 'torgeternity.dialogWindow.externalLinks.reference',
             callback: () => {
-              new foundry.applications.sidebar.apps.FrameViewer({  // will be removed in Foundry V15
-                url: 'http://torg-gamereference.com/index.php',
-                window: {
-                  title: 'torg game reference',
-                  resizable: true,
-                },
-                position: {
-                  top: 200,
-                  left: 200,
-                  width: 520,
-                  height: 520,
-                }
-              }).render({ force: true });
+              // We can only inline when the Foundry server is running on HTTP, not HTTPS
+              if (location.protocol === 'https:') {
+                ui.notifications.info(game.i18n.localize('torgeternity.notifications.openReference'));
+                window.open('http://torg-gamereference.com/index.php', '_blank');
+              } else {
+                new foundry.applications.sidebar.apps.FrameViewer({  // will be removed in Foundry V15
+                  url: 'http://torg-gamereference.com/index.php',
+                  window: {
+                    title: 'torg game reference',
+                    resizable: true,
+                  },
+                  position: {
+                    top: 200,
+                    left: 200,
+                    width: 520,
+                    height: 520,
+                  }
+                }).render({ force: true });
+              }
             },
           },
           {
