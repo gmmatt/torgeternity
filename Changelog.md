@@ -2,12 +2,13 @@
 
 ## NEXT RELEASE
 
-- If the Foundry server is running on HTTPS: then open the Torg Reference website in a separate tab.
-- **Waiting** supported in Combat Tracker:
+- If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
+- Automation of **Waiting**:
   - Waiting Combatants are placed at the end of the Combat Tracker.
   - Allow Waiting status to be toggled in the Combat Tracker.
   - Automatically cancel the Waiting status when a combatant's turn ends.
   - Apply the "-2" modifier to any Test Check while an Actor is "waiting".
+- Move some hard-coded numbers to their CONST equivalent references.
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 
