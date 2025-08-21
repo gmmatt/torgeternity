@@ -9,6 +9,7 @@
   - Automatically cancel the Waiting status when a combatant's turn ends.
   - Apply the "-2" modifier to any Test Check while an Actor is "waiting".
 - Move some hard-coded numbers to their CONST equivalent references.
+- Newly-created Threats will have their prototype tokens NOT linked to the Actor.
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 

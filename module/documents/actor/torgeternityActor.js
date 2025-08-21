@@ -484,7 +484,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
           img: data.img ?? 'systems/torgeternity/images/characters/threat.webp',
           prototypeToken: {
             sight: { enabled: true },
-            //actorLink: false,
+            actorLink: false,
             disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
             displayName: CONST.TOKEN_DISPLAY_MODES.OWNER,
             // Core parameters
