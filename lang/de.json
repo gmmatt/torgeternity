@@ -251,16 +251,16 @@
       "chooseAttribute": "Wähle ein Attribut",
       "tempInjury": "Du erleidest eine vorrübergehende Verletzung. {attribute} wird durch eine Effekt reduziert (Minus 1)",
       "permInjury": "Du erleidest eine permanente Verletzung. {attribute} wurde um 1 reduziert",
-      "outstanding-success": {
+      "outstanding": {
         "main": "{name} geht K.O.",
         "sub": ""
       },
-      "good-success": {
+      "good": {
         "main": "Vorrübergehende Verletzung",
         "sub": "Und erleidet eine Verletzung, die anhält, bis alle seine Wunden geheilt sind",
         "effectName": "Temp. Verletzung"
       },
-      "standard-success": {
+      "standard": {
         "main": "Permanente Verletzung",
         "sub": "Und erleidet eine permanente Verletzung"
       },

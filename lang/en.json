@@ -251,16 +251,16 @@
       "chooseAttribute": "Choose an Attribute",
       "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
       "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
-      "outstanding-success": {
+      "outstanding": {
         "main": "Knocked Out",
         "sub": ""
       },
-      "good-success": {
+      "good": {
         "main": "Temporary Injury",
         "sub": "You suffer an Injury that lasts until all Wounds are healed",
         "effectName": "Temp. Injury"
       },
-      "standard-success": {
+      "standard": {
         "main": "Permanent Injury",
         "sub": "You suffer a permanent Injury"
       },

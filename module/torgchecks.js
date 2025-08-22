@@ -9,6 +9,15 @@ export const TestResult = {
   GOOD: 3,
   OUTSTANDING: 4
 }
+
+export const TestResultKey = { // with .main or .sub
+  [TestResult.MISHAP]: 'mishap',
+  [TestResult.FAILURE]: 'failure',
+  [TestResult.STANDARD]: 'standard',
+  [TestResult.GOOD]: 'good',
+  [TestResult.OUTSTANDING]: 'outstanding'
+}
+
 /**
  *
  * @param test
@@ -547,8 +556,12 @@ export async function renderSkillChat(test) {
       else if (test.result === TestResult.GOOD)
         test.defeatInjury = 'temporary';
 
-      test.defeatMain = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.main`, { name: testActor.name });
-      test.defeatSub = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.sub`, { name: testActor.name });
+      // Use non-translated strings to lookup key
+      const RESULT = {
+
+      }
+      test.defeatMain = game.i18n.format(`torgeternity.defeat.${TestResultKey[test.result]}.main`, { name: testActor.name });
+      test.defeatSub = game.i18n.format(`torgeternity.defeat.${TestResultKey[test.result]}.sub`, { name: testActor.name });
     }
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed

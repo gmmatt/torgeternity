@@ -12,6 +12,10 @@
 - Newly-created Threats will have their prototype tokens NOT linked to the Actor.
 - Remove Initiative options from the Combat Tracker context menus (combat and combatant).
 
+### Bug Fixes
+
+- Ensure that the language keys are read correctly for Defeat Test results.
+
 ## v13.7.0 - Glory, Defeat and Intimidation
 
 - #63: If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".

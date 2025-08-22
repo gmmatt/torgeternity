@@ -252,16 +252,16 @@
       "chooseAttribute": "Choisir un Attribut",
       "tempInjury": "Vous souffrez d'une Séquelle temporaire. Votre {attribute} est réduit par un effet (moins 1)",
       "permInjury": "Vous souffrez d'une Séquelle permanente. Votre {attribute} est réduit de 1",
-      "outstanding-success": {
+      "outstanding": {
         "main": "KO",
         "sub": ""
       },
-      "good-success": {
+      "good": {
         "main": "Séquelle temporaire",
         "sub": "Votre Séquelle perdure jusqu'aux soins complets",
         "effectName": "Séquelle Temp."
       },
-      "standard-success": {
+      "standard": {
         "main": "Séquelle permanente",
         "sub": "Vous subissez une Séquelle permanente"
       },
