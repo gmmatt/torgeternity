@@ -16,6 +16,12 @@
 
 - Ensure that the language keys are read correctly for Defeat Test results.
 
+### New translations
+
+- 'openReference' - popup message when opening Torg Reference web site in a new tab
+- 'toggleWaiting' - tooltip for the waiting toggle button in the Combat Tracker
+- 'waitingCombatants' - the Title for the lower section in the Combat Tracker
+
 ## v13.7.0 - Glory, Defeat and Intimidation
 
 - #63: If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
