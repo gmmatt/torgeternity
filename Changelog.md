@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT RELEASE
+## NEXT RELEASE - WAITING
 
 - If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
 - Automation of **Waiting**:
