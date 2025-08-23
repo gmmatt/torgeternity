@@ -342,7 +342,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     target.applyDamages(damage.shocks, damage.wounds);
 
     // Transfer Effects from the Weapon (& Ammo) to the target.
-    // Only those NOT marked as "transfer to actor" (since those would be affecting the Attacker)
+    // Only those marked as "Transfer on Attack"
     if (!test.itemId) return;
     const { actor } = getChatActor(button);
     const item = actor.items.get(test.itemId);
