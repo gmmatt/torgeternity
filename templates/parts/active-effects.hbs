@@ -1,16 +1,18 @@
 <section class="tab effects {{tabs.effects.cssClass}}" data-group="{{tabs.effects.group}}"
   data-tab="{{tabs.effects.id}}">
 
-  <div class="list-section-heading"><span>{{localize 'torgeternity.sheetLabels.conditions'}}</span></div>
-  <div class="conditions flexrow">
-    {{#each config.statusEffects as |condition|}}
-      <a class="condition {{checked (lookup @root.statusEffects condition.id)}}"
-        data-action="toggleStatusEffect"
-        data-control="{{condition.id}}">
-        <img class="{{TorgIsSvg condition.img}}" src="{{condition.img}}" data-tooltip="{{condition.name}}" />
-      </a>
-    {{/each}}
-  </div>
+  {{#if showConditions}}
+    <div class="list-section-heading"><span>{{localize 'torgeternity.sheetLabels.conditions'}}</span></div>
+    <div class="conditions flexrow">
+      {{#each config.statusEffects as |condition|}}
+        <a class="condition {{checked (lookup @root.statusEffects condition.id)}}"
+          data-action="toggleStatusEffect"
+          data-control="{{condition.id}}">
+          <img class="{{TorgIsSvg condition.img}}" src="{{condition.img}}" data-tooltip="{{condition.name}}" />
+        </a>
+      {{/each}}
+    </div>
+  {{/if}}
 
   <div class="list-section-heading"><span>{{localize 'torgeternity.sheetLabels.effects'}}</span></div>
   <ol class="items-list effects-list">

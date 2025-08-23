@@ -209,6 +209,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     context.ammunitions = context.items.filter(item => item.type === 'ammunition');
     context.statusEffects = {};
     this.actor.statuses.forEach(status => context.statusEffects[status] = true);
+    context.showConditions = true;
 
     if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 
