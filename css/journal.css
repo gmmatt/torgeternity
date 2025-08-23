@@ -112,6 +112,15 @@ body#tinymce.mce-content-body {
     background-size: 100% 100%;*/
     color: black;
     padding: 0 5px;
+
+    h2,
+    h3 {
+      color: black;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6):not(:first-child) {
+      margin-top: 1rem;
+    }
   }
 
   .journal-sidebar {
