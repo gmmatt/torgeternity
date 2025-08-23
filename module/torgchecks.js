@@ -557,9 +557,6 @@ export async function renderSkillChat(test) {
         test.defeatInjury = 'temporary';
 
       // Use non-translated strings to lookup key
-      const RESULT = {
-
-      }
       test.defeatMain = game.i18n.format(`torgeternity.defeat.${TestResultKey[test.result]}.main`, { name: testActor.name });
       test.defeatSub = game.i18n.format(`torgeternity.defeat.${TestResultKey[test.result]}.sub`, { name: testActor.name });
     }

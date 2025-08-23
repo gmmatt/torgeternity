@@ -180,7 +180,7 @@
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "toggleDramatic": "Toggle between Standard and Dramatic Combat Resolution",
-      "toggleWaiting": "Toggle the Wait state of this combatant",
+      "toggleWaiting": "Toggle the Waiting state of this combatant",
       "waitingCombatants": "Waiting Combatants",
       "endMyTurn": "Done",
       "nextKeep": "Next Round (Keep Current Card)",
