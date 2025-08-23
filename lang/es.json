@@ -153,9 +153,9 @@
       "passesCard1": "Pasa",
       "passesCard2": "a",
       "playsCard": "Juega",
-      "possibleGlory": "!!! POSSIBLE GLORY !!!",
+      "possibleGlory": "¡¡¡POSIBLE GLORIA!!!",
       "possibility": "POSIB",
-      "possibilityTooltip": "Hold SHIFT to roll Possibility without a minimum of 10",
+      "possibilityTooltip": "Pulsa MAY para tirar por una Posibilidad sin un mínimo de 10",
       "possibleDisconnect": "¡POSIBLE DESCONEXIÓN!",
       "rolled": "sacado",
       "showDetails": "Mostrar detalles",
@@ -271,11 +271,11 @@
         "sub": "Sufres una Lesión permanente"
       },
       "failure": {
-        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "main": "&#x1F480;&#x1F480;&#x1F480; MUERTE &#x1F480;&#x1F480;&#x1F480;",
         "sub": "Puedes hacer una última acción dramática antes de expirar (ignorando los penalizadores por heridas)"
       },
       "mishap": {
-        "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
+        "main": "&#x1F480;&#x1F480;&#x1F480; MUERTE &#x1F480;&#x1F480;&#x1F480;",
         "sub": "Puedes hacer una última acción dramática antes de expirar (ignorando los penalizadores por heridas)"
       }
     },
@@ -398,7 +398,7 @@
       "targetMeleeWeapons": "contra Armas cuerpo a cuerpo o Destreza",
       "targetMissileWeapons": "contra Armas de proyectiles",
       "targetMind": "contra Mente",
-      "targetPersuasion": "Target Persuasion",
+      "targetPersuasion": "contra Persuasión",
       "targetPrecognition": "contra Precognición",
       "targetProfession": "contra Profesión",
       "targetReality": "contra Realidad",
@@ -1362,7 +1362,7 @@
       "periculumAp": "Valor de Perforación de Armadura",
       "macroHub": {
         "buttonTitle": "MacroHub",
-        "title": "The Torg Eternity Macro Hub"
+        "title": "Central de macros de Torg Eternity"
       }
     }
   }
