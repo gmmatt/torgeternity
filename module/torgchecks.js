@@ -650,6 +650,7 @@ export async function renderSkillChat(test) {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
       owner: test.actor,
+      rolls: test.diceroll,
       flags: {
         torgeternity: {
           test,
@@ -657,7 +658,10 @@ export async function renderSkillChat(test) {
           template: 'systems/torgeternity/templates/chat/skill-card.hbs',
         },
       },
-    }));
+    },
+      {
+        rollMode: game.settings.get("core", "rollMode")
+      }));
     first = false;
   } // for each target
 
