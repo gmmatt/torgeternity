@@ -47,15 +47,6 @@
 - Attacks against Vehicles should work once again.
 - Attacks by threats outside of combat works once again.
 
-### Translations
-
-- torgeternity.chatText.possibleGlory
-- torgeternity.chatText.possibilityTooltip
-- torgeternity.sheetLabels.noMin10
-- torgeternity.defeat... (all of them)
-- torgeternity.defeat.chatTitle
-
-
 ## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
 
 ### Improvements
