@@ -18,8 +18,8 @@
   "torgeternity": {
     "activeEffect": {
       "transferOnAttack": {
-        "label": "Apply Effect on Attack",
-        "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
+        "label": "Aplicar efecto al ataque",
+        "hint": "Si está marcado, este Efecto se aplicará al actor objetivo cuando el objeto al que pertenece el Efecto forme parte de un ataque (bien como arma, bien como munición)"
       }
     },
     "attackTypes": {
@@ -59,18 +59,18 @@
       "attack": "Ataque",
       "attributeTestLabel": "Atributo",
       "baseDamage": "Daño Base",
-      "bonus": "Bonus",
+      "bonus": "Bonificación",
       "bonusCard": "CAR+3",
       "bonusDamage": "Daño Adicional",
       "bonusDice": "DB",
-      "chase": "Chase Test",
+      "chase": "Prueba de persecución",
       "check": {
-        "cantUseSkillRecquired": "No se puede utilizar sin 1 adición en la habilidad requerida.",
-        "cantUseUntrained": "No se puede utilizar sin entrenar (mínimo 1 adición).",
-        "cantUseRealityWhileDisconnected": "No puedes utilizar la capacidad de la realidad mientras estés desconectado.",
-        "interactionNeedTarget": "No se puede intentar la prueba de ataque de interacción sin un objetivo. Selecciona un objetivo e inténtalo de nuevo.",
-        "isApprovedAction": "Successful Approved Action (draw a destiny card)",
-        "isApprovedDefend": "{name} successfully DEFENDed (draw a destiny card)",
+        "cantUseSkillRecquired": "No se puede usar sin al menos 1 adición en la habilidad requerida.",
+        "cantUseUntrained": "No se puede usar sin entrenar (mínimo 1 adición).",
+        "cantUseRealityWhileDisconnected": "No puedes usar la habilidad Realidad mientras estés Desconectado.",
+        "interactionNeedTarget": "No se puede intentar una prueba de ataque de interacción sin un objetivo. Selecciona un objetivo e inténtalo de nuevo.",
+        "isApprovedAction": "Acción aprobada completada (roba una carta de destino)",
+        "isApprovedDefend": "{name} ha logrado DEFENDERSE con éxito (roba una carta de destino)",
         "modifier": {
           "aimedShot": "Tiro Apuntado",
           "allOutAttack": "Ataque Total",
@@ -102,7 +102,7 @@
           "damage": "Daño",
           "diceTotal": "Resultado del dado",
           "failure": "Fallo",
-          "fragileBroken": "The fragile {itemName} breaks",
+          "fragileBroken": "El frágil {itemName} se rompe",
           "goodSuccess": "Éxito Bueno",
           "mishape": "Percance",
           "new": "Nuevo total de tirada",
@@ -118,35 +118,35 @@
         "testUnsuccessfull": "Prueba fallida"
       },
       "contradiction": {
-        "alreadyDisconnected": "is already disconnected",
-        "noContradiction": "has no contradiction",
-        "hasDisconnected": "has <strong>disconnected</strong>!!!",
-        "notDisconnected": "has not disconnected",
-        "possibleContradiction": "has a possible contradiction",
-        "contradictionCheck": "Contradiction Check",
-        "checkTooltip": "<strong>{name}</strong> rolls for contradiction"
+        "alreadyDisconnected": "ya está Desconectado",
+        "noContradiction": "no tiene contradiciones",
+        "hasDisconnected": "ha <strong>desconectado</strong>",
+        "notDisconnected": "no ha desconectado",
+        "possibleContradiction": "tiene una posible contradicción",
+        "contradictionCheck": "Prueba de Contradicción",
+        "checkTooltip": "<strong>{name}</strong> tira por Contradicción"
       },
       "disconnection": {
-        "base": "{itemName} caused DISCONNECTION ({diceTotal}):",
+        "base": "{itemName} ha provoado DESCONEXIÓN ({diceTotal}):",
         "actorLabel": "{axiom}: {itemAxiom} > {actorType} {actorAxiom}",
-        "zoneLabel": "{axiom}: {itemAxiom} > Zone {zoneAxiom}",
-        "perk": "{itemName} was used outside its cosm"
+        "zoneLabel": "{axiom}: {itemAxiom} > Zona {zoneAxiom}",
+        "perk": "{itemName} se ha usado fuera de su Cosmos"
       },
       "damage": "Daño",
       "dieTotal": "DADOS:",
       "discardsCard": "Descarta",
       "drama": "DRAMA",
-      "dramaCard": "Carta Drama",
+      "dramaCard": "Carta de Drama",
       "drawsCard": "Roba de",
       "favored": "Aprobada",
       "hero": "HÉROE",
-      "heroCard": "Carta Héroe",
+      "heroCard": "Carta de Héroe",
       "hideDetails": "Ocultar detalles",
-      "notPermittedDSR": "Next DSR step {step} not permitted by Drama Card",
+      "notPermittedDSR": "La carta de Drama no permite el paso {step} de la RDH",
       "modifiers": "Modificadores",
-      "noAmmo": "Failed to fire your weapon, no bullets left.",
-      "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
-      "notSufficientAmmo": "You do not have a sufficent amount of bullets in your weapon to use this burst attack, this test cannot be performed.",
+      "noAmmo": "No puedes disparar tu arma, no le quedan balas.",
+      "noAmmoPosessing": "No te queda munición en el inventario. No puedes realizar la acción.",
+      "notSufficientAmmo": "No te quedan suficientes balas en el arma para usar este ataque con ráfaga; no puedes llevar a cabo esta prueba.",
       "reloaded": "Has recargado tu arma {a}.",
       "ammoLabel": "balas restantes",
       "notes": "Notas",
@@ -157,7 +157,7 @@
       "possibility": "POSIB",
       "possibilityTooltip": "Hold SHIFT to roll Possibility without a minimum of 10",
       "possibleDisconnect": "¡POSIBLE DESCONEXIÓN!",
-      "rolled": "rolled",
+      "rolled": "sacado",
       "showDetails": "Mostrar detalles",
       "skillTestLabel": "Valor Habilidad",
       "stunt": "Prueba para truco",
@@ -167,7 +167,7 @@
       "value": "Valor",
       "vehicleBase": "Prueba de manejo de vehículo",
       "mayCauseContradiction": "Los dones con este símbolo dependen de las Leyes Mundiales de su cosmos y pueden provocar contradicciones cuando se usan fuera de ese cosmos.",
-      "changeAmmoType": "{weapon} switched ammunition to {ammo}",
+      "changeAmmoType": "{weapon} cambiado a tipo de munición {ammo}",
       "ammoFull": "El arma \"{a}\" ya está completamente cargada."
     },
     "clearances": {
@@ -180,8 +180,8 @@
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "toggleDramatic": "Alternar entre resolución de combate convencional y Escena Dramática",
-      "toggleWaiting": "Toggle the Wait state of this combatant",
-      "waitingCombatants": "Waiting Combatants",
+      "toggleWaiting": "Cambiar el estado de Espera de este combatiente",
+      "waitingCombatants": "Combatientes en Espera",
       "endMyTurn": "Acabar",
       "nextKeep": "Sig. turno (Mantener carta)",
       "nextNew": "Sig. turno (Nueva carta)",
@@ -199,7 +199,7 @@
       }
     },
     "core": {
-      "forceDarkModeHint": "TORG only works with Applications set to Dark mode"
+      "forceDarkModeHint": "TORG solo funciona con aplicaciones con el Modo Oscuridad activado"
     },
     "cosmDecks": {
       "aysle": "Mazo Cosmos Aysle",
@@ -252,50 +252,50 @@
       "strengthPlus": "Fuerza +"
     },
     "defeat": {
-      "prompt": "{name} must make a Defeat Test",
-      "chatTitle": "Defeat Test ({attribute})",
-      "chooseAttribute": "Choose an Attribute",
-      "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
-      "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
+      "prompt": "{name} debe hacer una prueba de Derrota",
+      "chatTitle": "Prueba de Derrota ({attribute})",
+      "chooseAttribute": "Elige un atributo",
+      "tempInjury": "Sufres una Lesión temporal. Tu {attribute} se reduce por un efecto (menos 1)",
+      "permInjury": "Sufres una Lesión permanente. Tu {attribute} se reduce en 1",
       "outstanding": {
-        "main": "Knocked Out",
+        "main": "Noqueado",
         "sub": ""
       },
       "good": {
-        "main": "Temporary Injury",
-        "sub": "You suffer an Injury that lasts until all Wounds are healed",
-        "effectName": "Temp. Injury"
+        "main": "Lesión temporal",
+        "sub": "Sufres una Lesión que se mantiene hasta que te has curado de todas tus Heridas",
+        "effectName": "Lesión Temp."
       },
       "standard": {
-        "main": "Permanent Injury",
-        "sub": "You suffer a permanent Injury"
+        "main": "Lesión permanente",
+        "sub": "Sufres una Lesión permanente"
       },
       "failure": {
         "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
-        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+        "sub": "Puedes hacer una última acción dramática antes de expirar (ignorando los penalizadores por heridas)"
       },
       "mishap": {
         "main": "&#x1F480;&#x1F480;&#x1F480; DEATH &#x1F480;&#x1F480;&#x1F480;",
-        "sub": "You get one final, dramatic action before expiring (ignoring wound penalties)"
+        "sub": "Puedes hacer una última acción dramática antes de expirar (ignorando los penalizadores por heridas)"
       }
     },
     "dialogPrompts": {
       "cardPooled": "Reserva",
       "cosmDeckDialogLabel": "Roba",
-      "cosmDialogTitle": "Roba Carta Cosmos",
+      "cosmDialogTitle": "Roba Carta de Cosmos",
       "discards": "Descartar",
       "drawCosm": "Roba Cosmos",
       "drawDestiny": "Roba Destino",
       "lifelike": "Visor Mejorado",
       "openHand": "Abrir Mano",
       "playCard": "Jugar",
-      "playerPassInstructions": "Escoge jugador para recibir carta",
+      "playerPassInstructions": "Escoge jugador para recibir la carta",
       "playerPassLabel": "Intercambiar",
       "playerPassTitle": "Intercambiar con jugador",
       "playerPassTo": "Intercambiar con",
       "return": "Devuelve todas las cartas a sus mazos. NO baraja automáticamente los mazos.",
-      "selectCosmDeck": "Escoge Mazo Cosmos",
-      "showToPlayers": "Mostrar carta a Todos"
+      "selectCosmDeck": "Escoge Mazo de Cosmos",
+      "showToPlayers": "Mostrar carta a todos"
     },
     "dialogWindow": {
       "externalLinks": {
@@ -306,15 +306,15 @@
         "title": "Enlaces"
       },
       "hideForeignCompendium": {
-        "content": "Oculta los compendios oficiales que no están en su idioma.",
-        "title": "ocultar compendios de lenguas extranjeras?"
+        "content": "Oculta los compendios oficiales que no están en tu idioma.",
+        "title": "¿Ocultar compendios en otros idiomas?"
       },
       "itemDeletion": {
         "content": "¿Estás seguro que quieres borrar esto? Será eliminado permanentemente de la ficha.",
-        "title": "Confirma Borrar"
+        "title": "Confirmar borrado"
       },
       "raceDeletion": {
-        "content": "Are you sure you want to delete this? It will be permanently removed from the sheet and all racial perks will be deleted as well.",
+        "content": "¿Estás seguro que quieres borrar esto? Será eliminado permanentemente de la ficha y todos los dones raciales también se borrarán.",
         "title": "Confirmar borrado"
       },
       "realityCheck": {
@@ -340,10 +340,10 @@
         "whisper": "Susurrar al jugador activo marcado",
         "apply": "Aplicar",
         "show": "Siguiente(s) carta(s)",
-        "noMoreCards": "No More Drama cards available"
+        "noMoreCards": "No hay más cartas de Drama disponibles"
       },
       "cardRetour": {
-        "cardBack": "La carta se recuperar por jugarla por error",
+        "cardBack": "La carta se recupera por jugarla por error",
         "cardOwner": "¿Quién recuperará la carta?"
       },
       "buffMacro": {
@@ -373,44 +373,44 @@
       "standard": "Estándar (10)",
       "targetAirVehicles": "contra Vehículos aéreos o Destreza",
       "targetAlteration": "contra Alteración",
-      "targetApportation": "Target Appportation",
-      "targetBeastRiding": "Target Beast Riding",
-      "targetComputers": "Target Computers",
+      "targetApportation": "contra Aportación",
+      "targetBeastRiding": "contra Montar bestias",
+      "targetComputers": "contra Informática",
       "targetCharisma": "contra Carisma",
       "targetConjuration": "contra Conjuración",
       "targetDexterity": "contra Destreza",
       "targetDivination": "contra Adivinación",
       "targetDodge": "contra esquivar o Destreza",
-      "targetEnergyWeapons": "Target Energy Weapons",
-      "targetEvidenceAnalysis": "Target Evidence Analysis",
+      "targetEnergyWeapons": "contra Armas de energía",
+      "targetEvidenceAnalysis": "contra Análisis de pruebas",
       "targetFaith": "contra Fe o Espíritu",
       "targetFind": "contra Encontrar o Mente",
-      "targetFireCombat": "Target Fire Combat",
-      "targetFirstAid": "Target First Aid",
-      "targetHeavyWeapons": "Target Heavy Weapons",
+      "targetFireCombat": "contra Armas de fuego",
+      "targetFirstAid": "contra Primeros auxilios",
+      "targetHeavyWeapons": "contra Armas pesadas",
       "targetIntimidation": "contra Intimidación on Espíritu",
       "targetKinesis": "contra Kinesis",
       "targetLandVehicles": "contra Vehículos terrestres o Destreza",
-      "targetLanguage": "Target Language",
-      "targetLockpicking": "Target Lockpicking",
+      "targetLanguage": "contra Idiomas",
+      "targetLockpicking": "contra Forzar cerraduras",
       "targetManeuver": "contra Maniobra o Destreza",
-      "targetMedicine": "Target Medicine",
+      "targetMedicine": "contra Medicina",
       "targetMeleeWeapons": "contra Armas cuerpo a cuerpo o Destreza",
-      "targetMissileWeapons": "Target Missile Weapons",
+      "targetMissileWeapons": "contra Armas de proyectiles",
       "targetMind": "contra Mente",
       "targetPersuasion": "Target Persuasion",
       "targetPrecognition": "contra Precognición",
-      "targetProfession": "Target Profession",
-      "targetReality": "Target Reality",
-      "targetScholar": "Target Scholar",
+      "targetProfession": "contra Profesión",
+      "targetReality": "contra Realidad",
+      "targetScholar": "contra Erudición",
       "targetSpirit": "contra Espíritu",
       "targetStealth": "contra Sigilo o Destreza",
-      "targetStreetwise": "Target Streetwise",
+      "targetStreetwise": "contra Callejeo",
       "targetStrength": "contra Fuerza",
-      "targetSurvival": "Target Survival",
+      "targetSurvival": "Target Supervivencia",
       "targetTaunt": "contra Provocar o Carisma",
-      "targetTelepathy": "Target Telepathy",
-      "targetTracking": "Target Tracking",
+      "targetTelepathy": "contra Telepatía",
+      "targetTracking": "contra Rastrear",
       "targetTrick": "contra Engañar o Mente",
       "targetUnarmedCombat": "contra Combate sin armas o Destreza",
       "targetVehicleDefense": "contra Defensa del vehículo",
@@ -475,22 +475,22 @@
     },
     "fieldLabels": {
       "itemTraits": {
-        "label": "Traits",
-        "hint": "The specific abilities of this item"
+        "label": "Rasgos",
+        "hint": "Las capacidades específicas de este objeto"
       }
     },
     "gear": {
       "ammo": "Munición",
       "ammunition": "Munición",
       "ap": "PA",
-      "armor": "Armor",
+      "armor": "Armadura",
       "attackWith": "Ataca con",
-      "bonus": "Bonus",
-      "chatNote": "Nota en Chat",
+      "bonus": "Bonificación",
+      "chatNote": "Nota en chat",
       "cosm": "Cosmos",
       "damage": "Daño",
       "damagebonus": "Adicional",
-      "damageType": "Tipo Daño",
+      "damageType": "Tipo de daño",
       "description": "Descripción",
       "gunner": "Artillero",
       "implantType": "Tipo de implante",
@@ -530,12 +530,12 @@
       "miracleRoll": "Tirar Milagro",
       "openParty": "Abrir hoja de grupo",
       "psionicRoll": "Tirar poder Psiónico",
-      "reload": "Reload weapon",
+      "reload": "Recargar arma",
       "resetPossibilities": "Reiniciar Posibilidad Caballeros",
       "GMPoss": "Reserva de Posibilidades del DJ",
       "SKPoss": "posibilidades del personaje",
-      "sendToChat": "Enviar al Chat",
-      "spellRoll": "Tirar Conjuro",
+      "sendToChat": "Enviar al chat",
+      "spellRoll": "Tirada de Conjuro",
       "toggle": "Cambiar",
       "toggleEquip": "Activar equipo",
       "deleteRace": "Suprimir raza"
@@ -546,15 +546,15 @@
       "customAttack": "Ataque Personalizado",
       "customSkill": "Hab. Personalizada",
       "enhancement": "Mejoras",
-      "eternityshard": "Fragmento Eternidad",
+      "eternityshard": "Fragmento de Eternidad",
       "explosive": "Explosivos",
-      "firearm": "Arma Fuego",
+      "firearm": "Arma de fuego",
       "generalGear": "Equipo",
-      "heavyWeapon": "Arma Pesada",
+      "heavyWeapon": "Arma pesada",
       "implant": "Implante",
       "meleeWeapon": "Arma cuerpo a cuerpo",
       "miracle": "Milagro",
-      "missileWeapon": "Arma proyectil",
+      "missileWeapon": "Arma de proyectil",
       "other": "Equipo general",
       "perk": "Dones",
       "psionicpower": "Poder psiónico",
@@ -563,7 +563,7 @@
       "specialability": "Habilidad Especial",
       "specialabilityRollable": "Habilidad Especial con tirada",
       "spell": "Conjuro",
-      "traits": "Traits",
+      "traits": "Rasgos",
       "vehicle": "Vehículo",
       "vehicleAddOn": "Mejora de vehículo"
     },
@@ -591,21 +591,21 @@
       "noItemNamed": "El actor que controlas no tiene ningún objeto llamado ",
       "noRaceToDelete": "No hay ninguna raza que borrar.",
       "noSkillNamed": "El actor que controlas no tiene ninguna habilidad llamada ",
-      "noTarget": "No es un token de objetivo válido",
-      "noTokenNorActor": "No tokens selected and no assigned character found, the macro cannot proceed.",
+      "noTarget": "No es una ficha de objetivo válida",
+      "noTokenNorActor": "No hay fichas seleccionadas y no se ha encontrado ningún personaje asignado, la macro no puede continuar.",
       "noVehicleOperator": "El vehículo objetivo {a} no tiene alguien que lo maneje. No se puede completar la prueba.",
       "notImplemented": "No implementado por ahora",
       "onlyReservedCard": "Por favor, juega una carta en reserva mientras juegas una escena dramática",
       "openDiscord": "Tu navegador abrirá una nueva página para que te puedas unir a nuestro servidor de Discord ",
       "openIssue": "Tu navegador abrirá una nueva página para que puedas completar la petición",
-      "openReference": "Your browser will open a new page to join the Torg Reference website",
+      "openReference": "Tu navegador abrirá una nueva página para visitar la web de Torg Reference",
       "openUlisses": "Tu navegador abrirá una nueva página para visitar la web de Ulisses",
       "failureBDResolution": "El sistema no ha podido resolver el DB",
       "ammoValueExceedsMax": "El valor actual de munición del arma {a} supera su valor máximo. El valor se reducirá al máximo del arma.",
       "noPossibility": "No queda ninguna Posibilidad",
       "noCapacity": "¡{a} no sabe pilotar este tipo de vehículo!",
       "noFight": "No hay combate activo, o este no ha comenzado",
-      "noPlayers": "No active players",
+      "noPlayers": "No hay jugadores activos",
       "raceExistent": "Ya has escogido una raza.",
       "notAPerkItem": "Has intentado asignar un don de la categoría {a} de esta raza, pero debe pertenecer a la categoría racial. La acción ha sido abortada.",
       "addedRacePerkToActor": "Añadido don {perkName} al actor.",
@@ -620,8 +620,8 @@
       "chooseParty": "<h3>Si eliges SÍ, abrirá todos los personajes.<br>Si eliges NO, solo abrirá los personajes activos.</h3>",
       "noCharacter": "Este usuario no posee ningún actor",
       "openParty": "Elige la hoja de grupo",
-      "allPlayers": "All Players",
-      "activePlayers": "Active Players"
+      "allPlayers": "Todos los jugadores",
+      "activePlayers": "Jugadores activos"
     },
     "perks": {
       "category": "Categoria",
@@ -723,15 +723,15 @@
         "name": "Animación de tarjetas del chat"
       },
       "useColorBlindnessColors": {
-        "hint": "Si está activado, el juego usa tonos rojos y verdes aptos para daltónicos.",
+        "hint": "Si está marcado, el juego usa tonos rojos y verdes aptos para daltónicos.",
         "name": "Usar tonos aptos para daltónicos"
       },
       "useRenderedTorgDice": {
-        "hint": "Si está activado, los dados en las tarjetas de chat serán del estilo de Torg. Si está desactivada, serán los dados grises habituales...",
+        "hint": "Si está marcado, los dados en las tarjetas de chat serán del estilo de Torg. Si está desactivada, serán los dados grises habituales...",
         "name": "Mostrar dados de Torg en las tarjetas de chat"
       },
       "autoDamages": {
-        "hint": "Si está activado, el Shock y las Heridas se aplican automáticamente si el jugador tiene seleccionado un token válido. ATENCIÓN: esta característica solo funciona con las tiradas de daño inicial. No actualizará correctamente las tiradas posteriores modificadas por Dados de Bonificación. Usar con cautela.",
+        "hint": "Si está marcado, el Shock y las Heridas se aplican automáticamente si el jugador tiene seleccionado una ficha válida. ATENCIÓN: esta característica solo funciona con las tiradas de daño inicial. No actualizará correctamente las tiradas posteriores modificadas por Dados de Bonificación. Usar con cautela.",
         "name": "Aplicar daño automáticamente"
       },
       "deckSetting": {
@@ -744,7 +744,7 @@
         "name": "Nombre de mano para usuario por defecto"
       },
       "disableXP": {
-        "hint": "Si está activado, solo el DJ puede rellenar la casilla de los PX de una hoja de personaje.",
+        "hint": "Si está marcado, solo el DJ puede rellenar la casilla de los PX de una hoja de personaje.",
         "name": "Desactivar introducción de PX para los jugadores"
       },
       "gmScreen": {
@@ -768,7 +768,7 @@
         "name": "Reiniciar las cartas"
       },
       "showCheckDetails": {
-        "hint": "Si está activado, siempre se mostrarán todos los detalles de las pruebas.",
+        "hint": "Si está marcado, siempre se mostrarán todos los detalles de las pruebas.",
         "name": "Mostrar detalles en las pruebas"
       },
       "welcome": {
@@ -776,7 +776,7 @@
         "name": "Mostrar mensaje de bienvenida"
       },
       "uniqueDN": {
-        "hint": "si está activado, cuando se lleve a cabo una acción múltiple, se mantendrá el ND más alto para determinar los resultados contra todos los objetivos, tal y como indican las reglas.",
+        "hint": "Si está marcado, cuando se lleve a cabo una acción múltiple, se mantendrá el ND más alto para determinar los resultados contra todos los objetivos, tal y como indican las reglas.",
         "name": "Un único ND"
       },
       "unTarget": {
@@ -788,52 +788,52 @@
         "name": "Panel PP Año 1"
       },
       "cardChatNotify": {
-        "hint": "Hides core Foundry card messages where Torg Eternity supplies its own message",
-        "name": "Suppress Core Card Messages"
+        "hint": "Oculta los mensajes de cartas del núcleo de Foundry en los casos en que Torg Eternity aporta sus propios mensajes",
+        "name": "Suprimir mensajes de cartas de Foundry"
       },
       "shuffleMessageSurpress": {
-        "hint": "Si está activado, se eliminarán los mensajes de chat al barajar los mazos.",
+        "hint": "Si está marcado, se eliminarán los mensajes de chat al barajar los mazos.",
         "name": "Eliminar mensaje de chat al barajar"
       },
       "ignoreAmmo": {
-        "hint": "Si está activado, las reglas y mecánicas para recargar munición se ignoran por completo.",
+        "hint": "Si está marcado, las reglas y mecánicas para recargar munición se ignoran por completo.",
         "name": "Ignorar mecánica de munición"
       },
       "hoverDistance": {
-        "hint": "If checked, hovering the mouse over a token will display the distance to that token from the user's controlled character",
-        "name": "Show Distance to Token"
+        "hint": "Si está marcado, al pasar el ratón por encima de una ficha aparecerá la distancia que hay hasta dicha ficha desde la ficha del personaje que controla el usuario",
+        "name": "Mostrar distancia hasta ficha"
       },
       "rulerGridWalk": {
-        "hint": "The tint colour for grid cells when a token has not reached its move distance (default: --color-level-success)",
-        "name": "Grid Highlight (Walk)"
+        "hint": "El color de las casillas de la rejilla cuando una ficha no ha cubierto toda su distancia de movimiento (por defecto: --color-level-success)",
+        "name": "Destacado de rejilla (Caminar)"
       },
       "rulerGridRun": {
-        "hint": "The tint colour for grid cells when a token has exceeded its move, but not its max move (default: --color-level-info)",
-        "name": "Grid Highlight (Run)"
+        "hint": "El color de las casillas de la rejilla cuando una ficha ha superado su movimiento, pero no su movimiento máximo (por defecto: --color-level-info)",
+        "name": "Destacado de rejilla (Correr)"
       },
       "rulerGridMax": {
-        "hint": "The tint colour for grid cells when a token has exceeded its max move (default: --color-level-error)",
-        "name": "Grid Highlight (> Run)"
+        "hint": "El color de las casillas de la rejilla cuando una ficha ha superado su movimiento máximo (por defecto: --color-level-error)",
+        "name": "Destacado de rejilla (> Correr)"
       },
       "showMovementRuler": {
-        "hint": "Displays the movement history of tokens during a combat round (history is cleared on a new round)",
-        "name": "Show Token Movement History"
+        "hint": "Muestra el historial de movimiento de las fichas durante un asalto de combate (el historial se reinicia con un nuevo asalto)",
+        "name": "Mostrar historial de movimiento de las fichas"
       },
       "autoShock": {
-        "name": "Automatically Apply KO",
-        "hint": "Automatically set an actor to unconscious whenever their shock is exceeded"
+        "name": "Aplicar Noqueo automáticamente",
+        "hint": "Deja atomáticamente Noqueado a un actor cuando supera su Shock"
       },
       "autoWound": {
-        "name": "Automatically Apply Wounds",
-        "hint": "Automatically set a threat or vehicle token to Dead when its wounds are exceeded"
+        "name": "Aplicar Heridas automáticamente",
+        "hint": "Aplica automáticamente el estado Muerto a una ficha de amenaza o vehículo cuando supera sus Heridas"
       },
       "autoDisconnect": {
-        "name": "Automatically Disconnect",
-        "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
+        "name": "Desconexión automática",
+        "hint": "En caso de Sobrecarga o de que una prueba provoque Desconexión, el actor pasará a estar automáticamente Desconectado"
       },
       "dramaCardUp": {
-        "name": "UP only from Drama Card",
-        "hint": "Hide the UP button in Test Check results if the current Drama Card doesn't have UP in the conflict line (default true)"
+        "name": "AUMENTO solo en la carta de Drama",
+        "hint": "Oculta el botón AUMENTO en los resultados de una prueba si la carta de Drama actual no presenta AUMENTO en la línea de conflicto (activado por defecto)"
       }
     },
     "sheetLabels": {
@@ -842,7 +842,7 @@
       "activeDefense": "Defensa Activa",
       "add": "Adición",
       "addOns": "Mejoras",
-      "adds": "Adición",
+      "adds": "Adiciones",
       "aimed": "Apuntado",
       "aimedTooltip": "Disparo apuntado (solo ataques a distancia)",
       "allOut": "Ataque Total",
@@ -882,13 +882,13 @@
       "collision": "Colisión",
       "combatSkills": "Combate",
       "concealment": "Cobertura",
-      "conditions": "Conditions",
+      "conditions": "Condiciones",
       "cosm": "Cosmos",
       "coverBonus": "Mod. Cobertura",
       "coverBonusTooltip": "Se añade una bonificación a la Resistencia del personaje gracias a la cobertura",
-      "crewUnskilledOperator": "The operator of this vehicle is unskilled!",
-      "crewUnskilledWeapon": "This weapon is being used unskilled!",
-      "crewFavored": "This weapon has a favored gunner",
+      "crewUnskilledOperator": "¡El operador de este vehículo no está entrenado!",
+      "crewUnskilledWeapon": "¡Esta arma se está usando sin entrenar!",
+      "crewFavored": "Esta arma tiene un usuario con uso preferente",
       "customSkill": "Las habilidades personalizadas se pueden editar en la pestaña de Dones",
       "customSkills": "Hab. personalizada",
       "customAttacks": "Ataques personalizados",
@@ -964,7 +964,7 @@
       "name": "Nombre",
       "new": "Carta",
       "none": "No",
-      "noMin10": " (Minimum of 10 not applied)",
+      "noMin10": " (mínimo de 10 no aplicado)",
       "noPoss": "¡No hay Posibilidades!",
       "noPossFree": "¡No hay Posibilidades!<br>¿Confirmas igualmente?",
       "noRace": "Sin raza añadida",
@@ -995,8 +995,8 @@
       "racialPerks": "Ventajas raciales",
       "range": "Alcance",
       "darkvision": "Visión en la oscuridad",
-      "removeGunner": "Remove this gunner from this weapon",
-      "removeOperator": "Remove the operator from the vehicle",
+      "removeGunner": "Elimina a este artillero de esta arma",
+      "removeOperator": "Elimina al operador de este vehículo",
       "return": "Retornar",
       "roll": "Tirar",
       "run": "Carrera",
@@ -1067,7 +1067,7 @@
       "backlash2": "Efecto adverso reducido",
       "backlash3": "'¡Dolor de cabeza!",
       "backlash1Tooltip": "Sufres 2 Shocks",
-      "backlash2Tooltip": "Sufres 1 shock",
+      "backlash2Tooltip": "Sufres 1 Shock",
       "backlash3Tooltip": "Quedas Muy Impedido",
       "additionalDamage": "Daño adicional preestablecido",
       "bonusDice": "Dados de bonificación tirados por adelantado"
@@ -1154,7 +1154,7 @@
       "conjuration": "conjuración",
       "divination": "adivinación",
       "dodge": "esquivar",
-      "energyweapons": "armas energía",
+      "energyweapons": "armas de energía",
       "evidenceanalysis": "análisis de pruebas",
       "faith": "fe",
       "find": "encontrar",
@@ -1251,63 +1251,63 @@
       "step": "Paso"
     },
     "traits": {
-      "blackPowder": "Black Powder",
-      "bulky": "Bulky",
-      "carbine": "Carbine",
+      "blackPowder": "Pólvora negra",
+      "bulky": "Pesada",
+      "carbine": "Carabina",
       "dazing": "Dazing",
-      "fatigues": "Fatigues",
-      "fragile": "Fragile",
-      "fullBody": "Full Body",
-      "grapple": "Grapple",
-      "head": "Head",
-      "ignoresArmor": "Ignores Armor",
-      "lowestArmor": "Lowest Armor",
-      "nonLethal": "Non-Lethal",
-      "painful": "Painful",
-      "pistol": "Pistol",
-      "quick": "Quick",
-      "reload": "Reload",
-      "shotgun": "Shotgun",
-      "small": "Small",
-      "stagger": "Stagger",
-      "thrown": "Thrown",
+      "fatigues": "Fatiga",
+      "fragile": "Frágil",
+      "fullBody": "Cuerpo entero",
+      "grapple": "Forcejeo",
+      "head": "Cabeza",
+      "ignoresArmor": "Ignora armadura",
+      "lowestArmor": "Armadura más baja",
+      "nonLethal": "No letal",
+      "painful": "Dolorosa",
+      "pistol": "Pistola",
+      "quick": "Rápida",
+      "reload": "Recarga",
+      "shotgun": "Escopeta",
+      "small": "Pequeña",
+      "stagger": "Desequilibrante",
+      "thrown": "Arrojadiza",
       "torso": "Torso",
-      "twoHanded": "Two-Handed",
-      "unwieldy": "Unwieldy",
+      "twoHanded": "Dos Manos",
+      "unwieldy": "Poco Manejable",
       "wounding": "Wounding",
-      "shortBurst": "Short Burst",
-      "mediumBlast": "Medium Blast",
-      "longBurst": "Long Burst",
-      "smallBlast": "Small Blast",
-      "heavyBurst": "Heavy Burst",
-      "largeBlast": "Large Blast",
-      "veryLargeBlast": "Very Large Blast",
-      "hugeBlast": "Huge Blast",
-      "energyDamage": "Energy Damage",
-      "fireDamage": "Fire Damage",
-      "forceDamage": "Force Damage",
-      "iceDamage": "Ice Damage",
-      "lightningDamage": "Lightning Damage",
-      "energyArmor": "Armor vs Energy",
-      "fireArmor": "Armor vs Fire",
-      "forceArmor": "Armor vs Force",
-      "iceArmor": "Armor vs Ice",
-      "lightningArmor": "Armor vs Lightning",
-      "energyDefense": "Defense vs Energy",
-      "fireDefense": "Defense vs Fire",
-      "forceDefense": "Defense vs Force",
-      "iceDefense": "Defense vs Ice",
-      "lightningDefense": "Defense vs Lightning"
+      "shortBurst": "Ráfaga Corta",
+      "mediumBlast": "Estallido Medio",
+      "longBurst": "Ráfaga Larga",
+      "smallBlast": "Estallido Pequeño",
+      "heavyBurst": "Ráfaga Continua",
+      "largeBlast": "Estallido Grande",
+      "veryLargeBlast": "Estallido Muy Grande",
+      "hugeBlast": "Estallido Enorme",
+      "energyDamage": "Daño de energía",
+      "fireDamage": "Daño de fuego",
+      "forceDamage": "Daño de fuerza",
+      "iceDamage": "Daño de hielo",
+      "lightningDamage": "Daño de relámpago",
+      "energyArmor": "Armadura contra energía",
+      "fireArmor": "Armadura contra fuego",
+      "forceArmor": "Armadura contra fuerza",
+      "iceArmor": "Armadura contra hielo",
+      "lightningArmor": "Armadura contra relámpago",
+      "energyDefense": "Defensa contra energía",
+      "fireDefense": "Defensa contra fuego",
+      "forceDefense": "Defensa contra fuerza",
+      "iceDefense": "Defensa contra hielo",
+      "lightningDefense": "Defense contra relámpago"
     },
     "traitGroup": {
-      "defense": "Defense",
-      "melee": "Melee",
-      "ranged": "Ranged"
+      "defense": "Defensa",
+      "melee": "Cuerpo a cuerpo",
+      "ranged": "A distancia"
     },
     "vehicleTypes": {
-      "air": "Air",
-      "land": "Land",
-      "water": "Water"
+      "air": "Aéreo",
+      "land": "Terrestre",
+      "water": "Acuático"
     },
     "vulnerableStates": {
       "none": "No Vulnerable",
@@ -1320,46 +1320,46 @@
     },
     "macros": {
       "commonMacroNoTokensSelected": "No se ha seleccionado ninguna ficha. La macro no puede ejecutarse.",
-      "commonMacroNoCharacter": "No puedo encontrar un personaje para continuar.",
+      "commonMacroNoCharacter": "No se encuentra un personaje para continuar.",
       "commonMacroNoValue": "No se ha introducido ningún valor. La macro no puede ejecutarse.",
-      "commonMacroOnlyByGM": "¡Esta macro sólo puede ser ejecutada por game masters!",
-      "commonMacroNoChatMessageFound": "No se ha podido interceptar ningún mensaje de chat, se cancela el procesamiento posterior.",
-      "fatigueMacroDealtDamage": "Los siguientes personajes han sufrido un shock:",
-      "fatigueMacroCharKO": " está noqueado!",
-      "fatigueMacroCharAlreadyKO": " ¡ya está noqueado! Más choque no es posible.",
-      "reviveMacroChatHeadline": "¡Recuperación de choque!",
-      "reviveMacroWindowLabel1": "c¿Cuánto choque debe recuperarse?",
-      "reviveMacroError1": "No se ha introducido nada en el campo de la cantidad y la casilla de verificación no está marcada. ¿Qué debo hacer? Cancelar.",
-      "reviveMacroFirst": "Los siguientes personajes se recuperan del shock: ",
-      "reviveMacroAlreadyFull": " ¡ya está bien y no tiene sobresaltos!",
+      "commonMacroOnlyByGM": "¡Esta macro sólo puede ejecutarla un DJ!",
+      "commonMacroNoChatMessageFound": "No se ha encontrado ninguna tarjeta de chat, se cancela el procesamiento.",
+      "fatigueMacroDealtDamage": "Los siguientes personajes han sufrido daño:",
+      "fatigueMacroCharKO": " está por lo tanto noqueado",
+      "fatigueMacroCharAlreadyKO": " ¡ya está noqueado! No puede sufrir más Shock.",
+      "reviveMacroChatHeadline": "¡Shock recuperado!",
+      "reviveMacroWindowLabel1": "¿Cuánto Shock debe recuperarse?",
+      "reviveMacroError1": "No se ha introducido nada en el campo de cantidad y la casilla de verificación no está marcada. ¿Qué debo hacer? Cancelado.",
+      "reviveMacroFirst": "Los siguientes personajes se recuperan Shock: ",
+      "reviveMacroAlreadyFull": " ya está bien y no sufre Shock.",
       "reviveMacroCharRevived": " está totalmente restablecido.",
-      "reviveMacroCharPartyRevived": " se curó en la siguiente cantidad: ",
-      "reviveMacroCharDeKOed": "Se ha anulado el estatuto de nocaut para ",
-      "reviveMacroWholeRevive": "¿Recuperarse de la conmoción?",
-      "clearStatusEffectsHeadline": "Se han cancelado los estatus de los siguientes personajes:",
-      "clearStatusEffectsNothingFound": "No se han encontrado estados para las fichas seleccionadas.",
-      "clearStatusEffectsliftetFrom": "En",
-      "clearStatusEffectsliftetStatusOf": "se canceló el siguiente estado:",
-      "bonusDieMacroTitle": "Macro para cubos de bonificación",
+      "reviveMacroCharPartyRevived": " se ha curado en la siguiente cantidad: ",
+      "reviveMacroCharDeKOed": "Se ha eliminado el estado Noqueado de ",
+      "reviveMacroWholeRevive": "¿Recuperarse de todo el Shock?",
+      "clearStatusEffectsHeadline": "Se han cancelado los estados de los siguientes personajes:",
+      "clearStatusEffectsNothingFound": "No se han encontrado estados en los personajes seleccionados.",
+      "clearStatusEffectsliftetFrom": "en",
+      "clearStatusEffectsliftetStatusOf": "se canceló el estado de ",
+      "bonusDieMacroTitle": "Macro para dados de bonificación",
       "bonusDieMacroContent": "¿Cuántos dados de bonificación hay que tirar?",
-      "bonusDieMacroErrorIntegerValue": "La entrada no era un número entero. Por favor, introduzca un número entero.",
-      "bonusDieMacroResult1": "Has tirado los dados:",
+      "bonusDieMacroErrorIntegerValue": "El valor introducido no es un número entero. Por favor, introduce un número entero.",
+      "bonusDieMacroResult1": "Has tirado los dados",
       "bonusDieMacroResult2": "con un resultado de",
-      "bonusDieMacroResult3": "El token con el nombre",
+      "bonusDieMacroResult3": "La ficha con el nombre",
       "bonusDieMacroResult4": "recibe un daño de",
-      "bonusDieMacroResultNoDamage": "no recibe daños",
-      "bonusDieMacroNoTokenTargeted": "No se llevaron fichas a la meta.",
-      "bonusDieMacroNoDiscon": "Este personaje no está \"Desacoplado\".",
-      "reconnectMacroZoneModifier": "Modificador de zona",
-      "reconnectMacroZoneModifierNotDetectedTitle": "Sin modificador de zona",
-      "reconnectMacroZoneModifierNotDetected": "No se ha podido detectar un modificador de zona porque la escena activa no tiene zonas configuradas. Cambie el modificador en el resultado.",
-      "reconnectMacroStatusLiftet": "Estado desacoplado cancelado tras una comprobación de la realidad satisfactoria.",
-      "periculumSourceName": "Source's damages",
-      "periculumSourcePlaceHolder": "Describe the source of hazard",
-      "periculumDamageValue": "Base damage",
-      "periculumBds": "BDs modifiers",
-      "periculumArmor": "Apply armor ?",
-      "periculumAp": "Armor piercing value",
+      "bonusDieMacroResultNoDamage": "no recibe ningún daño",
+      "bonusDieMacroNoTokenTargeted": "No hay fichas seleccionadas.",
+      "bonusDieMacroNoDiscon": "Este personaje no está desconectado.",
+      "reconnectMacroZoneModifier": "Modificador por zona",
+      "reconnectMacroZoneModifierNotDetectedTitle": "Sin modificador por zona",
+      "reconnectMacroZoneModifierNotDetected": "No se ha podido resolver el modificador por zona porque la escena activa no tiene configurada la zona. Cambia el modificador manualmente.",
+      "reconnectMacroStatusLiftet": "Desconexión anulada tras superar la tirada de Reconexión.",
+      "periculumSourceName": "Daño de la fuente",
+      "periculumSourcePlaceHolder": "Describe la fuente del daño",
+      "periculumDamageValue": "Daño baee",
+      "periculumBds": "Modificadores de DB",
+      "periculumArmor": "¿Aplicar armadura ?",
+      "periculumAp": "Valor de Perforación de Armadura",
       "macroHub": {
         "buttonTitle": "MacroHub",
         "title": "The Torg Eternity Macro Hub"
