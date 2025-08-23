@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT RELEASE - WAITING, STATUS DISPLAY & TRANSFER WEAPON/AMMO EFFECTS
+## v13.8.0 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
 
 - If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
 - Automation of **Waiting**:

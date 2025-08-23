@@ -3,6 +3,12 @@
     "discard": "Descarte",
     "display": "Mostrar carta jugadores"
   },
+  "CHAT": {
+    "RollBlind": "Tirada oculta (GM)",
+    "RollPublic": "Tirada pública",
+    "RollPrivate": "Tirada privada (GM)",
+    "RollSelf": "Tirada personal"
+  },
   "TYPES": {
     "Card": {
       "destiny": "Destino",

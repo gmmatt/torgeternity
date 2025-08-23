@@ -3,6 +3,12 @@
     "discard": "Abwerfen",
     "display": "Herzeigen"
   },
+  "CHAT": {
+    "RollBlind": "Verdeckter SL-Wurf",
+    "RollPublic": "Öffentlicher Wurf",
+    "RollPrivate": "Privater SL-Wurf",
+    "RollSelf": "Privater Wurf"
+  },
   "TYPES": {
     "Card": {
       "destiny": "Schicksal",

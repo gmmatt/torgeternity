@@ -3,6 +3,12 @@
     "discard": "Défausser",
     "display": "Montrer cette carte aux joueurs"
   },
+  "CHAT": {
+    "RollBlind": "Uniquement le MJ",
+    "RollPublic": "Tout le monde",
+    "RollPrivate": "Juste le MJ et moi",
+    "RollSelf": "Uniquement moi"
+  },
   "TYPES": {
     "Card": {
       "destiny": "Destin",
