@@ -69,8 +69,8 @@
         "cantUseUntrained": "No se puede usar sin entrenar (mínimo 1 adición).",
         "cantUseRealityWhileDisconnected": "No puedes usar la habilidad Realidad mientras estés Desconectado.",
         "interactionNeedTarget": "No se puede intentar una prueba de ataque de interacción sin un objetivo. Selecciona un objetivo e inténtalo de nuevo.",
-        "isApprovedAction": "Acción aprobada completada (roba una carta de destino)",
-        "isApprovedDefend": "{name} ha logrado DEFENDERSE con éxito (roba una carta de destino)",
+        "isApprovedAction": "Acción aprobada completada",
+        "isApprovedDefend": "{name} ha logrado DEFENDERSE con éxito",
         "modifier": {
           "aimedShot": "Tiro Apuntado",
           "allOutAttack": "Ataque Total",
