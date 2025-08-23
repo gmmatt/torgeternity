@@ -13,6 +13,7 @@
 - Remove Initiative options from the Combat Tracker context menus (combat and combatant).
 - #369: Add a row of conditions at the top of the Effects tab of the Actor sheet.
 - #232: Transfer effects from used Weapon (and Ammo) to the target when applying damage (using new Effect field "Apply Effect on Attack").
+- Updated Spanish Translations (provided by @Teotimus).
 
 ### Bug Fixes
 

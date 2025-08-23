@@ -16,6 +16,12 @@
     }
   },
   "torgeternity": {
+    "activeEffect": {
+      "transferOnAttack": {
+        "label": "Apply Effect on Attack",
+        "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
+      }
+    },
     "attackTypes": {
       "energyWeapons": "Armes à énergie",
       "fireCombat": "Armes à feu",
