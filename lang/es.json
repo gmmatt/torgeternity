@@ -254,7 +254,8 @@
     },
     "defeat": {
       "prompt": "{name} must make a Defeat Test",
-      "chatTitle": "Defeat Test ({attribute})""chooseAttribute": "Choose an Attribute",
+      "chatTitle": "Defeat Test ({attribute})",
+      "chooseAttribute": "Choose an Attribute",
       "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
       "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
       "outstanding": {
