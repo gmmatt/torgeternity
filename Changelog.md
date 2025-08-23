@@ -11,9 +11,9 @@
 - Move some hard-coded numbers to their CONST equivalent references.
 - Newly-created Threats will have their prototype tokens NOT linked to the Actor.
 - Remove Initiative options from the Combat Tracker context menus (combat and combatant).
-- #369: Add a row of conditions at the top of the Effects tab of the Actor sheet.
-- #232: Transfer effects from used Weapon (and Ammo) to the target when applying damage (using new Effect field "Apply Effect on Attack").
-- Updated Spanish Translations (provided by @Teotimus).
+- #369: Add a row of **conditions** at the top of the Effects tab of the Actor sheet.
+- #232: **Transfer effects** from used Weapon (and Ammo) to the target when applying damage (using new Effect field "Apply Effect on Attack"). The effects can remain disabled on the weapon/ammo, and they will be enabled upon transfer to the target. (Duration can also be set.)
+- Updated **Spanish Translations** (provided by @Teotimus).
 
 ### Bug Fixes
 
