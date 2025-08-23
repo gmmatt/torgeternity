@@ -18,8 +18,8 @@
   "torgeternity": {
     "activeEffect": {
       "transferOnAttack": {
-        "label": "Apply Effect on Attack",
-        "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
+        "label": "Effekt bei Angriff anwenden",
+        "hint": "Dieser Effekt wird für das ausgewählte Ziel angewendet, falls der Gegenstand dieses Effekts für den Angriff genutzt wurde (entweder als Waffe oder Munition)"
       }
     },
     "attackTypes": {
@@ -180,8 +180,8 @@
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "toggleDramatic": "Zwischen Standard- und dramatischer Szene umschalten",
-      "toggleWaiting": "Toggle the Wait state of this combatant",
-      "waitingCombatants": "Waiting Combatants",
+      "toggleWaiting": "Warten-Zustand für diesen Kämpfer umschalten",
+      "waitingCombatants": "Wartender Kämpfer",
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
       "nextNew": "neue Runde (neue Dramakarte)",
@@ -597,7 +597,7 @@
       "notImplemented": "Aktuell noch nicht implementiert",
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
-      "openReference": "Your browser will open a new page to join the Torg Reference website",
+      "openReference": "Dein Browser öffnet die Torg Reference website als neue Seite",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
       "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
       "failureBDResolution": "Das System konnte die BW nicht berechnen.",
@@ -882,7 +882,7 @@
       "collision": "Kollision",
       "combatSkills": "Kampf",
       "concealment": "Deckung",
-      "conditions": "Conditions",
+      "conditions": "Auswirkungen",
       "cosm": "Cosm",
       "coverBonus": "Deckungsbonus",
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
