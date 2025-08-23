@@ -68,7 +68,6 @@
         "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence requise",
         "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un rang).",
         "cantUseRealityWhileDisconnected": "Vous ne pouvez pas utiliser la compétence Réalité lorsque vous êtes déconnecté.",
-        "drawDestiny": "Piocher une carte de Destin",
         "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
         "isApprovedAction": "Action approuvée réussie (piocher une carte Destin)",
         "isApprovedDefend": "{name} s'est défendu avec succès (piocher une carte Destin)",

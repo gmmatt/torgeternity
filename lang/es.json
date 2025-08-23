@@ -68,7 +68,6 @@
         "cantUseSkillRecquired": "No se puede utilizar sin 1 adición en la habilidad requerida.",
         "cantUseUntrained": "No se puede utilizar sin entrenar (mínimo 1 adición).",
         "cantUseRealityWhileDisconnected": "No puedes utilizar la capacidad de la realidad mientras estés desconectado.",
-        "drawDestiny": "draw a destiny card",
         "interactionNeedTarget": "No se puede intentar la prueba de ataque de interacción sin un objetivo. Selecciona un objetivo e inténtalo de nuevo.",
         "isApprovedAction": "Successful Approved Action (draw a destiny card)",
         "isApprovedDefend": "{name} successfully DEFENDed (draw a destiny card)",
