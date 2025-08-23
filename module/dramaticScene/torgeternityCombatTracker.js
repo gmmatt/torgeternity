@@ -50,7 +50,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     context.conflictLine = combat?.conflictLineText;
     context.approvedActions = combat?.approvedActionsText;
     context.dsrLine = combat?.dsrText;
-    context.dramaRule = combat?.dramaRule;
+    context.dramaRule = await foundry.applications.ux.TextEditor.enrichHTML(combat?.dramaRule);
 
     context.approved = {};
     if (combat)
