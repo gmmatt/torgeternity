@@ -877,6 +877,7 @@
       "collision": "Collision",
       "combatSkills": "Combat",
       "concealment": "Dissimulation",
+      "conditions": "Conditions",
       "cosm": "Cosm",
       "coverBonus": "Couvert",
       "coverBonusTooltip": "Bonus appliqué a l'endurance résultant du couvert",

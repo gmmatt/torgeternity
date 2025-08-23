@@ -307,6 +307,7 @@ Hooks.once('setup', async function () {
   Handlebars.registerHelper({ TorgRadioBoxesNumber })
   Handlebars.registerHelper({ TorgHidden })
   Handlebars.registerHelper({ TorgDisconnected })
+  Handlebars.registerHelper({ TorgIsSvg })
 
   // Ensure all Actor & Item packs have the updated index contents
   for (const pack of game.packs) {
@@ -887,4 +888,8 @@ function TorgHidden(value) {
 
 function TorgDisconnected(doc) {
   return doc?.isDisconnected ? "disconnected" : "";
+}
+
+function TorgIsSvg(value) {
+  return value.endsWith('.svg') ? 'svg' : '';
 }

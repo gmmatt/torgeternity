@@ -876,6 +876,7 @@
       "collision": "Collision",
       "combatSkills": "Combat",
       "concealment": "Cobertura",
+      "conditions": "Conditions",
       "cosm": "Cosmos",
       "coverBonus": "Mod. Cobertura",
       "coverBonusTooltip": "Bonus added to target toughness as a result of cover",

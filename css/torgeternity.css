@@ -331,6 +331,24 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       width: auto;
     }
   }
+
+  div.conditions a.condition img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+
+    &.svg {
+      filter: invert(1);
+    }
+  }
+
+  div.conditions a.condition:not(.checked) img {
+    filter: opacity(0.2);
+
+    &.svg {
+      filter: opacity(0.2) invert(1);
+    }
+  }
 }
 
 /*.scrollable {
@@ -1152,6 +1170,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
 
     .effects {
+      row-gap: 8px;
 
       .item-list {
         padding: 0px;

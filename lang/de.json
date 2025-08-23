@@ -876,6 +876,7 @@
       "collision": "Kollision",
       "combatSkills": "Kampf",
       "concealment": "Deckung",
+      "conditions": "Conditions",
       "cosm": "Cosm",
       "coverBonus": "Deckungsbonus",
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",

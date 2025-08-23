@@ -11,6 +11,7 @@
 - Move some hard-coded numbers to their CONST equivalent references.
 - Newly-created Threats will have their prototype tokens NOT linked to the Actor.
 - Remove Initiative options from the Combat Tracker context menus (combat and combatant).
+- #369: Add a row of conditions at the top of the Effects tab of the Actor sheet.
 
 ### Bug Fixes
 
@@ -21,6 +22,7 @@
 - 'openReference' - popup message when opening Torg Reference web site in a new tab
 - 'toggleWaiting' - tooltip for the waiting toggle button in the Combat Tracker
 - 'waitingCombatants' - the Title for the lower section in the Combat Tracker
+- 'sheetLabels.conditions' - The Title for the conditions section of the Effects tab of Actors.
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 
