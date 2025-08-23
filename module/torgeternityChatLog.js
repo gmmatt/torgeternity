@@ -340,6 +340,25 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!target) return;
     const damage = torgDamage(test.damage, test.target.targetAdjustedToughness, test.attackTraits);
     target.applyDamages(damage.shocks, damage.wounds);
+
+    // Transfer Effects from the Weapon (& Ammo) to the target.
+    // Only those NOT marked as "transfer to actor" (since those would be affecting the Attacker)
+    if (!test.itemId) return;
+    const { actor } = getChatActor(button);
+    const item = actor.items.get(test.itemId);
+    if (!item) return;
+    const effects = item.effects.filter(ef => ef.transferOnAttack);
+    if (item.system.loadedAmmo) {
+      const ammo = actor.items.get(item.system.loadedAmmo);
+      if (ammo) effects.push(...ammo.effects.filter(ef => ef.transferOnAttack));
+    }
+    if (effects.length) {
+      target.createEmbeddedDocuments('ActiveEffect', effects.map(ef => {
+        let fx = ef.toObject();
+        fx.disabled = false;
+        return fx;
+      }));
+    }
   }
 
   static async #soakDamage(event, button) {

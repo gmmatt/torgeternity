@@ -1,7 +1,8 @@
 /**
  * Extend the basic ActiveEffect model with migrations and TORG specific handling
  */
-export default class TorgActiveEffect extends ActiveEffect {
+export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
+
   /**
    *
    * @param {object} data the data object to migrate
@@ -64,4 +65,22 @@ export default class TorgActiveEffect extends ActiveEffect {
     if (!this.parent || this.parent instanceof Actor) return game.i18n.localize("None");
     return this.parent.name;
   }
+
+  static onRenderActiveEffectConfig(app, html, context) {
+    const element = new foundry.data.fields.BooleanField().toFormGroup({
+      label: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.label"),
+      hint: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.hint")
+    }, {
+      name: 'flags.torgeternity.transferOnAttack',
+      value: app.document.getFlag("torgeternity", "transferOnAttack") ?? false,
+      disabled: !context.editable
+    });
+    html.querySelector("[data-tab=details] > .form-group:has([name=transfer])")?.after(element);
+  }
+
+  get transferOnAttack() {
+    return this.getFlag("torgeternity", "transferOnAttack");
+  }
 }
+
+Hooks.on("renderActiveEffectConfig", TorgActiveEffect.onRenderActiveEffectConfig);

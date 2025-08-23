@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT RELEASE - WAITING
+## NEXT RELEASE - WAITING, STATUS DISPLAY & TRANSFER WEAPON/AMMO EFFECTS
 
 - If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
 - Automation of **Waiting**:
@@ -12,6 +12,7 @@
 - Newly-created Threats will have their prototype tokens NOT linked to the Actor.
 - Remove Initiative options from the Combat Tracker context menus (combat and combatant).
 - #369: Add a row of conditions at the top of the Effects tab of the Actor sheet.
+- #232: Transfer effects from used Weapon (and Ammo) to the target when applying damage (using new Effect field "Apply Effect on Attack").
 
 ### Bug Fixes
 
@@ -23,6 +24,7 @@
 - 'toggleWaiting' - tooltip for the waiting toggle button in the Combat Tracker
 - 'waitingCombatants' - the Title for the lower section in the Combat Tracker
 - 'sheetLabels.conditions' - The Title for the conditions section of the Effects tab of Actors.
+- 'activeEffect.transferOnAttack.label/hint' - new field in Active Effect dialog.
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 
