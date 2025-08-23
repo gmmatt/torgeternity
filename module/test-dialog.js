@@ -1,4 +1,4 @@
-import { ChatMessageTorg } from './documents/chat/document.js';
+import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
 import * as torgchecks from './torgchecks.js';
 import TorgeternityActor from './documents/actor/torgeternityActor.js';
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api

@@ -15,7 +15,7 @@
 - #232: **Transfer effects** from used Weapon (and Ammo) to the target when applying damage (using new Effect field "Apply Effect on Attack"). The effects can remain disabled on the weapon/ammo, and they will be enabled upon transfer to the target. (Duration can also be set.)
 - Fix styling of **Journal page headers** (force each text page to use the "light" theme).
 - **Enrich the Rule text** displayed for the current Drama Card.
-- Apply current **roll mode** to skill checks displayed in Chat.
+- Apply current **roll mode** to skill checks displayed in Chat - hiding the appropriate rolls.
 - Updated a lot of the **Spanish Translations** (provided by `Teotimus`).
 - German translations by `Helmut`, French translation by `Durak`
 

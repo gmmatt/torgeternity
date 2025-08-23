@@ -1,6 +1,6 @@
 import { TestDialog, TestDialogLabel } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
-import { ChatMessageTorg } from './documents/chat/document.js';
+import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
 
 export const TestResult = {
   MISHAP: 0,
@@ -645,12 +645,15 @@ export async function renderSkillChat(test) {
       }
     }
     iteratedRoll = undefined;
+    const rollMode = game.settings.get("core", "rollMode");
+    const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
 
     messages.push(await ChatMessageTorg.create({
       user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
       owner: test.actor,
       rolls: test.diceroll,
+      flavor: flavor,
       flags: {
         torgeternity: {
           test,
@@ -659,9 +662,7 @@ export async function renderSkillChat(test) {
         },
       },
     },
-      {
-        rollMode: game.settings.get("core", "rollMode")
-      }));
+      { rollMode }));
     first = false;
   } // for each target
 

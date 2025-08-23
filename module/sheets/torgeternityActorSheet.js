@@ -4,7 +4,7 @@ import { oneTestTarget, TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
 import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
-import { ChatMessageTorg } from '../documents/chat/document.js';
+import { ChatMessageTorg } from '../documents/chat/chatMessageTorg.js';
 
 const { DialogV2 } = foundry.applications.api;
 

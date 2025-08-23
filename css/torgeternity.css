@@ -2979,8 +2979,13 @@ div.readme a.compendium {
 
 .chat-message {
   margin: 5px;
-  background: url("../images/bgparch.webp");
+  background-image: url("../images/bgparch.webp");
   background-size: cover;
+  background-blend-mode: multiply;
+
+  .flavor-text {
+    text-align: right;
+  }
 
   .flip-card {
     animation: flip 0.2s linear both;
