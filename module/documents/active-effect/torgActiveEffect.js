@@ -66,6 +66,12 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
     return this.parent.name;
   }
 
+  /**
+   * Add our own "Transfer On Attack" flag to the Active Effect config dialog.
+   * @param {*} app 
+   * @param {*} html 
+   * @param {*} context 
+   */
   static onRenderActiveEffectConfig(app, html, context) {
     const element = new foundry.data.fields.BooleanField().toFormGroup({
       label: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.label"),
@@ -78,6 +84,9 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
     html.querySelector("[data-tab=details] > .form-group:has([name=transfer])")?.after(element);
   }
 
+  /**
+   * @returns {Boolean} the state of the "Transfer on Attack" flag on this Active Effect
+   */
   get transferOnAttack() {
     return this.getFlag("torgeternity", "transferOnAttack");
   }
