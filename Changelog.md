@@ -18,10 +18,10 @@
 - Apply current **roll mode** to skill checks displayed in Chat
   - shade the chat messages according to the roll mode (tinted with default Foundry roll mode colour)
   - Hide dice roll results according to roll mode.
-- Get all the translation files up to date:
-  - Spanish by `Teotimus`
-  - German by `Helmut`
-  - French by `Durak`
+- Get all the language files up to date:
+  - Spanish translations by `Teotimus`
+  - German translations by `Helmut`
+  - French translations by `Durak`
 
 ### Bug Fixes
 
