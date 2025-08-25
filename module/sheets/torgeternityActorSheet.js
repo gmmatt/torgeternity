@@ -4,7 +4,7 @@ import { oneTestTarget, TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
 import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
-import { ChatMessageTorg } from '../documents/chat/document.js';
+import { ChatMessageTorg } from '../documents/chat/chatMessageTorg.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -29,6 +29,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     },
     actions: {
       toggleThreatSkill: TorgeternityActorSheet.#onToggleThreatSkill,
+      toggleStatusEffect: TorgeternityActorSheet.#onToggleStatusEffect,
       skillRoll: TorgeternityActorSheet.#onSkillRoll,
       skillEditToggle: TorgeternityActorSheet.#onSkillEditToggle,
       itemToChat: TorgeternityActorSheet.#onItemChat,
@@ -206,6 +207,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     context.cosmCard = context.items.filter(item => item.type === 'cosmCard');
     context.vehicleAddOn = context.items.filter(item => item.type === 'vehicleAddOn');
     context.ammunitions = context.items.filter(item => item.type === 'ammunition');
+    context.statusEffects = {};
+    this.actor.statuses.forEach(status => context.statusEffects[status] = true);
+    context.showConditions = true;
+
     if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 
     for (const type of [
@@ -521,7 +526,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     if (isThreatSkill) {
       update[`system.skills.${skillName}.adds`] = '';
     }
-    await this.actor.update(update);
+    return this.actor.update(update);
+  }
+
+  static async #onToggleStatusEffect(event, button) {
+    const statusId = button.dataset.control;
+    return this.actor.toggleStatusEffect(statusId);
   }
 
   /**

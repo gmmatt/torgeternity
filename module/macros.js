@@ -396,6 +396,7 @@ export class TorgeternityMacros {
       stymiedModifier: _actor.statusModifiers.stymied,
       vulnerableModifier: _actor.statusModifiers.vulnerable,
       darknessModifier: _actor.statusModifiers.darkness,
+      waitingModifier: _actor.statusModifiers.waiting,
       type: 'skill',
       isOther1: game.scenes.active && game.scenes.active.torg.cosm !== 'none',
       other1Description: game.i18n.localize('torgeternity.macros.reconnectMacroZoneModifier'),

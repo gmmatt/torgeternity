@@ -331,6 +331,24 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       width: auto;
     }
   }
+
+  div.conditions a.condition img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+
+    &.svg {
+      filter: invert(1);
+    }
+  }
+
+  div.conditions a.condition:not(.checked) img {
+    filter: opacity(0.2);
+
+    &.svg {
+      filter: opacity(0.2) invert(1);
+    }
+  }
 }
 
 /*.scrollable {
@@ -1152,6 +1170,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
 
     .effects {
+      row-gap: 8px;
 
       .item-list {
         padding: 0px;
@@ -2763,7 +2782,7 @@ nav#controls,
 
   .player-dsr-counter {
     flex: 0;
-    margin-right: 2em;
+    margin-right: 1em;
   }
 
   .player-dsr-token {
@@ -2794,6 +2813,14 @@ nav#controls,
   }
 
   ol {
+    h3.waiting {
+      padding: 0.75em;
+      background: url(../images/active_tab_back.webp);
+      background-size: 100% 100%;
+      text-align: center;
+      margin: 5px 0px 0px 0px;
+    }
+
     li.combatant {
       border-radius: 0px;
       border-left: 5px solid black;
@@ -2837,6 +2864,10 @@ nav#controls,
       .combatant-control {
         font-size: 14px;
         text-shadow: 1px 1px 4px var(--color-shadow-dark);
+
+        &[data-action="toggleWaiting"] {
+          padding: 0 0.25rem;
+        }
       }
 
       &:not(.turnDone) {
@@ -2948,8 +2979,13 @@ div.readme a.compendium {
 
 .chat-message {
   margin: 5px;
-  background: url("../images/bgparch.webp");
+  background-image: url("../images/bgparch.webp");
   background-size: cover;
+  background-blend-mode: multiply;
+
+  .flavor-text {
+    text-align: right;
+  }
 
   .flip-card {
     animation: flip 0.2s linear both;

@@ -16,6 +16,16 @@
     }
   },
   "torgeternity": {
+    "activeEffect": {
+      "transferOnAttack": {
+        "label": "Apply Effect on Attack",
+        "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
+      },
+      "testOutcome": {
+        "label": "Apply Effect on Outcome",
+        "hint": "Apply the effect to the target token(s) when a test using this item has this particular outcome"
+      }
+    },
     "attackTypes": {
       "energyWeapons": "Energy Weapons",
       "fireCombat": "Fire Combat",
@@ -85,6 +95,7 @@
           "targetVeryVulnerable": "Target Very Vulnerable",
           "targetVulnerable": "Target Vulnerable",
           "veryStymied": "Very Stymied",
+          "waiting": "Waiting",
           "wounds": "Wounds"
         },
         "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",
@@ -173,6 +184,8 @@
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "toggleDramatic": "Toggle between Standard and Dramatic Combat Resolution",
+      "toggleWaiting": "Toggle the Waiting state of this combatant",
+      "waitingCombatants": "Waiting Combatants",
       "endMyTurn": "Done",
       "nextKeep": "Next Round (Keep Current Card)",
       "nextNew": "Next Round (Draw New Card)",
@@ -248,16 +261,16 @@
       "chooseAttribute": "Choose an Attribute",
       "tempInjury": "You suffer a temporary Injury. {attribute} is reduced by an effect (minus 1)",
       "permInjury": "You suffer a permanent Injury. {attribute} has been reduced by 1",
-      "outstanding-success": {
+      "outstanding": {
         "main": "Knocked Out",
         "sub": ""
       },
-      "good-success": {
+      "good": {
         "main": "Temporary Injury",
         "sub": "You suffer an Injury that lasts until all Wounds are healed",
         "effectName": "Temp. Injury"
       },
-      "standard-success": {
+      "standard": {
         "main": "Permanent Injury",
         "sub": "You suffer a permanent Injury"
       },
@@ -589,6 +602,7 @@
       "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
       "openIssue": "Your browser will open a new page to complete an issue",
+      "openReference": "Your browser will open a new page to join the Torg Reference website",
       "openUlisses": "Your browser will open a new tab to join Ulisses website",
       "failureBDResolution": "The system failed to resolute the BD",
       "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
@@ -841,7 +855,9 @@
       "ammunition": "Ammunition",
       "APMod": "AP Modifier",
       "applyDamage": "Apply damages",
+      "applyEffects": "Apply effects",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
+      "applyEffectsTooltip": "Apply relevant Active Effects to target(s)",
       "applyStymied": "Apply Stymied",
       "applyStymiedTooltip": "Click to apply Stymied. Or Very Stymied if already Stymied.",
       "applyVulnerable": "Apply Vulnerable",
@@ -872,6 +888,7 @@
       "collision": "Collision",
       "combatSkills": "Combat",
       "concealment": "Concealment",
+      "conditions": "Conditions",
       "cosm": "Cosm",
       "coverBonus": "Cover Bonus",
       "coverBonusTooltip": "Bonus added to target toughness as a result of cover",
@@ -1133,48 +1150,6 @@
       "unarmedCombat": "Unarmed Combat",
       "waterVehicles": "Water Vehicles",
       "willpower": "Willpower"
-    },
-    "skills-nocap": {
-      "airVehicles": "air vehicles",
-      "alteration": "alteration",
-      "apportation": "apportation",
-      "beastRiding": "beast riding",
-      "computers": "computers",
-      "conjuration": "conjuration",
-      "divination": "divination",
-      "dodge": "dodge",
-      "energyWeapons": "energy weapons",
-      "evidenceAnalysis": "evidence analysis",
-      "faith": "faith",
-      "find": "find",
-      "fireCombat": "fire combat",
-      "firstAid": "first aid",
-      "heavyWeapons": "heavy weapons",
-      "intimidation": "intimidation",
-      "kinesis": "kinesis",
-      "landVehicles": "land vehicles",
-      "language": "language",
-      "lockpicking": "lockpicking",
-      "maneuver": "maneuver",
-      "medicine": "medicine",
-      "meleeWeapons": "melee weapons",
-      "missileWeapons": "missile weapons",
-      "persuasion": "persuasion",
-      "precognition": "precognition",
-      "profession": "profession",
-      "reality": "reality",
-      "scholar": "scholar",
-      "science": "science",
-      "stealth": "stealth",
-      "streetwise": "streetwise",
-      "survival": "survival",
-      "taunt": "taunt",
-      "telepathy": "telepathy",
-      "tracking": "tracking",
-      "trick": "trick",
-      "unarmedCombat": "unarmed combat",
-      "waterVehicles": "water vehicles",
-      "willpower": "willpower"
     },
     "speeds": {
       "fast": "Fast",

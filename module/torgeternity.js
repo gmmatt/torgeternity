@@ -15,7 +15,7 @@ import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
 import torgeternitySceneConfig from './torgeternitySceneConfig.js';
 import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
-import { rollAttack, rollPower } from './torgchecks.js';
+import { rollAttack, rollPower, TestResult } from './torgchecks.js';
 import { modifyTokenBars } from './tokenBars.js';
 import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
@@ -36,7 +36,7 @@ import { torgMigration } from './migrations.js';
 import initTextEdidor from './initTextEditor.js';
 import initProseMirrorEditor from './initProseMirrorEditor.js';
 import { TorgeternityMacros } from './macros.js';
-import { ChatMessageTorg } from './documents/chat/document.js';
+import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
 import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
@@ -242,6 +242,14 @@ Hooks.once('i18nInit', () => {
     vehicleAddOn: 'torgeternity.itemSheetDescriptions.vehicleAddOn',
     race: 'torgeternity.itemSheetDescriptions.race',
   };
+  CONFIG.torgeternity.testOutcomeLabel = {
+    [TestResult.UNKNOWN]: "",
+    [TestResult.MISHAP]: 'torgeternity.chatText.check.result.mishape',
+    [TestResult.FAILURE]: 'torgeternity.chatText.check.result.failure',
+    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standartSuccess',
+    [TestResult.GOOD]: 'torgeternity.chatText.check.result.goodSuccess',
+    [TestResult.OUTSTANDING]: 'torgeternity.chatText.check.result.outstandingSuccess'
+  }
 
   // Hard-coded, so that we are guaranteed to have it available immediately
   CONFIG.torgeternity.cosmTypeFromLabel = {
@@ -307,6 +315,7 @@ Hooks.once('setup', async function () {
   Handlebars.registerHelper({ TorgRadioBoxesNumber })
   Handlebars.registerHelper({ TorgHidden })
   Handlebars.registerHelper({ TorgDisconnected })
+  Handlebars.registerHelper({ TorgIsSvg })
 
   // Ensure all Actor & Item packs have the updated index contents
   for (const pack of game.packs) {
@@ -439,19 +448,25 @@ Hooks.on("renderSettings", async (app, html) => {
             icon: 'fa-solid fa-expand-arrows-alt',
             label: 'torgeternity.dialogWindow.externalLinks.reference',
             callback: () => {
-              new foundry.applications.sidebar.apps.FrameViewer({  // will be removed in Foundry V15
-                url: 'http://torg-gamereference.com/index.php',
-                window: {
-                  title: 'torg game reference',
-                  resizable: true,
-                },
-                position: {
-                  top: 200,
-                  left: 200,
-                  width: 520,
-                  height: 520,
-                }
-              }).render({ force: true });
+              // We can only inline when the Foundry server is running on HTTP, not HTTPS
+              if (location.protocol === 'https:') {
+                ui.notifications.info(game.i18n.localize('torgeternity.notifications.openReference'));
+                window.open('http://torg-gamereference.com/index.php', '_blank');
+              } else {
+                new foundry.applications.sidebar.apps.FrameViewer({  // will be removed in Foundry V15
+                  url: 'http://torg-gamereference.com/index.php',
+                  window: {
+                    title: 'torg game reference',
+                    resizable: true,
+                  },
+                  position: {
+                    top: 200,
+                    left: 200,
+                    width: 520,
+                    height: 520,
+                  }
+                }).render({ force: true });
+              }
             },
           },
           {
@@ -807,8 +822,8 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 });
 
 
-Hooks.on('renderJournalEntryPageSheet', (sheet, element, document, options) => {
-  element.classList.add('themed', 'theme-light');
+Hooks.on('renderJournalEntrySheet', (sheet, element, document, options) => {
+  element.querySelector('article.journal-entry-page.text')?.classList.add('themed', 'theme-light');
 })
 
 function showWelcomeMessage() {
@@ -881,4 +896,8 @@ function TorgHidden(value) {
 
 function TorgDisconnected(doc) {
   return doc?.isDisconnected ? "disconnected" : "";
+}
+
+function TorgIsSvg(value) {
+  return value.endsWith('.svg') ? 'svg' : '';
 }
