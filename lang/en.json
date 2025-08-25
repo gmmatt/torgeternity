@@ -857,7 +857,7 @@
       "applyDamage": "Apply damages",
       "applyEffects": "Apply effects",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
-      "applyEffectsTooltip": "Apply Active Effects to target(s)",
+      "applyEffectsTooltip": "Apply relevant Active Effects to target(s)",
       "applyStymied": "Apply Stymied",
       "applyStymiedTooltip": "Click to apply Stymied. Or Very Stymied if already Stymied.",
       "applyVulnerable": "Apply Vulnerable",

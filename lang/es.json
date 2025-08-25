@@ -863,7 +863,7 @@
       "applyDamage": "Aplicar daño",
       "applyEffects": "Apply effects",
       "applyDamageTooltip": "Botón derecho para modificar daño aplicado, botón izquierdo para aplicar.",
-      "applyEffectsTooltip": "Apply Active Effects to target(s)",
+      "applyEffectsTooltip": "Apply relevant Active Effects to target(s)",
       "applyStymied": "Aplicar Impedido",
       "applyStymiedTooltip": "Clic para aplicar Impedido, o Muy Impedido si ya está Impedido.",
       "applyVulnerable": "Aplicar Vulnerable",

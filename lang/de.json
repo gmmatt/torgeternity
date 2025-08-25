@@ -863,7 +863,7 @@
       "applyDamage": "Schaden anwenden",
       "applyEffects": "Apply effects",
       "applyDamageTooltip": "Linksklick zum anwenden, Rechtsklick zum modifizieren.",
-      "applyEffectsTooltip": "Apply Active Effects to target(s)",
+      "applyEffectsTooltip": "Apply relevant Active Effects to target(s)",
       "applyStymied": "Angeschlagen anwenden",
       "applyStymiedTooltip": "Klicke, um den Status \"Angeschlagen\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Angeschlagen\".",
       "applyVulnerable": "Verwundbar anwenden",
