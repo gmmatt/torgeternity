@@ -14,8 +14,9 @@
 - #369: Add a row of **conditions** at the top of the Effects tab of the Actor sheet (where conditions can be toggled).
 - Display **Good** or **Outstanding** text from a power in the chat card on the corresponding result.
 - #232: **Transfer Effects** from Item to Target of a test. The effects can remain disabled on the item/weapon/ammo, and they will be enabled upon transfer to the target. (Duration can also be set.)
-  - **Apply Effect on Attack** to transfer on a successful attack
-  - **Apply Effect on Outcome** to transfer on a specific test outcome (Mishap,Failure,Standard,Good,Outstanding) - e.g Armor spell
+  - **Apply Effect on Attack** to transfer this effect on a successful attack.
+  - **Apply Effect on Outcome** to transfer this effect on a specific test outcome (Mishap,Failure,Standard,Good,Outstanding) - e.g Armor spell
+  - A new "Apply effects" button will appear in the chat card which can be used to apply them to the target shown in the chat card.
 - Fix styling of **Journal page headers** (force each text page to use the "light" theme).
 - **Enrich the Rule text** displayed for the current Drama Card.
 - Apply current **roll mode** to skill checks displayed in Chat
