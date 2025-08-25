@@ -18,6 +18,7 @@
 - Apply current **roll mode** to skill checks displayed in Chat
   - shade the chat messages according to the roll mode (tinted with default Foundry roll mode colour)
   - Hide dice roll results according to roll mode.
+- Display **Good** or **Outstanding** text from a power in the chat card on the corresponding result.
 - Get all the language files up to date:
   - Spanish translations by `Teotimus`
   - German translations by `Helmut`
