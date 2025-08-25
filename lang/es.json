@@ -28,8 +28,8 @@
         "hint": "Si está marcado, este Efecto se aplicará al actor objetivo cuando el objeto al que pertenece el Efecto forme parte de un ataque (bien como arma, bien como munición)"
       },
       "testOutcome": {
-        "label": "Apply Effect on Outcome",
-        "hint": "Apply the effect to the target token(s) when a test using this item has this particular outcome"
+        "label": "Aplicar efecto con resultado",
+        "hint": "Aplicar el efecto a la(s) ficha(s) objetivo cuando una prueba que usa este objeto obtenga este resultado específico"
       }
     },
     "attackTypes": {
@@ -861,9 +861,9 @@
       "ammunition": "Munición",
       "APMod": "Modificador PA",
       "applyDamage": "Aplicar daño",
-      "applyEffects": "Apply effects",
+      "applyEffects": "Aplicar efectos",
       "applyDamageTooltip": "Botón derecho para modificar daño aplicado, botón izquierdo para aplicar.",
-      "applyEffectsTooltip": "Apply relevant Active Effects to target(s)",
+      "applyEffectsTooltip": "Aplicar efectos activos pertinentes al/los objetivo(s)",
       "applyStymied": "Aplicar Impedido",
       "applyStymiedTooltip": "Clic para aplicar Impedido, o Muy Impedido si ya está Impedido.",
       "applyVulnerable": "Aplicar Vulnerable",
