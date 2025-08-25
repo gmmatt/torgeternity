@@ -26,6 +26,10 @@
       "transferOnAttack": {
         "label": "Apply Effect on Attack",
         "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
+      },
+      "testOutcome": {
+        "label": "Apply Effect on Outcome",
+        "hint": "Apply the effect to the target token(s) when a test using this item has this particular outcome"
       }
     },
     "attackTypes": {
@@ -857,7 +861,9 @@
       "ammunition": "Munitions",
       "APMod": "Modificateur d'AP",
       "applyDamage": "Appliquer dommages",
+      "applyEffects": "Apply effects",
       "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
+      "applyEffectsTooltip": "Apply Active Effects to target(s)",
       "applyStymied": "Appliquer Déstabilisé",
       "applyStymiedTooltip": "Applique Déstabilisé, ou Très Déstabilisé si déjà Déstabilisé.",
       "applyVulnerable": "Appliquer Vulnérable",

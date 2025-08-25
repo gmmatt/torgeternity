@@ -3,14 +3,16 @@ import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
 import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
 
 export const TestResult = {
-  MISHAP: 0,
-  FAILURE: 1,
-  STANDARD: 2,
-  GOOD: 3,
-  OUTSTANDING: 4
+  UNKNOWN: 0,
+  MISHAP: 1,
+  FAILURE: 2,
+  STANDARD: 3,
+  GOOD: 4,
+  OUTSTANDING: 5
 }
 
 export const TestResultKey = { // with .main or .sub
+  [TestResult.UNKNOWN]: '',
   [TestResult.MISHAP]: 'mishap',
   [TestResult.FAILURE]: 'failure',
   [TestResult.STANDARD]: 'standard',
@@ -54,6 +56,7 @@ export async function renderSkillChat(test) {
   test.applyVulnerableLabel = 'hidden';
   test.applyActorVulnerableLabel = 'hidden';
   test.applyDamLabel = 'hidden';
+  test.applyEffectsLabel = 'hidden';
   test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   let iteratedRoll;
@@ -387,6 +390,9 @@ export async function renderSkillChat(test) {
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 1;
     }
+
+    // Show the "Apply Effects" button if the test has an effect that can be applied
+    test.applyEffectsLabel = testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result) ?? 'hidden';
 
     // Approved Action Processing
     test.successfulDefendApprovedAction = false;

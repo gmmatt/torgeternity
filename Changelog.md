@@ -12,13 +12,15 @@
 - Newly-created Threats will have their prototype tokens **NOT linked** to the Actor.
 - Remove Initiative options from the Combat Tracker context menus (combat and combatant).
 - #369: Add a row of **conditions** at the top of the Effects tab of the Actor sheet (where conditions can be toggled).
-- #232: **Transfer effects** from used Weapon (and Ammo) to the target when applying damage (using new Effect field "Apply Effect on Attack"). The effects can remain disabled on the weapon/ammo, and they will be enabled upon transfer to the target. (Duration can also be set.)
+- Display **Good** or **Outstanding** text from a power in the chat card on the corresponding result.
+- #232: **Transfer Effects** from Item to Target of a test. The effects can remain disabled on the item/weapon/ammo, and they will be enabled upon transfer to the target. (Duration can also be set.)
+  - **Apply Effect on Attack** to transfer on a successful attack
+  - **Apply Effect on Outcome** to transfer on a specific test outcome (Mishap,Failure,Standard,Good,Outstanding) - e.g Armor spell
 - Fix styling of **Journal page headers** (force each text page to use the "light" theme).
 - **Enrich the Rule text** displayed for the current Drama Card.
 - Apply current **roll mode** to skill checks displayed in Chat
   - shade the chat messages according to the roll mode (tinted with default Foundry roll mode colour)
   - Hide dice roll results according to roll mode.
-- Display **Good** or **Outstanding** text from a power in the chat card on the corresponding result.
 - Get all the language files up to date:
   - Spanish translations by `Teotimus`
   - German translations by `Helmut`

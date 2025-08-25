@@ -73,7 +73,7 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
    * @param {*} context 
    */
   static onRenderActiveEffectConfig(app, html, context) {
-    const element = new foundry.data.fields.BooleanField().toFormGroup({
+    const transferOnAttack = new foundry.data.fields.BooleanField().toFormGroup({
       label: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.label"),
       hint: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.hint")
     }, {
@@ -81,7 +81,20 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
       value: app.document.getFlag("torgeternity", "transferOnAttack") ?? false,
       disabled: !context.editable
     });
-    html.querySelector("[data-tab=details] > .form-group:has([name=transfer])")?.after(element);
+    const testOutcome = new foundry.data.fields.NumberField({
+      choices: CONFIG.torgeternity.testOutcomeLabel,
+      integer: true,
+      nullable: true
+    }).toFormGroup({
+      label: game.i18n.localize("torgeternity.activeEffect.testOutcome.label"),
+      hint: game.i18n.localize("torgeternity.activeEffect.testOutcome.hint")
+    }, {
+      name: 'flags.torgeternity.testOutcome',
+      value: app.document.getFlag("torgeternity", "testOutcome") ?? null,
+      disabled: !context.editable,
+      localize: true
+    });
+    html.querySelector("[data-tab=details] > .form-group:has([name=transfer])")?.after(transferOnAttack, testOutcome);
   }
 
   /**
@@ -89,6 +102,10 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
    */
   get transferOnAttack() {
     return this.getFlag("torgeternity", "transferOnAttack");
+  }
+
+  get testOutcome() {
+    return this.getFlag("torgeternity", "testOutcome");
   }
 }
 

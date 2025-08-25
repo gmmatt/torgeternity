@@ -26,6 +26,10 @@
       "transferOnAttack": {
         "label": "Effekt bei Angriff anwenden",
         "hint": "Dieser Effekt wird für das ausgewählte Ziel angewendet, falls der Gegenstand dieses Effekts für den Angriff genutzt wurde (entweder als Waffe oder Munition)"
+      },
+      "testOutcome": {
+        "label": "Apply Effect on Outcome",
+        "hint": "Apply the effect to the target token(s) when a test using this item has this particular outcome"
       }
     },
     "attackTypes": {
@@ -857,7 +861,9 @@
       "ammunition": "Munition",
       "APMod": "PB Modifikator",
       "applyDamage": "Schaden anwenden",
+      "applyEffects": "Apply effects",
       "applyDamageTooltip": "Linksklick zum anwenden, Rechtsklick zum modifizieren.",
+      "applyEffectsTooltip": "Apply Active Effects to target(s)",
       "applyStymied": "Angeschlagen anwenden",
       "applyStymiedTooltip": "Klicke, um den Status \"Angeschlagen\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Angeschlagen\".",
       "applyVulnerable": "Verwundbar anwenden",

@@ -15,7 +15,7 @@ import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
 import torgeternitySceneConfig from './torgeternitySceneConfig.js';
 import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
-import { rollAttack, rollPower } from './torgchecks.js';
+import { rollAttack, rollPower, TestResult } from './torgchecks.js';
 import { modifyTokenBars } from './tokenBars.js';
 import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
@@ -242,6 +242,14 @@ Hooks.once('i18nInit', () => {
     vehicleAddOn: 'torgeternity.itemSheetDescriptions.vehicleAddOn',
     race: 'torgeternity.itemSheetDescriptions.race',
   };
+  CONFIG.torgeternity.testOutcomeLabel = {
+    [TestResult.UNKNOWN]: "",
+    [TestResult.MISHAP]: 'torgeternity.chatText.check.result.mishape',
+    [TestResult.FAILURE]: 'torgeternity.chatText.check.result.failure',
+    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standartSuccess',
+    [TestResult.GOOD]: 'torgeternity.chatText.check.result.goodSuccess',
+    [TestResult.OUTSTANDING]: 'torgeternity.chatText.check.result.outstandingSuccess'
+  }
 
   // Hard-coded, so that we are guaranteed to have it available immediately
   CONFIG.torgeternity.cosmTypeFromLabel = {
