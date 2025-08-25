@@ -375,14 +375,14 @@ export async function renderSkillChat(test) {
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 'all';
-      test.extraResult = testItem?.system?.outstanding;
+      test.extraResult = testItem?.system?.outstanding ? await foundry.applications.ux.TextEditor.enrichHTML(testItem.system.outstanding) : '';
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       test.result = TestResult.GOOD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 2;
-      test.extraResult = testItem?.system?.good;
+      test.extraResult = testItem?.system?.good ? await foundry.applications.ux.TextEditor.enrichHTML(testItem.system.good) : '';
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
       test.result = TestResult.STANDARD;
@@ -425,7 +425,7 @@ export async function renderSkillChat(test) {
       test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
       if (test?.attackTraits?.includes('fragile')) {
-        test.extraResult = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.itemName });
+        test.extraResult = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.name });
       }
       test.outcomeColor = 'color: purple';
       test.resultTextColor = 'color: purple';

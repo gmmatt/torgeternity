@@ -30,6 +30,7 @@
 ### Bug Fixes
 
 - Ensure that the language keys are read correctly for Defeat Test results.
+- Fragile report in Chat Card shows item name, not 'unknown'.
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 
