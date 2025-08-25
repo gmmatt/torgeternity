@@ -24,12 +24,12 @@
   "torgeternity": {
     "activeEffect": {
       "transferOnAttack": {
-        "label": "Apply Effect on Attack",
-        "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
+        "label": "Transfert d'effet par une Attaque",
+        "hint": "Si coché, cet Effet sera appliqué à l'Acteur ciblé par une attaque impliquant cet Objet (armes ou munitions)"
       },
       "testOutcome": {
-        "label": "Apply Effect on Outcome",
-        "hint": "Apply the effect to the target token(s) when a test using this item has this particular outcome"
+        "label": "Applique l'Effet correspondant au degré de réussite",
+        "hint": "Applique l'Effet sur le token ciblé correspondant au degré de réussite du test impliquant cet objet"
       }
     },
     "attackTypes": {
@@ -190,8 +190,8 @@
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp",
       "toggleDramatic": "Bascule le combat entre une scène Normale et une scène Dramatique",
-      "toggleWaiting": "Toggle the Wait state of this combatant",
-      "waitingCombatants": "Waiting Combatants",
+      "toggleWaiting": "Active l'état Attendre de ce combattant",
+      "waitingCombatants": "Combattants sous l'effet Attendre",
       "endMyTurn": "Terminé",
       "nextKeep": "Nouveau round (garder la carte actuelle)",
       "nextNew": "Nouveau round (nouvelle carte Action)",
@@ -369,7 +369,7 @@
         "time": "Saisissez la durée en round(s)"
       },
       "raceDiminishAttribute": {
-        "maintext": "L'attribut {attribute} est plus grand que le maximum de population. Doit-on définir l'attribut sur le maximum de population?",
+        "maintext": "L'attribut {attribute} est plus grand que le maximum de cette race. Doit-on définir l'attribut sur le maximum racial?",
         "title": "Avertissement, attribut maximum"
       }
     },
@@ -608,7 +608,7 @@
       "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène de combat.",
       "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
       "openIssue": "Votre navigateur va ouvrir un onglet pour signaler un problème.",
-      "openReference": "Your browser will open a new page to join the Torg Reference website",
+      "openReference": "Votre navigateur va ouvrir le site Torg Reference (en anglais)",
       "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele.",
       "failureBDResolution": "Echec de résolution avec le BD",
       "ammoValueExceedsMax": "La quantité de munitions dépasse la capacité du chargeur dans l'arme {a}. La valeur va être réduite à son maximum.",
@@ -861,9 +861,9 @@
       "ammunition": "Munitions",
       "APMod": "Modificateur d'AP",
       "applyDamage": "Appliquer dommages",
-      "applyEffects": "Apply effects",
+      "applyEffects": "Appliquer les Effets",
       "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
-      "applyEffectsTooltip": "Apply relevant Active Effects to target(s)",
+      "applyEffectsTooltip": "Transfert les Effets pertinents aux cibles",
       "applyStymied": "Appliquer Déstabilisé",
       "applyStymiedTooltip": "Applique Déstabilisé, ou Très Déstabilisé si déjà Déstabilisé.",
       "applyVulnerable": "Appliquer Vulnérable",
