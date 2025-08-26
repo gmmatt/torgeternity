@@ -31,6 +31,7 @@
 
 - Ensure that the language keys are read correctly for Defeat Test results.
 - Fragile report in Chat Card shows item name, not 'unknown'.
+- Only display "Apply Stymied" button for a weapon with Stagger if the attack dealt some shock or wounds.
 
 ## v13.7.0 - Glory, Defeat and Intimidation
 

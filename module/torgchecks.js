@@ -52,7 +52,7 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
-  test.applyStymiedLabel = test.attackTraits?.includes('stagger') ? '' : 'hidden';
+  test.applyStymiedLabel = 'hidden';
   test.applyVulnerableLabel = 'hidden';
   test.applyActorVulnerableLabel = 'hidden';
   test.applyDamLabel = 'hidden';
@@ -548,11 +548,17 @@ export async function renderSkillChat(test) {
           // adjustedDamage is already computed from test.damage
           // then modify test.damage for following future computation, and modify the adjustedDamage
           // then the test.BDDamageInPromise is reset
+          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits);
 
           test.applyDamLabel = '';
-          test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits).label;
+          test.damageDescription = damage.label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
+
+          // 'stagger' trait on a weapon inflicts STYMIED after any damage is dealt.
+          if ((damage.shocks > 0 || damage.wounds > 0) && test.attackTraits?.includes('stagger')) {
+            test.applyStymiedLabel = '';
+          }
         }
       } else {
         // Basic roll
