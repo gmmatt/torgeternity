@@ -315,11 +315,13 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.config = CONFIG.torgeternity;
 
-    context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description);
-    context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites);
+    const isOwner = this.item.isOwner;
+
+    context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description, { secrets: isOwner });
+    context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites, { secrets: isOwner });
     if (Object.hasOwn(this.document.system, 'good')) {
-      context.enrichedGood = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.good);
-      context.enrichedOutstanding = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.outstanding);
+      context.enrichedGood = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.good, { secrets: isOwner });
+      context.enrichedOutstanding = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.outstanding, { secrets: isOwner });
     }
 
     context.hasAmmunition = !game.settings.get('torgeternity', 'ignoreAmmo') && this.document.actor?.itemTypes?.ammunition?.length > 0;

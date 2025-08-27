@@ -231,7 +231,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
 
     return ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      content: await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate),
+      content: await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate, { secrets: this.isOwner }),
     });
   }
 

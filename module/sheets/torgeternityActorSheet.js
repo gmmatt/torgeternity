@@ -212,6 +212,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 
+    const isOwner = this.actor.isOwner;
+
     for (const type of [
       'meleeweapons',
       'customAttack',
@@ -238,7 +240,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       'vehicleAddOn',
     ]) {
       for (const item of context[type]) {
-        item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description);
+        item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description, { secrets: isOwner });
         item.traitDesc = Array.from(item.system.traits.map(trait => game.i18n.localize(`torgeternity.traits.${trait}`))).join(' / ');
       }
     }
@@ -246,13 +248,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     // Enrich Text Editors
     switch (this.actor.type) {
       case 'stormknight':
-        context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.background);
+        context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.background, { secrets: isOwner });
         break;
       case 'threat':
-        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.description);
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.description, { secrets: isOwner });
         break;
       case 'vehicle':
-        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.description);
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.description, { secrets: isOwner });
     }
 
     // if (this.actor.system.editstate === undefined) 
