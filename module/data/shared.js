@@ -39,7 +39,7 @@ export function migrateCosm(cosm) {
   else if (Object.hasOwn(CONFIG.torgeternity.cosmTypeFromLabel, cosm))
     return CONFIG.torgeternity.cosmTypeFromLabel[cosm];
 
-  console.log(`Invalid Cosm: ${cosm}`);
+  console.log(`Invalid Cosm: '${cosm}'`);
   return 'none';
 }
 
