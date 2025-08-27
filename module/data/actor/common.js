@@ -92,7 +92,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
    * @param {object} data the data object to migrate
    */
   static migrateData(data) {
-    if (data.other) data.other.cosm = migrateCosm(data.other.cosm);
+    if (data.other?.cosm !== undefined) data.other.cosm = migrateCosm(data.other.cosm);
 
     for (const attribute of Object.keys(data.attributes ?? {})) {
       if (typeof data?.attributes?.[attribute] === 'number') {

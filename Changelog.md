@@ -6,6 +6,7 @@
 
 - Scrollbar will appear when editing the SK Notes section.
 - It is possible to create Perks once again (the category will default to "special/homebrew").
+- Don't cancel an item's cosm when only a partial update occurs (such as Equipping the item).
 
 ## v13.8.1 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
 
