@@ -2992,6 +2992,10 @@ div.readme a.compendium {
     animation: flip 0.2s linear both;
   }
 
+  .chat-text secret-block button.reveal {
+    display: none;
+  }
+
   .torgeternity-message-header {
     display: flex;
     flex-direction: row;

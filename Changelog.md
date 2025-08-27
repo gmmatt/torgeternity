@@ -6,7 +6,7 @@
 
 - Improve generation of Chat Messages.
 - Ensure that inline checks have a default of 'standard' (10)
-- Ensure **secret** blocks are (not?) rendered properly based on ownership of Actor/Item.
+- Ensure **secret** blocks are (not?) rendered properly based on ownership of Actor/Item (including in the Good/Outstanding results posted to Chat)
 
 ### Bug Fixes
 

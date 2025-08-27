@@ -16,7 +16,7 @@ export class ChatMessageTorg extends ChatMessage {
       templateData.isOpen = game.settings.get('torgeternity', 'showCheckDetails') ? "open" : "";
 
       const renderedTemplate = await foundry.applications.handlebars.renderTemplate(this.flags.torgeternity.template, templateData);
-      html.querySelector('.message-content').innerHTML = await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate);
+      html.querySelector('.message-content').innerHTML = await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate, { secrets: this.isOwner });
     }
     return html;
   }
