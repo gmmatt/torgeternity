@@ -3,6 +3,12 @@
     "discard": "Abwerfen",
     "display": "Herzeigen"
   },
+  "CHAT": {
+    "RollBlind": "Verdeckter SL-Wurf",
+    "RollPublic": "Öffentlicher Wurf",
+    "RollPrivate": "Privater SL-Wurf",
+    "RollSelf": "Privater Wurf"
+  },
   "TYPES": {
     "Card": {
       "destiny": "Schicksal",
@@ -16,6 +22,16 @@
     }
   },
   "torgeternity": {
+    "activeEffect": {
+      "transferOnAttack": {
+        "label": "Effekt bei Angriff anwenden",
+        "hint": "Dieser Effekt wird für das ausgewählte Ziel angewendet, falls der Gegenstand dieses Effekts für den Angriff genutzt wurde (entweder als Waffe oder Munition)"
+      },
+      "testOutcome": {
+        "label": "Effect je nach Ergebnis anwenden",
+        "hint": "Je nach Probenergebnis mit diesem Gegenstand den passenden Effekt auf den Zieltoken anwenden"
+      }
+    },
     "attackTypes": {
       "energyWeapons": "Energiewaffen",
       "fireCombat": "Schusswaffen",
@@ -63,8 +79,8 @@
         "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
         "cantUseRealityWhileDisconnected": "Du kannst die Fähigkeit Realität nicht verwenden, so lange du abgekoppelt bist.",
         "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und erneut versuchen.",
-        "isApprovedAction": "Anerkannte Aktion erfolgreich (ziehe eine Schicksalskarte)",
-        "isApprovedDefend": "{name} hat erfolgreich verteidigt  (ziehe eine Schicksalskarte)",
+        "isApprovedAction": "Anerkannte Aktion erfolgreich",
+        "isApprovedDefend": "{name} hat erfolgreich verteidigt",
         "modifier": {
           "aimedShot": "Zielen",
           "allOutAttack": "Rücksichtsloser Angriff",
@@ -85,6 +101,7 @@
           "targetVeryVulnerable": "Ziel sehr verwundbar",
           "targetVulnerable": "Ziel verwundbar",
           "veryStymied": "Sehr Angeschlagen",
+          "waiting": "Warten",
           "wounds": "Wunden"
         },
         "needTarget": "Der ausgeweitete Angriffswurf kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und erneut versuchen.",
@@ -173,6 +190,8 @@
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "toggleDramatic": "Zwischen Standard- und dramatischer Szene umschalten",
+      "toggleWaiting": "Warten-Zustand für diesen Kämpfer umschalten",
+      "waitingCombatants": "Wartender Kämpfer",
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
       "nextNew": "neue Runde (neue Dramakarte)",
@@ -248,16 +267,16 @@
       "chooseAttribute": "Wähle ein Attribut",
       "tempInjury": "Du erleidest eine vorrübergehende Verletzung. {attribute} wird durch eine Effekt reduziert (Minus 1)",
       "permInjury": "Du erleidest eine permanente Verletzung. {attribute} wurde um 1 reduziert",
-      "outstanding-success": {
+      "outstanding": {
         "main": "{name} geht K.O.",
         "sub": ""
       },
-      "good-success": {
+      "good": {
         "main": "Vorrübergehende Verletzung",
         "sub": "Und erleidet eine Verletzung, die anhält, bis alle seine Wunden geheilt sind",
         "effectName": "Temp. Verletzung"
       },
-      "standard-success": {
+      "standard": {
         "main": "Permanente Verletzung",
         "sub": "Und erleidet eine permanente Verletzung"
       },
@@ -523,8 +542,8 @@
       "psionicRoll": "Psionischer Wurf",
       "reload": "Waffe nachladen<p>(halte SHIFT für freies Nachladen)",
       "resetPossibilities": "Möglichkeiten zurücksetzen",
-      "GMPoss": "GM's possibility pool",
-      "SKPoss": "character's possibilities",
+      "GMPoss": "SL's Möglichkeitspool",
+      "SKPoss": "Charakters Möglichkeitspool",
       "sendToChat": "An Chat senden",
       "spellRoll": "Zauberwurf",
       "toggle": "Umschalten auf",
@@ -588,6 +607,7 @@
       "notImplemented": "Aktuell noch nicht implementiert",
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
+      "openReference": "Dein Browser öffnet die Torg Reference website als neue Seite",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
       "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
       "failureBDResolution": "Das System konnte die BW nicht berechnen.",
@@ -841,7 +861,9 @@
       "ammunition": "Munition",
       "APMod": "PB Modifikator",
       "applyDamage": "Schaden anwenden",
+      "applyEffects": "Effekt anwenden",
       "applyDamageTooltip": "Linksklick zum anwenden, Rechtsklick zum modifizieren.",
+      "applyEffectsTooltip": "Wende den passenden Aktiven Effekt auf die Ziele an",
       "applyStymied": "Angeschlagen anwenden",
       "applyStymiedTooltip": "Klicke, um den Status \"Angeschlagen\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Angeschlagen\".",
       "applyVulnerable": "Verwundbar anwenden",
@@ -872,6 +894,7 @@
       "collision": "Kollision",
       "combatSkills": "Kampf",
       "concealment": "Deckung",
+      "conditions": "Auswirkungen",
       "cosm": "Cosm",
       "coverBonus": "Deckungsbonus",
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
@@ -1126,48 +1149,6 @@
       "stealth": "Heimlichkeit",
       "streetwise": "Gassenwissen",
       "survival": "Überlebenskunst",
-      "taunt": "Verspotten",
-      "telepathy": "Telepatie",
-      "tracking": "Spurenlesen",
-      "trick": "Tricksen",
-      "unarmedCombat": "Waffenloser Kampf",
-      "waterVehicles": "Wasserfahrzeuge",
-      "willpower": "Willenskraft"
-    },
-    "skills-nocap": {
-      "airVehicles": "Luftfahrzeuge",
-      "alteration": "Verwandlung",
-      "apportation": "Apportation",
-      "beastRiding": "Reiten",
-      "computers": "Computer",
-      "conjuration": "Beschwörung",
-      "divination": "Wahrsagung",
-      "dodge": "Ausweichen",
-      "energyWeapons": "Energiewaffen",
-      "evidenceAnalysis": "Beweisanalyse",
-      "faith": "Glauben",
-      "find": "Finden",
-      "fireCombat": "Feuerwaffen",
-      "firstAid": "Erste Hilfe",
-      "heavyWeapons": "Schwere Waffen",
-      "intimidation": "Einschüchtern",
-      "kinesis": "Kinese",
-      "landVehicles": "Landfahrzeuge",
-      "language": "Sprache",
-      "lockpicking": "Schlossknacken",
-      "maneuver": "Manövrieren",
-      "medicine": "Medizin",
-      "meleeWeapons": "Nahkampfwaffen",
-      "missileWeapons": "Projektilwaffen",
-      "persuasion": "Überreden",
-      "precognition": "Präkognition",
-      "profession": "Beruf",
-      "reality": "Realität",
-      "scholar": "Gelehrsamkeit",
-      "science": "Wisssenschaft",
-      "stealth": "Heimlichkeit",
-      "streetwise": "Gassenwissen",
-      "survival": "Überlebenskampf",
       "taunt": "Verspotten",
       "telepathy": "Telepatie",
       "tracking": "Spurenlesen",

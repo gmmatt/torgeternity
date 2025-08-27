@@ -1,14 +1,25 @@
 import { TestDialog, TestDialogLabel } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
-import { ChatMessageTorg } from './documents/chat/document.js';
+import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
 
 export const TestResult = {
-  MISHAP: 0,
-  FAILURE: 1,
-  STANDARD: 2,
-  GOOD: 3,
-  OUTSTANDING: 4
+  UNKNOWN: 0,
+  MISHAP: 1,
+  FAILURE: 2,
+  STANDARD: 3,
+  GOOD: 4,
+  OUTSTANDING: 5
 }
+
+export const TestResultKey = { // with .main or .sub
+  [TestResult.UNKNOWN]: '',
+  [TestResult.MISHAP]: 'mishap',
+  [TestResult.FAILURE]: 'failure',
+  [TestResult.STANDARD]: 'standard',
+  [TestResult.GOOD]: 'good',
+  [TestResult.OUTSTANDING]: 'outstanding'
+}
+
 /**
  *
  * @param test
@@ -41,10 +52,11 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
-  test.applyStymiedLabel = test.attackTraits?.includes('stagger') ? '' : 'hidden';
+  test.applyStymiedLabel = 'hidden';
   test.applyVulnerableLabel = 'hidden';
   test.applyActorVulnerableLabel = 'hidden';
   test.applyDamLabel = 'hidden';
+  test.applyEffectsLabel = 'hidden';
   test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   let iteratedRoll;
@@ -221,6 +233,11 @@ export async function renderSkillChat(test) {
       test.modifiers += test.darknessModifier;
     }
 
+    if (test.waitingModifier < 0) {
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.waiting', test.waitingModifier));
+      test.modifiers += test.waitingModifier;
+    }
+
     if (test.movementModifier < 0) {
       modifiers.push(modifierString('torgeternity.chatText.check.modifier.running', test.movementModifier));
       test.modifiers += -2;
@@ -358,12 +375,14 @@ export async function renderSkillChat(test) {
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 'all';
+      test.extraResult = testItem?.system?.outstanding ? await foundry.applications.ux.TextEditor.enrichHTML(testItem.system.outstanding) : '';
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       test.result = TestResult.GOOD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 2;
+      test.extraResult = testItem?.system?.good ? await foundry.applications.ux.TextEditor.enrichHTML(testItem.system.good) : '';
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
       test.result = TestResult.STANDARD;
@@ -371,6 +390,9 @@ export async function renderSkillChat(test) {
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 1;
     }
+
+    // Show the "Apply Effects" button if the test has an effect that can be applied
+    test.applyEffectsLabel = testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result) ?? 'hidden';
 
     // Approved Action Processing
     test.successfulDefendApprovedAction = false;
@@ -403,7 +425,7 @@ export async function renderSkillChat(test) {
       test.result = TestResult.MISHAP;
       test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
       if (test?.attackTraits?.includes('fragile')) {
-        test.fragileText = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.itemName });
+        test.extraResult = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.name });
       }
       test.outcomeColor = 'color: purple';
       test.resultTextColor = 'color: purple';
@@ -526,11 +548,17 @@ export async function renderSkillChat(test) {
           // adjustedDamage is already computed from test.damage
           // then modify test.damage for following future computation, and modify the adjustedDamage
           // then the test.BDDamageInPromise is reset
+          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits);
 
           test.applyDamLabel = '';
-          test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits).label;
+          test.damageDescription = damage.label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
+
+          // 'stagger' trait on a weapon inflicts STYMIED after any damage is dealt.
+          if ((damage.shocks > 0 || damage.wounds > 0) && test.attackTraits?.includes('stagger')) {
+            test.applyStymiedLabel = '';
+          }
         }
       } else {
         // Basic roll
@@ -542,8 +570,9 @@ export async function renderSkillChat(test) {
       else if (test.result === TestResult.GOOD)
         test.defeatInjury = 'temporary';
 
-      test.defeatMain = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.main`, { name: testActor.name });
-      test.defeatSub = game.i18n.format(`torgeternity.defeat.${test.resultText.slugify()}.sub`, { name: testActor.name });
+      // Use non-translated strings to lookup key
+      test.defeatMain = game.i18n.format(`torgeternity.defeat.${TestResultKey[test.result]}.main`, { name: testActor.name });
+      test.defeatSub = game.i18n.format(`torgeternity.defeat.${TestResultKey[test.result]}.sub`, { name: testActor.name });
     }
 
     // Label as Skill vs. Attribute Test and turn on BD option if needed
@@ -630,11 +659,15 @@ export async function renderSkillChat(test) {
       }
     }
     iteratedRoll = undefined;
+    const rollMode = game.settings.get("core", "rollMode");
+    const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
 
     messages.push(await ChatMessageTorg.create({
       user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
       owner: test.actor,
+      rolls: test.diceroll,
+      flavor: flavor,
       flags: {
         torgeternity: {
           test,
@@ -642,7 +675,8 @@ export async function renderSkillChat(test) {
           template: 'systems/torgeternity/templates/chat/skill-card.hbs',
         },
       },
-    }));
+    },
+      { rollMode }));
     first = false;
   } // for each target
 

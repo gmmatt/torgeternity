@@ -22,6 +22,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
       'heroesFirst': torgeternityCombatTracker.#onHeroesFirst,
       'villainsFirst': torgeternityCombatTracker.#onVillainsFirst,
       'hasPlayed': torgeternityCombatTracker.#onHasPlayed,
+      'toggleWaiting': torgeternityCombatTracker.#onToggleWaiting,
       'dsrCounter': torgeternityCombatTracker.#incStage,
       'playerDsrCounter': torgeternityCombatTracker.#incPlayerStage,
       'hasFinished': torgeternityCombatTracker.#onHasFinished,
@@ -49,7 +50,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     context.conflictLine = combat?.conflictLineText;
     context.approvedActions = combat?.approvedActionsText;
     context.dsrLine = combat?.dsrText;
-    context.dramaRule = combat?.dramaRule;
+    context.dramaRule = await foundry.applications.ux.TextEditor.enrichHTML(combat?.dramaRule);
 
     context.approved = {};
     if (combat)
@@ -60,6 +61,13 @@ export default class torgeternityCombatTracker extends foundry.applications.side
 
     context.hasTurn = context.combat?.combatants?.some(combatant =>
       !combatant.turnTaken && combatant.isOwner && context.combat.round);
+  }
+
+  async _prepareTrackerContext(context, options) {
+    await super._prepareTrackerContext(context, options);
+    if (!this.viewed) return;
+    context.activeTurns = context.turns?.filter(c => !c.isWaiting) ?? [];
+    context.waiting = context.turns?.filter(c => c.isWaiting) ?? [];
   }
 
   async _prepareTurnContext(combat, combatant, index) {
@@ -74,6 +82,8 @@ export default class torgeternityCombatTracker extends foundry.applications.side
         .map(card => { return { name: card.name, img: card.img } }) ?? [];
     }
     context.turnTaken = combatant.turnTaken;
+    context.isWaiting = combatant.actor.hasStatusEffect('waiting');
+    context.waitingImg = CONFIG.statusEffects.find(e => e.id === 'waiting')?.img;
     context.actorType = combatant.actor?.type;
     const dispositions = {
       [CONST.TOKEN_DISPOSITIONS.SECRET]: "secret",
@@ -96,7 +106,9 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    * Add an option to Shuffle the Drama Deck
    */
   _getCombatContextOptions() {
-    const options = super._getCombatContextOptions();
+    // Remove Initiative options:
+    const options = super._getCombatContextOptions().filter(
+      opt => opt.name !== 'COMBAT.InitiativeReset');
     options.unshift({
       name: "torgeternity.dramaCard.getPreviousDrama",
       icon: '<i class="fa-solid fa-up-down"></i>',
@@ -110,6 +122,12 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     });
     return options;
   }
+
+  _getEntryContextOptions() {
+    return super._getEntryContextOptions().filter(
+      opt => opt.name !== 'COMBAT.CombatantReroll' && opt.name !== 'COMBAT.CombatantClear')
+  }
+
   /**
    * A player has pressed the button at the bottom of the combat tracker to end "their" turn.
    * @param event
@@ -139,6 +157,16 @@ export default class torgeternityCombatTracker extends foundry.applications.side
     if (turnTaken) this.viewed.dramaEndOfTurn(combatant);
   }
 
+  /**
+ * Toggle the Wait status of a combatant.
+ * @param event
+ */
+  static async #onToggleWaiting(event, button) {
+    const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
+    const combatant = this.viewed?.combatants.get(combatantId);
+    if (!combatant) return;
+    combatant.actor.toggleStatusEffect('waiting');
+  }
   /**
  *
  */

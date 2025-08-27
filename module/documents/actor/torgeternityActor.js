@@ -86,6 +86,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       stymied: 0,
       vulnerable: 0,
       darkness: 0,
+      waiting: 0,
     };
   }
 
@@ -101,6 +102,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       stymied: this.statuses.has('veryStymied') ? -4 : this.statuses.has('stymied') ? -2 : 0,
       vulnerable: this.statuses.has('veryVulnerable') ? 4 : this.statuses.has('vulnerable') ? 2 : 0,
       darkness: this.statuses.has('pitchBlack') ? -6 : this.statuses.has('dark') ? -4 : this.statuses.has('dim') ? -2 : 0,
+      waiting: this.statuses.has('waiting') ? -2 : 0,
     };
 
     // Skillsets
@@ -168,31 +170,31 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       );
       // Modify +/-
       listChanges
-        .filter((ef) => ef.mode === 2)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.ADD)
         .forEach((ef) => {
           computeMove += parseInt(ef.value);
         });
       // Modify x
       listChanges
-        .filter((ef) => ef.mode === 1)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.MULTIPLY)
         .forEach((ef) => {
           computeMove = parseInt(computeMove * ef.value);
         });
       // Modify minimum
       listChanges
-        .filter((ef) => ef.mode === 4)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.UPGRADE)
         .forEach((ef) => {
           computeMove = Math.max(computeMove, parseInt(ef.value));
         });
       // Modify maximum
       listChanges
-        .filter((ef) => ef.mode === 3)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.DOWNGRADE)
         .forEach((ef) => {
           computeMove = Math.min(computeMove, parseInt(ef.value));
         });
       // Modify Fixed
       listChanges
-        .filter((ef) => ef.mode === 5)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.OVERRIDE)
         .forEach((ef) => {
           computeMove = parseInt(ef.value);
         });
@@ -208,31 +210,31 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       );
       // Modify +/-
       listRun
-        .filter((ef) => ef.mode === 2)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.ADD)
         .forEach((ef) => {
           computeRun += parseInt(ef.value);
         });
       // Modify x
       listRun
-        .filter((ef) => ef.mode === 1)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.MULTIPLY)
         .forEach((ef) => {
           computeRun = parseInt(computeRun * ef.value);
         });
       // Modify minimum
       listRun
-        .filter((ef) => ef.mode === 4)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.UPGRADE)
         .forEach((ef) => {
           computeRun = Math.max(computeRun, parseInt(ef.value));
         });
       // Modify maximum
       listRun
-        .filter((ef) => ef.mode === 3)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.DOWNGRADE)
         .forEach((ef) => {
           computeRun = Math.min(computeRun, parseInt(ef.value));
         });
       // Modify Fixed
       listRun
-        .filter((ef) => ef.mode === 5)
+        .filter((ef) => ef.mode === CONST.ACTIVE_EFFECT_MODES.OVERRIDE)
         .forEach((ef) => {
           computeRun = parseInt(ef.value);
         });
@@ -482,7 +484,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
           img: data.img ?? 'systems/torgeternity/images/characters/threat.webp',
           prototypeToken: {
             sight: { enabled: true },
-            //actorLink: false,
+            actorLink: false,
             disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
             displayName: CONST.TOKEN_DISPLAY_MODES.OWNER,
             // Core parameters

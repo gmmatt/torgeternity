@@ -1,7 +1,8 @@
 /**
  * Extend the basic ActiveEffect model with migrations and TORG specific handling
  */
-export default class TorgActiveEffect extends ActiveEffect {
+export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
+
   /**
    *
    * @param {object} data the data object to migrate
@@ -64,4 +65,48 @@ export default class TorgActiveEffect extends ActiveEffect {
     if (!this.parent || this.parent instanceof Actor) return game.i18n.localize("None");
     return this.parent.name;
   }
+
+  /**
+   * Add our own "Transfer On Attack" flag to the Active Effect config dialog.
+   * @param {*} app 
+   * @param {*} html 
+   * @param {*} context 
+   */
+  static onRenderActiveEffectConfig(app, html, context) {
+    const transferOnAttack = new foundry.data.fields.BooleanField().toFormGroup({
+      label: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.label"),
+      hint: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.hint")
+    }, {
+      name: 'flags.torgeternity.transferOnAttack',
+      value: app.document.getFlag("torgeternity", "transferOnAttack") ?? false,
+      disabled: !context.editable
+    });
+    const testOutcome = new foundry.data.fields.NumberField({
+      choices: CONFIG.torgeternity.testOutcomeLabel,
+      integer: true,
+      nullable: true
+    }).toFormGroup({
+      label: game.i18n.localize("torgeternity.activeEffect.testOutcome.label"),
+      hint: game.i18n.localize("torgeternity.activeEffect.testOutcome.hint")
+    }, {
+      name: 'flags.torgeternity.testOutcome',
+      value: app.document.getFlag("torgeternity", "testOutcome") ?? null,
+      disabled: !context.editable,
+      localize: true
+    });
+    html.querySelector("[data-tab=details] > .form-group:has([name=transfer])")?.after(transferOnAttack, testOutcome);
+  }
+
+  /**
+   * @returns {Boolean} the state of the "Transfer on Attack" flag on this Active Effect
+   */
+  get transferOnAttack() {
+    return this.getFlag("torgeternity", "transferOnAttack");
+  }
+
+  get testOutcome() {
+    return this.getFlag("torgeternity", "testOutcome");
+  }
 }
+
+Hooks.on("renderActiveEffectConfig", TorgActiveEffect.onRenderActiveEffectConfig);

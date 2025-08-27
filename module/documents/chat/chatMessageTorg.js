@@ -9,7 +9,9 @@ export class ChatMessageTorg extends ChatMessage {
 
   async renderHTML(options) {
     const html = await super.renderHTML(options);
-    if (this.flags?.torgeternity?.template && (this.flags?.data || this.flags?.torgeternity?.test)) {
+    if (this.isContentVisible &&
+      this.flags?.torgeternity?.template &&
+      (this.flags?.data || this.flags?.torgeternity?.test)) {
       const template = this.flags.torgeternity.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
 

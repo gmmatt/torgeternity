@@ -1266,7 +1266,7 @@ cards:
       number: 29
       rule: ''
       villainsConditionsDramatic: none
-      villainsConditionsStandard: none
+      villainsConditionsStandard: stymied
     value: null
     width: null
     height: null
