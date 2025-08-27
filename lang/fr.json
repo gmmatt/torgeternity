@@ -3,6 +3,12 @@
     "discard": "Défausser",
     "display": "Montrer cette carte aux joueurs"
   },
+  "CHAT": {
+    "RollBlind": "Uniquement le MJ",
+    "RollPublic": "Tout le monde",
+    "RollPrivate": "Juste le MJ et moi",
+    "RollSelf": "Uniquement moi"
+  },
   "TYPES": {
     "Card": {
       "destiny": "Destin",
@@ -16,6 +22,16 @@
     }
   },
   "torgeternity": {
+    "activeEffect": {
+      "transferOnAttack": {
+        "label": "Transfert d'effet par une Attaque",
+        "hint": "Si coché, cet Effet sera appliqué à l'Acteur ciblé par une attaque impliquant cet Objet (armes ou munitions)"
+      },
+      "testOutcome": {
+        "label": "Applique l'Effet correspondant au degré de réussite",
+        "hint": "Applique l'Effet sur le token ciblé correspondant au degré de réussite du test impliquant cet objet"
+      }
+    },
     "attackTypes": {
       "energyWeapons": "Armes à énergie",
       "fireCombat": "Armes à feu",
@@ -62,10 +78,9 @@
         "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence requise",
         "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un rang).",
         "cantUseRealityWhileDisconnected": "Vous ne pouvez pas utiliser la compétence Réalité lorsque vous êtes déconnecté.",
-        "drawDestiny": "Piocher une carte de Destin",
         "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
-        "isApprovedAction": "Action approuvée réussie (piocher une carte Destin)",
-        "isApprovedDefend": "{name} s'est défendu avec succès (piocher une carte Destin)",
+        "isApprovedAction": "Action approuvée réussie",
+        "isApprovedDefend": "{name} s'est défendu avec succès",
         "modifier": {
           "aimedShot": "tir visé",
           "allOutAttack": "attaque totale",
@@ -86,6 +101,7 @@
           "targetVeryVulnerable": "cible très vulnérable",
           "targetVulnerable": "cible vulnérable",
           "veryStymied": "très déstabilisé",
+          "waiting": "Attendre",
           "wounds": "blessures"
         },
         "needTarget": "Impossible d’effectuer un jet avancé sans cible. Ciblez un token puis réessayez.",
@@ -174,6 +190,8 @@
     "combat": {
       "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp",
       "toggleDramatic": "Bascule le combat entre une scène Normale et une scène Dramatique",
+      "toggleWaiting": "Active l'état Attendre de ce combattant",
+      "waitingCombatants": "Combattants sous l'effet Attendre",
       "endMyTurn": "Terminé",
       "nextKeep": "Nouveau round (garder la carte actuelle)",
       "nextNew": "Nouveau round (nouvelle carte Action)",
@@ -249,16 +267,16 @@
       "chooseAttribute": "Choisir un Attribut",
       "tempInjury": "Vous souffrez d'une Séquelle temporaire. Votre {attribute} est réduit par un effet (moins 1)",
       "permInjury": "Vous souffrez d'une Séquelle permanente. Votre {attribute} est réduit de 1",
-      "outstanding-success": {
+      "outstanding": {
         "main": "KO",
         "sub": ""
       },
-      "good-success": {
+      "good": {
         "main": "Séquelle temporaire",
         "sub": "Votre Séquelle perdure jusqu'aux soins complets",
         "effectName": "Séquelle Temp."
       },
-      "standard-success": {
+      "standard": {
         "main": "Séquelle permanente",
         "sub": "Vous subissez une Séquelle permanente"
       },
@@ -351,7 +369,7 @@
         "time": "Saisissez la durée en round(s)"
       },
       "raceDiminishAttribute": {
-        "maintext": "L'attribut {attribute} est plus grand que le maximum de population. Doit-on définir l'attribut sur le maximum de population?",
+        "maintext": "L'attribut {attribute} est plus grand que le maximum de cette race. Doit-on définir l'attribut sur le maximum racial?",
         "title": "Avertissement, attribut maximum"
       }
     },
@@ -590,6 +608,7 @@
       "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène de combat.",
       "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
       "openIssue": "Votre navigateur va ouvrir un onglet pour signaler un problème.",
+      "openReference": "Votre navigateur va ouvrir le site Torg Reference (en anglais)",
       "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele.",
       "failureBDResolution": "Echec de résolution avec le BD",
       "ammoValueExceedsMax": "La quantité de munitions dépasse la capacité du chargeur dans l'arme {a}. La valeur va être réduite à son maximum.",
@@ -842,7 +861,9 @@
       "ammunition": "Munitions",
       "APMod": "Modificateur d'AP",
       "applyDamage": "Appliquer dommages",
+      "applyEffects": "Appliquer les Effets",
       "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
+      "applyEffectsTooltip": "Transfert les Effets pertinents aux cibles",
       "applyStymied": "Appliquer Déstabilisé",
       "applyStymiedTooltip": "Applique Déstabilisé, ou Très Déstabilisé si déjà Déstabilisé.",
       "applyVulnerable": "Appliquer Vulnérable",
@@ -873,6 +894,7 @@
       "collision": "Collision",
       "combatSkills": "Combat",
       "concealment": "Dissimulation",
+      "conditions": "Conditions",
       "cosm": "Cosm",
       "coverBonus": "Couvert",
       "coverBonusTooltip": "Bonus appliqué a l'endurance résultant du couvert",
@@ -1134,48 +1156,6 @@
       "unarmedCombat": "Combat à mains nues",
       "waterVehicles": "Véhicules aquatiques",
       "willpower": "Volonté"
-    },
-    "skills-nocap": {
-      "airVehicles": "véhicules aériens",
-      "alteration": "altération",
-      "apportation": "cinétique",
-      "beastRiding": "équitation",
-      "computers": "informatique",
-      "conjuration": "conjuration",
-      "divination": "divination",
-      "dodge": "esquive",
-      "energyWeapons": "armes à énergie",
-      "evidenceAnalysis": "analyse d'indices",
-      "faith": "foi",
-      "find": "observation",
-      "fireCombat": "armes à feu",
-      "firstAid": "premiers soins",
-      "heavyWeapons": "armes lourdes",
-      "intimidation": "intimidation",
-      "kinesis": "kinésie",
-      "landVehicles": "véhicules terrestres",
-      "language": "langue",
-      "lockpicking": "crochetage",
-      "maneuver": "manœuvre",
-      "medicine": "médecine",
-      "meleeWeapons": "armes de mêlée",
-      "missileWeapons": "armes de jet",
-      "persuasion": "persuasion",
-      "precognition": "précognition",
-      "profession": "profession",
-      "reality": "réalité",
-      "scholar": "sciences humaines",
-      "science": "science",
-      "stealth": "discrétion",
-      "streetwise": "débrouillardise",
-      "survival": "survie",
-      "taunt": "provocation",
-      "telepathy": "télépathie",
-      "tracking": "pistage",
-      "trick": "ruse",
-      "unarmedCombat": "combat à mains nues",
-      "waterVehicles": "véhicules aquatiques",
-      "willpower": "volonté"
     },
     "speeds": {
       "fast": "Rapide",

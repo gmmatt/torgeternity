@@ -7,6 +7,9 @@
     {{#if test.darknessModifier}}
       {{localize "torgeternity.statusEffects.darkness"}}: {{numberFormat test.darknessModifier sign=true}}<br>
     {{/if}}
+    {{#if test.waitingModifier}}
+      {{localize "torgeternity.statusEffects.waiting"}}: {{numberFormat test.waitingModifier sign=true}}<br>
+    {{/if}}
     {{#if test.woundModifier}}
       {{localize "torgeternity.stats.wounds"}}: {{numberFormat test.woundModifier sign=true}}<br>
     {{/if}}

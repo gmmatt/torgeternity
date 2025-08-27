@@ -1,5 +1,38 @@
 # TORG Eternity Changelog
 
+## v13.8.0 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
+
+- If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
+- Automation of **Waiting**:
+  - Waiting Combatants are placed at the end of the Combat Tracker.
+  - Allow Waiting status to be toggled in the Combat Tracker.
+  - Automatically cancel the Waiting status when a combatant's turn ends.
+  - Apply the "-2" modifier to any Test Check while an Actor is "waiting".
+- Move some hard-coded numbers to their CONST equivalent references.
+- Newly-created Threats will have their prototype tokens **NOT linked** to the Actor.
+- Remove Initiative options from the Combat Tracker context menus (combat and combatant).
+- #369: Add a row of **conditions** at the top of the Effects tab of the Actor sheet (where conditions can be toggled).
+- Display **Good** or **Outstanding** text from a power in the chat card on the corresponding result.
+- #232: **Transfer Effects** from Item to Target of a test. The effects can remain disabled on the item/weapon/ammo, and they will be enabled upon transfer to the target. (Duration can also be set.)
+  - **Apply Effect on Attack** to transfer this effect on a successful attack.
+  - **Apply Effect on Outcome** to transfer this effect on a specific test outcome (Mishap,Failure,Standard,Good,Outstanding) - e.g Armor spell
+  - A new "Apply effects" button will appear in the chat card which can be used to apply them to the target shown in the chat card.
+- Fix styling of **Journal page headers** (force each text page to use the "light" theme).
+- **Enrich the Rule text** displayed for the current Drama Card.
+- Apply current **roll mode** to skill checks displayed in Chat
+  - shade the chat messages according to the roll mode (tinted with default Foundry roll mode colour)
+  - Hide dice roll results according to roll mode.
+- Get all the language files up to date:
+  - Spanish translations by `Teotimus`
+  - German translations by `Helmut`
+  - French translations by `Durak`
+
+### Bug Fixes
+
+- Ensure that the language keys are read correctly for Defeat Test results.
+- Fragile report in Chat Card shows item name, not 'unknown'.
+- Only display "Apply Stymied" button for a weapon with Stagger if the attack dealt some shock or wounds.
+
 ## v13.7.0 - Glory, Defeat and Intimidation
 
 - #63: If 60+ is rolled on a Test Check, then add a message to the Chat Card indicating "Possible Glory".
@@ -18,15 +51,6 @@
 - An error related to `approvedActions` would sometimes occur when rolling skill checks outside of combat.
 - Attacks against Vehicles should work once again.
 - Attacks by threats outside of combat works once again.
-
-### Translations
-
-- torgeternity.chatText.possibleGlory
-- torgeternity.chatText.possibilityTooltip
-- torgeternity.sheetLabels.noMin10
-- torgeternity.defeat... (all of them)
-- torgeternity.defeat.chatTitle
-
 
 ## v13.6.0 (AMMO, APPROVED ACTIONS, DSR & UP)
 
