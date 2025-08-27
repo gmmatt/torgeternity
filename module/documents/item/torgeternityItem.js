@@ -1,4 +1,3 @@
-import { ChatMessageTorg } from '../chat/chatMessageTorg.js';
 import { torgeternity } from '../../config.js';
 
 let deferredGunners = new Set();

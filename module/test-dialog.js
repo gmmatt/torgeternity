@@ -1,5 +1,4 @@
-import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
-import * as torgchecks from './torgchecks.js';
+import { renderSkillChat } from './torgchecks.js';
 import TorgeternityActor from './documents/actor/torgeternityActor.js';
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
@@ -275,7 +274,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
 
     if (CONFIG.debug.torgtest) console.debug('TestDialog.onRoll', this.test);
 
-    const messages = await torgchecks.renderSkillChat(this.test);
+    const messages = await renderSkillChat(this.test);
     if (messages && this.options.callback) {
       for (const message of messages) {
         this.options.callback(message);
