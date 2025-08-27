@@ -1,6 +1,13 @@
 # TORG Eternity Changelog
 
-## v13.8.0 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
+## NEXT
+
+### Bug Fixes
+
+- Scrollbar will appear when editing the SK Notes section.
+- It is possible to create Perks once again (the category will default to "special/homebrew").
+
+## v13.8.1 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
 
 - If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
 - Automation of **Waiting**:
