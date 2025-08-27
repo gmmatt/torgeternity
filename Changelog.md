@@ -2,6 +2,10 @@
 
 ## NEXT
 
+### Improvements
+
+- Improve generation of Chat Messages.
+
 ### Bug Fixes
 
 - Scrollbar will appear when editing the SK Notes section.
