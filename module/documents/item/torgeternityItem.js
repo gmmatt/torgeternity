@@ -226,7 +226,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
   /**
    *
    */
-  async sendToChat() {
+  async toMessage() {
     const renderedTemplate = await foundry.applications.handlebars.renderTemplate(TorgeternityItem.CHAT_TEMPLATE[this.type], this);
 
     return ChatMessage.create({

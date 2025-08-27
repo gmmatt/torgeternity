@@ -640,7 +640,7 @@ async function rollItemMacro(itemName) {
 
     default:
       // this will cause the item to be printed to the chat
-      return item.sendToChat();
+      return item.toMessage();
   }
 }
 

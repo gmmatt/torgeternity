@@ -809,7 +809,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const item = this.actor.items.get(button.closest('.item').dataset.itemId);
     if (!item) return ui.notifications.info(`Failed to find Item for button`);
 
-    return item.sendToChat();
+    return item.toMessage();
   }
 
   /**
