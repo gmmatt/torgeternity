@@ -3037,6 +3037,10 @@ div.readme a.compendium {
     font-family: Palatino;
     background-image: none;
     background-color: transparent;
+
+    &.pinline>p:first-child {
+      display: inline;
+    }
   }
 
   .chat-title {
