@@ -2058,6 +2058,7 @@ form.application.torgeternity.theme-dark {
 
 .prosemirror .editor-container {
   margin: 0.5rem;
+  overflow: auto;
 }
 
 /*Editing Dropdown buttons' background for healthy eyes*/
@@ -3069,6 +3070,10 @@ div.readme a.compendium {
     font-size: 14px;
     padding: 0px;
     margin: 0px;
+  }
+
+  tr.ammunition {
+    display: table-row;
   }
 
   .skill-roll-table {
