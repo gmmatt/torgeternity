@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT
+## 13.8.2 - Fixes for Perks, Cosms and Secrets
 
 ### Improvements
 
