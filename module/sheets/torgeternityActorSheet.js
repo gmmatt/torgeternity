@@ -781,7 +781,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static async #onActiveDefenseCancel(event, button) {
 
-    await renderSkillChat({
+    return renderSkillChat({
       testType: 'activeDefense',
       activelyDefending: true,
       actor: this.actor.uuid,

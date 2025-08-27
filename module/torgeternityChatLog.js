@@ -73,7 +73,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
-    await renderSkillChat(test);
+    return renderSkillChat(test);
   }
 
   static async #onPossibility(event, button) {
@@ -171,7 +171,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (noMin10) test.chatNote += game.i18n.localize('torgeternity.sheetLabels.noMin10');
 
     this.parentDeleteByTime(chatMessage);
-    await renderSkillChat(test);
+    return renderSkillChat(test);
   }
 
   static async #onUp(event, button) {
@@ -198,7 +198,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
-    await renderSkillChat(test);
+    return renderSkillChat(test);
   }
 
   static async #onHero(event, button) {
