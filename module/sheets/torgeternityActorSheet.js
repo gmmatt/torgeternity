@@ -556,7 +556,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
       if (!confirmed) {
 
-        return foundry.applications.handlebars.renderTemplate(
+        foundry.applications.handlebars.renderTemplate(
           './systems/torgeternity/templates/chat/skill-error-card.hbs',
           {
             message: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
@@ -571,6 +571,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
             content: content
           })
         )
+        // Don't wait for chat message to finish posting
+        return;
       }
     }
 
