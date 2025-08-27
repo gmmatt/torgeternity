@@ -2058,6 +2058,7 @@ form.application.torgeternity.theme-dark {
 
 .prosemirror .editor-container {
   margin: 0.5rem;
+  overflow: auto;
 }
 
 /*Editing Dropdown buttons' background for healthy eyes*/
@@ -2991,6 +2992,10 @@ div.readme a.compendium {
     animation: flip 0.2s linear both;
   }
 
+  .chat-text secret-block button.reveal {
+    display: none;
+  }
+
   .torgeternity-message-header {
     display: flex;
     flex-direction: row;
@@ -3036,6 +3041,10 @@ div.readme a.compendium {
     font-family: Palatino;
     background-image: none;
     background-color: transparent;
+
+    &.pinline>p:first-child {
+      display: inline;
+    }
   }
 
   .chat-title {
@@ -3069,6 +3078,10 @@ div.readme a.compendium {
     font-size: 14px;
     padding: 0px;
     margin: 0px;
+  }
+
+  tr.ammunition {
+    display: table-row;
   }
 
   .skill-roll-table {

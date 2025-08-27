@@ -12,7 +12,7 @@ export class PerkItemData extends BaseItemData {
   static defineSchema() {
     return {
       ...super.defineSchema('perk'),
-      category: new fields.StringField({ initial: '', choices: CONFIG.torgeternity.perkTypes, textSearch: true }),
+      category: new fields.StringField({ initial: 'special', choices: CONFIG.torgeternity.perkTypes, textSearch: true }),
       prerequisites: new fields.StringField({ initial: '' }),
       generalContradiction: new fields.BooleanField({ initial: false }),
       pulpPowers: new fields.SchemaField({

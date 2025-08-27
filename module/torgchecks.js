@@ -1,6 +1,4 @@
 import { TestDialog, TestDialogLabel } from './test-dialog.js';
-import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
-import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
 
 export const TestResult = {
   UNKNOWN: 0,
@@ -375,14 +373,14 @@ export async function renderSkillChat(test) {
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 'all';
-      test.extraResult = testItem?.system?.outstanding ? await foundry.applications.ux.TextEditor.enrichHTML(testItem.system.outstanding) : '';
+      if (testItem?.system?.outstanding) test.extraResult = testItem.system.outstanding;
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       test.result = TestResult.GOOD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       test.soakWounds = 2;
-      test.extraResult = testItem?.system?.good ? await foundry.applications.ux.TextEditor.enrichHTML(testItem.system.good) : '';
+      if (testItem?.system?.good) test.extraResult = testItem.system.good;
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
       test.result = TestResult.STANDARD;
@@ -472,7 +470,7 @@ export async function renderSkillChat(test) {
         oldAD.delete();
         return ChatMessage.create({
           // Simple chat message for information
-          speaker: ChatMessage.getSpeaker(),
+          speaker: ChatMessage.getSpeaker({ actor: testActor }),
           content: game.i18n.localize('torgeternity.chatText.check.result.resetDefense'), // Need to be implemented if incorporated
         });
       } else {
@@ -662,8 +660,7 @@ export async function renderSkillChat(test) {
     const rollMode = game.settings.get("core", "rollMode");
     const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
 
-    messages.push(await ChatMessageTorg.create({
-      user: game.user._id,
+    messages.push(await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
       owner: test.actor,
       rolls: test.diceroll,
@@ -1115,4 +1112,33 @@ function getExtraProtection(attackerTraits, targetTraits, protection, defaultVal
     }
   }
   return defaultValue;
+}
+
+/**
+ * Checks to see if the given skill is actually unskilled for the indicated actor.
+ * If unskilled, a message is sent to the chat log.
+ * @param {String} skillValue The value of the skill being checked
+ * @param {Number} skillName The name of the skill being checked
+ * @param {Actor} actor The actor whose skilled nature is being checked
+ * @returns {Boolean} Returns true if the actor is UNSKILLED at 'skillName'
+ */
+export function checkUnskilled(skillValue, skillName, actor) {
+  if (skillValue) return false;
+
+  foundry.applications.handlebars.renderTemplate(
+    './systems/torgeternity/templates/chat/skill-error-card.hbs',
+    {
+      message: game.i18n.localize('torgeternity.skills.' + skillName) + ' ' + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
+      actor: actor.uuid,
+      actorPic: actor.img,
+      actorName: actor.name,
+    }).then(content =>
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        owner: actor,
+        content: content
+      })
+    )
+
+  return true;
 }

@@ -315,11 +315,13 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
 
     context.config = CONFIG.torgeternity;
 
-    context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description);
-    context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites);
+    const isOwner = this.item.isOwner;
+
+    context.description = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.description, { secrets: isOwner });
+    context.prerequisites = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.prerequisites, { secrets: isOwner });
     if (Object.hasOwn(this.document.system, 'good')) {
-      context.enrichedGood = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.good);
-      context.enrichedOutstanding = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.outstanding);
+      context.enrichedGood = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.good, { secrets: isOwner });
+      context.enrichedOutstanding = await foundry.applications.ux.TextEditor.enrichHTML(this.document.system.outstanding, { secrets: isOwner });
     }
 
     context.hasAmmunition = !game.settings.get('torgeternity', 'ignoreAmmo') && this.document.actor?.itemTypes?.ammunition?.length > 0;
@@ -380,19 +382,21 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
  */
 export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
 
+  const speaker = ChatMessage.getSpeaker({ actor });
+
   if (weapon.system.ammo.value === weapon.system.ammo.max && !ignoreUsage) {
 
     if (ammoItem && weapon.system.loadedAmmo != ammoItem.id) {
-      weapon.update({ 'system.loadedAmmo': ammoItem.id });
-      ChatMessage.create({
+      await weapon.update({ 'system.loadedAmmo': ammoItem.id });
+      return ChatMessage.create({
         content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
-        speaker: ChatMessage.getSpeaker(),
+        speaker,
       });
 
     } else {
       return ChatMessage.create({
         content: `${game.i18n.format('torgeternity.chatText.ammoFull', { a: weapon.name })}`,
-        speaker: ChatMessage.getSpeaker(),
+        speaker,
       });
     }
   }
@@ -401,11 +405,10 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
     // called from the main actor sheet, it's not known what ammo item is used.
     const ammoArray = actor.items.filter(item => item.type === 'ammunition');
     if (ammoArray.length === 0) {
-      ChatMessage.create({
+      return ChatMessage.create({
         content: `${game.i18n.localize('torgeternity.chatText.noAmmoPosessing')}`,
-        speaker: ChatMessage.getSpeaker(),
+        speaker,
       });
-      return;
     }
 
     if (ammoArray.length === 1) {
@@ -450,9 +453,9 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
     return;
   }
   if (weapon.system.loadedAmmo != ammoItem.id) {
-    ChatMessage.create({
+    await ChatMessage.create({
       content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
-      speaker: ChatMessage.getSpeaker(),
+      speaker,
     });
   }
   await weapon.update({
@@ -466,6 +469,6 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
 
   await ChatMessage.create({
     content: game.i18n.format('torgeternity.chatText.reloaded', { a: weapon.name }),
-    speaker: ChatMessage.getSpeaker(),
+    speaker,
   });
 }

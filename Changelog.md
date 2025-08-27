@@ -1,6 +1,20 @@
 # TORG Eternity Changelog
 
-## v13.8.0 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
+## 13.8.2 - Fixes for Perks, Cosms and Secrets
+
+### Improvements
+
+- Improve generation of Chat Messages.
+- Ensure that inline checks have a default of 'standard' (10)
+- Ensure **secret** blocks are (not?) rendered properly based on ownership of Actor/Item (including in the Good/Outstanding results posted to Chat)
+
+### Bug Fixes
+
+- Scrollbar will appear when editing the SK Notes section.
+- It is possible to create Perks once again (the category will default to "special/homebrew").
+- Don't cancel an item's cosm when only a partial update occurs (such as Equipping the item).
+
+## v13.8.1 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
 
 - If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
 - Automation of **Waiting**:
