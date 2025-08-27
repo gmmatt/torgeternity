@@ -12,7 +12,8 @@
       <span class="item-dropdown-extras">{{localize "torgeternity.sheetLabels.magic"}} {{system.axioms.magic}}</span>
     </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.skilllevel"}}:</span>
-      <span class="item-dropdown-extras">{{system.translatedSkill}} {{system.skilllevel}}</span>
+      <span class="item-dropdown-extras">{{localize (concat "torgeternity.skills." system.skill)}}
+        {{system.skilllevel}}</span>
     </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.castingtime"}}:</span>
       <span class="item-dropdown-extras">{{system.castingtime}}</span>
@@ -30,10 +31,10 @@
     <div class="item-description">{{{system.description}}}</div>
     <br />
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.good"}}:</span>
-      <span class="item-description">{{system.good}}</span>
+      <span class="item-description pinline">{{{system.good}}}</span>
     </div>
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.outstanding"}}:</span>
-      <span class="item-description">{{system.outstanding}}</span>
+      <span class="item-description pinline">{{{system.outstanding}}}</span>
     </div>
   </div>
 

@@ -13,11 +13,7 @@ export async function setUpCardPiles() {
     deckFolder = await Folder.create({
       name: deckPack.title,
       type: 'Cards',
-      flags: {
-        torgeternity: {
-          usage: 'coreCards',
-        },
-      },
+      flags: { torgeternity: { usage: 'coreCards' } },
     });
   }
   /* list of deck keys for all the decks that will be in the pack - i.e. all keys of deckSettings aside from discard piles, active card, and storm knight hands*/

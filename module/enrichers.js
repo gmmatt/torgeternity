@@ -84,8 +84,7 @@ const interactionAttacks = ['unarmed', 'intimidation', 'maneuver', 'taunt', 'kic
 function _onClickInlineCheck(event) {
   // Firstly check for clicking on the "post to chat" button
   if (event.target.dataset.original) {
-    ChatMessage.create({ content: event.target.dataset.original })
-    return;
+    return ChatMessage.create({ content: event.target.dataset.original })
   }
 
   const target = event.target.closest('a.torg-inline-check');
@@ -110,7 +109,8 @@ function _onClickInlineCheck(event) {
       "20": "nearImpossible",
     }
     test.dn = dnmap[test.dn] ?? test.dn;
-  }
+  } else
+    test.dn = 'standard';
 
   // use 'actor' simply to get the full list of attributes, defenses and skills
   if (Object.hasOwn(CONFIG.torgeternity.attributeTypes, test.dn) ||
@@ -230,8 +230,7 @@ async function _onClickInlineCondition(event) {
   const target = event.target.closest('a.torg-inline-condition');
   // Firstly check for clicking on the "post to chat" button
   if (event.target.dataset.original) {
-    ChatMessage.create({ content: event.target.dataset.original })
-    return;
+    return ChatMessage.create({ content: event.target.dataset.original })
   }
 
   const data = { ...target.dataset };
@@ -348,8 +347,7 @@ async function _onClickInlineBuff(event) {
   const target = event.target.closest('a.torg-inline-buff');
   // Firstly check for clicking on the "post to chat" button
   if (event.target.dataset.original) {
-    ChatMessage.create({ content: event.target.dataset.original })
-    return;
+    return ChatMessage.create({ content: event.target.dataset.original })
   }
 
   // Convert dataset into a set of active effect rules
@@ -479,8 +477,7 @@ async function _onClickInlineDamage(event) {
 
   // Firstly check for clicking on the "post to chat" button
   if (event.target.dataset.original) {
-    ChatMessage.create({ content: event.target.dataset.original })
-    return;
+    return ChatMessage.create({ content: event.target.dataset.original })
   }
 
   // Firstly check for clicking on the "post to chat" button
@@ -534,7 +531,7 @@ async function _onClickInlineDamage(event) {
     chatOutput += chatParts.join(', ') + '</li>';
   }
   chatOutput += '</ul>';
-  ChatMessage.create({ content: chatOutput });
+  return ChatMessage.create({ content: chatOutput });
 }
 
 /**

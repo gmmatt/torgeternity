@@ -1,10 +1,9 @@
-import { TestResult, renderSkillChat, rollAttack, rollPower } from '../torgchecks.js';
+import { TestResult, renderSkillChat, rollAttack, rollPower, checkUnskilled } from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { oneTestTarget, TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
 import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
-import { ChatMessageTorg } from '../documents/chat/chatMessageTorg.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -213,6 +212,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 
+    const isOwner = this.actor.isOwner;
+
     for (const type of [
       'meleeweapons',
       'customAttack',
@@ -239,7 +240,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       'vehicleAddOn',
     ]) {
       for (const item of context[type]) {
-        item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description);
+        item.description = await foundry.applications.ux.TextEditor.enrichHTML(item.system.description, { secrets: isOwner });
         item.traitDesc = Array.from(item.system.traits.map(trait => game.i18n.localize(`torgeternity.traits.${trait}`))).join(' / ');
       }
     }
@@ -247,13 +248,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     // Enrich Text Editors
     switch (this.actor.type) {
       case 'stormknight':
-        context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.background);
+        context.enrichedBackground = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.background, { secrets: isOwner });
         break;
       case 'threat':
-        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.description);
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.details.description, { secrets: isOwner });
         break;
       case 'vehicle':
-        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.description);
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.actor.system.description, { secrets: isOwner });
     }
 
     // if (this.actor.system.editstate === undefined) 
@@ -567,12 +568,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
           }
         ).then(content =>
           ChatMessage.create({
-            user: game.user._id,
-            speaker: ChatMessage.getSpeaker(),
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
             owner: this.actor,
             content: content
           })
         )
+        // Don't wait for chat message to finish posting
         return;
       }
     }
@@ -781,7 +782,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    */
   static async #onActiveDefenseCancel(event, button) {
 
-    await renderSkillChat({
+    return renderSkillChat({
       testType: 'activeDefense',
       activelyDefending: true,
       actor: this.actor.uuid,
@@ -807,21 +808,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onItemChat(event, button) {
-    const itemID = button.closest('.item').dataset.itemId;
-    const item = this.actor.items.get(itemID);
-    const chatData = {
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker(),
-      flags: {
-        data: item,
-        itemId: item.id,  // for Automated Animations module
-        torgeternity: {
-          template: TorgeternityItem.CHAT_TEMPLATE[item.type],
-        }
-      },
-    };
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
 
-    return ChatMessageTorg.create(chatData);
+    return item.toMessage();
   }
 
   /**
@@ -829,8 +819,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onAttackRoll(event, button) {
-    const itemID = button.closest('.item').dataset.itemId;
-    const item = this.actor.items.get(itemID);
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
     rollAttack(this.actor, item);
   }
 
@@ -839,9 +829,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onPowerRoll(event, button) {
-    const itemID = button.closest('.item').dataset.itemId;
-    const item = this.actor.items.get(itemID);
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
     rollPower(this.actor, item);
+  }
+
+  static #onItemEdit(event, button) {
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
+    item.sheet.render({ force: true });
   }
 
   /**
@@ -904,12 +900,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const concernedAttribute = button.dataset.concernedattribute;
     const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
     this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1 });
-  }
-
-  static #onItemEdit(event, button) {
-    const li = button.closest('.item');
-    const item = this.actor.items.get(li.dataset.itemId);
-    item.sheet.render({ force: true });
   }
 
   static #onItemDelete(event, button) {
@@ -982,34 +972,4 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       ]);
     }
   }
-}
-
-/**
- * Checks to see if the given skill is actually unskilled for the indicated actor.
- * If unskilled, a message is sent to the chat log.
- * @param {String} skillValue The value of the skill being checked
- * @param {Number} skillName The name of the skill being checked
- * @param {Actor} actor The actor whose skilled nature is being checked
- * @returns {Boolean} Returns true if the actor is UNSKILLED at 'skillName'
- */
-export function checkUnskilled(skillValue, skillName, actor) {
-  if (skillValue) return false;
-
-  foundry.applications.handlebars.renderTemplate(
-    './systems/torgeternity/templates/chat/skill-error-card.hbs',
-    {
-      message: game.i18n.localize('torgeternity.skills.' + skillName) + ' ' + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
-      actor: actor.uuid,
-      actorPic: actor.img,
-      actorName: actor.name,
-    }).then(content =>
-      ChatMessage.create({
-        user: game.user._id,
-        speaker: ChatMessage.getSpeaker(),
-        owner: actor,
-        content: content
-      })
-    )
-
-  return true;
 }

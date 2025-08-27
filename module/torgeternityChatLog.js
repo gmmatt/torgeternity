@@ -73,7 +73,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
-    await renderSkillChat(test);
+    return renderSkillChat(test);
   }
 
   static async #onPossibility(event, button) {
@@ -171,7 +171,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (noMin10) test.chatNote += game.i18n.localize('torgeternity.sheetLabels.noMin10');
 
     this.parentDeleteByTime(chatMessage);
-    await renderSkillChat(test);
+    return renderSkillChat(test);
   }
 
   static async #onUp(event, button) {
@@ -198,7 +198,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
-    await renderSkillChat(test);
+    return renderSkillChat(test);
   }
 
   static async #onHero(event, button) {
@@ -352,11 +352,10 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     if (target.isDisconnected) {
-      await ChatMessage.create({
-        speaker: ChatMessage.getSpeaker(),
+      return ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: target }),
         content: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
       });
-      return;
     }
     //
     let possPool = parseInt(target.system.other.possibilities);
@@ -581,8 +580,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       await actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
       const attrfield = `system.attributes.${selection}.value`;
       if (result === TestResult.STANDARD) {
-        ChatMessage.create({
-          user: game.user.id,
+        await ChatMessage.create({
           speaker: ChatMessage.getSpeaker({ actor }),
           owner: actor,
           content: game.i18n.format('torgeternity.defeat.permInjury', { attribute: localAttr })
@@ -594,8 +592,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
       } else {
         // Temporary: Add AE to reduce until cleared
-        ChatMessage.create({
-          user: game.user.id,
+        await ChatMessage.create({
           speaker: ChatMessage.getSpeaker({ actor }),
           owner: actor,
           content: game.i18n.format('torgeternity.defeat.tempInjury', { attribute: localAttr })

@@ -1,4 +1,3 @@
-import { ChatMessageTorg } from '../chat/chatMessageTorg.js';
 import { torgeternity } from '../../config.js';
 
 let deferredGunners = new Set();
@@ -227,145 +226,13 @@ export default class TorgeternityItem extends foundry.documents.Item {
   /**
    *
    */
-  async roll() {
-    return ChatMessageTorg.create({
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker(),
-      flags: {
-        data: {
-          ...this,
-          owner: this.actor._id,
-        },
-        torgeternity: {
-          template: TorgeternityItem.CHAT_TEMPLATE[this.type],
-        }
-      },
+  async toMessage() {
+    const renderedTemplate = await foundry.applications.handlebars.renderTemplate(TorgeternityItem.CHAT_TEMPLATE[this.type], this);
+
+    return ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate, { secrets: this.isOwner }),
     });
-  }
-
-  /**
-   * NOT USED
-   */
-  async weaponAttack() {
-    // Roll those dice!
-    const dicerollint = await new Roll('1d20x10x20').roll();
-    dicerollint.toMessage();
-    const diceroll = dicerollint.total;
-
-    // get Bonus number
-    const bonus =
-      diceroll === 1
-        ? -10
-        : diceroll <= 8
-          ? Math.ceil(diceroll / 2 - 5) * 2
-          : diceroll <= 14
-            ? Math.ceil(diceroll / 2 - 6)
-            : diceroll <= 20
-              ? diceroll - 13
-              : 7 + Math.ceil((diceroll - 20) / 5);
-
-    const messageContent =
-      diceroll > 4
-        ? `Bonus: ${bonus.signedString()}`
-        : (diceroll === 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
-
-    const baseDamage =
-      this.system.damageType === 'strengthPlus'
-        ? this.actor.system.attributes.strength.value + parseInt(this.system.damage)
-        : this.system.damage;
-
-    // Retrieve the applicable skill value from the current actor
-    const skillToUse = this.actor.system.skills[this.system.attackWith];
-    const skillValue = skillToUse.value;
-
-    // Generate final Roll Result
-    const rollResult = parseInt(skillValue) + parseInt(bonus);
-
-    // Assemble information needed by attack card
-    const cardData = {
-      ...this.data,
-      owner: this.actor.id,
-      bonus: messageContent,
-      skillValue: skillValue,
-      result: rollResult,
-      baseDamage: baseDamage,
-    };
-
-    // Put together Chat Data
-    const chatData = {
-      user: game.user.id,
-      speaker: ChatMessage.getSpeaker(),
-      flags: {
-        data: cardData,
-        torgeternity: {
-          template: TorgeternityItem.CHAT_TEMPLATE['attack'],
-        }
-      },
-    };
-
-    chatData.speaker.actor = this.actor.id;
-    chatData.weaponAttack = true;
-
-    return ChatMessageTorg.create(chatData);
-  }
-
-  /**
-   * NOT USED
-   */
-  async power() {
-    // Roll those dice!
-    const dicerollint = await new Roll('1d20x10x20').roll();
-    dicerollint.toMessage();
-    const diceroll = dicerollint.total;
-
-    const bonus =
-      diceroll === 1
-        ? -10
-        : diceroll <= 8
-          ? Math.ceil(diceroll / 2 - 5) * 2
-          : diceroll <= 14
-            ? Math.ceil(diceroll / 2 - 6)
-            : diceroll <= 20
-              ? diceroll - 13
-              : 7 + Math.ceil((diceroll - 20) / 5);
-
-    const messageContent =
-      diceroll > 4
-        ? `Bonus: ${bonus.signedString()}`
-        : (diceroll === 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
-
-    // Retrieve the applicable skill value from the current actor
-    const skillToUse = this.actor.system.skills[this.system.skill];
-    const skillValue = skillToUse.value;
-
-    // Generate final Roll Result
-    const rollResult = parseInt(skillValue) + parseInt(bonus);
-
-    // Assemble information needed by attack card
-    const cardData = {
-      ...this.data,
-      owner: this.actor.data._id,
-      bonus: messageContent,
-      skillValue: skillValue,
-      result: rollResult,
-      baseDamage: this.system.damage,
-    };
-
-    // Put together Chat Data
-    const chatData = {
-      user: game.user.id,
-      speaker: ChatMessage.getSpeaker(),
-      flags: {
-        data: cardData,
-        torgeternity: {
-          template: TorgeternityItem.CHAT_TEMPLATE['power'],
-        }
-      },
-    };
-
-    chatData.power = true;
-
-    return ChatMessageTorg.create(chatData);
   }
 
   /**

@@ -303,7 +303,7 @@ export default class TorgCombat extends Combat {
   }
 
   #sendDramaChat(action, faction) {
-    ChatMessage.create({
+    return ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ alias: game.user.name }),
       content: game.i18n.format(`torgeternity.drama.${action}Desc`,
         { faction: game.i18n.localize(`torgeternity.combat.${faction}`) })
@@ -337,7 +337,7 @@ export default class TorgCombat extends Combat {
       }
       chatOutput += '</ul>';
     }
-    ChatMessage.create({ content: chatOutput });
+    return ChatMessage.create({ content: chatOutput });
   }
 
   async dramaUp(faction) {
@@ -419,7 +419,7 @@ export default class TorgCombat extends Combat {
     }
 
     chatOutput += `</ul>`;
-    ChatMessage.create({ content: chatOutput });
+    return ChatMessage.create({ content: chatOutput });
   }
 
   /**
@@ -448,7 +448,7 @@ export default class TorgCombat extends Combat {
       chatOutput += '</li>';
 
       chatOutput += '</ul>';
-      ChatMessage.create({ content: chatOutput });
+      return ChatMessage.create({ content: chatOutput });
     }
   }
   /**
@@ -531,7 +531,7 @@ export default class TorgCombat extends Combat {
         </div> 
       </div> `;
 
-    ChatMessage.create({
+    return ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),
       content
     })
