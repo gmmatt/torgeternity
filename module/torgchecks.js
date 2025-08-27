@@ -662,7 +662,6 @@ export async function renderSkillChat(test) {
     const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
 
     messages.push(await ChatMessage.create({
-      user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
       owner: test.actor,
       rolls: test.diceroll,
