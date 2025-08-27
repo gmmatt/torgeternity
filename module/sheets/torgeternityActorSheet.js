@@ -809,17 +809,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const item = this.actor.items.get(button.closest('.item').dataset.itemId);
     if (!item) return ui.notifications.info(`Failed to find Item for button`);
 
-    return ChatMessageTorg.create({
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      flags: {
-        data: item,
-        itemId: item.id,  // for Automated Animations module
-        torgeternity: {
-          template: TorgeternityItem.CHAT_TEMPLATE[item.type],
-        }
-      },
-    });
+    return item.sendToChat();
   }
 
   /**
