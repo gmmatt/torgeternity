@@ -807,9 +807,10 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onItemChat(event, button) {
-    const itemID = button.closest('.item').dataset.itemId;
-    const item = this.actor.items.get(itemID);
-    const chatData = {
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
+
+    return ChatMessageTorg.create({
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
       flags: {
@@ -819,9 +820,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
           template: TorgeternityItem.CHAT_TEMPLATE[item.type],
         }
       },
-    };
-
-    return ChatMessageTorg.create(chatData);
+    });
   }
 
   /**
@@ -829,8 +828,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onAttackRoll(event, button) {
-    const itemID = button.closest('.item').dataset.itemId;
-    const item = this.actor.items.get(itemID);
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
     rollAttack(this.actor, item);
   }
 
@@ -839,9 +838,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static #onPowerRoll(event, button) {
-    const itemID = button.closest('.item').dataset.itemId;
-    const item = this.actor.items.get(itemID);
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
     rollPower(this.actor, item);
+  }
+
+  static #onItemEdit(event, button) {
+    const item = this.actor.items.get(button.closest('.item').dataset.itemId);
+    if (!item) return ui.notifications.info(`Failed to find Item for button`);
+    item.sheet.render({ force: true });
   }
 
   /**
@@ -904,12 +909,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const concernedAttribute = button.dataset.concernedattribute;
     const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
     this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1 });
-  }
-
-  static #onItemEdit(event, button) {
-    const li = button.closest('.item');
-    const item = this.actor.items.get(li.dataset.itemId);
-    item.sheet.render({ force: true });
   }
 
   static #onItemDelete(event, button) {
