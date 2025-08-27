@@ -546,17 +546,13 @@ async function createTorgEternityMacro(dropData, slot) {
   let macro = null;
   let macroName = null;
   let macroImg = null;
-  let macroFlag = null;
 
   if (dropData.type === 'Item') {
-    macroFlag = 'itemMacro';
     command = `game.torgeternity.rollItemMacro("${document.name}");`;
     macroName = document.name;
     macroImg = document.img;
   } else {
     // attribute, skill, interaction
-    macroFlag = 'skillMacro';
-
     const dropName = document.name;
     const dropAttribute = document.attribute;
     const isInteractionAttack = dropData.type === 'interaction';
@@ -603,7 +599,6 @@ async function createTorgEternityMacro(dropData, slot) {
       type: 'script',
       command: command,
       ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER },
-      flags: { torgeternity: { [macroFlag]: true, }, },
     };
     if (macroImg) macroData.img = macroImg;
 
