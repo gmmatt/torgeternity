@@ -380,19 +380,21 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
  */
 export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
 
+  const speaker = ChatMessage.getSpeaker({ actor });
+
   if (weapon.system.ammo.value === weapon.system.ammo.max && !ignoreUsage) {
 
     if (ammoItem && weapon.system.loadedAmmo != ammoItem.id) {
       weapon.update({ 'system.loadedAmmo': ammoItem.id });
       ChatMessage.create({
         content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
-        speaker: ChatMessage.getSpeaker(),
+        speaker,
       });
 
     } else {
       return ChatMessage.create({
         content: `${game.i18n.format('torgeternity.chatText.ammoFull', { a: weapon.name })}`,
-        speaker: ChatMessage.getSpeaker(),
+        speaker,
       });
     }
   }
@@ -403,7 +405,7 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
     if (ammoArray.length === 0) {
       ChatMessage.create({
         content: `${game.i18n.localize('torgeternity.chatText.noAmmoPosessing')}`,
-        speaker: ChatMessage.getSpeaker(),
+        speaker,
       });
       return;
     }
@@ -452,7 +454,7 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
   if (weapon.system.loadedAmmo != ammoItem.id) {
     ChatMessage.create({
       content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
-      speaker: ChatMessage.getSpeaker(),
+      speaker,
     });
   }
   await weapon.update({
@@ -466,6 +468,6 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
 
   await ChatMessage.create({
     content: game.i18n.format('torgeternity.chatText.reloaded', { a: weapon.name }),
-    speaker: ChatMessage.getSpeaker(),
+    speaker,
   });
 }

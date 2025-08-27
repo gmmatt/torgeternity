@@ -621,9 +621,7 @@ async function createTorgEternityMacro(dropData, slot) {
  */
 async function rollItemMacro(itemName) {
   const speaker = ChatMessage.getSpeaker();
-  let actor;
-  if (speaker.token) actor = game.actors.tokens[speaker.token];
-  if (!actor) actor = game.actors.get(speaker.actor);
+  const actor = game.actors.get(speaker.actor) ?? game.actors.tokens[speaker.token];
   const item = actor ? actor.items.find(item => item.name === itemName) : null;
   if (!item)
     return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noItemNamed') + itemName);
@@ -647,7 +645,7 @@ async function rollItemMacro(itemName) {
 
     default:
       // this will cause the item to be printed to the chat
-      return item.roll();
+      return item.sendToChat();
   }
 }
 
@@ -667,9 +665,7 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
   }
 
   const speaker = ChatMessage.getSpeaker();
-  let actor = null;
-  if (speaker.token) actor = game.actors.tokens[speaker.token];
-  if (!actor) actor = game.actors.get(speaker.actor);
+  const actor = game.actors.get(speaker.actor) ?? game.actors.tokens[speaker.token];
   const isAttributeTest = skillName === attributeName;
   let skill = null;
   if (!isAttributeTest) {

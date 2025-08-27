@@ -472,7 +472,7 @@ export async function renderSkillChat(test) {
         oldAD.delete();
         return ChatMessage.create({
           // Simple chat message for information
-          speaker: ChatMessage.getSpeaker(),
+          speaker: ChatMessage.getSpeaker({ actor: testActor }),
           content: game.i18n.localize('torgeternity.chatText.check.result.resetDefense'), // Need to be implemented if incorporated
         });
       } else {

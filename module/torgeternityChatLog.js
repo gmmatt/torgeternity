@@ -353,7 +353,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
     if (target.isDisconnected) {
       await ChatMessage.create({
-        speaker: ChatMessage.getSpeaker(),
+        speaker: ChatMessage.getSpeaker({ actor: target }),
         content: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
       });
       return;
