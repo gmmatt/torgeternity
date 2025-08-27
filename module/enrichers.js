@@ -109,7 +109,8 @@ function _onClickInlineCheck(event) {
       "20": "nearImpossible",
     }
     test.dn = dnmap[test.dn] ?? test.dn;
-  }
+  } else
+    test.dn = 'standard';
 
   // use 'actor' simply to get the full list of attributes, defenses and skills
   if (Object.hasOwn(CONFIG.torgeternity.attributeTypes, test.dn) ||

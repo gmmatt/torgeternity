@@ -5,6 +5,7 @@
 ### Improvements
 
 - Improve generation of Chat Messages.
+- Ensure that inline checks have a default of 'standard' (10)
 
 ### Bug Fixes
 
