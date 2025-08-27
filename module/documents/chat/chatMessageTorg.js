@@ -28,11 +28,6 @@ export class ChatMessageTorg extends ChatMessage {
         }
       }
 
-      if (this.flags?.torgeternity?.test && templateData.system?.skill)
-        templateData.system.translatedSkill = game.i18n.localize(
-          `torgeternity.skills.${templateData.system?.skill}`
-        );
-
       templateData.isOpen = game.settings.get('torgeternity', 'showCheckDetails') ? "open" : "";
 
       const renderedTemplate = await foundry.applications.handlebars.renderTemplate(template, templateData);
