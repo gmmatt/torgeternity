@@ -228,18 +228,13 @@ export default class TorgeternityItem extends foundry.documents.Item {
    *
    */
   async sendToChat() {
-    return ChatMessageTorg.create({
+    const renderedTemplate = await foundry.applications.handlebars.renderTemplate(TorgeternityItem.CHAT_TEMPLATE[this.type], this);
+    const enrichedHTML = await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate);
+
+    return ChatMessage.create({
       user: game.user._id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      flags: {
-        data: {
-          ...this,
-          owner: this.actor._id,
-        },
-        torgeternity: {
-          template: TorgeternityItem.CHAT_TEMPLATE[this.type],
-        }
-      },
+      content: enrichedHTML,
     });
   }
 
