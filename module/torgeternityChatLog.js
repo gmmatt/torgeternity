@@ -581,7 +581,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       const attrfield = `system.attributes.${selection}.value`;
       if (result === TestResult.STANDARD) {
         await ChatMessage.create({
-          user: game.user.id,
           speaker: ChatMessage.getSpeaker({ actor }),
           owner: actor,
           content: game.i18n.format('torgeternity.defeat.permInjury', { attribute: localAttr })
@@ -594,7 +593,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       } else {
         // Temporary: Add AE to reduce until cleared
         await ChatMessage.create({
-          user: game.user.id,
           speaker: ChatMessage.getSpeaker({ actor }),
           owner: actor,
           content: game.i18n.format('torgeternity.defeat.tempInjury', { attribute: localAttr })

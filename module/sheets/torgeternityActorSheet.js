@@ -566,7 +566,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
           }
         ).then(content =>
           ChatMessage.create({
-            user: game.user._id,
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
             owner: this.actor,
             content: content
@@ -991,7 +990,6 @@ export function checkUnskilled(skillValue, skillName, actor) {
       actorName: actor.name,
     }).then(content =>
       ChatMessage.create({
-        user: game.user._id,
         speaker: ChatMessage.getSpeaker({ actor }),
         owner: actor,
         content: content
