@@ -385,8 +385,8 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
   if (weapon.system.ammo.value === weapon.system.ammo.max && !ignoreUsage) {
 
     if (ammoItem && weapon.system.loadedAmmo != ammoItem.id) {
-      weapon.update({ 'system.loadedAmmo': ammoItem.id });
-      ChatMessage.create({
+      await weapon.update({ 'system.loadedAmmo': ammoItem.id });
+      return ChatMessage.create({
         content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
         speaker,
       });
@@ -403,11 +403,10 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
     // called from the main actor sheet, it's not known what ammo item is used.
     const ammoArray = actor.items.filter(item => item.type === 'ammunition');
     if (ammoArray.length === 0) {
-      ChatMessage.create({
+      return ChatMessage.create({
         content: `${game.i18n.localize('torgeternity.chatText.noAmmoPosessing')}`,
         speaker,
       });
-      return;
     }
 
     if (ammoArray.length === 1) {
@@ -452,7 +451,7 @@ export async function reloadAmmo(actor, weapon, ammoItem, ignoreUsage) {
     return;
   }
   if (weapon.system.loadedAmmo != ammoItem.id) {
-    ChatMessage.create({
+    await ChatMessage.create({
       content: `${game.i18n.format('torgeternity.chatText.changeAmmoType', { weapon: weapon.name, ammo: ammoItem.name })}`,
       speaker,
     });

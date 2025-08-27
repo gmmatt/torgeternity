@@ -352,11 +352,10 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       return;
     }
     if (target.isDisconnected) {
-      await ChatMessage.create({
+      return ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: target }),
         content: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
       });
-      return;
     }
     //
     let possPool = parseInt(target.system.other.possibilities);
@@ -581,7 +580,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       await actor.toggleStatusEffect('unconscious', { active: true, overlay: true });
       const attrfield = `system.attributes.${selection}.value`;
       if (result === TestResult.STANDARD) {
-        ChatMessage.create({
+        await ChatMessage.create({
           user: game.user.id,
           speaker: ChatMessage.getSpeaker({ actor }),
           owner: actor,
@@ -594,7 +593,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
       } else {
         // Temporary: Add AE to reduce until cleared
-        ChatMessage.create({
+        await ChatMessage.create({
           user: game.user.id,
           speaker: ChatMessage.getSpeaker({ actor }),
           owner: actor,

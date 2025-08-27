@@ -576,7 +576,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
      </a>
      </div>`;
 
-    ChatMessage.create({
+    return ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this }),
       content: html
     })

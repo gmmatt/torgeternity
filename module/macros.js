@@ -51,7 +51,7 @@ export class TorgeternityMacros {
         chatOutput += '</ul>';
       }
 
-      ChatMessage.create({ content: chatOutput });
+      return ChatMessage.create({ content: chatOutput });
     } catch (e) {
       ui.notifications.error(e.message);
     }
@@ -92,7 +92,7 @@ export class TorgeternityMacros {
     }
     chatOutput += '</ul>';
 
-    ChatMessage.create({ content: chatOutput });
+    return ChatMessage.create({ content: chatOutput });
   }
   // #region Revive Shock
   /**
@@ -179,7 +179,7 @@ export class TorgeternityMacros {
       }
       chatOutput += '</ul>';
 
-      ChatMessage.create({ content: chatOutput });
+      return ChatMessage.create({ content: chatOutput });
     } catch (e) {
       ui.notifications.error(e.message);
     }
@@ -237,8 +237,7 @@ export class TorgeternityMacros {
       if (game.user.targets.size === 0) {
         chatOutput += `<p>${game.i18n.localize('torgeternity.macros.bonusDieMacroNoTokenTargeted')}</p>`;
         console.log('No targets, creating chat Message, leaving Macro.');
-        ChatMessage.create({ content: chatOutput });
-        return;
+        return ChatMessage.create({ content: chatOutput });
       }
 
       chatOutput += `<ul>`;
@@ -252,7 +251,7 @@ export class TorgeternityMacros {
       }
       chatOutput += '</ul>';
 
-      ChatMessage.create({ content: chatOutput });
+      return ChatMessage.create({ content: chatOutput });
     } catch (e) {
       ui.notifications.error(e.message);
     }
@@ -313,7 +312,7 @@ export class TorgeternityMacros {
     const cardSort = (activeDeck.cards.size === 0) ? dramaDeck.size :
       dramaDeck.cards.get(activeDeck._source.cards[0]._id).sort + 1;
 
-    DialogV2.wait({
+    return DialogV2.wait({
       window: { title: 'torgeternity.dialogWindow.showingDramaCards.recipient', },
       content: `${game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.whisper')} ${checkOptions} <br>`,
       buttons: [
@@ -347,7 +346,7 @@ export class TorgeternityMacros {
                 </div>`;
             };
             chatOutput.content += `</div>`;
-            ChatMessage.create(chatOutput);
+            return ChatMessage.create(chatOutput);
           }
         }
       ],
