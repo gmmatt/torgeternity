@@ -1,4 +1,4 @@
-import { TestResult, renderSkillChat, rollAttack, rollPower } from '../torgchecks.js';
+import { TestResult, renderSkillChat, rollAttack, rollPower, checkUnskilled } from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { oneTestTarget, TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
@@ -968,33 +968,4 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       ]);
     }
   }
-}
-
-/**
- * Checks to see if the given skill is actually unskilled for the indicated actor.
- * If unskilled, a message is sent to the chat log.
- * @param {String} skillValue The value of the skill being checked
- * @param {Number} skillName The name of the skill being checked
- * @param {Actor} actor The actor whose skilled nature is being checked
- * @returns {Boolean} Returns true if the actor is UNSKILLED at 'skillName'
- */
-export function checkUnskilled(skillValue, skillName, actor) {
-  if (skillValue) return false;
-
-  foundry.applications.handlebars.renderTemplate(
-    './systems/torgeternity/templates/chat/skill-error-card.hbs',
-    {
-      message: game.i18n.localize('torgeternity.skills.' + skillName) + ' ' + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
-      actor: actor.uuid,
-      actorPic: actor.img,
-      actorName: actor.name,
-    }).then(content =>
-      ChatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor }),
-        owner: actor,
-        content: content
-      })
-    )
-
-  return true;
 }

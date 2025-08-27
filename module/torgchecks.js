@@ -1,5 +1,4 @@
 import { TestDialog, TestDialogLabel } from './test-dialog.js';
-import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
 
 export const TestResult = {
   UNKNOWN: 0,
@@ -1113,4 +1112,33 @@ function getExtraProtection(attackerTraits, targetTraits, protection, defaultVal
     }
   }
   return defaultValue;
+}
+
+/**
+ * Checks to see if the given skill is actually unskilled for the indicated actor.
+ * If unskilled, a message is sent to the chat log.
+ * @param {String} skillValue The value of the skill being checked
+ * @param {Number} skillName The name of the skill being checked
+ * @param {Actor} actor The actor whose skilled nature is being checked
+ * @returns {Boolean} Returns true if the actor is UNSKILLED at 'skillName'
+ */
+export function checkUnskilled(skillValue, skillName, actor) {
+  if (skillValue) return false;
+
+  foundry.applications.handlebars.renderTemplate(
+    './systems/torgeternity/templates/chat/skill-error-card.hbs',
+    {
+      message: game.i18n.localize('torgeternity.skills.' + skillName) + ' ' + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
+      actor: actor.uuid,
+      actorPic: actor.img,
+      actorName: actor.name,
+    }).then(content =>
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        owner: actor,
+        content: content
+      })
+    )
+
+  return true;
 }
