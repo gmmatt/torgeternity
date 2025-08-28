@@ -51,9 +51,12 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
    */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
+    const actorPoss = this.actor.getFlag('torgeternity', 'possibilityByCosm');
+    actorPoss.coreEarthPoss = this.actor.system.other.possibilities;
     return Object.assign(context, {
+      cosms: Object.keys(CONFIG.torgeternity.cosmTypes).filter(k => k !== 'none'),
       actor: this.actor,
-      actorPoss: this.actor.getFlag('torgeternity', 'possibilityByCosm'),
+      actorPoss,
       buttons: [
         { type: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" }
       ],
@@ -65,7 +68,7 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
    * @param event
    */
   static async #onTestActiveModule(event) {
-    const tes = await fromUuidSync(event.target.dataset.uuid, { strict: false });
+    const tes = await fromUuid(event.target.dataset.uuid, { strict: false });
     if (!tes) ui.notifications.warn(game.i18n.localize('torgeternity.notifications.moduleNotActive'));
   }
 

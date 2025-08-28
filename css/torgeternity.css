@@ -2678,29 +2678,44 @@ german tent cards images
   }
 }
 
-.possibilitiesByCosmWindow {
-  &.eachDiversion {
-    max-height: 142px;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 0.25rem;
-    align-items: center;
-    justify-items: center;
-  }
+div.possibilitiesByCosmWindow {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column-gap: 1.5em;
+  grid-row-gap: 2em;
+  text-align: center;
+  text-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+}
 
-  &.eachDiversion.hide {
+div.possibilitiesByCosmEntry {
+  max-height: 142px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 0.25rem;
+  align-items: center;
+  justify-items: center;
+
+  &.hide {
     filter: grayscale(1);
   }
 
-  &.imagesShown {
-    margin-bottom: 0.5rem;
+  a.content-link {
+    width: 100%;
+    margin-bottom: 1px;
+  }
+
+  .imagesShown {
+    margin-bottom: 0.25rem;
     border: none;
     height: 80px;
     width: 80px;
   }
 
-  &.inputField {
+  input.inputField {
     text-align: center;
     width: 80px;
   }
