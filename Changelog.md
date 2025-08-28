@@ -5,6 +5,7 @@
 ### Improvements
 
 - Only offer a Destiny Card for a **Defend Approved Action** if the target is doing an "Active Defense" this round.
+- Slight updates to Possibility Selection Dialog.
 
 ## 13.8.2 - Fixes for Perks, Cosms and Secrets
 
