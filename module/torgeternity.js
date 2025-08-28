@@ -78,14 +78,16 @@ Hooks.once('init', async function () {
   // Indexable Compendiums
   CONFIG.Actor.compendiumIndexFields.push(
     'system.other.cosm', // CommonActorData
-    'system.details.race', // StormKnightData
-    'system.details.clearance',  // ThreatData
-    'system.type', // VehicleData
+    'system.details.race', 'system.details.background', // StormKnightData
+    'system.details.clearance', 'system.details.description', // ThreatData
+    'system.type', 'system.description' // VehicleData
   );
   CONFIG.Item.compendiumIndexFields.push(
-    'system.traits', 'system.cosm', // BaseItemData
-    'system.secondaryAxiom', // GeneralItemData
-    'system.category' // Perks
+    'system.cosm', 'system.description', 'system.traits', // BaseItemData
+    //'system.secondaryAxiom', // GeneralItemData (not a useful index key)
+    'system.category', // Perks
+    'system.notes', // Armor, BaseWeapon, Implant, Shield
+    'system.implantType', // Implant
   );
 
   // --------combats

@@ -12,6 +12,10 @@
 - Stop the tabs of the Actor sheet flickering on each update.
 - Fix scrolling in Threat and Vehicle sheets (only editing Threat background still has issues).
 
+### Known Issues
+
+- Core Foundry Bug (https://github.com/foundryvtt/foundryvtt/issues/13348) prevents filtering Item searches based on traits.
+
 ## 13.8.2 - Fixes for Perks, Cosms and Secrets
 
 ### Improvements
@@ -26,7 +30,7 @@
 - It is possible to create Perks once again (the category will default to "special/homebrew").
 - Don't cancel an item's cosm when only a partial update occurs (such as Equipping the item).
 
-## v13.8.1 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
+## v13.8.1 - Waiting, Status Display, Transfer Weapon/Ammo Effects, Private Rolls
 
 - If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
 - Automation of **Waiting**:
@@ -69,7 +73,7 @@
 - #466: Update **Defeat** handling to display a button to apply the relevant effects, which will prompt for an attribute to modify if relevant.
 - Ensure use of Intimidation skill is detected as an Approved Action for Intimidate.
 - #416: Allow **Compendium Search** of Items to filter based on cosm, traits, secondaryAxiom, category (incl. Implant Type).
-  - (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/13300 - fixed in Foundry 13.348)
+  - (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/13300 - fixed in Foundry 13.348) (A separate bug https://github.com/foundryvtt/foundryvtt/issues/13348 means that traits can't be searched yet.)
 - Display highest size and vulnerable modifier from all the targets in the Skill Test dialog (even though they are applied separately to each target during test resolution).
 
 ### Bug Fixes
