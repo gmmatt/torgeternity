@@ -399,7 +399,8 @@ export async function renderSkillChat(test) {
       // "Defend is successful once an attack or interaction misses the hero."
       if (target.type === 'stormknight' &&
         (test.testType === 'attack' || test.testType === 'interactionAttack') &&
-        game.combat?.approvedActions?.includes('defend'))
+        game.combat?.approvedActions?.includes('defend') &&
+        target.defenses.activeDefense)
         test.successfulDefendApprovedAction = true;
     } else {
       if (testActor.type === 'stormknight' && isApprovedAction(test))
@@ -464,7 +465,7 @@ export async function renderSkillChat(test) {
 
     } else if (test.testType === 'activeDefense') {
       // Click on defense
-      const oldAD = testActor.effects.find((a) => a.name === 'ActiveDefense'); // Search for an ActiveDefense effect
+      const oldAD = testActor.activeDefense; // Search for an ActiveDefense effect
       if (oldAD) {
         // if present, reset by deleting
         oldAD.delete();
@@ -482,7 +483,7 @@ export async function renderSkillChat(test) {
     } else if (test.testType === 'activeDefenseUpdate') {
       // update bonus in case of bonus roll possibility / up
       // Delete Existing Active Effects
-      testActor.effects.find((a) => a.name === 'ActiveDefense')?.delete();
+      testActor.activeDefense?.delete();
       if (test.bonus < 1) test.bonus = 1;
       test.resultText = '+ ' + test.bonus;
       // Create new set of active effects

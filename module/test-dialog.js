@@ -348,6 +348,7 @@ export function oneTestTarget(token, applySize) {
         maneuver: actor.defenses.maneuver.value,
         taunt: actor.defenses.taunt.value,
         trick: actor.defenses.trick.value,
+        activeDefense: !!actor.activeDefense
       },
     };
   }

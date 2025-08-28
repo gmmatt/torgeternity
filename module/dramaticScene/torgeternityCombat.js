@@ -277,10 +277,7 @@ export default class TorgCombat extends Combat {
    * Remove the ActiveDefense AE from all combatants.
    */
   async #deleteActiveDefense() {
-    for (const combatant of this.combatants) {
-      const activeDefenseEffect = combatant.actor?.appliedEffects.find((eff) => eff.name === 'ActiveDefense');
-      if (activeDefenseEffect) await activeDefenseEffect.delete();
-    }
+    return Promise.all(this.combatants.map(combatant => combatant.actor?.activeDefense?.delete()));
   }
 
 

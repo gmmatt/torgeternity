@@ -769,6 +769,13 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     if (toDelete.length) promises.push(this.deleteEmbeddedDocuments('ActiveEffect', toDelete));
     return Promise.all(promises);
   }
+
+  /**
+   * Returns either the AE for the Active Defense currently on the target, or undefined.
+   */
+  get activeDefense() {
+    return this.effects.find(ef => ef.name === 'ActiveDefense')
+  }
 }
 
 

@@ -270,11 +270,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     // is the actor actively defending at the moment?
-    context.document.defenses.isActivelyDefending = this.actor.effects.find(
-      (e) => e.name === 'ActiveDefense'
-    )
-      ? true
-      : false;
+    context.document.defenses.isActivelyDefending = !!this.actor.activeDefense;
 
     context.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
 
