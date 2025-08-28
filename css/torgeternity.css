@@ -265,7 +265,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
   }
 
-  nav.tabs.right-tab {
+  nav.tabs.sheet-tabs {
     position: absolute;
     contain: content;
     left: 100%;
@@ -380,7 +380,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       padding: 2px;
     }
 
-    nav.tabs.right-tab {
+    nav.tabs.sheet-tabs {
       transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px) scale(0.7);
     }
 

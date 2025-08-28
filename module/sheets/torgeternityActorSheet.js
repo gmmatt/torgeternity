@@ -143,7 +143,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
-    this.options.classes.push(this.actor.type);
+    if (options.isFirstRender && !this.options.classes.includes(this.actor.type))
+      this.options.classes.push(this.actor.type);
 
     switch (this.actor.type) {
       case 'stormknight':
@@ -264,10 +265,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     context.noDeleteTxFx = true; // Don't allow transferred effects to be deleted
 
     context.config = CONFIG.torgeternity;
-    context.disableXP = true;
-    if (game.user.isGM || !game.settings.get('torgeternity', 'disableXP')) {
-      context.disableXP = false;
-    }
+    context.disableXP = !game.user.isGM && game.settings.get('torgeternity', 'disableXP');
 
     // is the actor actively defending at the moment?
     context.document.defenses.isActivelyDefending = !!this.actor.activeDefense;
@@ -342,8 +340,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _onRender(context, options) {
     await super._onRender(context, options);
     let html = this.element;
-
-    html.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
 
     new foundry.applications.ux.DragDrop.implementation({
       dragSelector: '[data-drag], .item-list .item',
