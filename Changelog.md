@@ -14,7 +14,7 @@
 
 ### Known Issues
 
-- Core Foundry Bug (https://github.com/foundryvtt/foundryvtt/issues/13348) prevents filtering Item searches based on traits.
+- Core Foundry Bug (https://github.com/foundryvtt/foundryvtt/issues/13348) prevents filtering Item searches based on traits - fixable with a one-line patch in your core foundry.mjs file
 
 ## 13.8.2 - Fixes for Perks, Cosms and Secrets
 
