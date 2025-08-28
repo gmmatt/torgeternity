@@ -1715,6 +1715,20 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
   }
 
+  div.threat-main,
+  div.vehicle-main {
+    height: 100%;
+
+    section.background.active {
+      height: 100%;
+    }
+  }
+
+  div.threat-submain {
+    width: 100%;
+    height: 100%;
+  }
+
   div.vehicle-sheet {
     display: inline-flex;
     flex-direction: column;
@@ -1727,9 +1741,9 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 
   div.threat-sheet {
-    display: inline-flex;
-    width: 100%;
     height: 100%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 
     .section-bar {
       border: 1px black solid;
