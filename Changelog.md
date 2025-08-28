@@ -10,9 +10,7 @@
 ### Bug Fixes
 
 - Stop the tabs of the Actor sheet flickering on each update.
-- Fix sc?.`rolling in Threat and Vehicle sheets (only editing Threat background still has issues).-  nm,?
-dfghjkl;'#
- -7445.,
+- Fix scrolling in Threat and Vehicle sheets (only editing Threat background still has issues).
 
 ## 13.8.2 - Fixes for Perks, Cosms and Secrets
 
