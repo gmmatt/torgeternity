@@ -6,6 +6,12 @@
 
 - Only offer a Destiny Card for a **Defend Approved Action** if the target is doing an "Active Defense" this round.
 - Slight updates to Possibility Selection Dialog.
+- **Concentration Checks**
+  - Spells/Miracles/Psionics have an additional checkbox `Requires Concentration`
+  - Invoking a power with `requires concentration` and getting a success will automatically add a new active effect to the caster called `Concentrating: <name>` and the Source will also be the name of the effect. The description for the active effect will be `<actorname> is concentrating on <itemtype> '<itemname>'`  (localized accordingly).
+  - When using a power-based skill (listed in `CONFIG.torgeternity.concentrationSkills`) or when performing a Concentration check, a modifier will be added to the roll of -2 per 'concentrating' AE currently on the caster.
+  - If the caster takes damage (from the Apply Damage chat button) or suffers a Stymied or Vulnerable result from an interaction attack, then a chat message will prompt for the caster to make a Concentration check (and show which is the preferred check: willpower or spirit).
+    - If the result of the concentration check is a failure, then a message will be placed into chat indicating which effects are no longer being concentrated on, and those AEs will be removed from the actor.
 
 ### Bug Fixes
 

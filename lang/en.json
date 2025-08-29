@@ -80,6 +80,7 @@
           "allOutAttack": "All out Attack",
           "blindFire": "Blind Fire",
           "calledShot": "Called Shot",
+          "concentrating": "Concentrating",
           "darkness": "Darkness",
           "heavyBurst": "Heavy Burst",
           "longBurst": "Long Burst",
@@ -120,6 +121,12 @@
           "BDDamageSum": "Sum damage of rolled BD"
         },
         "testUnsuccessfull": "Test unsuccessful"
+      },
+      "concentration": {
+        "makeCheck": "{actor} must make a Concentration Check",
+        "AEname": "Concentrating: {item}",
+        "AEdescription": "{actor} is concentrating on {itemType} '{itemName}'",
+        "broken": "{actor} has lost concentration on:"
       },
       "contradiction": {
         "alreadyDisconnected": "is already disconnected",
@@ -699,6 +706,7 @@
       "modifier": "Modifier",
       "outstanding": "Outstanding",
       "range": "Range",
+      "requiresConcentration": "Requires Concentration",
       "skill": "Skill",
       "skilllevel": "Min. Value"
     },

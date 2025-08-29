@@ -30,6 +30,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'backlash2': TorgeternityChatLog.#applyBacklash2,
       'backlash3': TorgeternityChatLog.#applyBacklash3,
       'testDefeat': TorgeternityChatLog.#testDefeat,
+      'testConcentration': TorgeternityChatLog.#testConcentration,
       'applyDefeat': TorgeternityChatLog.#applyDefeat,
       'drawDestiny': TorgeternityChatLog.#drawDestiny,
     }
@@ -341,6 +342,9 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!target) return;
     const damage = torgDamage(test.damage, test.target.targetAdjustedToughness, test.attackTraits);
     target.applyDamages(damage.shocks, damage.wounds);
+    if (test.target.isConcentrating) {
+      this.promptConcentration(target);
+    }
   }
 
   static async #soakDamage(event, button) {
@@ -458,13 +462,21 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
   static async #applyStymied(event, button) {
     event.preventDefault();
     const { test, target } = getChatTarget(button);
-    if (target) await target.applyStymiedState(test.actor);
+    if (target) {
+      await target.applyStymiedState(test.actor);
+      if (test.testType === 'interactionAttack' && target.isConcentrating)
+        this.promptConcentration(target);
+    }
   }
 
   static async #applyTargetVulnerable(event, button) {
     event.preventDefault();
     const { test, target } = getChatTarget(button);
-    if (target) await target.applyVulnerableState(test.actor);
+    if (target) {
+      await target.applyVulnerableState(test.actor);
+      if (test.testType === 'interactionAttack' && target.isConcentrating)
+        this.promptConcentration(target);
+    }
   }
 
   static async #applyActorVulnerable(event, button) {
@@ -522,6 +534,68 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     // Wait for manual addition of results, when applyDefeat is invoked.
   }
 
+  /*
+   * Concentration checks
+   */
+
+  promptConcentration(actor) {
+    const hasAdds = actor.system.skills.willpower.adds;
+    const skill = actor.system.skills.willpower;
+    const attrib = actor.system.attributes.spirit;
+
+    const html = `<p>${game.i18n.format('torgeternity.chatText.concentration.makeCheck', { actor: actor.name })}
+    <div class="skill-roll-menu">
+     <a class="button roll-button roll-defeat ${!hasAdds && 'notPreferred'}"
+     data-actor-uuid="${actor.uuid}" data-action="testConcentration" data-test-type="skill", 
+     data-skill-name="willpower" data-skill-adds="${skill.adds}" data-skill-value="${skill.value}" 
+     data-is-fav="${skill.isFav}" data-unskilled-use="${skill.unskilledUse}">
+     ${game.i18n.localize('torgeternity.skills.willpower')}
+     </a>
+     <a class="button roll-button roll-defeat ${hasAdds && 'notPreferred'}" 
+     data-actor-uuid="${actor.uuid}" data-action="testConcentration" data-test-type="attribute", 
+     data-skill-name="spirit" data-skill-adds="0" data-skill-value="${attrib.value}" 
+     data-is-fav="${actor.system.attributes.spiritIsFav ?? 0}" data-unskilled-use="1">
+     ${game.i18n.localize('torgeternity.attributes.spirit')}
+     </a>
+     </div>`;
+
+    return ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: html
+    })
+  }
+
+  static async #testConcentration(event, button) {
+    event.preventDefault();
+    // No test in the chat message that display Defeat prompt
+    const { chatMessage } = getMessage(button);
+    const actor = game.actors.get(chatMessage.speaker.actor);
+
+    // Convert strings to the correct type(s)
+    const test = {
+      DNDescriptor: 'standard',
+      actor,
+      ...button.dataset
+    };
+    test.isFav = !!test.isFav;
+    test.unskilledUse = !!test.unSkilledUse;
+    test.skillValue = Number(test.skillValue);
+    test.isConcentrationCheck = true;
+
+    const result = await TestDialog.wait(test);
+
+    if (result.flags.torgeternity.test.result < TestResult.STANDARD) {
+      const failed = actor.effects.filter(ef => ef.statuses.has('concentrating'));
+      const list = failed.map(ef => `<li>${fromUuidSync(ef.origin).name}</li>`);
+
+      ChatMessage.create({
+        speaker: chatMessage.speaker,
+        content: `<p>${game.i18n.format('torgeternity.chatText.concentration.broken', { actor: actor.name })}</p><ul>${list}</ul>`
+      })
+      actor.deleteEmbeddedDocuments('ActiveEffect', failed.map(ef => ef.id));
+    }
+  }
+
   static async #drawDestiny(event, button) {
     let id = button.dataset.actor;
     if (id.startsWith('Actor.')) id = id.slice(6);
@@ -534,7 +608,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
   }
 
   static async #openSheet(event, button) {
-    console.log({ event, button });
     let id = button.dataset.actor;
     if (id.startsWith('Actor.')) id = id.slice(6);
     let actor = game.actors.get(id);

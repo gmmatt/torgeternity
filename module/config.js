@@ -371,6 +371,20 @@ torgeternity.skills = {
   willpower: 'torgeternity.skills.willpower',
 };
 
+torgeternity.concentrationSkills = [
+  // Spells
+  'alteration',
+  'apportation',
+  'conjuration',
+  'divination',
+  // Miracles
+  'faith',
+  // Psionics
+  'kinesis',
+  'precognition',
+  'telepathy'
+];
+
 torgeternity.stymiedStates = {
   none: 'torgeternity.stymiedStates.none',
   stymied: 'torgeternity.stymiedStates.stymied',

@@ -87,6 +87,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       vulnerable: 0,
       darkness: 0,
       waiting: 0,
+      concentrating: 0,
     };
   }
 
@@ -103,6 +104,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       vulnerable: this.statuses.has('veryVulnerable') ? 4 : this.statuses.has('vulnerable') ? 2 : 0,
       darkness: this.statuses.has('pitchBlack') ? -6 : this.statuses.has('dark') ? -4 : this.statuses.has('dim') ? -2 : 0,
       waiting: this.statuses.has('waiting') ? -2 : 0,
+      concentrating: this.appliedEffects.filter(ef => ef.statuses.has('concentrating')).length * -2,
     };
 
     // Skillsets
@@ -535,6 +537,10 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     return this.statuses.has(statusId) ?? false;
   }
 
+  get isConcentrating() {
+    return this.statusModifiers.concentrating !== 0;
+  }
+
   /**
    * Apply the supplied amount of shock and/or wound damage to this actor.
    * Supplying a negative number will act as healing.
@@ -775,6 +781,21 @@ export default class TorgeternityActor extends foundry.documents.Actor {
    */
   get activeDefense() {
     return this.effects.find(ef => ef.name === 'ActiveDefense')
+  }
+
+  async addConcentration(item) {
+    const effect = (await ActiveEffect.fromStatusEffect('concentrating')).toObject();
+    Object.assign(effect,
+      {
+        name: game.i18n.format('torgeternity.chatText.concentration.AEname', { item: item.name }),
+        origin: item.uuid,
+        description: game.i18n.format('torgeternity.chatText.concentration.AEdescription', {
+          actor: this.name,
+          itemName: item.name,
+          itemType: game.i18n.localize(CONFIG.Item.typeLabels[item.type])
+        })
+      })
+    return ActiveEffect.implementation.create(effect, { parent: this });
   }
 }
 

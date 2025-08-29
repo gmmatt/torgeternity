@@ -226,6 +226,11 @@ export async function renderSkillChat(test) {
       }
     }
 
+    // Only apply concentration modifier if a relevant skill (or a concentration check)
+    if (test.concentratingModifier < 0) {
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.concentrating', test.concentratingModifier));
+      test.modifiers += test.concentratingModifier;
+    }
     if (test.darknessModifier < 0) {
       modifiers.push(modifierString('torgeternity.chatText.check.modifier.darkness', test.darknessModifier));
       test.modifiers += test.darknessModifier;
@@ -408,6 +413,15 @@ export async function renderSkillChat(test) {
     }
     // Turn on + sign for modifiers?
     test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
+
+    // Concentration
+    if (first && test.result >= TestResult.STANDARD && testItem.system.requiresConcentration) {
+      await testActor.addConcentration(testItem);
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: testActor }),
+        content: game.i18n.format('torgeternity.concentration.start', { name: testItem.name })
+      })
+    }
 
     // Choose Text to Display as Result
     if (testActor.isDisconnected) {

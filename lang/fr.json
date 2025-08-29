@@ -86,6 +86,7 @@
           "allOutAttack": "attaque totale",
           "blindFire": "tir au jugé",
           "calledShot": "attaque ciblée",
+          "concentrating": "Concentrating",
           "darkness": "obscurité",
           "heavyBurst": "rafale nourrie",
           "longBurst": "rafale longue",
@@ -126,6 +127,12 @@
           "BDDamageSum": "Somme des BDs de dommages"
         },
         "testUnsuccessfull": "Le jet n'a pas réussi"
+      },
+      "concentration": {
+        "makeCheck": "{actor} must make a Concentration Check",
+        "AEname": "Concentrating: {item}",
+        "AEdescription": "{actor} is concentrating on {itemType} '{itemName}'",
+        "broken": "{actor} has lost concentration on:"
       },
       "contradiction": {
         "alreadyDisconnected": "est déjà déconnecté",
@@ -705,6 +712,7 @@
       "modifier": "modificateur",
       "outstanding": "Spectaculaire",
       "range": "Portée",
+      "requiresConcentration": "Requires Concentration",
       "skill": "Compétence",
       "skilllevel": "Compétence min."
     },

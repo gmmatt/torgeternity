@@ -34,6 +34,13 @@
         name="system.duration"
         type="text"
         value="{{item.system.duration}}" />
+      <div class="flexrow">
+        <p class="item-data-label">{{localize "torgeternity.powers.requiresConcentration"}}</p>
+        <input class="toggle"
+          name="system.requiresConcentration"
+          type="checkbox"
+          {{checked item.system.requiresConcentration}} data-dtype="Boolean" />
+      </div>
       <p class="item-data-label atkDmgAP">
         {{localize "torgeternity.powers.attack"}}? / {{localize "torgeternity.powers.damage"}} /
         {{localize "torgeternity.powers.ap"}}

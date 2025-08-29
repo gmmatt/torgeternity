@@ -26,5 +26,8 @@
     {{#if test.maneuverModifier}}
       {{localize "torgeternity.stats.maneuverModifier"}}: {{numberFormat test.maneuverModifier sign=true}}<br>
     {{/if}}
+    {{#if test.concentratingModifier}}
+      {{localize "torgeternity.statusEffects.concentrating"}}: {{numberFormat test.concentratingModifier sign=true}}<br>
+    {{/if}}
   </div>
 </fieldset>
