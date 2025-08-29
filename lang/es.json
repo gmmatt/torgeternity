@@ -86,7 +86,7 @@
           "allOutAttack": "Ataque Total",
           "blindFire": "Tiro a Ciegas",
           "calledShot": "Tiro Preciso",
-          "concentrating": "Concentrating",
+          "concentrating": "Concentrado",
           "darkness": "Oscuridad",
           "heavyBurst": "Ráfaga Continua",
           "longBurst": "Ráfaga Larga",
@@ -129,10 +129,10 @@
         "testUnsuccessfull": "Prueba fallida"
       },
       "concentration": {
-        "makeCheck": "{actor} must make a Concentration Check",
-        "AEname": "Concentrating: {item}",
-        "AEdescription": "{actor} is concentrating on {itemType} '{itemName}'",
-        "broken": "{actor} has lost concentration on:"
+        "makeCheck": "{actor} debe hacer una prueba de Concentración",
+        "AEname": "Concentrado: {item}",
+        "AEdescription": "{actor} está concentrado en {itemType} '{itemName}'",
+        "broken": "{actor} ha perdido la concentración en:"
       },
       "contradiction": {
         "alreadyDisconnected": "ya está Desconectado",
@@ -712,7 +712,7 @@
       "modifier": "Modificador",
       "outstanding": "Resultado Espectacular",
       "range": "Alcance",
-      "requiresConcentration": "Requires Concentration",
+      "requiresConcentration": "Requiere Concentración",
       "skill": "Habilidad",
       "skilllevel": "Valor Min. Habilidad"
     },
