@@ -1,10 +1,10 @@
 # TORG Eternity Changelog
 
-## NEXT
+## NEXT - Concentration & Multi-Action
 
 ### Improvements
 
-- Only offer a Destiny Card for a **Defend Approved Action** if the target is doing an "Active Defense" this round.
+- Change to only offer a Destiny Card for a **Defend Approved Action** if the target is doing an "Active Defense" this round.
 - Slight updates to Possibility Selection Dialog.
 - **Concentration Checks**
   - Spells/Miracles/Psionics have an additional checkbox `Requires Concentration`
