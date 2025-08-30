@@ -13,9 +13,10 @@
   - If the caster takes damage (from the Apply Damage chat button) or suffers a Stymied or Vulnerable result from an interaction attack, then a chat message will prompt for the caster to make a Concentration check (and show which is the preferred check: willpower or spirit).
     - If the result of the concentration check is a failure, then a message will be placed into chat indicating which effects are no longer being concentrated on, and those AEs will be removed from the actor.
 - **Multi-Action Assistance**
+  - Assistance is only provided for combatants within an encounter (using the Combat Tracker).
   - if a Mult-Action Penalty is entered for an actor, the generated bonus for the first die roll will be remembered for subsequent test checks (it will auto-populate the "Bonus: Input Existing" field).
   - The stored bonus will be cleared when the "end-turn" button is pressed, or the GM advances combat to a new round (New/Keep).
-  - The bonus is stored in the Combatant, so deleting the current encounter will also delete all saved bonuses. 
+  - All saved bonuses are removed when an encounter is deleted.
 
 ### Bug Fixes
 

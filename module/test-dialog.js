@@ -127,7 +127,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         this.test.requiresConcentration = item.system.requiresConcentration;
       }
 
-      const combatant = game.combat.getCombatantsByActor(actor)?.shift();
+      const combatant = game.combat?.getCombatantsByActor(actor)?.shift();
       if (combatant) {
         const bonus = combatant.currentBonus;
         if (bonus !== undefined) this.test.bonus = bonus;
