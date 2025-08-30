@@ -261,7 +261,7 @@ export class TorgeternityMacros {
   async dramaVision() {
     if (!game.user.isGM) return;
 
-    if (!game.combats.viewed?.round) {
+    if (!game.combat?.round) {
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noFight'));
     }
 
@@ -354,7 +354,10 @@ export class TorgeternityMacros {
   }
 
   async dramaFlashback() {
-    game.combats.active?.restorePreviousDrama();
+    if (!game.combat?.round) {
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noFight'));
+    }
+    game.combat?.restorePreviousDrama();
   }
 
   // #endregion

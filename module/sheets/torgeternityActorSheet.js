@@ -604,7 +604,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
    * @param event
    */
   static async #onChaseRoll(event, button) {
-    if (!game.combats.active) {
+    if (!game.combat) {
       ui.notifications.info(game.i18n.localize('torgeternity.chatText.check.noTracker'));
       return;
     }
