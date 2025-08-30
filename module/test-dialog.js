@@ -126,6 +126,12 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         this.test.trademark = item.system.traits.has('trademark');
         this.test.requiresConcentration = item.system.requiresConcentration;
       }
+
+      const combatant = game.combat.getCombatantsByActor(actor)?.shift();
+      if (combatant) {
+        const bonus = combatant.currentBonus;
+        if (bonus !== undefined) this.test.bonus = bonus;
+      }
     }
     // Ensure all relevant fields are Number
     for (const key of Object.keys(DEFAULT_TEST))

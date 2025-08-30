@@ -12,6 +12,10 @@
   - When using a power-based skill (listed in `CONFIG.torgeternity.concentrationSkills`) or when performing a Concentration check, a modifier will be added to the roll of -2 per 'concentrating' AE currently on the caster.
   - If the caster takes damage (from the Apply Damage chat button) or suffers a Stymied or Vulnerable result from an interaction attack, then a chat message will prompt for the caster to make a Concentration check (and show which is the preferred check: willpower or spirit).
     - If the result of the concentration check is a failure, then a message will be placed into chat indicating which effects are no longer being concentrated on, and those AEs will be removed from the actor.
+- **Multi-Action Assistance**
+  - if a Mult-Action Penalty is entered for an actor, the generated bonus for the first die roll will be remembered for subsequent test checks (it will auto-populate the "Bonus: Input Existing" field).
+  - The stored bonus will be cleared when the "end-turn" button is pressed, or the GM advances combat to a new round (New/Keep).
+  - The bonus is stored in the Combatant, so deleting the current encounter will also delete all saved bonuses. 
 
 ### Bug Fixes
 

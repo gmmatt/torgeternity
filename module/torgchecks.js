@@ -186,6 +186,7 @@ export async function renderSkillChat(test) {
     if (!test.explicitBonus) {
       test.combinedRollTotal = test.rollTotal + test.upTotal + test.possibilityTotal + test.heroTotal + test.dramaTotal;
       test.bonus = torgBonus(test.combinedRollTotal);
+      if (test.multiModifier) game.combat.getCombatantsByActor(testActor)?.shift()?.setCurrentBonus(test.bonus);
     } else {
       test.rollTotal = undefined;
       test.combinedRollTotal = '-';
@@ -415,7 +416,7 @@ export async function renderSkillChat(test) {
     test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
 
     // Concentration
-    if (first && test.result >= TestResult.STANDARD && testItem.system.requiresConcentration) {
+    if (first && test.result >= TestResult.STANDARD && testItem?.system.requiresConcentration) {
       await testActor.addConcentration(testItem);
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: testActor }),

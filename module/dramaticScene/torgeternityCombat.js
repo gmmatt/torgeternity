@@ -266,7 +266,11 @@ export default class TorgCombat extends Combat {
    */
   async nextRoundKeep() {
     await this.updateEmbeddedDocuments('Combatant',
-      this.combatants.map((combatant) => ({ _id: combatant.id, 'flags.world.turnTaken': false })),
+      this.combatants.map((combatant) => ({
+        _id: combatant.id,
+        'flags.world.turnTaken': false,
+        'flags.torgeternity.-=multiAction': null
+      })),
       { updateAll: true });
     this.setCardsPlayable(true);
     this.unsetFlag('torgeternity', FATIGUED_FACTION_FLAG);
