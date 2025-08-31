@@ -36,12 +36,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
   }
 
-  static async renderHTML(options) {
-    const result = await super.renderHTML(options);
-    result.querySelector?.('a.button[data-action="applyDam"]')?.addEventListener('contextmenu', TorgeternityChatLog.#adjustDamage);
-    return result;
-  }
-
   parentDeleteByTime(oldMsg) {
     // Use time and author to find all messages related to the same test.
     const messageIds = game.messages
@@ -338,11 +332,12 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #applyDamage(event, button) {
     event.preventDefault();
+    if (event.shiftKey) return this.#adjustDamage(event);
     const { test, target } = getChatTarget(button);
     if (!target) return;
-    const damage = torgDamage(test.damage, test.target.targetAdjustedToughness, test.attackTraits);
+    const damage = torgDamage(test.damage, test.target.targetAdjustedToughness, test.attackTraits, target.defenseTraits);
     target.applyDamages(damage.shocks, damage.wounds);
-    if (test.target.isConcentrating) {
+    if (target.isConcentrating) {
       this.promptConcentration(target);
     }
   }
@@ -391,14 +386,14 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     await target.update({ 'system.other.possibilities': possPool - 1 });
   }
 
-  static #adjustDamage(event) {  // context menu, not action
+  #adjustDamage(event) {  // context menu, not action
     // Prevent Foundry's normal contextmenu handler from doing anything
     event.preventDefault();
     event.stopImmediatePropagation();
     const { test, target } = getChatTarget(event.target);
     if (!target) return;
 
-    const newDamages = torgDamage(test.damage, test.targetAdjustedToughness, test.attackTraits);
+    const newDamages = torgDamage(test.damage, test.targetAdjustedToughness, test.attackTraits, test.target?.defenseTraits);
 
     const fields = foundry.applications.fields;
     const woundsGroup = fields.createFormGroup({

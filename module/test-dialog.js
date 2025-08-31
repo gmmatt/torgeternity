@@ -355,7 +355,7 @@ export function oneTestTarget(token, applySize) {
       sizeModifier: sizeModifier,
       toughness: actor.defenses.toughness,
       armor: actor.defenses.armor,
-      defenseTraits: Array.from(actor.items.find(it => it.type === 'armor' && it.system.equipped)?.system.traits ?? []),
+      defenseTraits: actor.defenseTraits,
       // then non-vehicle changes
       skills: actor.system.skills,
       attributes: actor.system.attributes,

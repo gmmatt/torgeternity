@@ -797,6 +797,25 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       })
     return ActiveEffect.implementation.create(effect, { parent: this });
   }
+
+  /**
+   * Return the defensive traits currently applicable for this actor, comprising:
+   * - all traits on the equipped armour
+   * - all traits on perks
+   * (TBD: all traits added by AE on equipped items)
+   */
+  get defenseTraits() {
+    const result = [];
+    for (const item of this.items) {
+      if ((item.type === 'armor' && item.system.equipped) ||
+        item.type === 'perk' ||
+        item.type === 'specialability' ||
+        item.type === 'specialabilityRollable') {
+        result.push(...item.system.traits.filter(trait => Object.hasOwn(CONFIG.torgeternity.defenseTraits, trait)));
+      }
+    }
+    return result;
+  }
 }
 
 

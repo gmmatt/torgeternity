@@ -560,7 +560,7 @@ torgeternity.statusEffects = [
   // TODO : create KO and defeat status
 ];
 
-const defenseTraits = {
+torgeternity.defenseTraits = {
   'fatigues': 'torgeternity.traits.fatigues',
   'fullBody': 'torgeternity.traits.fullBody',
   'torso': 'torgeternity.traits.torso',
@@ -576,9 +576,11 @@ const defenseTraits = {
   'forceDefense': 'torgeternity.traits.forceDefense',
   'iceDefense': 'torgeternity.traits.iceDefense',
   'lightningDefense': 'torgeternity.traits.lightningDefense',
+  'ignoreShock': 'torgeternity.traits.ignoreShock',
+  'ignoreWounds': 'torgeternity.traits.ignoreWounds',
 }
 
-const meleeWeaponTraits = {
+torgeternity.meleeWeaponTraits = {
   "trademark": "torgeternity.sheetLabels.trademark",
   'nonLethal': 'torgeternity.traits.nonLethal',
   'painful': 'torgeternity.traits.painful',
@@ -595,7 +597,7 @@ const meleeWeaponTraits = {
   //'bob': 'torgeternity.traits.bob',
 }
 
-const rangedWeaponTraits = {
+torgeternity.rangedWeaponTraits = {
   "trademark": "torgeternity.sheetLabels.trademark",
   'painful': 'torgeternity.traits.painful',
   'nonLethal': 'torgeternity.traits.nonLethal',
@@ -620,6 +622,7 @@ const rangedWeaponTraits = {
   'carbine': 'torgeternity.traits.carbine',
   'lowestArmor': 'torgeternity.traits.lowestArmor',
   'ignoresArmor': 'torgeternity.traits.ignoresArmor',
+  'ignoreWounds': 'torgeternity.traits.ignoreWounds',
   'energyDamage': 'torgeternity.traits.energyDamage',
   'fireDamage': 'torgeternity.traits.fireDamage',
   'forceDamage': 'torgeternity.traits.forceDamage',
@@ -635,9 +638,9 @@ torgeternity.allItemTraits = {
 }*/
 
 torgeternity.allItemTraits = {
-  ...Object.entries(defenseTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.defense' }; return acc }, {}),
-  ...Object.entries(meleeWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.melee' }; return acc }, {}),
-  ...Object.entries(rangedWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.ranged' }; return acc }, {})
+  ...Object.entries(torgeternity.defenseTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.defense' }; return acc }, {}),
+  ...Object.entries(torgeternity.meleeWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.melee' }; return acc }, {}),
+  ...Object.entries(torgeternity.rangedWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.ranged' }; return acc }, {})
 }
 
 
@@ -664,11 +667,11 @@ torgeternity.specificItemTraits = {
   // spell (power)
   // vehicle
   // vehicleAddOn
-  armor: defenseTraits,
-  shield: defenseTraits,
-  meleeweapon: meleeWeaponTraits,
-  missileweapon: rangedWeaponTraits,
-  heavyweapon: rangedWeaponTraits,
-  firearm: rangedWeaponTraits,
-  customAttack: { ...meleeWeaponTraits, ...rangedWeaponTraits }
+  armor: torgeternity.defenseTraits,
+  shield: torgeternity.defenseTraits,
+  meleeweapon: torgeternity.meleeWeaponTraits,
+  missileweapon: torgeternity.rangedWeaponTraits,
+  heavyweapon: torgeternity.rangedWeaponTraits,
+  firearm: torgeternity.rangedWeaponTraits,
+  customAttack: { ...torgeternity.meleeWeaponTraits, ...torgeternity.rangedWeaponTraits }
 }

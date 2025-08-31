@@ -17,11 +17,17 @@
   - if a Mult-Action Penalty is entered for an actor, the generated bonus for the first die roll will be remembered for subsequent test checks (it will auto-populate the "Bonus: Input Existing" field).
   - The stored bonus will be cleared when the "end-turn" button is pressed, or the GM advances combat to a new round (New/Keep).
   - All saved bonuses are removed when an encounter is deleted.
+- Automation for new traits:
+  - `Ignore Shock` (Relentless threats) - any calculated shock is ignored.
+  - `Ignore Wounds` (Taser weapon) - any calculated wounds is ignored.
+  - `dazing` - if at least one wound is inflicted, one of the wounds is converted into 3 shock.
+- `Adjust Damage` changed to trigger on SHIFT-clicking the "Apply Damages" button (previously right-click).
 
 ### Bug Fixes
 
 - Stop the tabs of the Actor sheet flickering on each update.
 - Fix scrolling in Threat and Vehicle sheets (only editing Threat background still has issues).
+- Force light theme on the Journal Page editor.
 
 ### Known Issues
 

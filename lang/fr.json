@@ -1239,6 +1239,8 @@
       "grapple": "Lutte",
       "head": "T^te",
       "ignoresArmor": "Ignore l'armure",
+      "ignoreShock": "Ignore Shock",
+      "ignoreWounds": "Ignore Wounds",
       "lowestArmor": "Plus faible zone armurée",
       "nonLethal": "Non Létal",
       "painful": "Douleur",

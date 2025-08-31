@@ -1239,6 +1239,8 @@
       "grapple": "Forcejeo",
       "head": "Cabeza",
       "ignoresArmor": "Ignora armadura",
+      "ignoreShock": "Ignore Shock",
+      "ignoreWounds": "Ignore Wounds",
       "lowestArmor": "Armadura más baja",
       "nonLethal": "No letal",
       "painful": "Dolorosa",

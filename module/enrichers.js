@@ -1,5 +1,5 @@
 import { TestDialog } from './test-dialog.js';
-import { torgDamage } from './torgchecks.js';
+import { torgDamage, torgDamageModifiers } from './torgchecks.js';
 
 /**
  * INLINE CHECKS
@@ -498,12 +498,14 @@ async function _onClickInlineDamage(event) {
       (dataset.ignoreArmor ? actor.defenses.armor : (Math.min(dataset.ap ?? 0, actor.defenses.armor)));
 
     // for damage, need to adjust for AP and armour?
+    const attackTraits = dataset.traits?.split(',');
+    const defenseTraits = actor.defenseTraits;
     const damage = dataset.damage ?
-      torgDamage(dataset.damage, toughness, dataset.traits?.split(',')) :
-      {
+      torgDamage(dataset.damage, toughness, attackTraits, defenseTraits) :
+      torgDamageModifiers({
         shocks: dataset.shock && Number(dataset.shock),
         wounds: dataset.wounds && Number(dataset.wounds)
-      }
+      }, attackTraits, defenseTraits);
     const wasKO = damage.shocks && actor.hasStatusEffect('unconscious');
     const applyResult = actor.applyDamages(damage.shocks, damage.wounds);
 
@@ -511,22 +513,11 @@ async function _onClickInlineDamage(event) {
 
     chatOutput += `<li>${actor.name}: `;
     const chatParts = [];
-    if (!damage.shocks && !damage.wounds) {
-      chatParts.push(game.i18n.localize('torgeternity.chatText.check.result.noDamage'));
-    } else {
-      if (damage.wounds) {
-        chatParts.push(`${damage.wounds} ${game.i18n.localize('torgeternity.sheetLabels.wounds')}`);
-      }
-      if (damage.shocks) {
-        if (wasKO) {
-          chatParts.push(`${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}`);
-        } else {
-          chatParts.push(`${damage.shocks} ${game.i18n.localize('torgeternity.sheetLabels.shock')}`);
-          if (applyResult.shockExceeded) {
-            chatParts.push(`<br><strong>${actor.name}${game.i18n.localize('torgeternity.macros.fatigueMacroCharKO')}</strong>`);
-          }
-        }
-      }
+    chatParts.push(damage.label);
+    if (damage.shocks && wasKO) {
+      chatParts.push(`${game.i18n.localize('torgeternity.macros.fatigueMacroCharAlreadyKO')}`);
+    } else if (applyResult.shockExceeded) {
+      chatParts.push(`<br><strong>${actor.name}${game.i18n.localize('torgeternity.macros.fatigueMacroCharKO')}</strong>`);
     }
     chatOutput += chatParts.join(', ') + '</li>';
   }

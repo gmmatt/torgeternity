@@ -562,7 +562,7 @@ export async function renderSkillChat(test) {
           // adjustedDamage is already computed from test.damage
           // then modify test.damage for following future computation, and modify the adjustedDamage
           // then the test.BDDamageInPromise is reset
-          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits);
+          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits, test.target?.defenseTraits);
 
           test.applyDamLabel = '';
           test.damageDescription = damage.label;
@@ -730,7 +730,7 @@ export async function rollBonusDie(isTrademark, amount = 1) {
  * @param damage
  * @param toughness
  */
-export function torgDamage(damage, toughness, attackTraits) {
+export function torgDamage(damage, toughness, attackTraits, defenseTraits) {
   const damageDiff = Number(damage) - Number(toughness);
   let result;
   if (damageDiff < -5) {
@@ -744,19 +744,45 @@ export function torgDamage(damage, toughness, attackTraits) {
     result = { shocks: wounds * 2, wounds: wounds }
   }
 
-  if (result.shocks > 0) {
-    result.label = (result.wounds > 0) ? `${result.wounds} ${game.i18n.localize('torgeternity.stats.wounds')}, ` : '';
+  return torgDamageModifiers(result, attackTraits, defenseTraits);
+}
 
-    const painful = attackTraits?.includes('painful');
-    if (painful) result.shocks += 1;
-    result.label += `${result.shocks} ${game.i18n.localize('torgeternity.stats.shock')}`;
-    const flags = [];
-    if (painful) flags.push(game.i18n.localize('torgeternity.traits.painful'));
-    if (attackTraits?.includes('stagger')) flags.push(game.i18n.localize('torgeternity.traits.stagger'));
-    if (flags.length) result.label += ` (${flags.join(', ')})`;
+
+export function torgDamageModifiers(result, attackTraits, defenseTraits) {
+  const flags = [];
+  const traits = (attackTraits ?? []).concat(defenseTraits ?? [])
+
+  if (result.wounds > 0 && traits?.includes('dazing')) {
+    flags.push(game.i18n.localize('torgeternity.traits.dazing'));
+    result.wounds -= 1;
+    result.shocks += 3;
+  }
+  if (result.wounds > 0 && traits?.includes('ignoreWounds')) {
+    flags.push(game.i18n.localize('torgeternity.traits.ignoreWounds'));
+    result.wounds = 0;
+  }
+  if (result.shocks > 0 && traits?.includes('ignoreShock')) {
+    flags.push(game.i18n.localize('torgeternity.traits.ignoreShock'));
+    result.shocks = 0;
+  }
+  if (result.shocks > 0 && traits?.includes('painful')) {
+    flags.push(game.i18n.localize('torgeternity.traits.painful'));
+    result.shocks += 1;
+  }
+
+  if (result.shocks > 0 || result.wounds > 0) {
+    result.label = (result.wounds > 0) ? `${result.wounds} ${game.i18n.localize('torgeternity.stats.wounds')}` : '';
+
+    if (result.shocks > 0) {
+      if (result.label.length) result.label += ', ';
+      result.label += `${result.shocks} ${game.i18n.localize('torgeternity.stats.shock')}`;
+    }
+    if (traits?.includes('stagger')) flags.push(game.i18n.localize('torgeternity.traits.stagger'));
   } else {
     result.label = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
   }
+  if (flags.length) result.label += ` (${flags.join(', ')})`;
+
   return result;
 }
 
@@ -899,7 +925,7 @@ function individualDN(test, target) {
     case 'highestSpeed':
       // Find the fastest participant in the active combat
       let highestSpeed = 0;
-      for (const combatant of game.combats.active.turns) {
+      for (const combatant of game.combat.turns) {
         if (!combatant.actor) continue;
         const combatantSpeed = (combatant.actor.type === 'vehicle') ?
           combatant.actor.system.topSpeed.value :
