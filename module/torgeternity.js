@@ -818,6 +818,9 @@ Hooks.on('getActorContextOptions', async (actorDir, menuItems) => {
 Hooks.on('renderJournalEntrySheet', (sheet, element, document, options) => {
   element.querySelector('article.journal-entry-page.text')?.classList.add('themed', 'theme-light');
 })
+Hooks.on('renderJournalEntryPageSheet', (sheet, element, document, options) => {
+  element?.classList.add('themed', 'theme-light');
+})
 
 function showWelcomeMessage() {
   DialogV2.confirm({
