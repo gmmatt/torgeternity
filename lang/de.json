@@ -86,7 +86,7 @@
           "allOutAttack": "Rücksichtsloser Angriff",
           "blindFire": "Blindes Feuern",
           "calledShot": "Gezielter Angriff",
-          "concentrating": "Concentrating",
+          "concentrating": "Konzentration",
           "darkness": "Dunkelheit",
           "heavyBurst": "Schwerer Feuerstoß",
           "longBurst": "Langer Feuerstoß",
@@ -129,10 +129,10 @@
         "testUnsuccessfull": "Probe nicht erfolgreich"
       },
       "concentration": {
-        "makeCheck": "{actor} must make a Concentration Check",
-        "AEname": "Concentrating: {item}",
-        "AEdescription": "{actor} is concentrating on {itemType} '{itemName}'",
-        "broken": "{actor} has lost concentration on:"
+        "makeCheck": "{actor} muss eine Konzentrations-Probe ablegen",
+        "AEname": "Konzentration: {item}",
+        "AEdescription": "{actor} konzentriert sich auf {itemType} '{itemName}'",
+        "broken": "{actor} verliert Konzentration auf:"
       },
       "contradiction": {
         "alreadyDisconnected": "ist bereits entkoppelt",
@@ -712,7 +712,7 @@
       "modifier": "Modifikator",
       "outstanding": "Hervorragend",
       "range": "Reichweite",
-      "requiresConcentration": "Requires Concentration",
+      "requiresConcentration": "Benötigt Konzentration",
       "skill": "Fertigkeit",
       "skilllevel": "Min. Fertigkeitswert"
     },
@@ -1239,6 +1239,8 @@
       "grapple": "Festhalten",
       "head": "Kopf",
       "ignoresArmor": "Ignoriert Rüstung",
+      "ignoreShock": "Schock ignorieren",
+      "ignoreWounds": "Ignore Wounds",
       "lowestArmor": "Niedrigste Rüstung",
       "nonLethal": "Nicht-tödlich",
       "painful": "Schmerzhaft",
