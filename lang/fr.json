@@ -872,6 +872,7 @@
       "applyEffects": "Appliquer les Effets",
       "applyDamageTooltip": "Maj+Clic pour ajuster les dommages, Clic pour les appliquer.",
       "applyEffectsTooltip": "Transfert les Effets pertinents aux cibles",
+      "applySoak": "Apply Soak",
       "applyStymied": "Appliquer Déstabilisé",
       "applyStymiedTooltip": "Applique Déstabilisé, ou Très Déstabilisé si déjà Déstabilisé.",
       "applyVulnerable": "Appliquer Vulnérable",

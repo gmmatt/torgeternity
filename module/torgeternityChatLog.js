@@ -22,6 +22,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       'modifierLabel': TorgeternityChatLog.#onModifier,
       'applyDam': TorgeternityChatLog.#applyDamage,
       'soakDam': TorgeternityChatLog.#soakDamage,
+      'applySoak': TorgeternityChatLog.#applySoak,
       'applyEffects': TorgeternityChatLog.#applyEffects,
       'applyStymied': TorgeternityChatLog.#applyStymied,
       'applyVulnerable': TorgeternityChatLog.#applyTargetVulnerable,
@@ -387,33 +388,38 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       possPool += 1;
     }
 
-    const result = await soakDamages(target);
-    if (result) {
-      await target.update({ 'system.other.possibilities': possPool - 1 });
+    await soakDamages(target, chatMessage.id);
+    await target.update({ 'system.other.possibilities': possPool - 1 });
+  }
 
-      const soakWounds = result.flags?.torgeternity?.test?.soakWounds;
-      console.log(`SOAK result: soak ${soakWounds} wounds`)
+  static #applySoak(event, button) {
+    event.preventDefault();
+    const { test: soaktest, chatMessage: soakmsg } = getMessage(button);
+    const origMessageId = soaktest.soakingMessage;
 
-      // Update the original chat card to show the new damage.
-      if (soakWounds) {
-        test.soakWounds = soakWounds;
-        test.diceroll = null;  // use existing roll number
-        // Display soak information, WITHOUT the footnote about possibility spent
-        test.soakDescription = result.flags?.torgeternity?.test?.chatNote.slice(0, -game.i18n.localize('torgeternity.sheetLabels.possSpent').length);
-        // Only delete the single soaked chat card.
+    // Update the original chat card to show the new damage.
 
-        if (chatMessage.isOwner) {
-          game.messages.get(chatMessage.id).delete();
-          return renderSkillChat(test);
-        } else {
-          console.debug(`Sending SOAK request to GM`)
-          game.socket.emit(`system.${game.system.id}`, {
-            request: 'replaceTestCard',
-            messageId: chatMessage.id,
-            test: test
-          })
-        }
-      }
+    const origmsg = game.messages.get(origMessageId);
+    const origtest = origmsg.flags?.torgeternity?.test;
+    if (!origtest) {
+      ui.notifications.warn(`APPLY SOAK: Failed to find original message`)
+      return;
+    }
+    origtest.soakWounds = soaktest.soakWounds;
+    origtest.diceroll = null;  // use existing roll number
+    // Display soak information, WITHOUT the footnote about possibility spent
+    origtest.soakDescription = soaktest.chatNote.slice(0, -game.i18n.localize('torgeternity.sheetLabels.possSpent').length);
+
+    if (origmsg.isOwner) {
+      origmsg.delete();
+      return renderSkillChat(origtest);
+    } else {
+      console.debug(`Sending SOAK request to GM`)
+      game.socket.emit(`system.${game.system.id}`, {
+        request: 'replaceTestCard',
+        messageId: origMessageId,
+        test: origtest
+      })
     }
   }
 

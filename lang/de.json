@@ -872,6 +872,7 @@
       "applyEffects": "Effekt anwenden",
       "applyDamageTooltip": "Linksklick zum anwenden, Shiftklick zum modifizieren.",
       "applyEffectsTooltip": "Wende den passenden Aktiven Effekt auf die Ziele an",
+      "applySoak": "Apply Soak",
       "applyStymied": "Angeschlagen anwenden",
       "applyStymiedTooltip": "Klicke, um den Status \"Angeschlagen\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Angeschlagen\".",
       "applyVulnerable": "Verwundbar anwenden",

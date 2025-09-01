@@ -395,6 +395,8 @@ export async function renderSkillChat(test) {
       if (test.testType === 'soak') test.soakWounds = 1;
     }
 
+    test.applySoakLabel = (test.testType === 'soak' && test.soakWounds);
+
     // Show the "Apply Effects" button if the test has an effect that can be applied
     test.applyEffectsLabel = testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result) ?? 'hidden';
 
@@ -806,7 +808,7 @@ export function torgDamageModifiers(result, options) {
 /**
  *@param {Actor} soaker The Actor which is attempting to soak some damage
  */
-export async function soakDamages(soaker) {
+export async function soakDamages(soaker, origMessageId) {
   const skillName = 'reality';
   const skillValue = soaker.system.skills[skillName].value;
 
@@ -823,6 +825,7 @@ export async function soakDamages(soaker) {
       false,
     skillName: skillName,
     skillValue: skillValue,
+    soakingMessage: origMessageId,
   }, { useTargets: true });
   // do reality roll
 }
