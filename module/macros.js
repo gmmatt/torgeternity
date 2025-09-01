@@ -242,7 +242,8 @@ export class TorgeternityMacros {
 
       chatOutput += `<ul>`;
       for (const token of game.user.targets) {
-        const tokenDamage = torgDamage(diceroll.total, token.actor.defenses.toughness, /*attack*/[], token.actor.defenseTraits);
+        const tokenDamage = torgDamage(diceroll.total, token.actor.defenses.toughness,
+          { defenseTraits: token.actor.defenseTraits });
         chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')}  ${token.document.name} `;
         chatOutput += (tokenDamage.shocks > 0) ?
           `${game.i18n.localize('torgeternity.macros.bonusDieMacroResult4')} ${tokenDamage.label}` :

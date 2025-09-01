@@ -372,27 +372,27 @@ export async function renderSkillChat(test) {
       }
       test.outcomeColor = useColorBlind ? 'color: red' :
         'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 0;
+      if (test.testType === 'soak') test.soakWounds = 0;
     } else if (testDifference > 9) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
       test.result = TestResult.OUTSTANDING;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 'all';
+      if (test.testType === 'soak') test.soakWounds = 'all';
       if (testItem?.system?.outstanding) test.extraResult = testItem.system.outstanding;
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       test.result = TestResult.GOOD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 2;
+      if (test.testType === 'soak') test.soakWounds = 2;
       if (testItem?.system?.good) test.extraResult = testItem.system.good;
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
       test.result = TestResult.STANDARD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 1;
+      if (test.testType === 'soak') test.soakWounds = 1;
     }
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
@@ -562,9 +562,14 @@ export async function renderSkillChat(test) {
           // adjustedDamage is already computed from test.damage
           // then modify test.damage for following future computation, and modify the adjustedDamage
           // then the test.BDDamageInPromise is reset
-          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits, test.target?.defenseTraits);
+          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness,
+            {
+              attackTraits: test.attackTraits,
+              defenseTraits: test.target?.defenseTraits,
+              soakWounds: test.soakWounds,
+            });
 
-          test.applyDamLabel = '';
+          if (damage.wounds || damage.shocks) test.applyDamLabel = '';
           test.damageDescription = damage.label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
@@ -730,7 +735,7 @@ export async function rollBonusDie(isTrademark, amount = 1) {
  * @param damage
  * @param toughness
  */
-export function torgDamage(damage, toughness, attackTraits, defenseTraits) {
+export function torgDamage(damage, toughness, options) {
   const damageDiff = Number(damage) - Number(toughness);
   let result;
   if (damageDiff < -5) {
@@ -744,13 +749,25 @@ export function torgDamage(damage, toughness, attackTraits, defenseTraits) {
     result = { shocks: wounds * 2, wounds: wounds }
   }
 
-  return torgDamageModifiers(result, attackTraits, defenseTraits);
+  return torgDamageModifiers(result, options);
 }
 
 
-export function torgDamageModifiers(result, attackTraits, defenseTraits) {
+export function torgDamageModifiers(result, options) {
+  let { attackTraits, defenseTraits, soakWounds } = options;
+
   const flags = [];
   const traits = (attackTraits ?? []).concat(defenseTraits ?? [])
+
+  if (soakWounds) {
+    if (soakWounds === 'all') {
+      result.wounds = 0;
+      result.shocks = 0;
+    } else {
+      result.wounds -= soakWounds;
+      result.shocks = 0;
+    }
+  }
 
   if (result.wounds > 0 && traits?.includes('dazing')) {
     flags.push(game.i18n.localize('torgeternity.traits.dazing'));

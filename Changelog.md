@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT - Concentration & Multi-Action
+## NEXT - Concentration, Multi-Action, Soaking
 
 ### Improvements
 
@@ -17,6 +17,8 @@
   - if a Mult-Action Penalty is entered for an actor, the generated bonus for the first die roll will be remembered for subsequent test checks (it will auto-populate the "Bonus: Input Existing" field).
   - The stored bonus will be cleared when the "end-turn" button is pressed, or the GM advances combat to a new round (New/Keep).
   - All saved bonuses are removed when an encounter is deleted.
+- **Soaking**
+  - Combat Result chat card updated to show new amount of damage that will be received after a successul SOAK.
 - Automation for new traits:
   - `Ignore Shock` (Relentless threats) - any calculated shock is ignored.
   - `Ignore Wounds` (Taser weapon) - any calculated wounds is ignored.

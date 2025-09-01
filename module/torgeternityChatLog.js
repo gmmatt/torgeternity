@@ -41,7 +41,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const messageIds = game.messages
       .filter(msg => msg.author === oldMsg.author && Math.abs(msg.timestamp - oldMsg.timestamp) < 500)
       .map(msg => msg.id);
-    if (!messageIds) {
+    if (!messageIds.length) {
       console.warn('Failed to find any messages to delete for ', oldMsg);
       return;
     }
@@ -335,7 +335,12 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (event.shiftKey) return this.#adjustDamage(event);
     const { test, target } = getChatTarget(button);
     if (!target) return;
-    const damage = torgDamage(test.damage, test.target.targetAdjustedToughness, test.attackTraits, target.defenseTraits);
+    const damage = torgDamage(test.damage, test.target.targetAdjustedToughness,
+      {
+        attackTraits: test.attackTraits,
+        defenseTraits: target.defenseTraits,
+        soakWounds: test.soakWounds
+      });
     target.applyDamages(damage.shocks, damage.wounds);
     if (target.isConcentrating) {
       this.promptConcentration(target);
@@ -344,7 +349,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #soakDamage(event, button) {
     event.preventDefault();
-    const { test, target } = getChatTarget(button);
+    const { test, target, chatMessage } = getChatTarget(button);
     if (!target) return;
 
     if (test.target.id !== game.user?.character?.id && !game.user.isGM) {
@@ -382,8 +387,25 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       possPool += 1;
     }
 
-    soakDamages(target);
-    await target.update({ 'system.other.possibilities': possPool - 1 });
+    const result = await soakDamages(target);
+    if (result) {
+      await target.update({ 'system.other.possibilities': possPool - 1 });
+
+      const soakWounds = result.flags?.torgeternity?.test?.soakWounds;
+      console.log(`SOAK result: soak ${soakWounds} wounds`)
+
+      // Update the original chat card to show the new damage.
+      if (soakWounds) {
+        test.soakWounds = soakWounds;
+        test.diceroll = null;  // use existing roll number
+        // Display soak information, WITHOUT the footnote about possibility spent
+        test.soakDescription = result.flags?.torgeternity?.test?.chatNote.slice(0, -game.i18n.localize('torgeternity.sheetLabels.possSpent').length);
+        // Only delete the single soaked chat card.
+        game.messages.get(chatMessage.id).delete();
+
+        return renderSkillChat(test);
+      }
+    }
   }
 
   #adjustDamage(event) {  // context menu, not action
@@ -393,7 +415,12 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const { test, target } = getChatTarget(event.target);
     if (!target) return;
 
-    const newDamages = torgDamage(test.damage, test.targetAdjustedToughness, test.attackTraits, test.target?.defenseTraits);
+    const newDamages = torgDamage(test.damage, test.targetAdjustedToughness,
+      {
+        attackTraits: test.attackTraits,
+        defenseTraits: test.target?.defenseTraits,
+        soakWounds: test.soakWounds
+      });
 
     const fields = foundry.applications.fields;
     const woundsGroup = fields.createFormGroup({
@@ -685,7 +712,7 @@ function getMessage(button) {
   const chatMessageId = button.closest('.chat-message').dataset.messageId;
   const chatMessage = game.messages.get(chatMessageId);
   const test = chatMessage.flags.torgeternity?.test;
-  return { chatMessageId, chatMessage, test }
+  return { chatMessageId, chatMessage, test };
 }
 
 /**
@@ -694,10 +721,11 @@ function getMessage(button) {
  * @returns {Actor} The actor that initiated this chat message
  */
 function getChatActor(button) {
-  const test = getMessage(button)?.test;
+  const msg = getMessage(button);
+  const test = msg?.test;
   if (!test) return null;
   const actor = fromUuidSync(test.actor, { strict: false });
-  if (actor) return { test, actor };
+  if (actor) return { test, actor, chatMessage: msg.chatMessage };
   ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
   return null;
 }
@@ -708,10 +736,11 @@ function getChatActor(button) {
  * @returns {Actor} The Actor of the target token of this chat message.
  */
 function getChatTarget(button) {
-  const test = getMessage(button)?.test;
+  const msg = getMessage(button);
+  const test = msg?.test;
   if (!test) return null;
   const target = fromUuidSync(test.target?.uuid, { strict: false })?.actor;
-  if (target) return { test, target }
+  if (target) return { test, target, chatMessage: msg.chatMessage }
   ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
   return null;
 }

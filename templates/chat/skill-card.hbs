@@ -58,6 +58,11 @@
       <p class="skill-roll-damage-label">
         {{damageDescription}}
       </p>
+      {{#if soakDescription}}
+        <p class="skill-roll-damage-label">
+          {{soakDescription}}
+        </p>
+      {{/if}}
     {{/if}}
     {{#if isDefeatTest}}
       <p class="skill-roll-defeat defeat-main">
@@ -71,9 +76,11 @@
       <a class="button roll-button {{applyDamLabel}}" data-action="applyDam"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
         {{localize 'torgeternity.sheetLabels.applyDamage'}}</a>
-      <a class="button roll-button {{applyDamLabel}}" data-action="soakDam"
-        data-tooltip="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
-        {{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
+      {{#unless soakWounds}}
+        <a class="button roll-button {{applyDamLabel}}" data-action="soakDam"
+          data-tooltip="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
+          {{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
+      {{/unless}}
       <a class="button roll-button {{applyEffectsLabel}}" data-action="applyEffects"
         data-tooltip="{{localize 'torgeternity.sheetLabels.applyEffectsTooltip'}}">
         {{localize 'torgeternity.sheetLabels.applyEffects'}}</a>

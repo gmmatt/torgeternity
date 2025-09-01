@@ -501,11 +501,11 @@ async function _onClickInlineDamage(event) {
     const attackTraits = dataset.traits?.split(',');
     const defenseTraits = actor.defenseTraits;
     const damage = dataset.damage ?
-      torgDamage(dataset.damage, toughness, attackTraits, defenseTraits) :
+      torgDamage(dataset.damage, toughness, { attackTraits, defenseTraits }) :
       torgDamageModifiers({
         shocks: dataset.shock && Number(dataset.shock),
         wounds: dataset.wounds && Number(dataset.wounds)
-      }, attackTraits, defenseTraits);
+      }, { attackTraits, defenseTraits });
     const wasKO = damage.shocks && actor.hasStatusEffect('unconscious');
     const applyResult = actor.applyDamages(damage.shocks, damage.wounds);
 
