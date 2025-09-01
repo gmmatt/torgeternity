@@ -401,9 +401,18 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
         // Display soak information, WITHOUT the footnote about possibility spent
         test.soakDescription = result.flags?.torgeternity?.test?.chatNote.slice(0, -game.i18n.localize('torgeternity.sheetLabels.possSpent').length);
         // Only delete the single soaked chat card.
-        game.messages.get(chatMessage.id).delete();
 
-        return renderSkillChat(test);
+        if (chatMessage.isOwner) {
+          game.messages.get(chatMessage.id).delete();
+          return renderSkillChat(test);
+        } else {
+          console.debug(`Sending SOAK request to GM`)
+          game.socket.emit(`system.${game.system.id}`, {
+            request: 'replaceTestCard',
+            messageId: chatMessage.id,
+            test: test
+          })
+        }
       }
     }
   }

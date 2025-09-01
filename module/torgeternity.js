@@ -47,6 +47,7 @@ import MacroHub from './MacroHub.js';
 import InitEnrichers from './enrichers.js';
 import { initHideCompendium } from './hideCompendium.js';
 import DeckSettingMenu from './cards/cardSettingMenu.js';
+import activateSocketListeners from './sockets.js';
 
 const { DialogV2 } = foundry.applications.api;
 
@@ -410,6 +411,8 @@ Hooks.on('ready', async function () {
   if (game.scenes.size < 1) {
     activateStandartScene();
   }
+
+  activateSocketListeners();
 });
 
 let externalLinks;
