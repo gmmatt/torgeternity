@@ -18,7 +18,7 @@
   - The stored bonus will be cleared when the "end-turn" button is pressed, or the GM advances combat to a new round (New/Keep).
   - All saved bonuses are removed when an encounter is deleted.
 - **Chat Card**
-  - After a **SOAK** roll, and the player has finished modifying the roll, the "Apply Soak" button will modify the original attack card to show the new amount of damage.
+  - After a **SOAK** roll, and the player has finished modifying the roll, the **Apply Soak** button will modify the original attack card to show the new amount of damage.
   - Only show **buttons** to the players who have permission to use those buttons (so bystanders in the attack won't see buttons).
 - Automation for new traits:
   - `Ignore Shock` (Relentless threats) - any calculated shock is ignored.
