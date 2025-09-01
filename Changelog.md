@@ -19,6 +19,7 @@
   - All saved bonuses are removed when an encounter is deleted.
 - **Soaking**
   - Combat Result chat card updated to show new amount of damage that will be received after a successul SOAK.
+  - Hide SOAK button in the updated chat card.
 - Automation for new traits:
   - `Ignore Shock` (Relentless threats) - any calculated shock is ignored.
   - `Ignore Wounds` (Taser weapon) - any calculated wounds is ignored.
