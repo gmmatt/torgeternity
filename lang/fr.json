@@ -86,6 +86,7 @@
           "allOutAttack": "attaque totale",
           "blindFire": "tir au jugé",
           "calledShot": "attaque ciblée",
+          "concentrating": "Concentration",
           "darkness": "obscurité",
           "heavyBurst": "rafale nourrie",
           "longBurst": "rafale longue",
@@ -126,6 +127,12 @@
           "BDDamageSum": "Somme des BDs de dommages"
         },
         "testUnsuccessfull": "Le jet n'a pas réussi"
+      },
+      "concentration": {
+        "makeCheck": "{actor} doit effectuer un test de Concentration",
+        "AEname": "Concentration: {item}",
+        "AEdescription": "{actor} est concentré sur {itemType} '{itemName}'",
+        "broken": "{actor} a perdu sa concentration sur:"
       },
       "contradiction": {
         "alreadyDisconnected": "est déjà déconnecté",
@@ -705,6 +712,7 @@
       "modifier": "modificateur",
       "outstanding": "Spectaculaire",
       "range": "Portée",
+      "requiresConcentration": "Nécessite de se concentrer",
       "skill": "Compétence",
       "skilllevel": "Compétence min."
     },
@@ -862,8 +870,10 @@
       "APMod": "Modificateur d'AP",
       "applyDamage": "Appliquer dommages",
       "applyEffects": "Appliquer les Effets",
-      "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
+      "applyDamageTooltip": "Maj+Clic pour ajuster les dommages, Clic pour les appliquer.",
       "applyEffectsTooltip": "Transfert les Effets pertinents aux cibles",
+      "applySoak": "Annulation des dommages",
+      "applySoakTooltip": "Applique la réduction des dommages sur l'attaque.",
       "applyStymied": "Appliquer Déstabilisé",
       "applyStymiedTooltip": "Applique Déstabilisé, ou Très Déstabilisé si déjà Déstabilisé.",
       "applyVulnerable": "Appliquer Vulnérable",
@@ -1231,6 +1241,8 @@
       "grapple": "Lutte",
       "head": "T^te",
       "ignoresArmor": "Ignore l'armure",
+      "ignoreShock": "Ignore les points de Chocs",
+      "ignoreWounds": "Ignore les Blessures",
       "lowestArmor": "Plus faible zone armurée",
       "nonLethal": "Non Létal",
       "painful": "Douleur",

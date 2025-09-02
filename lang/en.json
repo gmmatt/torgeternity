@@ -80,6 +80,7 @@
           "allOutAttack": "All out Attack",
           "blindFire": "Blind Fire",
           "calledShot": "Called Shot",
+          "concentrating": "Concentrating",
           "darkness": "Darkness",
           "heavyBurst": "Heavy Burst",
           "longBurst": "Long Burst",
@@ -120,6 +121,12 @@
           "BDDamageSum": "Sum damage of rolled BD"
         },
         "testUnsuccessfull": "Test unsuccessful"
+      },
+      "concentration": {
+        "makeCheck": "{actor} must make a Concentration Check",
+        "AEname": "Concentrating: {item}",
+        "AEdescription": "{actor} is concentrating on {itemType} '{itemName}'",
+        "broken": "{actor} has lost concentration on:"
       },
       "contradiction": {
         "alreadyDisconnected": "is already disconnected",
@@ -699,6 +706,7 @@
       "modifier": "Modifier",
       "outstanding": "Outstanding",
       "range": "Range",
+      "requiresConcentration": "Requires Concentration",
       "skill": "Skill",
       "skilllevel": "Min. Value"
     },
@@ -856,8 +864,10 @@
       "APMod": "AP Modifier",
       "applyDamage": "Apply damages",
       "applyEffects": "Apply effects",
-      "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
+      "applyDamageTooltip": "Shift-click to modify applied damages, Normal click to apply.",
       "applyEffectsTooltip": "Apply relevant Active Effects to target(s)",
+      "applySoak": "Apply Soak",
+      "applySoakTooltip": "Apply the soak reductions to the attack.",
       "applyStymied": "Apply Stymied",
       "applyStymiedTooltip": "Click to apply Stymied. Or Very Stymied if already Stymied.",
       "applyVulnerable": "Apply Vulnerable",
@@ -1225,6 +1235,8 @@
       "grapple": "Grapple",
       "head": "Head",
       "ignoresArmor": "Ignores Armor",
+      "ignoreShock": "Ignore Shock",
+      "ignoreWounds": "Ignore Wounds",
       "lowestArmor": "Lowest Armor",
       "nonLethal": "Non-Lethal",
       "painful": "Painful",

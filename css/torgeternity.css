@@ -265,7 +265,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
   }
 
-  nav.tabs.right-tab {
+  nav.tabs.sheet-tabs {
     position: absolute;
     contain: content;
     left: 100%;
@@ -380,7 +380,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       padding: 2px;
     }
 
-    nav.tabs.right-tab {
+    nav.tabs.sheet-tabs {
       transform: rotate(90deg) translate(calc(-1 * var(--header-height)), 5px) scale(0.7);
     }
 
@@ -1715,6 +1715,20 @@ dialog.torgeternity:not(.actor, .item) .window-content,
     }
   }
 
+  div.threat-main,
+  div.vehicle-main {
+    height: 100%;
+
+    section.background.active {
+      height: 100%;
+    }
+  }
+
+  div.threat-submain {
+    width: 100%;
+    height: 100%;
+  }
+
   div.vehicle-sheet {
     display: inline-flex;
     flex-direction: column;
@@ -1727,9 +1741,9 @@ dialog.torgeternity:not(.actor, .item) .window-content,
   }
 
   div.threat-sheet {
-    display: inline-flex;
-    width: 100%;
     height: 100%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 
     .section-bar {
       border: 1px black solid;
@@ -2678,29 +2692,44 @@ german tent cards images
   }
 }
 
-.possibilitiesByCosmWindow {
-  &.eachDiversion {
-    max-height: 142px;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 0.25rem;
-    align-items: center;
-    justify-items: center;
-  }
+div.possibilitiesByCosmWindow {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column-gap: 1.5em;
+  grid-row-gap: 2em;
+  text-align: center;
+  text-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+}
 
-  &.eachDiversion.hide {
+div.possibilitiesByCosmEntry {
+  max-height: 142px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 0.25rem;
+  align-items: center;
+  justify-items: center;
+
+  &.hide {
     filter: grayscale(1);
   }
 
-  &.imagesShown {
-    margin-bottom: 0.5rem;
+  a.content-link {
+    width: 100%;
+    margin-bottom: 1px;
+  }
+
+  .imagesShown {
+    margin-bottom: 0.25rem;
     border: none;
     height: 80px;
     width: 80px;
   }
 
-  &.inputField {
+  input.inputField {
     text-align: center;
     width: 80px;
   }

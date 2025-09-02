@@ -86,6 +86,7 @@
           "allOutAttack": "Ataque Total",
           "blindFire": "Tiro a Ciegas",
           "calledShot": "Tiro Preciso",
+          "concentrating": "Concentrado",
           "darkness": "Oscuridad",
           "heavyBurst": "Ráfaga Continua",
           "longBurst": "Ráfaga Larga",
@@ -126,6 +127,12 @@
           "BDDamageSum": "Suma de Dados de Bonificación"
         },
         "testUnsuccessfull": "Prueba fallida"
+      },
+      "concentration": {
+        "makeCheck": "{actor} debe hacer una prueba de Concentración",
+        "AEname": "Concentrado: {item}",
+        "AEdescription": "{actor} está concentrado en {itemType} '{itemName}'",
+        "broken": "{actor} ha perdido la concentración en:"
       },
       "contradiction": {
         "alreadyDisconnected": "ya está Desconectado",
@@ -705,6 +712,7 @@
       "modifier": "Modificador",
       "outstanding": "Resultado Espectacular",
       "range": "Alcance",
+      "requiresConcentration": "Requiere Concentración",
       "skill": "Habilidad",
       "skilllevel": "Valor Min. Habilidad"
     },
@@ -862,8 +870,10 @@
       "APMod": "Modificador PA",
       "applyDamage": "Aplicar daño",
       "applyEffects": "Aplicar efectos",
-      "applyDamageTooltip": "Botón derecho para modificar daño aplicado, botón izquierdo para aplicar.",
+      "applyDamageTooltip": "May + clic para modificar daño aplicado, botón izquierdo para aplicar.",
       "applyEffectsTooltip": "Aplicar efectos activos pertinentes al/los objetivo(s)",
+      "applySoak": "Aplicar absorción",
+      "applySoakTooltip": "Aplicar al ataque las reducciones por absorción.",
       "applyStymied": "Aplicar Impedido",
       "applyStymiedTooltip": "Clic para aplicar Impedido, o Muy Impedido si ya está Impedido.",
       "applyVulnerable": "Aplicar Vulnerable",
@@ -1231,6 +1241,8 @@
       "grapple": "Forcejeo",
       "head": "Cabeza",
       "ignoresArmor": "Ignora armadura",
+      "ignoreShock": "Ignorar Shock",
+      "ignoreWounds": "Ignorar Heridas",
       "lowestArmor": "Armadura más baja",
       "nonLethal": "No letal",
       "painful": "Dolorosa",

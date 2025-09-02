@@ -186,6 +186,7 @@ export async function renderSkillChat(test) {
     if (!test.explicitBonus) {
       test.combinedRollTotal = test.rollTotal + test.upTotal + test.possibilityTotal + test.heroTotal + test.dramaTotal;
       test.bonus = torgBonus(test.combinedRollTotal);
+      if (test.multiModifier) game.combat?.getCombatantsByActor(testActor)?.shift()?.setCurrentBonus(test.bonus);
     } else {
       test.rollTotal = undefined;
       test.combinedRollTotal = '-';
@@ -226,6 +227,11 @@ export async function renderSkillChat(test) {
       }
     }
 
+    // Only apply concentration modifier if a relevant skill (or a concentration check)
+    if (test.concentratingModifier < 0) {
+      modifiers.push(modifierString('torgeternity.chatText.check.modifier.concentrating', test.concentratingModifier));
+      test.modifiers += test.concentratingModifier;
+    }
     if (test.darknessModifier < 0) {
       modifiers.push(modifierString('torgeternity.chatText.check.modifier.darkness', test.darknessModifier));
       test.modifiers += test.darknessModifier;
@@ -366,28 +372,30 @@ export async function renderSkillChat(test) {
       }
       test.outcomeColor = useColorBlind ? 'color: red' :
         'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 0;
+      if (test.testType === 'soak') test.soakWounds = 0;
     } else if (testDifference > 9) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
       test.result = TestResult.OUTSTANDING;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 'all';
+      if (test.testType === 'soak') test.soakWounds = 'all';
       if (testItem?.system?.outstanding) test.extraResult = testItem.system.outstanding;
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       test.result = TestResult.GOOD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 2;
+      if (test.testType === 'soak') test.soakWounds = 2;
       if (testItem?.system?.good) test.extraResult = testItem.system.good;
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
       test.result = TestResult.STANDARD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      test.soakWounds = 1;
+      if (test.testType === 'soak') test.soakWounds = 1;
     }
+
+    test.applySoakLabel = (test.testType === 'soak' && test.soakWounds);
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
     test.applyEffectsLabel = testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result) ?? 'hidden';
@@ -399,7 +407,8 @@ export async function renderSkillChat(test) {
       // "Defend is successful once an attack or interaction misses the hero."
       if (target.type === 'stormknight' &&
         (test.testType === 'attack' || test.testType === 'interactionAttack') &&
-        game.combat?.approvedActions?.includes('defend'))
+        game.combat?.approvedActions?.includes('defend') &&
+        target.defenses.activeDefense)
         test.successfulDefendApprovedAction = true;
     } else {
       if (testActor.type === 'stormknight' && isApprovedAction(test))
@@ -407,6 +416,15 @@ export async function renderSkillChat(test) {
     }
     // Turn on + sign for modifiers?
     test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
+
+    // Concentration
+    if (first && test.result >= TestResult.STANDARD && testItem?.system.requiresConcentration) {
+      await testActor.addConcentration(testItem);
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: testActor }),
+        content: game.i18n.format('torgeternity.concentration.start', { name: testItem.name })
+      })
+    }
 
     // Choose Text to Display as Result
     if (testActor.isDisconnected) {
@@ -464,7 +482,7 @@ export async function renderSkillChat(test) {
 
     } else if (test.testType === 'activeDefense') {
       // Click on defense
-      const oldAD = testActor.effects.find((a) => a.name === 'ActiveDefense'); // Search for an ActiveDefense effect
+      const oldAD = testActor.activeDefense; // Search for an ActiveDefense effect
       if (oldAD) {
         // if present, reset by deleting
         oldAD.delete();
@@ -482,7 +500,7 @@ export async function renderSkillChat(test) {
     } else if (test.testType === 'activeDefenseUpdate') {
       // update bonus in case of bonus roll possibility / up
       // Delete Existing Active Effects
-      testActor.effects.find((a) => a.name === 'ActiveDefense')?.delete();
+      testActor.activeDefense?.delete();
       if (test.bonus < 1) test.bonus = 1;
       test.resultText = '+ ' + test.bonus;
       // Create new set of active effects
@@ -546,9 +564,14 @@ export async function renderSkillChat(test) {
           // adjustedDamage is already computed from test.damage
           // then modify test.damage for following future computation, and modify the adjustedDamage
           // then the test.BDDamageInPromise is reset
-          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness, test.attackTraits);
+          const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness,
+            {
+              attackTraits: test.attackTraits,
+              defenseTraits: test.target?.defenseTraits,
+              soakWounds: test.soakWounds,
+            });
 
-          test.applyDamLabel = '';
+          if (damage.wounds || damage.shocks) test.applyDamLabel = '';
           test.damageDescription = damage.label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
@@ -714,7 +737,7 @@ export async function rollBonusDie(isTrademark, amount = 1) {
  * @param damage
  * @param toughness
  */
-export function torgDamage(damage, toughness, attackTraits) {
+export function torgDamage(damage, toughness, options) {
   const damageDiff = Number(damage) - Number(toughness);
   let result;
   if (damageDiff < -5) {
@@ -728,26 +751,64 @@ export function torgDamage(damage, toughness, attackTraits) {
     result = { shocks: wounds * 2, wounds: wounds }
   }
 
-  if (result.shocks > 0) {
-    result.label = (result.wounds > 0) ? `${result.wounds} ${game.i18n.localize('torgeternity.stats.wounds')}, ` : '';
+  return torgDamageModifiers(result, options);
+}
 
-    const painful = attackTraits?.includes('painful');
-    if (painful) result.shocks += 1;
-    result.label += `${result.shocks} ${game.i18n.localize('torgeternity.stats.shock')}`;
-    const flags = [];
-    if (painful) flags.push(game.i18n.localize('torgeternity.traits.painful'));
-    if (attackTraits?.includes('stagger')) flags.push(game.i18n.localize('torgeternity.traits.stagger'));
-    if (flags.length) result.label += ` (${flags.join(', ')})`;
+
+export function torgDamageModifiers(result, options) {
+  let { attackTraits, defenseTraits, soakWounds } = options;
+
+  const flags = [];
+  const traits = (attackTraits ?? []).concat(defenseTraits ?? [])
+
+  if (soakWounds) {
+    if (soakWounds === 'all') {
+      result.wounds = 0;
+      result.shocks = 0;
+    } else {
+      result.wounds -= soakWounds;
+      result.shocks = 0;
+    }
+  }
+
+  if (result.wounds > 0 && traits?.includes('dazing')) {
+    flags.push(game.i18n.localize('torgeternity.traits.dazing'));
+    result.wounds -= 1;
+    result.shocks += 3;
+  }
+  if (result.wounds > 0 && traits?.includes('ignoreWounds')) {
+    flags.push(game.i18n.localize('torgeternity.traits.ignoreWounds'));
+    result.wounds = 0;
+  }
+  if (result.shocks > 0 && traits?.includes('ignoreShock')) {
+    flags.push(game.i18n.localize('torgeternity.traits.ignoreShock'));
+    result.shocks = 0;
+  }
+  if (result.shocks > 0 && traits?.includes('painful')) {
+    flags.push(game.i18n.localize('torgeternity.traits.painful'));
+    result.shocks += 1;
+  }
+
+  if (result.shocks > 0 || result.wounds > 0) {
+    result.label = (result.wounds > 0) ? `${result.wounds} ${game.i18n.localize('torgeternity.stats.wounds')}` : '';
+
+    if (result.shocks > 0) {
+      if (result.label.length) result.label += ', ';
+      result.label += `${result.shocks} ${game.i18n.localize('torgeternity.stats.shock')}`;
+    }
+    if (traits?.includes('stagger')) flags.push(game.i18n.localize('torgeternity.traits.stagger'));
   } else {
     result.label = game.i18n.localize('torgeternity.chatText.check.result.noDamage');
   }
+  if (flags.length) result.label += ` (${flags.join(', ')})`;
+
   return result;
 }
 
 /**
  *@param {Actor} soaker The Actor which is attempting to soak some damage
  */
-export async function soakDamages(soaker) {
+export async function soakDamages(soaker, origMessageId) {
   const skillName = 'reality';
   const skillValue = soaker.system.skills[skillName].value;
 
@@ -764,6 +825,7 @@ export async function soakDamages(soaker) {
       false,
     skillName: skillName,
     skillValue: skillValue,
+    soakingMessage: origMessageId,
   }, { useTargets: true });
   // do reality roll
 }
@@ -883,7 +945,7 @@ function individualDN(test, target) {
     case 'highestSpeed':
       // Find the fastest participant in the active combat
       let highestSpeed = 0;
-      for (const combatant of game.combats.active.turns) {
+      for (const combatant of game.combat.turns) {
         if (!combatant.actor) continue;
         const combatantSpeed = (combatant.actor.type === 'vehicle') ?
           combatant.actor.system.topSpeed.value :

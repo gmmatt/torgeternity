@@ -163,7 +163,6 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
       }
     }).bind(this.element);
 
-    this.element.querySelectorAll('nav').forEach(nav => nav.classList.add("right-tab"));
     this.element.querySelectorAll('select.selectSecondaryAxiom').forEach(elem =>
       elem.addEventListener('change', TorgeternityItemSheet.#onSelectSecondaryAxiom.bind(this)));
 

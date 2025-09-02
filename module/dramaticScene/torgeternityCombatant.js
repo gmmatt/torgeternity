@@ -22,7 +22,20 @@ export default class TorgCombatant extends Combatant {
     await this.setFlag('world', 'turnTaken', value);
     if (value) {
       await this.actor.toggleStatusEffect('waiting', { active: false });
+      await this.clearCurrentBonus();
       return this.actor.decayEffects();
     }
+  }
+
+  get currentBonus() {
+    return this.getFlag('torgeternity', 'multiAction');
+  }
+
+  async setCurrentBonus(value) {
+    return this.setFlag('torgeternity', 'multiAction', value);
+  }
+
+  async clearCurrentBonus() {
+    return this.unsetFlag('torgeternity', 'multiAction');
   }
 }

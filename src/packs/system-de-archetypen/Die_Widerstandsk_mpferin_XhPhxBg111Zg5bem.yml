@@ -474,17 +474,18 @@ items:
       skill: kinesis
       skilllevel: '10'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '13.345'
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: 1694863432357
-      modifiedTime: 1694863432357
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1756563974024
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.OSM7EZI7JqMVUSCk
       duplicateSource: null
       exportSource: null
@@ -839,6 +840,7 @@ items:
       skill: kinesis
       skilllevel: '12'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -847,12 +849,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4wHtrSS3RwnpxeXW
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.8.1
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756563977322
+      lastModifiedBy: l8SVzn2293lAwvMC
       exportSource: null
     _key: '!actors.items!XhPhxBg111Zg5bem.isJZ0la0LRORnKER'
   - name: Mensch

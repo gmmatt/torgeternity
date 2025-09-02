@@ -393,7 +393,7 @@ items:
         &agrave; sa Force et &agrave; sa Dext&eacute;rit&eacute; pendant la
         minute qui suit. Un succ&egrave;s Simple augmente la Force et la
         Dext&eacute;rit&eacute; de +1.</p>
-      dn: complexe (DN 12)
+      dn: challenging
       dnType: ''
       duration: 3 rounds
       good: |-
@@ -411,12 +411,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564823641
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
       duplicateSource: null
       exportSource: null
@@ -448,7 +448,7 @@ items:
         suffisante pour porter son propre poids. Le psi peut &eacute;galement
         &laquo; courir &raquo; en l&eacute;vitant avec le malus habituel de -2
         &agrave; toutes ses autres actions.</p>
-      dn: Facile (DN 8)
+      dn: easy
       dnType: ''
       duration: Concentration
       good: >-
@@ -463,15 +463,16 @@ items:
       skill: kinesis
       skilllevel: '10'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564886524
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
       duplicateSource: null
       exportSource: null
@@ -503,7 +504,7 @@ items:
         un vrai bouclier et qui est prot&eacute;g&eacute; par une
         Barri&egrave;re t&eacute;l&eacute;kin&eacute;tique ne
         b&eacute;n&eacute;ficie que du plus fort bonus.</p>
-      dn: Standard (DN 10)
+      dn: standard
       dnType: ''
       duration: Concentration
       good: le bonus est de +2.
@@ -514,15 +515,16 @@ items:
       skill: kinesis
       skilllevel: '12'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564602585
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
       duplicateSource: null
       exportSource: null

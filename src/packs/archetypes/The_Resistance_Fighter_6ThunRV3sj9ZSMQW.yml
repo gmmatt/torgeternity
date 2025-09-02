@@ -217,17 +217,18 @@ items:
       skill: kinesis
       skilllevel: '10'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '13.345'
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: 1693913984781
-      modifiedTime: 1693914330460
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1756563877002
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
       duplicateSource: null
       exportSource: null
@@ -602,6 +603,7 @@ items:
       skill: kinesis
       skilllevel: '12'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -610,12 +612,12 @@ items:
     _stats:
       compendiumSource: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
       duplicateSource: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       systemId: torgeternity
-      systemVersion: 12.2.0
+      systemVersion: 13.8.1
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756563882118
+      lastModifiedBy: l8SVzn2293lAwvMC
       exportSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.jVVPxqxbRFvMFqHr'
   - _id: 16w2fwrhuFzIJGuv

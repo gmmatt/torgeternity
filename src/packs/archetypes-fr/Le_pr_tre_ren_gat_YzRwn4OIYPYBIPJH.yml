@@ -487,7 +487,7 @@ items:
         Cependant, augmenter la Force ou l&rsquo;Esprit ne permet pas
         d&rsquo;augmenter les caract&eacute;ristiques d&eacute;riv&eacute;es de
         R&eacute;sistance et de Choc.</p>
-      dn: Normal (ND 10)
+      dn: standard
       dnType: ''
       duration: 3 rounds
       good: la durée est augmentée à 1 minute
@@ -501,12 +501,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564906478
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -552,7 +552,7 @@ items:
         qui l&rsquo;invoque a le niveau de Foi requis</span></p>
 
         <p>&nbsp;</p>
-      dn: Normal (ND 10)
+      dn: standard
       dnType: ''
       duration: Concentration
       good: ceux qui sont protégés ont un bonus de +2 à toutes leurs défenses
@@ -565,15 +565,16 @@ items:
       skill: faith
       skilllevel: '8'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564909967
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -614,7 +615,7 @@ items:
         le P&egrave;re Damien, il ne pourra plus la soigner avant la prochaine
         Sc&egrave;ne. Il pourra toujours utiliser sa comp&eacute;tence Premiers
         soins sur elle et le miracle Soins sur ses camarades.</p>
-      dn: Normal (ND 10)
+      dn: standard
       dnType: ''
       duration: Instantanée
       good: 2 Blessures sont soignées.
@@ -625,15 +626,16 @@ items:
       skill: faith
       skilllevel: '10'
       targetDefense: ''
+      requiresConcentration: false
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564913282
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.iDFKWtv4WCTrteId
       duplicateSource: null
       exportSource: null
