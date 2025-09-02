@@ -22,6 +22,7 @@ const DEFAULT_TEST = {
   targetsModifier: 0,
   // attack-options
   calledShotModifier: 0,
+  concentratingModifier: 0,
   vitalAreaDamageModifier: false,
   burstModifier: 0,
   allOutFlag: false,
@@ -121,7 +122,16 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
       this.test.actorType ??= actor.type;
 
       const item = this.test.itemId ? actor.items.get(this.test.itemId) : null;
-      if (item) this.test.trademark = item.system.traits.has('trademark');
+      if (item) {
+        this.test.trademark = item.system.traits.has('trademark');
+        this.test.requiresConcentration = item.system.requiresConcentration;
+      }
+
+      const combatant = game.combat?.getCombatantsByActor(actor)?.shift();
+      if (combatant) {
+        const bonus = combatant.currentBonus;
+        if (bonus !== undefined) this.test.bonus = bonus;
+      }
     }
     // Ensure all relevant fields are Number
     for (const key of Object.keys(DEFAULT_TEST))
@@ -158,6 +168,15 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     context.test.stymiedModifier = myActor.statusModifiers.stymied;
     context.test.darknessModifier = myActor.statusModifiers.darkness;
     context.test.waitingModifier = myActor.statusModifiers.waiting;
+    // TODO: only if the skill is affected by concentration:
+    // (Concentration check, any power skill tests)
+    // alteration, apportation, conjuration, divination, faith, psionics
+    // (willpower/spirit if Concentration check)
+    if (context.test.isConcentrationCheck ||
+      CONFIG.torgeternity.concentrationSkills.includes(context.test.skillName)) {
+      context.test.concentratingModifier = myActor.statusModifiers.concentrating;
+    }
+    context.test.requiresConcentration = this.test.itemId && myActor.items.get(this.test.itemId)?.requiresConcentration;
 
     // Set Modifiers for Vehicles
     if (this.test.testType === 'chase') {
@@ -202,6 +221,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
         context.test?.stymiedModifier ||
         context.test?.darknessModifier ||
         context.test?.waitingModifier ||
+        context.test?.concentratingModifier ||
         context.test?.sizeModifier ||
         context.test?.vulnerableModifier ||
         context.test?.speedModifier ||
@@ -335,11 +355,12 @@ export function oneTestTarget(token, applySize) {
       sizeModifier: sizeModifier,
       toughness: actor.defenses.toughness,
       armor: actor.defenses.armor,
-      defenseTraits: Array.from(actor.items.find(it => it.type === 'armor' && it.system.equipped)?.system.traits ?? []),
+      defenseTraits: actor.defenseTraits,
       // then non-vehicle changes
       skills: actor.system.skills,
       attributes: actor.system.attributes,
       vulnerableModifier: actor.statusModifiers.vulnerable,
+      isConcentrating: actor.isConcentrating,
       defenses: {
         dodge: actor.defenses.dodge.value,
         unarmedCombat: actor.defenses.unarmedCombat.value,
@@ -348,6 +369,7 @@ export function oneTestTarget(token, applySize) {
         maneuver: actor.defenses.maneuver.value,
         taunt: actor.defenses.taunt.value,
         trick: actor.defenses.trick.value,
+        activeDefense: !!actor.activeDefense
       },
     };
   }

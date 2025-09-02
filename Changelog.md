@@ -1,5 +1,41 @@
 # TORG Eternity Changelog
 
+## 13.9.0 - Concentration, Multi-Action, Soaking
+
+### Improvements
+
+- Change to only offer a Destiny Card for a **Defend Approved Action** if the target is doing an "Active Defense" this round.
+- Slight updates to Possibility Selection Dialog.
+- **Concentration Checks**
+  - Spells/Miracles/Psionics have an additional checkbox `Requires Concentration`
+  - Invoking a power with `requires concentration` ticked, and getting a success will automatically add a new active effect to the caster called `Concentrating: <name>` and the Source will also be the name of the effect. The description for the active effect will be `<actorname> is concentrating on <itemtype> '<itemname>'`  (localized accordingly).
+  - When using a power-based skill (listed in `CONFIG.torgeternity.concentrationSkills`) or when performing a Concentration check, a modifier will be added to the roll of -2 per 'concentrating' AE currently on the caster.
+  - If the caster takes damage (from the Apply Damage chat button) or suffers a Stymied or Vulnerable result from an interaction attack, then a chat message will prompt for the caster to make a Concentration check (and show which is the preferred check: willpower or spirit).
+    - If the result of the concentration check is a failure, then a message will be placed into chat indicating which effects are no longer being concentrated on, and those AEs will be removed from the actor.
+- **Multi-Action Assistance**
+  - Assistance is only provided for combatants within an encounter (using the Combat Tracker).
+  - if a Mult-Action Penalty is entered for an actor, the generated bonus for the first die roll will be remembered for subsequent test checks (it will auto-populate the "Bonus: Input Existing" field).
+  - The stored bonus will be cleared when the "end-turn" button is pressed, or the GM advances combat to a new round (New/Keep).
+  - All saved bonuses are removed when an encounter is deleted.
+- **Chat Card**
+  - After a **SOAK** roll, and the player has finished modifying the roll, the **Apply Soak** button will modify the original attack card to show the new amount of damage.
+  - Only show **buttons** to the players who have permission to use those buttons (so bystanders in the attack won't see buttons).
+- Automation for new traits:
+  - `Ignore Shock` (Relentless threats) - any calculated shock is ignored.
+  - `Ignore Wounds` (Taser weapon) - any calculated wounds is ignored.
+  - `dazing` - if at least one wound is inflicted, one of the wounds is converted into 3 shock.
+- `Adjust Damage` changed to trigger on SHIFT-clicking the "Apply Damages" button (previously right-click).
+
+### Bug Fixes
+
+- Stop the tabs of the Actor sheet flickering on each update.
+- Fix scrolling in Threat and Vehicle sheets (only editing Threat background still has issues).
+- Force light theme on the Journal Page editor.
+
+### Known Issues
+
+- Core Foundry Bug (https://github.com/foundryvtt/foundryvtt/issues/13348) prevents filtering Item searches based on traits - fixable with a one-line patch in your core foundry.mjs file
+
 ## 13.8.2 - Fixes for Perks, Cosms and Secrets
 
 ### Improvements
@@ -14,7 +50,7 @@
 - It is possible to create Perks once again (the category will default to "special/homebrew").
 - Don't cancel an item's cosm when only a partial update occurs (such as Equipping the item).
 
-## v13.8.1 - WAITING, STATUS DISPLAY, TRANSFER WEAPON/AMMO EFFECTS, PRIVATE ROLLS
+## v13.8.1 - Waiting, Status Display, Transfer Weapon/Ammo Effects, Private Rolls
 
 - If the Foundry server is running on HTTPS: then the Torg **Reference** website is opened in a separate tab.
 - Automation of **Waiting**:
@@ -57,7 +93,7 @@
 - #466: Update **Defeat** handling to display a button to apply the relevant effects, which will prompt for an attribute to modify if relevant.
 - Ensure use of Intimidation skill is detected as an Approved Action for Intimidate.
 - #416: Allow **Compendium Search** of Items to filter based on cosm, traits, secondaryAxiom, category (incl. Implant Type).
-  - (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/13300 - a one-line patch in foundry.js could get it working)
+  - (A bug in core Foundry prevents searching within Item fields in the Item sidebar: https://github.com/foundryvtt/foundryvtt/issues/13300 - fixed in Foundry 13.348) (A separate bug https://github.com/foundryvtt/foundryvtt/issues/13348 means that traits can't be searched yet.)
 - Display highest size and vulnerable modifier from all the targets in the Skill Test dialog (even though they are applied separately to each target during test resolution).
 
 ### Bug Fixes

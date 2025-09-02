@@ -62,6 +62,9 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
    * Our own version, since this.origin might not point to the correct thing.
    */
   get sourceName() {
+    if (this.parent instanceof Actor && this.statuses.has('concentrating') && this.origin) {
+      return fromUuidSync(this.origin)?.name ?? game.i18n.localize("None");
+    }
     if (!this.parent || this.parent instanceof Actor) return game.i18n.localize("None");
     return this.parent.name;
   }

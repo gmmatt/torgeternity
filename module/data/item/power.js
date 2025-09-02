@@ -26,6 +26,7 @@ export class PowerItemData extends BaseItemData {
       modifier: new fields.StringField({ initial: '' }),
       outstanding: new fields.HTMLField({ initial: '', textSearch: true }),
       range: new fields.StringField({ initial: '' }),
+      requiresConcentration: new fields.BooleanField({ initial: false }),
       skill: new fields.StringField({ initial: '' }),
       skilllevel: new fields.StringField({ initial: '' }),
       targetDefense: new fields.StringField({ initial: '' }),

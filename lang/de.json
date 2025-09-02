@@ -86,6 +86,7 @@
           "allOutAttack": "Rücksichtsloser Angriff",
           "blindFire": "Blindes Feuern",
           "calledShot": "Gezielter Angriff",
+          "concentrating": "Konzentration",
           "darkness": "Dunkelheit",
           "heavyBurst": "Schwerer Feuerstoß",
           "longBurst": "Langer Feuerstoß",
@@ -126,6 +127,12 @@
           "BDDamageSum": "Summe des Schadens der BW"
         },
         "testUnsuccessfull": "Probe nicht erfolgreich"
+      },
+      "concentration": {
+        "makeCheck": "{actor} muss eine Konzentrations-Probe ablegen",
+        "AEname": "Konzentration: {item}",
+        "AEdescription": "{actor} konzentriert sich auf {itemType} '{itemName}'",
+        "broken": "{actor} verliert Konzentration auf:"
       },
       "contradiction": {
         "alreadyDisconnected": "ist bereits entkoppelt",
@@ -705,6 +712,7 @@
       "modifier": "Modifikator",
       "outstanding": "Hervorragend",
       "range": "Reichweite",
+      "requiresConcentration": "Benötigt Konzentration",
       "skill": "Fertigkeit",
       "skilllevel": "Min. Fertigkeitswert"
     },
@@ -862,8 +870,10 @@
       "APMod": "PB Modifikator",
       "applyDamage": "Schaden anwenden",
       "applyEffects": "Effekt anwenden",
-      "applyDamageTooltip": "Linksklick zum anwenden, Rechtsklick zum modifizieren.",
+      "applyDamageTooltip": "Linksklick zum anwenden, Shiftklick zum modifizieren.",
       "applyEffectsTooltip": "Wende den passenden Aktiven Effekt auf die Ziele an",
+      "applySoak": "Schaden wegstecken anwenden",
+      "applySoakTooltip": "Wende die Reduktion des Schadens dieses Angriffs an.",
       "applyStymied": "Angeschlagen anwenden",
       "applyStymiedTooltip": "Klicke, um den Status \"Angeschlagen\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Angeschlagen\".",
       "applyVulnerable": "Verwundbar anwenden",
@@ -1231,6 +1241,8 @@
       "grapple": "Festhalten",
       "head": "Kopf",
       "ignoresArmor": "Ignoriert Rüstung",
+      "ignoreShock": "Schock ignorieren",
+      "ignoreWounds": "Wunden ignorieren",
       "lowestArmor": "Niedrigste Rüstung",
       "nonLethal": "Nicht-tödlich",
       "painful": "Schmerzhaft",

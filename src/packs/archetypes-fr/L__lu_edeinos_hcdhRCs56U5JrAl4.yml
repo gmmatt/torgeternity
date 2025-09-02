@@ -409,7 +409,7 @@ items:
         peut affecter des adversaires ayant la capacit&eacute;
         &Eacute;th&eacute;r&eacute;e ou une capacit&eacute; similaire qui permet
         d&rsquo;ignorer les armes normales</p>
-      dn: Normal (ND 10)
+      dn: standard
       dnType: ''
       duration: 3 rounds
       good: dommages +2.
@@ -420,15 +420,16 @@ items:
       skill: faith
       skilllevel: '12'
       targetDefense: ''
+      requiresConcentration: false
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564554923
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.n96Wp0YtxBbpMAJG
       duplicateSource: null
       exportSource: null
@@ -660,7 +661,7 @@ items:
         le P&egrave;re Damien, il ne pourra plus la soigner avant la prochaine
         Sc&egrave;ne. Il pourra toujours utiliser sa comp&eacute;tence Premiers
         soins sur elle et le miracle Soins sur ses camarades.</p>
-      dn: Normal (ND 10)
+      dn: standard
       dnType: ''
       duration: Instantanée
       good: 2 Blessures sont soignées.
@@ -675,12 +676,12 @@ items:
       default: 0
       TK1vCAdCz548vBDu: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564559145
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.iDFKWtv4WCTrteId
       duplicateSource: null
       exportSource: null
@@ -726,7 +727,7 @@ items:
         qui l&rsquo;invoque a le niveau de Foi requis</span></p>
 
         <p>&nbsp;</p>
-      dn: Normal (ND 10)
+      dn: standard
       dnType: ''
       duration: Concentration
       good: ceux qui sont protégés ont un bonus de +2 à toutes leurs défenses
@@ -739,16 +740,17 @@ items:
       skill: faith
       skilllevel: '8'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
       TK1vCAdCz548vBDu: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1756564563044
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null

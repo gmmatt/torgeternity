@@ -266,7 +266,11 @@ export default class TorgCombat extends Combat {
    */
   async nextRoundKeep() {
     await this.updateEmbeddedDocuments('Combatant',
-      this.combatants.map((combatant) => ({ _id: combatant.id, 'flags.world.turnTaken': false })),
+      this.combatants.map((combatant) => ({
+        _id: combatant.id,
+        'flags.world.turnTaken': false,
+        'flags.torgeternity.-=multiAction': null
+      })),
       { updateAll: true });
     this.setCardsPlayable(true);
     this.unsetFlag('torgeternity', FATIGUED_FACTION_FLAG);
@@ -277,10 +281,7 @@ export default class TorgCombat extends Combat {
    * Remove the ActiveDefense AE from all combatants.
    */
   async #deleteActiveDefense() {
-    for (const combatant of this.combatants) {
-      const activeDefenseEffect = combatant.actor?.appliedEffects.find((eff) => eff.name === 'ActiveDefense');
-      if (activeDefenseEffect) await activeDefenseEffect.delete();
-    }
+    return Promise.all(this.combatants.map(combatant => combatant.actor?.activeDefense?.delete()));
   }
 
 

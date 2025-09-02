@@ -78,6 +78,12 @@
               {{user.character.statusModifiers.stymied}}
             </p>
           {{/if}}
+          {{#if user.character.statusModifiers.concentrating}}
+            <p>
+              {{localize "torgeternity.statusEffects.concentrating"}} :
+              {{user.character.statusModifiers.concentrating}}
+            </p>
+          {{/if}}
         </div>
         <div class="flexrow">
           <div>

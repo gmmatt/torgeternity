@@ -152,17 +152,18 @@ items:
       skill: faith
       skilllevel: '8'
       targetDefense: ''
+      requiresConcentration: true
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '13.345'
+      systemVersion: 13.8.1
+      coreVersion: '13.348'
       createdTime: 1693909685043
-      modifiedTime: 1693909685043
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1756563923369
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
       duplicateSource: null
       exportSource: null
