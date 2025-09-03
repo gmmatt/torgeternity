@@ -168,10 +168,7 @@ export class TestDialog extends HandlebarsApplicationMixin(ApplicationV2) {
     context.test.stymiedModifier = myActor.statusModifiers.stymied;
     context.test.darknessModifier = myActor.statusModifiers.darkness;
     context.test.waitingModifier = myActor.statusModifiers.waiting;
-    // TODO: only if the skill is affected by concentration:
-    // (Concentration check, any power skill tests)
-    // alteration, apportation, conjuration, divination, faith, psionics
-    // (willpower/spirit if Concentration check)
+    // Concentrating modifier applies in Concentration Checks and specific skills
     if (context.test.isConcentrationCheck ||
       CONFIG.torgeternity.concentrationSkills.includes(context.test.skillName)) {
       context.test.concentratingModifier = myActor.statusModifiers.concentrating;
