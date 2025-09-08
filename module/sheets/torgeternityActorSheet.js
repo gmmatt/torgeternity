@@ -719,14 +719,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       ? this.actor.system.attributes.dexterity.value
       : Number(button.dataset.skillValue);
 
+    // Almost the same as rollAttack
     return TestDialog.wait({
       testType: 'attack',
       actor: this.actor,
       amountBD: 0,
       isAttack: true,
+      isFav: this.actor.system.skills.unarmedCombat.isFav,
       skillName: 'unarmedCombat',
       skillValue: skillValue,
-      isFav: this.actor.system.skills.unarmedCombat.isFav,
       unskilledUse: true,
       damage: parseInt(button.dataset.damage),
       weaponAP: 0,
@@ -735,7 +736,9 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       type: 'attack',
       applySize: true,
       attackOptions: true,
-      amountBD: 0,
+      //chatNote: '',
+      bdDamageSum: 0,
+      // itemId - no item
     }, { useTargets: true });
   }
 
