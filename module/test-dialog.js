@@ -30,6 +30,7 @@ const DEFAULT_TEST = {
   blindFireFlag: false,
   trademark: false,
   additionalDamage: null,   // Number or null
+  bdDamageSum: 0,
   addBDs: 0,  // 0-5
   // modifiers
   concealmentModifier: 0,
