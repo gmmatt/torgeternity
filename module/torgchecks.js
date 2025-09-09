@@ -685,7 +685,7 @@ export async function renderSkillChat(test) {
 
     messages.push(await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
-      owner: test.actor,
+      owner: test.actor,  // actually UUID
       rolls: test.diceroll,
       flavor: flavor,
       flags: {

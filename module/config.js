@@ -557,7 +557,6 @@ torgeternity.statusEffects = [
     _id: 'blind00000000000',
     name: 'torgeternity.statusEffects.blind',
   },
-  // TODO : create KO and defeat status
 ];
 
 torgeternity.defenseTraits = {

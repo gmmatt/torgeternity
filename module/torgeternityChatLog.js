@@ -55,8 +55,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    test.parentId = chatMessageId;
-    chatMessage.unsetFlag('torgeternity', 'test');
 
     // reRoll because favored
     test.isFavStyle = 'hidden';
@@ -119,8 +117,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       game.user.isGM ? game.user.setFlag('torgeternity', 'GMpossibilities', possPool - 1) : {};
     }
 
-    test.parentId = chatMessageId;
-    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
 
     // Roll for Possibility
@@ -176,7 +172,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
 
     // Roll for Up
@@ -203,8 +198,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    test.parentId = chatMessageId;
-    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
 
     // Roll for Possibility
@@ -233,7 +226,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
 
     // Increase cards played by 1
@@ -262,7 +254,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    chatMessage.setFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
 
     // Add 1 to cards played
@@ -291,7 +282,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.heroStyle = 'hidden';
     test.isFavStyle = 'hidden';
     test.plus3Style = 'hidden';
-    chatMessage.unsetFlag('torgeternity', 'test');
     test.isFavStyle = 'hidden';
     test.unskilledLabel = 'hidden';
 
