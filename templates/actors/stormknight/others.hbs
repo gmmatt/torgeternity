@@ -30,7 +30,8 @@
     <span class="other-label" data-skill-value="{{document.defenses.toughness}}">
       {{localize 'torgeternity.sheetLabels.toughness'}}
     </span>
-    <input type="number" value="{{document.defenses.toughness}}" data-dtype="Number" disabled />
+    <input type="number" value="{{document.defenses.toughness}}" data-dtype="Number" disabled
+      {{#if document.defenses.twoMeleeWeaponDefense}}data-tooltip="torgeternity.sheetLabels.twoMeleeWeapons" {{/if}} />
   </li>
 
   <li class="attribut-block">

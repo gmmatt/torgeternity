@@ -146,7 +146,10 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       // (Core pg 126) Wielding two melee weapons increases melee weapons defense by 2.
       if (this.type !== 'vehicle') {
         const meleeWeaponCount = this.items.filter(item => item.type === 'meleeweapon' && item.system.equipped);
-        if (meleeWeaponCount.length > 1) this.defenses.meleeWeapons.value += 2;
+        if (meleeWeaponCount.length > 1) {
+          this.defenses.meleeWeapons.value += 2;
+          this.defenses.twoMeleeWeaponDefense = true;
+        }
       }
 
       const unarmedCombatDefenseSkill = skills.unarmedCombat.value || attributes.dexterity.value;
