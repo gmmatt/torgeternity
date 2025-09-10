@@ -1251,6 +1251,7 @@
       "shotgun": "Shotgun",
       "small": "Small",
       "stagger": "Stagger",
+      "supernaturalEvil": "Supernatural Evil",
       "thrown": "Thrown",
       "torso": "Torso",
       "twoHanded": "Two-Handed",
@@ -1283,6 +1284,7 @@
     "traitGroup": {
       "defense": "Defense",
       "melee": "Melee",
+      "other": "Other",
       "ranged": "Ranged"
     },
     "vehicleTypes": {

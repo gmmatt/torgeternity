@@ -1257,6 +1257,7 @@
       "shotgun": "Canon Court",
       "small": "Patit",
       "stagger": "Déséquilibre",
+      "supernaturalEvil": "Supernatural Evil",
       "thrown": "Lancée",
       "torso": "Torse",
       "twoHanded": "Deux Mains",
@@ -1289,6 +1290,7 @@
     "traitGroup": {
       "defense": "Défense",
       "melee": "Mélée",
+      "other": "Other",
       "ranged": "Distance"
     },
     "vehicleTypes": {

@@ -1257,6 +1257,7 @@
       "shotgun": "Escopeta",
       "small": "Pequeña",
       "stagger": "Desequilibrante",
+      "supernaturalEvil": "Supernatural Evil",
       "thrown": "Arrojadiza",
       "torso": "Torso",
       "twoHanded": "Dos Manos",
@@ -1289,6 +1290,7 @@
     "traitGroup": {
       "defense": "Defensa",
       "melee": "Cuerpo a cuerpo",
+      "other": "Other",
       "ranged": "A distancia"
     },
     "vehicleTypes": {
