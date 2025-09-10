@@ -850,8 +850,8 @@
         "hint": "En cas de Déferlement et de jet qui provoque une Déconnexion, applique l'effet Déconnecté automatiquement"
       },
       "showPiety": {
-        "name": "Show Piety in Actor sheet",
-        "hint": "Displays the current Piety score of a Storm Knight on the Actor's sheet"
+        "name": "Afficher la Piété",
+        "hint": "Affiche le score actuel de Piété du Chevalier des Tempêtes dans sa fiche de personnage"
       },
       "dramaCardUp": {
         "name": "Un de plus! des cartes Actions",
@@ -1006,7 +1006,7 @@
       "perks": "Atouts",
       "noPerksAdded": "Aucun Atout ajouté",
       "perksAbilities": "Atouts/Capa.",
-      "piety": "Piety",
+      "piety": "Piété",
       "pool": "Réserve d'action",
       "possibilities": "Possibilités",
       "possibilityByCosm": "Possibilités de Cosm",
@@ -1257,7 +1257,7 @@
       "shotgun": "Canon Court",
       "small": "Patit",
       "stagger": "Déséquilibre",
-      "supernaturalEvil": "Supernatural Evil",
+      "supernaturalEvil": "surnaturel maléfique",
       "thrown": "Lancée",
       "torso": "Torse",
       "twoHanded": "Deux Mains",
@@ -1290,7 +1290,7 @@
     "traitGroup": {
       "defense": "Défense",
       "melee": "Mélée",
-      "other": "Other",
+      "other": "Autre",
       "ranged": "Distance"
     },
     "vehicleTypes": {
