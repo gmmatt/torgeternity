@@ -7,6 +7,7 @@
 - #391: Having **two melee weapons** equipped increase the melee weapon defense of the Actor by 2 (Core pg 126). The change can be seen in the DEFENSES block of the Actor sheet.
 - #478: Add optional **Piety score** in the XP block of Stormknights (can be disabled in Game Settings). Update the "Buff" macro to support adding/removing Piety from the currently selected Actors.
 - Add **Supernatural Evil** trait which can be set on abilities such as "Undead" (no automated effect yet).
+- Change **Custom Skills** to have the Total be calculated from the ADDS on the skill + the chosen attribute on the owning Actor.
 
 ## 13.9.1
 

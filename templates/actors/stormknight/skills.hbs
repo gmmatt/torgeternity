@@ -50,23 +50,32 @@
       <span>
         <a
           class="skill-roll" data-drag="true" data-action="skillRoll"
+          data-tooltip="torgeternity.sheetLabels.skillRollHint"
           data-testtype="skill"
           data-customskill="true"
           data-baseattribute="{{content.system.baseAttribute}}"
           data-adds="{{content.system.adds}}"
           data-value="{{content.system.value}}"
           data-unskilleduse="0"
-          data-name="{{content.name}}"
           {{disabled (not @root.editable)}}
+          data-name="{{content.name}}"
           data-isfav="{{content.system.isFav}}">
           {{content.name}}
         </a>
       </span>
-      <span class="skill-line skillAttr" style="width: 365px">
-        {{localize (concat 'torgeternity.attributes.' content.system.baseAttribute)}}
+      <span class="skill-line skillAttr">
+        <select name="system.skills.{{name}}.baseAttribute" disabled>
+          {{selectOptions attrTypes selected=content.system.baseAttribute localize=true sort=true}}
+        </select>
       </span>
-      <span class="skillAdd">{{content.system.adds}}</span>
-      <span class="skill-line">{{content.system.value}}</span>
+      <span class="skillAdd">
+        <input
+          name="system.skills.{{name}}.adds"
+          type="number"
+          value="{{content.system.adds}}"
+          data-dtype="Number" disabled />
+      </span>
+      <input class="skill-line" placeholder="-" value="{{content.system.value}}" disabled />
       <span>
         <a class="toggleFav {{checked content.system.isFav}}" {{disabled (not @root.editable)}}>
           <i class="far fa-star"></i>
@@ -76,7 +85,7 @@
           type="checkbox"
           name="content.system.isFav"
           {{checked content.system.isFav}}
-          data-dtype="Boolean" />
+          data-dtype="Boolean" disabled />
       </span>
     </li>
   {{/inline}}
