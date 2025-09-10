@@ -46,7 +46,7 @@
     </li>
   {{/inline}}
   {{#*inline "customSkillRow" content name}}
-    <li data-tooltip="torgeternity.sheetLabels.customSkill">
+    <li>
       <span>
         <a
           class="skill-roll" data-drag="true" data-action="skillRoll"
@@ -64,16 +64,16 @@
         </a>
       </span>
       <span class="skill-line skillAttr">
-        <select name="system.skills.{{name}}.baseAttribute" disabled>
+        <select name="items.{{content.id}}.system.baseAttribute">
           {{selectOptions attrTypes selected=content.system.baseAttribute localize=true sort=true}}
         </select>
       </span>
       <span class="skillAdd">
         <input
-          name="system.skills.{{name}}.adds"
+          name="items.{{content.id}}.system.adds"
           type="number"
           value="{{content.system.adds}}"
-          data-dtype="Number" disabled />
+          data-dtype="Number" />
       </span>
       <input class="skill-line" placeholder="-" value="{{content.system.value}}" disabled />
       <span>
@@ -83,9 +83,9 @@
         <input
           class="favCheck"
           type="checkbox"
-          name="content.system.isFav"
+          name="items.{{content.id}}.system.isFav"
           {{checked content.system.isFav}}
-          data-dtype="Boolean" disabled />
+          data-dtype="Boolean" />
       </span>
     </li>
   {{/inline}}

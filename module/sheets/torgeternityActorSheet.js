@@ -24,7 +24,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       height: 860,
     },
     form: {
-      submitOnChange: true
+      submitOnChange: true,
+      handler: TorgeternityActorSheet.#onSubmitActorForm,
     },
     actions: {
       toggleThreatSkill: TorgeternityActorSheet.#onToggleThreatSkill,
@@ -458,6 +459,14 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     return super._onDrop(event);
+  }
+
+  static async #onSubmitActorForm(event, form, formData) {
+    const submitted = foundry.utils.expandObject(formData.object);
+    if (submitted.items) {
+      const updates = Object.entries(submitted.items).map(([itemid, fields]) => { return { _id: itemid, ...fields } });
+      return this.actor.updateEmbeddedDocuments('Item', updates);
+    }
   }
 
   /**
