@@ -1,14 +1,16 @@
 # TORG Eternity Changelog
 
-## NEXT VERSION
 
-- Remove unnecessary deletion of `flags.torgeternity.test` from chatmsg before deleting chatmsg.
-- Remove setting `test.parentId` since it is never used.
+## 13.10.0
+
+- Having two melee weapons equipped increase the melee weapon defense of the Actor by 2 (Core pg 126).
 
 ## 13.9.1
 
 - Don't try to auto-convert a "Rollable Special Ability" with damage into a "custom attack".
 - Fix error caused when rolling a BD on an "Unarmed Attack" interaction attack.
+- Remove unnecessary deletion of `flags.torgeternity.test` from chatmsg before deleting chatmsg.
+- Remove setting `test.parentId` since it is never used.
 
 ## 13.9.0 - Concentration, Multi-Action, Soaking
 
