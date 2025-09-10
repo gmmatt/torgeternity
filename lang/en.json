@@ -364,7 +364,7 @@
         "defenses": "Defenses",
         "physicalDefenses": "Physical defenses",
         "cancelEffects": "Cancel effects",
-        "bonusTitle": "Input the bonus/malus's value",
+        "bonusTitle": "Input the bonus/penalty value",
         "value": "Choose the value for the bonus",
         "timeLabel": "Duration choice",
         "time": "Choose the duration in round(s)"
@@ -843,6 +843,10 @@
         "name": "Automatically Disconnect",
         "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
       },
+      "showPiety": {
+        "name": "Show Piety Score on Actor sheet",
+        "hint": "Displays the current Piety Score of a Storm Knight on the Actor's sheet"
+      },
       "dramaCardUp": {
         "name": "UP only from Drama Card",
         "hint": "Hide the UP button in Test Check results if the current Drama Card doesn't have UP in the conflict line (default true)"
@@ -996,6 +1000,7 @@
       "perks": "Perks",
       "noPerksAdded": "No perks added",
       "perksAbilities": "Perks/Abilities",
+      "piety": "Piety",
       "pool": "Pool",
       "possibilities": "Possibilities",
       "possibilityByCosm": "Possibilities by Cosm",

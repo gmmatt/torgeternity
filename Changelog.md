@@ -3,7 +3,14 @@
 
 ## 13.10.0
 
-- Having two melee weapons equipped increase the melee weapon defense of the Actor by 2 (Core pg 126).
+- Having two melee weapons equipped increase the melee weapon defense of the Actor by 2 (Core pg 126). The change can be seen in the DEFENSES block of the Actor sheet.
+- Add optional Piety score in the XP block of Stormknights (can be disabled in Game Settings).
+- Update the "Buff" macro to support adding/removing Piety from the currently selected Actors.
+
+### Translations
+- 'sheetLabels.piety'
+- 'showPiety.name'
+- 'showPiety.hint'
 
 ## 13.9.1
 

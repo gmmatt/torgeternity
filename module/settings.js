@@ -244,6 +244,15 @@ export function registerTorgSettings() {
     default: true
   });
 
+  game.settings.register('torgeternity', 'showPiety', {
+    name: 'torgeternity.settingMenu.showPiety.name',
+    hint: 'torgeternity.settingMenu.showPiety.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
   game.settings.register('torgeternity', 'hoverDistance', {
     name: 'torgeternity.settingMenu.hoverDistance.name',
     hint: 'torgeternity.settingMenu.hoverDistance.hint',

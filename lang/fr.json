@@ -849,6 +849,10 @@
         "name": "Déconnexion Automatique",
         "hint": "En cas de Déferlement et de jet qui provoque une Déconnexion, applique l'effet Déconnecté automatiquement"
       },
+      "showPiety": {
+        "name": "Show Piety in Actor sheet",
+        "hint": "Displays the current Piety score of a Storm Knight on the Actor's sheet"
+      },
       "dramaCardUp": {
         "name": "Un de plus! des cartes Actions",
         "hint": "Cache le bouton Un de plus! si l'option n'est pas dans la ligne conflit de la carte Action en cours (vrai par defaut)"
@@ -1002,6 +1006,7 @@
       "perks": "Atouts",
       "noPerksAdded": "Aucun Atout ajouté",
       "perksAbilities": "Atouts/Capa.",
+      "piety": "Piety",
       "pool": "Réserve d'action",
       "possibilities": "Possibilités",
       "possibilityByCosm": "Possibilités de Cosm",
