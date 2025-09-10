@@ -43,8 +43,7 @@ jobs:
             templates/ \
             Changelog.md \
             LICENSE \
-            system.json \
-            template.json
+            system.json
 
       # Create a release for this specific version
       - name: Update Release with Files
