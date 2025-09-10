@@ -1257,7 +1257,7 @@
       "shotgun": "Schrotflinte",
       "small": "Klein",
       "stagger": "Erschüttern",
-      "supernaturalEvil": "Supernatural Evil",
+      "supernaturalEvil": "Übernatürliches Böses",
       "thrown": "Wurfwaffe",
       "torso": "Torso",
       "twoHanded": "Zweihändig",
@@ -1290,7 +1290,7 @@
     "traitGroup": {
       "defense": "Verteidigung",
       "melee": "Nahkampf",
-      "other": "Other",
+      "other": "Andere",
       "ranged": "Fernkampf"
     },
     "vehicleTypes": {
