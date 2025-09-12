@@ -13,11 +13,6 @@ jobs:
         with:
           node-version: '20.x'
 
-      # get part of the tag after the `v`
-      - name: Extract tag version number
-        id: get_version
-        uses: battila7/get-version-action@v2
-
       # Substitute the Manifest and Download URLs in the system.json
       - name: Substitute Manifest and Download Links For Versioned Ones
         id: sub_manifest_link_version
@@ -25,7 +20,7 @@ jobs:
         with:
           files: 'system.json'
         env:
-          version: ${{steps.get_version.outputs.version-without-v}}
+          version: ${{github.event.release.tag_name}}
           url: https://github.com/${{github.repository}}
           manifest: https://github.com/${{github.repository}}/releases/latest/download/system.json
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/torgeternity.zip
@@ -48,8 +43,7 @@ jobs:
             templates/ \
             Changelog.md \
             LICENSE \
-            system.json \
-            template.json
+            system.json
 
       # Create a release for this specific version
       - name: Update Release with Files

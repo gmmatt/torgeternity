@@ -24,7 +24,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       height: 860,
     },
     form: {
-      submitOnChange: true
+      submitOnChange: true,
+      handler: TorgeternityActorSheet.#onSubmitActorForm,
     },
     actions: {
       toggleThreatSkill: TorgeternityActorSheet.#onToggleThreatSkill,
@@ -125,18 +126,26 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _onFirstRender(context, options) {
     // If it is a vehicle with a driver, then watch for changes to the driver's 
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.operator) {
+    if (actor.type === 'vehicle') {
       const operator = actor.system.operator;
       if (operator) operator.apps[this.id] = this;
+      for (const item of actor.items) {
+        const gunner = item.system.gunner;
+        if (gunner) gunner.apps[this.id] = this;
+      }
     }
     return super._onFirstRender(context, options);
   }
 
   _onClose(options) {
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.operator) {
+    if (actor.type === 'vehicle') {
       const operator = actor.system.operator;
       if (operator) delete operator.apps[this.id];
+      for (const item of actor.items) {
+        const gunner = item.system.gunner;
+        if (gunner) delete gunner.apps[this.id];
+      }
     }
     super._onClose(options);
   }
@@ -181,6 +190,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     context.tabs = this._prepareTabs(this.actor.type);
     context.systemFields = context.document.system.schema.fields;
     context.items = Array.from(context.document.items);
+    context.showPiety = game.settings.get('torgeternity', 'showPiety');
     context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
     context.meleeweapons = context.items.filter(item => item.type === 'meleeweapon');
@@ -457,6 +467,17 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     }
 
     return super._onDrop(event);
+  }
+
+  static async #onSubmitActorForm(event, form, formData, options) {
+    if (!this.isEditable) return;
+    const submitted = foundry.utils.expandObject(formData.object);
+    if (submitted.items) {
+      const updates = Object.entries(submitted.items).map(([itemid, fields]) => { return { _id: itemid, ...fields } });
+      await this.actor.updateEmbeddedDocuments('Item', updates);
+    }
+    // Now normal ActorSheet form.handler
+    return foundry.applications.api.DocumentSheetV2.DEFAULT_OPTIONS.form.handler.call(this, event, form, formData, options);
   }
 
   /**

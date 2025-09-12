@@ -336,7 +336,9 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 }
 
-
+/**
+ * during MIGRATION of old format Vehicles, convert an old `gunner.name` StringField into a new `gunner` ForeignDocumentField
+ */
 Hooks.on('setup', async () => {
   const updates = deferredGunners;
   deferredGunners = null;

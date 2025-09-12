@@ -1253,6 +1253,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       justify-content: space-around;
       align-items: center;
       max-height: 130px;
+      text-align: center;
 
       input {
         background: url(../images/roundBack.webp);

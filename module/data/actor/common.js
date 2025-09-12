@@ -32,6 +32,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
       other: new fields.SchemaField({
         cosm: new fields.StringField({ initial: 'none', choices: torgeternity.cosmTypes, textSearch: true, required: true, blank: false, nullable: false }),
         possibilities: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
+        piety: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       }),
       shock: new fields.SchemaField({
         max: new fields.NumberField({ initial: 8, integer: true }),

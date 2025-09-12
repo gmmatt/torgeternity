@@ -29,6 +29,6 @@ export class MissileWeaponItemData extends BaseWeaponItemData {
     if (this.gunner)
       return this.gunner.system.skills[this.attackWith];
     else
-      return { value: 0 }
+      return { value: 0, adds: 0 }
   }
 }

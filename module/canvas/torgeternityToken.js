@@ -5,7 +5,6 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
   static #originToken;
   static #hoverToken;
   static #label;
-  static #hookSet;
 
   _onHoverIn(event, options) {
     const result = super._onHoverIn(event, options)
@@ -19,12 +18,7 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
 
     TorgEternityToken.#originToken = originToken;
     TorgEternityToken.#hoverToken = this;
-    TorgEternityToken.updateLabel(this);
-
-    if (!TorgEternityToken.#hookSet) {
-      Hooks.on('refreshToken', TorgEternityToken.updateLabel);
-      TorgEternityToken.#hookSet = true;
-    }
+    this.updateLabel();
 
     // Ensure it is visible
     TorgEternityToken.#label?.classList.toggle('hidden', false);
@@ -41,10 +35,14 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     return result;
   }
 
-  static updateLabel(token, flags) {
-    if (token !== TorgEternityToken.#hoverToken) return;
+  applyRenderFlags() {
+    super.applyRenderFlags();
+    if (this === TorgEternityToken.#hoverToken) this.updateLabel();
+  }
+
+  updateLabel() {
     // Token was made hidden while the hover was already active.
-    if (!token.visible) {
+    if (!this.visible) {
       TorgEternityToken.#label?.classList.toggle('hidden', true);
       TorgEternityToken.#hoverToken = null;
       return;
@@ -70,9 +68,9 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     if (!label.parent) document.querySelector("#hud #measurement")?.appendChild(label);
 
     // Determine the distance from the origin to this token.
-    let distance = canvas.grid.measurePath([TorgEternityToken.#originToken.object.center, token.center]).distance;
+    let distance = canvas.grid.measurePath([TorgEternityToken.#originToken.object.center, this.center]).distance;
     // Account for distance needing to be from edge to edge of token, with touching tokens having a distance of 1.
-    distance -= (TorgEternityToken.#originToken.height + token.document.height) / 2 - 1;
+    distance -= (TorgEternityToken.#originToken.height + this.document.height) / 2 - 1;
     if (distance < 0) distance = 0;
 
     //console.log(`show distance from ${TorgEternityToken.#originToken.name} to ${token.name}`, distance)
@@ -81,9 +79,9 @@ export default class TorgEternityToken extends foundry.canvas.placeables.Token {
     const distLabel = distance.toNearest(0.1).toLocaleString(game.i18n.lang);
     let html = `<div class="waypoint-label token-distance last"><span class="total-measurement">${distLabel} ${canvas.grid.units}</span></div>`;
     html = foundry.utils.parseHTML(html);
-    html.style.setProperty("--position-x", `${token.center.x}px`);
+    html.style.setProperty("--position-x", `${this.center.x}px`);
     // 50 to get text ABOVE the top of the token
-    html.style.setProperty("--position-y", `${token.center.y - 0.6 * token.h - (50 * canvas.dimensions.uiScale)}px`);
+    html.style.setProperty("--position-y", `${this.center.y - 0.6 * this.h - (50 * canvas.dimensions.uiScale)}px`);
     html.style.setProperty("--ui-scale", canvas.dimensions.uiScale);
 
     // Update the displayed label

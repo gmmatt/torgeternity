@@ -46,27 +46,36 @@
     </li>
   {{/inline}}
   {{#*inline "customSkillRow" content name}}
-    <li data-tooltip="torgeternity.sheetLabels.customSkill">
+    <li>
       <span>
         <a
           class="skill-roll" data-drag="true" data-action="skillRoll"
+          data-tooltip="torgeternity.sheetLabels.skillRollHint"
           data-testtype="skill"
           data-customskill="true"
           data-baseattribute="{{content.system.baseAttribute}}"
           data-adds="{{content.system.adds}}"
           data-value="{{content.system.value}}"
           data-unskilleduse="0"
-          data-name="{{content.name}}"
           {{disabled (not @root.editable)}}
+          data-name="{{content.name}}"
           data-isfav="{{content.system.isFav}}">
           {{content.name}}
         </a>
       </span>
-      <span class="skill-line skillAttr" style="width: 365px">
-        {{localize (concat 'torgeternity.attributes.' content.system.baseAttribute)}}
+      <span class="skill-line skillAttr">
+        <select name="items.{{content.id}}.system.baseAttribute">
+          {{selectOptions attrTypes selected=content.system.baseAttribute localize=true sort=true}}
+        </select>
       </span>
-      <span class="skillAdd">{{content.system.adds}}</span>
-      <span class="skill-line">{{content.system.value}}</span>
+      <span class="skillAdd">
+        <input
+          name="items.{{content.id}}.system.adds"
+          type="number"
+          value="{{content.system.adds}}"
+          data-dtype="Number" />
+      </span>
+      <input class="skill-line" placeholder="-" value="{{content.system.value}}" disabled />
       <span>
         <a class="toggleFav {{checked content.system.isFav}}" {{disabled (not @root.editable)}}>
           <i class="far fa-star"></i>
@@ -74,7 +83,7 @@
         <input
           class="favCheck"
           type="checkbox"
-          name="content.system.isFav"
+          name="items.{{content.id}}.system.isFav"
           {{checked content.system.isFav}}
           data-dtype="Boolean" />
       </span>

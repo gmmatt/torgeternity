@@ -97,14 +97,16 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       speedPenalty = -6;
     }
     this.topSpeed.penalty = speedPenalty;
-
-    this.defense = this.operatorSkill.value + parseInt(this.maneuver);
   }
 
   get operatorSkill() {
     if (this.operator)
-      return this.operator.system.skills[this.type.toLowerCase() + 'Vehicles'] ?? { value: 0 };
+      return this.operator.system.skills[this.type.toLowerCase() + 'Vehicles'] ?? { value: 0, adds: 0 };
     else
-      return { value: 0 };
+      return { value: 0, adds: 0 };
+  }
+
+  get defense() {
+    return (this.operatorSkill.value ?? 0) + parseInt(this.maneuver);
   }
 }
