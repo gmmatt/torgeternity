@@ -410,6 +410,11 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       if (options.woundsExceeded) updates['system.wounds.value'] = this.system.wounds.max;
       this.update(updates);
     }
+
+    // Update player list if the number of possibilities has changed.
+    if (changed.system?.other && 'possibilities' in changed.system.other) {
+      ui.players?.render();
+    }
   }
 
   /**
