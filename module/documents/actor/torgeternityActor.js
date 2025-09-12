@@ -1,5 +1,3 @@
-let deferredDrivers = new Set();
-
 /**
  *
  */
@@ -829,8 +827,7 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 }
 
 /**
- * After all Actors and Vehicles have been created, we can match up the named operator of each vehicle
- * with the actual Actor document for that named operator.
+ * during MIGRATION of old format Vehicles, convert an old `operator.name` StringField into a new `operator` ForeignDocumentField
  */
 Hooks.on('setup', () => {
   const updates = deferredDrivers;
