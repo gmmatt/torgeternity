@@ -95,7 +95,7 @@
       <th>
         <button
           class="chase-roll" data-action="chaseRoll" {{disabled (not @root.editable)}}
-          data-skill-value="{{document.operator.skillValue}}"
+          data-skill-value="{{document.system.operatorSkill.value}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
@@ -105,7 +105,7 @@
       <th>
         <button
           class="stunt-roll" data-action="stuntRoll" {{disabled (not @root.editable)}}
-          data-skill-value="{{document.operator.skillValue}}"
+          data-skill-value="{{document.system.operatorSkill.value}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
