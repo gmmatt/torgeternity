@@ -828,18 +828,21 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 }
 
-
+/**
+ * After all Actors and Vehicles have been created, we can match up the named operator of each vehicle
+ * with the actual Actor document for that named operator.
+ */
 Hooks.on('setup', () => {
   const updates = deferredDrivers;
   deferredDrivers = null;
   for (const update of updates) {
     const driver = game.actors.find(actor => actor.name === update.driverName);
     const vehicle = game.actors.get(update.vehicleId);
-    if (driver && vehicle)
-      vehicle.update({ 'system.operator': driver.id })
+    if (!vehicle)
+      console.warn(`VEHICLE OPERATOR: Failed to find vehicle with ID '${update.vehicleId}'`);
     else if (!driver)
-      console.warn(`VEHICLE MIGRATION: Failed to find driver called '${update.name}'`);
+      console.warn(`VEHICLE OPERATOR: Failed to find driver with name '${update.name}' for vehicle ${vehicle.name}'`);
     else
-      console.warn(`VEHICLE MIGRATION: Failed to find vehicle with ID '${update.vehicleId}'`);
+      vehicle.update({ 'system.operator': driver.id })
   }
 })
