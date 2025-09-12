@@ -126,18 +126,26 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
   async _onFirstRender(context, options) {
     // If it is a vehicle with a driver, then watch for changes to the driver's 
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.operator) {
+    if (actor.type === 'vehicle') {
       const operator = actor.system.operator;
       if (operator) operator.apps[this.id] = this;
+      for (const item of actor.items) {
+        const gunner = item.system.gunner;
+        if (gunner) gunner.apps[this.id] = this;
+      }
     }
     return super._onFirstRender(context, options);
   }
 
   _onClose(options) {
     const actor = this.actor;
-    if (actor.type === 'vehicle' && actor.system.operator) {
+    if (actor.type === 'vehicle') {
       const operator = actor.system.operator;
       if (operator) delete operator.apps[this.id];
+      for (const item of actor.items) {
+        const gunner = item.system.gunner;
+        if (gunner) delete gunner.apps[this.id];
+      }
     }
     super._onClose(options);
   }

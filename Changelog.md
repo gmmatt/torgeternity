@@ -12,6 +12,7 @@
 
 - Fix for the invalid system version in release 13.9.1
 - Get vehicle Roll, Chase, Stunt buttons using the correct operator skill.
+- Vehicle sheet is immediately updated if a gunner's skill changes.
 
 ## 13.9.1
 
