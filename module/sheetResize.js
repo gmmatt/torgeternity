@@ -11,7 +11,6 @@ export function sheetResize() {
     switch (sheet.document.type) {
       case 'stormknight':
         if (!ro_stormknight) ro_stormknight = new ResizeObserver((entries) => {
-          console.log(`triggered`, entries);
           for (const entry of entries) {
             const cr = entry.contentRect;
             if (cr.width < 510 || cr.height < 650) {
