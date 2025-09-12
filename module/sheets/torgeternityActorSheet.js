@@ -461,12 +461,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     return super._onDrop(event);
   }
 
-  static async #onSubmitActorForm(event, form, formData) {
+  static async #onSubmitActorForm(event, form, formData, options) {
+    if (!this.isEditable) return;
     const submitted = foundry.utils.expandObject(formData.object);
     if (submitted.items) {
       const updates = Object.entries(submitted.items).map(([itemid, fields]) => { return { _id: itemid, ...fields } });
-      return this.actor.updateEmbeddedDocuments('Item', updates);
+      await this.actor.updateEmbeddedDocuments('Item', updates);
     }
+    // Now normal ActorSheet form.handler
+    return foundry.applications.api.DocumentSheetV2.DEFAULT_OPTIONS.form.handler.call(this, event, form, formData, options);
   }
 
   /**
