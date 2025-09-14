@@ -100,10 +100,15 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
   }
 
   get operatorSkill() {
-    if (this.operator)
-      return this.operator.system.skills[this.type.toLowerCase() + 'Vehicles'] ?? { value: 0, adds: 0 };
-    else
-      return { value: 0, adds: 0 };
+    if (this.operator) {
+      let skill = this.operator.system.skills[this.type.toLowerCase() + 'Vehicles'];
+      if (skill) {
+        const result = { ...skill };
+        result.value -= this.operator.system.wounds.value;
+        return result;
+      }
+    }
+    return { value: 0, adds: 0 };
   }
 
   get defense() {
