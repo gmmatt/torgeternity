@@ -8,6 +8,7 @@
 - Add **Supernatural Evil** trait which can be set on abilities such as "Undead" (no automated effect yet).
 - Change **Custom Skills** to have the Total be calculated from the ADDS on the skill + the chosen attribute on the owning Actor. Custom skill values (not the name) can be edited directly in the skill list on Stormknight sheets.
 - A vehicle's operator/gunner skill is now modified by the wounds on the assigned actor.
+- A vehicle's operator/gunner skill can be entered manually, for when a GM doesn't want to create actors for a vehicle's crew.
 
 ### Bug Fixes
 

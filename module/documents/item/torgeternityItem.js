@@ -86,6 +86,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (typeof source.system?.gunner?.name === 'string') {
       if (source.system.gunner.name)
         deferredGunners.add({ weaponId: source._id, gunnerName: source.system.gunner.name })
+      if (source.system.gunner.skillValue)
+        source.system.gunnerFixedSkill = parseInt(source.system.gunner.skillValue);
       delete source.system.gunner;
     }
     return super.migrateData(source);

@@ -745,6 +745,8 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     if (source.type === 'vehicle' && typeof source.system?.operator?.name === 'string') {
       if (source.system.operator.name)
         deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
+      if (source.system.operator.skillValue)
+        source.system.operatorFixedSkill = parseInt(source.system.operator.skillValue)
       delete source.system.operator;
     }
     return super.migrateData(source);

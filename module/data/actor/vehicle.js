@@ -31,6 +31,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       description: new fields.HTMLField({ initial: '', textSearch: true }),
       maneuver: new fields.NumberField({ initial: -1, integer: true, nullable: false }),
       operator: new fields.ForeignDocumentField(TorgeternityActor),
+      operatorFixedSkill: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       price: new fields.SchemaField({
         dollars: new fields.StringField({ initial: '', nullable: false }),
@@ -102,13 +103,11 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
   get operatorSkill() {
     if (this.operator) {
       const skill = this.operator.system.skills[this.type.toLowerCase() + 'Vehicles'];
-      if (skill) {
-        const result = { ...skill };
-        result.value -= this.operator.system.wounds.value;
-        return result;
-      }
-    }
-    return { value: 0, adds: 0 };
+      const result = skill ? { ...skill } : { value: 0, adds: 0 };
+      result.value -= this.operator.system.wounds.value;
+      return result;
+    } else
+      return { value: this.operatorFixedSkill };
   }
 
   get defense() {

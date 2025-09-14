@@ -19,6 +19,7 @@ export class MissileWeaponItemData extends BaseWeaponItemData {
       }),
       loadedAmmo: new fields.DocumentIdField({ initial: null }),
       gunner: new fields.ForeignDocumentField(TorgeternityActor),
+      gunnerFixedSkill: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
     };
   }
 
@@ -27,13 +28,12 @@ export class MissileWeaponItemData extends BaseWeaponItemData {
    */
   get gunnerSkill() {
     if (this.gunner) {
-      const skill = this.gunner.system.skills[this.attackWith];
-      if (skill) {
-        const result = { ...skill };
-        result.value -= this.gunner.system.wounds.value;
-        return result;
-      }
+      const skill = this.gunner.system.skills[this.attackWith]
+      const result = skill ? { ...skill } : { value: 0, adds: 0 };
+      result.value -= this.gunner.system.wounds.value;
+      return result;
+    } else {
+      return { value: this.gunnerFixedSkill }
     }
-    return { value: 0, adds: 0 }
   }
 }
