@@ -242,8 +242,10 @@
           data-action="rollDrama">{{localize 'torgeternity.chatText.drama'}}</a>
         <a class="button roll-button {{plus3Style}}"
           data-action="addPlus3">{{localize 'torgeternity.chatText.bonusCard'}}</a>
-        <a class="button roll-button {{bdStyle}}"
-          data-action="addBd">{{localize 'torgeternity.chatText.bonusDice'}}</a>
+        {{#if showBD}}
+          <a class="button roll-button"
+            data-action="addBd">{{localize 'torgeternity.chatText.bonusDice'}}</a>
+        {{/if}}
       </div>
     {{/if}}
   </div>

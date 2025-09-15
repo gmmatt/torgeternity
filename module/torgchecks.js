@@ -382,7 +382,7 @@ export async function renderSkillChat(test) {
       if (test.testType === 'soak') test.soakWounds = 1;
     }
 
-    if (test.testType === 'soak' && test.soakWounds) test.showApplySoak = true;
+    test.showApplySoak = (test.testType === 'soak' && test.soakWounds);
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
     if (testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result))
@@ -440,7 +440,6 @@ export async function renderSkillChat(test) {
       test.dramaStyle = 'hidden';
       test.heroStyle = 'hidden';
       test.isFavStyle = 'hidden';
-      test.bdStyle = 'hidden';
       test.plus3Style = 'hidden';
       if (test.testType === 'soak')
         test.chatNote =
@@ -591,21 +590,20 @@ export async function renderSkillChat(test) {
       test.testType === 'vehicleBase'
     ) {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
-      test.bdStyle = 'hidden';
     } else if (test.testType === 'attack') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
+      if (test.rollTotal !== 1) test.showBD = true;
     } else if (test.testType === 'power') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
-      test.bdStyle = test.isAttack ? '' : 'hidden';
+      if (test.isAttack) test.showBD = true;
     } else if (test.testType === 'custom') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
       test.outcomeColor = 'hidden;';
       test.resultTextColor = 'display:hidden;';
-      test.bdStyle = '';
+      test.showBD = true;
       test.upStyle = 'hidden';
     } else {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.attributeTestLabel');
-      test.bdStyle = 'hidden';
     }
     test.typeLabel += ' ';
 

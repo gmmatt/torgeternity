@@ -824,7 +824,6 @@ export class TorgeternityMacros {
       hasModifiers: false,
       targetAll: Array.from(game.user.targets).map(token => oneTestTarget(token)),
       bonus: 0,
-      bdStyle: '',
       possibilityStyle: 'hidden',
       coverModifier: 0,
       chatTitle: '',
