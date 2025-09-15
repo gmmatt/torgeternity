@@ -27,6 +27,11 @@ export default class TorgeternityItem extends foundry.documents.Item {
     dramaCard: 'systems/torgeternity/templates/chat/dramaCard.hbs',
     customSkill: 'systems/torgeternity/templates/chat/customSkill-card.hbs',
     vehicleAddOn: 'systems/torgeternity/templates/chat/vehicleAddOn-card.hbs',
+    // Different types of attacks (not fully fleshed out)
+    meleeweapon: 'systems/torgeternity/templates/chat/meleeweapon-card.hbs',
+    //heavyweapon: 'systems/torgeternity/templates/chat/heavyweapon-card.hbs',
+    //firearm: 'systems/torgeternity/templates/chat/firearm-card.hbs',
+    //customAttack: 'systems/torgeternity/templates/chat/customAttack-card.hbs',
   };
 
   /**
@@ -86,6 +91,8 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (typeof source.system?.gunner?.name === 'string') {
       if (source.system.gunner.name)
         deferredGunners.add({ weaponId: source._id, gunnerName: source.system.gunner.name })
+      if (source.system.gunner.skillValue)
+        source.system.gunnerFixedSkill = parseInt(source.system.gunner.skillValue);
       delete source.system.gunner;
     }
     return super.migrateData(source);
@@ -223,16 +230,29 @@ export default class TorgeternityItem extends foundry.documents.Item {
     actor.updateEmbeddedDocuments('ActiveEffect', effectUpdates);
   }
 
+  async #encodeString(options) {
+    const template = TorgeternityItem.CHAT_TEMPLATE[this.type];
+    if (!template) return undefined;
+    const renderedTemplate = await foundry.applications.handlebars.renderTemplate(template, this);
+    return foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate, { secrets: this.isOwner });
+  }
   /**
    *
    */
   async toMessage() {
-    const renderedTemplate = await foundry.applications.handlebars.renderTemplate(TorgeternityItem.CHAT_TEMPLATE[this.type], this);
-
     return ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      content: await foundry.applications.ux.TextEditor.enrichHTML(renderedTemplate, { secrets: this.isOwner }),
+      content: await this.#encodeString({ secrets: this.isOwner }),
     });
+  }
+
+  async _buildEmbedHTML(config, options) {
+    console.log('Item._buildEmbedHTML', { item: this, config, options });
+    const enriched = await this.#encodeString(options);
+    if (!enriched) return undefined;
+    const container = document.createElement("div");
+    container.innerHTML = enriched;
+    return container.children;
   }
 
   /**
@@ -336,7 +356,9 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 }
 
-
+/**
+ * during MIGRATION of old format Vehicles, convert an old `gunner.name` StringField into a new `gunner` ForeignDocumentField
+ */
 Hooks.on('setup', async () => {
   const updates = deferredGunners;
   deferredGunners = null;

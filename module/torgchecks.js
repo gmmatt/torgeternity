@@ -50,12 +50,6 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
-  test.applyStymiedLabel = 'hidden';
-  test.applyVulnerableLabel = 'hidden';
-  test.applyActorVulnerableLabel = 'hidden';
-  test.applyDamLabel = 'hidden';
-  test.applyEffectsLabel = 'hidden';
-  test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   let iteratedRoll;
 
@@ -65,9 +59,7 @@ export async function renderSkillChat(test) {
   // Handle ammo, if not opt-out. First, check if there is enough ammo, then reduce it.
   if (testItem?.weaponWithAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
     await testItem.reduceAmmo(test.burstModifier, test.targetAll?.length);
-    test.ammoLabel = 'display:table-row';
-  } else {
-    test.ammoLabel = 'hidden';
+    test.ammoCount = testItem.system.ammo.value;
   }
 
   const uniqueDN = game.settings.get('torgeternity', 'uniqueDN') ? await highestDN(test) : undefined;
@@ -101,8 +93,6 @@ export async function renderSkillChat(test) {
       !test.customSkill &&
       !testActor.system.skills[test.skillName].adds);
 
-    test.unskilledLabel = test.unskilledTest ? '' : 'hidden';
-
     // Generate roll, if needed
     if (test.rollTotal === 0 && !test.explicitBonus) {
       // Generate dice roll
@@ -114,9 +104,7 @@ export async function renderSkillChat(test) {
         test.disfavored = false;
         test.chatNote += game.i18n.localize('torgeternity.sheetLabels.favDis');
       }
-      if (!test.isFav) {
-        test.isFavStyle = 'hidden';
-      }
+      if (!test.isFav) test.hideFavButton = true;
       if (test.disfavored) {
         // even if explosion occured, we keep first die
         test.rollTotal = test.diceroll.dice[0].results[0].result;
@@ -196,9 +184,6 @@ export async function renderSkillChat(test) {
     if (test.testType === 'activeDefense' || test.testType === 'activeDefenseUpdate') {
       if (test.bonus < 1) test.bonus = 1;
     }
-
-    // Add plus label if number is positive
-    test.bonusPlusLabel = (test.bonus >= 1) ? '' : 'hidden';
 
     function modifierString(label, value) {
       let result = game.i18n.localize(label);
@@ -368,7 +353,7 @@ export async function renderSkillChat(test) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
       test.result = TestResult.FAILURE;
       if (test.testType === 'power') {
-        test.backlashLabel = '';
+        test.showBacklashButtons = true;
       }
       test.outcomeColor = useColorBlind ? 'color: red' :
         'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
@@ -395,10 +380,11 @@ export async function renderSkillChat(test) {
       if (test.testType === 'soak') test.soakWounds = 1;
     }
 
-    test.applySoakLabel = (test.testType === 'soak' && test.soakWounds);
+    test.showApplySoak = (test.testType === 'soak' && test.soakWounds);
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
-    test.applyEffectsLabel = testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result) ?? 'hidden';
+    if (testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result))
+      test.showApplyEffects = true;
 
     // Approved Action Processing
     test.successfulDefendApprovedAction = false;
@@ -414,8 +400,6 @@ export async function renderSkillChat(test) {
       if (testActor.type === 'stormknight' && isApprovedAction(test))
         test.successfulApprovedAction = true;
     }
-    // Turn on + sign for modifiers?
-    test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
 
     // Concentration
     if (first && test.result >= TestResult.STANDARD && testItem?.system.requiresConcentration) {
@@ -453,9 +437,8 @@ export async function renderSkillChat(test) {
       test.upStyle = 'hidden';
       test.dramaStyle = 'hidden';
       test.heroStyle = 'hidden';
-      test.isFavStyle = 'hidden';
-      test.bdStyle = 'hidden';
-      test.plus3Style = 'hidden';
+      test.hideFavButton = true;
+      test.hidePlus3 = true;
       if (test.testType === 'soak')
         test.chatNote =
           game.i18n.localize('torgeternity.sheetLabels.soakNull') +
@@ -541,7 +524,7 @@ export async function renderSkillChat(test) {
           test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');
           if (test.attackTraits.includes('unwieldy')) {
             test.damageDescription += ` (${game.i18n.localize('torgeternity.traits.unwieldy')})`;
-            test.applyActorVulnerableLabel = '';
+            test.showApplyVeryVulnerable = true;
           }
 
         } else {
@@ -571,14 +554,14 @@ export async function renderSkillChat(test) {
               soakWounds: test.soakWounds,
             });
 
-          if (damage.wounds || damage.shocks) test.applyDamLabel = '';
+          if (damage.wounds || damage.shocks) test.showApplyDamage = true;
           test.damageDescription = damage.label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
 
           // 'stagger' trait on a weapon inflicts STYMIED after any damage is dealt.
           if ((damage.shocks > 0 || damage.wounds > 0) && test.attackTraits?.includes('stagger')) {
-            test.applyStymiedLabel = '';
+            test.showApplyStymied = true;
           }
         }
       } else {
@@ -605,21 +588,20 @@ export async function renderSkillChat(test) {
       test.testType === 'vehicleBase'
     ) {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
-      test.bdStyle = 'hidden';
     } else if (test.testType === 'attack') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
+      if (test.rollTotal !== 1) test.showBD = true;
     } else if (test.testType === 'power') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
-      test.bdStyle = test.isAttack ? '' : 'hidden';
+      if (test.isAttack) test.showBD = true;
     } else if (test.testType === 'custom') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
       test.outcomeColor = 'hidden;';
       test.resultTextColor = 'display:hidden;';
-      test.bdStyle = '';
+      test.showBD = true;
       test.upStyle = 'hidden';
     } else {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.attributeTestLabel');
-      test.bdStyle = 'hidden';
     }
     test.typeLabel += ' ';
 
@@ -635,9 +617,6 @@ export async function renderSkillChat(test) {
         test.upStyle = 'hidden';
     }
 
-    // Display cards played label?
-    test.cardsPlayedLabel = (test.cardsPlayed > 0) ? '' : 'hidden';
-
     // Disable unavailable menu options (Note: possibilities are always available)
 
     if (test.upTotal > 0) test.upStyle = 'disabled';
@@ -647,18 +626,14 @@ export async function renderSkillChat(test) {
     if (test.actorType === 'threat') {
       test.heroStyle = 'hidden';
       test.dramaStyle = 'hidden';
-      test.plus3Style = 'hidden';
+      test.hidePlus3 = true;
     }
 
-    // Display chat notes label?
-
-    test.notesLabel = test.chatNote ? '' : 'hidden';
-
     if (test.testType === 'interactionAttack' && test.rollResult >= test.DN) {
-      test.applyDamLabel = 'hidden';
+      test.showApplyDamage = false;
       if (!target.dummyTarget) {
-        test.applyStymiedLabel = '';
-        test.applyVulnerableLabel = '';
+        test.showApplyStymied = true;
+        test.showApplyVulnerable = true;
       }
     }
 
@@ -984,10 +959,9 @@ export async function rollAttack(actor, item) {
   }
 
   if (actor.type === 'vehicle') {
-    const gunner = item.system.gunner;
-    skillData = gunner?.system.skills[attackWith] ?? null;
+    skillData = item.system.gunnerSkill;
     skillValue = skillData?.value ?? '-';
-    attributes = gunner?.system.attributes ?? 0;
+    attributes = item.system.gunner?.system.attributes ?? 0;
   } else {
     skillData = actor.system.skills[attackWith];
     skillValue = skillData.value;

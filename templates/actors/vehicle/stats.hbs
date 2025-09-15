@@ -68,7 +68,7 @@
           data-dtype="text" readonly />
         <a class="icon fa-solid fa-trash remove-operator {{disabled (not document.system.operator.name)}}"
           data-action="removeOperator" data-tooltip="{{localize 'torgeternity.sheetLabels.removeOperator'}}"></a>
-        {{#if (or (not document.system.operatorSkill.adds) (eq document.system.operatorSkill.adds 0))}}
+        {{#if (or (eq document.system.operatorSkill.value 0) (eq document.system.operatorSkill.adds 0))}}
           <i class="far fa-ban crew-unskilled"
             data-tooltip="{{localize 'torgeternity.sheetLabels.crewUnskilledOperator'}}"></i>
         {{else}}
@@ -78,8 +78,8 @@
       </th>
       <th>
         {{localize "torgeternity.sheetLabels.skill"}}
-        <input name="document.system.operatorSkill.value" type="number" value="{{document.system.operatorSkill.value}}"
-          data-dtype="Number" readonly />
+        <input name="system.operatorFixedSkill" type="number" value="{{document.system.operatorSkill.value}}"
+          data-dtype="Number" {{#if document.system.operator.name}}readonly{{/if}} />
       </th>
       <th>{{localize "torgeternity.sheetLabels.defense"}} {{document.system.defense}}</th>
       <th>
@@ -95,7 +95,7 @@
       <th>
         <button
           class="chase-roll" data-action="chaseRoll" {{disabled (not @root.editable)}}
-          data-skill-value="{{document.operator.skillValue}}"
+          data-skill-value="{{document.system.operatorSkill.value}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
@@ -105,7 +105,7 @@
       <th>
         <button
           class="stunt-roll" data-action="stuntRoll" {{disabled (not @root.editable)}}
-          data-skill-value="{{document.operator.skillValue}}"
+          data-skill-value="{{document.system.operatorSkill.value}}"
           data-speed="{{document.system.topSpeed.value}}"
           data-maneuver="{{document.system.maneuver}}">
           <i class="fas fa-dice-d20"></i>
@@ -133,8 +133,12 @@
         <div class="gunner">{{item.system.gunner.name}}</div>
         <a class="icon fa-solid fa-trash remove-gunner {{disabled (not item.system.gunner.name)}}"
           data-action="removeGunner" data-tooltip="{{localize 'torgeternity.sheetLabels.removeGunner'}}"></a>
-        <div class="skill">{{item.system.gunnerSkill.value}}</div>
-        {{#if (or (not item.system.gunnerSkill.adds) (eq item.system.gunnerSkill.adds 0))}}
+
+        <div class="skill"><input name="items.{{item.id}}.system.gunnerFixedSkill" type="number"
+            value="{{item.system.gunnerSkill.value}}"
+            data-dtype="Number" {{#if item.system.gunner.name}}readonly{{/if}} /></div>
+
+        {{#if (or (eq item.system.gunnerSkill.value 0) (eq item.system.gunnerSkill.adds 0))}}
           <i class="far fa-ban crew-unskilled"
             data-tooltip="{{localize 'torgeternity.sheetLabels.crewUnskilledWeapon'}}"></i>
         {{else}}

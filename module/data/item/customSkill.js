@@ -12,9 +12,18 @@ export class CustomSkillItemData extends BaseItemData {
     return {
       ...super.defineSchema('customSkill'),
       adds: new fields.NumberField({ initial: 1 }),
-      baseAttribute: new fields.StringField({ initial: 'strength' }),
-      value: new fields.NumberField({ initial: 1 }),
+      baseAttribute: new fields.StringField({ initial: 'strength', choices: CONFIG.torgeternity.attributeTypes }),
       isFav: new fields.BooleanField({ initial: false }),
     };
+  }
+
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    const actor = this.parent?.parent;
+    if (actor instanceof Actor) {
+      this.value = this.adds + (actor.system.attributes[this.baseAttribute]?.value ?? 0);
+    } else {
+      this.value = this.adds;
+    }
   }
 }

@@ -1,14 +1,30 @@
 # TORG Eternity Changelog
 
-## NEXT VERSION
 
-- Remove unnecessary deletion of `flags.torgeternity.test` from chatmsg before deleting chatmsg.
-- Remove setting `test.parentId` since it is never used.
+## 13.10.0
+
+- #391: Having **two melee weapons** equipped increase the melee weapon defense of the Actor by 2 (Core pg 126). The change can be seen in the DEFENSES block of the Actor sheet.
+- #478: Add optional **Piety score** in the XP block of Stormknights (can be disabled in Game Settings). Update the "Buff" macro to support adding/removing Piety from the currently selected Actors.
+- Add **Supernatural Evil** trait which can be set on abilities such as "Undead" (no automated effect yet).
+- Change **Custom Skills** to have the Total be calculated from the ADDS on the skill + the chosen attribute on the owning Actor. Custom skill values (not the name) can be edited directly in the skill list on Stormknight sheets.
+- A vehicle's operator/gunner skill is now modified by the wounds on the assigned actor.
+- A vehicle's operator/gunner skill can be entered manually, for when a GM doesn't want to create actors for a vehicle's crew.
+- Reduce internal size of skill test chat message by modifying how apply buttons are selected for display.
+- Allow `@Embed[itemuuid]` within Journal pages (and other enriched fields) to show same layout used for "Send to Chat" of the item.
+
+### Bug Fixes
+
+- Fix for the invalid system version in release 13.9.1
+- Get vehicle Roll, Chase, Stunt buttons using the correct operator skill.
+- Vehicle sheet is immediately updated if a gunner's skill changes.
+- Vehicle Defense immmediately updates when a gunner's skill changes.
 
 ## 13.9.1
 
 - Don't try to auto-convert a "Rollable Special Ability" with damage into a "custom attack".
 - Fix error caused when rolling a BD on an "Unarmed Attack" interaction attack.
+- Remove unnecessary deletion of `flags.torgeternity.test` from chatmsg before deleting chatmsg.
+- Remove setting `test.parentId` since it is never used.
 
 ## 13.9.0 - Concentration, Multi-Action, Soaking
 

@@ -849,6 +849,10 @@
         "name": "Automatisches Entkoppeln",
         "hint": "Bei einer Welle oder Probe die eine Entkopplung hervorruft, wird der Charakter erhält der Charakter automatisch den Zustand Entkoppelt"
       },
+      "showPiety": {
+        "name": "Frömmigkeit im Charakterbogen anzeigen",
+        "hint": "Anzeige des aktuellen Frömmigkeitswertes eines Storm Knight in seinem Charakterbogen"
+      },
       "dramaCardUp": {
         "name": "Oberhand nur von Drama Karte erlaubt",
         "hint": "Oberhand-Knopf wird verborgen wenn kein Oberhand-Effekt nicht auf der Dramakarte angegeben ist. (default true)"
@@ -1001,6 +1005,7 @@
       "passiveEffects": "Passive Effekte",
       "perks": "Vorzüge",
       "perksAbilities": "Vorzüge/Fähigkeiten",
+      "piety": "Frömmigkeit",
       "noPerksAdded": "Keine Vorzüge vorhanden",
       "pool": "Aktionenpool",
       "possibilities": "Möglichkeiten",
@@ -1252,6 +1257,7 @@
       "shotgun": "Schrotflinte",
       "small": "Klein",
       "stagger": "Erschüttern",
+      "supernaturalEvil": "Übernatürliches Böses",
       "thrown": "Wurfwaffe",
       "torso": "Torso",
       "twoHanded": "Zweihändig",
@@ -1284,6 +1290,7 @@
     "traitGroup": {
       "defense": "Verteidigung",
       "melee": "Nahkampf",
+      "other": "Andere",
       "ranged": "Fernkampf"
     },
     "vehicleTypes": {

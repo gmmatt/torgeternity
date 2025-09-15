@@ -1,5 +1,3 @@
-let deferredDrivers = new Set();
-
 /**
  *
  */
@@ -143,6 +141,11 @@ export default class TorgeternityActor extends foundry.documents.Actor {
 
       const meleeWeaponsDefenseSkill = skills.meleeWeapons.value || attributes.dexterity.value;
       this.defenses.meleeWeapons.value = meleeWeaponsDefenseSkill + this.defenses.meleeWeapons.mod;
+      // (Core pg 126) Wielding two melee weapons increases melee weapons defense by 2.
+      if (this.type !== 'vehicle') {
+        const meleeWeaponCount = this.items.filter(item => item.type === 'meleeweapon' && item.system.equipped);
+        if (meleeWeaponCount.length > 1) this.defenses.meleeWeapons.value += 2;
+      }
 
       const unarmedCombatDefenseSkill = skills.unarmedCombat.value || attributes.dexterity.value;
       this.defenses.unarmedCombat.value = unarmedCombatDefenseSkill + this.defenses.unarmedCombat.mod;
@@ -404,6 +407,11 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       if (options.shockExceeded) updates['system.shock.value'] = this.system.shock.max;
       if (options.woundsExceeded) updates['system.wounds.value'] = this.system.wounds.max;
       this.update(updates);
+    }
+
+    // Update player list if the number of possibilities has changed.
+    if (changed.system?.other && 'possibilities' in changed.system.other) {
+      ui.players?.render();
     }
   }
 
@@ -737,6 +745,8 @@ export default class TorgeternityActor extends foundry.documents.Actor {
     if (source.type === 'vehicle' && typeof source.system?.operator?.name === 'string') {
       if (source.system.operator.name)
         deferredDrivers.add({ vehicleId: source._id, driverName: source.system.operator.name })
+      if (source.system.operator.skillValue)
+        source.system.operatorFixedSkill = parseInt(source.system.operator.skillValue)
       delete source.system.operator;
     }
     return super.migrateData(source);
@@ -818,18 +828,20 @@ export default class TorgeternityActor extends foundry.documents.Actor {
   }
 }
 
-
+/**
+ * during MIGRATION of old format Vehicles, convert an old `operator.name` StringField into a new `operator` ForeignDocumentField
+ */
 Hooks.on('setup', () => {
   const updates = deferredDrivers;
   deferredDrivers = null;
   for (const update of updates) {
     const driver = game.actors.find(actor => actor.name === update.driverName);
     const vehicle = game.actors.get(update.vehicleId);
-    if (driver && vehicle)
-      vehicle.update({ 'system.operator': driver.id })
+    if (!vehicle)
+      console.warn(`VEHICLE OPERATOR: Failed to find vehicle with ID '${update.vehicleId}'`);
     else if (!driver)
-      console.warn(`VEHICLE MIGRATION: Failed to find driver called '${update.name}'`);
+      console.warn(`VEHICLE OPERATOR: Failed to find driver with name '${update.name}' for vehicle ${vehicle.name}'`);
     else
-      console.warn(`VEHICLE MIGRATION: Failed to find vehicle with ID '${update.vehicleId}'`);
+      vehicle.update({ 'system.operator': driver.id })
   }
 })

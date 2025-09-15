@@ -551,6 +551,7 @@ export class TorgeternityMacros {
         { action: 'all', label: 'torgeternity.dialogWindow.buffMacro.allAttributes', },
         { action: 'physicalDefense', label: 'torgeternity.dialogWindow.buffMacro.physicalDefenses', },
         { action: 'defense', label: 'torgeternity.sheetLabels.defenses', },
+        { action: 'piety', label: 'torgeternity.sheetLabels.piety', },
         { action: 'cancel', label: 'torgeternity.dialogWindow.buffMacro.cancelEffects', },
       ],
     });
@@ -584,17 +585,19 @@ export class TorgeternityMacros {
     });
 
     // choose the duration of the effect
-    const duration = await DialogV2.wait({
-      window: { title: 'torgeternity.dialogWindow.buffMacro.timeLabel' },
-      content: `<div>${game.i18n.localize('torgeternity.dialogWindow.buffMacro.time')} <input name="dur" value=1 style="width:50px"/></div>`,
-      buttons: [
-        {
-          action: '1',
-          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
-          callback: (event, button, dialog) => parseInt(dialog.element.querySelector('[name=dur]').value)
-        },
-      ],
-    });
+    const duration =
+      (attr !== 'piety') ?
+        duration = await DialogV2.wait({
+          window: { title: 'torgeternity.dialogWindow.buffMacro.timeLabel' },
+          content: `<div>${game.i18n.localize('torgeternity.dialogWindow.buffMacro.time')} <input name="dur" value=1 style="width:50px"/></div>`,
+          buttons: [
+            {
+              action: '1',
+              label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+              callback: (event, button, dialog) => parseInt(dialog.element.querySelector('[name=dur]').value)
+            },
+          ],
+        }) : 0;
 
     let newEffect = {};
 
@@ -642,7 +645,7 @@ export class TorgeternityMacros {
         ],
         disabled: false,
       };
-      // Aspect modifications related to bonus/malus
+      // Aspect modifications related to bonus/penalty
       newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
       newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -670,7 +673,7 @@ export class TorgeternityMacros {
         ],
         disabled: false,
       };
-      // Aspect modifications related to bonus/malus
+      // Aspect modifications related to bonus/penalty
       newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
       newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -708,9 +711,19 @@ export class TorgeternityMacros {
         ],
         disabled: false,
       };
-      // Aspect modifications related to bonus/malus
+      // Aspect modifications related to bonus/penalty
       newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
       newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
+
+    } else if (attr === 'piety') {
+      let actors = game.canvas.tokens.controlled.map(t => t.actor);
+      if (!actors.length) actors = [game.user.character];
+      for (const actor of actors) {
+        if (Object.hasOwn(actor.system.other, 'piety'))
+          await actor.update({ 'system.other.piety': actor.system.other.piety + bonus });
+      }
+      return;
+
     } else {
       // One attribute
       // preparation of attribute effect
@@ -727,7 +740,7 @@ export class TorgeternityMacros {
         disabled: false,
       };
 
-      // Aspect modifications related to bonus/malus
+      // Aspect modifications related to bonus/penalty
       newEffect.tint = bonus < 0 ? '#ff0000' : '#00ff00';
       newEffect.icon = bonus < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     }
@@ -811,30 +824,23 @@ export class TorgeternityMacros {
       hasModifiers: false,
       targetAll: Array.from(game.user.targets).map(token => oneTestTarget(token)),
       bonus: 0,
-      bdStyle: '',
       possibilityStyle: 'hidden',
       coverModifier: 0,
       chatTitle: '',
       DN: 9,
-      unskilledLabel: 'hidden',
       diceroll: null,
-      isFavStyle: 'hidden',
+      hideFavButton: true,
       unskilledTest: false,
       diceList: [10],
       combinedRollTotal: 10,
-      bonusPlusLabel: 'hidden',
       modifiers: 0,
       modifierText: '',
       cardsPlayed: 0,
       rollResult: 11,
       outcome: '',
       actionTotalContent: '',
-      modifierPlusLabel: 'hidden',
       resultText: '',
       resultTextColor: 'display:none',
-      disconnectLabel: 'hidden',
-      cardsPlayedLabel: 'hidden',
-      notesLabel: 'hidden',
     });
   }
 }
