@@ -7,6 +7,9 @@ import { PossibilityByCosm } from '../possibilityByCosm.js';
 
 const { DialogV2 } = foundry.applications.api;
 
+let ro_stormknight;
+let ro_threat;
+
 /**
  *
  */
@@ -371,6 +374,41 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
           const concernedAttribute = target.dataset.baseattributeinput;
           this.actor.update({ [`system.attributes.${concernedAttribute}.base`]: parseInt(target.value) });
         }));
+    }
+
+    // Register handler to notice changes in the size of the sheet,
+    // and update its layout automatically.
+    console.log(`ActorSheet#render`);
+    switch (this.actor.type) {
+      case 'stormknight':
+        if (!ro_stormknight) ro_stormknight = new ResizeObserver((entries) => {
+          for (const entry of entries) {
+            const cr = entry.contentRect;
+            if (cr.width < 510 || cr.height < 650) {
+              entry.target.classList.add('compact');
+            } else {
+              entry.target.classList.remove('compact');
+            }
+          }
+        });
+        ro_stormknight.observe(this.element);
+        break;
+
+      case 'threat':
+        if (!ro_threat) ro_threat = new ResizeObserver((entries) => {
+          for (const entry of entries) {
+            const cr = entry.contentRect;
+            if (cr.height < 630) {
+              entry.target.classList.add('tabsOff');
+              entry.target.classList.remove('tabsOn');
+            } else {
+              entry.target.classList.remove('tabsOff');
+              entry.target.classList.add('tabsOn');
+            }
+          }
+        });
+        ro_threat.observe(this.element);
+        break;
     }
 
     // Everything below here is only needed if the sheet is editable
