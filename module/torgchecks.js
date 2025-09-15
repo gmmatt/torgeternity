@@ -104,9 +104,7 @@ export async function renderSkillChat(test) {
         test.disfavored = false;
         test.chatNote += game.i18n.localize('torgeternity.sheetLabels.favDis');
       }
-      if (!test.isFav) {
-        test.isFavStyle = 'hidden';
-      }
+      if (!test.isFav) test.hideFavButton = true;
       if (test.disfavored) {
         // even if explosion occured, we keep first die
         test.rollTotal = test.diceroll.dice[0].results[0].result;
@@ -439,8 +437,8 @@ export async function renderSkillChat(test) {
       test.upStyle = 'hidden';
       test.dramaStyle = 'hidden';
       test.heroStyle = 'hidden';
-      test.isFavStyle = 'hidden';
-      test.plus3Style = 'hidden';
+      test.hideFavButton = true;
+      test.hidePlus3 = true;
       if (test.testType === 'soak')
         test.chatNote =
           game.i18n.localize('torgeternity.sheetLabels.soakNull') +
@@ -628,7 +626,7 @@ export async function renderSkillChat(test) {
     if (test.actorType === 'threat') {
       test.heroStyle = 'hidden';
       test.dramaStyle = 'hidden';
-      test.plus3Style = 'hidden';
+      test.hidePlus3 = true;
     }
 
     if (test.testType === 'interactionAttack' && test.rollResult >= test.DN) {

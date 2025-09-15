@@ -57,7 +57,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
 
     // reRoll because favored
-    test.isFavStyle = 'hidden';
+    test.hideFavButton = true;
 
     const diceroll = await new Roll('1d20x10x20').evaluate();
     test.diceroll = diceroll;
@@ -115,7 +115,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       game.user.isGM ? game.user.setFlag('torgeternity', 'GMpossibilities', possPool - 1) : {};
     }
 
-    test.isFavStyle = 'hidden';
+    test.hideFavButton = true;
 
     // Roll for Possibility
     // possibilities is allowed 2 times (case in Nile Empire)
@@ -169,7 +169,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    test.isFavStyle = 'hidden';
+    test.hideFavButton = true;
 
     // Roll for Up
     const diceroll = await new Roll('1d20x10x20').evaluate();
@@ -194,7 +194,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    test.isFavStyle = 'hidden';
+    test.hideFavButton = true;
 
     // Roll for Possibility
     const diceroll = await new Roll('1d20x10x20').evaluate();
@@ -221,7 +221,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    test.isFavStyle = 'hidden';
+    test.hideFavButton = true;
 
     // Increase cards played by 1
     const diceroll = await new Roll('1d20x10x20').evaluate();
@@ -248,7 +248,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
     }
-    test.isFavStyle = 'hidden';
+    test.hideFavButton = true;
 
     // Add 1 to cards played
     test.cardsPlayed++;
@@ -272,9 +272,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.upStyle = 'hidden';
     test.dramaStyle = 'hidden';
     test.heroStyle = 'hidden';
-    test.isFavStyle = 'hidden';
-    test.plus3Style = 'hidden';
-    test.isFavStyle = 'hidden';
+    test.hideFavButton = true;
+    test.hidePlus3 = true;
 
     const finalValue = await rollBonusDie(test.trademark, 1);
 

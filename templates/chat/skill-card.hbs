@@ -230,21 +230,22 @@
 
     {{#if ownsActor}}
       <div class="skill-roll-menu">
-        <a class="button roll-button {{isFavStyle}}"
-          data-action="rollFav">{{localize 'torgeternity.chatText.favored'}}</a>
-        <a class="button roll-button {{possibilityStyle}}"
-          data-action="rollPossibility"
+        {{#unless hideFavButton}}
+          <a class="button roll-button" data-action="rollFav">{{localize 'torgeternity.chatText.favored'}}</a>
+        {{/unless}}
+        <a class="button roll-button {{possibilityStyle}}" data-action="rollPossibility"
           data-tooltip="{{localize 'torgeternity.chatText.possibilityTooltip'}}">{{localize 'torgeternity.chatText.possibility'}}</a>
-        <a class="button roll-button {{upStyle}}" data-action="rollUp">{{localize 'torgeternity.chatText.up'}}</a>
+        <a class="button roll-button {{upStyle}}"
+          data-action="rollUp">{{localize 'torgeternity.chatText.up'}}</a>
         <a class="button roll-button {{heroStyle}}"
           data-action="rollHero">{{localize 'torgeternity.chatText.hero'}}</a>
         <a class="button roll-button {{dramaStyle}}"
           data-action="rollDrama">{{localize 'torgeternity.chatText.drama'}}</a>
-        <a class="button roll-button {{plus3Style}}"
-          data-action="addPlus3">{{localize 'torgeternity.chatText.bonusCard'}}</a>
+        {{#unless hidePlus3}}
+          <a class="button roll-button" data-action="addPlus3">{{localize 'torgeternity.chatText.bonusCard'}}</a>
+        {{/unless}}
         {{#if showBD}}
-          <a class="button roll-button"
-            data-action="addBd">{{localize 'torgeternity.chatText.bonusDice'}}</a>
+          <a class="button roll-button" data-action="addBd">{{localize 'torgeternity.chatText.bonusDice'}}</a>
         {{/if}}
       </div>
     {{/if}}

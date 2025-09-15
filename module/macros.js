@@ -829,7 +829,7 @@ export class TorgeternityMacros {
       chatTitle: '',
       DN: 9,
       diceroll: null,
-      isFavStyle: 'hidden',
+      hideFavButton: true,
       unskilledTest: false,
       diceList: [10],
       combinedRollTotal: 10,
