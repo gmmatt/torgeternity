@@ -16,3 +16,11 @@
     data=dtype="Number"
     {{#if disableXP}} disabled data-tooltip="{{localize 'torgeternity.sheetLabels.xpOnlyGM'}}" {{/if}} />
 </p>
+
+{{#if showPiety}}
+  <p class='attribut-block'>
+    <span class="main-label">{{localize "torgeternity.sheetLabels.piety"}}</span>
+    <input name="system.other.piety" class="roundBack" type="number" value="{{document.system.other.piety}}"
+      data=dtype="Number" />
+  </p>
+{{/if}}

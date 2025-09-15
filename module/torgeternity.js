@@ -6,7 +6,6 @@ import TorgeternityActor from './documents/actor/torgeternityActor.js';
 import TorgeternityScene from './documents/torgeternityscene.js';
 import TorgeternityItemSheet from './sheets/torgeternityItemSheet.js';
 import TorgeternityActorSheet from './sheets/torgeternityActorSheet.js';
-import { sheetResize } from './sheetResize.js';
 import { preloadTemplates } from './preloadTemplates.js';
 import torgeternityCombat from './dramaticScene/torgeternityCombat.js';
 import torgeternityCombatTracker from './dramaticScene/torgeternityCombatTracker.js';
@@ -336,8 +335,6 @@ Hooks.on('ready', async function () {
 
   // migration script
   if (game.user.isGM) torgMigration();
-
-  sheetResize();
 
   // monkey-patch explosion method for die rolls
   foundry.dice.terms.Die.prototype.explode = explode;
