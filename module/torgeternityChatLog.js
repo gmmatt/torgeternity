@@ -64,8 +64,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.rollTotal = Math.max(test.diceroll.total, 1.1);
     test.isFav = false;
 
-    test.unskilledLabel = 'hidden';
-
     this.parentDeleteByTime(chatMessage);
     return renderSkillChat(test);
   }
@@ -157,7 +155,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     }
     test.diceroll = diceroll;
 
-    test.unskilledLabel = 'hidden';
     // add chat note "poss spent"
     test.chatNote += game.i18n.localize('torgeternity.sheetLabels.possSpent');
     if (noMin10) test.chatNote += game.i18n.localize('torgeternity.sheetLabels.noMin10');
@@ -186,7 +183,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = diceroll;
 
     test.chatTitle += '*';
-    test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
     return renderSkillChat(test);
@@ -214,7 +210,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = diceroll;
 
     test.chatTitle += '*';
-    test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
     return renderSkillChat(test);
@@ -242,7 +237,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.diceroll = diceroll;
 
     test.chatTitle += '*';
-    test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
     return renderSkillChat(test);
@@ -261,8 +255,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     // Nullify Diceroll
     test.diceroll = null;
-
-    test.unskilledLabel = 'hidden';
 
     this.parentDeleteByTime(chatMessage);
     return renderSkillChat(test);
@@ -283,7 +275,6 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.isFavStyle = 'hidden';
     test.plus3Style = 'hidden';
     test.isFavStyle = 'hidden';
-    test.unskilledLabel = 'hidden';
 
     const finalValue = await rollBonusDie(test.trademark, 1);
 

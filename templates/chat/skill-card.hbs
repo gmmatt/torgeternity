@@ -6,7 +6,7 @@
     <div class="message-header torgeternity-skill-description flexcol">
       {{#if unskilledTest}}
         <p class="skill-chat-title unskilled">{{chatTitle}}</p>
-        <p class="skill-unskilled-label {{unskilledLabel}}">{{localize 'torgeternity.chatText.unskilled'}}</p>
+        <p class="skill-unskilled-label">{{localize 'torgeternity.chatText.unskilled'}}</p>
       {{else}}
         <p class="skill-chat-title skilled">{{chatTitle}}</p>
       {{/if}}
@@ -73,23 +73,27 @@
       </p>
     {{/if}}
     <p class="applyButtons">
-      {{#if applySoakLabel}}
+      {{#if showApplySoak}}
         <a class="button roll-button" data-action="applySoak"
           data-tooltip="{{localize 'torgeternity.sheetLabels.applySoakTooltip'}}">
           {{localize 'torgeternity.sheetLabels.applySoak'}}</a>
       {{/if}}
       {{#if ownsTarget}}
-        <a class="button roll-button {{applyDamLabel}}" data-action="applyDam"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
-          {{localize 'torgeternity.sheetLabels.applyDamage'}}</a>
-        {{#unless soakWounds}}
-          <a class="button roll-button {{applyDamLabel}}" data-action="soakDam"
-            data-tooltip="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
-            {{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
-        {{/unless}}
-        <a class="button roll-button {{applyEffectsLabel}}" data-action="applyEffects"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.applyEffectsTooltip'}}">
-          {{localize 'torgeternity.sheetLabels.applyEffects'}}</a>
+        {{#if showApplyDamage}}
+          <a class="button roll-button" data-action="applyDam"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
+            {{localize 'torgeternity.sheetLabels.applyDamage'}}</a>
+          {{#unless soakWounds}}
+            <a class="button roll-button" data-action="soakDam"
+              data-tooltip="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
+              {{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
+          {{/unless}}
+        {{/if}}
+        {{#if showApplyEffects}}
+          <a class="button roll-button" data-action="applyEffects"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.applyEffectsTooltip'}}">
+            {{localize 'torgeternity.sheetLabels.applyEffects'}}</a>
+        {{/if}}
         {{#if showApplyStymied}}
           <a class="button roll-button" data-action="applyStymied"
             data-tooltip="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
@@ -149,7 +153,7 @@
         <tr>
           <td>{{localize 'torgeternity.chatText.bonus'}}:</td>
           <td>
-            <div><span class="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
+            <div>{{numberFormat bonus sign=true}}</div>
           </td>
         </tr>
         <tr>
@@ -157,36 +161,40 @@
             <a class="modifier-label" data-action="modifierLabel">{{localize 'torgeternity.chatText.modifiers'}}</a>:
           </td>
           <td>
-            <div data-tooltip-html="{{modifierText}}"><span class="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
+            <div data-tooltip-html="{{modifierText}}">{{numberFormat modifiers sign=true}}</div>
           </td>
         </tr>
-        <tr class="{{cardsPlayedLabel}}">
-          <td>
-            {{localize 'torgeternity.chatText.bonusCard'}}:
-          </td>
-          <td>
-            <div>{{cardsPlayed}}</div>
-          </td>
-        </tr>
+        {{#if cardsPlayed}}
+          <tr>
+            <td>
+              {{localize 'torgeternity.chatText.bonusCard'}}:
+            </td>
+            <td>
+              <div>{{cardsPlayed}}</div>
+            </td>
+          </tr>
+        {{/if}}
 
-        <tr class="{{notesLabel}}">
-          <td>
-            {{localize 'torgeternity.chatText.notes'}}:
-          </td>
-          <td>
-            <div>{{chatNote}}</div>
-          </td>
-        </tr>
-        <tr class="{{ammoLabel}}">
-          <td>
-            {{localize 'torgeternity.chatText.ammoLabel'}}:
-          </td>
-          <td>
-            <div>{{item.system.ammo.value}}</div>
-          </td>
-        </tr>
-
-
+        {{#if chatNote}}
+          <tr>
+            <td>
+              {{localize 'torgeternity.chatText.notes'}}:
+            </td>
+            <td>
+              <div>{{chatNote}}</div>
+            </td>
+          </tr>
+        {{/if}}
+        {{#if ammoCount}}
+          <tr>
+            <td>
+              {{localize 'torgeternity.chatText.ammoLabel'}}:
+            </td>
+            <td>
+              <div>{{ammoCount}}</div>
+            </td>
+          </tr>
+        {{/if}}
       </table>
       <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
       <div class="message-content">

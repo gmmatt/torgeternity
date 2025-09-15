@@ -50,11 +50,6 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
-  test.showApplyStymied = false;
-  test.applyVulnerableLabel = 'hidden';
-  test.applyActorVulnerableLabel = 'hidden';
-  test.applyDamLabel = 'hidden';
-  test.applyEffectsLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   let iteratedRoll;
 
@@ -64,9 +59,7 @@ export async function renderSkillChat(test) {
   // Handle ammo, if not opt-out. First, check if there is enough ammo, then reduce it.
   if (testItem?.weaponWithAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
     await testItem.reduceAmmo(test.burstModifier, test.targetAll?.length);
-    test.ammoLabel = 'display:table-row';
-  } else {
-    test.ammoLabel = 'hidden';
+    test.ammoCount = testItem.system.ammo.value;
   }
 
   const uniqueDN = game.settings.get('torgeternity', 'uniqueDN') ? await highestDN(test) : undefined;
@@ -99,8 +92,6 @@ export async function renderSkillChat(test) {
       test.testType !== 'activeDefenseUpdate' &&
       !test.customSkill &&
       !testActor.system.skills[test.skillName].adds);
-
-    test.unskilledLabel = test.unskilledTest ? '' : 'hidden';
 
     // Generate roll, if needed
     if (test.rollTotal === 0 && !test.explicitBonus) {
@@ -195,9 +186,6 @@ export async function renderSkillChat(test) {
     if (test.testType === 'activeDefense' || test.testType === 'activeDefenseUpdate') {
       if (test.bonus < 1) test.bonus = 1;
     }
-
-    // Add plus label if number is positive
-    test.bonusPlusLabel = (test.bonus >= 1) ? '' : 'hidden';
 
     function modifierString(label, value) {
       let result = game.i18n.localize(label);
@@ -394,10 +382,11 @@ export async function renderSkillChat(test) {
       if (test.testType === 'soak') test.soakWounds = 1;
     }
 
-    test.applySoakLabel = (test.testType === 'soak' && test.soakWounds);
+    if (test.testType === 'soak' && test.soakWounds) test.showApplySoak = true;
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
-    test.applyEffectsLabel = testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result) ?? 'hidden';
+    if (testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result))
+      test.showApplyEffects = true;
 
     // Approved Action Processing
     test.successfulDefendApprovedAction = false;
@@ -413,8 +402,6 @@ export async function renderSkillChat(test) {
       if (testActor.type === 'stormknight' && isApprovedAction(test))
         test.successfulApprovedAction = true;
     }
-    // Turn on + sign for modifiers?
-    test.modifierPlusLabel = (test.modifiers >= 1) ? 'display:' : 'hidden';
 
     // Concentration
     if (first && test.result >= TestResult.STANDARD && testItem?.system.requiresConcentration) {
@@ -540,7 +527,7 @@ export async function renderSkillChat(test) {
           test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');
           if (test.attackTraits.includes('unwieldy')) {
             test.damageDescription += ` (${game.i18n.localize('torgeternity.traits.unwieldy')})`;
-            test.applyActorVulnerableLabel = '';
+            test.showApplyVeryVulnerable = true;
           }
 
         } else {
@@ -570,7 +557,7 @@ export async function renderSkillChat(test) {
               soakWounds: test.soakWounds,
             });
 
-          if (damage.wounds || damage.shocks) test.applyDamLabel = '';
+          if (damage.wounds || damage.shocks) test.showApplyDamage = true;
           test.damageDescription = damage.label;
           test.damageSubDescription =
             `${game.i18n.localize('torgeternity.chatText.check.result.damage')} ${adjustedDamage} vs. ${test.targetAdjustedToughness} ${game.i18n.localize('torgeternity.chatText.check.result.toughness')}`;
@@ -634,9 +621,6 @@ export async function renderSkillChat(test) {
         test.upStyle = 'hidden';
     }
 
-    // Display cards played label?
-    test.cardsPlayedLabel = (test.cardsPlayed > 0) ? '' : 'hidden';
-
     // Disable unavailable menu options (Note: possibilities are always available)
 
     if (test.upTotal > 0) test.upStyle = 'disabled';
@@ -649,12 +633,8 @@ export async function renderSkillChat(test) {
       test.plus3Style = 'hidden';
     }
 
-    // Display chat notes label?
-
-    test.notesLabel = test.chatNote ? '' : 'hidden';
-
     if (test.testType === 'interactionAttack' && test.rollResult >= test.DN) {
-      test.applyDamLabel = 'hidden';
+      test.showApplyDamage = false;
       if (!target.dummyTarget) {
         test.showApplyStymied = true;
         test.showApplyVulnerable = true;
