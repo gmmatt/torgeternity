@@ -10,6 +10,7 @@
 - A vehicle's operator/gunner skill is now modified by the wounds on the assigned actor.
 - A vehicle's operator/gunner skill can be entered manually, for when a GM doesn't want to create actors for a vehicle's crew.
 - Reduce internal size of skill test chat message by modifying how apply buttons are selected for display.
+- Allow `@Embed[itemuuid]` within Journal pages (and other enriched fields) to show same layout used for "Send to Chat" of the item.
 
 ### Bug Fixes
 
