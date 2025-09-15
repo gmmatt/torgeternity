@@ -90,24 +90,32 @@
         <a class="button roll-button {{applyEffectsLabel}}" data-action="applyEffects"
           data-tooltip="{{localize 'torgeternity.sheetLabels.applyEffectsTooltip'}}">
           {{localize 'torgeternity.sheetLabels.applyEffects'}}</a>
-        <a class="button roll-button {{applyStymiedLabel}}" data-action="applyStymied"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
-          {{localize 'torgeternity.sheetLabels.applyStymied'}}</a>
-        <a class="button roll-button {{applyVulnerableLabel}}" data-action="applyVulnerable"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
-          {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
-        <a class="button roll-button {{applyActorVulnerableLabel}}" data-action="applyActorVulnerable"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
-          {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
-        <a class="button roll-button {{backlashLabel}}" data-action="backlash1"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.backlash1Tooltip'}}">
-          {{localize 'torgeternity.sheetLabels.backlash1'}}</a>
-        <a class="button roll-button {{backlashLabel}}" data-action="backlash2"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.backlash2Tooltip'}}">
-          {{localize 'torgeternity.sheetLabels.backlash2'}}</a>
-        <a class="button roll-button {{backlashLabel}}" data-action="backlash3"
-          data-tooltip="{{localize 'torgeternity.sheetLabels.backlash3Tooltip'}}">
-          {{localize 'torgeternity.sheetLabels.backlash3'}}</a>
+        {{#if showApplyStymied}}
+          <a class="button roll-button" data-action="applyStymied"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
+            {{localize 'torgeternity.sheetLabels.applyStymied'}}</a>
+        {{/if}}
+        {{#if showApplyVulnerable}}
+          <a class="button roll-button" data-action="applyVulnerable"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
+            {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
+        {{/if}}
+        {{#if showApplyVeryVulnerable}}
+          <a class="button roll-button" data-action="applyActorVulnerable"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
+            {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
+        {{/if}}
+        {{#if showBacklashButtons}}
+          <a class="button roll-button" data-action="backlash1"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.backlash1Tooltip'}}">
+            {{localize 'torgeternity.sheetLabels.backlash1'}}</a>
+          <a class="button roll-button" data-action="backlash2"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.backlash2Tooltip'}}">
+            {{localize 'torgeternity.sheetLabels.backlash2'}}</a>
+          <a class="button roll-button" data-action="backlash3"
+            data-tooltip="{{localize 'torgeternity.sheetLabels.backlash3Tooltip'}}">
+            {{localize 'torgeternity.sheetLabels.backlash3'}}</a>
+        {{/if}}
       {{/if}}
     </p>
     <details class="chatCardDetailsElement" {{isOpen}}>

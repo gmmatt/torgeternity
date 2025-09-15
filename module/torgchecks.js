@@ -50,12 +50,11 @@ export async function renderSkillChat(test) {
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   if (game.dice3d) game.dice3d.messageHookDisabled = true;
 
-  test.applyStymiedLabel = 'hidden';
+  test.showApplyStymied = false;
   test.applyVulnerableLabel = 'hidden';
   test.applyActorVulnerableLabel = 'hidden';
   test.applyDamLabel = 'hidden';
   test.applyEffectsLabel = 'hidden';
-  test.backlashLabel = 'hidden';
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   let iteratedRoll;
 
@@ -368,7 +367,7 @@ export async function renderSkillChat(test) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
       test.result = TestResult.FAILURE;
       if (test.testType === 'power') {
-        test.backlashLabel = '';
+        test.showBacklashButtons = true;
       }
       test.outcomeColor = useColorBlind ? 'color: red' :
         'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
@@ -578,7 +577,7 @@ export async function renderSkillChat(test) {
 
           // 'stagger' trait on a weapon inflicts STYMIED after any damage is dealt.
           if ((damage.shocks > 0 || damage.wounds > 0) && test.attackTraits?.includes('stagger')) {
-            test.applyStymiedLabel = '';
+            test.showApplyStymied = true;
           }
         }
       } else {
@@ -657,8 +656,8 @@ export async function renderSkillChat(test) {
     if (test.testType === 'interactionAttack' && test.rollResult >= test.DN) {
       test.applyDamLabel = 'hidden';
       if (!target.dummyTarget) {
-        test.applyStymiedLabel = '';
-        test.applyVulnerableLabel = '';
+        test.showApplyStymied = true;
+        test.showApplyVulnerable = true;
       }
     }
 
