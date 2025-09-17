@@ -462,10 +462,10 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     const item = actor.items.get(test.itemId);
     if (!item) return;
     const result = test.result;
-    const effects = item.effects.filter(ef => (ef.transferOnAttack && result >= TestResult.SUCCESS) || (ef.testOutcome === result));
+    const effects = item.effects.filter(ef => (ef.system.transferOnAttack && result >= TestResult.STANDARD) || (ef.system.transferOnOutcome === result));
     if (item.system.loadedAmmo) {
       const ammo = actor.items.get(item.system.loadedAmmo);
-      if (ammo) effects.push(...ammo.effects.filter(ef => (ef.transferOnAttack && result >= TestResult.SUCCESS) || (ef.testOutcome === result)));
+      if (ammo) effects.push(...ammo.effects.filter(ef => (ef.system.transferOnAttack && result >= TestResult.STANDARD) || (ef.system.transferOnOutcome === result)));
     }
     if (effects.length) {
       target.createEmbeddedDocuments('ActiveEffect', effects.map(ef => {

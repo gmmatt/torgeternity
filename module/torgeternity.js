@@ -39,7 +39,9 @@ import { ChatMessageTorg } from './documents/chat/chatMessageTorg.js';
 import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
+import { TorgActiveEffectData } from './data/active-effect.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
+import TorgActiveEffectConfig from './sheets/torgeternityActiveEffectConfig.js';
 import TorgEternityTokenRuler from './canvas/tokenruler.js';
 import TorgEternityToken from './canvas/torgeternityToken.js';
 import MacroHub from './MacroHub.js';
@@ -66,6 +68,7 @@ Hooks.once('init', async function () {
   CONFIG.Item.documentClass = TorgeternityItem;
   CONFIG.Actor.documentClass = TorgeternityActor;
   CONFIG.ActiveEffect.documentClass = TorgActiveEffect;
+  CONFIG.ActiveEffect.dataModels.base = TorgActiveEffectData;
   CONFIG.Actor.dataModels = actorDataModels.config;
   CONFIG.Item.dataModels = itemDataModels.config;
   CONFIG.Card.dataModels = cardDataModels.config;
@@ -159,6 +162,11 @@ Hooks.once('init', async function () {
     types: ['destiny', 'drama', 'cosm'],
     makeDefault: true,
   });
+  foundry.applications.apps.DocumentSheetConfig.unregisterSheet(ActiveEffect, 'core', foundry.applications.sheets.ActiveEffectConfig);
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(ActiveEffect, 'torgeternity', TorgActiveEffectConfig, {
+    label: 'Torg Active Effect Configuration',
+    makeDefault: true,
+  });
 
   // All choices must use strings, since number 0 will be treated as undefined by {{radioBoxes}}
   CONFIG.torgeternity.choices = {
@@ -211,6 +219,15 @@ Hooks.once('init', async function () {
   // Foundry#initializePacks is called just before the 'setup' hook
   // But needs to be after 'ready' to set properties on compendiums.
   initHideCompendium();
+
+  CONFIG.torgeternity.testOutcomeLabel = {
+    [TestResult.UNKNOWN]: "",
+    [TestResult.MISHAP]: 'torgeternity.chatText.check.result.mishape',
+    [TestResult.FAILURE]: 'torgeternity.chatText.check.result.failure',
+    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standartSuccess',
+    [TestResult.GOOD]: 'torgeternity.chatText.check.result.goodSuccess',
+    [TestResult.OUTSTANDING]: 'torgeternity.chatText.check.result.outstandingSuccess'
+  }
 });
 
 Hooks.once('i18nInit', () => {
@@ -244,14 +261,6 @@ Hooks.once('i18nInit', () => {
     vehicleAddOn: 'torgeternity.itemSheetDescriptions.vehicleAddOn',
     race: 'torgeternity.itemSheetDescriptions.race',
   };
-  CONFIG.torgeternity.testOutcomeLabel = {
-    [TestResult.UNKNOWN]: "",
-    [TestResult.MISHAP]: 'torgeternity.chatText.check.result.mishape',
-    [TestResult.FAILURE]: 'torgeternity.chatText.check.result.failure',
-    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standartSuccess',
-    [TestResult.GOOD]: 'torgeternity.chatText.check.result.goodSuccess',
-    [TestResult.OUTSTANDING]: 'torgeternity.chatText.check.result.outstandingSuccess'
-  }
 
   // Hard-coded, so that we are guaranteed to have it available immediately
   CONFIG.torgeternity.cosmTypeFromLabel = {

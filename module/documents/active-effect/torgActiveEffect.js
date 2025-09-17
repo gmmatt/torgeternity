@@ -55,6 +55,17 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
         }
       }
     }
+
+    // Replace flags
+    if (data.flags?.torgeternity?.transferOnAttack !== undefined) {
+      data.system.transferOnAttack = data.flags.torgeternity.transferOnAttack;
+      delete data.flags.torgeternity.transferOnAttack;
+    }
+    if (data.flags?.torgeternity?.testOutcome !== undefined) {
+      data.system.transferOnOutcome = data.flags.torgeternity.testOutcome;
+      delete data.flags.torgeternity.testOutcome;
+    }
+
     return super.migrateData(data);
   }
 
@@ -68,48 +79,4 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
     if (!this.parent || this.parent instanceof Actor) return game.i18n.localize("None");
     return this.parent.name;
   }
-
-  /**
-   * Add our own "Transfer On Attack" flag to the Active Effect config dialog.
-   * @param {*} app 
-   * @param {*} html 
-   * @param {*} context 
-   */
-  static onRenderActiveEffectConfig(app, html, context) {
-    const transferOnAttack = new foundry.data.fields.BooleanField().toFormGroup({
-      label: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.label"),
-      hint: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.hint")
-    }, {
-      name: 'flags.torgeternity.transferOnAttack',
-      value: app.document.getFlag("torgeternity", "transferOnAttack") ?? false,
-      disabled: !context.editable
-    });
-    const testOutcome = new foundry.data.fields.NumberField({
-      choices: CONFIG.torgeternity.testOutcomeLabel,
-      integer: true,
-      nullable: true
-    }).toFormGroup({
-      label: game.i18n.localize("torgeternity.activeEffect.testOutcome.label"),
-      hint: game.i18n.localize("torgeternity.activeEffect.testOutcome.hint")
-    }, {
-      name: 'flags.torgeternity.testOutcome',
-      value: app.document.getFlag("torgeternity", "testOutcome") ?? null,
-      disabled: !context.editable,
-      localize: true
-    });
-    html.querySelector("[data-tab=details] > .form-group:has([name=transfer])")?.after(transferOnAttack, testOutcome);
-  }
-
-  /**
-   * @returns {Boolean} the state of the "Transfer on Attack" flag on this Active Effect
-   */
-  get transferOnAttack() {
-    return this.getFlag("torgeternity", "transferOnAttack");
-  }
-
-  get testOutcome() {
-    return this.getFlag("torgeternity", "testOutcome");
-  }
 }
-
-Hooks.on("renderActiveEffectConfig", TorgActiveEffect.onRenderActiveEffectConfig);

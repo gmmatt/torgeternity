@@ -383,7 +383,7 @@ export async function renderSkillChat(test) {
     test.showApplySoak = (test.testType === 'soak' && test.soakWounds);
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
-    if (testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result))
+    if (testItem?.effects.find(ef => (ef.system.transferOnAttack && test.result >= TestResult.STANDARD) || ef.system.transferOnOutcome === test.result))
       test.showApplyEffects = true;
 
     // Approved Action Processing
