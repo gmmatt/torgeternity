@@ -1,6 +1,8 @@
 /**
  *
  */
+let deferredDrivers = new Set();
+
 export default class TorgeternityActor extends foundry.documents.Actor {
   /* -------------------------------------------- */
   /*  Getters                                     */
