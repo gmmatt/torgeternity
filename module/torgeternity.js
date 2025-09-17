@@ -220,6 +220,7 @@ Hooks.once('init', async function () {
   // But needs to be after 'ready' to set properties on compendiums.
   initHideCompendium();
 
+  // Fixed strings needed for Data Models
   CONFIG.torgeternity.testOutcomeLabel = {
     [TestResult.UNKNOWN]: "",
     [TestResult.MISHAP]: 'torgeternity.chatText.check.result.mishape',
@@ -228,9 +229,7 @@ Hooks.once('init', async function () {
     [TestResult.GOOD]: 'torgeternity.chatText.check.result.goodSuccess',
     [TestResult.OUTSTANDING]: 'torgeternity.chatText.check.result.outstandingSuccess'
   }
-});
 
-Hooks.once('i18nInit', () => {
   // ---Core Foundry expects typeLabels to be translation keys
   CONFIG.Actor.typeLabels = {
     stormknight: 'TYPES.Actor.stormknight',
@@ -298,6 +297,9 @@ Hooks.once('i18nInit', () => {
     "Zentralerde": "coreEarth",
   }
 
+});
+
+Hooks.once('i18nInit', () => {
   // Translate number magnitude strings (fast lookup for GeneralItemData.prepareBaseData)
   CONFIG.torgeternity.magnitudeLabels = {};
   for (const [key, value] of Object.entries(CONFIG.torgeternity.magnitudes))
