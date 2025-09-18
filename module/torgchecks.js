@@ -47,9 +47,6 @@ export async function renderSkillChat(test) {
   // For non-targeted tests, ensure we iterate through the loop at least once
   if (!test.targetAll.length) test.targetAll = [{ dummyTarget: true }];
 
-  // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
-  if (game.dice3d) game.dice3d.messageHookDisabled = true;
-
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   let iteratedRoll;
 
@@ -383,8 +380,14 @@ export async function renderSkillChat(test) {
     test.showApplySoak = (test.testType === 'soak' && test.soakWounds);
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
-    if (testItem?.effects.find(ef => (ef.system.transferOnAttack && test.result >= TestResult.STANDARD) || ef.system.transferOnOutcome === test.result))
-      test.showApplyEffects = true;
+    if (testItem) {
+      test.effects = testItem.effects.filter(ef => ef.appliesToTest(test.result, test.attackTraits, test.target?.defenseTraits)).map(ef => ef.uuid);
+      if (testItem.system?.loadedAmmo) {
+        const ammo = testActor.items.get(testItem.system.loadedAmmo);
+        if (ammo) test.effects.push(...ammo.effects.filter(ef => ef.appliesToTest(result, test.attackTraits, test.target?.defenseTraits)).map(ef => ef.uuid));
+      }
+      test.showApplyEffects = (test.effects.length > 0);
+    }
 
     // Approved Action Processing
     test.successfulDefendApprovedAction = false;
@@ -640,23 +643,13 @@ export async function renderSkillChat(test) {
     // record adjustedToughness for each flagged target
     target.targetAdjustedToughness = test.targetAdjustedToughness;
 
-    // roll Dice once, and handle the error if DSN is not installed
-    if (game.dice3d) {
-      // catch errors to prevent DSN from overly affecting our own behaviour.
-      if (first && test.diceroll) {
-        try {
-          await game.dice3d.showForRoll(test.diceroll, game.user, true);
-        } catch (e) { console.log('TORG CHECK: DSN reported', e) }
-      }
-      if (iteratedRoll) {
-        try {
-          await game.dice3d.showForRoll(iteratedRoll);
-        } catch (e) { console.log('TORG CHECK: DSN reported', e) }
-      }
-    }
+
     iteratedRoll = undefined;
     const rollMode = game.settings.get("core", "rollMode");
     const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
+
+    // Tell dice-so-nice to NOT show a roll for the 2nd+ targets.
+    test.diceroll.dice.forEach(dice => dice.results.forEach(result => result.hidden = !first));
 
     messages.push(await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
@@ -680,8 +673,6 @@ export async function renderSkillChat(test) {
     if (game.canvas) await game.user._onUpdateTokenTargets();
     await game.user.broadcastActivity({ targets: [] });
   }
-
-  if (game.dice3d) game.dice3d.messageHookDisabled = false;
 
   return messages;
 }

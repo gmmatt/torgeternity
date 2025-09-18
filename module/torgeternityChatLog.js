@@ -456,24 +456,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     if (!target) return;
 
     // Transfer Effects from the Weapon (& Ammo) to the target.
-    // Only those marked as "Transfer on Attack"
-    if (!test.itemId) return;
-    const { actor } = getChatActor(button);
-    const item = actor.items.get(test.itemId);
-    if (!item) return;
-    const result = test.result;
-    const effects = item.effects.filter(ef => (ef.system.transferOnAttack && result >= TestResult.STANDARD) || (ef.system.transferOnOutcome === result));
-    if (item.system.loadedAmmo) {
-      const ammo = actor.items.get(item.system.loadedAmmo);
-      if (ammo) effects.push(...ammo.effects.filter(ef => (ef.system.transferOnAttack && result >= TestResult.STANDARD) || (ef.system.transferOnOutcome === result)));
-    }
-    if (effects.length) {
-      target.createEmbeddedDocuments('ActiveEffect', effects.map(ef => {
-        let fx = ef.toObject();
-        fx.disabled = false;
-        return fx;
-      }));
-    }
+    const effects = test.effects.map(uuid => {
+      let obj = fromUuidSync(uuid, { strict: false });
+      if (!obj) return undefined;
+      let fx = obj.toObject();
+      fx.disabled = false;
+      return fx;
+    }).filter(ef => ef !== undefined);
+
+    if (effects.length)
+      target.createEmbeddedDocuments('ActiveEffect', effects);
   }
 
   static async #applyStymied(event, button) {

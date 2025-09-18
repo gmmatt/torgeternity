@@ -32,7 +32,7 @@ export class BaseItemData extends foundry.abstract.TypeDataModel {
   }
 }
 
-export function newTraitsField(itemType) {
+export function newTraitsField(itemType, label, hint) {
   return new fields.SetField(
     new fields.StringField({
       // StringField options
@@ -44,7 +44,7 @@ export function newTraitsField(itemType) {
     { // SetField options (ArrayFieldOptions)
       nullable: false,
       required: true,
-      label: 'torgeternity.fieldLabels.itemTraits.label',
-      hint: 'torgeternity.fieldLabels.itemTraits.hint'
+      label: label ?? 'torgeternity.fieldLabels.itemTraits.label',
+      hint: hint ?? 'torgeternity.fieldLabels.itemTraits.hint'
     });
 }

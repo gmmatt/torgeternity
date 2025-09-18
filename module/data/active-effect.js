@@ -26,8 +26,8 @@ export class TorgActiveEffectData extends foundry.abstract.TypeDataModel {
         label: 'torgeternity.activeEffect.testOutcome.label',
         hint: 'torgeternity.activeEffect.testOutcome.hint'
       }),
-      applyIfTrait: newTraitsField(),
-      applyVsTrait: newTraitsField(),
+      applyIfAttackTrait: newTraitsField(undefined, 'torgeternity.activeEffect.applyIfAttackTrait.label', 'torgeternity.activeEffect.applyIfAttackTrait.hint'),
+      applyIfDefendTrait: newTraitsField(undefined, 'torgeternity.activeEffect.applyIfDefendTrait.label', 'torgeternity.activeEffect.applyIfDefendTrait.hint'),
     }
   }
 }
