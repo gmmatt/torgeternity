@@ -577,6 +577,7 @@ torgeternity.defenseTraits = {
   'lightningDefense': 'torgeternity.traits.lightningDefense',
   'ignoreShock': 'torgeternity.traits.ignoreShock',
   'ignoreWounds': 'torgeternity.traits.ignoreWounds',
+  'supernnaturalEvil': 'torgeternity.traits.supernaturalEvil'
 }
 
 torgeternity.meleeWeaponTraits = {
@@ -629,15 +630,10 @@ torgeternity.rangedWeaponTraits = {
   'lightningDamage': 'torgeternity.traits.lightningDamage',
 }
 
-torgeternity.otherTraits = {
-  'supernnaturalEvil': 'torgeternity.traits.supernaturalEvil'
-}
-
 torgeternity.allItemTraits = {
   ...Object.entries(torgeternity.defenseTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.defense' }; return acc }, {}),
   ...Object.entries(torgeternity.meleeWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.melee' }; return acc }, {}),
   ...Object.entries(torgeternity.rangedWeaponTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.ranged' }; return acc }, {}),
-  ...Object.entries(torgeternity.otherTraits).reduce((acc, ent) => { acc[ent[0]] = { label: ent[1], group: 'torgeternity.traitGroup.other' }; return acc }, {}),
 }
 
 
