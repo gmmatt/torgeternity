@@ -603,7 +603,7 @@
       "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
       "migrationRunning": "Migrating Torg system version to ",
-      "moduleNotActive": "Activate the module to see desscription.",
+      "moduleNotActive": "Activate the module to see description.",
       "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.",
       "noAttrNamed": "Your controlled Actor does not have an attribute named ",
       "noHands": "No hands available!",
