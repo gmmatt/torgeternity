@@ -83,7 +83,7 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
   }
 
   /**
-   * 
+   * Should this effect be transferred to the target on a successful attack?
    * @param {TestResult} result 
    * @param {Array<String> | undefined} attackTraits array of traits on the actor performing the test
    * @param {Array<String> | undefined} defendTraits array of traits on the target of the test

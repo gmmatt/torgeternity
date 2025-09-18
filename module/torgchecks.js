@@ -508,18 +508,21 @@ export async function renderSkillChat(test) {
       if (test?.additionalDamage && !test.explicitBonus) {
         adjustedDamage += test?.additionalDamage;
       }
+
       // Check for whether a target is present and turn on display of damage sub-label
       if (!target.dummyTarget) {
+        const effects = test.effects.map(fxid => fromUuidSync(fxid));
+        if (!test.fxApplied && test.effects) {
+          //test.fxApplied = true;
+          adjustedDamage = applyEffects('test.damage', adjustedDamage, effects);
+        }
+        // NOTE: target.toughness already includes target.armour
+        test.targetAdjustedToughness = target.toughness - target.armor;
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor) {
-          let extraarmor = getExtraProtection(test.attackTraits, target.defenseTraits, 'Armor', 0);
-          test.targetAdjustedToughness =
-            target.toughness -
-            Math.min(test.weaponAP, target.armor + extraarmor) +
-            test.coverModifier;
-          // Ignore armor and cover
-        } else {
-          test.targetAdjustedToughness = target.toughness - target.armor;
+          const armor = target.armor + getExtraProtection(test.attackTraits, target.defenseTraits, 'Armor', 0);
+          const weaponAP = applyEffects('test.weaponAP', test.weaponAP, effects);
+          test.targetAdjustedToughness += Math.max(0, armor - weaponAP) + test.coverModifier;
         }
         // Generate damage description and damage sublabel
         if (test.result < TestResult.STANDARD) {
@@ -720,6 +723,31 @@ export function torgDamage(damage, toughness, options) {
   return torgDamageModifiers(result, options);
 }
 
+
+function applyEffects(fieldname, origvalue, effects) {
+  if (!effects) return origvalue;
+  for (const effect of effects) {
+    if (!effect) continue;  // fromUuidSync failed
+    for (const change of effect.changes) {
+      if (change.key === fieldname) {
+        // DataModel.applyField
+        // DataField.applyChange
+        const value = parseInt(change.value);
+        if (isNaN(value)) continue;  // value MUST be a number
+        const modes = CONST.ACTIVE_EFFECT_MODES;
+        switch (change.mode) {
+          case modes.ADD: origvalue += value; break;
+          case modes.MULTIPLY: origvalue *= value; break;
+          case modes.OVERRIDE: origvalue = value; break;
+          case modes.UPGRADE: origvalue = Math.max(origvalue, value); break;
+          case modes.DOWNGRADE: origvalue = Math.min(origvalue, value); break;
+          default:  // custom
+        }
+      }
+    }
+  }
+  return origvalue;
+}
 
 export function torgDamageModifiers(result, options) {
   let { attackTraits, defenseTraits, soakWounds } = options;
