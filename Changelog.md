@@ -11,6 +11,7 @@
   - `test.damage` as an AE change to modify the inflicted damage.
   - `test.weaponAP` as an AE change to modify the AP of the owning weapon.
   - for Holy Water, set "Apply If Defend Trait" to have the "Supernatural Evil".
+  - more capabilities to come later.
 
 ## 13.10.0
 
