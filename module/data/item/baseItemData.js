@@ -4,6 +4,9 @@ import { torgeternity } from '../../config.js';
 const fields = foundry.data.fields;
 
 export class BaseItemData extends foundry.abstract.TypeDataModel {
+
+  static LOCALIZATION_PREFIXES = ["torgeternity"];
+
   /**
  *
  * @returns {object} Schema fragment for an item
@@ -32,7 +35,7 @@ export class BaseItemData extends foundry.abstract.TypeDataModel {
   }
 }
 
-export function newTraitsField(itemType, label, hint) {
+export function newTraitsField(itemType) {
   return new fields.SetField(
     new fields.StringField({
       // StringField options
@@ -43,8 +46,6 @@ export function newTraitsField(itemType, label, hint) {
     }),
     { // SetField options (ArrayFieldOptions)
       nullable: false,
-      required: true,
-      label: label ?? 'torgeternity.fieldLabels.itemTraits.label',
-      hint: hint ?? 'torgeternity.fieldLabels.itemTraits.hint'
+      required: true
     });
 }

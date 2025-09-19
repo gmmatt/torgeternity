@@ -12,22 +12,18 @@ const fields = foundry.data.fields;
  */
 export class TorgActiveEffectData extends foundry.abstract.TypeDataModel {
 
+  static LOCALIZATION_PREFIXES = ["torgeternity.activeEffect"];
+
   static defineSchema() {
     return {
-      transferOnAttack: new fields.BooleanField({
-        initial: false,
-        label: 'torgeternity.activeEffect.transferOnAttack.label',
-        hint: 'torgeternity.activeEffect.transferOnAttack.hint'
-      }),
+      transferOnAttack: new fields.BooleanField({ initial: false, }),
       transferOnOutcome: new fields.NumberField({
         choices: CONFIG.torgeternity.testOutcomeLabel,
         integer: true,
         nullable: true,
-        label: 'torgeternity.activeEffect.testOutcome.label',
-        hint: 'torgeternity.activeEffect.testOutcome.hint'
       }),
-      applyIfAttackTrait: newTraitsField(undefined, 'torgeternity.activeEffect.applyIfAttackTrait.label', 'torgeternity.activeEffect.applyIfAttackTrait.hint'),
-      applyIfDefendTrait: newTraitsField(undefined, 'torgeternity.activeEffect.applyIfDefendTrait.label', 'torgeternity.activeEffect.applyIfDefendTrait.hint'),
+      applyIfAttackTrait: newTraitsField(),
+      applyIfDefendTrait: newTraitsField(),
     }
   }
 }
