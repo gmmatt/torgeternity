@@ -24,9 +24,9 @@
       "twitter": "@shambles42"
     }
   ],
-  "version": "13.8.1",
+  "version": "13.10.0",
   "compatibility": {
-    "minimum": 13,
+    "minimum": "13.348",
     "verified": 13
   },
   "esmodules": [
