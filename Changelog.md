@@ -6,8 +6,11 @@
 - Fix "Cosm Possibilities" dialog working again.
 - Fix styling of journal entries (especially image subtitles and table headers).
 - Prevent double dice rolling with dice-so-nice when only a single (or no) target is selected.
-- **Active Effects** on an item can conditionally be applied to the target based on the attack/defense traits.
 - **Possibly Glory** triggered off the final Die total (base roll + UP roll + possibility roll(s) + Hero rolls + Drama rolls).
+- **Active Effects** on an item can conditionally be applied to the target based on the attack/defense traits (e.g. Holy Water does 12 damage vs Supernatural Evil)
+  - `test.damage` as an AE change to modify the inflicted damage.
+  - `test.weaponAP` as an AE change to modify the AP of the owning weapon.
+  - for Holy Water, set "Apply If Defend Trait" to have the "Supernatural Evil".
 
 ## 13.10.0
 
