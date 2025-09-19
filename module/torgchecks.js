@@ -147,8 +147,6 @@ export async function renderSkillChat(test) {
             testActor.toggleStatusEffect('disconnected', { active: true })
         }
       }
-
-      if (test.rollTotal >= 60) test.possibleGlory = true;
     }
 
     // Add the dices list in test
@@ -172,6 +170,7 @@ export async function renderSkillChat(test) {
       test.combinedRollTotal = test.rollTotal + test.upTotal + test.possibilityTotal + test.heroTotal + test.dramaTotal;
       test.bonus = torgBonus(test.combinedRollTotal);
       if (test.multiModifier) game.combat?.getCombatantsByActor(testActor)?.shift()?.setCurrentBonus(test.bonus);
+      if (test.combinedRollTotal >= 60) test.possibleGlory = true;
     } else {
       test.rollTotal = undefined;
       test.combinedRollTotal = '-';

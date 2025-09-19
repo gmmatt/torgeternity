@@ -7,6 +7,7 @@
 - Fix styling of journal entries (especially image subtitles and table headers).
 - Prevent double dice rolling with dice-so-nice when only a single (or no) target is selected.
 - **Active Effects** on an item can conditionally be applied to the target based on the attack/defense traits.
+- **Possibly Glory** triggered off the final Die total (base roll + UP roll + possibility roll(s) + Hero rolls + Drama rolls).
 
 ## 13.10.0
 
