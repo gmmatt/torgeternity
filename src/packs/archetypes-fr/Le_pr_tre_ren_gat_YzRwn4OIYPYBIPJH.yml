@@ -9,7 +9,7 @@ items:
     sort: 200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -111,10 +111,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492464795
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -191,7 +191,7 @@ items:
     sort: 2200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -203,17 +203,17 @@ items:
         Favoris&eacute;e</p>
       price: '700'
       techlevel: 26
-      value: 15
+      value: 14
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492981105
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.xHacesSGQZhNT8BL
       duplicateSource: null
       exportSource: null
@@ -299,7 +299,7 @@ items:
     sort: 2100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -307,17 +307,17 @@ items:
       description: <p>Croix catholique</p>
       price: '0'
       techlevel: 5
-      value: 0
+      value: null
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492977538
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.yLlmFt0wyS2ppWTq
       duplicateSource: null
       exportSource: null
@@ -328,50 +328,8 @@ items:
     sort: 1100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: CC6u4jnep56ormZw
-        flags: {}
-        changes:
-          - key: system.other.armor
-            value: '2'
-            mode: 2
-            priority: null
-          - key: system.other.toughness
-            value: '2'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.uBos0D7Tz2MSgxg3
-        tint: '#ffffff'
-        transfer: true
-        name: Armor +2
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek.CC6u4jnep56ormZw
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
     folder: null
     system:
       cosm: Pan Pacifica
@@ -388,7 +346,7 @@ items:
       techlevel: 24
       value: 12
       bonus: 2
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       maxDex: null
       minStrength: 0
@@ -397,12 +355,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493573067
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.uBos0D7Tz2MSgxg3
       duplicateSource: null
       exportSource: null
@@ -413,7 +371,7 @@ items:
     sort: 2200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     system:
@@ -447,10 +405,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491927825
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -461,7 +419,7 @@ items:
     sort: -99999
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/miracle.webp
+    img: systems/torgeternity/images/icons/miracles-icon.webp
     effects: []
     folder: null
     system:
@@ -505,7 +463,7 @@ items:
       systemVersion: 13.8.1
       coreVersion: '13.348'
       createdTime: null
-      modifiedTime: 1756564906478
+      modifiedTime: 1758492133728
       lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
@@ -517,7 +475,7 @@ items:
     sort: 1
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/miracle.webp
+    img: systems/torgeternity/images/icons/miracles-icon.webp
     effects: []
     folder: null
     system:
@@ -573,7 +531,7 @@ items:
       systemVersion: 13.8.1
       coreVersion: '13.348'
       createdTime: null
-      modifiedTime: 1756564909967
+      modifiedTime: 1758492137739
       lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
@@ -585,7 +543,7 @@ items:
     sort: 1150001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/miracle.webp
+    img: systems/torgeternity/images/icons/miracles-icon.webp
     effects: []
     folder: null
     system:
@@ -634,7 +592,7 @@ items:
       systemVersion: 13.8.1
       coreVersion: '13.348'
       createdTime: null
-      modifiedTime: 1756564913282
+      modifiedTime: 1758492141315
       lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.iDFKWtv4WCTrteId
       duplicateSource: null
@@ -643,7 +601,7 @@ items:
   - _id: sP4THOjN48b0gZDL
     name: Implants cybernétiques
     type: perk
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     sort: 1950000
@@ -751,10 +709,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492468495
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.8qfs6BvtH7wTJ09g
       duplicateSource: null
       exportSource: null
@@ -776,19 +734,34 @@ items:
       damageType: strengthPlus
       description: ''
       notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: oET6xeuwJvv023mL
     ownership:
       default: 0
       zWX19sSAtAWkeGhp: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119476
+      modifiedTime: 1758491119476
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!YzRwn4OIYPYBIPJH.oET6xeuwJvv023mL'
 effects:
   - _id: iqpflWpeduToapXb
@@ -839,7 +812,7 @@ effects:
         mode: 2
         value: '2'
         priority: null
-    disabled: false
+    disabled: true
     duration:
       startTime: 0
       seconds: null
@@ -855,12 +828,12 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       systemId: null
       systemVersion: null
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493581202
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null

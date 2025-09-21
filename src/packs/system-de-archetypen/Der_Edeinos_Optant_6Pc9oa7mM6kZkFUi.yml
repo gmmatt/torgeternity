@@ -1044,24 +1044,38 @@ items:
         Kampf</em> Schaden in Höhe von <em>Stärke</em> +2 verursachen.</p>
       notes: ''
       transferenceID: GPiq4BtMLhEG67BA
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
     sort: 400000
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       VAnYow5sWS9EJzo0: 3
       d8YcfsxBOP7RAazk: 3
+      l8SVzn2293lAwvMC: 3
     flags:
       core: {}
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.3.0
-      createdTime: 1729599382809
-      modifiedTime: 1729599382983
-      lastModifiedBy: d8YcfsxBOP7RAazk
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119701
+      modifiedTime: 1758491119701
+      lastModifiedBy: l8SVzn2293lAwvMC
     _id: GPiq4BtMLhEG67BA
     effects: []
     folder: null

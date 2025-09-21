@@ -9,7 +9,7 @@ items:
     sort: 400001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -103,10 +103,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492300384
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.9fW6U7drFdMu7bJ9
       duplicateSource: null
       exportSource: null
@@ -117,7 +117,7 @@ items:
     sort: 100001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -210,10 +210,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492296233
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.y88YRPsbrWD62tic
       duplicateSource: null
       exportSource: null
@@ -224,7 +224,7 @@ items:
     sort: 100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -232,17 +232,17 @@ items:
       description: <p>Statuette en os de Lanala</p>
       price: '0'
       techlevel: 5
-      value: 0
+      value: null
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492588664
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.V6vSEnqgNmYQKs4o
       duplicateSource: null
       exportSource: null
@@ -253,50 +253,8 @@ items:
     sort: 1200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: n01gCYi1zesLMJRk
-        flags: {}
-        changes:
-          - key: system.other.armor
-            value: '2'
-            mode: 2
-            priority: null
-          - key: system.other.toughness
-            value: '2'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.ReyQMFRMLe44saUX
-        tint: '#ffffff'
-        transfer: true
-        name: +2 Armor
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M.n01gCYi1zesLMJRk
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
     folder: null
     system:
       cosm: Terre-Vivante
@@ -323,10 +281,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492653359
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.ReyQMFRMLe44saUX
       duplicateSource: null
       exportSource: null
@@ -337,7 +295,7 @@ items:
     sort: 800000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
+    img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
     system:
@@ -366,10 +324,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492170652
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.0ibFEQi66ymd6PnN
       duplicateSource: null
       exportSource: null
@@ -380,7 +338,7 @@ items:
     sort: 300001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/miracle.webp
+    img: systems/torgeternity/images/icons/miracles-icon.webp
     effects: []
     folder: null
     system:
@@ -428,7 +386,7 @@ items:
       systemVersion: 13.8.1
       coreVersion: '13.348'
       createdTime: null
-      modifiedTime: 1756564554923
+      modifiedTime: 1758492093800
       lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.n96Wp0YtxBbpMAJG
       duplicateSource: null
@@ -437,7 +395,7 @@ items:
   - _id: xYEb0MXVrXspQdDt
     name: Miracles
     type: perk
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     sort: 2600000
@@ -543,10 +501,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492308581
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -628,7 +586,7 @@ items:
   - _id: v3Kj5kG8dQiQ0l8i
     name: Soins
     type: miracle
-    img: systems/torgeternity/images/icons/miracle.webp
+    img: systems/torgeternity/images/icons/miracles-icon.webp
     effects: []
     folder: null
     sort: 2900000
@@ -680,7 +638,7 @@ items:
       systemVersion: 13.8.1
       coreVersion: '13.348'
       createdTime: null
-      modifiedTime: 1756564559145
+      modifiedTime: 1758492098989
       lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.iDFKWtv4WCTrteId
       duplicateSource: null
@@ -689,7 +647,7 @@ items:
   - _id: GdJyPlTcYVLbC7rU
     name: Protection contre les ennemis
     type: miracle
-    img: systems/torgeternity/images/icons/miracle.webp
+    img: systems/torgeternity/images/icons/miracles-icon.webp
     effects: []
     folder: null
     sort: 3000000
@@ -749,7 +707,7 @@ items:
       systemVersion: 13.8.1
       coreVersion: '13.348'
       createdTime: null
-      modifiedTime: 1756564563044
+      modifiedTime: 1758492104169
       lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null

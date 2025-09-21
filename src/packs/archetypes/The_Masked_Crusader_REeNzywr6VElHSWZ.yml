@@ -173,37 +173,6 @@ items:
       duplicateSource: null
       exportSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.F5aP7JJO0Up7FJLN'
-  - _id: gz6ZDd5HIAYQOsyC
-    name: Fist
-    type: customAttack
-    sort: 1000000
-    flags:
-      core: {}
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    effects: []
-    folder: null
-    system:
-      ap: 0
-      attackWith: unarmedCombat
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      description: ''
-      notes: ''
-    ownership:
-      default: 0
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '13.345'
-      createdTime: 1694869337163
-      modifiedTime: 1694869355340
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Item.ewfPYWfFRJSZ1FOs
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!REeNzywr6VElHSWZ.gz6ZDd5HIAYQOsyC'
   - _id: UfhSHSsuH4nExjRt
     name: Leather Vest
     type: armor
@@ -619,6 +588,52 @@ items:
     _id: nvlwBY4LLCZwJVMv
     sort: 100000
     _key: '!actors.items!REeNzywr6VElHSWZ.nvlwBY4LLCZwJVMv'
+  - _id: gz6ZDd5HIAYQOsyC
+    name: Fist
+    type: customAttack
+    sort: 1000000
+    flags:
+      core: {}
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: gz6ZDd5HIAYQOsyC
+    ownership:
+      default: 0
+      CtisFurQNe9h7ABb: 3
+      l8SVzn2293lAwvMC: 3
+    _stats:
+      compendiumSource: Item.ewfPYWfFRJSZ1FOs
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491118878
+      modifiedTime: 1758491118878
+      lastModifiedBy: l8SVzn2293lAwvMC
+    _key: '!actors.items!REeNzywr6VElHSWZ.gz6ZDd5HIAYQOsyC'
 effects: []
 folder: null
 sort: 100001

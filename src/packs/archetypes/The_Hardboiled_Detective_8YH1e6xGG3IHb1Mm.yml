@@ -189,36 +189,6 @@ items:
       duplicateSource: null
       exportSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.KpWgjWWFgY2tXQbG'
-  - _id: NTpPoGBgrWUXPP8s
-    name: Fist
-    type: customAttack
-    sort: 500001
-    flags:
-      core: {}
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    effects: []
-    folder: null
-    system:
-      ap: 0
-      attackWith: unarmedCombat
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      description: ''
-      notes: ''
-    ownership:
-      default: 0
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: 1694869367347
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Item.ewfPYWfFRJSZ1FOs
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!8YH1e6xGG3IHb1Mm.NTpPoGBgrWUXPP8s'
   - _id: Bk7zje6BZXFbkWfa
     name: Block Strike
     type: perk
@@ -645,6 +615,51 @@ items:
     _id: PW0fJHdX2JKSUDuW
     sort: 100000
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.PW0fJHdX2JKSUDuW'
+  - _id: NTpPoGBgrWUXPP8s
+    name: Fist
+    type: customAttack
+    sort: 500001
+    flags:
+      core: {}
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: NTpPoGBgrWUXPP8s
+    ownership:
+      default: 0
+      l8SVzn2293lAwvMC: 3
+    _stats:
+      compendiumSource: Item.ewfPYWfFRJSZ1FOs
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491118772
+      modifiedTime: 1758491118772
+      lastModifiedBy: l8SVzn2293lAwvMC
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.NTpPoGBgrWUXPP8s'
 effects: []
 folder: null
 sort: 100001

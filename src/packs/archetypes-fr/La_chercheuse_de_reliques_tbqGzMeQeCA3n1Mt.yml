@@ -9,7 +9,7 @@ items:
     sort: 100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -99,10 +99,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492341463
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -113,7 +113,7 @@ items:
     sort: 200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -204,10 +204,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492345257
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -218,7 +218,7 @@ items:
     sort: 3100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -237,10 +237,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492695983
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -251,7 +251,7 @@ items:
     sort: 700000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -274,10 +274,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492718182
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -288,7 +288,7 @@ items:
     sort: 1100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/meleeweapon.webp
+    img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
     system:
@@ -318,10 +318,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492183261
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -329,7 +329,7 @@ items:
   - _id: tFgCXQMcrGDML1lz
     name: Glock 9mm
     type: firearm
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     sort: 500000
@@ -362,10 +362,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491699735
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
       exportSource: null
@@ -373,7 +373,7 @@ items:
   - _id: 8AMGcsoi4D8VsBE8
     name: Glock 9mm
     type: firearm
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     sort: 500000
@@ -406,10 +406,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491706476
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
       exportSource: null
@@ -417,50 +417,8 @@ items:
   - _id: ZHCCH7GF1KN0V5RW
     name: Veste en cuir
     type: armor
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: m4QT8vQ1gc6L97GC
-        flags: {}
-        changes:
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.2rrg1qTCfjdHFtKl
-        tint: '#ffffff'
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!tbqGzMeQeCA3n1Mt.ZHCCH7GF1KN0V5RW.m4QT8vQ1gc6L97GC
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
     folder: null
     sort: 800000
     flags:
@@ -472,7 +430,7 @@ items:
       techlevel: 19
       value: 10
       bonus: 1
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       maxDex: 12
       minStrength: null
@@ -482,12 +440,12 @@ items:
       default: 0
       qjRKKHBumHYSfxpw: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493415198
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
       exportSource: null
@@ -495,7 +453,7 @@ items:
   - _id: vweQ3DMFNSfo2YxA
     name: Chargeurs supplémentaires (5)
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 1500000
@@ -514,10 +472,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492707154
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
       exportSource: null
@@ -525,7 +483,7 @@ items:
   - _id: Oo122VOhEfcoQl3l
     name: Torche
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 2400000
@@ -536,18 +494,18 @@ items:
       description: <p>&Eacute;claire</p>
       price: '5'
       techlevel: 2
-      value: 4
+      value: 3
       equippedClass: item-equipped
     ownership:
       default: 0
       qjRKKHBumHYSfxpw: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492703467
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.TE2jmWDyTxhRulgk
       duplicateSource: null
       exportSource: null
@@ -555,7 +513,7 @@ items:
   - _id: 2S5Lg83o3W77FIYr
     name: Corde de 30m
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 900000
@@ -574,10 +532,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492710503
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.gzQRZhlLKWBaS49M
       duplicateSource: null
       exportSource: null
@@ -585,7 +543,7 @@ items:
   - _id: dLGm2dhMTASDcjCW
     name: Grappin
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 100001
@@ -598,18 +556,18 @@ items:
         <p>&nbsp;</p>
       price: '0'
       techlevel: 10
-      value: 0
+      value: null
       equippedClass: item-equipped
     ownership:
       default: 0
       qjRKKHBumHYSfxpw: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492724775
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.6ApaXink04BzbAAv
       duplicateSource: null
       exportSource: null
@@ -617,7 +575,7 @@ items:
   - _id: sCjdjpQHZnleEMW4
     name: Sac à dos
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 3000000
@@ -628,18 +586,18 @@ items:
       description: <p>Pour transporter des tr&eacute;sors</p>
       price: '50'
       techlevel: 10
-      value: 9
+      value: 8
       equippedClass: item-equipped
     ownership:
       default: 0
       qjRKKHBumHYSfxpw: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492699577
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.th671TeucbJU9ZOl
       duplicateSource: null
       exportSource: null
@@ -647,7 +605,7 @@ items:
   - _id: 8mospoKsocKydB4J
     name: Téléphone portable
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 400000
@@ -664,18 +622,18 @@ items:
         perturbent &eacute;galement le signal.</p>
       price: '300'
       techlevel: 23
-      value: 13
+      value: 12
       equippedClass: item-equipped
     ownership:
       default: 0
       qjRKKHBumHYSfxpw: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492729450
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
       duplicateSource: null
       exportSource: null
@@ -697,63 +655,36 @@ items:
       damageType: strengthPlus
       description: ''
       notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: lsJwNWSawnmGGvR5
     ownership:
       default: 0
       zWX19sSAtAWkeGhp: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119608
+      modifiedTime: 1758491119608
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.lsJwNWSawnmGGvR5'
-effects:
-  - _id: Aftaj7rmCoOvAz2G
-    changes:
-      - key: system.other.armor
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.other.toughness
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes-fr.tbqGzMeQeCA3n1Mt.Item.ZHCCH7GF1KN0V5RW
-    tint: '#ffffff'
-    transfer: false
-    flags: {}
-    name: Armure +1
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!tbqGzMeQeCA3n1Mt.Aftaj7rmCoOvAz2G'
+effects: []
 folder: null
 sort: 100001
 flags: {}

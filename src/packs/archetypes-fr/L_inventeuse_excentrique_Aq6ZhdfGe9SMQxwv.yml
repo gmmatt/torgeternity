@@ -10,7 +10,7 @@ items:
     sort: 200001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -109,10 +109,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492316645
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.XCIWjW6xVzFfafSU
       duplicateSource: null
       exportSource: null
@@ -123,7 +123,7 @@ items:
     sort: 300001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -220,10 +220,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492321347
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.K6kYBttafWPIdNQs
       duplicateSource: null
       exportSource: null
@@ -234,7 +234,7 @@ items:
     sort: 2900000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -251,10 +251,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492617113
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.j3maRwDVRJPYt1wO
       duplicateSource: null
       exportSource: null
@@ -265,7 +265,7 @@ items:
     sort: 3000000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -273,17 +273,17 @@ items:
       description: <p>Toujours pr&ecirc;te !</p>
       price: '50'
       techlevel: 10
-      value: 9
+      value: 8
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492621222
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.th671TeucbJU9ZOl
       duplicateSource: null
       exportSource: null
@@ -294,7 +294,7 @@ items:
     sort: 3100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -302,17 +302,17 @@ items:
       description: <p>Tests de Premiers soins Favoris&eacute;s</p>
       price: '50'
       techlevel: 20
-      value: 7
+      value: 8
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492624485
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.HsanlzQCJP0vTtEy
       duplicateSource: null
       exportSource: null
@@ -323,7 +323,7 @@ items:
     sort: 3200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -338,10 +338,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492627881
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.xSw6gIp8xiCT1yXM
       duplicateSource: null
       exportSource: null
@@ -352,7 +352,7 @@ items:
     sort: 3300000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -360,17 +360,17 @@ items:
       description: <p>Synchronis&eacute; au dispositif de pistage/transmetteur</p>
       price: '50'
       techlevel: 20
-      value: 9
+      value: 8
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492636191
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.X4B9Ye2030sICMCa
       duplicateSource: null
       exportSource: null
@@ -381,7 +381,7 @@ items:
     sort: 3400000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -396,10 +396,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492631707
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.CvZU96RR15BnScXb
       duplicateSource: null
       exportSource: null
@@ -410,7 +410,7 @@ items:
     sort: 2800000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -428,10 +428,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492610916
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.zGj5mxLW7ygVnIKC
       duplicateSource: null
       exportSource: null
@@ -442,7 +442,7 @@ items:
     sort: 400001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     system:
@@ -450,7 +450,7 @@ items:
       description: ''
       price: '0'
       techlevel: 20
-      value: 0
+      value: null
       ammo:
         max: 5
         value: 5
@@ -466,12 +466,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491638991
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.W8ZARSxZdHHv4JZN
       duplicateSource: null
       exportSource: null
@@ -479,7 +479,7 @@ items:
   - _id: m4UNIQgIVWh0ofrr
     name: Lampe torche
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 1700000
@@ -500,10 +500,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492606125
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.tktQLV7z5tnNkEqr
       duplicateSource: null
       exportSource: null
@@ -511,50 +511,8 @@ items:
   - _id: JtXllaXMDuTpHTWT
     name: Manteau en cuir
     type: armor
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: m4QT8vQ1gc6L97GC
-        flags: {}
-        changes:
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.2rrg1qTCfjdHFtKl
-        tint: '#ffffff'
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!Aq6ZhdfGe9SMQxwv.JtXllaXMDuTpHTWT.m4QT8vQ1gc6L97GC
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
     folder: null
     sort: 800000
     flags:
@@ -566,7 +524,7 @@ items:
       techlevel: 19
       value: 10
       bonus: 1
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       maxDex: 12
       minStrength: null
@@ -576,12 +534,12 @@ items:
       default: 0
       qjRKKHBumHYSfxpw: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493379857
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
       exportSource: null
@@ -603,63 +561,36 @@ items:
       damageType: strengthPlus
       description: ''
       notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: oHBqOwXO2ED4k0wN
     ownership:
       default: 0
       zWX19sSAtAWkeGhp: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119289
+      modifiedTime: 1758491119289
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.oHBqOwXO2ED4k0wN'
-effects:
-  - _id: 0cb20uUutlrniHzZ
-    changes:
-      - key: system.other.armor
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.other.toughness
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes-fr.Aq6ZhdfGe9SMQxwv.Item.JtXllaXMDuTpHTWT
-    tint: '#ffffff'
-    transfer: false
-    flags: {}
-    name: Armure +1
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '13.345'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.0cb20uUutlrniHzZ'
+effects: []
 folder: null
 sort: 100001
 flags: {}

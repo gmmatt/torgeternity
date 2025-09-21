@@ -5,7 +5,7 @@ img: systems/torgeternity/images/characters/white_wolf.Avatar.webp
 items:
   - _id: sIrEjkMEuSDzeIk8
     name: Biss/Krallen
-    type: specialability-rollable
+    type: customAttack
     sort: 100000
     flags: {}
     img: systems/torgeternity/images/icons/bite-icon.webp
@@ -15,21 +15,38 @@ items:
       ap: 0
       attackWith: unarmedCombat
       chatNote: ''
-      damage: 10
+      damage: 2
       description: "<p>Schaden\_<em>Stärke</em> +2 (10)</p>"
+      damageType: strengthPlus
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      notes: ''
+      transferenceID: sIrEjkMEuSDzeIk8
     ownership:
       default: 0
       pYSulyhjOdVnRAJt: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: torgeternity
-      systemVersion: 3.8.1
-      coreVersion: '13.345'
-      createdTime: 1716788510616
-      modifiedTime: 1716788609695
-      lastModifiedBy: pYSulyhjOdVnRAJt
       compendiumSource: null
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119769
+      modifiedTime: 1758491479501
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!Hy1XeUQA64WoxKxs.sIrEjkMEuSDzeIk8'
 effects:
   - name: Bewegung +4
