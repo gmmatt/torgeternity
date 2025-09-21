@@ -13,6 +13,7 @@
   - `test.weaponAP` as an AE change to modify the AP of the owning weapon.
   - for Holy Water, set "Apply If Defend Trait" to have the "Supernatural Evil".
   - more capabilities to come later.
+- Updated French translations provided by @Evensnalgonel.
 - Use LOCALIZATION_PREFIXES in ActiveEffect and Item data models.
   - applyIfAttackTrait
   - applyIfDefendTrait
