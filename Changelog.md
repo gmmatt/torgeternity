@@ -16,6 +16,9 @@
 - Updated French translations provided by @Evensnalgonel.
 - Ensure all weapons are shown on the Gear tab of **Vehicles**.
 - Allow perks and custom attacks to be deleted from **Race** Items.
+- Update Archetypes:
+  - Use customAttack in preference to specialability-rollable
+  - Fix icons in the French archetypes.
 - Use LOCALIZATION_PREFIXES in ActiveEffect and Item data models.
   - applyIfAttackTrait
   - applyIfDefendTrait
