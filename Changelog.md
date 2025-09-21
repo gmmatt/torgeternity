@@ -2,10 +2,10 @@
 
 ## NEXT
 
-- Get Active Effect "Transfer on Attack" flag working (as part of making our own Data Model for Active Effects).
-- Fix "Cosm Possibilities" dialog working again.
-- Fix styling of journal entries (especially image subtitles and table headers).
-- Prevent double dice rolling with dice-so-nice when only a single (or no) target is selected.
+- Get Active Effect **Transfer on Attack** flag working (as part of making our own Data Model for Active Effects).
+- Fix **Cosm Possibilities** dialog working again.
+- Fix styling of **journal entries** (especially image subtitles and table headers).
+- Prevent double dice rolling with **dice-so-nice** when only a single (or no) target is selected.
 - **Supernatural Evil** trait has been moved to the "Defense" group in the traits list.
 - **Possibly Glory** triggered off the final Die total (base roll + UP roll + possibility roll(s) + Hero rolls + Drama rolls).
 - **Active Effects** on an item can conditionally be applied to the target based on the attack/defense traits (e.g. Holy Water does 12 damage vs Supernatural Evil)
@@ -13,12 +13,12 @@
   - `test.weaponAP` as an AE change to modify the AP of the owning weapon.
   - for Holy Water, set "Apply If Defend Trait" to have the "Supernatural Evil".
   - more capabilities to come later.
-- Updated French translations provided by @Evensnalgonel.
-- Ensure all weapons are shown on the Gear tab of **Vehicles**.
+- Updated **French translations** provided by @Evensnalgonel.
+- Ensure all weapon types are shown on the Gear tab of **Vehicles**.
 - Allow perks and custom attacks to be deleted from **Race** Items.
 - Update Archetypes:
   - Use customAttack in preference to specialability-rollable
-  - Fix icons in the French archetypes.
+  - Fix icons for the French archetypes.
 - Use LOCALIZATION_PREFIXES in ActiveEffect and Item data models.
   - applyIfAttackTrait
   - applyIfDefendTrait
