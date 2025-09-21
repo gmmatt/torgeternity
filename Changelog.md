@@ -14,6 +14,7 @@
   - for Holy Water, set "Apply If Defend Trait" to have the "Supernatural Evil".
   - more capabilities to come later.
 - Updated French translations provided by @Evensnalgonel.
+- Ensure all weapons are shown on the Gear tab of Vehicles.
 - Use LOCALIZATION_PREFIXES in ActiveEffect and Item data models.
   - applyIfAttackTrait
   - applyIfDefendTrait
