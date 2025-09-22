@@ -1,8 +1,7 @@
 _id: Aq6ZhdfGe9SMQxwv
 name: L’inventeuse excentrique
 type: stormknight
-img: >-
-  systems/torgeternity/images/characters/Eccentric_Inventor.Avatar.webp?1615058361679
+img: systems/torgeternity/images/characters/Eccentric_Inventor.Avatar.webp
 items:
   - _id: 80rM8r1q1ZuSjmNW
     name: Électro-rayon
@@ -1131,7 +1130,7 @@ _stats:
   systemVersion: 3.8.1
   coreVersion: '13.348'
   createdTime: 1716827809182
-  modifiedTime: 1758530071358
+  modifiedTime: 1758531848725
   lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: null
   duplicateSource: null
