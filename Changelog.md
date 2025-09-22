@@ -22,6 +22,7 @@
 - Use LOCALIZATION_PREFIXES in ActiveEffect and Item data models.
   - applyIfAttackTrait
   - applyIfDefendTrait
+- Add dynamic ring textures for all Archetypes.
 
 ## 13.10.0
 
