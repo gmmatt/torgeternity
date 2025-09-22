@@ -509,41 +509,6 @@ items:
       duplicateSource: null
       exportSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.xYEb0MXVrXspQdDt'
-  - _id: g0cH43XIVTVK0fYY
-    name: morsure/griffes
-    type: specialability-rollable
-    img: systems/torgeternity/images/icons/specialability-rollable.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core: {}
-    system:
-      ap: 0
-      attackWith: unarmedCombat
-      chatNote: ''
-      damage: ''
-      description: >-
-        <p class="MsoNormal">Pour les monstres ayant une attaque de morsure, ou
-        de griffes, une seule valeur de dommages est indiqu&eacute;e telle que :
-        Morsure/griffes : Force +2 (14). Que l&rsquo;attaque soit
-        effectu&eacute;e avec des griffes ou une morsure n&rsquo;a pas vraiment
-        d&rsquo;importance. Si cela a une importance, c&rsquo;est au MJ de
-        d&eacute;cider.</p>
-    ownership:
-      default: 0
-      TK1vCAdCz548vBDu: 3
-    _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: Compendium.te001-core-rulebook.Items.ZFmi6QH0qgga6sTT
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!hcdhRCs56U5JrAl4.g0cH43XIVTVK0fYY'
   - _id: mlBKn7lTOYY4sEqu
     name: morsure/griffes
     type: meleeweapon
