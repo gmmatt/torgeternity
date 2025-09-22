@@ -1212,7 +1212,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Edeinos_Optant.Token.webp
+    src: systems/torgeternity/images/characters/edeinos_optant.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

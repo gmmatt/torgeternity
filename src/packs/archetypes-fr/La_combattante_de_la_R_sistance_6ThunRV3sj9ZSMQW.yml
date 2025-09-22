@@ -1287,7 +1287,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Resistance_Fighter.Token.webp
+    src: systems/torgeternity/images/characters/resistance_fighter.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

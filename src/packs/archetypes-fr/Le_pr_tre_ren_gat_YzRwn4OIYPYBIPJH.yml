@@ -1333,7 +1333,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Renegade_Priest.Token.webp
+    src: systems/torgeternity/images/characters/renegade_priest.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

@@ -1031,7 +1031,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Primitive_Hunter.Token.webp
+    src: systems/torgeternity/images/characters/primitive_hunter.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

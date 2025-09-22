@@ -1086,7 +1086,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Masked_Crusader.Token.webp
+    src: systems/torgeternity/images/characters/masked_crusader.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

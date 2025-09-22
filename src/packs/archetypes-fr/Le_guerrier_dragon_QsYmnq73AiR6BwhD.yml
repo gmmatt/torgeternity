@@ -1190,7 +1190,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Dragon_Warrior.Token.webp
+    src: systems/torgeternity/images/characters/dragon_warrior.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

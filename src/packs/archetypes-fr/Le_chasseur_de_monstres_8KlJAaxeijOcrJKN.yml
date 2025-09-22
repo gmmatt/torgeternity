@@ -1122,7 +1122,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Monster_Hunter.Token.webp
+    src: systems/torgeternity/images/characters/monster_hunter.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

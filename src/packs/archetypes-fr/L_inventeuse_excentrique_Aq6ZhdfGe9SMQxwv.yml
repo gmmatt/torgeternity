@@ -1084,7 +1084,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Eccentric_Inventor.Token.webp
+    src: systems/torgeternity/images/characters/eccentric_inventor.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

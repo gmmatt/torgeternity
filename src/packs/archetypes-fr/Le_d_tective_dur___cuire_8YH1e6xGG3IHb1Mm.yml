@@ -1109,7 +1109,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Hardboiled_Detective.Token.webp
+    src: systems/torgeternity/images/characters/hardboiled_detective.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

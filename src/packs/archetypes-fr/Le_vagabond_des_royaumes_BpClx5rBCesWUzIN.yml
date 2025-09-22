@@ -1093,7 +1093,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Realm_Runner.Token.webp
+    src: systems/torgeternity/images/characters/realm_runner.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

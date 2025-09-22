@@ -1056,7 +1056,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Electric_Samurai.Token.webp
+    src: systems/torgeternity/images/characters/electric_samurai.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1

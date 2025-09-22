@@ -1387,7 +1387,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Elven_Warden.Token.webp
+    src: systems/torgeternity/images/characters/elven_warden.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1
