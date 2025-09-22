@@ -33,12 +33,12 @@
           "hint": "Applique l'Effet sur le token ciblé correspondant au degré de réussite du test impliquant cet objet"
         },
         "applyIfAttackTrait": {
-          "label": "Apply If Attack Trait",
-          "hint": "Apply the effect only if the attacking token has one of these traits"
+          "label": "Appliquer le trait d'attaque",
+          "hint": "Appliquer l'effet uniquement si le token attaquant possède l'un de ces traits"
         },
         "applyIfDefendTrait": {
-          "label": "Apply If Defend Trait",
-          "hint": "Apply the effect only if the attacked token (the target) has one of these traits"
+          "label": "Appliquer le trait de défense",
+          "hint": "Appliquer l'effet uniquement si le token attaqué (la cible) possède l'un de ces traits"
         }
       }
     },
