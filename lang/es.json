@@ -33,12 +33,12 @@
           "hint": "Aplicar el efecto a la(s) ficha(s) objetivo cuando una prueba que usa este objeto obtenga este resultado específico"
         },
         "applyIfAttackTrait": {
-          "label": "Apply If Attack Trait",
-          "hint": "Apply the effect only if the attacking token has one of these traits"
+          "label": "Aplicar si el atacante tiene rasgo",
+          "hint": "Aplicar el efecto solo si la ficha atacante tiene uno de estos rasgos"
         },
         "applyIfDefendTrait": {
-          "label": "Apply If Defend Trait",
-          "hint": "Apply the effect only if the attacked token (the target) has one of these traits"
+          "label": "Aplicar si el defensor tiene rasgo",
+          "hint": "Aplicar el efecto solo si la ficha que recibe el ataque (el objetivo) tiene uno de estos rasgos"
         }
       }
     },
