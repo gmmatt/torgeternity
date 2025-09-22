@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## NEXT
+## 13.11.0
 
 - Get Active Effect **Transfer on Attack** flag working (as part of making our own Data Model for Active Effects).
 - Fix **Cosm Possibilities** dialog working again.

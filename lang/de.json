@@ -33,12 +33,12 @@
           "hint": "Je nach Probenergebnis mit diesem Gegenstand den passenden Effekt auf den Zieltoken anwenden"
         },
         "applyIfAttackTrait": {
-          "label": "Apply If Attack Trait",
-          "hint": "Apply the effect only if the attacking token has one of these traits"
+          "label": "Anwenden bei Angreifer-Eigenschaft",
+          "hint": "Effekt wird nur angewendet, wenn der Angriffer-Token einen der angegebenen Eigenschaften besitzt."
         },
         "applyIfDefendTrait": {
-          "label": "Apply If Defend Trait",
-          "hint": "Apply the effect only if the attacked token (the target) has one of these traits"
+          "label": "Anwenden bei Verteidiger-Eigenschaft",
+          "hint": "Effekt wird nur angewendet, wenn der angegriffene Token (das Ziel) einen der angegebenen Eigenschaften besitzt."
         }
       }
     },
