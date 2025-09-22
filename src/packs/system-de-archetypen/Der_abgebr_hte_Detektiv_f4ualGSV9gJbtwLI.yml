@@ -1214,14 +1214,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
-    effects: 0
+      ring: '#000080'
+      background: '#8080f0'
+    effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/hardboiled_detective-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1231,10 +1231,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1694867157183
-  modifiedTime: 1729013533222
-  lastModifiedBy: d8YcfsxBOP7RAazk
+  modifiedTime: 1758529908552
+  lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: Compendium.torgeternity.archetypes.8YH1e6xGG3IHb1Mm
   duplicateSource: null
   exportSource: null

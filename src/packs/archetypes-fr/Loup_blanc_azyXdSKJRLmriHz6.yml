@@ -473,8 +473,8 @@ prototypeToken:
   ring:
     enabled: false
     colors:
-      ring: null
-      background: null
+      ring: '#000080'
+      background: '#8080f0'
     effects: 1
     subject:
       scale: 1

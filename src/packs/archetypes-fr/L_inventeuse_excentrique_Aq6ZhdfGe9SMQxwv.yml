@@ -1085,8 +1085,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: >-
-      systems/torgeternity/images/characters/Eccentric_Inventor.Token.webp?1615058361679
+    src: systems/torgeternity/images/characters/Eccentric_Inventor.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1
@@ -1113,14 +1112,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
+      ring: '#000080'
+      background: '#8080f0'
     effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/eccentric_inventor-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1130,10 +1129,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1716827809182
-  modifiedTime: 1716827809182
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1758530071358
+  lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: null
   duplicateSource: null
   exportSource: null
