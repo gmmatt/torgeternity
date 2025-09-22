@@ -9,7 +9,7 @@ items:
     sort: 100000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -119,10 +119,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492406241
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -133,7 +133,7 @@ items:
     sort: 300000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -155,10 +155,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492857534
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -169,7 +169,7 @@ items:
     sort: 100001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     system:
@@ -189,7 +189,7 @@ items:
         <p>12 cartouches, dommages de base de 14</p>
       price: '0'
       techlevel: 18
-      value: 0
+      value: null
       ammo:
         max: 6
         value: 6
@@ -205,12 +205,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491737788
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.fW9IrnHVWRXgCWEx
       duplicateSource: null
       exportSource: null
@@ -221,7 +221,7 @@ items:
     sort: 500000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/meleeweapon.webp
+    img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
     system:
@@ -247,10 +247,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492211371
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -261,7 +261,7 @@ items:
     sort: 600000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     system:
@@ -269,7 +269,7 @@ items:
       description: ''
       price: '200'
       techlevel: 18
-      value: 12
+      value: 11
       ammo:
         max: 6
         value: 6
@@ -285,12 +285,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491743136
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -301,50 +301,8 @@ items:
     sort: 100001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: 1oM56g3yX2h8ox2M
-        flags: {}
-        changes:
-          - key: system.other.armor
-            value: '2'
-            mode: 2
-            priority: null
-          - key: system.other.toughness
-            value: '2'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.Lr8qGqk2VWGODo7S
-        tint: '#ffffff'
-        transfer: true
-        name: Armor +2
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!8KlJAaxeijOcrJKN.RUsXW2vMzlcDbzM4.1oM56g3yX2h8ox2M
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
     folder: null
     system:
       cosm: Orrorsh
@@ -357,7 +315,7 @@ items:
       techlevel: 16
       value: 12
       bonus: 2
-      equipped: false
+      equipped: true
       equippedClass: item-unequipped
       maxDex: 10
       minStrength: null
@@ -366,12 +324,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493495731
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.Lr8qGqk2VWGODo7S
       duplicateSource: null
       exportSource: null
@@ -379,7 +337,7 @@ items:
   - _id: k5oxi4S2Vf0lhwIa
     name: Médaille (Tueur de dragon)
     type: perk
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     sort: 200000
@@ -526,10 +484,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492409985
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -537,7 +495,7 @@ items:
   - _id: rj0VDXqmToHXvSNg
     name: Torche
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 2400000
@@ -548,18 +506,18 @@ items:
       description: <p>&Eacute;claire</p>
       price: '5'
       techlevel: 2
-      value: 4
+      value: 3
       equippedClass: item-equipped
     ownership:
       default: 0
       qjRKKHBumHYSfxpw: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492853269
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.TE2jmWDyTxhRulgk
       duplicateSource: null
       exportSource: null
@@ -581,19 +539,34 @@ items:
       damageType: strengthPlus
       description: ''
       notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: hQZcOgojBbDcCCfe
     ownership:
       default: 0
       zWX19sSAtAWkeGhp: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119221
+      modifiedTime: 1758491119221
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!8KlJAaxeijOcrJKN.hQZcOgojBbDcCCfe'
 effects:
   - _id: 4CnECaHDlW4TJfe7
@@ -607,7 +580,7 @@ effects:
         value: '2'
         mode: 2
         priority: null
-    disabled: false
+    disabled: true
     duration:
       startTime: 0
       startRound: 0
@@ -623,12 +596,12 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       systemId: null
       systemVersion: null
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493503464
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -1149,7 +1122,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Monster_Hunter.Token.webp
+    src: systems/torgeternity/images/characters/monster_hunter.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1
@@ -1176,14 +1149,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
+      ring: '#000080'
+      background: '#8080f0'
     effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/monster_hunter-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1193,10 +1166,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1716827809076
-  modifiedTime: 1716827809076
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1758530125206
+  lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: null
   duplicateSource: null
   exportSource: null

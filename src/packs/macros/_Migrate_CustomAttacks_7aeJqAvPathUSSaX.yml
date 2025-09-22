@@ -1,0 +1,56 @@
+name: +Migrate CustomAttacks
+type: script
+command: >-
+  // This macro should only be used if you know what you are doing!
+
+  // When specialability-rollable items have been converted to customAttack
+  Items,
+
+  // the new Item type was not saved to the Foundry collection.
+
+  // This macro will delete the old item and create a new item in order to
+  ensure
+
+  // that it is stored as a customAttack Item.
+
+
+  const packs = game.packs.filter(pack => pack.metadata.type === 'Actor');
+
+
+  for (const pack of packs) {
+    console.log(`*** UPDATING PACK ${pack.metadata.label} *** `)
+    const locked = pack.locked;
+    if (locked) pack.configure({ locked: false });
+    for (const idx of pack.index) {
+      let actor = await fromUuid(idx.uuid);
+      for (const item of actor.items.filter(item => item.type === 'customAttack')) {
+        const newitem = item.toObject();
+        await item.delete();
+        await actor.createEmbeddedDocuments('Item', [newitem], {keepId: true});
+        console.log(`${actor.name} ==> `, newitem);
+      }
+    }
+    if (locked) pack.configure({ locked: true });
+  }
+img: icons/svg/dice-target.svg
+author: l8SVzn2293lAwvMC
+scope: global
+folder: null
+ownership:
+  default: 0
+  l8SVzn2293lAwvMC: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: torgeternity
+  systemVersion: 13.10.0
+  createdTime: 1758490526662
+  modifiedTime: 1758490951071
+  lastModifiedBy: l8SVzn2293lAwvMC
+_id: 7aeJqAvPathUSSaX
+sort: 200000
+_key: '!macros!7aeJqAvPathUSSaX'
+

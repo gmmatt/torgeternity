@@ -9,7 +9,7 @@ items:
     sort: 100001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -127,10 +127,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492329686
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.FqVsqSep5SeNqgM5
       duplicateSource: null
       exportSource: null
@@ -141,7 +141,7 @@ items:
     sort: 200001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -239,10 +239,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492333744
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.DsqhT4kTf01FBNRU
       duplicateSource: null
       exportSource: null
@@ -253,7 +253,7 @@ items:
     sort: 2200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -261,17 +261,17 @@ items:
       description: <p>&Eacute;claire</p>
       price: '5'
       techlevel: 2
-      value: 4
+      value: 3
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492672349
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.TE2jmWDyTxhRulgk
       duplicateSource: null
       exportSource: null
@@ -282,7 +282,7 @@ items:
     sort: 2300000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -290,17 +290,17 @@ items:
       description: <p>Statuette en os de Lanala</p>
       price: '0'
       techlevel: 3
-      value: 0
+      value: null
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492676692
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.V6vSEnqgNmYQKs4o
       duplicateSource: null
       exportSource: null
@@ -311,7 +311,7 @@ items:
     sort: 2500000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -319,17 +319,17 @@ items:
       description: <p>Rouges, blanches et bleues.</p>
       price: '1'
       techlevel: 4
-      value: 1
+      value: 0
       equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492680793
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.6g0k6JMCuHpfTB8I
       duplicateSource: null
       exportSource: null
@@ -340,50 +340,8 @@ items:
     sort: 1300000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: KMCP74pS3Oni3hU2
-        flags: {}
-        changes:
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.zeffK1HwBwoOyzMS
-        tint: '#ffffff'
-        transfer: true
-        name: +1 Armor
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt.KMCP74pS3Oni3hU2
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
     folder: null
     system:
       cosm: (Sans cosm)
@@ -397,7 +355,7 @@ items:
       techlevel: 3
       value: 8
       bonus: 1
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       maxDex: 12
       minStrength: null
@@ -406,12 +364,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493396978
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.zeffK1HwBwoOyzMS
       duplicateSource: null
       exportSource: null
@@ -422,7 +380,7 @@ items:
     sort: 800000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
+    img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
     system:
@@ -450,10 +408,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491988589
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.0ibFEQi66ymd6PnN
       duplicateSource: null
       exportSource: null
@@ -464,7 +422,7 @@ items:
     sort: 900000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/meleeweapon.webp
+    img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
     system:
@@ -474,7 +432,7 @@ items:
         manche et d&rsquo;une lame pointue.</p>
       price: '5'
       techlevel: 3
-      value: 4
+      value: 3
       ap: 0
       attackWith: meleeWeapons
       bonus: 2
@@ -487,12 +445,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491994110
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.2OZHSyASNn86YGNX
       duplicateSource: null
       exportSource: null
@@ -514,19 +472,34 @@ items:
       damageType: strengthPlus
       description: ''
       notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: YQoorToSdQKjoWmk
     ownership:
       default: 0
       zWX19sSAtAWkeGhp: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119582
+      modifiedTime: 1758491119582
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!sPLt8RBL1hieic6p.YQoorToSdQKjoWmk'
 effects:
   - _id: zNxpmtLv3HaujTQW
@@ -540,7 +513,7 @@ effects:
         mode: 2
         value: '1'
         priority: null
-    disabled: false
+    disabled: true
     duration:
       startTime: 0
       seconds: null
@@ -556,12 +529,12 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       systemId: null
       systemVersion: null
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493405724
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -1058,7 +1031,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Primitive_Hunter.Token.webp
+    src: systems/torgeternity/images/characters/primitive_hunter.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1
@@ -1085,14 +1058,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
+      ring: '#000080'
+      background: '#8080f0'
     effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/primitive_hunter-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1102,10 +1075,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1716827809787
-  modifiedTime: 1716827809787
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1758530080651
+  lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: null
   duplicateSource: null
   exportSource: null

@@ -23,13 +23,23 @@
   },
   "torgeternity": {
     "activeEffect": {
-      "transferOnAttack": {
-        "label": "Effekt bei Angriff anwenden",
-        "hint": "Dieser Effekt wird für das ausgewählte Ziel angewendet, falls der Gegenstand dieses Effekts für den Angriff genutzt wurde (entweder als Waffe oder Munition)"
-      },
-      "testOutcome": {
-        "label": "Effect je nach Ergebnis anwenden",
-        "hint": "Je nach Probenergebnis mit diesem Gegenstand den passenden Effekt auf den Zieltoken anwenden"
+      "FIELDS": {
+        "transferOnAttack": {
+          "label": "Effekt bei Angriff anwenden",
+          "hint": "Dieser Effekt wird für das ausgewählte Ziel angewendet, falls der Gegenstand dieses Effekts für den Angriff genutzt wurde (entweder als Waffe oder Munition)"
+        },
+        "transferOnOutcome": {
+          "label": "Effect je nach Ergebnis anwenden",
+          "hint": "Je nach Probenergebnis mit diesem Gegenstand den passenden Effekt auf den Zieltoken anwenden"
+        },
+        "applyIfAttackTrait": {
+          "label": "Anwenden bei Angreifer-Eigenschaft",
+          "hint": "Effekt wird nur angewendet, wenn der Angriffer-Token einen der angegebenen Eigenschaften besitzt."
+        },
+        "applyIfDefendTrait": {
+          "label": "Anwenden bei Verteidiger-Eigenschaft",
+          "hint": "Effekt wird nur angewendet, wenn der angegriffene Token (das Ziel) einen der angegebenen Eigenschaften besitzt."
+        }
       }
     },
     "attackTypes": {
@@ -490,8 +500,8 @@
       "enhances": "verbessert",
       "perk": "Verbundener Vorzug"
     },
-    "fieldLabels": {
-      "itemTraits": {
+    "FIELDS": {
+      "traits": {
         "label": "Anmerkungen",
         "hint": "Die besonderen Fähigkeiten dieses Gegenstands"
       }

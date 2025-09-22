@@ -859,24 +859,38 @@ items:
       description: "<p>Edeinos have natural claws and teeth that cause\_<em>Strength</em> +2 damage in\_<em>unarmed combat</em>.</p>"
       notes: ''
       transferenceID: 99I93QMkOyDEUng1
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
     sort: 300000
     ownership:
       default: 0
       aSTzyuIvqyDaFHwy: 3
       VAnYow5sWS9EJzo0: 3
       d8YcfsxBOP7RAazk: 3
+      l8SVzn2293lAwvMC: 3
     flags:
       core: {}
     _stats:
       compendiumSource: null
       duplicateSource: null
-      coreVersion: '13.345'
-      systemId: torgeternity
-      systemVersion: 12.3.0
-      createdTime: 1729582129234
-      modifiedTime: 1729582129427
-      lastModifiedBy: d8YcfsxBOP7RAazk
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491118975
+      modifiedTime: 1758491118975
+      lastModifiedBy: l8SVzn2293lAwvMC
     _id: 99I93QMkOyDEUng1
     effects: []
     folder: null
@@ -1393,14 +1407,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
-    effects: 0
+      ring: '#000080'
+      background: '#8080f0'
+    effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/edeinos_optant-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1410,10 +1424,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1693901456910
-  modifiedTime: 1729013423860
-  lastModifiedBy: d8YcfsxBOP7RAazk
+  modifiedTime: 1758529152765
+  lastModifiedBy: l8SVzn2293lAwvMC
   compendiumSource: null
   duplicateSource: null
   exportSource: null

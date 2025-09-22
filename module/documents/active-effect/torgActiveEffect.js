@@ -1,3 +1,5 @@
+import { TestResult } from '../../torgchecks.js';
+
 /**
  * Extend the basic ActiveEffect model with migrations and TORG specific handling
  */
@@ -55,6 +57,17 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
         }
       }
     }
+
+    // Replace flags
+    if (data.flags?.torgeternity?.transferOnAttack !== undefined) {
+      data.system.transferOnAttack = data.flags.torgeternity.transferOnAttack;
+      delete data.flags.torgeternity.transferOnAttack;
+    }
+    if (data.flags?.torgeternity?.testOutcome !== undefined) {
+      data.system.transferOnOutcome = data.flags.torgeternity.testOutcome;
+      delete data.flags.torgeternity.testOutcome;
+    }
+
     return super.migrateData(data);
   }
 
@@ -70,46 +83,27 @@ export default class TorgActiveEffect extends foundry.documents.ActiveEffect {
   }
 
   /**
-   * Add our own "Transfer On Attack" flag to the Active Effect config dialog.
-   * @param {*} app 
-   * @param {*} html 
-   * @param {*} context 
+   * Should this effect be transferred to the target on a successful attack?
+   * @param {TestResult} result 
+   * @param {Array<String> | undefined} attackTraits array of traits on the actor performing the test
+   * @param {Array<String> | undefined} defendTraits array of traits on the target of the test
    */
-  static onRenderActiveEffectConfig(app, html, context) {
-    const transferOnAttack = new foundry.data.fields.BooleanField().toFormGroup({
-      label: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.label"),
-      hint: game.i18n.localize("torgeternity.activeEffect.transferOnAttack.hint")
-    }, {
-      name: 'flags.torgeternity.transferOnAttack',
-      value: app.document.getFlag("torgeternity", "transferOnAttack") ?? false,
-      disabled: !context.editable
-    });
-    const testOutcome = new foundry.data.fields.NumberField({
-      choices: CONFIG.torgeternity.testOutcomeLabel,
-      integer: true,
-      nullable: true
-    }).toFormGroup({
-      label: game.i18n.localize("torgeternity.activeEffect.testOutcome.label"),
-      hint: game.i18n.localize("torgeternity.activeEffect.testOutcome.hint")
-    }, {
-      name: 'flags.torgeternity.testOutcome',
-      value: app.document.getFlag("torgeternity", "testOutcome") ?? null,
-      disabled: !context.editable,
-      localize: true
-    });
-    html.querySelector("[data-tab=details] > .form-group:has([name=transfer])")?.after(transferOnAttack, testOutcome);
-  }
-
-  /**
-   * @returns {Boolean} the state of the "Transfer on Attack" flag on this Active Effect
-   */
-  get transferOnAttack() {
-    return this.getFlag("torgeternity", "transferOnAttack");
-  }
-
-  get testOutcome() {
-    return this.getFlag("torgeternity", "testOutcome");
+  appliesToTest(result, attackTraits, defendTraits) {
+    return ((this.system.transferOnAttack && result >= TestResult.STANDARD) || (this.system.transferOnOutcome === result)) &&
+      testTraits(this.system.applyIfAttackTrait, attackTraits) &&
+      testTraits(this.system.applyIfDefendTrait, defendTraits);
   }
 }
 
-Hooks.on("renderActiveEffectConfig", TorgActiveEffect.onRenderActiveEffectConfig);
+/**
+ * Return true if testTraits contains at least one of the entries in actualTraits
+ * @param {Set<String>} testTraits 
+ * @param {Array<String>} actualTraits 
+ */
+function testTraits(testTraits, actualTraits) {
+  if (!testTraits?.size) return true;
+  for (const trait of testTraits) {
+    if (actualTraits.includes(trait)) return true;
+  }
+  return false;
+}

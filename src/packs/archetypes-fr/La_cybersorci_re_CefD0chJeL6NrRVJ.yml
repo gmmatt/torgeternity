@@ -9,7 +9,7 @@ items:
     sort: 100001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -113,10 +113,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492370269
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.8qfs6BvtH7wTJ09g
       duplicateSource: null
       exportSource: null
@@ -127,7 +127,7 @@ items:
     sort: 100001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -236,10 +236,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492374176
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.gOZE58k6tfHDbUJ0
       duplicateSource: null
       exportSource: null
@@ -297,7 +297,7 @@ items:
     sort: 2200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
@@ -312,10 +312,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492768732
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.Wi4lFW6mtBCZS8EY
       duplicateSource: null
       exportSource: null
@@ -326,7 +326,7 @@ items:
     sort: 400000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     system:
@@ -362,10 +362,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491726897
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.e2Jc6xS0T4XEs8q9
       duplicateSource: null
       exportSource: null
@@ -376,7 +376,7 @@ items:
     sort: 2300000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/spell.webp
+    img: systems/torgeternity/images/icons/spell-icon.webp
     effects: []
     folder: null
     system:
@@ -401,7 +401,7 @@ items:
         <p class="MsoNormal">R&eacute;duire la Force ou l&rsquo;Esprit ne
         r&eacute;duit pas la R&eacute;sistance ni les points de Choc qu&rsquo;il
         est possible d&rsquo;encaisser.</p>
-      dn: La Volonté ou l’Esprit de la cible.
+      dn: veryEasy
       dnType: ''
       duration: 3 rounds
       good: le malus est augmenté à -4.
@@ -418,12 +418,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492529402
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -434,7 +434,7 @@ items:
     sort: 2400000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/spell.webp
+    img: systems/torgeternity/images/icons/spell-icon.webp
     effects: []
     folder: null
     system:
@@ -464,7 +464,7 @@ items:
         concern&eacute; pendant qu&rsquo;il incante, en faisant craquer ses
         phalanges pour am&eacute;liorer la Dext&eacute;rit&eacute;, en
         assouplissant ses muscles pour la Force, et ainsi de suite.</p>
-      dn: attribut de la cible
+      dn: veryEasy
       dnType: ''
       duration: 3 rounds
       good: l’attribut est augmenté de +2.
@@ -478,12 +478,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492533336
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -494,7 +494,7 @@ items:
     sort: 2500000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/spell.webp
+    img: systems/torgeternity/images/icons/spell-icon.webp
     effects: []
     folder: null
     system:
@@ -517,7 +517,7 @@ items:
         ne peuvent &ecirc;tre identifi&eacute;s par ces appareils ; de plus, les
         bonus de ciblage des munitions intelligentes et de VTH &agrave;
         r&eacute;alit&eacute; augment&eacute;e sont annul&eacute;s.</p>
-      dn: Standard (ND10)
+      dn: veryEasy
       dnType: ''
       duration: 10 minutes
       good: la Portée est augmentée à 100 mètres de rayon.
@@ -533,12 +533,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492537199
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -560,19 +560,34 @@ items:
       damageType: strengthPlus
       description: ''
       notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: AzobLwjp2cbbDXgm
     ownership:
       default: 0
       zWX19sSAtAWkeGhp: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119360
+      modifiedTime: 1758491119360
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!CefD0chJeL6NrRVJ.AzobLwjp2cbbDXgm'
 effects: []
 folder: null
@@ -1100,14 +1115,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
+      ring: '#000080'
+      background: '#8080f0'
     effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/cyberwitch-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1117,10 +1132,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1716827809277
-  modifiedTime: 1716827809277
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1758530107102
+  lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: null
   duplicateSource: null
   exportSource: null

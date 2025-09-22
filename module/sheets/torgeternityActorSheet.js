@@ -378,7 +378,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     // Register handler to notice changes in the size of the sheet,
     // and update its layout automatically.
-    console.log(`ActorSheet#render`);
     switch (this.actor.type) {
       case 'stormknight':
         if (!ro_stormknight) ro_stormknight = new ResizeObserver((entries) => {

@@ -47,9 +47,6 @@ export async function renderSkillChat(test) {
   // For non-targeted tests, ensure we iterate through the loop at least once
   if (!test.targetAll.length) test.targetAll = [{ dummyTarget: true }];
 
-  // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
-  if (game.dice3d) game.dice3d.messageHookDisabled = true;
-
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   let iteratedRoll;
 
@@ -150,8 +147,6 @@ export async function renderSkillChat(test) {
             testActor.toggleStatusEffect('disconnected', { active: true })
         }
       }
-
-      if (test.rollTotal >= 60) test.possibleGlory = true;
     }
 
     // Add the dices list in test
@@ -175,6 +170,7 @@ export async function renderSkillChat(test) {
       test.combinedRollTotal = test.rollTotal + test.upTotal + test.possibilityTotal + test.heroTotal + test.dramaTotal;
       test.bonus = torgBonus(test.combinedRollTotal);
       if (test.multiModifier) game.combat?.getCombatantsByActor(testActor)?.shift()?.setCurrentBonus(test.bonus);
+      if (test.combinedRollTotal >= 60) test.possibleGlory = true;
     } else {
       test.rollTotal = undefined;
       test.combinedRollTotal = '-';
@@ -383,8 +379,14 @@ export async function renderSkillChat(test) {
     test.showApplySoak = (test.testType === 'soak' && test.soakWounds);
 
     // Show the "Apply Effects" button if the test has an effect that can be applied
-    if (testItem?.effects.find(ef => (ef.transferOnAttack && test.result >= TestResult.STANDARD) || ef.testOutcome === test.result))
-      test.showApplyEffects = true;
+    if (testItem) {
+      test.effects = testItem.effects.filter(ef => ef.appliesToTest(test.result, test.attackTraits, test.target?.defenseTraits)).map(ef => ef.uuid);
+      if (testItem.system?.loadedAmmo) {
+        const ammo = testActor.items.get(testItem.system.loadedAmmo);
+        if (ammo) test.effects.push(...ammo.effects.filter(ef => ef.appliesToTest(result, test.attackTraits, test.target?.defenseTraits)).map(ef => ef.uuid));
+      }
+      test.showApplyEffects = (test.effects.length > 0);
+    }
 
     // Approved Action Processing
     test.successfulDefendApprovedAction = false;
@@ -505,18 +507,21 @@ export async function renderSkillChat(test) {
       if (test?.additionalDamage && !test.explicitBonus) {
         adjustedDamage += test?.additionalDamage;
       }
+
       // Check for whether a target is present and turn on display of damage sub-label
       if (!target.dummyTarget) {
+        const effects = test.effects.map(fxid => fromUuidSync(fxid));
+        if (!test.fxApplied && test.effects) {
+          //test.fxApplied = true;
+          adjustedDamage = applyEffects('test.damage', adjustedDamage, effects);
+        }
+        // NOTE: target.toughness already includes target.armour
+        test.targetAdjustedToughness = target.toughness - target.armor;
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor) {
-          let extraarmor = getExtraProtection(test.attackTraits, target.defenseTraits, 'Armor', 0);
-          test.targetAdjustedToughness =
-            target.toughness -
-            Math.min(test.weaponAP, target.armor + extraarmor) +
-            test.coverModifier;
-          // Ignore armor and cover
-        } else {
-          test.targetAdjustedToughness = target.toughness - target.armor;
+          const armor = target.armor + getExtraProtection(test.attackTraits, target.defenseTraits, 'Armor', 0);
+          const weaponAP = applyEffects('test.weaponAP', test.weaponAP, effects);
+          test.targetAdjustedToughness += Math.max(0, armor - weaponAP) + test.coverModifier;
         }
         // Generate damage description and damage sublabel
         if (test.result < TestResult.STANDARD) {
@@ -640,23 +645,13 @@ export async function renderSkillChat(test) {
     // record adjustedToughness for each flagged target
     target.targetAdjustedToughness = test.targetAdjustedToughness;
 
-    // roll Dice once, and handle the error if DSN is not installed
-    if (game.dice3d) {
-      // catch errors to prevent DSN from overly affecting our own behaviour.
-      if (first && test.diceroll) {
-        try {
-          await game.dice3d.showForRoll(test.diceroll, game.user, true);
-        } catch (e) { console.log('TORG CHECK: DSN reported', e) }
-      }
-      if (iteratedRoll) {
-        try {
-          await game.dice3d.showForRoll(iteratedRoll);
-        } catch (e) { console.log('TORG CHECK: DSN reported', e) }
-      }
-    }
+
     iteratedRoll = undefined;
     const rollMode = game.settings.get("core", "rollMode");
     const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
+
+    // Tell dice-so-nice to NOT show a roll for the 2nd+ targets.
+    test.diceroll.dice.forEach(dice => dice.results.forEach(result => result.hidden = !first));
 
     messages.push(await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
@@ -680,8 +675,6 @@ export async function renderSkillChat(test) {
     if (game.canvas) await game.user._onUpdateTokenTargets();
     await game.user.broadcastActivity({ targets: [] });
   }
-
-  if (game.dice3d) game.dice3d.messageHookDisabled = false;
 
   return messages;
 }
@@ -729,6 +722,31 @@ export function torgDamage(damage, toughness, options) {
   return torgDamageModifiers(result, options);
 }
 
+
+function applyEffects(fieldname, origvalue, effects) {
+  if (!effects) return origvalue;
+  for (const effect of effects) {
+    if (!effect) continue;  // fromUuidSync failed
+    for (const change of effect.changes) {
+      if (change.key === fieldname) {
+        // DataModel.applyField
+        // DataField.applyChange
+        const value = parseInt(change.value);
+        if (isNaN(value)) continue;  // value MUST be a number
+        const modes = CONST.ACTIVE_EFFECT_MODES;
+        switch (change.mode) {
+          case modes.ADD: origvalue += value; break;
+          case modes.MULTIPLY: origvalue *= value; break;
+          case modes.OVERRIDE: origvalue = value; break;
+          case modes.UPGRADE: origvalue = Math.max(origvalue, value); break;
+          case modes.DOWNGRADE: origvalue = Math.min(origvalue, value); break;
+          default:  // custom
+        }
+      }
+    }
+  }
+  return origvalue;
+}
 
 export function torgDamageModifiers(result, options) {
   let { attackTraits, defenseTraits, soakWounds } = options;
