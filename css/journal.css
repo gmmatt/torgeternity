@@ -307,7 +307,7 @@ body#tinymce.mce-content-body {
 
   /*...................................................................*/
   /*<img> comes with a border, what is never seen in TE*/
-  .sheet.journal-entry .journal-entry-page {
+  .journal-entry-page {
     img {
       border-image: none;
       border: none;

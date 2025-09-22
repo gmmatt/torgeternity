@@ -17,13 +17,23 @@
   },
   "torgeternity": {
     "activeEffect": {
-      "transferOnAttack": {
-        "label": "Apply Effect on Attack",
-        "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
-      },
-      "testOutcome": {
-        "label": "Apply Effect on Outcome",
-        "hint": "Apply the effect to the target token(s) when a test using this item has this particular outcome"
+      "FIELDS": {
+        "transferOnAttack": {
+          "label": "Apply Effect on Attack",
+          "hint": "If checked, this Effect will be applied to the target Actor when this Effect's parent Item is involved in the attack (either as weapon or ammunition)"
+        },
+        "transferOnOutcome": {
+          "label": "Apply Effect on Outcome",
+          "hint": "Apply the effect to the target token(s) when a test using this item has this particular outcome"
+        },
+        "applyIfAttackTrait": {
+          "label": "Apply If Attack Trait",
+          "hint": "Apply the effect only if the attacking token has one of these traits"
+        },
+        "applyIfDefendTrait": {
+          "label": "Apply If Defend Trait",
+          "hint": "Apply the effect only if the attacked token (the target) has one of these traits"
+        }
       }
     },
     "attackTypes": {
@@ -484,8 +494,8 @@
       "enhances": "Enhances",
       "perk": "Related Perk"
     },
-    "fieldLabels": {
-      "itemTraits": {
+    "FIELDS": {
+      "traits": {
         "label": "Traits",
         "hint": "The specific abilities of this item"
       }
@@ -595,7 +605,7 @@
       "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
       "migrationRunning": "Migrating Torg system version to ",
-      "moduleNotActive": "Activate the module to see desscription.",
+      "moduleNotActive": "Activate the module to see description.",
       "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.",
       "noAttrNamed": "Your controlled Actor does not have an attribute named ",
       "noHands": "No hands available!",

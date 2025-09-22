@@ -3,37 +3,6 @@ name: Der maskierte Vigilant
 type: stormknight
 img: systems/torgeternity/images/characters/Masked_Crusader.Avatar.webp
 items:
-  - _id: eu1fNLOkaeAxVTKf
-    name: Waffenlos
-    type: customAttack
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    effects: []
-    folder: R0u9Ztaprf22IfSC
-    sort: 0
-    flags:
-      core: {}
-    system:
-      ap: 0
-      attackWith: unarmedCombat
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      description: ''
-      notes: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: 1694868187854
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Item.w4b7qWApQXkghQXE
-      duplicateSource: null
-      exportSource: null
-    _key: '!actors.items!92W36cwQtstg8MQ3.eu1fNLOkaeAxVTKf'
   - _id: aMOK1Bd8rFpUkhIL
     name: Mantel und Maske
     type: gear
@@ -631,6 +600,52 @@ items:
       default: 0
       d8YcfsxBOP7RAazk: 3
     _key: '!actors.items!92W36cwQtstg8MQ3.QgRsO9XiDOoOafo4'
+  - _id: eu1fNLOkaeAxVTKf
+    name: Waffenlos
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: R0u9Ztaprf22IfSC
+    sort: 0
+    flags:
+      core: {}
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: eu1fNLOkaeAxVTKf
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      l8SVzn2293lAwvMC: 3
+    _stats:
+      compendiumSource: Item.w4b7qWApQXkghQXE
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119734
+      modifiedTime: 1758491119734
+      lastModifiedBy: l8SVzn2293lAwvMC
+    _key: '!actors.items!92W36cwQtstg8MQ3.eu1fNLOkaeAxVTKf'
 effects: []
 folder: null
 sort: 0
@@ -1062,14 +1077,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
-    effects: 0
+      ring: '#000080'
+      background: '#8080f0'
+    effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/masked_crusader-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1079,10 +1094,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1694867673206
-  modifiedTime: 1729013549754
-  lastModifiedBy: d8YcfsxBOP7RAazk
+  modifiedTime: 1758529927281
+  lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: Compendium.torgeternity.archetypes.REeNzywr6VElHSWZ
   duplicateSource: null
   exportSource: null

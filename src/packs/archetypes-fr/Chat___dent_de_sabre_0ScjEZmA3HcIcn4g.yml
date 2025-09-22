@@ -5,31 +5,48 @@ img: systems/torgeternity/images/characters/sabre_tooth_cat.Avatar.webp
 items:
   - _id: ePmcuxIjZItJ2qOb
     name: morsure/griffes
-    type: specialability-rollable
+    type: customAttack
     sort: 100000
     flags: {}
-    img: systems/torgeternity/images/icons/specialability-rollable.webp
+    img: systems/torgeternity/images/icons/bite-icon.webp
     effects: []
     folder: null
     system:
       ap: 0
       attackWith: unarmedCombat
       chatNote: ''
-      damage: '9'
+      damage: 2
       description: <p><em>Dommages Force +2 (9).</em></p>
+      damageType: strengthPlus
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      notes: ''
+      transferenceID: ePmcuxIjZItJ2qOb
     ownership:
       default: 0
       pYSulyhjOdVnRAJt: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: torgeternity
-      systemVersion: 3.8.1
-      coreVersion: '13.345'
-      createdTime: 1716788509622
-      modifiedTime: 1716788608892
-      lastModifiedBy: pYSulyhjOdVnRAJt
       compendiumSource: null
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119141
+      modifiedTime: 1758491441582
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!0ScjEZmA3HcIcn4g.ePmcuxIjZItJ2qOb'
 effects: []
 folder: null
@@ -456,8 +473,8 @@ prototypeToken:
   ring:
     enabled: false
     colors:
-      ring: null
-      background: null
+      ring: '#000080'
+      background: '#8080f0'
     effects: 1
     subject:
       scale: 1

@@ -9,7 +9,7 @@ items:
     sort: 200001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -102,10 +102,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492496521
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.xXE09FeMfKBjV4uE
       duplicateSource: null
       exportSource: null
@@ -116,7 +116,7 @@ items:
     sort: 500001
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/perk.webp
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     system:
@@ -209,10 +209,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492500345
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.DJAlj7BkFtkJ8GmN
       duplicateSource: null
       exportSource: null
@@ -223,50 +223,8 @@ items:
     sort: 800000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: m4QT8vQ1gc6L97GC
-        flags: {}
-        changes:
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Item.2rrg1qTCfjdHFtKl
-        tint: '#ffffff'
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '13.345'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-          exportSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!BpClx5rBCesWUzIN.2p6hVKXGKxFiYmjT.m4QT8vQ1gc6L97GC
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
     folder: null
     system:
       cosm: Empire du Nil
@@ -275,7 +233,7 @@ items:
       techlevel: 19
       value: 9
       bonus: 1
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       maxDex: 12
       minStrength: null
@@ -284,12 +242,12 @@ items:
     ownership:
       default: 0
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493617457
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.Ih77xAUJLZwOROR7
       duplicateSource: null
       exportSource: null
@@ -300,7 +258,7 @@ items:
     sort: 700000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/meleeweapon.webp
+    img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
     system:
@@ -329,10 +287,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492260683
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.Of0q2y9B0BpfAByr
       duplicateSource: null
       exportSource: null
@@ -343,7 +301,7 @@ items:
     sort: 200000
     flags:
       core: {}
-    img: systems/torgeternity/images/icons/missileweapon.webp
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
     effects: []
     folder: null
     system:
@@ -376,10 +334,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758492064702
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.hvK73rLc7gT5pQIA
       duplicateSource: null
       exportSource: null
@@ -387,7 +345,7 @@ items:
   - _id: HaOi3fVkKquJiWrR
     name: Glock 9mm
     type: firearm
-    img: systems/torgeternity/images/icons/firearm.webp
+    img: systems/torgeternity/images/icons/firearm-icon.webp
     effects: []
     folder: null
     sort: 600000
@@ -420,10 +378,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758491948750
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.iOnl5BiGmVFaCzma
       duplicateSource: null
       exportSource: null
@@ -431,7 +389,7 @@ items:
   - _id: nB4dr3hVirizxtBL
     name: Outil polyvalent
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 1900000
@@ -453,10 +411,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493028767
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.qclakuW3FUv87ufW
       duplicateSource: null
       exportSource: null
@@ -464,7 +422,7 @@ items:
   - _id: kran1rL5Py2M7ZKo
     name: Lampe torche
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 2200000
@@ -483,10 +441,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493025341
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.tktQLV7z5tnNkEqr
       duplicateSource: null
       exportSource: null
@@ -494,7 +452,7 @@ items:
   - _id: XuhiHJMpwJmi9Us2
     name: Chargeurs supplémentaires (5)
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 1600000
@@ -513,10 +471,10 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493038810
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.qZuQoegFPBYC6tEB
       duplicateSource: null
       exportSource: null
@@ -524,7 +482,7 @@ items:
   - _id: kXukzOgxxMCFYLCC
     name: Potion de soin
     type: gear
-    img: systems/torgeternity/images/icons/gear.webp
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 1800000
@@ -538,18 +496,18 @@ items:
         et d&rsquo;un D&eacute; Bonus de points de&nbsp; choc.</p>
       price: '500'
       techlevel: 12
-      value: 14
+      value: 13
       equippedClass: item-equipped
     ownership:
       default: 0
       TK1vCAdCz548vBDu: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      coreVersion: '13.348'
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493032485
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: Item.sSWLrPCSi2G5jq6S
       duplicateSource: null
       exportSource: null
@@ -571,19 +529,34 @@ items:
       damageType: strengthPlus
       description: ''
       notes: ''
+      cosm: none
+      traits: []
+      axioms:
+        magic: 0
+        social: 0
+        spirit: 0
+        tech: 0
+      price: ''
+      value: 0
+      secondaryAxiom: none
+      bonus: 2
+      equipped: false
+      minStrength: null
+      transferenceID: k4qzTZV4hihR1LmC
     ownership:
       default: 0
       zWX19sSAtAWkeGhp: 3
+      l8SVzn2293lAwvMC: 3
     _stats:
-      systemId: null
-      systemVersion: null
-      coreVersion: '13.345'
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
       compendiumSource: Item.BFGjhDetVDm1xiku
       duplicateSource: null
       exportSource: null
+      coreVersion: '13.348'
+      systemId: torgeternity
+      systemVersion: 13.10.0
+      createdTime: 1758491119322
+      modifiedTime: 1758491119322
+      lastModifiedBy: l8SVzn2293lAwvMC
     _key: '!actors.items!BpClx5rBCesWUzIN.k4qzTZV4hihR1LmC'
 effects:
   - _id: pklu4BLFg7hviXaT
@@ -597,7 +570,7 @@ effects:
         mode: 2
         value: '1'
         priority: null
-    disabled: false
+    disabled: true
     duration:
       startTime: 0
       seconds: null
@@ -613,12 +586,12 @@ effects:
     description: ''
     statuses: []
     _stats:
-      coreVersion: '13.345'
+      coreVersion: '13.348'
       systemId: null
       systemVersion: null
       createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
+      modifiedTime: 1758493623906
+      lastModifiedBy: l8SVzn2293lAwvMC
       compendiumSource: null
       duplicateSource: null
       exportSource: null
@@ -1120,7 +1093,7 @@ prototypeToken:
     negative: false
     priority: 0
   texture:
-    src: systems/torgeternity/images/characters/Realm_Runner.Token.webp
+    src: systems/torgeternity/images/characters/realm_runner.Token.webp
     tint: '#ffffff'
     scaleX: 1
     scaleY: 1
@@ -1147,14 +1120,14 @@ prototypeToken:
   occludable:
     radius: 0
   ring:
-    enabled: false
+    enabled: true
     colors:
-      ring: null
-      background: null
+      ring: '#000080'
+      background: '#8080f0'
     effects: 1
     subject:
       scale: 1
-      texture: null
+      texture: systems/torgeternity/images/characters/realm_runner-subject.webp
   turnMarker:
     mode: 1
     animation: null
@@ -1164,10 +1137,10 @@ prototypeToken:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '13.345'
+  coreVersion: '13.348'
   createdTime: 1716827809233
-  modifiedTime: 1716827809233
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1758530198273
+  lastModifiedBy: BMvGTGfheqDXarjN
   compendiumSource: null
   duplicateSource: null
   exportSource: null
