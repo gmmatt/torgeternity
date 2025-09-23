@@ -25,6 +25,14 @@ export default class TorgActiveEffectConfig extends foundry.applications.sheets.
     },
   };
 
+  _configureRenderParts(options) {
+    const parts = super._configureRenderParts(options);
+    if (this.document.parent.documentName !== "Item") {
+      delete parts.torg;
+    }
+    return parts;
+  }
+
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     if (context.document.parent.documentName !== "Item") {
