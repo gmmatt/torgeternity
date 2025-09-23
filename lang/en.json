@@ -3,6 +3,11 @@
     "discard": "Discard",
     "display": "Show this card to players"
   },
+  "EFFECT": {
+    "TABS": {
+      "torg": "Torg Eternity"
+    }
+  },
   "TYPES": {
     "Card": {
       "destiny": "Destiny",
