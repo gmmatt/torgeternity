@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## NEXT
+
+- Move Torg-specific Active Effects fields to their own Tab in the AE Config dialog.
+
 ## 13.11.0
 
 - Add dynamic ring textures for all Archetypes.
