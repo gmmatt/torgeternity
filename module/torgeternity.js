@@ -59,7 +59,6 @@ Hooks.once('init', async function () {
   game.torgeternity = {
     rollItemMacro,
     rollSkillMacro,
-    viewMode: true,
     macros: new TorgeternityMacros(),
   };
   initTextEdidor();

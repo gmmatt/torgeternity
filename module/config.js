@@ -51,9 +51,6 @@ torgeternity.dramaActions = {
   possibleSetback: "torgeternity.dramaCard.possibleSetback"
 }
 
-torgeternity.viewMode = {
-  UI: true,
-};
 torgeternity.attributeTypes = {
   charisma: 'torgeternity.attributes.charisma',
   dexterity: 'torgeternity.attributes.dexterity',
