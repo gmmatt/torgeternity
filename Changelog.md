@@ -3,6 +3,7 @@
 ## NEXT
 
 - Move Torg-specific Active Effects fields to their own Tab in the AE Config dialog.
+- Remove explicit cosm names from HBS files.
 
 ## 13.11.0
 
