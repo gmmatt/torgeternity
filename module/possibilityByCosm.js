@@ -53,8 +53,22 @@ export class PossibilityByCosm extends foundry.applications.api.HandlebarsApplic
     const context = await super._prepareContext(options);
     const actorPoss = this.actor.getFlag('torgeternity', 'possibilityByCosm') ?? {};
     actorPoss.coreEarthPoss = this.actor.system.other.possibilities;
+
+    const cosms = {};
+    for (const cosm in CONFIG.torgeternity.cosmTypes) {
+      if (cosm === 'none') continue;
+      cosms[cosm] = {
+        name: game.i18n.localize(`torgeternity.cosms.${cosm}`),
+        uuid: game.i18n.localize(`torgeternity.cosms.${cosm}PossLink`),
+        hash: game.i18n.localize(`torgeternity.cosms.${cosm}PossLink2`),
+        icon: `systems/torgeternity/images/possy${(cosm === 'coreEarth') ? 'token' : '_' + cosm}.webp`,
+        largeIcon: (cosm !== 'other') && `systems/torgeternity/images/cosm-icons/${cosm}.webp`,
+        actorField: `${cosm}Poss`
+      }
+    }
+
     return Object.assign(context, {
-      cosms: Object.keys(CONFIG.torgeternity.cosmTypes).filter(k => k !== 'none'),
+      cosms,
       actor: this.actor,
       actorPoss,
       buttons: [
