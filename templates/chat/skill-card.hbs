@@ -216,7 +216,7 @@
                     {{#if bonusDiceList}}
                       <li>&mdash;</li>
                       {{#each bonusDiceList}} <!-- Array created in torgcheck -->
-                        <li class="roll die d6 {{#if (eq this 6)}}exploded{{/if}}">{{this}}</li>
+                        <li class="roll die d6">{{#if (eq this 6)}}&infin;{{else}}{{this}}{{/if}}</li>
                       {{/each}}
                     {{/if}}
                   </ol>

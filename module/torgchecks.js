@@ -150,7 +150,7 @@ export async function renderSkillChat(test) {
       }
     }
 
-    // Add the dices list in test
+    // Add the dices list in test (either from original roll above, or from extra BD roll)
     // add the dices only once, not for each target
     if (first && test.diceroll) {
       // to avoid errors if +3 cards
