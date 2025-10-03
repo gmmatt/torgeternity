@@ -18,6 +18,8 @@ export const TestResultKey = { // with .main or .sub
   [TestResult.OUTSTANDING]: 'outstanding'
 }
 
+const SHADOW_STYLE = ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+
 /**
  *
  * @param test
@@ -350,30 +352,27 @@ export async function renderSkillChat(test) {
       if (test.testType === 'power') {
         test.showBacklashButtons = true;
       }
-      test.outcomeColor = useColorBlind ? 'color: red' :
-        'color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+      test.outcomeColor = 'color: red';
       if (test.testType === 'soak') test.soakWounds = 0;
     } else if (testDifference > 9) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
       test.result = TestResult.OUTSTANDING;
-      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
-        'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' : 'color: green';
       if (test.testType === 'soak') test.soakWounds = 'all';
       if (testItem?.system?.outstanding) test.extraResult = testItem.system.outstanding;
     } else if (testDifference > 4) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
       test.result = TestResult.GOOD;
-      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
-        'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' : 'color: green';
       if (test.testType === 'soak') test.soakWounds = 2;
       if (testItem?.system?.good) test.extraResult = testItem.system.good;
     } else {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standardSuccess');
       test.result = TestResult.STANDARD;
-      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
-        'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+      test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' : 'color: green';
       if (test.testType === 'soak') test.soakWounds = 1;
     }
+    if (!useColorBlind) test.outcomeColor += SHADOW_STYLE;
 
     test.showApplySoak = (test.testType === 'soak' && test.soakWounds);
 
@@ -428,12 +427,12 @@ export async function renderSkillChat(test) {
       if (test?.attackTraits?.includes('fragile')) {
         test.extraResult = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.name });
       }
-      if (!useColorBlind) {
-        test.outcomeColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-        test.resultTextStyle += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-      } else {
+      if (useColorBlind) {
         test.outcomeColor = 'color: purple';
         test.resultTextStyle = 'color: purple';
+      } else {
+        test.outcomeColor += SHADOW_STYLE;
+        test.resultTextStyle += SHADOW_STYLE;
       }
       test.possibilityStyle = 'hidden';
       test.upStyle = 'hidden';
