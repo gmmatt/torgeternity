@@ -173,7 +173,7 @@ export async function renderSkillChat(test) {
       if (test.combinedRollTotal >= 60) test.possibleGlory = true;
     } else {
       test.rollTotal = undefined;
-      test.combinedRollTotal = '-';
+      test.combinedRollTotal ??= '-'; // Only set if undefined
     }
 
     // Raise bonus to 1 if actively defending
@@ -651,7 +651,8 @@ export async function renderSkillChat(test) {
     const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
 
     // Tell dice-so-nice to NOT show a roll for the 2nd+ targets.
-    test.diceroll.dice.forEach(dice => dice.results.forEach(result => result.hidden = !first));
+    if (test.diceroll?.dice)
+      test.diceroll.dice.forEach(dice => dice.results.forEach(result => result.hidden = !first));
 
     messages.push(await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: testActor }),
