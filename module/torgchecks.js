@@ -154,7 +154,11 @@ export async function renderSkillChat(test) {
     // add the dices only once, not for each target
     if (first && test.diceroll) {
       // to avoid errors if +3 cards
-      test.diceList = test.diceList ? test.diceList.concat(test.diceroll.dice[0].values) : test.diceroll.dice[0].values;
+      const values = test.diceroll.dice[0].values;
+      if (test.diceroll.dice[0]._faces === 6)
+        test.bonusDiceList = test.bonusDiceList ? test.bonusDiceList.concat(values) : values;
+      else
+        test.diceList = test.diceList ? test.diceList.concat(values) : values;
     }
 
     //
@@ -532,11 +536,19 @@ export async function renderSkillChat(test) {
           }
 
         } else {
+          // Extra BDs based on success - we can't do this since each target might have a different degree of success!
+          /*test.addBDs ??= 0;
+          if (test.result === TestResult.OUTSTANDING) {
+            test.addsBDs += 2;
+          } else if (test.result === TestResult.GOOD) {
+            test.addsBDs += 1;
+          }*/
+
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
           if (test.addBDs && !test.explicitBonus) {
             const iteratedRoll = await rollBonusDie(test.trademark, test.addBDs);
             const bdDamage = iteratedRoll.total;
-            test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
+            test.bonusDiceList = test.bonusDiceList ? test.bonusDiceList.concat(iteratedRoll.dice[0].values) : iteratedRoll.dice[0].values;
             test.amountBD += test.addBDs;
             test.addBDs = 0;
 

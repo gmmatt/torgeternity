@@ -5,6 +5,7 @@
 - Move Torg-specific Active Effects fields to their own Tab in the AE Config dialog.
 - Remove explicit cosm names from HBS files.
 - Ensure Die Total is retained in skill chat card after adding more modifiers through the Modifiers Dialog.
+- Show BD separately from d20s in the chat result card.
 
 ## 13.11.0
 
