@@ -48,7 +48,6 @@ export async function renderSkillChat(test) {
   if (!test.targetAll.length) test.targetAll = [{ dummyTarget: true }];
 
   test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
-  let iteratedRoll;
 
   const testActor = fromUuidSync(test.actor);
   const testItem = test.itemId ? testActor.items.get(test.itemId) : null;
@@ -535,23 +534,20 @@ export async function renderSkillChat(test) {
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
           if (test.addBDs && !test.explicitBonus) {
-            iteratedRoll = await rollBonusDie(test.trademark, test.addBDs);
-            test.BDDamageInPromise = iteratedRoll.total;
+            const iteratedRoll = await rollBonusDie(test.trademark, test.addBDs);
+            const bdDamage = iteratedRoll.total;
             test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
             test.amountBD += test.addBDs;
             test.addBDs = 0;
 
             test.chatTitle += ` + ${test.amountBD} ${game.i18n.localize('torgeternity.chatText.bonusDice')}`;
 
-            test.bdDamageSum += test.BDDamageInPromise;
-
-            test.damage += test.BDDamageInPromise;
-            adjustedDamage += test.BDDamageInPromise;
-            test.BDDamageInPromise = 0;
+            test.bdDamageSum += bdDamage;
+            test.damage += bdDamage;
+            adjustedDamage += bdDamage;
           }
           // adjustedDamage is already computed from test.damage
           // then modify test.damage for following future computation, and modify the adjustedDamage
-          // then the test.BDDamageInPromise is reset
           const damage = torgDamage(adjustedDamage, test.targetAdjustedToughness,
             {
               attackTraits: test.attackTraits,
@@ -645,8 +641,6 @@ export async function renderSkillChat(test) {
     // record adjustedToughness for each flagged target
     target.targetAdjustedToughness = test.targetAdjustedToughness;
 
-
-    iteratedRoll = undefined;
     const rollMode = game.settings.get("core", "rollMode");
     const flavor = (rollMode === 'publicroll') ? '' : game.i18n.localize(CONFIG.Dice.rollModes[rollMode].label);
 
