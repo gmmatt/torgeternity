@@ -861,10 +861,6 @@
       "showPiety": {
         "name": "Show Piety Score on Actor sheet",
         "hint": "Displays the current Piety Score of a Storm Knight on the Actor's sheet"
-      },
-      "dramaCardUp": {
-        "name": "UP only from Drama Card",
-        "hint": "Hide the UP button in Test Check results if the current Drama Card doesn't have UP in the conflict line (default true)"
       }
     },
     "sheetLabels": {

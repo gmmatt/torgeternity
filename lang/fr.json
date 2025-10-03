@@ -862,10 +862,6 @@
       "showPiety": {
         "name": "Afficher la Piété",
         "hint": "Affiche le score actuel de Piété du Chevalier des Tempêtes dans sa fiche de personnage"
-      },
-      "dramaCardUp": {
-        "name": "Un de plus ! des cartes d'Actions",
-        "hint": "Cache le bouton Un de plus ! Si l'option n'est pas dans la ligne conflit de la carte d'Action en cours (vrai par defaut)"
       }
     },
     "sheetLabels": {

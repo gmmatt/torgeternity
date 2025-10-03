@@ -618,17 +618,13 @@ export async function renderSkillChat(test) {
     }
     test.typeLabel += ' ';
 
-    // Hide the UP button if the current drama card doesn't show UP on the condition line.
-    // TODO: Vengeful Perk should allow UP to appear in Chat Card.
-    if (game.settings.get('torgeternity', 'dramaCardUp')) {
-      const combat = game.combat;
-      // get disposition from prototype Token if there's no real token.
-      const token = testActor.getActiveTokens(false, true)?.[0] || testActor.prototypeToken;  // (linked, document [rather than PlaceableObject])
-      if (combat?.active && token &&
-        ((token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && combat.heroConflict !== 'up') ||
-          (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && combat.villainConflict !== 'up')))
-        test.upStyle = 'hidden';
-    }
+    // Highlight the UP button if the Drama Card shows UP.
+    // get disposition from prototype Token if there's no real token.
+    const token = testActor.getActiveTokens(false, true)?.[0] || testActor.prototypeToken;  // (linked, document [rather than PlaceableObject])
+    if (game.combat?.active && token &&
+      ((token.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY && game.combat.heroConflict === 'up') ||
+        (token.disposition === CONST.TOKEN_DISPOSITIONS.HOSTILE && game.combat.villainConflict === 'up')))
+      test.upStyle = 'drama-up';
 
     // Disable unavailable menu options (Note: possibilities are always available)
 

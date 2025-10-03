@@ -3289,6 +3289,10 @@ document-embed .generalHeader {
   text-shadow: #ffcc00 1px 0 10px;
 }
 
+.chat-message .drama-up {
+  box-shadow: 1px 1px 2px red, 0 0 1em green, 0 0 0.2em green;
+}
+
 .chat-message .roll-button {
   border: black 1px solid;
   border-radius: 1rem;

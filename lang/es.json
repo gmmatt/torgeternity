@@ -862,10 +862,6 @@
       "showPiety": {
         "name": "Mostrar Piedad en hoja de actor",
         "hint": "Muestra la puntuación de Piedad actual de un Caballero de la Tormenta en la hoja de actor"
-      },
-      "dramaCardUp": {
-        "name": "AUMENTO solo en la carta de Drama",
-        "hint": "Oculta el botón AUMENTO en los resultados de una prueba si la carta de Drama actual no presenta AUMENTO en la línea de conflicto (activado por defecto)"
       }
     },
     "sheetLabels": {

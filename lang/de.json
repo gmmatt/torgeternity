@@ -862,10 +862,6 @@
       "showPiety": {
         "name": "Frömmigkeit im Charakterbogen anzeigen",
         "hint": "Anzeige des aktuellen Frömmigkeitswertes eines Storm Knight in seinem Charakterbogen"
-      },
-      "dramaCardUp": {
-        "name": "Oberhand nur von Drama Karte erlaubt",
-        "hint": "Oberhand-Knopf wird verborgen wenn kein Oberhand-Effekt nicht auf der Dramakarte angegeben ist. (default true)"
       }
     },
     "sheetLabels": {
