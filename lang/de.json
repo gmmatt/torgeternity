@@ -132,7 +132,7 @@
           "previous": "Summe des vorangegangenen Wurfs",
           "resetDefense": "Nicht mehr länger in aktiver Verteidigung.",
           "result": "Ergebnis",
-          "standartSuccess": "Standarderfolg",
+          "standardSuccess": "Standarderfolg",
           "toughness": "Robustheit",
           "BDDamageSum": "Summe des Schadens der BW"
         },

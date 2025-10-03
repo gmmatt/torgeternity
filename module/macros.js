@@ -838,7 +838,7 @@ export class TorgeternityMacros {
       outcome: '',
       actionTotalContent: '',
       resultText: '',
-      resultTextColor: 'display:none',
+      resultTextStyle: 'display:none',
     });
   }
 }

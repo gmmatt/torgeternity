@@ -368,7 +368,7 @@ export async function renderSkillChat(test) {
       if (test.testType === 'soak') test.soakWounds = 2;
       if (testItem?.system?.good) test.extraResult = testItem.system.good;
     } else {
-      test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
+      test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standardSuccess');
       test.result = TestResult.STANDARD;
       test.outcomeColor = useColorBlind ? 'color: rgb(44, 179, 44)' :
         'color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
@@ -428,11 +428,12 @@ export async function renderSkillChat(test) {
       if (test?.attackTraits?.includes('fragile')) {
         test.extraResult = game.i18n.format('torgeternity.chatText.check.result.fragileBroken', { itemName: testItem.name });
       }
-      test.outcomeColor = 'color: purple';
-      test.resultTextColor = 'color: purple';
       if (!useColorBlind) {
         test.outcomeColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
-        test.resultTextColor += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+        test.resultTextStyle += ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
+      } else {
+        test.outcomeColor = 'color: purple';
+        test.resultTextStyle = 'color: purple';
       }
       test.possibilityStyle = 'hidden';
       test.upStyle = 'hidden';
@@ -447,7 +448,7 @@ export async function renderSkillChat(test) {
 
     } else if (test.testType === 'soak') {
       test.resultText = test.outcome;
-      test.resultTextColor = test.outcomeColor;
+      test.resultTextStyle = test.outcomeColor;
       if (test.soakWounds > 0) {
         test.chatNote =
           `${test.soakWounds} ` +
@@ -492,7 +493,7 @@ export async function renderSkillChat(test) {
 
     } else {
       test.resultText = test.outcome;
-      test.resultTextColor = test.outcomeColor;
+      test.resultTextStyle = test.outcomeColor;
     }
 
     // If an attack, calculate and display damage
@@ -598,7 +599,7 @@ export async function renderSkillChat(test) {
     } else if (test.testType === 'custom') {
       test.typeLabel = game.i18n.localize('torgeternity.chatText.skillTestLabel');
       test.outcomeColor = 'hidden;';
-      test.resultTextColor = 'display:hidden;';
+      test.resultTextStyle = 'display:hidden;';
       test.showBD = true;
       test.upStyle = 'hidden';
     } else {

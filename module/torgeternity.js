@@ -224,7 +224,7 @@ Hooks.once('init', async function () {
     [TestResult.UNKNOWN]: "",
     [TestResult.MISHAP]: 'torgeternity.chatText.check.result.mishape',
     [TestResult.FAILURE]: 'torgeternity.chatText.check.result.failure',
-    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standartSuccess',
+    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standardSuccess',
     [TestResult.GOOD]: 'torgeternity.chatText.check.result.goodSuccess',
     [TestResult.OUTSTANDING]: 'torgeternity.chatText.check.result.outstandingSuccess'
   }
@@ -414,7 +414,7 @@ Hooks.on('ready', async function () {
   if (game.user.isGM)
     game.cards.forEach(deck => deck.cards.forEach(card => card.update({ face: 0 })));
 
-  // activation of standart scene
+  // activation of standard scene
   if (game.scenes.size < 1) {
     activateStandartScene();
   }

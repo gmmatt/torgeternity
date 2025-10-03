@@ -131,7 +131,7 @@
           "previous": "Previous roll total",
           "resetDefense": "No longer actively defending.",
           "result": "result",
-          "standartSuccess": "Standard Success",
+          "standardSuccess": "Standard Success",
           "toughness": "Toughness",
           "BDDamageSum": "Sum damage of rolled BD"
         },

@@ -132,7 +132,7 @@
           "previous": "Résultat du jet précédent",
           "resetDefense": "Ne se défend plus activement.",
           "result": "Résultat",
-          "standartSuccess": "Succès simple",
+          "standardSuccess": "Succès simple",
           "toughness": "Résistance",
           "BDDamageSum": "Somme des Dés Bonus de dommages"
         },
