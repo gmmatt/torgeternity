@@ -1,37 +1,41 @@
 import { torgeternity } from '../../config.js';
 
 let deferredGunners = new Set();
+
+const torg_icons = 'systems/torgeternity/images/icons/';
+const chat_templates = 'systems/torgeternity/templates/chat/';
 /**
  *
  */
 export default class TorgeternityItem extends foundry.documents.Item {
   // TODO: Chatcardtemplate for ammunitions & race
   static CHAT_TEMPLATE = {
-    perk: 'systems/torgeternity/templates/chat/perk-card.hbs',
-    attack: 'systems/torgeternity/templates/chat/attack-card.hbs',
-    bonus: 'systems/torgeternity/templates/chat/bonus-card.hbs',
-    power: 'systems/torgeternity/templates/chat/power-card.hbs',
-    gear: 'systems/torgeternity/templates/chat/gear-card.hbs',
-    implant: 'systems/torgeternity/templates/chat/implant-card.hbs',
-    enhancement: 'systems/torgeternity/templates/chat/enhancement-card.hbs',
-    eternityshard: 'systems/torgeternity/templates/chat/eternityshard-card.hbs',
-    armor: 'systems/torgeternity/templates/chat/armor-card.hbs',
-    shield: 'systems/torgeternity/templates/chat/shield-card.hbs',
-    spell: 'systems/torgeternity/templates/chat/spell-card.hbs',
-    miracle: 'systems/torgeternity/templates/chat/miracle-card.hbs',
-    psionicpower: 'systems/torgeternity/templates/chat/psionicpower-card.hbs',
-    specialability: 'systems/torgeternity/templates/chat/specialability-card.hbs',
-    vehicle: 'systems/torgeternity/templates/chat/vehicle-card.hbs',
-    destinyCard: 'systems/torgeternity/templates/chat/destinyCard.hbs',
-    cosmCard: 'systems/torgeternity/templates/chat/cosmCard.hbs',
-    dramaCard: 'systems/torgeternity/templates/chat/dramaCard.hbs',
-    customSkill: 'systems/torgeternity/templates/chat/customSkill-card.hbs',
-    vehicleAddOn: 'systems/torgeternity/templates/chat/vehicleAddOn-card.hbs',
+    perk: `${chat_templates}perk-card.hbs`,
+    attack: `${chat_templates}attack-card.hbs`,
+    bonus: `${chat_templates}bonus-card.hbs`,
+    power: `${chat_templates}power-card.hbs`,
+    gear: `${chat_templates}gear-card.hbs`,
+    implant: `${chat_templates}implant-card.hbs`,
+    currency: `${chat_templates}currency-card.hbs`,
+    enhancement: `${chat_templates}enhancement-card.hbs`,
+    eternityshard: `${chat_templates}eternityshard-card.hbs`,
+    armor: `${chat_templates}armor-card.hbs`,
+    shield: `${chat_templates}shield-card.hbs`,
+    spell: `${chat_templates}spell-card.hbs`,
+    miracle: `${chat_templates}miracle-card.hbs`,
+    psionicpower: `${chat_templates}psionicpower-card.hbs`,
+    specialability: `${chat_templates}specialability-card.hbs`,
+    vehicle: `${chat_templates}vehicle-card.hbs`,
+    destinyCard: `${chat_templates}destinyCard.hbs`,
+    cosmCard: `${chat_templates}cosmCard.hbs`,
+    dramaCard: `${chat_templates}dramaCard.hbs`,
+    customSkill: `${chat_templates}customSkill-card.hbs`,
+    vehicleAddOn: `${chat_templates}vehicleAddOn-card.hbs`,
     // Different types of attacks (not fully fleshed out)
-    meleeweapon: 'systems/torgeternity/templates/chat/meleeweapon-card.hbs',
-    //heavyweapon: 'systems/torgeternity/templates/chat/heavyweapon-card.hbs',
-    //firearm: 'systems/torgeternity/templates/chat/firearm-card.hbs',
-    //customAttack: 'systems/torgeternity/templates/chat/customAttack-card.hbs',
+    meleeweapon: `${chat_templates}meleeweapon-card.hbs`,
+    //heavyweapon: `${chat_templates}heavyweapon-card.hbs`,
+    //firearm: `${chat_templates}firearm-card.hbs`,
+    //customAttack: `${chat_templates}customAttack-card.hbs`,
   };
 
   /**
@@ -58,28 +62,29 @@ export default class TorgeternityItem extends foundry.documents.Item {
   }
 
   static DEFAULT_ICONS = {
-    ammunition: 'ammo-icon.webp',
-    gear: 'gear-icon.webp',
-    eternityshard: 'eternityshard.webp',
-    armor: 'armor-icon.webp',
-    shield: 'shield.webp',
-    meleeweapon: 'axe-icon.webp',
-    missileweapon: 'missile-weapon-icon.webp',
-    firearm: 'firearm-icon.webp',
-    implant: 'cyberware-icon.webp',
-    heavyweapon: 'explosion-icon.webp',
-    vehicle: 'vehicle-icon.webp',
-    vehicleAddOn: 'vehicle-addon-icon.webp',
-    perk: 'reality-icon.webp',
-    enhancement: 'enhancement.webp',
-    specialability: 'torgeternity-icon.webp',
-    'specialability-rollable': 'bite-icon.webp',
-    spell: 'spell-icon.webp',
-    miracle: 'miracles-icon.webp',
-    psionicpower: 'psionicpower.webp',
-    race: 'race-icon.webp',
-    customSkill: 'custom-skills.webp',
-    customAttack: 'melee-weapon-icon.webp',
+    ammunition: `${torg_icons}ammo-icon.webp`,
+    gear: `${torg_icons}gear-icon.webp`,
+    currency: 'icons/commodities/currency/coins-assorted-mix-silver.webp',
+    eternityshard: `${torg_icons}eternityshard.webp`,
+    armor: `${torg_icons}armor-icon.webp`,
+    shield: `${torg_icons}shield.webp`,
+    meleeweapon: `${torg_icons}axe-icon.webp`,
+    missileweapon: `${torg_icons}missile-weapon-icon.webp`,
+    firearm: `${torg_icons}firearm-icon.webp`,
+    implant: `${torg_icons}cyberware-icon.webp`,
+    heavyweapon: `${torg_icons}explosion-icon.webp`,
+    vehicle: `${torg_icons}vehicle-icon.webp`,
+    vehicleAddOn: `${torg_icons}vehicle-addon-icon.webp`,
+    perk: `${torg_icons}reality-icon.webp`,
+    enhancement: `${torg_icons}enhancement.webp`,
+    specialability: `${torg_icons}torgeternity-icon.webp`,
+    'specialability-rollable': `${torg_icons}bite-icon.webp`,
+    spell: `${torg_icons}spell-icon.webp`,
+    miracle: `${torg_icons}miracles-icon.webp`,
+    psionicpower: `${torg_icons}psionicpower.webp`,
+    race: `${torg_icons}race-icon.webp`,
+    customSkill: `${torg_icons}custom-skills.webp`,
+    customAttack: `${torg_icons}melee-weapon-icon.webp`,
   };
 
   static migrateData(source) {
@@ -117,7 +122,7 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
-        await this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
+        await this.updateSource({ img: image });
       }
     }
 
@@ -188,9 +193,9 @@ export default class TorgeternityItem extends foundry.documents.Item {
     if (this.type === 'implant' &&
       changes?.system?.implantType &&
       (!changes.img || this.img === changes.img) &&
-      this.img.includes('systems/torgeternity/images/icons/')) {
+      this.img.startsWith(torg_icons)) {
 
-      changes.img = `systems/torgeternity/images/icons/${changes.system.implantType}-icon.webp`;
+      changes.img = `${torg_icons}${changes.system.implantType}-icon.webp`;
     }
   }
 

@@ -7,6 +7,9 @@
 - Ensure Die Total is retained in skill chat card after adding more modifiers through the Modifiers Dialog.
 - Show BD separately from d20s in the chat result card.
 - When UP appears on Drama, add a shadow to the UP button to remind players.
+- Vehicle sheet should scroll properly.
+- Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
+  - Spending currency will be added in a future update.
 
 ## 13.11.0
 

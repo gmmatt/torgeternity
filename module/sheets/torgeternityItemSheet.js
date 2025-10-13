@@ -37,6 +37,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     // same order as in system.json
     ammunition: { template: `systems/torgeternity/templates/items/ammunition-sheet.hbs`, scrollable: [".scrollable"] },
     armor: { template: `systems/torgeternity/templates/items/armor-sheet.hbs`, scrollable: [".scrollable"] },
+    currency: { template: `systems/torgeternity/templates/items/currency-sheet.hbs`, scrollable: [".scrollable"] },
     customAttack: { template: `systems/torgeternity/templates/items/customAttack-sheet.hbs`, scrollable: [".scrollable"] },
     customSkill: { template: `systems/torgeternity/templates/items/customSkill-sheet.hbs`, scrollable: [".scrollable"] },
     enhancement: { template: `systems/torgeternity/templates/items/enhancement-sheet.hbs`, scrollable: [".scrollable"] },

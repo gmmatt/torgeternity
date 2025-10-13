@@ -238,6 +238,7 @@ Hooks.once('init', async function () {
   CONFIG.Item.typeLabels = {
     ammunition: 'torgeternity.itemSheetDescriptions.ammunition',
     gear: 'torgeternity.itemSheetDescriptions.generalGear',
+    currency: 'torgeternity.itemSheetDescriptions.currency',
     eternityshard: 'torgeternity.itemSheetDescriptions.eternityshard',
     armor: 'torgeternity.itemSheetDescriptions.armor',
     shield: 'torgeternity.itemSheetDescriptions.shield',

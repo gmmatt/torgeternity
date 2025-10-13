@@ -569,6 +569,7 @@
     "itemSheetDescriptions": {
       "armor": "Armor",
       "ammunition": "Ammunition",
+      "currency": "Currency",
       "customAttack": "Custom Attack",
       "customSkill": "Custom Skill",
       "enhancement": "Enhancement",
@@ -920,6 +921,7 @@
       "crewUnskilledOperator": "The operator of this vehicle is unskilled!",
       "crewUnskilledWeapon": "This weapon is being used unskilled!",
       "crewFavored": "This weapon has a favored gunner",
+      "currencies": "Currencies",
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Custom Skills",
       "customAttacks": "Custom Attacks",
