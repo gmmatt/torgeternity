@@ -570,7 +570,7 @@
     "itemSheetDescriptions": {
       "armor": "Rüstung",
       "ammunition": "Munition",
-      "currency": "Currency",
+      "currency": "Währung",
       "customAttack": "Individueller Angriff",
       "customSkill": "Eigene Fertigkeit",
       "enhancement": "Verbesserung",
@@ -922,7 +922,7 @@
       "crewUnskilledOperator": "Der Lenker des Fahrzeug ist ungelernt!",
       "crewUnskilledWeapon": "Die Waffe wird ungelernt genutzt!",
       "crewFavored": "This weapon has a favored gunner",
-      "currencies": "Currencies",
+      "currencies": "Währungen",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "customAttacks": "Individuelle Angriffe",

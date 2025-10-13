@@ -570,7 +570,7 @@
     "itemSheetDescriptions": {
       "armor": "Armadura",
       "ammunition": "Munición",
-      "currency": "Currency",
+      "currency": "Moneda",
       "customAttack": "Ataque Personalizado",
       "customSkill": "Hab. Personalizada",
       "enhancement": "Mejoras",
@@ -922,7 +922,7 @@
       "crewUnskilledOperator": "¡El operador de este vehículo no está entrenado!",
       "crewUnskilledWeapon": "¡Esta arma se está usando sin entrenar!",
       "crewFavored": "Esta arma tiene un usuario con uso preferente",
-      "currencies": "Currencies",
+      "currencies": "Monedas",
       "customSkill": "Las habilidades personalizadas se pueden editar en la pestaña de Dones",
       "customSkills": "Hab. personalizada",
       "customAttacks": "Ataques personalizados",

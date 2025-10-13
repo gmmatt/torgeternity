@@ -570,7 +570,7 @@
     "itemSheetDescriptions": {
       "armor": "Armure",
       "ammunition": "Munitions",
-      "currency": "Currency",
+      "currency": "Devise",
       "customAttack": "Attaque personnalisée",
       "customSkill": "Compétence personnalisée",
       "enhancement": "Amélioration",
@@ -922,7 +922,7 @@
       "crewUnskilledOperator": "L'utilisateur sélectionné est Incompétent !",
       "crewUnskilledWeapon": "Cette arme est utilisée par un opérateur Incompétent !",
       "crewFavored": "Cette arme est utlisée par un opérateur Favorisé",
-      "currencies": "Currencies",
+      "currencies": "Devises",
       "customSkill": "Les compétences personnalisées sont modifiables dans l'onglet Atouts",
       "customSkills": "Compétences personnalisées",
       "customAttacks": "Attaques personnalisées",
