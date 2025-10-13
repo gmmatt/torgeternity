@@ -1345,6 +1345,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       }
     }
 
+    div.sheet-body {
+      height: 100%
+    }
+
     .vehicle-stat {
       text-align: center;
 
@@ -3646,6 +3650,11 @@ document-embed .generalHeader {
       background: url(../images/roundBack.webp);
       background-size: cover;
       grid-column: 2/3;
+
+      &.largeNumber {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     input[name="system.price"],
