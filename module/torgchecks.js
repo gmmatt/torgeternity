@@ -513,8 +513,8 @@ export async function renderSkillChat(test) {
 
       // Check for whether a target is present and turn on display of damage sub-label
       if (!target.dummyTarget) {
-        const effects = test.effects.map(fxid => fromUuidSync(fxid));
-        if (!test.fxApplied && test.effects) {
+        const effects = test.effects?.map(fxid => fromUuidSync(fxid));
+        if (!test.fxApplied && effects) {
           //test.fxApplied = true;
           adjustedDamage = applyEffects('test.damage', adjustedDamage, effects);
         }
