@@ -355,18 +355,6 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     await super._onRender(context, options);
     let html = this.element;
 
-    new foundry.applications.ux.DragDrop.implementation({
-      dragSelector: '[data-drag], .item-list .item',
-      permissions: {
-        dragstart: this._canDragStart.bind(this),
-        drop: this._canDragDrop.bind(this),
-      },
-      callbacks: {
-        dragstart: this._onDragStart.bind(this),
-        drop: this._onDrop.bind(this),
-      }
-    }).bind(this.element);
-
     // localizing hardcoded possibility potential value
     if (this.actor.isOwner) {
       html.querySelectorAll('.attributeValueField').forEach(elem =>

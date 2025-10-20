@@ -5,10 +5,10 @@
 - Move Torg-specific Active Effects fields to their own Tab in the AE Config dialog.
 - Remove explicit cosm names from HBS files.
 - Ensure Die Total is retained in skill chat card after adding more modifiers through the Modifiers Dialog.
-- Show BD separately from d20s in the chat result card.
-- When UP appears on Drama, add a shadow to the UP button to remind players.
+- Show BD separately from d20s in the chat result card (with infinity symbol instead of "6").
+- When UP appears on Drama, add a shadow to the UP button to remind players (don't hide UP if not on Drama card).
 - Vehicle sheet should scroll properly.
-- Prevent errors being reported regarding DSN integration and `test.effects` being undefined.
+- Prevent errors being reported regarding DSN integration and `test.effects` being undefined. (This also fixes Periculum macro.)
 - Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Spending currency will be added in a future update.
 
