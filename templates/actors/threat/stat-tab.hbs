@@ -19,7 +19,7 @@
         <div class="threat-edit attribut-list-edit">
           <span>
             <a
-              class="skill-roll" data-drag="true" data-action="skillRoll"
+              class="skill-roll draggable" data-action="skillRoll"
               data-testType="attribute"
               data-value="{{document.system.attributes.charisma.value}}"
               data-name="charisma"
@@ -47,7 +47,7 @@
           </span>
           <span>
             <a
-              class="skill-roll" data-drag="true" data-action="skillRoll"
+              class="skill-roll draggable" data-action="skillRoll"
               data-testType="attribute"
               data-value="{{document.system.attributes.dexterity.value}}"
               data-name="dexterity"
@@ -75,7 +75,7 @@
           </span>
           <span>
             <a
-              class="skill-roll" data-drag="true" data-action="skillRoll"
+              class="skill-roll draggable" data-action="skillRoll"
               data-testType="attribute"
               data-value="{{document.system.attributes.mind.value}}"
               data-name="mind"
@@ -102,7 +102,7 @@
           </span>
           <span>
             <a
-              class="skill-roll" data-drag="true" data-action="skillRoll"
+              class="skill-roll draggable" data-action="skillRoll"
               data-testType="attribute"
               data-value="{{document.system.attributes.spirit.value}}"
               data-name="spirit"
@@ -129,7 +129,7 @@
           </span>
           <span>
             <a
-              class="skill-roll" data-drag="true" data-action="skillRoll"
+              class="skill-roll draggable" data-action="skillRoll"
               data-testType="attribute"
               data-value="{{document.system.attributes.strength.value}}"
               data-name="strength"
@@ -173,7 +173,7 @@
         </a>
         {{#if document.system.skills.intimidation.defenseOnly}} {{else}} &bull;
           <a
-            class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not
+            class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
             @root.editable)}}
             data-name="intimidation"
             data-base-attribute="spirit"
@@ -183,7 +183,7 @@
           </a>
         {{/if}} {{#if document.system.skills.maneuver.defenseOnly}} {{else}} &bull;
           <a
-            class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not
+            class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
             @root.editable)}}
             data-name="maneuver"
             data-base-attribute="dexterity"
@@ -193,7 +193,7 @@
           </a>
         {{/if}} {{#if document.system.skills.taunt.defenseOnly}} {{else}} &bull;
           <a
-            class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not
+            class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
             @root.editable)}}
             data-name="taunt"
             data-base-attribute="charisma"
@@ -203,7 +203,7 @@
           </a>
         {{/if}} {{#if document.system.skills.trick.defenseOnly}} {{else}} &bull;
           <a
-            class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not
+            class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
             @root.editable)}}
             data-name="trick"
             data-base-attribute="mind"
@@ -217,7 +217,7 @@
       <div class="weapons-list">
         <div class="item-list">
           {{#each meleeweapons as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -238,7 +238,7 @@
               </div>
             </li>
           {{/each}} {{#each missileweapon as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -267,7 +267,7 @@
               </div>
             </li>
           {{/each}} {{#each firearm as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -296,7 +296,7 @@
               </div>
             </li>
           {{/each}} {{#each heavyweapon as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -325,7 +325,7 @@
               </div>
             </li>
           {{/each}} {{#each spell as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -348,7 +348,7 @@
               </div>
             </li>
           {{/each}} {{#each miracle as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -371,7 +371,7 @@
               </div>
             </li>
           {{/each}} {{#each psionicpower as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -394,7 +394,7 @@
               </div>
             </li>
           {{/each}} {{#each specialabilityRollable as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -418,7 +418,7 @@
             </li>
           {{/each}}
           {{#each customAttack as |item id|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item draggable" data-item-id="{{item._id}}">
               <div>
                 <img src="{{item.img}}" data-tooltip="{{item.name}}" />
               </div>
@@ -462,7 +462,7 @@
             {{#if content.isThreatSkill}}
               <span class="inline-skill-item">
                 <a
-                  class="skill-roll" data-drag="true" data-action="skillRoll"
+                  class="skill-roll draggable" data-action="skillRoll"
                   data-testtype="skill"
                   data-baseattribute="{{content.baseAttribute}}"
                   data-adds="{{content.adds}}"
@@ -482,7 +482,7 @@
           {{#each customSkill as |content name|}}
             <span class="inline-skill-item">
               <a
-                class="skill-roll" data-drag="true" data-action="skillRoll"
+                class="skill-roll draggable" data-action="skillRoll"
                 data-testtype="skill"
                 data-customskill="true"
                 data-baseattribute="{{content.system.baseAttribute}}"
@@ -578,10 +578,10 @@
     <div class="threat-block">
       <ol class="item-list">
         {{#each perk as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class="item draggable" data-item-id="{{item._id}}">
             <div class="item-row flexrow">
               <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-              <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+              <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</a>
               <div class="item-controls">
                 <a
                   class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
@@ -620,10 +620,10 @@
 
       <ol class="item-list">
         {{#each specialability as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class="item draggable" data-item-id="{{item._id}}">
             <div class="item-row flexrow">
               <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-              <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+              <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</a>
               <div class="item-controls">
                 <a
                   class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}

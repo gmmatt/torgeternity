@@ -99,8 +99,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     if (target.dataset.effectUuid) {
       const effect = await fromUuid(target.dataset.effectUuid);
       return event.dataTransfer.setData("text/plain", JSON.stringify(effect.toDragData()));
-    } else
-      return super._onDragStart(event);
+    }
   }
 
   /** @inheritdoc */
@@ -153,7 +152,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     await super._onRender(context, options);
 
     new foundry.applications.ux.DragDrop.implementation({
-      dragSelector: '[data-drag], .item-list .item',
+      dragSelector: '.draggable',
       permissions: {
         dragstart: this._canDragStart.bind(this),
         drop: this._canDragDrop.bind(this),

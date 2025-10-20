@@ -11,6 +11,7 @@
 - Prevent errors being reported regarding DSN integration and `test.effects` being undefined. (This also fixes Periculum macro.)
 - Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Spending currency will be added in a future update.
+- Use core drag/drop `draggable` attribute in all sheets.
 
 ## 13.11.0
 

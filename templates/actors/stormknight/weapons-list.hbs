@@ -11,7 +11,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
+    class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="intimidation"
     data-base-attribute="spirit"
     data-adds="{{document.system.skills.intimidation.adds}}"
@@ -20,7 +20,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
+    class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="maneuver"
     data-base-attribute="dexterity"
     data-adds="{{document.system.skills.maneuver.adds}}"
@@ -29,7 +29,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
+    class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="taunt"
     data-base-attribute="charisma"
     data-adds="{{document.system.skills.taunt.adds}}"
@@ -38,7 +38,7 @@
   </a>
   &bull;
   <a
-    class="interaction-attack" data-drag="true" data-action="interactionAttack" {{disabled (not @root.editable)}}
+    class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not @root.editable)}}
     data-name="trick"
     data-base-attribute="mind"
     data-adds="{{document.system.skills.trick.adds}}"
@@ -50,7 +50,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.meleeWeapons'}}</h3>
   <div class="item-list">
     {{#each meleeweapons as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
@@ -77,7 +77,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.missileWeapons'}}</h3>
   <div class="item-list">
     {{#each missileweapon as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
@@ -110,7 +110,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.firearms'}}</h3>
   <div class="item-list">
     {{#each firearm as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
@@ -143,7 +143,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.heavyWeapons'}}</h3>
   <div class="item-list">
     {{#each heavyweapon as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
@@ -177,7 +177,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.spells'}}</h3>
   <div class="item-list">
     {{#each spell as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
@@ -204,7 +204,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.miracles'}}</h3>
   <div class="item-list">
     {{#each miracle as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
@@ -232,7 +232,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.psionicPowers'}}</h3>
   <div class="item-list">
     {{#each psionicpower as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
@@ -259,7 +259,7 @@
   <h3>{{localize 'torgeternity.sheetLabels.otherAttacks'}}</h3>
   <div class="item-list">
     {{#each customAttack as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div>
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>
