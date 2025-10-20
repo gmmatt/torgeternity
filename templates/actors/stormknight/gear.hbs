@@ -5,13 +5,8 @@
       {{#each currency as |item id|}}
         <div class="currency item block" data-item-id="{{item._id}}">
           <p class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</p>
-          <input readonly class="largeNumber" type="number" value="{{item.system.quantity}}" />
-
-          <a class="item-control item-edit" data-action="itemEdit"
-            data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
-            <i class="fas fa-edit"></i>
-          </a>
-
+          <input name="items.{{item._id}}.system.quantity" class="largeNumber" type="number"
+            value="{{item.system.quantity}}" />
         </div>
       {{/each}}
     </div>
