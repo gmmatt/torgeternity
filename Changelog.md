@@ -11,7 +11,8 @@
 - Prevent errors being reported regarding DSN integration and `test.effects` being undefined. (This also fixes Periculum macro.)
 - Use core drag/drop `draggable` attribute in all sheets.
 - Buff macro should be working again.
-- Print STYMIED (not SURGE) message to chat when Stymied appears on Drama card.
+- Post STYMIED (not SURGE) message to chat when Stymied appears on Drama card.
+- Ensure possibilities are updated on Player's computers when the GM modifiers the possibilities on an Actor.
 - Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Quantity can be directly edited in the summary row.
   - Spending currency will be added in a future update.
