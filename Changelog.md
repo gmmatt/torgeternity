@@ -13,6 +13,7 @@
 - Buff macro should be working again.
 - Post STYMIED (not SURGE) message to chat when Stymied appears on Drama card.
 - Ensure possibilities are updated on Player's computers when the GM modifiers the possibilities on an Actor.
+- In "Enhanced Display" of Card Hand, put draw buttons at top of window.
 - Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Quantity can be directly edited in the summary row.
   - Spending currency will be added in a future update.
