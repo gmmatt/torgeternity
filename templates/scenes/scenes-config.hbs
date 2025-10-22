@@ -9,12 +9,10 @@
     </select>
   </div>
 
-  {{#if document.torg.displayCosm2}}
-    <div class="form-group cosm-secondary">
-      <label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
-      <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String" data-field="cosm2">
-        {{selectOptions cosmTypes selected=document.torg.cosm2 localize=true sort=true}}
-      </select>
-    </div>
-  {{/if}}
+  <div class="form-group cosm-secondary" {{#unless document.torg.displayCosm2}}style="display:none" {{/unless}}>
+    <label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
+    <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String" data-field="cosm2">
+      {{selectOptions cosmTypes selected=document.torg.cosm2 localize=true sort=true}}
+    </select>
+  </div>
 </div>

@@ -47,4 +47,12 @@ export default class torgeternitySceneConfig extends foundry.applications.sheets
     }
     return partContext;
   }
+
+  _onChangeForm(formConfig, event) {
+    super._onChangeForm(formConfig, event);
+    if (event.type === 'change' && event.target.name === 'flags.torgeternity.zone') {
+      const elem = this.element.querySelector('div.cosm-secondary');
+      if (elem) elem.style.display = (event.target.value === 'pure') ? 'none' : '';
+    }
+  }
 }
