@@ -163,7 +163,7 @@
       <div class="section-bar">{{localize 'torgeternity.sheetLabels.actions'}}</div>
       <div class="interaction-attack-list">
         <a
-          class="unarmed-attack" data-action="unarmedAttack" {{disabled (not @root.editable)}}
+          class="unarmed-attack draggable" data-action="unarmedAttack" {{disabled (not @root.editable)}}
           data-name="unarmedCombat"
           data-base-attribute="dexterity"
           data-adds="{{document.system.skills.unarmedCombat.adds}}"
@@ -171,7 +171,7 @@
           data-damage="{{document.unarmed.damage}}">
           {{localize 'torgeternity.skills.unarmedCombat'}}
         </a>
-        {{#if document.system.skills.intimidation.defenseOnly}} {{else}} &bull;
+        {{#unless document.system.skills.intimidation.defenseOnly}} &bull;
           <a
             class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
             @root.editable)}}
@@ -181,37 +181,40 @@
             data-skill-value="{{document.system.skills.intimidation.value}}">
             {{localize 'torgeternity.skills.intimidation'}}
           </a>
-        {{/if}} {{#if document.system.skills.maneuver.defenseOnly}} {{else}} &bull;
+        {{/unless}}
+        {{#unless document.system.skills.maneuver.defenseOnly}} &bull;
           <a
-            class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
-            @root.editable)}}
+            class="interaction-attack draggable" data-action="interactionAttack"
+            {{disabled (not @root.editable)}}
             data-name="maneuver"
             data-base-attribute="dexterity"
             data-adds="{{document.system.skills.maneuver.adds}}"
             data-skill-value="{{document.system.skills.maneuver.value}}">
             {{localize 'torgeternity.skills.maneuver'}}
           </a>
-        {{/if}} {{#if document.system.skills.taunt.defenseOnly}} {{else}} &bull;
+        {{/unless}}
+        {{#unless document.system.skills.taunt.defenseOnly}} &bull;
           <a
-            class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
-            @root.editable)}}
+            class="interaction-attack draggable" data-action="interactionAttack"
+            {{disabled (not @root.editable)}}
             data-name="taunt"
             data-base-attribute="charisma"
             data-adds="{{document.system.skills.taunt.adds}}"
             data-skill-value="{{document.system.skills.taunt.value}}">
             {{localize 'torgeternity.skills.taunt'}}
           </a>
-        {{/if}} {{#if document.system.skills.trick.defenseOnly}} {{else}} &bull;
+        {{/unless}}
+        {{#unless document.system.skills.trick.defenseOnly}} &bull;
           <a
-            class="interaction-attack draggable" data-action="interactionAttack" {{disabled (not
-            @root.editable)}}
+            class="interaction-attack draggable" data-action="interactionAttack"
+            {{disabled (not @root.editable)}}
             data-name="trick"
             data-base-attribute="mind"
             data-adds="{{document.system.skills.trick.adds}}"
             data-skill-value="{{document.system.skills.trick.value}}">
             {{localize 'torgeternity.skills.trick'}}
           </a>
-        {{/if}}
+        {{/unless}}
       </div>
 
       <div class="weapons-list">

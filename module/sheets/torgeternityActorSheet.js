@@ -293,7 +293,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const target = event.currentTarget;
     if (target.classList.contains('skill-roll'))
       this._skillAttrDragStart(event) // a.skill-roll
-    else if (target.classList.contains('interaction-attack'))
+    else if (target.classList.contains('interaction-attack') || target.classList.contains('unarmed-attack'))
       this._interactionDragStart(event) // a.interaction-attack
     else if (target.dataset.effectUuid) {
       const effect = await fromUuid(target.dataset.effectUuid);
