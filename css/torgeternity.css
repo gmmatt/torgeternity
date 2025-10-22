@@ -46,6 +46,16 @@
   }
 }
 
+@keyframes boxchange {
+  0% {
+    box-shadow: 0 0 2em var(--torgblue);
+  }
+
+  100% {
+    box-shadow: 0 0 1em var(--torgred);
+  }
+}
+
 .window-app .window-content {
   padding: 8px;
 }
@@ -3316,7 +3326,7 @@ document-embed .generalHeader {
 }
 
 .chat-message .drama-up {
-  box-shadow: 1px 1px 1em red, 0 0 2em green, 0 0 0.2em green;
+  animation: boxchange 2s infinite alternate;
 }
 
 .chat-message .roll-button {
