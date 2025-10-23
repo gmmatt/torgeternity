@@ -691,7 +691,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
           content: game.i18n.format('torgeternity.defeat.tempInjury', { attribute: localAttr })
         })
         return actor?.createEmbeddedDocuments('ActiveEffect', [{
-          name: `${game.i18n.localize('torgeternity.defeat.good-success.effectName')} (${localAttr})`,
+          name: `${game.i18n.localize('torgeternity.defeat.good.effectName')} (${localAttr})`,
           icon: 'icons/svg/downgrade.svg',
           changes: [
             {
