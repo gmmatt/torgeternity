@@ -251,7 +251,8 @@
           <a class="button roll-button" data-action="addPlus3">{{localize 'torgeternity.chatText.bonusCard'}}</a>
         {{/unless}}
         {{#if showBD}}
-          <a class="button roll-button" data-action="addBd">{{localize 'torgeternity.chatText.bonusDice'}}</a>
+          <a class="button roll-button" data-action="addBd"
+            data-tooltip="{{localize 'torgeternity.chatText.bdTooltip'}}">{{localize 'torgeternity.chatText.bonusDice'}}</a>
         {{/if}}
       </div>
     {{/if}}

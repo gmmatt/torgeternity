@@ -82,6 +82,7 @@
       "bonus": "Bonus",
       "bonusCard": "Carte +3",
       "bonusDamage": "Bonus aux dommages",
+      "bdTooltip": "Hold SHIFT to roll BD twice and keep the best result",
       "bonusDice": "DB",
       "chase": "Test de Poursuite",
       "check": {

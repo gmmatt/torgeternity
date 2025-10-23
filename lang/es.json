@@ -82,6 +82,7 @@
       "bonus": "Bonificación",
       "bonusCard": "CAR+3",
       "bonusDamage": "Daño Adicional",
+      "bdTooltip": "Hold SHIFT to roll BD twice and keep the best result",
       "bonusDice": "DB",
       "chase": "Prueba de persecución",
       "check": {

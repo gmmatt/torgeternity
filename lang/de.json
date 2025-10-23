@@ -83,6 +83,7 @@
       "bonusCard": "+3 Karte",
       "bonusDamage": "Bonus Schaden",
       "bonusDice": "BW",
+      "bdTooltip": "Hold SHIFT to roll BD twice and keep the best result",
       "chase": "Verfolgungsjagd-Probe",
       "check": {
         "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",

@@ -7,6 +7,8 @@ import TorgeternityActor from './documents/actor/torgeternityActor.js';
 
 const { DialogV2 } = foundry.applications.api;
 
+const BDMARKER = `\u00b2`;
+
 export default class TorgeternityChatLog extends foundry.applications.sidebar.tabs.ChatLog {
 
   static DEFAULT_OPTIONS = {
@@ -262,6 +264,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onBd(event, button) {
     event.preventDefault();
+    const rollTwice = event.shiftKey;
     const { chatMessageId, chatMessage, test } = getMessage(button);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
@@ -275,7 +278,14 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.hideFavButton = true;
     test.hidePlus3 = true;
 
-    const finalValue = await rollBonusDie(test.trademark, 1);
+    let finalValue;
+    if (rollTwice) {
+      // How to show both rolls on chat card and DSN?
+      const roll1 = await rollBonusDie(test.trademark);
+      const roll2 = await rollBonusDie(test.trademark);
+      finalValue = (roll1.value > roll2.value) ? roll1 : roll2;
+    } else
+      finalValue = await rollBonusDie(test.trademark);
 
     const newDamage = test.damage + finalValue.total;
 
@@ -284,12 +294,13 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     test.amountBD += 1;
     if (test.amountBD === 1 && !test.addBDs) {
-      test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
+      test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice') + BDMARKER;
     } else if (test.amountBD > 1) {
       test.chatTitle = test.chatTitle.replace(
         (test.amountBD - 1).toString(),
         test.amountBD.toString()
       );
+      test.chatTitle += BDMARKER;
     } else {
       ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
     }
