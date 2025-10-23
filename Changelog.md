@@ -17,7 +17,7 @@
 - Toggle display of second cosm in Scene Config window immediately on changing the cosm type.
 - Allow `unarmed combat` interaction to be dragged to Macro Hotbar.
 - #604: Hold SHIFT when pressing the BD in a chat card to roll the BD two separate times and keep the higher result (e.g. Killshot). A superscript-2 is added to the chat title each time that BD is rolled whilst holding SHIFT.
-- Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
+- #606: Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Quantity can be directly edited in the summary row.
   - New game option (Items cost Currency) to allow currency to be spent when dragging Items onto a Stormknight Actor:
     - 'No Cost' (default) - cost of the item is ignored, no currency is deducted.
