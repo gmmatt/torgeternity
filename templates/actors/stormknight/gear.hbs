@@ -6,7 +6,7 @@
         <div class="currency item block" data-item-id="{{item._id}}">
           <p class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</p>
           <input name="items.{{item._id}}.system.quantity" class="largeNumber" type="number"
-            value="{{item.system.quantity}}" {{#unless editable}}readonly{{/unless}} />
+            value="{{item.system.quantity}}" {{#unless @root.editable}}readonly{{/unless}} />
         </div>
       {{/each}}
     </div>
