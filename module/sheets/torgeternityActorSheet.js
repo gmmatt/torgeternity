@@ -417,6 +417,12 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     const document = await fromUuid(data.uuid, { invalid: true });
     if (!document) return super._onDrop(event);
 
+    // Maybe dropping currency, so merge with existing (if any)
+    if (document instanceof TorgeternityItem && document.type === 'currency') {
+      const existing = this.actor.items.find(it => it.name === document.name && it.system.cosm === document.system.cosm);
+      if (existing) return existing.update({ 'system.quantity': existing.system.quantity + document.system.quantity });
+    }
+
     switch (this.actor.type) {
 
       case 'stormknight':

@@ -20,6 +20,7 @@
 - Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Quantity can be directly edited in the summary row.
   - Spending currency will be added in a future update.
+  - Dropping a currency Item onto an Actor which already has that currency (matched by name and cosm) adds the quantity of that currency to the existing currency item.
 
 ## 13.11.0
 
