@@ -6,9 +6,7 @@
 - Remove explicit cosm names from HBS files.
 - Ensure Die Total is retained in skill chat card after adding more modifiers through the Modifiers Dialog.
 - Show BD separately from d20s in the chat result card (with infinity symbol instead of "6").
-- #605: When UP appears on Drama, add a shadow to the UP button to remind players (don't hide UP if not on Drama card).
 - Vehicle sheet should scroll properly.
-- #603: Prevent errors being reported regarding DSN integration and `test.effects` being undefined. (This also fixes Periculum macro.)
 - Use core drag/drop `draggable` attribute in all sheets.
 - Buff macro should be working again.
 - Post STYMIED (not SURGE) message to chat when Stymied appears on Drama card.
@@ -16,7 +14,9 @@
 - In "Enhanced Display" of Card Hand, put draw buttons at top of window.
 - Toggle display of second cosm in Scene Config window immediately on changing the cosm type.
 - Allow `unarmed combat` interaction to be dragged to Macro Hotbar.
+- #603: Prevent errors being reported regarding DSN integration and `test.effects` being undefined. (This also fixes Periculum macro.)
 - #604: Hold SHIFT when pressing the BD in a chat card to roll the BD two separate times and keep the higher result (e.g. Killshot). A superscript-2 is added to the chat title each time that BD is rolled whilst holding SHIFT.
+- #605: When UP appears on Drama, add a shadow to the UP button to remind players (don't hide UP if not on Drama card).
 - #606: Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Quantity can be directly edited in the summary row.
   - New game option (Items cost Currency) to allow currency to be spent when dragging Items onto a Stormknight Actor:
