@@ -169,6 +169,7 @@
       "hero": "Hero",
       "heroCard": "Hero Card",
       "hideDetails": "Hide Details",
+      "itemPurchase": "{item} purchased for {price} {currency}",
       "notPermittedDSR": "Next DSR step {step} not permitted by Drama Card",
       "modifiers": "Modifiers",
       "noAmmo": "Failed to fire your weapon, no bullets left.",
@@ -610,6 +611,7 @@
       "beginningMigration": "Migrating Torg system version to ",
       "defaultAction": "Default action, Gear for example",
       "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
+      "insufficientFunds": "You do not have enough {currency} ({quantity}) to buy {item} ({price})",
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
       "migrationRunning": "Migrating Torg system version to ",
       "moduleNotActive": "Activate the module to see description.",
@@ -859,6 +861,10 @@
       "autoDisconnect": {
         "name": "Automatically Disconnect",
         "hint": "On a Surge or Test check that causes Disconnection, the actor will automatically be set to disconnected"
+      },
+      "itemPurchaseCosm": {
+        "name": "Items cost Currency",
+        "hint": "When an Item is dropped onto an Actor's sheet, if the Item has a price then the currency for that item's cosm is reduced by the price (press SHIFT before dropping to get the item for free)"
       },
       "showPiety": {
         "name": "Show Piety Score on Actor sheet",
@@ -1294,6 +1300,12 @@
       "forceDefense": "Defense vs Force",
       "iceDefense": "Defense vs Ice",
       "lightningDefense": "Defense vs Lightning"
+    },
+    "itemPurchase": {
+      "free": "No Cost",
+      "activeScene": "Active Scene",
+      "playerCosm": "Player Cosm",
+      "itemCosm": "Item Cosm"
     },
     "traitGroup": {
       "defense": "Defense",

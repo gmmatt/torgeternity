@@ -253,6 +253,16 @@ export function registerTorgSettings() {
     default: true
   });
 
+  game.settings.register('torgeternity', 'itemPurchaseCosm', {
+    name: 'torgeternity.settingMenu.itemPurchaseCosm.name',
+    hint: 'torgeternity.settingMenu.itemPurchaseCosm.hint',
+    scope: 'world',
+    config: true,
+    type: String,
+    choices: CONFIG.torgeternity.itemPurchaseCosm,
+    default: 'free'
+  });
+
   game.settings.register('torgeternity', 'hoverDistance', {
     name: 'torgeternity.settingMenu.hoverDistance.name',
     hint: 'torgeternity.settingMenu.hoverDistance.hint',

@@ -92,6 +92,13 @@ torgeternity.axiomsNoTech = {
   magic: 'torgeternity.axioms.magic',
 };
 
+torgeternity.itemPurchaseCosm = {
+  free: 'torgeternity.itemPurchase.free',
+  activeScene: 'torgeternity.itemPurchase.activeScene',
+  playerCosm: 'torgeternity.itemPurchase.playerCosm',
+  itemCosm: 'torgeternity.itemPurchase.itemCosm'
+}
+
 torgeternity.axiomByCosm = {
   coreEarth: {
     magic: 9,

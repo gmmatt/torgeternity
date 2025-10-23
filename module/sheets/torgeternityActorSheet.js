@@ -419,8 +419,54 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     // Maybe dropping currency, so merge with existing (if any)
     if (document instanceof TorgeternityItem && document.type === 'currency') {
-      const existing = this.actor.items.find(it => it.name === document.name && it.system.cosm === document.system.cosm);
-      if (existing) return existing.update({ 'system.quantity': existing.system.quantity + document.system.quantity });
+      const currency = this.actor.items.find(it => it.name === document.name && it.system.cosm === document.system.cosm);
+      if (currency) return currency.update({ 'system.quantity': currency.system.quantity + document.system.quantity });
+      // not found, so allow creation of new Item to happen later.
+    }
+
+    // Maybe dropping an item with a price, so reduce currency
+    const itemCost = game.settings.get('torgeternity', 'itemPurchaseCosm');
+    if (!event.shiftKey && document instanceof TorgeternityItem && itemCost !== 'free' && this.actor.type === 'stormknight') {
+      const price = Number(document.system?.price);
+      if (price && price > 0) {
+        let cosm, cosm2;
+        switch (itemCost) {
+          case 'playerCosm': cosm = this.actor.system.other.cosm; break;
+          case 'itemCosm': cosm = document.system.cosm; break;
+          case 'activeScene':
+            cosm = game.scenes.active.torg.cosm;
+            if (game.scenes.active.torg.isMixed) cosm2 = game.scenes.active.torg.cosm2;
+            break;
+        }
+        let currency = this.actor.items.find(it => it.system.cosm === cosm);
+        if (!currency || price > currency.system.quantity) {
+          // Not enough of 1 currency, so maybe try second currency
+          if (cosm2) currency = this.actor.items.find(it => it.system.cosm === cosm2);
+          if (!currency || price > currency.system.quantity) {
+            return ui.notifications.warn(game.i18n.format('torgeternity.notifications.insufficientFunds',
+              {
+                currency: currency?.name ?? game.i18n.localize(CONFIG.torgeternity.cosmTypes[cosm]),
+                quantity: currency?.system.quantity ?? 0,
+                item: document.name,
+                price
+              }));
+          }
+        }
+        if (currency) {
+          // It appears that 'await currency.update' prevents super._onDrop from working
+          await super._onDrop(event);
+          ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            owner: this.actor,
+            content: game.i18n.format('torgeternity.chatText.itemPurchase', {
+              item: document.name,
+              price,
+              currency: currency.name
+            })
+          });
+          return currency.update({ 'system.quantity': currency.system.quantity - price });
+        }
+      }
     }
 
     switch (this.actor.type) {

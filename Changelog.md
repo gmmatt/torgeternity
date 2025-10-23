@@ -19,8 +19,11 @@
 - #604: Hold SHIFT when pressing the BD in a chat card to roll the BD two separate times and keep the higher result (e.g. Killshot). A superscript-2 is added to the chat title each time that BD is rolled whilst holding SHIFT.
 - Add new `currency` item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
   - Quantity can be directly edited in the summary row.
-  - Spending currency will be added in a future update.
-  - Dropping a currency Item onto an Actor which already has that currency (matched by name and cosm) adds the quantity of that currency to the existing currency item.
+  - New game option (Items cost Currency) to allow currency to be spent when dragging Items onto a Stormknight Actor:
+    - 'No Cost' (default) - cost of the item is ignored, no currency is deducted.
+    - 'Active Scene' - the currency based on the Cosm of the active scene (the second cosm of a 'mixed' zone will be used if the first cosm doesn't provide enough currency).
+    - 'Player Cosm' - the cosm of the player will determine which currency is used.
+    - 'Item Cosm' - the cosm of the item being purchased will determine which currency is used.
 
 ## 13.11.0
 
