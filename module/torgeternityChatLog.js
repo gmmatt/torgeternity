@@ -294,13 +294,14 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
     test.amountBD += 1;
     if (test.amountBD === 1 && !test.addBDs) {
-      test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice') + BDMARKER;
+      test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
+      if (rollTwice) test.chatTitle += BDMARKER;
     } else if (test.amountBD > 1) {
       test.chatTitle = test.chatTitle.replace(
         (test.amountBD - 1).toString(),
         test.amountBD.toString()
       );
-      test.chatTitle += BDMARKER;
+      if (rollTwice) test.chatTitle += BDMARKER;
     } else {
       ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
     }
