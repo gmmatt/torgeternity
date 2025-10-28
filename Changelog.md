@@ -24,6 +24,7 @@
     - **Active Scene** - the currency based on the Cosm of the active scene (the second cosm of a 'mixed' zone will be used if the first cosm doesn't provide enough currency).
     - **Player Cosm** - the cosm of the player will determine which currency is used.
     - **Item Cosm** - the cosm of the item being purchased will determine which currency is used.
+    - **Ask Player** - the player will be prompted with the Actor's available currencies, so that they can choose which currency to use.
 
 ## 13.11.0
 

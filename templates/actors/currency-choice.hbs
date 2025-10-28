@@ -1,0 +1,15 @@
+<div class="chooseCurrency">
+  {{#each currencies as |currency id|}}
+    <p>
+      <label><input type="radio" name="choice" value="{{currency.id}}">
+        {{currency.name}} ({{localize (lookup @root.config.cosmTypes currency.system.cosm)}})
+        ({{currency.system.quantity}})
+      </label>
+    </p>
+  {{/each}}
+  <p>
+    <label><input type="radio" name="choice" value="free">
+      {{localize 'torgeternity.itemPurchase.choice.free'}}
+    </label>
+  </p>
+</div>

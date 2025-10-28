@@ -19,6 +19,7 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/actors/stormknight/gear.hbs',
     'systems/torgeternity/templates/actors/stormknight/powers.hbs',
     'systems/torgeternity/templates/actors/stormknight/xp.hbs',
+    'systems/torgeternity/templates/actors/currency-choice.hbs',
 
     // ACTOR--threats
     'systems/torgeternity/templates/actors/threat/main.hbs',

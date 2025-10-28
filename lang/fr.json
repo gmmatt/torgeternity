@@ -1306,7 +1306,13 @@
       "free": "No Cost",
       "activeScene": "Active Scene",
       "playerCosm": "Player Cosm",
-      "itemCosm": "Item Cosm"
+      "itemCosm": "Item Cosm",
+      "askPlayer": "Ask Player",
+      "choice": {
+        "title": "Purchasing {item} for {cost}",
+        "free": "Free",
+        "select": "Use Currency"
+      }
     },
     "traitGroup": {
       "defense": "Défense",

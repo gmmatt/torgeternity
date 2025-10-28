@@ -96,7 +96,8 @@ torgeternity.itemPurchaseCosm = {
   free: 'torgeternity.itemPurchase.free',
   activeScene: 'torgeternity.itemPurchase.activeScene',
   playerCosm: 'torgeternity.itemPurchase.playerCosm',
-  itemCosm: 'torgeternity.itemPurchase.itemCosm'
+  itemCosm: 'torgeternity.itemPurchase.itemCosm',
+  askPlayer: 'torgeternity.itemPurchase.askPlayer'
 }
 
 torgeternity.axiomByCosm = {

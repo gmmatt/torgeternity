@@ -411,7 +411,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
   /** @inheritdoc */
   async _onDrop(event) {
-    if (!this.actor.isOwner) return super._onDrop(event);
+    const actor = this.actor;
+    if (!actor.isOwner) return super._onDrop(event);
 
     const data = foundry.applications.ux.TextEditor.getDragEventData(event);
     const document = await fromUuid(data.uuid, { invalid: true });
@@ -419,29 +420,56 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     // Maybe dropping currency, so merge with existing (if any)
     if (document instanceof TorgeternityItem && document.type === 'currency') {
-      const currency = this.actor.items.find(it => it.name === document.name && it.system.cosm === document.system.cosm);
+      const currency = actor.items.find(it => it.name === document.name && it.system.cosm === document.system.cosm);
       if (currency) return currency.update({ 'system.quantity': currency.system.quantity + document.system.quantity });
       // not found, so allow creation of new Item to happen later.
     }
 
     // Maybe dropping an item with a price, so reduce currency
     const itemCost = game.settings.get('torgeternity', 'itemPurchaseCosm');
-    if (!event.shiftKey && document instanceof TorgeternityItem && itemCost !== 'free' && this.actor.type === 'stormknight') {
+    if (!event.shiftKey && document instanceof TorgeternityItem && itemCost !== 'free' && actor.type === 'stormknight') {
       const price = Number(document.system?.price);
+      let currency;
       if (price && price > 0) {
         let cosm, cosm2;
         switch (itemCost) {
-          case 'playerCosm': cosm = this.actor.system.other.cosm; break;
+          case 'playerCosm': cosm = actor.system.other.cosm; break;
           case 'itemCosm': cosm = document.system.cosm; break;
           case 'activeScene':
             cosm = game.scenes.active.torg.cosm;
             if (game.scenes.active.torg.isMixed) cosm2 = game.scenes.active.torg.cosm2;
             break;
+          case 'askPlayer':
+            {
+              const choice = await DialogV2.wait({
+                classes: ['torgeternity', 'themed', 'theme-dark'],
+                window: { title: game.i18n.format('torgeternity.itemPurchase.choice.title', { item: document.name, price }) },
+                content: await foundry.applications.handlebars.renderTemplate('systems/torgeternity/templates/actors/currency-choice.hbs', {
+                  config: CONFIG.torgeternity,
+                  actor: actor,
+                  currencies: actor.items.filter(it => it.type === 'currency'),
+                  item: document
+                }),
+                buttons: [{
+                  action: "choice",
+                  label: "torgeternity.itemPurchase.choice.select",
+                  callback: (event, button, dialog) => button.form.elements.choice.value
+                }]
+              });
+              if (!choice) return;  // selection aborted
+              if (choice === 'free') {
+                // No cost, so add the item to the actor.
+                // We can't call super._onDrop because 'event' has been lost due to showing  a dialog!
+                return super._onDropItem(event, document);
+              }
+              currency = actor.items.get(choice);
+            }
+            break;
         }
-        let currency = this.actor.items.find(it => it.system.cosm === cosm);
+        if (cosm) currency = actor.items.find(it => it.type === 'currency' && it.system.cosm === cosm);
         if (!currency || price > currency.system.quantity) {
           // Not enough of 1 currency, so maybe try second currency
-          if (cosm2) currency = this.actor.items.find(it => it.system.cosm === cosm2);
+          if (cosm2) currency = actor.items.find(it => it.system.cosm === cosm2);
           if (!currency || price > currency.system.quantity) {
             return ui.notifications.warn(game.i18n.format('torgeternity.notifications.insufficientFunds',
               {
@@ -456,8 +484,8 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
           // It appears that 'await currency.update' prevents super._onDrop from working
           await super._onDrop(event);
           ChatMessage.create({
-            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-            owner: this.actor,
+            speaker: ChatMessage.getSpeaker({ actor }),
+            owner: actor,
             content: game.i18n.format('torgeternity.chatText.itemPurchase', {
               item: document.name,
               price,
@@ -469,7 +497,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
       }
     }
 
-    switch (this.actor.type) {
+    switch (actor.type) {
 
       case 'stormknight':
         // Check for dropping race onto SK
@@ -478,7 +506,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         await this.deleteRace();
 
         // Add new race and racial abilities
-        let docs = await this.actor.createEmbeddedDocuments('Item', [
+        let docs = await actor.createEmbeddedDocuments('Item', [
           document.toObject(),
           ...document.system.perksData,
           ...document.system.customAttackData
@@ -494,7 +522,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         // Enforce attribute maximums
         const updates = {};
         for (const [key, value] of Object.entries(document.system.attributeMaximum)) {
-          if (this.actor.system.attributes[key].base <= value) continue;
+          if (actor.system.attributes[key].base <= value) continue;
 
           const proceed = await DialogV2.confirm({
             window: { title: 'torgeternity.dialogWindow.raceDiminishAttribute.title' },
@@ -512,7 +540,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
         if (document.system.darkvision)
           updates['prototypeToken.sight.visionMode'] = 'darkvision';
 
-        await this.actor.update(updates);
+        await actor.update(updates);
         return;
 
       case 'vehicle':
@@ -522,15 +550,15 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
           const target = event.target;
           if (target.closest('.vehicle-operator')) {
             // dropped document = driver
-            const skillValue = document?.system?.skills[this.actor.system.type.toLowerCase() + 'Vehicles']?.value ?? 0;
+            const skillValue = document?.system?.skills[actor.system.type.toLowerCase() + 'Vehicles']?.value ?? 0;
             if (skillValue === 0) {
               ui.notifications.warn(game.i18n.format('torgeternity.notifications.noCapacity', { a: document.name }));
               return;
             }
-            this.actor.update({ 'system.operator': document.id });
+            actor.update({ 'system.operator': document.id });
           } else {
             // Check for gunner
-            const weapon = this.actor.items.get(target.closest('li.vehicle-weapon-list')?.dataset?.itemId);
+            const weapon = actor.items.get(target.closest('li.vehicle-weapon-list')?.dataset?.itemId);
             if (weapon) {
               const skillValue = document?.system?.skills[weapon.system.attackWith]?.value ?? 0;
               if (skillValue === 0) {
