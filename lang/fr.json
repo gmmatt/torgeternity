@@ -170,7 +170,7 @@
       "hero": "Héros",
       "heroCard": "Carte Héros",
       "hideDetails": "Cacher détails",
-      "itemPurchase": "{item} purchased for {price} {currency}",
+      "itemPurchase": "{item} acheté pour {price} {currency}",
       "notPermittedDSR": "Prochain RDT {step} non autorisé par la carte d'Action",
       "modifiers": "Modificateurs",
       "noAmmo": "Le chargeur de votre arme est vide, vous ne pouvez pas faire feu.",
@@ -612,7 +612,7 @@
       "beginningMigration": "Migration du système TORG vers la version ",
       "defaultAction": "Action par défaut, équipement par exemple.",
       "dramaDeckEmpty": "Le paquet de cartes Action est vide. Réinitialisez-le.",
-      "insufficientFunds": "You do not have enough {currency} ({quantity}) to buy {item} ({price})",
+      "insufficientFunds": "Vous n'avez pas assez de {currency} ({quantity}) pour acheter {item} ({price})",
       "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos objets, attributs ou compétences",
       "migrationRunning": "Migration de la version du système Torg à ",
       "moduleNotActive": "Description disponible dans le module correspondant.",
@@ -864,8 +864,8 @@
         "hint": "En cas de Déferlement et de jet qui provoque une déconnexion, applique l'effet Déconnecté automatiquement"
       },
       "itemPurchaseCosm": {
-        "name": "Items cost Currency",
-        "hint": "When an Item is dropped onto an Actor's sheet, if the Item has a price then the currency for that item's cosm is reduced by the price (press SHIFT before dropping to get the item for free)"
+        "name": "Devise d'achat des objets",
+        "hint": "Lorsqu'un objet est 'laché' sur une feuille d'acteur, si le prix de l'objet est renseigné, alors la devise correspondante à ce prix est déduite du personnage (maintenir SHIFT avant de lacher l'objet permet de l'obtenir gratuitement)"
       },
       "showPiety": {
         "name": "Afficher la Piété",
@@ -1304,14 +1304,14 @@
     },
     "itemPurchase": {
       "free": "No Cost",
-      "activeScene": "Active Scene",
-      "playerCosm": "Player Cosm",
-      "itemCosm": "Item Cosm",
-      "askPlayer": "Ask Player",
+      "activeScene": "Scène active",
+      "playerCosm": "Cosm du personnage",
+      "itemCosm": "Cosm de l'objet",
+      "askPlayer": "Choix du joueur",
       "choice": {
-        "title": "Purchasing {item} for {cost}",
-        "free": "Free",
-        "select": "Use Currency"
+        "title": "Achat de {item} pour {cost}",
+        "free": "Gratuit",
+        "select": "Choix de la devise"
       }
     },
     "traitGroup": {
