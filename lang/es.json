@@ -3,6 +3,11 @@
     "discard": "Descarte",
     "display": "Mostrar carta jugadores"
   },
+  "EFFECT": {
+    "TABS": {
+      "torg": "Torg Eternity"
+    }
+  },
   "CHAT": {
     "RollBlind": "Tirada oculta (GM)",
     "RollPublic": "Tirada pública",
@@ -170,7 +175,7 @@
       "hero": "HÉROE",
       "heroCard": "Carta de Héroe",
       "hideDetails": "Ocultar detalles",
-      "itemPurchase": "{item} purchased for {price} {currency}",
+      "itemPurchase": "{item} adquirido por {price} {currency}",
       "notPermittedDSR": "La carta de Drama no permite el paso {step} de la RDH",
       "modifiers": "Modificadores",
       "noAmmo": "No puedes disparar tu arma, no le quedan balas.",
@@ -612,7 +617,7 @@
       "beginningMigration": "Migrando versión del sistema de Torg a ",
       "defaultAction": "Acción por defecto, por ejemplo Equipo",
       "dramaDeckEmpty": "El mazo de Drama está vacío. Reinícialo para continuar.",
-      "insufficientFunds": "You do not have enough {currency} ({quantity}) to buy {item} ({price})",
+      "insufficientFunds": "No tienes suficientes {currency} ({quantity}) para comprar {item} ({price})",
       "macroTypeWarning": "Solo puedes crear botones de macros para los objetos y atributos/habilidades que posees",
       "migrationRunning": "Migración de la versión del sistema Torg a ",
       "moduleNotActive": "Activar el módulo para ver la descripción.",
@@ -864,8 +869,8 @@
         "hint": "En caso de Sobrecarga o de que una prueba provoque Desconexión, el actor pasará a estar automáticamente Desconectado"
       },
       "itemPurchaseCosm": {
-        "name": "Items cost Currency",
-        "hint": "When an Item is dropped onto an Actor's sheet, if the Item has a price then the currency for that item's cosm is reduced by the price (press SHIFT before dropping to get the item for free)"
+        "name": "Coste del objeto en monedas",
+        "hint": "Cuando se suelta un objeto en la hoja de un actor, si el objeto tiene un precio asignado la moneda del cosmos de ese objeto se ve reducida en el coste del objeto (pulsar MAYÚSCULA antes de soltar el objeto para que se reciba sin coste alguno)"
       },
       "showPiety": {
         "name": "Mostrar Piedad en hoja de actor",
@@ -1303,15 +1308,15 @@
       "lightningDefense": "Defense contra relámpago"
     },
     "itemPurchase": {
-      "free": "No Cost",
-      "activeScene": "Active Scene",
-      "playerCosm": "Player Cosm",
-      "itemCosm": "Item Cosm",
-      "askPlayer": "Ask Player",
+      "free": "Sin coste",
+      "activeScene": "Escena activa",
+      "playerCosm": "Cosmos del jugador",
+      "itemCosm": "Cosmos del objeto",
+      "askPlayer": "Preguntar a jugador",
       "choice": {
-        "title": "Purchasing {item} for {cost}",
-        "free": "Free",
-        "select": "Use Currency"
+        "title": "Adquirir objeto {item} por {cost}",
+        "free": "Gratis",
+        "select": "Usar moneda"
       }
     },
     "traitGroup": {
