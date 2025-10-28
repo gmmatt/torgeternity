@@ -3,6 +3,11 @@
     "discard": "Abwerfen",
     "display": "Herzeigen"
   },
+  "EFFECT": {
+    "TABS": {
+      "torg": "Torg Eternity"
+    }
+  },
   "CHAT": {
     "RollBlind": "Verdeckter SL-Wurf",
     "RollPublic": "Öffentlicher Wurf",
@@ -83,7 +88,7 @@
       "bonusCard": "+3 Karte",
       "bonusDamage": "Bonus Schaden",
       "bonusDice": "BW",
-      "bdTooltip": "Hold SHIFT to roll BD twice and keep the best result",
+      "bdTooltip": "Halte SHIFT um zwei BW zu würfeln und das bessere Ergebnis zu behalten",
       "chase": "Verfolgungsjagd-Probe",
       "check": {
         "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
@@ -170,7 +175,7 @@
       "hero": "Held",
       "heroCard": "Heldenhaft-Karte",
       "hideDetails": "Verstecke Details",
-      "itemPurchase": "{item} purchased for {price} {currency}",
+      "itemPurchase": "{item} gekauft für {price} {currency}",
       "notPermittedDSR": "Dramakarte erlaubt den DPA-Schritt {step} nicht.",
       "modifiers": "Modifikator",
       "noAmmo": "Waffe nicht abgefeuert, keine Kugeln mehr übrig.",
@@ -612,7 +617,7 @@
       "beginningMigration": "Migration der Torg-Systemversion auf ",
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
-      "insufficientFunds": "You do not have enough {currency} ({quantity}) to buy {item} ({price})",
+      "insufficientFunds": "Du hast nicht ausreichend {currency} ({quantity}) um {item} ({price}) zu kaufen",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
       "migrationRunning": "Migriere Torg-Systemversion auf Version ",
       "moduleNotActive": "Modul muss aktiviert werden, um die Beschreibung anzeigen zu können.",
@@ -864,8 +869,8 @@
         "hint": "Bei einer Welle oder Probe die eine Entkopplung hervorruft, wird der Charakter erhält der Charakter automatisch den Zustand Entkoppelt"
       },
       "itemPurchaseCosm": {
-        "name": "Items cost Currency",
-        "hint": "When an Item is dropped onto an Actor's sheet, if the Item has a price then the currency for that item's cosm is reduced by the price (press SHIFT before dropping to get the item for free)"
+        "name": "Gegenstände benötigen Währung",
+        "hint": "Falls ein Gegenstand, dem ein Preis zugeordnet ist, auf einen Charakterbogen gezogen wird, dann wird die Währung für den Cosm des Gegenstandes um den Preis reduziert (drücke SHIFT bevor der Gegenstand zugewiesen wird um ihn kostenfrei zu erhalten)"
       },
       "showPiety": {
         "name": "Frömmigkeit im Charakterbogen anzeigen",
@@ -1303,15 +1308,15 @@
       "lightningDefense": "Verteidigung gegen Blitz"
     },
     "itemPurchase": {
-      "free": "No Cost",
-      "activeScene": "Active Scene",
-      "playerCosm": "Player Cosm",
-      "itemCosm": "Item Cosm",
-      "askPlayer": "Ask Player",
+      "free": "Keine Kosten",
+      "activeScene": "Aktive Szene",
+      "playerCosm": "Charakter-Cosm",
+      "itemCosm": "Gegenstands-Cosm",
+      "askPlayer": "Frage Spieler",
       "choice": {
-        "title": "Purchasing {item} for {cost}",
-        "free": "Free",
-        "select": "Use Currency"
+        "title": "Erwerbe {item} für {cost}",
+        "free": "Gratis",
+        "select": "Nutze Währung"
       }
     },
     "traitGroup": {
