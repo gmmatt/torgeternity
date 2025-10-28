@@ -870,7 +870,7 @@
       },
       "itemPurchaseCosm": {
         "name": "Gegenstände benötigen Währung",
-        "hint": "Falls ein Gegenstand, dem ein Preis zugeordnet ist, auf einen Charakterbogen gezogen wird, dann wird die Währung für den Cosm des Gegenstandes um den Preis reduziert (drücke SHIFT bevor der Gegenstand zugewiesen wird um ihn kostenfrei zu erhalten)"
+        "hint": "Falls ein Gegenstand, dem ein Preis zugeordnet ist, auf einen Storm Knight-Bogen gezogen wird, dann wird die Währung für den Cosm des Gegenstandes um den Preis reduziert (drücke SHIFT bevor der Gegenstand zugewiesen wird um ihn kostenfrei zu erhalten)"
       },
       "showPiety": {
         "name": "Frömmigkeit im Charakterbogen anzeigen",
