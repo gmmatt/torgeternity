@@ -284,6 +284,8 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
       const roll1 = await rollBonusDie(test.trademark);
       const roll2 = await rollBonusDie(test.trademark);
       finalValue = (roll1.value > roll2.value) ? roll1 : roll2;
+      // if using DSN, we might fake rolling the dice for the lower result,
+      // since the higher result will be rolled when the chat card is displayed.
     } else
       finalValue = await rollBonusDie(test.trademark);
 
