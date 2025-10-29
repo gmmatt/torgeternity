@@ -21,7 +21,7 @@
   - Quantity can be directly edited in the summary row.
   - New game option (Items cost Currency) to allow currency to be spent when dragging Items onto a Stormknight Actor:
     - **No Cost** (default) - cost of the item is ignored, no currency is deducted.
-    - **Active Scene** - the currency based on the Cosm of the active scene (the second cosm of a 'mixed' zone will be used if the first cosm doesn't provide enough currency).
+    - **Active Scene** - the currency based on the Cosm of the active scene (in a 'mixed' zone, if the first cosm doesn't have enough currency then the entire price will be paid from the second cosm's currency [if there is enough]).
     - **Player Cosm** - the cosm of the player will determine which currency is used.
     - **Item Cosm** - the cosm of the item being purchased will determine which currency is used.
     - **Ask Player** - the player will be prompted with the Actor's available currencies, so that they can choose which currency to use.
