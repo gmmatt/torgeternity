@@ -3,6 +3,11 @@
     "discard": "Défausser",
     "display": "Montrer cette carte aux joueurs"
   },
+  "EFFECT": {
+    "TABS": {
+      "torg": "Torg Eternity"
+    }
+  },
   "CHAT": {
     "RollBlind": "Uniquement le MJ",
     "RollPublic": "Tout le monde",
