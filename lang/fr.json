@@ -1314,7 +1314,7 @@
       "itemCosm": "Cosm de l'objet",
       "askPlayer": "Choix du joueur",
       "choice": {
-        "title": "Achat de {item} pour {cost}",
+        "title": "Achat",
         "free": "Gratuit",
         "select": "Choix de la devise"
       }

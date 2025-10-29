@@ -4522,3 +4522,21 @@ a.torg-inline-buff {
     box-shadow: 0 0 10px #004777 inset;
   }
 }
+
+div.chooseCurrency {
+  fieldset.item {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1em;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+
+    * {
+      field-sizing: content;
+    }
+  }
+
+  p.currency span.cosm {
+    filter: brightness(0.7);
+  }
+}

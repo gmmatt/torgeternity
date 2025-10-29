@@ -445,7 +445,7 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
                 classes: ['torgeternity', 'themed', 'theme-dark'],
                 window: { title: game.i18n.format('torgeternity.itemPurchase.choice.title', { item: document.name, price }) },
                 content: await foundry.applications.handlebars.renderTemplate('systems/torgeternity/templates/actors/currency-choice.hbs', {
-                  config: CONFIG.torgeternity,
+                  config: CONFIG,
                   actor: actor,
                   currencies: actor.items.filter(it => it.type === 'currency'),
                   item: document

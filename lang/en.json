@@ -1308,7 +1308,7 @@
       "itemCosm": "Item Cosm",
       "askPlayer": "Ask Player",
       "choice": {
-        "title": "{item}, Price {price}",
+        "title": "Purchase",
         "free": "Free",
         "select": "Use Currency"
       }
