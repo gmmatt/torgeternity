@@ -227,10 +227,24 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
 
     context.otherSkills = Object.entries(context.document.system.skills)
       .filter(skill => skill[1].groupName === 'other')
-      .map(skill => { return { name: skill[0], ...skill[1] } })
-      .concat(context.customSkill.map(skill => { return { isCustom: true, id: skill.id, name: skill.name, ...skill.system } }));
+      .map(skill => {
+        return {
+          name: skill[0],
+          localName: game.i18n.localize(`torgeternity.skills.${skill[0]}`),
+          ...skill[1]
+        }
+      })
+      .concat(context.customSkill.map(skill => {
+        return {
+          isCustom: true,
+          id: skill.id,
+          name: skill.name,
+          localName: skill.name,  // already in the local language
+          ...skill.system
+        }
+      }));
 
-    context.otherSkills.sort((a, b) => a.name.localeCompare(b.name));
+    context.otherSkills.sort((a, b) => a.localName.localeCompare(b.localName));
 
     if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 

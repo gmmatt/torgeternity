@@ -16,7 +16,7 @@
           data-unskilleduse="{{content.unskilledUse}}"
           {{disabled (not @root.editable)}}
           data-name="{{name}}">
-          {{localize (concat 'torgeternity.skills.' name)}}
+          {{content.localName}}
         </a>
       </span>
       <span class="skill-line skillAttr">
@@ -60,7 +60,7 @@
           {{disabled (not @root.editable)}}
           data-name="{{name}}"
           data-isfav="{{content.isFav}}">
-          {{name}}
+          {{content.localName}}
         </a>
       </span>
       <span class="skill-line skillAttr">
