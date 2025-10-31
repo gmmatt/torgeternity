@@ -46,6 +46,16 @@
   }
 }
 
+@keyframes boxchange {
+  0% {
+    box-shadow: 0 0 2em var(--torgblue);
+  }
+
+  100% {
+    box-shadow: 0 0 1em var(--torgred);
+  }
+}
+
 .window-app .window-content {
   padding: 8px;
 }
@@ -1075,6 +1085,28 @@ dialog.torgeternity:not(.actor, .item) .window-content,
       }
     }
 
+    .gear .currencyBlock {
+      display: flex;
+      column-gap: 10px;
+      padding: 5px 0 0 10px;
+      flex-wrap: wrap;
+
+      .currency {
+        display: flex;
+        align-items: center;
+
+        .item-name {
+          width: 7em;
+          text-align: center;
+        }
+
+        input {
+          width: 4em;
+          margin-right: 5px;
+        }
+      }
+    }
+
     .threat-block,
     .perks-details,
     .gear,
@@ -1261,7 +1293,7 @@ dialog.torgeternity:not(.actor, .item) .window-content,
         width: 50px;
         height: 50px;
         border: none;
-        border-radius: 50%;
+        border-radius: 10px;
       }
     }
 
@@ -1343,6 +1375,10 @@ dialog.torgeternity:not(.actor, .item) .window-content,
           margin-right: 1rem;
         }
       }
+    }
+
+    div.sheet-body {
+      height: 100%
     }
 
     .vehicle-stat {
@@ -3289,6 +3325,10 @@ document-embed .generalHeader {
   text-shadow: #ffcc00 1px 0 10px;
 }
 
+.chat-message .drama-up {
+  animation: boxchange 2s infinite alternate;
+}
+
 .chat-message .roll-button {
   border: black 1px solid;
   border-radius: 1rem;
@@ -3642,6 +3682,11 @@ document-embed .generalHeader {
       background: url(../images/roundBack.webp);
       background-size: cover;
       grid-column: 2/3;
+
+      &.largeNumber {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     input[name="system.price"],
@@ -4475,5 +4520,23 @@ a.torg-inline-buff {
 
   &:hover {
     box-shadow: 0 0 10px #004777 inset;
+  }
+}
+
+div.chooseCurrency {
+  fieldset.item {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1em;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+
+    * {
+      field-sizing: content;
+    }
+  }
+
+  p.currency span.cosm {
+    filter: brightness(0.7);
   }
 }

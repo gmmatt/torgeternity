@@ -1,79 +1,84 @@
-{{#if source.flags.torgeternity.lifelike}}
-  <div style="display: none">
-{{else}}
+<div>
+  <header class="sheet-header flexrow">
+    {{formInput fields.name value=source.name placeholder=fields.name.label aria=(object label=fields.name.label)}}
+  </header>
   <div>
-    <header class="sheet-header flexrow">
-      {{formInput fields.name value=source.name placeholder=fields.name.label aria=(object label=fields.name.label)}}
+    <header class="cards-header flexrow">
+      <span class="card-faces">{{localize "CARD.FIELDS.face.label"}}</span>
+      <a class="card-control sort-mode" data-tooltip="{{localize 'CARDS.ACTIONS.ToggleSortMode'}}"
+        data-action="toggleSort">
+        <i class="fas fa-sort fa-fw"></i>
+      </a>
+      <strong class="card-name">{{localize "CARD.FIELDS.face.label"}}</strong>
+      <span class="card-type">{{localize "CARDS.FIELDS.type.label"}}</span>
+      <strong class="card-pooled">{{localize "torgeternity.dialogPrompts.cardPooled"}}</strong>
+      <div class="torg-card-controls controls">
+        Actions
+      </div>
     </header>
-    <div>
-      <header class="cards-header flexrow">
-        <span class="card-faces">{{localize "CARD.FIELDS.face.label"}}</span>
-        <a class="card-control sort-mode" data-tooltip="{{localize 'CARDS.ACTIONS.ToggleSortMode'}}"
-          data-action="toggleSort">
-          <i class="fas fa-sort fa-fw"></i>
-        </a>
-        <strong class="card-name">{{localize "CARD.FIELDS.face.label"}}</strong>
-        <span class="card-type">{{localize "CARDS.FIELDS.type.label"}}</span>
-        <strong class="card-pooled">{{localize "torgeternity.dialogPrompts.cardPooled"}}</strong>
-        <div class="torg-card-controls controls">
-          Actions
-        </div>
-      </header>
-      <ol class="cards scrollable" data-cards>
-        {{#each cards as |card|}}
-          <li class="card flexrow" data-card-id="{{card.id}}">
-            <div class="card-faces flexcol">
-              <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
-                data-control="nextFace"
-                {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i>
-              </a>
-              <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="controlCard"
-                data-control="prevFace"
-                {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i>
-              </a>
-            </div>
-            <span class="card-tooltip" href="">
-              <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
-              <span><img src="{{card.img}}"></span>
+    <ol class="cards scrollable" data-cards>
+      {{#each cards as |card|}}
+        <li class="card flexrow" data-card-id="{{card.id}}">
+          <div class="card-faces flexcol">
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.NextFace'}}" data-action="controlCard"
+              data-control="nextFace"
+              {{disabled (not card.hasNextFace)}}><i class="fas fa-caret-up"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'CARDS.ACTIONS.PreviousFace'}}" data-action="controlCard"
+              data-control="prevFace"
+              {{disabled (not card.hasPreviousFace)}}><i class="fas fa-caret-down"></i>
+            </a>
+          </div>
+          <span class="card-tooltip" href="">
+            <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+            <span><img src="{{card.img}}"></span>
+          </span>
+          <strong class="card-name">{{card.name}}</strong>
+          <!-- {{#if card.showFace}} -->
+          <span class="card-type">{{card.typeLoc}}</span>
+          {{#if (eq card.type "destiny")}}
+            <span class="card-pooled">
+              <input name="data.system.pooled" class="toggle" data-action="poolToggle"
+                type="checkbox" id="pooled" {{checked card.system.pooled}}>
             </span>
-            <strong class="card-name">{{card.name}}</strong>
-            <!-- {{#if card.showFace}} -->
-            <span class="card-type">{{card.typeLoc}}</span>
-            {{#if (eq card.type "destiny")}}
-              <span class="card-pooled">
-                <input name="data.system.pooled" class="toggle" data-action="poolToggle"
-                  type="checkbox" id="pooled" {{checked card.system.pooled}}>
-              </span>
-            {{else}}
-              <span class="card-pooled"></span>
-            {{/if}}
-            <div class="torg-card-controls controls">
-              <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}"
-                data-action="controlCard" data-control="play" {{disabled @root.disablePlay}}>
-                <i class="fas fa-play-circle" style="color:white"></i>
-              </a>
-              <!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
-              <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
-                data-action="controlCard" data-control="display">
-                <i class="fas fa-broadcast-tower" style="color:white"></i>
-              </a>
-              <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
-                data-action="controlCard" data-control="pass">
-                <i class="fas fa-share-square" style="color:white"></i>
-              </a>
-              <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
-                data-action="controlCard" data-control="discard">
-                <i class="fas fa-inbox" style="color:white"></i>
-              </a>
-            </div>
-            <!-- {{/if}} -->
-          </li>
-        {{else}}
-          <li>
-            <p class="notes">{{localize "CARDS.NoCards"}}</p>
-          </li>
-        {{/each}}
-      </ol>
-    </div>
+          {{else}}
+            <span class="card-pooled"></span>
+          {{/if}}
+          <div class="torg-card-controls controls">
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}"
+              data-action="controlCard" data-control="play" {{disabled @root.disablePlay}}>
+              <i class="fas fa-play-circle" style="color:white"></i>
+            </a>
+            <!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
+              data-action="controlCard" data-control="display">
+              <i class="fas fa-broadcast-tower" style="color:white"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
+              data-action="controlCard" data-control="pass">
+              <i class="fas fa-share-square" style="color:white"></i>
+            </a>
+            <a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
+              data-action="controlCard" data-control="discard">
+              <i class="fas fa-inbox" style="color:white"></i>
+            </a>
+          </div>
+          <!-- {{/if}} -->
+        </li>
+      {{else}}
+        <li>
+          <p class="notes">{{localize "CARDS.NoCards"}}</p>
+        </li>
+      {{/each}}
+    </ol>
   </div>
-{{/if}}
+  <footer class="form-footer">
+    {{#each buttons as |button|}}
+      <button type="{{button.type}}" {{#if button.name}}name="{{button.name}}" {{/if}} class="{{button.cssClass}}"
+        {{#if button.action}}data-action="{{button.action}}" {{/if}} {{#if button.disabled}}disabled{{/if}}>
+        {{#if button.icon}}<i class="{{button.icon}}" inert></i>{{/if}}
+        {{#if button.label}}<span>{{localize button.label}}</span>{{/if}}
+      </button>
+    {{/each}}
+  </footer>
+</div>

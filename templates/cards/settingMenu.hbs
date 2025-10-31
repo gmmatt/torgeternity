@@ -42,54 +42,15 @@
         {{selectOptions piles selected=object.cosmDiscard sort=true}}
       </select>
     </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.coreEarth"}}</label>
-      <select name="coreEarth" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.coreEarth sort=true}}
-      </select>
-    </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.aysle"}}</label>
-      <select name="aysle" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.aysle sort=true}}
-      </select>
-    </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.cyberpapacy"}}</label>
-      <select name="cyberpapacy" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.cyberpapacy sort=true}}
-      </select>
-    </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.livingLand"}}</label>
-      <select name="livingLand" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.livingLand sort=true}}
-      </select>
-    </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.nileEmpire"}}</label>
-      <select name="nileEmpire" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.nileEmpire sort=true}}
-      </select>
-    </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.orrorsh"}}</label>
-      <select name="orrorsh" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.orrorsh sort=true}}
-      </select>
-    </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.panPacifica"}}</label>
-      <select name="panPacifica" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.panPacifica sort=true}}
-      </select>
-    </div>
-    <div class="form-group">
-      <label>{{localize "torgeternity.cosmDecks.tharkold"}}</label>
-      <select name="tharkold" data-type="String" class="selectDeck formFields">
-        {{selectOptions decks selected=object.tharkold sort=true}}
-      </select>
-    </div>
+
+    {{#each cosms as |cosm cosmId|}}
+      <div class="form-group">
+        <label>{{cosm.name}}</label>
+        <select name="{{cosmId}}" data-type="String" class="selectDeck formFields">
+          {{selectOptions @root.decks selected=(lookup @root.object cosmId) sort=true}}
+        </select>
+      </div>
+    {{/each}}
   </div>
 
   <div>

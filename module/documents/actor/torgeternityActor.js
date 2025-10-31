@@ -380,35 +380,37 @@ export default class TorgeternityActor extends foundry.documents.Actor {
       }
     }
 
-    // No further if we didn't initiate the update
-    if (game.userId !== userId) return;
+    // Skip most of the rest if we didn't make the update
+    // although we need to update the player list after all other changes if possibilities have changed.
+    if (game.userId === userId) {
 
-    /* Check for exceeding shock and/or wounds */
+      /* Check for exceeding shock and/or wounds */
 
-    if (options.woundsExceeded) {
-      if (this.type === 'stormknight')
-        this.notifyDefeat();
-      else if (game.settings.get('torgeternity', 'autoWound'))
-        this.toggleStatusEffect('dead', { active: true, overlay: true });
-    }
+      if (options.woundsExceeded) {
+        if (this.type === 'stormknight')
+          this.notifyDefeat();
+        else if (game.settings.get('torgeternity', 'autoWound'))
+          this.toggleStatusEffect('dead', { active: true, overlay: true });
+      }
 
-    if (options.shockExceeded && !this.hasStatusEffect('dead') && game.settings.get('torgeternity', 'autoShock')) {
-      this.toggleStatusEffect('unconscious', {
-        active: true,
-        overlay: true,
-        duration: {
-          startTime: game.time.worldTime,
-          seconds: 30 * 60 // 30 minutes
-        }
-      });
-    }
+      if (options.shockExceeded && !this.hasStatusEffect('dead') && game.settings.get('torgeternity', 'autoShock')) {
+        this.toggleStatusEffect('unconscious', {
+          active: true,
+          overlay: true,
+          duration: {
+            startTime: game.time.worldTime,
+            seconds: 30 * 60 // 30 minutes
+          }
+        });
+      }
 
-    if (options.woundsExceeded || options.shockExceeded) {
-      const updates = {};
-      // Remove the exceeded Max values
-      if (options.shockExceeded) updates['system.shock.value'] = this.system.shock.max;
-      if (options.woundsExceeded) updates['system.wounds.value'] = this.system.wounds.max;
-      this.update(updates);
+      if (options.woundsExceeded || options.shockExceeded) {
+        const updates = {};
+        // Remove the exceeded Max values
+        if (options.shockExceeded) updates['system.shock.value'] = this.system.shock.max;
+        if (options.woundsExceeded) updates['system.wounds.value'] = this.system.wounds.max;
+        this.update(updates);
+      }
     }
 
     // Update player list if the number of possibilities has changed.

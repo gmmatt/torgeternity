@@ -14,10 +14,10 @@
   <ol class="item-list">
     {{#each perk as |item id|}}
       {{#if (ne item.system.category "racial")}}
-        <li class="item block" data-item-id="{{item._id}}">
+        <li class="item draggable block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -60,10 +60,10 @@
   <ol class="item-list">
     {{#each perk as |item id|}}
       {{#if (eq item.system.category "racial")}}
-        <li class="item block" data-item-id="{{item._id}}">
+        <li class="item draggable block" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</a>
             <div class="item-controls">
               <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
                 data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -108,10 +108,10 @@
   <ol class="item-list">
     {{#each customSkill as |item id|}}
 
-      <li class="item block" data-item-id="{{item._id}}">
+      <li class="item draggable block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+          <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</a>
           <div class="item-controls">
             <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
@@ -152,10 +152,10 @@
     </div>
     <ol class="item-list">
       {{#each enhancement as |item id|}}
-        <li class="item" data-item-id="{{item._id}}">
+        <li class="item draggable" data-item-id="{{item._id}}">
           <div class="item-row flexrow">
             <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-            <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
+            <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}
               {{#if item.system.perk}}({{localize "torgeternity.enhancements.enhances"}}
                 {{item.system.perk}}){{/if}}</a>
             <div class="item-controls">

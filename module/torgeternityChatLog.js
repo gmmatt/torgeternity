@@ -7,6 +7,8 @@ import TorgeternityActor from './documents/actor/torgeternityActor.js';
 
 const { DialogV2 } = foundry.applications.api;
 
+const BDMARKER = `\u00b2`;
+
 export default class TorgeternityChatLog extends foundry.applications.sidebar.tabs.ChatLog {
 
   static DEFAULT_OPTIONS = {
@@ -262,6 +264,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
 
   static async #onBd(event, button) {
     event.preventDefault();
+    const rollTwice = event.shiftKey;
     const { chatMessageId, chatMessage, test } = getMessage(button);
     if (!chatMessage.isAuthor && !game.user.isGM) {
       return;
@@ -275,7 +278,16 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.hideFavButton = true;
     test.hidePlus3 = true;
 
-    const finalValue = await rollBonusDie(test.trademark, 1);
+    let finalValue;
+    if (rollTwice) {
+      // How to show both rolls on chat card and DSN?
+      const roll1 = await rollBonusDie(test.trademark);
+      const roll2 = await rollBonusDie(test.trademark);
+      finalValue = (roll1.value > roll2.value) ? roll1 : roll2;
+      // if using DSN, we might fake rolling the dice for the lower result,
+      // since the higher result will be rolled when the chat card is displayed.
+    } else
+      finalValue = await rollBonusDie(test.trademark);
 
     const newDamage = test.damage + finalValue.total;
 
@@ -285,11 +297,13 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
     test.amountBD += 1;
     if (test.amountBD === 1 && !test.addBDs) {
       test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
+      if (rollTwice) test.chatTitle += BDMARKER;
     } else if (test.amountBD > 1) {
       test.chatTitle = test.chatTitle.replace(
         (test.amountBD - 1).toString(),
         test.amountBD.toString()
       );
+      if (rollTwice) test.chatTitle += BDMARKER;
     } else {
       ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
     }
@@ -680,7 +694,7 @@ export default class TorgeternityChatLog extends foundry.applications.sidebar.ta
           content: game.i18n.format('torgeternity.defeat.tempInjury', { attribute: localAttr })
         })
         return actor?.createEmbeddedDocuments('ActiveEffect', [{
-          name: `${game.i18n.localize('torgeternity.defeat.good-success.effectName')} (${localAttr})`,
+          name: `${game.i18n.localize('torgeternity.defeat.good.effectName')} (${localAttr})`,
           icon: 'icons/svg/downgrade.svg',
           changes: [
             {

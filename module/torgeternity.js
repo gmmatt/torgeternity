@@ -59,7 +59,6 @@ Hooks.once('init', async function () {
   game.torgeternity = {
     rollItemMacro,
     rollSkillMacro,
-    viewMode: true,
     macros: new TorgeternityMacros(),
   };
   initTextEdidor();
@@ -225,7 +224,7 @@ Hooks.once('init', async function () {
     [TestResult.UNKNOWN]: "",
     [TestResult.MISHAP]: 'torgeternity.chatText.check.result.mishape',
     [TestResult.FAILURE]: 'torgeternity.chatText.check.result.failure',
-    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standartSuccess',
+    [TestResult.STANDARD]: 'torgeternity.chatText.check.result.standardSuccess',
     [TestResult.GOOD]: 'torgeternity.chatText.check.result.goodSuccess',
     [TestResult.OUTSTANDING]: 'torgeternity.chatText.check.result.outstandingSuccess'
   }
@@ -239,6 +238,7 @@ Hooks.once('init', async function () {
   CONFIG.Item.typeLabels = {
     ammunition: 'torgeternity.itemSheetDescriptions.ammunition',
     gear: 'torgeternity.itemSheetDescriptions.generalGear',
+    currency: 'torgeternity.itemSheetDescriptions.currency',
     eternityshard: 'torgeternity.itemSheetDescriptions.eternityshard',
     armor: 'torgeternity.itemSheetDescriptions.armor',
     shield: 'torgeternity.itemSheetDescriptions.shield',
@@ -415,7 +415,7 @@ Hooks.on('ready', async function () {
   if (game.user.isGM)
     game.cards.forEach(deck => deck.cards.forEach(card => card.update({ face: 0 })));
 
-  // activation of standart scene
+  // activation of standard scene
   if (game.scenes.size < 1) {
     activateStandartScene();
   }
@@ -675,6 +675,7 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
   const speaker = ChatMessage.getSpeaker();
   const actor = game.actors.get(speaker.actor) ?? game.actors.tokens[speaker.token];
   const isAttributeTest = skillName === attributeName;
+  const isUnarmed = skillName === 'unarmedCombat';
   let skill = null;
   if (!isAttributeTest) {
     const skillNameKey = skillName; // .toLowerCase(); // skillName required to be internal value
@@ -739,7 +740,37 @@ async function rollSkillMacro(skillName, attributeName, isInteractionAttack, DND
     bdDamageSum: 0,
   };
 
-  if (isInteractionAttack) {
+  if (isUnarmed) {
+    // see TorgeternityActorSheet.#onUnarmedAttack
+    test.testType = 'attack';
+    test.amountBD = 0;
+    test.isAttack = true;
+    test.unskilledUse = true;
+    test.damage = actor.unarmed.damage;
+    test.weaponAP = 0;
+    test.applyArmor = true;
+    test.applySize = true;
+    test.attackOptions = true;
+    test.bdDamageSum = 0;
+
+    let dnDescriptor;
+    if (game.user.targets.size && !DNDescriptor) {
+      const firstTarget = game.user.targets.find(token => token.actor.type !== 'vehicle')?.actor ||
+        game.user.targets.first().actor;
+
+      if (firstTarget.type === 'vehicle') {
+        dnDescriptor = 'targetVehicleDefense';
+      } else {
+        firstTarget.items
+          .filter((it) => it.type === 'meleeweapon')
+          .filter((it) => it.system.equipped).length !== 0
+          ? (dnDescriptor = 'targetMeleeWeapons')
+          : (dnDescriptor = 'targetUnarmedCombat');
+      }
+    }
+    test.DNDescriptor = dnDescriptor ?? DNDescriptor;
+
+  } else if (isInteractionAttack) {
     test.testType = 'interactionAttack';
     // Darkness seems like it would be hard to determine if it should apply to
     //    skill/attribute tests or not, maybe should be option in dialog?

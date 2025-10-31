@@ -127,7 +127,7 @@
     </li>
 
     {{#*inline "weaponData" item}}
-      <li class="item vehicle-weapon-list" data-item-id="{{item._id}}">
+      <li class="item draggable vehicle-weapon-list" data-item-id="{{item._id}}">
         <div class="vehicle-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" /></div>
         <div class="name">{{item.name}}</div>
         <div class="gunner">{{item.system.gunner.name}}</div>
@@ -192,7 +192,7 @@
       <div class="controls-header"></div>
     </li>
     {{#each vehicleAddOn as |item id|}}
-      <li class="item vehicle-add-on-list" data-item-id="{{item._id}}">
+      <li class="item draggable vehicle-add-on-list" data-item-id="{{item._id}}">
         <div class="add-on-image">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
         </div>

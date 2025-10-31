@@ -1,0 +1,20 @@
+<div
+  class="currency-border sheet-card {{data.type}}"
+  data-type="{{data.type}}">
+  <div class="generalHeader">
+    <img src="{{img}}" data-tooltip="{{name}}" />
+    <span>
+      {{name}}
+    </span>
+  </div>
+  <div class="item-description" data-item-id="{{_id}}">
+    <div class="item-description">{{{system.description}}}</div>
+    <div class="item-dropdown-extras">
+      {{localize (concat "torgeternity.cosms." system.cosm)}}
+    </div>
+    <div class="item-dropdown-extras">
+      {{localize "torgeternity.sheetLabels.quantity"}}
+      {{system.quantity}}
+    </div>
+  </div>
+</div>

@@ -37,6 +37,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     // same order as in system.json
     ammunition: { template: `systems/torgeternity/templates/items/ammunition-sheet.hbs`, scrollable: [".scrollable"] },
     armor: { template: `systems/torgeternity/templates/items/armor-sheet.hbs`, scrollable: [".scrollable"] },
+    currency: { template: `systems/torgeternity/templates/items/currency-sheet.hbs`, scrollable: [".scrollable"] },
     customAttack: { template: `systems/torgeternity/templates/items/customAttack-sheet.hbs`, scrollable: [".scrollable"] },
     customSkill: { template: `systems/torgeternity/templates/items/customSkill-sheet.hbs`, scrollable: [".scrollable"] },
     enhancement: { template: `systems/torgeternity/templates/items/enhancement-sheet.hbs`, scrollable: [".scrollable"] },
@@ -98,8 +99,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     if (target.dataset.effectUuid) {
       const effect = await fromUuid(target.dataset.effectUuid);
       return event.dataTransfer.setData("text/plain", JSON.stringify(effect.toDragData()));
-    } else
-      return super._onDragStart(event);
+    }
   }
 
   /** @inheritdoc */
@@ -152,7 +152,7 @@ export default class TorgeternityItemSheet extends foundry.applications.api.Hand
     await super._onRender(context, options);
 
     new foundry.applications.ux.DragDrop.implementation({
-      dragSelector: '[data-drag], .item-list .item',
+      dragSelector: '.draggable',
       permissions: {
         dragstart: this._canDragStart.bind(this),
         drop: this._canDragDrop.bind(this),

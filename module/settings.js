@@ -253,6 +253,16 @@ export function registerTorgSettings() {
     default: true
   });
 
+  game.settings.register('torgeternity', 'itemPurchaseCosm', {
+    name: 'torgeternity.settingMenu.itemPurchaseCosm.name',
+    hint: 'torgeternity.settingMenu.itemPurchaseCosm.hint',
+    scope: 'world',
+    config: true,
+    type: String,
+    choices: CONFIG.torgeternity.itemPurchaseCosm,
+    default: 'free'
+  });
+
   game.settings.register('torgeternity', 'hoverDistance', {
     name: 'torgeternity.settingMenu.hoverDistance.name',
     hint: 'torgeternity.settingMenu.hoverDistance.hint',
@@ -300,14 +310,5 @@ export function registerTorgSettings() {
     config: true,
     type: new fields.ColorField(),
     default: 0xce0707  // --color-level-error
-  });
-
-  game.settings.register('torgeternity', 'dramaCardUp', {
-    name: 'torgeternity.settingMenu.dramaCardUp.name',
-    hint: 'torgeternity.settingMenu.dramaCardUp.hint',
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true
   });
 }
