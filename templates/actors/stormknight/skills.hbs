@@ -133,15 +133,14 @@
       <span>{{localize "torgeternity.sheetLabels.total"}}</span>
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
-    {{#each document.system.skills as |content name|}}
-      {{#if (eq content.groupName "other")}}
-        {{#if (or ../document.system.editstate content.adds)}}
-          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}}
+    {{#each otherSkills as |skill|}}
+      {{#if skill.isCustom}}
+        {{> customSkillRow content=skill name=skill.name attrTypes=@root.config.attributeTypes}}
+      {{else}}
+        {{#if (or @root.document.system.editstate skill.adds)}}
+          {{> skillRow content=skill name=skill.name attrTypes=@root.config.attributeTypes}}
         {{/if}}
       {{/if}}
-    {{/each}}
-    {{#each customSkill as | content name|}}
-      {{> customSkillRow content=content name=name attrTypes=../config.attributeTypes}}
     {{/each}}
   </ul>
 </div>

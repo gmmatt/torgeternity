@@ -225,6 +225,13 @@ export default class TorgeternityActorSheet extends foundry.applications.api.Han
     this.actor.statuses.forEach(status => context.statusEffects[status] = true);
     context.showConditions = true;
 
+    context.otherSkills = Object.entries(context.document.system.skills)
+      .filter(skill => skill[1].groupName === 'other')
+      .map(skill => { return { name: skill[0], ...skill[1] } })
+      .concat(context.customSkill.map(skill => { return { isCustom: true, id: skill.id, ...skill } }));
+
+    context.otherSkills.sort((a, b) => a.name.localeCompare(b.name));
+
     if (this.actor.type === 'vehicle') context.operator = this.actor.operator;
 
     const isOwner = this.actor.isOwner;
