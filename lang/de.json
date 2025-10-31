@@ -1314,7 +1314,7 @@
       "itemCosm": "Gegenstands-Cosm",
       "askPlayer": "Frage Spieler",
       "choice": {
-        "title": "Erwerbe {item} für {cost}",
+        "title": "Gegenstand kaufen",
         "free": "Gratis",
         "select": "Nutze Währung"
       }

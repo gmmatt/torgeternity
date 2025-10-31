@@ -1314,7 +1314,7 @@
       "itemCosm": "Cosmos del objeto",
       "askPlayer": "Preguntar a jugador",
       "choice": {
-        "title": "Adquirir objeto {item} por {cost}",
+        "title": "Comprar objeto",
         "free": "Gratis",
         "select": "Usar moneda"
       }
