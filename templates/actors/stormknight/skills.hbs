@@ -53,38 +53,38 @@
           data-tooltip="torgeternity.sheetLabels.skillRollHint"
           data-testtype="skill"
           data-customskill="true"
-          data-baseattribute="{{content.system.baseAttribute}}"
-          data-adds="{{content.system.adds}}"
-          data-value="{{content.system.value}}"
+          data-baseattribute="{{content.baseAttribute}}"
+          data-adds="{{content.adds}}"
+          data-value="{{content.value}}"
           data-unskilleduse="0"
           {{disabled (not @root.editable)}}
-          data-name="{{content.name}}"
-          data-isfav="{{content.system.isFav}}">
-          {{content.name}}
+          data-name="{{name}}"
+          data-isfav="{{content.isFav}}">
+          {{name}}
         </a>
       </span>
       <span class="skill-line skillAttr">
         <select name="items.{{content.id}}.system.baseAttribute">
-          {{selectOptions attrTypes selected=content.system.baseAttribute localize=true sort=true}}
+          {{selectOptions attrTypes selected=content.baseAttribute localize=true sort=true}}
         </select>
       </span>
       <span class="skillAdd">
         <input
           name="items.{{content.id}}.system.adds"
           type="number"
-          value="{{content.system.adds}}"
+          value="{{content.adds}}"
           data-dtype="Number" />
       </span>
-      <input class="skill-line" placeholder="-" value="{{content.system.value}}" disabled />
+      <input class="skill-line" placeholder="-" value="{{content.value}}" disabled />
       <span>
-        <a class="toggleFav {{checked content.system.isFav}}" {{disabled (not @root.editable)}}>
+        <a class="toggleFav {{checked content.isFav}}" {{disabled (not @root.editable)}}>
           <i class="far fa-star"></i>
         </a>
         <input
           class="favCheck"
           type="checkbox"
           name="items.{{content.id}}.system.isFav"
-          {{checked content.system.isFav}}
+          {{checked content.isFav}}
           data-dtype="Boolean" />
       </span>
     </li>
