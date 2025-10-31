@@ -14,6 +14,7 @@ import { HeavyWeaponItemData } from './heavyweapon.js';
 import { PerkItemData } from './perk.js';
 import { EnhancementItemData } from './enhancement.js';
 import { SpecialAbilityItemData } from './specialability.js';
+import { CurrencyItemData } from './currency.js';
 import { SpecialAbilityRollableItemData } from './specialability-rollable.js';
 import { EternityShardItemData } from './eternityshard.js';
 import { CustomAttackItemData } from './customAttack.js';
@@ -43,6 +44,7 @@ export { SpecialAbilityItemData } from './specialability.js';
 export { SpecialAbilityRollableItemData } from './specialability-rollable.js';
 export { EternityShardItemData } from './eternityshard.js';
 export { CustomAttackItemData } from './customAttack.js';
+export { CurrencyItemData } from './currency.js';
 export { CustomSkillItemData } from './customSkill.js';
 export { AmmunitionItemData } from './ammunition.js';
 export { RaceItemData } from './race.js';
@@ -52,6 +54,7 @@ export const config = {
   eternityshard: EternityShardItemData,
   armor: ArmorItemData,
   shield: ShieldItemData,
+  currency: CurrencyItemData,
   customAttack: CustomAttackItemData,
   meleeweapon: MeleeWeaponItemData,
   missileweapon: MissileWeaponItemData,

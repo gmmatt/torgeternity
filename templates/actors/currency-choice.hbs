@@ -1,0 +1,23 @@
+<div class="chooseCurrency">
+  <fieldset class="item">
+    <label for="name">{{localize (lookup config.Item.typeLabels item.type)}}</label>
+    <input id="name" type="text" value="{{item.name}}" readonly />
+    <label for="price">{{localize "torgeternity.gear.price"}}</label>
+    <input id="price" type="number" value="{{item.system.price}}" readonly />
+  </fieldset>
+  {{#each currencies as |currency id|}}
+    <p class="currency {{currency.system.cosm}}">
+      <label><input type="radio" name="choice" value="{{currency.id}}"
+          {{checked (eq currency.system.cosm @root.item.system.cosm)}}>
+        <span class="name">{{currency.name}}</span>
+        <span class="cosm">- {{localize (lookup @root.config.torgeternity.cosmTypes currency.system.cosm)}}</span>
+        <span class="quantity">({{currency.system.quantity}})</span>
+      </label>
+    </p>
+  {{/each}}
+  <p class="currency free">
+    <label><input type="radio" name="choice" value="free">
+      <span class="name">{{localize 'torgeternity.itemPurchase.choice.free'}}</span>
+    </label>
+  </p>
+</div>

@@ -4,30 +4,7 @@
     <label>{{localize "torgeternity.dialogPrompts.selectCosmDeck"}}</label>
     <div class="form-fields torgeternityFormFields">
       <select name="from">
-        {{#unless (eq decks.coreEarth unused)}}
-          <option value="{{decks.coreEarth}}">{{localize "torgeternity.cosmDecks.coreEarth"}}</option>
-        {{/unless}}
-        {{#unless (eq decks.aysle unused)}}
-          <option value="{{decks.aysle}}">{{localize "torgeternity.cosmDecks.aysle"}}</option>
-        {{/unless}}
-        {{#unless (eq decks.cyberpapacy unused)}}
-          <option value="{{decks.cyberpapacy}}">{{localize "torgeternity.cosmDecks.cyberpapacy"}}</option>
-        {{/unless}}
-        {{#unless (eq decks.livingLand unused)}}
-          <option value="{{decks.livingLand}}">{{localize "torgeternity.cosmDecks.livingLand"}}</option>
-        {{/unless}}
-        {{#unless (eq decks.nileEmpire unused)}}
-          <option value="{{decks.nileEmpire}}">{{localize "torgeternity.cosmDecks.nileEmpire"}}</option>
-        {{/unless}}
-        {{#unless (eq decks.orrorsh unused)}}
-          <option value="{{decks.orrorsh}}">{{localize "torgeternity.cosmDecks.orrorsh"}}</option>
-        {{/unless}}
-        {{#unless (eq decks.panPacifica unused)}}
-          <option value="{{decks.panPacifica}}">{{localize "torgeternity.cosmDecks.panPacifica"}}</option>
-        {{/unless}}
-        {{#unless (eq decks.tharkold unused)}}
-          <option value="{{decks.tharkold}}">{{localize "torgeternity.cosmDecks.tharkold"}}</option>
-        {{/unless}}
+        {{selectOptions decks localize=true}}
       </select>
     </div>
   </div>

@@ -2,10 +2,10 @@
   data-tab="{{tabs.gear.id}}">
 
   {{#*inline "weaponItem" item}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item draggable block" data-item-id="{{item._id}}">
       <div class="item-row flexrow">
         <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-        <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+        <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</a>
         <div class="item-controls">
           <a class="item-control item-attackRoll" data-action="itemAttackRoll" {{disabled (not @root.editable)}}
             data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
@@ -102,10 +102,10 @@
   </div>
   <ol class="item-list">
     {{#each ammunitions as |item id|}}
-      <li class="item block gear" data-item-id="{{item._id}}">
+      <li class="item draggable block gear" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}
+          <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}
             ({{item.system.quantity}})</a>
           <div class="item-controls">
             <a class="item-control item-edit" data-action="itemEdit"
@@ -161,10 +161,10 @@
   </div>
   <ol class="item-list">
     {{#each gear as |item id|}}
-      <li class="item" data-item-id="{{item._id}}">
+      <li class="item draggable" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
           <img src="{{item.img}}" data-tooltip="{{item.name}}" />
-          <a class="item-name {{TorgDisconnected item}}" data-action="itemName" data-drag="true">{{item.name}}</a>
+          <a class="item-name {{TorgDisconnected item}}" data-action="itemName">{{item.name}}</a>
           <div class="item-controls">
             <a class="item-control item-tochat" data-action="itemToChat" {{disabled (not @root.editable)}}
               data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}">

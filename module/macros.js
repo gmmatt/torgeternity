@@ -585,7 +585,7 @@ export class TorgeternityMacros {
     // choose the duration of the effect
     const duration =
       (attr !== 'piety') ?
-        duration = await DialogV2.wait({
+        await DialogV2.wait({
           window: { title: 'torgeternity.dialogWindow.buffMacro.timeLabel' },
           content: `<div>${game.i18n.localize('torgeternity.dialogWindow.buffMacro.time')} <input name="dur" value=1 style="width:50px"/></div>`,
           buttons: [
@@ -838,7 +838,7 @@ export class TorgeternityMacros {
       outcome: '',
       actionTotalContent: '',
       resultText: '',
-      resultTextColor: 'display:none',
+      resultTextStyle: 'display:none',
     });
   }
 }

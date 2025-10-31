@@ -3,6 +3,11 @@
     "discard": "Défausser",
     "display": "Montrer cette carte aux joueurs"
   },
+  "EFFECT": {
+    "TABS": {
+      "torg": "Torg Eternity"
+    }
+  },
   "CHAT": {
     "RollBlind": "Uniquement le MJ",
     "RollPublic": "Tout le monde",
@@ -82,6 +87,7 @@
       "bonus": "Bonus",
       "bonusCard": "Carte +3",
       "bonusDamage": "Bonus aux dommages",
+      "bdTooltip": "Maintenir SHIFT pour lancer le BD deux fois et garder le plus haut résultat",
       "bonusDice": "DB",
       "chase": "Test de Poursuite",
       "check": {
@@ -132,7 +138,7 @@
           "previous": "Résultat du jet précédent",
           "resetDefense": "Ne se défend plus activement.",
           "result": "Résultat",
-          "standartSuccess": "Succès simple",
+          "standardSuccess": "Succès simple",
           "toughness": "Résistance",
           "BDDamageSum": "Somme des Dés Bonus de dommages"
         },
@@ -169,6 +175,7 @@
       "hero": "Héros",
       "heroCard": "Carte Héros",
       "hideDetails": "Cacher détails",
+      "itemPurchase": "{item} acheté pour {price} {currency}",
       "notPermittedDSR": "Prochain RDT {step} non autorisé par la carte d'Action",
       "modifiers": "Modificateurs",
       "noAmmo": "Le chargeur de votre arme est vide, vous ne pouvez pas faire feu.",
@@ -570,6 +577,7 @@
     "itemSheetDescriptions": {
       "armor": "Armure",
       "ammunition": "Munitions",
+      "currency": "Devise",
       "customAttack": "Attaque personnalisée",
       "customSkill": "Compétence personnalisée",
       "enhancement": "Amélioration",
@@ -609,6 +617,7 @@
       "beginningMigration": "Migration du système TORG vers la version ",
       "defaultAction": "Action par défaut, équipement par exemple.",
       "dramaDeckEmpty": "Le paquet de cartes Action est vide. Réinitialisez-le.",
+      "insufficientFunds": "Vous n'avez pas assez de {currency} ({quantity}) pour acheter {item} ({price})",
       "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos objets, attributs ou compétences",
       "migrationRunning": "Migration de la version du système Torg à ",
       "moduleNotActive": "Description disponible dans le module correspondant.",
@@ -859,13 +868,13 @@
         "name": "Déconnexion Automatique",
         "hint": "En cas de Déferlement et de jet qui provoque une déconnexion, applique l'effet Déconnecté automatiquement"
       },
+      "itemPurchaseCosm": {
+        "name": "Devise d'achat des objets",
+        "hint": "Lorsqu'un objet est 'laché' sur une feuille d'acteur, si le prix de l'objet est renseigné, alors la devise correspondante à ce prix est déduite du personnage (maintenir SHIFT avant de lacher l'objet permet de l'obtenir gratuitement)"
+      },
       "showPiety": {
         "name": "Afficher la Piété",
         "hint": "Affiche le score actuel de Piété du Chevalier des Tempêtes dans sa fiche de personnage"
-      },
-      "dramaCardUp": {
-        "name": "Un de plus ! des cartes d'Actions",
-        "hint": "Cache le bouton Un de plus ! Si l'option n'est pas dans la ligne conflit de la carte d'Action en cours (vrai par defaut)"
       }
     },
     "sheetLabels": {
@@ -925,6 +934,7 @@
       "crewUnskilledOperator": "L'utilisateur sélectionné est Incompétent !",
       "crewUnskilledWeapon": "Cette arme est utilisée par un opérateur Incompétent !",
       "crewFavored": "Cette arme est utlisée par un opérateur Favorisé",
+      "currencies": "Devises",
       "customSkill": "Les compétences personnalisées sont modifiables dans l'onglet Atouts",
       "customSkills": "Compétences personnalisées",
       "customAttacks": "Attaques personnalisées",
@@ -1296,6 +1306,18 @@
       "forceDefense": "Défense vs Force",
       "iceDefense": "Défense vs Froid",
       "lightningDefense": "Défense vs Électricité"
+    },
+    "itemPurchase": {
+      "free": "No Cost",
+      "activeScene": "Scène active",
+      "playerCosm": "Cosm du personnage",
+      "itemCosm": "Cosm de l'objet",
+      "askPlayer": "Choix du joueur",
+      "choice": {
+        "title": "Achat de l'objet",
+        "free": "Gratuit",
+        "select": "Choix de la devise"
+      }
     },
     "traitGroup": {
       "defense": "Défense",

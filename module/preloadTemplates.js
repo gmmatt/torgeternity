@@ -19,6 +19,7 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/actors/stormknight/gear.hbs',
     'systems/torgeternity/templates/actors/stormknight/powers.hbs',
     'systems/torgeternity/templates/actors/stormknight/xp.hbs',
+    'systems/torgeternity/templates/actors/currency-choice.hbs',
 
     // ACTOR--threats
     'systems/torgeternity/templates/actors/threat/main.hbs',
@@ -57,6 +58,7 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/chat/armor-card.hbs',
     'systems/torgeternity/templates/chat/attack-card.hbs',
     'systems/torgeternity/templates/chat/bonus-card.hbs',
+    'systems/torgeternity/templates/chat/currency-card.hbs',
     'systems/torgeternity/templates/chat/enhancement-card.hbs',
     'systems/torgeternity/templates/chat/eternityshard-card.hbs',
     'systems/torgeternity/templates/chat/gear-card.hbs',
@@ -80,6 +82,7 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/items/ammunition-field.hbs',
     `systems/torgeternity/templates/items/ammunition-sheet.hbs`,
     `systems/torgeternity/templates/items/armor-sheet.hbs`,
+    `systems/torgeternity/templates/items/currency-sheet.hbs`,
     `systems/torgeternity/templates/items/customAttack-sheet.hbs`,
     `systems/torgeternity/templates/items/customSkill-sheet.hbs`,
     `systems/torgeternity/templates/items/enhancement-sheet.hbs`,

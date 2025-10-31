@@ -7,7 +7,7 @@
     <li>
       <span>
         <a
-          class="skill-roll" data-drag="true" data-action="skillRoll"
+          class="skill-roll draggable" data-action="skillRoll"
           data-tooltip="torgeternity.sheetLabels.skillRollHint"
           data-testtype="skill"
           data-baseattribute="{{content.baseAttribute}}"
@@ -16,7 +16,7 @@
           data-unskilleduse="{{content.unskilledUse}}"
           {{disabled (not @root.editable)}}
           data-name="{{name}}">
-          {{localize (concat 'torgeternity.skills.' name)}}
+          {{content.localName}}
         </a>
       </span>
       <span class="skill-line skillAttr">
@@ -49,42 +49,42 @@
     <li>
       <span>
         <a
-          class="skill-roll" data-drag="true" data-action="skillRoll"
+          class="skill-roll draggable" data-action="skillRoll"
           data-tooltip="torgeternity.sheetLabels.skillRollHint"
           data-testtype="skill"
           data-customskill="true"
-          data-baseattribute="{{content.system.baseAttribute}}"
-          data-adds="{{content.system.adds}}"
-          data-value="{{content.system.value}}"
+          data-baseattribute="{{content.baseAttribute}}"
+          data-adds="{{content.adds}}"
+          data-value="{{content.value}}"
           data-unskilleduse="0"
           {{disabled (not @root.editable)}}
-          data-name="{{content.name}}"
-          data-isfav="{{content.system.isFav}}">
-          {{content.name}}
+          data-name="{{name}}"
+          data-isfav="{{content.isFav}}">
+          {{content.localName}}
         </a>
       </span>
       <span class="skill-line skillAttr">
         <select name="items.{{content.id}}.system.baseAttribute">
-          {{selectOptions attrTypes selected=content.system.baseAttribute localize=true sort=true}}
+          {{selectOptions attrTypes selected=content.baseAttribute localize=true sort=true}}
         </select>
       </span>
       <span class="skillAdd">
         <input
           name="items.{{content.id}}.system.adds"
           type="number"
-          value="{{content.system.adds}}"
+          value="{{content.adds}}"
           data-dtype="Number" />
       </span>
-      <input class="skill-line" placeholder="-" value="{{content.system.value}}" disabled />
+      <input class="skill-line" placeholder="-" value="{{content.value}}" disabled />
       <span>
-        <a class="toggleFav {{checked content.system.isFav}}" {{disabled (not @root.editable)}}>
+        <a class="toggleFav {{checked content.isFav}}" {{disabled (not @root.editable)}}>
           <i class="far fa-star"></i>
         </a>
         <input
           class="favCheck"
           type="checkbox"
           name="items.{{content.id}}.system.isFav"
-          {{checked content.system.isFav}}
+          {{checked content.isFav}}
           data-dtype="Boolean" />
       </span>
     </li>
@@ -133,15 +133,14 @@
       <span>{{localize "torgeternity.sheetLabels.total"}}</span>
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
-    {{#each document.system.skills as |content name|}}
-      {{#if (eq content.groupName "other")}}
-        {{#if (or ../document.system.editstate content.adds)}}
-          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}}
+    {{#each otherSkills as |skill|}}
+      {{#if skill.isCustom}}
+        {{> customSkillRow content=skill name=skill.name attrTypes=@root.config.attributeTypes}}
+      {{else}}
+        {{#if (or @root.document.system.editstate skill.adds)}}
+          {{> skillRow content=skill name=skill.name attrTypes=@root.config.attributeTypes}}
         {{/if}}
       {{/if}}
-    {{/each}}
-    {{#each customSkill as | content name|}}
-      {{> customSkillRow content=content name=name attrTypes=../config.attributeTypes}}
     {{/each}}
   </ul>
 </div>

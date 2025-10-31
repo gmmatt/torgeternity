@@ -3,6 +3,11 @@
     "discard": "Descarte",
     "display": "Mostrar carta jugadores"
   },
+  "EFFECT": {
+    "TABS": {
+      "torg": "Torg Eternity"
+    }
+  },
   "CHAT": {
     "RollBlind": "Tirada oculta (GM)",
     "RollPublic": "Tirada pública",
@@ -82,6 +87,7 @@
       "bonus": "Bonificación",
       "bonusCard": "CAR+3",
       "bonusDamage": "Daño Adicional",
+      "bdTooltip": "Hold SHIFT to roll BD twice and keep the best result",
       "bonusDice": "DB",
       "chase": "Prueba de persecución",
       "check": {
@@ -132,7 +138,7 @@
           "previous": "Total de tirada previa",
           "resetDefense": "Ya no está en defensa activa.",
           "result": "resultado",
-          "standartSuccess": "Éxito Estándar",
+          "standardSuccess": "Éxito Estándar",
           "toughness": " Resistencia",
           "BDDamageSum": "Suma de Dados de Bonificación"
         },
@@ -169,6 +175,7 @@
       "hero": "HÉROE",
       "heroCard": "Carta de Héroe",
       "hideDetails": "Ocultar detalles",
+      "itemPurchase": "{item} adquirido por {price} {currency}",
       "notPermittedDSR": "La carta de Drama no permite el paso {step} de la RDH",
       "modifiers": "Modificadores",
       "noAmmo": "No puedes disparar tu arma, no le quedan balas.",
@@ -570,6 +577,7 @@
     "itemSheetDescriptions": {
       "armor": "Armadura",
       "ammunition": "Munición",
+      "currency": "Moneda",
       "customAttack": "Ataque Personalizado",
       "customSkill": "Hab. Personalizada",
       "enhancement": "Mejoras",
@@ -609,6 +617,7 @@
       "beginningMigration": "Migrando versión del sistema de Torg a ",
       "defaultAction": "Acción por defecto, por ejemplo Equipo",
       "dramaDeckEmpty": "El mazo de Drama está vacío. Reinícialo para continuar.",
+      "insufficientFunds": "No tienes suficientes {currency} ({quantity}) para comprar {item} ({price})",
       "macroTypeWarning": "Solo puedes crear botones de macros para los objetos y atributos/habilidades que posees",
       "migrationRunning": "Migración de la versión del sistema Torg a ",
       "moduleNotActive": "Activar el módulo para ver la descripción.",
@@ -859,13 +868,13 @@
         "name": "Desconexión automática",
         "hint": "En caso de Sobrecarga o de que una prueba provoque Desconexión, el actor pasará a estar automáticamente Desconectado"
       },
+      "itemPurchaseCosm": {
+        "name": "Coste del objeto en monedas",
+        "hint": "Cuando se suelta un objeto en la hoja de un actor, si el objeto tiene un precio asignado la moneda del cosmos de ese objeto se ve reducida en el coste del objeto (pulsar MAYÚSCULA antes de soltar el objeto para que se reciba sin coste alguno)"
+      },
       "showPiety": {
         "name": "Mostrar Piedad en hoja de actor",
         "hint": "Muestra la puntuación de Piedad actual de un Caballero de la Tormenta en la hoja de actor"
-      },
-      "dramaCardUp": {
-        "name": "AUMENTO solo en la carta de Drama",
-        "hint": "Oculta el botón AUMENTO en los resultados de una prueba si la carta de Drama actual no presenta AUMENTO en la línea de conflicto (activado por defecto)"
       }
     },
     "sheetLabels": {
@@ -925,6 +934,7 @@
       "crewUnskilledOperator": "¡El operador de este vehículo no está entrenado!",
       "crewUnskilledWeapon": "¡Esta arma se está usando sin entrenar!",
       "crewFavored": "Esta arma tiene un usuario con uso preferente",
+      "currencies": "Monedas",
       "customSkill": "Las habilidades personalizadas se pueden editar en la pestaña de Dones",
       "customSkills": "Hab. personalizada",
       "customAttacks": "Ataques personalizados",
@@ -1296,6 +1306,18 @@
       "forceDefense": "Defensa contra fuerza",
       "iceDefense": "Defensa contra hielo",
       "lightningDefense": "Defense contra relámpago"
+    },
+    "itemPurchase": {
+      "free": "Sin coste",
+      "activeScene": "Escena activa",
+      "playerCosm": "Cosmos del jugador",
+      "itemCosm": "Cosmos del objeto",
+      "askPlayer": "Preguntar a jugador",
+      "choice": {
+        "title": "Comprar objeto",
+        "free": "Gratis",
+        "select": "Usar moneda"
+      }
     },
     "traitGroup": {
       "defense": "Defensa",

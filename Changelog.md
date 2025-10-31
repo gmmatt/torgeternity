@@ -1,5 +1,39 @@
 # TORG Eternity Changelog
 
+## 13.12.0
+
+## Enhancements
+
+- Move Torg-specific **Active Effects** fields to their own Tab in the AE Config dialog.
+- **Show BD** separately from d20s in the chat result card (with infinity symbol instead of "6").
+- Toggle display of **second cosm** in Scene Config window immediately on changing the cosm type.
+- Allow **unarmed combat** interaction to be dragged to Macro Hotbar.
+- In **Enhanced Display** of Card Hand, put draw buttons at top of window.
+- #603: Prevent errors being reported regarding DSN integration and `test.effects` being undefined. (This also fixes Periculum macro.)
+- #604: Hold SHIFT when pressing the BD in a chat card to roll the **BD two** separate times and keep the higher result (e.g. Killshot). A superscript-2 is added to the chat title each time that BD is rolled whilst holding SHIFT.
+- #605: When **UP** appears on Drama, add a shadow to the UP button to remind players (don't hide UP if not on Drama card).
+- #606: Add new **currency** item type, when present they will appear on the Gear tab of the Stormknight actor sheet as a new section at the bottom of the list as well as a summary row across the top.
+  - Quantity can be directly edited in the summary row.
+  - New game option (Items cost Currency) to allow currency to be spent when dragging Items onto a Stormknight Actor:
+    - **No Cost** (default) - cost of the item is ignored, no currency is deducted.
+    - **Active Scene** - the currency based on the Cosm of the active scene (in a 'mixed' zone, if the first cosm doesn't have enough currency then the entire price will be paid from the second cosm's currency [if there is enough]).
+    - **Player Cosm** - the cosm of the player will determine which currency is used.
+    - **Item Cosm** - the cosm of the item being purchased will determine which currency is used.
+    - **Ask Player** - the player will be prompted with the Actor's available currencies, so that they can choose which currency to use.
+
+### Internal Improvements
+
+- Remove explicit cosm names from HBS files.
+- Use core drag/drop `draggable` attribute in all sheets.
+
+### Bug Fixes
+
+- Ensure Die Total is retained in skill chat card after adding more modifiers through the Modifiers Dialog.
+- Vehicle sheet should scroll properly.
+- Post **STYMIED** (not SURGE) message to chat when Stymied appears on Drama card.
+- Ensure possibilities are updated on Player's computers when the GM modifiers the possibilities on an Actor.
+- **Buff macro** should be working again.
+
 ## 13.11.0
 
 - Add dynamic ring textures for all Archetypes.
@@ -367,7 +401,7 @@ is replaced by the new portrait. (For unlinked Actors, this will directly affect
 - Add **`@Condition[status]`** to apply a new effect to the selected actors (or the player's controlled actor). One or more options can be added to the condition, such as:
   - `@Condition[status|overlay]` will set the status as overlay,
   - `@Condition[status|toggle]` will toggle the current state of that status on the token,
-  - `@Condition[status|active=false]` will remove the status if it is on the token.
+  - `@Condition[status|off]` will remove the status if it is on the token.
   - `stymied` and `vulnerable` will promote an existing condition to `veryStymied` or `veryVulnerable`.
 - Add **`@Buff[stat1=num|stat2=num]`** to buff/debuff attributes and skills:
   - Set `stat` to the name of the attribute of ability (either the key [strength] or the localized string).

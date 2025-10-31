@@ -1,0 +1,21 @@
+<section class="tab stats scrollable {{tab.cssClass}}" data-group="primary" data-tab="stats">
+  <div class="sheet-content">
+    <div class="asside">
+
+      <p class="item-data-label">
+        {{localize "torgeternity.perks.cosm"}}
+      </p>
+      {{formInput systemFields.cosm value=item.system.cosm name="system.cosm" localize=true sort=true}}
+
+      <p class="item-data-label">{{localize "torgeternity.sheetLabels.quantity"}}</p>
+      <input name="system.quantity" class="largeNumber" type="number" value="{{item.system.quantity}}" />
+    </div>
+
+    <div class="main-content">
+      <!-- right column -->
+      <prose-mirror toggled name="system.description" class="item-description"
+        {{disabled (not @root.editable)}}
+        value="{{ item.system.description }}">{{{ description }}}</prose-mirror>
+    </div>
+  </div>
+</section>

@@ -224,7 +224,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
    * @param event
    */
   static async #incStage(event, button) {
-    if (!this.viewed) return;
+    if (!this.viewed || !this.viewed?.currentDrama) return;
     event.preventDefault();
     this.updateStage(this.viewed, event.shiftKey);
   }
@@ -236,7 +236,7 @@ export default class torgeternityCombatTracker extends foundry.applications.side
   static async #incPlayerStage(event, button) {
     const { combatantId } = button.closest("[data-combatant-id]")?.dataset ?? {};
     const combatant = this.viewed?.combatants.get(combatantId);
-    if (!combatant) return;
+    if (!combatant || !this.viewed?.currentDrama) return;
     this.updateStage(combatant, event.shiftKey);
     event.preventDefault();
   }

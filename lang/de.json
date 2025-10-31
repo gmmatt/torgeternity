@@ -3,6 +3,11 @@
     "discard": "Abwerfen",
     "display": "Herzeigen"
   },
+  "EFFECT": {
+    "TABS": {
+      "torg": "Torg Eternity"
+    }
+  },
   "CHAT": {
     "RollBlind": "Verdeckter SL-Wurf",
     "RollPublic": "Öffentlicher Wurf",
@@ -83,6 +88,7 @@
       "bonusCard": "+3 Karte",
       "bonusDamage": "Bonus Schaden",
       "bonusDice": "BW",
+      "bdTooltip": "Halte SHIFT um zwei BW zu würfeln und das bessere Ergebnis zu behalten",
       "chase": "Verfolgungsjagd-Probe",
       "check": {
         "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
@@ -132,7 +138,7 @@
           "previous": "Summe des vorangegangenen Wurfs",
           "resetDefense": "Nicht mehr länger in aktiver Verteidigung.",
           "result": "Ergebnis",
-          "standartSuccess": "Standarderfolg",
+          "standardSuccess": "Standarderfolg",
           "toughness": "Robustheit",
           "BDDamageSum": "Summe des Schadens der BW"
         },
@@ -169,6 +175,7 @@
       "hero": "Held",
       "heroCard": "Heldenhaft-Karte",
       "hideDetails": "Verstecke Details",
+      "itemPurchase": "{item} gekauft für {price} {currency}",
       "notPermittedDSR": "Dramakarte erlaubt den DPA-Schritt {step} nicht.",
       "modifiers": "Modifikator",
       "noAmmo": "Waffe nicht abgefeuert, keine Kugeln mehr übrig.",
@@ -570,6 +577,7 @@
     "itemSheetDescriptions": {
       "armor": "Rüstung",
       "ammunition": "Munition",
+      "currency": "Währung",
       "customAttack": "Individueller Angriff",
       "customSkill": "Eigene Fertigkeit",
       "enhancement": "Verbesserung",
@@ -609,6 +617,7 @@
       "beginningMigration": "Migration der Torg-Systemversion auf ",
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
+      "insufficientFunds": "Du hast nicht ausreichend {currency} ({quantity}) um {item} ({price}) zu kaufen",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
       "migrationRunning": "Migriere Torg-Systemversion auf Version ",
       "moduleNotActive": "Modul muss aktiviert werden, um die Beschreibung anzeigen zu können.",
@@ -859,13 +868,13 @@
         "name": "Automatisches Entkoppeln",
         "hint": "Bei einer Welle oder Probe die eine Entkopplung hervorruft, wird der Charakter erhält der Charakter automatisch den Zustand Entkoppelt"
       },
+      "itemPurchaseCosm": {
+        "name": "Gegenstände benötigen Währung",
+        "hint": "Falls ein Gegenstand, dem ein Preis zugeordnet ist, auf einen Storm Knight-Bogen gezogen wird, dann wird die Währung für den Cosm des Gegenstandes um den Preis reduziert (drücke SHIFT bevor der Gegenstand zugewiesen wird um ihn kostenfrei zu erhalten)"
+      },
       "showPiety": {
         "name": "Frömmigkeit im Charakterbogen anzeigen",
         "hint": "Anzeige des aktuellen Frömmigkeitswertes eines Storm Knight in seinem Charakterbogen"
-      },
-      "dramaCardUp": {
-        "name": "Oberhand nur von Drama Karte erlaubt",
-        "hint": "Oberhand-Knopf wird verborgen wenn kein Oberhand-Effekt nicht auf der Dramakarte angegeben ist. (default true)"
       }
     },
     "sheetLabels": {
@@ -925,6 +934,7 @@
       "crewUnskilledOperator": "Der Lenker des Fahrzeug ist ungelernt!",
       "crewUnskilledWeapon": "Die Waffe wird ungelernt genutzt!",
       "crewFavored": "This weapon has a favored gunner",
+      "currencies": "Währungen",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "customAttacks": "Individuelle Angriffe",
@@ -1296,6 +1306,18 @@
       "forceDefense": "Verteidigung gegen Kraft",
       "iceDefense": "Verteidigung gegen Eis",
       "lightningDefense": "Verteidigung gegen Blitz"
+    },
+    "itemPurchase": {
+      "free": "Keine Kosten",
+      "activeScene": "Aktive Szene",
+      "playerCosm": "Charakter-Cosm",
+      "itemCosm": "Gegenstands-Cosm",
+      "askPlayer": "Frage Spieler",
+      "choice": {
+        "title": "Gegenstand kaufen",
+        "free": "Gratis",
+        "select": "Nutze Währung"
+      }
     },
     "traitGroup": {
       "defense": "Verteidigung",

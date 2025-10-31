@@ -51,9 +51,6 @@ torgeternity.dramaActions = {
   possibleSetback: "torgeternity.dramaCard.possibleSetback"
 }
 
-torgeternity.viewMode = {
-  UI: true,
-};
 torgeternity.attributeTypes = {
   charisma: 'torgeternity.attributes.charisma',
   dexterity: 'torgeternity.attributes.dexterity',
@@ -94,6 +91,14 @@ torgeternity.axiomsNoTech = {
   spirit: 'torgeternity.axioms.spirit',
   magic: 'torgeternity.axioms.magic',
 };
+
+torgeternity.itemPurchaseCosm = {
+  free: 'torgeternity.itemPurchase.free',
+  activeScene: 'torgeternity.itemPurchase.activeScene',
+  playerCosm: 'torgeternity.itemPurchase.playerCosm',
+  itemCosm: 'torgeternity.itemPurchase.itemCosm',
+  askPlayer: 'torgeternity.itemPurchase.askPlayer'
+}
 
 torgeternity.axiomByCosm = {
   coreEarth: {

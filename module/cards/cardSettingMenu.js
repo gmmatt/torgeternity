@@ -46,11 +46,18 @@ export default class DeckSettingMenu extends HandlebarsApplicationMixin(Applicat
    * @inheritDoc
    */
   async _prepareContext(options) {
+    const cosms = {};
+    for (const cosm in CONFIG.torgeternity.cosmTypes) {
+      if (cosm === 'none' || cosm === 'other') continue;
+      cosms[cosm] = { name: game.i18n.localize(`torgeternity.cosmDecks.${cosm}`) };
+    }
+
     const data = {
       isGM: game.user.isGM,
       deckList: game.cards.contents,
       object: game.settings.get('torgeternity', 'deckSetting'),
       stormknights: game.actors.filter((act) => act.type === 'stormknight'),
+      cosms,
       piles: game.cards
         .filter((c) => c.type === 'pile')
         .reduce((acc, pile) => {

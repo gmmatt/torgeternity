@@ -310,6 +310,11 @@
           "description"
         ]
       },
+      "currency": {
+        "htmlFields": [
+          "description"
+        ]
+      },
       "customAttack": {
         "htmlFields": [
           "description"
