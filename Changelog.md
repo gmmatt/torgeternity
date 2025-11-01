@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## 13.12.1
+
+- Fix the blank skill names in the Combat and Interaction parts of the skills list.
+
 ## 13.12.0
 
 ## Enhancements
